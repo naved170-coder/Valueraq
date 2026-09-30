@@ -1,0 +1,23 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Admin overview</h1>
+<div class="stat-row mt">
+  <div class="stat"><small>Users</small><b>{{ stats.users }}</b></div>
+  <div class="stat"><small>Pro + trial</small><b>{{ stats.pro }}</b></div>
+  <div class="stat"><small>Saved reports</small><b>{{ stats.reports }}</b></div>
+  <div class="stat {{ 'warn' if stats.pending else 'ok' }}"><small>Listings awaiting review</small><b>{{ stats.pending }}</b></div>
+  <div class="stat"><small>Live listings</small><b>{{ stats.live }}</b></div>
+  <div class="stat"><small>Contact messages</small><b>{{ stats.messages }}</b></div>
+</div>
+<section class="section"><h2 class="section-title">Latest SEO audit</h2>
+{% if run %}
+  <p>{{ run.pages }} URLs checked on {{ run.finished_at|human_date }}: <b class="{{ 'bad' if run.critical else '' }}">{{ run.critical }} critical</b>, {{ run.warnings }} warnings. <a href="/admin/seo/">Open the audit</a></p>
+{% else %}<p>No audit yet. <a href="/admin/seo/">Run the first audit</a>.</p>{% endif %}
+</section>
+<section class="section"><h2 class="section-title">Last 30 days</h2>
+  <div class="grid">
+    <div class="panel"><h3>Tool funnel (all channels)</h3><dl class="kv">{% for l, n in steps %}<dt>{{ l }}</dt><dd>{{ n }}</dd>{% endfor %}</dl></div>
+    <div class="panel"><h3>Marketplace funnel</h3><dl class="kv">{% for l, n in market %}<dt>{{ l }}</dt><dd>{{ n }}</dd>{% endfor %}</dl></div>
+  </div>
+</section>
+{% endblock %}

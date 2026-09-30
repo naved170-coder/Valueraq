@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    {% if doc.updated %}<p class="meta-line"><span>Last updated <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span></p>{% endif %}
+  </header>
+  <article class="prose">
+    {% block before_body %}{% endblock %}
+    {{ body|safe }}
+    {% block after_body %}{% endblock %}
+  </article>
+</div>
+{{ related_block(related) }}
+{% endblock %}

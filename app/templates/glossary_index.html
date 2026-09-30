@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Knowledge base</p>
+    <h1>{{ meta.h1 }}</h1>
+    <p class="lede">The terms used to value, buy and sell digital businesses, each with a definition, the formula where one exists, a worked example and links to the tools that use it.</p>
+  </header>
+  <dl class="grid">
+    {% for t in terms %}
+    <div class="card"><dt><h2 class="h3"><a href="{{ t.path }}">{{ t.term }}</a></h2></dt><dd class="muted">{{ t.definition }}</dd></div>
+    {% endfor %}
+  </dl>
+</div>
+{% endblock %}

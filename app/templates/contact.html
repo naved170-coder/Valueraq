@@ -1,0 +1,18 @@
+{% extends "page.html" %}
+{% block after_body %}
+<h2 id="form">Send a message</h2>
+{% if sent %}
+<p class="alert good" role="status">Thanks. Your message has been received and we reply by email, usually within two business days.</p>
+{% else %}
+<form method="post" action="/contact/" class="stack narrow">
+  <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+  <input type="hidden" name="t0" value="{{ form_t0 }}">
+  <div class="hp" aria-hidden="true"><label for="company_website">Leave this empty</label><input id="company_website" name="company_website" tabindex="-1" autocomplete="off"></div>
+  <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name"></div>
+  <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+  <div class="field"><label for="c-topic">Topic</label><select id="c-topic" name="topic"><option>General question</option><option>Valuation methodology</option><option>A listing</option><option>Billing</option><option>Report a problem</option><option>Press</option></select></div>
+  <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+  <button class="btn" type="submit">Send message</button>
+</form>
+{% endif %}
+{% endblock %}

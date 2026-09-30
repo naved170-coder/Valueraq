@@ -1,0 +1,84 @@
+{% macro related(groups) %}
+{% if groups %}
+<section class="section" aria-labelledby="related-h">
+  <div class="wrap">
+    <h2 id="related-h" class="section-title">Related resources</h2>
+    <div class="related">
+      {% for label, links in groups %}
+      <div>
+        <h3>{{ label }}</h3>
+        <ul>{% for title, path in links %}<li><a href="{{ path }}">{{ title }}</a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endmacro %}
+
+{% macro range_bar(value, label_low='Low', label_mid='Midpoint', label_high='High', currency='USD') %}
+<div class="range">
+  <div class="range-figs">
+    <div><small>{{ label_low }}</small><strong>{{ value.low|money(currency) }}</strong></div>
+    <div><small>{{ label_mid }}</small><strong>{{ value.mid|money(currency) }}</strong></div>
+    <div><small>{{ label_high }}</small><strong>{{ value.high|money(currency) }}</strong></div>
+  </div>
+  <div class="bar" role="img" aria-label="Estimated value range from {{ value.low|money }} to {{ value.high|money }}, midpoint {{ value.mid|money }}"></div>
+</div>
+{% endmacro %}
+
+{% macro field(key, spec, value=None, error=None) %}
+<div class="field{% if error %} error{% endif %}">
+  <label for="f-{{ key }}">{{ spec.label }}{% if spec.optional %} <span class="muted">(optional)</span>{% endif %}</label>
+  {% if spec.kind == 'select' %}
+  <select id="f-{{ key }}" name="{{ key }}">
+    <option value="">Not specified</option>
+    {% for v, l in spec.options %}<option value="{{ v }}" {% if value == v %}selected{% endif %}>{{ l }}</option>{% endfor %}
+  </select>
+  {% else %}
+  <div class="input-affix">
+    {% if spec.kind == 'money' %}<span class="pre">$</span>{% endif %}
+    <input id="f-{{ key }}" name="{{ key }}" type="text" inputmode="decimal" autocomplete="off"
+      value="{{ '' if value is none else ('%g'|format(value)) }}" {% if error %}aria-invalid="true" aria-describedby="e-{{ key }}"{% endif %}>
+    {% if spec.kind == 'percent' %}<span class="post">%</span>{% endif %}
+  </div>
+  {% endif %}
+  {% if spec.help %}<p class="hint">{{ spec.help }}</p>{% endif %}
+  {% if error %}<p class="err" id="e-{{ key }}">{{ error }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro legend() %}
+<p class="legend"><span class="tag user">User-provided</span><span class="tag assume">Platform assumption</span><span class="tag calc">Calculated</span></p>
+{% endmacro %}
+
+{% macro listing_card(l) %}
+<a class="lcard" href="{{ l.path }}">
+  <div class="row"><span class="tag">{{ l.category_name }}</span>{% if l.is_featured %}<span class="tag good">Featured</span>{% endif %}{% if l.verification != 'unverified' %}<span class="tag user">{{ l.verification|replace('_',' ')|capitalize }}</span>{% endif %}</div>
+  <h3>{{ l.title }}</h3>
+  {% if l.headline %}<p class="muted">{{ l.headline }}</p>{% endif %}
+  <div class="facts">
+    <div><small>Asking</small><b>{{ l.asking_price|money(l.currency, true) }}</b></div>
+    <div><small>Profit / mo</small><b>{{ l.monthly_profit|money(l.currency, true) }}</b></div>
+    <div><small>Age</small><b>{{ l.age_years|num(1) if l.age_years else '—' }}{% if l.age_years %} yr{% endif %}</b></div>
+  </div>
+</a>
+{% endmacro %}
+
+{% macro faq_block(faqs) %}
+<div class="faq">
+{% for q, a in faqs %}
+<details><summary>{{ q }}</summary><div><p>{{ a }}</p></div></details>
+{% endfor %}
+</div>
+{% endmacro %}
+
+{% macro doc_meta(doc) %}
+<p class="meta-line">
+  <span>By <a href="{{ doc.author.url }}">{{ doc.author.name }}</a></span>
+  {% if doc.published %}<span>Published <time datetime="{{ doc.published }}">{{ doc.published|human_date }}</time></span>{% endif %}
+  {% if doc.updated and doc.updated != doc.published %}<span>Updated <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span>{% endif %}
+  {% if doc.reviewed %}<span>Reviewed <time datetime="{{ doc.reviewed }}">{{ doc.reviewed|human_date }}</time></span>{% endif %}
+  {% if doc.methodology_version %}<span>Methodology v{{ doc.methodology_version }}</span>{% endif %}
+</p>
+{% endmacro %}

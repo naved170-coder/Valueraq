@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Free calculator</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc and doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    {% if doc and doc.updated %}<p class="meta-line"><span>Last reviewed <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span></p>{% endif %}
+  </header>
+</div>
+
+<section class="wrap" aria-labelledby="calc-h">
+  <div class="calc">
+    <div class="calc-head"><h2 id="calc-h">{{ c.short }}</h2></div>
+    <form method="post" action="/calculators/result/{{ c.key }}/" data-calc="{{ c.key }}" data-out="result" novalidate>
+      <p class="example-note">Filled with a hypothetical example. Replace the figures with your own.</p>
+      <p class="alert bad form-error" role="alert" hidden></p>
+      <div class="form-grid">
+      {% if c.key == 'website_worth' %}
+        <div class="field"><label for="f-monthly_profit">Average monthly net profit</label><div class="input-affix"><span class="pre">$</span><input id="f-monthly_profit" name="monthly_profit" inputmode="decimal" value="{{ values.monthly_profit }}"></div><p class="hint">Average of the last 12 months, after all costs except your own pay.</p></div>
+        <div class="field"><label for="f-months">Multiple (months of profit)</label><input id="f-months" name="months" inputmode="numeric" value="{{ values.months }}"><p class="hint">Between 6 and 84. 36 months equals 3× annual profit.</p></div>
+      {% elif c.key == 'saas_quick' %}
+        <div class="field"><label for="f-mrr">Monthly recurring revenue (MRR)</label><div class="input-affix"><span class="pre">$</span><input id="f-mrr" name="mrr" inputmode="decimal" value="{{ values.mrr }}"></div></div>
+        <div class="field"><label for="f-growth">Revenue change, last 12 months (%)</label><div class="input-affix"><input id="f-growth" name="growth_pct" inputmode="decimal" value="{{ values.growth_pct }}"><span class="post">%</span></div></div>
+        <div class="field"><label for="f-churn">Monthly customer churn (%)</label><div class="input-affix"><input id="f-churn" name="monthly_churn" inputmode="decimal" value="{{ values.monthly_churn }}"><span class="post">%</span></div></div>
+      {% else %}
+        <div class="field"><label for="f-price">Asking price</label><div class="input-affix"><span class="pre">$</span><input id="f-price" name="asking_price" inputmode="decimal" value="{{ values.asking_price }}"></div></div>
+        <div class="field"><label for="f-rev">Annual revenue</label><div class="input-affix"><span class="pre">$</span><input id="f-rev" name="annual_revenue" inputmode="decimal" value="{{ values.annual_revenue }}"></div></div>
+        <div class="field"><label for="f-prof">Annual net profit (SDE)</label><div class="input-affix"><span class="pre">$</span><input id="f-prof" name="annual_profit" inputmode="decimal" value="{{ values.annual_profit }}"></div></div>
+        <div class="field"><label for="f-cat">Compare with</label><select id="f-cat" name="category"><option value="">No comparison</option>{% for k, l in type_label.items() %}<option value="{{ k }}" {% if values.category == k %}selected{% endif %}>{{ l }}</option>{% endfor %}</select></div>
+      {% endif %}
+      </div>
+      <div class="actions"><button class="btn" type="submit">Calculate</button><a class="hint" href="{{ c.tool }}">Need a full valuation? Use the detailed tool</a></div>
+    </form>
+    <div id="result" class="result" aria-live="polite">
+      <p class="example-note">Example result for the hypothetical inputs above.</p>
+      {% with r=example %}{% include "partials/calc_result.html" %}{% endwith %}
+    </div>
+  </div>
+</section>
+
+<div class="wrap section">
+  <article class="prose">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
+{% endblock %}
+{% block scripts %}<script src="{{ static('js/calc.js') }}" defer></script>{% endblock %}

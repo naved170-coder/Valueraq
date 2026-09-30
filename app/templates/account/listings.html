@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}My listings | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <div class="row"><h1>My listings</h1><a class="btn small" href="/sell/">New listing</a></div>
+  {% if not listings %}<p class="empty">You haven't listed a business yet. <a href="/sell/">Create your first listing</a>.</p>{% endif %}
+  <div class="stack mt">
+  {% for l in listings %}
+    <article class="panel">
+      <div class="row"><h2 class="h3">{{ l.title }}</h2><span class="status {{ l.status }}">{{ l.status|capitalize }}</span>{% if l.is_featured %}<span class="tag good">Featured</span>{% endif %}</div>
+      <p class="meta-line"><span>{{ l.view_count }} views</span><span>{{ l.inquiries }} inquiries</span><span>Quality score {{ l.quality_score }}/100</span><span>{{ 'Eligible for search engines' if l.indexable else 'Not shown in search engines yet' }}</span></p>
+      {% if l.moderation_note %}<p class="alert">Reviewer note: {{ l.moderation_note }}</p>{% endif %}
+      {% if l.flags %}<ul>{% for sev, msg in l.flags %}<li><span class="sev {{ sev }}">{{ sev }}</span> {{ msg }}</li>{% endfor %}</ul>{% endif %}
+      <div class="row">
+        {% if l.status in ('published','sold','pending','draft') %}<a class="btn small quiet" href="{{ l.path }}">View</a>{% endif %}
+        {% if l.status not in ('removed','suspended','sold') %}<a class="btn small quiet" href="/account/listings/{{ l.id }}/edit/">Edit</a>{% endif %}
+        {% if l.status == 'published' %}
+          <form method="post" action="/account/listings/{{ l.id }}/status/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" name="action" value="sold">Mark sold</button></form>
+          {% if not l.is_featured %}<form method="post" action="/account/listings/{{ l.id }}/feature/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small" {% if not billing_enabled %}disabled title="Payments aren't set up yet"{% endif %}>Feature for ${{ featured.price_usd }}</button></form>{% endif %}
+        {% endif %}
+        {% if l.status not in ('removed','suspended') %}<form method="post" action="/account/listings/{{ l.id }}/status/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" name="action" value="withdraw">Withdraw</button></form>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}

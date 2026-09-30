@@ -1,0 +1,7 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<div class="row"><h1>Blog</h1><a class="btn small" href="/admin/blog/new/">New post</a></div>
+<div class="table-wrap mt"><table><thead><tr><th>Title</th><th>Status</th><th>AI-assisted</th><th>Reviewed by</th><th>Updated</th></tr></thead><tbody>
+{% for p in posts %}<tr><td><a href="/admin/blog/{{ p.id }}/">{{ p.title }}</a></td><td><span class="status {{ 'published' if p.status == 'published' else 'draft' }}">{{ p.status }}</span></td><td>{{ 'Yes' if p.ai_assisted else 'No' }}</td><td>{{ p.reviewed_by or '—' }}</td><td>{{ p.updated_at|human_date }}</td></tr>{% else %}<tr><td colspan="5">No posts yet.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+{% set parts = body.split("<p>[[tables]]</p>") %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    <p class="meta-line"><span>Methodology version {{ version }}</span><span>Effective <time datetime="{{ version_date }}">{{ version_date|human_date }}</time></span>{% if doc.updated %}<span>Page updated <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span>{% endif %}</p>
+  </header>
+  <article class="prose">
+    {{ parts[0]|safe }}
+    <h2 id="default-multiples">Default base multiples (platform assumptions)</h2>
+    <p>These ranges are the starting point for every estimate. They are {{ BRAND }} editorial assumptions and are <strong>not</strong> derived from a measured dataset of transactions. They will be replaced with sourced figures, and the change logged on this page, when {{ BRAND }} has a dataset that can support them. See <a href="/data-sources/">data sources</a>.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Business type</th><th>Base metric</th><th class="r">Low</th><th class="r">Midpoint</th><th class="r">High</th></tr></thead>
+      <tbody>{% for r in base_rows %}<tr><td><a href="{{ r.tool }}">{{ r.type }}</a></td><td>{{ r.basis }}</td><td class="r num">{{ r.low|mult }}</td><td class="r num">{{ r.mid|mult }}</td><td class="r num">{{ r.high|mult }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    <h2 id="adjustments">Adjustment rules</h2>
+    <p>Each rule changes the multiple by the percentage shown. Rules that don't apply to a business type, or whose input is left blank, are skipped. Effects multiply together, and the combined factor is limited to between ×{{ '%.1f'|format(floor) }} and ×{{ '%.1f'|format(ceil) }}.</p>
+    {% for rule in rules %}
+    <h3 id="rule-{{ loop.index }}">{{ rule.factor }} <span class="muted">({{ rule.applies }})</span></h3>
+    <p class="hint">Input: {{ rule.input }}</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>When</th><th class="r">Effect on multiple</th><th>Reason</th></tr></thead>
+      <tbody>{% for cond, eff, reason in rule.rows %}<tr><td>{{ cond }}</td><td class="r num">{{ eff|effect }}</td><td>{{ reason }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    {% endfor %}
+    {{ parts[1]|safe if parts|length > 1 else '' }}
+  </article>
+</div>
+{{ related_block(related) }}
+{% endblock %}

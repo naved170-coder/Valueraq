@@ -1,0 +1,35 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>{{ 'Edit post' if post and post.id else 'New post' }}</h1>
+<p class="muted">Before creating a post, check it answers a real question, has a different intent from existing pages, and adds something they don't (§73). Publishing runs the SEO checks below.</p>
+<div class="split mt">
+<form method="post" class="stack">
+  <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+  <div class="field"><label for="b-title">Title</label><input id="b-title" name="title" value="{{ post.title if post else '' }}" required></div>
+  <div class="form-grid">
+    <div class="field"><label for="b-slug">URL slug</label><input id="b-slug" name="slug" value="{{ post.slug if post else '' }}"></div>
+    <div class="field"><label for="b-h1">H1 (optional)</label><input id="b-h1" name="h1" value="{{ post.h1 if post and post.h1 else '' }}"></div>
+    <div class="field"><label for="b-cluster">Topic cluster</label><select id="b-cluster" name="cluster">{% for c in ['','website','saas','ai','app','newsletter','ecommerce','buying','selling','analysis'] %}<option value="{{ c }}" {% if post and post.cluster == c %}selected{% endif %}>{{ c or 'None' }}</option>{% endfor %}</select></div>
+    <div class="field"><label for="b-intent">Primary intent</label><select id="b-intent" name="primary_intent">{% for c in ['informational','commercial','transactional','navigational'] %}<option {% if post and post.primary_intent == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></div>
+  </div>
+  <div class="field"><label for="b-sum">Summary</label><input id="b-sum" name="summary" value="{{ post.summary if post and post.summary else '' }}"></div>
+  <div class="field"><label for="b-body">Body (Markdown)</label><textarea id="b-body" name="body_md" rows="22">{{ post.body_md if post else '' }}</textarea></div>
+  <details><summary>SEO fields</summary><div class="stack mt">
+    <div class="field"><label for="b-mt">Title tag</label><input id="b-mt" name="meta_title" value="{{ post.meta_title if post and post.meta_title else '' }}"></div>
+    <div class="field"><label for="b-md">Meta description</label><input id="b-md" name="meta_description" value="{{ post.meta_description if post and post.meta_description else '' }}"></div>
+    <div class="field"><label for="b-can">Canonical (leave empty for self)</label><input id="b-can" name="canonical_url" value="{{ post.canonical_url if post and post.canonical_url else '' }}"></div>
+    <div class="field"><label for="b-rob">Robots (leave empty for index, follow)</label><input id="b-rob" name="robots_directive" value="{{ post.robots_directive if post and post.robots_directive else '' }}"></div>
+    <div class="field"><label for="b-og">Open Graph image path</label><input id="b-og" name="og_image" value="{{ post.og_image if post and post.og_image else '' }}"></div>
+  </div></details>
+  <label class="checkbox"><input type="checkbox" name="ai_assisted" value="1" {% if post and post.ai_assisted %}checked{% endif %}> AI assisted in drafting this post</label>
+  <div class="field"><label for="b-rev">Human reviewer (required for AI-assisted posts)</label><input id="b-rev" name="reviewed_by" value="{{ post.reviewed_by if post and post.reviewed_by else '' }}"></div>
+  <div class="row"><button class="btn quiet" name="action" value="save">Save draft</button><button class="btn" name="action" value="publish">Check and publish</button></div>
+</form>
+<aside class="rail">
+  <div class="panel"><h2>Pre-publish checks</h2>
+    {% if issues %}{% for sev, msg in issues %}<p><span class="sev {{ sev }}">{{ sev }}</span> {{ msg }}</p>{% endfor %}{% elif post and post.id %}<p class="alert good">All checks pass.</p>{% else %}<p class="muted">Save a draft to run the checks.</p>{% endif %}</div>
+  <div class="panel"><h2>Suggested internal links</h2>
+    {% if suggestions %}<ul>{% for s in suggestions %}<li><a href="{{ s.path }}">{{ s.title }}</a> <span class="muted">{{ s.kind }}</span></li>{% endfor %}</ul><p class="hint">Add only the ones that fit the text. Nothing is inserted automatically.</p>{% else %}<p class="muted">Suggestions appear after you save.</p>{% endif %}</div>
+</aside>
+</div>
+{% endblock %}

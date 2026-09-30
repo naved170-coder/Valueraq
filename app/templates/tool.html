@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import field, related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Free valuation tool · Methodology v{{ example.methodology_version }}</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc and doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    {% if doc and doc.updated %}<p class="meta-line"><span>Last reviewed <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span><span>Base multiple {{ base.low|mult }}–{{ base.high|mult }} {{ 'annual profit' if base.method == 'profit' else 'ARR' }} (platform assumption)</span></p>{% endif %}
+  </header>
+</div>
+
+<section class="wrap" aria-labelledby="calc-h">
+  <div class="calc">
+    <div class="calc-head"><h2 id="calc-h">Estimate the value</h2><span class="hint">Takes about two minutes. Your figures are not stored unless you save a report.</span></div>
+    <form method="post" action="/tools/result/{{ key }}/" data-calc="{{ key }}" data-out="result" novalidate>
+      <p class="example-note">The form is filled with a hypothetical example. Replace the figures with your own.</p>
+      <p class="alert bad form-error" role="alert" hidden></p>
+      <div class="form-grid">
+        {% for k, spec in fields %}{{ field(k, spec, values.get(k)) }}{% endfor %}
+      </div>
+      <div class="actions"><button class="btn" type="submit">Calculate value</button><a class="hint" href="/methodology/">How the calculation works</a></div>
+    </form>
+    <div id="result" class="result" aria-live="polite">
+      {% with r=example, example=True %}{% include "partials/result.html" %}{% endwith %}
+    </div>
+  </div>
+</section>
+
+<div class="wrap section">
+  <div class="split">
+    <article class="prose">
+      {{ body|safe }}
+    </article>
+    <aside class="rail sticky">
+      <div class="panel">
+        <h2>Also in this topic</h2>
+        <div class="toc"><ol>
+          <li><a href="{{ t.guide }}">{{ guide_title }}</a></li>
+          <li><a href="{{ t.calculator }}">{{ calc_title }}</a></li>
+          <li><a href="{{ cat.path }}">{{ cat.name }}</a></li>
+        </ol></div>
+      </div>
+      <div class="panel">
+        <h2>Selling this business?</h2>
+        <p class="muted">List it on the {{ BRAND }} marketplace. Every listing is reviewed before it goes live.</p>
+        <a class="btn quiet" href="/sell/">List a business</a>
+      </div>
+    </aside>
+  </div>
+</div>
+{{ related_block(related) }}
+{% endblock %}
+{% block scripts %}<script src="{{ static('js/calc.js') }}" defer></script>{% endblock %}

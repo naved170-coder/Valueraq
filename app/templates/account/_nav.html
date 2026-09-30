@@ -1,0 +1,9 @@
+<nav class="admin-nav" aria-label="Account">
+  <a href="/account/" {% if current_path == '/account/' %}aria-current="page"{% endif %}>Overview</a>
+  <a href="/account/reports/" {% if current_path.startswith('/account/reports') %}aria-current="page"{% endif %}>Reports</a>
+  <a href="/account/listings/" {% if current_path.startswith('/account/listings') %}aria-current="page"{% endif %}>My listings</a>
+  <a href="/account/inquiries/" {% if current_path.startswith('/account/inquiries') %}aria-current="page"{% endif %}>Inquiries</a>
+  <a href="/account/billing/" {% if current_path.startswith('/account/billing') %}aria-current="page"{% endif %}>Plan &amp; billing</a>
+  {% if user.role == 'admin' %}<a href="/admin/">Admin</a>{% endif %}
+  <form method="post" action="/logout/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" type="submit">Log out</button></form>
+</nav>

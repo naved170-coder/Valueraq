@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="{{ cfg.LANGUAGE }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{% set m = meta if meta is defined else none %}
+{% if m %}
+<title>{{ m.meta_title or (m.title ~ ' | ' ~ BRAND) }}</title>
+<meta name="description" content="{{ m.description }}">
+<link rel="canonical" href="{{ m.canonical }}">
+<meta name="robots" content="{{ m.robots }}{% if m.indexable %}, max-image-preview:large, max-snippet:-1{% endif %}">
+<meta property="og:site_name" content="{{ BRAND }}">
+<meta property="og:locale" content="{{ cfg.LOCALE }}">
+<meta property="og:type" content="{{ m.og_type }}">
+<meta property="og:title" content="{{ m.og_title or m.title }}">
+<meta property="og:description" content="{{ m.og_description or m.description }}">
+<meta property="og:url" content="{{ m.canonical }}">
+<meta property="og:image" content="{{ SITE_URL }}{{ m.og_image or cfg.DEFAULT_OG_IMAGE }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{% if cfg.TWITTER_HANDLE %}<meta name="twitter:site" content="{{ cfg.TWITTER_HANDLE }}">{% endif %}
+{% if m.published %}<meta property="article:published_time" content="{{ m.published }}">{% endif %}
+{% if m.updated %}<meta property="article:modified_time" content="{{ m.updated }}">{% endif %}
+{% else %}
+<title>{% block title %}{{ BRAND }}{% endblock %}</title>
+<meta name="robots" content="noindex, follow">
+{% endif %}
+{% if cfg.GOOGLE_SITE_VERIFICATION %}<meta name="google-site-verification" content="{{ cfg.GOOGLE_SITE_VERIFICATION }}">{% endif %}
+{% if cfg.BING_SITE_VERIFICATION %}<meta name="msvalidate.01" content="{{ cfg.BING_SITE_VERIFICATION }}">{% endif %}
+<meta name="theme-color" content="#0d6a54">
+<link rel="icon" href="{{ static('brand/favicon.svg') }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="{{ static('css/site.css') }}">
+{% if jsonld is defined %}<script type="application/ld+json">{{ jsonld|tojson }}</script>{% endif %}
+{% block head %}{% endblock %}
+</head>
+<body data-template="{{ m.template if m else 'app' }}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="{{ BRAND }} home">
+      <svg width="26" height="18" viewBox="0 0 26 18" aria-hidden="true"><rect x="1" y="7" width="24" height="4" rx="2" fill="var(--accent)"/><rect x="11.5" y="2" width="3" height="14" rx="1.5" fill="var(--mark)"/></svg>
+      <span>{{ BRAND }}</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/tools/" {% if current_path.startswith('/tools/') %}aria-current="page"{% endif %}>Valuation tools</a>
+      <a href="/calculators/" {% if current_path.startswith('/calculators/') %}aria-current="page"{% endif %}>Calculators</a>
+      <a href="/businesses-for-sale/" {% if current_path.startswith('/businesses-for-sale/') or current_path.startswith('/marketplace/') %}aria-current="page"{% endif %}>Businesses for sale</a>
+      <a href="/guides/" {% if current_path.startswith('/guides/') or current_path.startswith('/glossary/') %}aria-current="page"{% endif %}>Guides</a>
+      <a href="/pricing/" {% if current_path == '/pricing/' %}aria-current="page"{% endif %}>Pricing</a>
+      {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a>{% endif %}
+      <a class="btn small" href="/sell/">Sell a business</a>
+    </nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav class="menu-panel" aria-label="Mobile">
+        <a href="/tools/">Valuation tools</a>
+        <a href="/calculators/">Calculators</a>
+        <a href="/businesses-for-sale/">Businesses for sale</a>
+        <a href="/guides/">Guides</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/sell/">Sell a business</a>
+        {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a>{% endif %}
+      </nav>
+    </details>
+  </div>
+</header>
+
+{% if crumbs is defined and crumbs|length > 1 %}
+<nav class="crumbs wrap" aria-label="Breadcrumb">
+  <ol>
+  {% for name, path in crumbs %}
+    <li>{% if loop.last %}<span aria-current="page">{{ name }}</span>{% else %}<a href="{{ path }}">{{ name }}</a>{% endif %}</li>
+  {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}<div class="wrap">{% for cat, msg in messages %}<p class="flash {{ cat }}" role="status">{{ msg }}</p>{% endfor %}</div>{% endif %}
+{% endwith %}
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2>Valuation tools</h2>
+        <ul>{% for t in nav_tools %}<li><a href="{{ t.path }}">{{ t.name|replace(' Tool','') }}</a></li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h2>Calculators</h2>
+        <ul>{% for c in nav_calcs %}<li><a href="{{ c.path }}">{{ c.name }}</a></li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h2>Businesses for sale</h2>
+        <ul>{% for c in nav_cats %}<li><a href="{{ c.path }}">{{ c.name }}</a></li>{% endfor %}
+          <li><a href="/sell/">List your business</a></li></ul>
+      </div>
+      <div>
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/methodology/">Valuation methodology</a></li>
+          <li><a href="/data-sources/">Data sources</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/editorial-policy/">Editorial policy</a></li>
+          <li><a href="/verification/">Listing verification</a></li>
+          <li><a href="/marketplace-rules/">Marketplace rules</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p>{{ BRAND }} valuations are estimates calculated from the information you enter and the assumptions published in our <a href="/methodology/">methodology</a>. They are not appraisals, audits, or investment, tax or legal advice.</p>
+      <p>Marketplace listings are provided by sellers. Figures are unverified unless a listing shows a verification status. © {{ year }} {{ BRAND }}.</p>
+    </div>
+  </div>
+</footer>
+<script src="{{ static('js/v.js') }}" defer></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

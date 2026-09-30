@@ -1,0 +1,30 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Listing moderation</h1>
+<div class="row mt">{% for s in statuses %}<a class="btn small {{ '' if s == status else 'quiet' }}" href="?status={{ s }}">{{ s|capitalize }} · {{ counts.get(s, 0) }}</a>{% endfor %}</div>
+<div class="stack mt">
+{% for l in rows %}
+<article class="panel">
+  <div class="row"><h2 class="h3"><a href="{{ l.path }}">#{{ l.id }} {{ l.title }}</a></h2><span class="status {{ l.status }}">{{ l.status }}</span><span class="status {{ l.verification }}">{{ l.verification|replace('_',' ') }}</span>{% if l.is_test %}<span class="tag">Test</span>{% endif %}</div>
+  <p class="meta-line"><span>{{ l.category }}</span><span>Seller {{ l.seller_email }}</span><span>Asking {{ l.asking_price|money }}</span><span>Profit {{ l.monthly_profit|money }}/mo</span><span>Quality {{ l.quality_score }}/100</span><span>{{ 'Indexable' if l.indexable else 'Not indexable' }}</span>{% if l.website_url %}<span>Private URL: {{ l.website_url }}</span>{% endif %}</p>
+  {% if l.flags %}<ul>{% for sev, msg in l.flags %}<li><span class="sev {{ sev }}">{{ sev }}</span> {{ msg }}</li>{% endfor %}</ul>{% endif %}
+  <details><summary>Description</summary><p>{{ l.description }}</p></details>
+  <form method="post" action="/admin/listings/{{ l.id }}/" class="row">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+    <input name="note" placeholder="Note to seller (optional)" aria-label="Note">
+    <button class="btn small" name="action" value="published">Approve</button>
+    <button class="btn small quiet" name="action" value="rejected">Reject</button>
+    <button class="btn small quiet" name="action" value="suspended">Suspend (410)</button>
+    <input name="replacement_id" placeholder="Replacement #" aria-label="Replacement listing ID" size="8">
+    <button class="btn small quiet" name="action" value="removed">Remove</button>
+    <button class="btn small quiet" name="action" value="test">Toggle test</button>
+  </form>
+  <form method="post" action="/admin/listings/{{ l.id }}/" class="row">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="action" value="verify">
+    <select name="verification" aria-label="Verification">{% for v in ['unverified','revenue_verified','traffic_verified','fully_verified'] %}<option value="{{ v }}" {% if l.verification == v %}selected{% endif %}>{{ v|replace('_',' ') }}</option>{% endfor %}</select>
+    <button class="btn small quiet">Set verification</button>
+  </form>
+</article>
+{% else %}<p class="empty">No listings with status “{{ status }}”.</p>{% endfor %}
+</div>
+{% endblock %}

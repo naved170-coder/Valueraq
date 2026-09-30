@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Free calculators</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc and doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+  </header>
+  <div class="grid">
+    {% for c in calcs %}
+    <a class="card" href="{{ c.path }}"><h2 class="h3">{{ c.name }}</h2><p>{{ c.description }}</p><span class="go">Open →</span></a>
+    {% endfor %}
+  </div>
+</div>
+<div class="wrap section">
+  <article class="prose">{{ doc.html|safe if doc else '' }}</article>
+</div>
+{% endblock %}

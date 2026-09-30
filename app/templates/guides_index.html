@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Learn</p>
+    <h1>{{ meta.h1 }}</h1>
+    <p class="lede">Guides to how digital businesses are valued, bought and sold. Each one links to the tool or marketplace category it relates to, and all of them follow our <a href="/editorial-policy/">editorial policy</a>.</p>
+  </header>
+  {% for section, docs in groups.items() %}
+  <section class="section" aria-labelledby="s-{{ loop.index }}">
+    <h2 id="s-{{ loop.index }}" class="section-title">{{ section }}</h2>
+    <div class="grid">
+      {% for d in docs %}
+      <a class="card" href="/guides/{{ d.slug }}/"><h3>{{ d.title }}</h3><p>{{ d.meta_description }}</p><span class="muted">Updated {{ d.updated|human_date }}</span></a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <p class="mt">Looking for a definition? See the <a href="/glossary/">glossary</a>.</p>
+</div>
+{% endblock %}

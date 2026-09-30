@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Reports | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <h1>Saved reports</h1>
+  {% if limit %}<p class="muted">Free accounts keep {{ limit }} saved reports. <a href="/pricing/">Pro</a> removes the limit.</p>{% endif %}
+  {% if reports %}
+  <div class="table-wrap mt"><table><thead><tr><th>Report</th><th>Created</th><th class="r">Midpoint</th><th></th></tr></thead><tbody>
+  {% for r in reports %}{% set res = r.result_json|fromjson %}
+    <tr><td><a href="/reports/private/{{ r.token }}/">{{ r.title }}</a></td><td>{{ r.created_at|human_date }}</td><td class="r num">{{ res.value.mid|money }}</td>
+    <td><form method="post" action="/reports/private/{{ r.token }}/delete/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" type="submit">Delete</button></form></td></tr>
+  {% endfor %}</tbody></table></div>
+  {% else %}<p class="empty">No saved reports yet. <a href="/tools/">Run a valuation</a>, then open the detailed report.</p>{% endif %}
+</div>
+{% endblock %}

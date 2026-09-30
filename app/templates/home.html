@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import range_bar %}
+{% block main %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Digital business valuation · Marketplace</p>
+      <h1>{{ meta.h1 }}</h1>
+      <p class="lede">{{ BRAND }} estimates the value of websites, SaaS, AI businesses, apps, newsletters and ecommerce stores from the figures you enter, using a methodology we publish in full. You can also browse and list digital businesses for sale.</p>
+      <nav class="type-picker" aria-label="Choose a business type">
+        {% for t in nav_tools %}
+        <a href="{{ t.path }}"><b>{{ t.name|replace(' Valuation Tool','')|replace(' Business','') }}</b><span>{{ t.short }}</span></a>
+        {% endfor %}
+      </nav>
+    </div>
+    <aside class="memo" aria-labelledby="memo-h">
+      <div class="memo-head"><b id="memo-h">Valuation memo</b><span class="tag assume">Hypothetical example</span></div>
+      <p class="muted">A four-year-old affiliate content site with {{ ex_inputs.monthly_profit|money }} monthly profit and {{ ex_inputs.top_channel_pct|pct }} of traffic from one channel.</p>
+      {{ range_bar(example.value) }}
+      <div class="memo-lines">
+        <div><span>{{ example.metric.label }}</span><span>{{ example.metric.value|money }}</span></div>
+        <div><span>Base multiple (assumption)</span><span>{{ example.base_multiple.low|mult }}–{{ example.base_multiple.high|mult }}</span></div>
+        {% for a in example.adjustments if a.effect %}
+        <div><span>{{ a.factor }}</span><span>{{ a.effect|effect }}</span></div>
+        {% endfor %}
+        <div><span>Adjusted multiple</span><span>{{ example.multiple.low|mult }}–{{ example.multiple.high|mult }}</span></div>
+      </div>
+      <p class="memo-foot">Calculated live by the <a href="/tools/website-valuation/">Website Valuation Tool</a> using <a href="/methodology/">methodology v{{ example.methodology_version }}</a>. Not a real business.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="how-h">
+  <div class="wrap">
+    <h2 id="how-h">How a {{ BRAND }} valuation works</h2>
+    <ol class="steps">
+      <li><h3>You enter the numbers</h3><p>Revenue, profit or MRR, age, growth and a few risk questions. Nothing is pulled from third parties, and nothing you enter is published.</p></li>
+      <li><h3>A base multiple is applied</h3><p>Profit-based businesses start from a multiple of annual profit (SDE). SaaS and AI businesses start from a multiple of ARR. Each range is a published platform assumption.</p></li>
+      <li><h3>Risk adjusts the multiple</h3><p>Age, growth, owner time, channel and customer concentration, churn and margins move the multiple up or down. Every adjustment is shown with its reason.</p></li>
+    </ol>
+    <p class="muted mt">Read the full <a href="/methodology/">valuation methodology</a>, including the default multiples and their limitations, or see where our <a href="/data-sources/">data comes from</a>.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="bfs-h">
+  <div class="wrap">
+    <h2 id="bfs-h">Digital businesses for sale</h2>
+    <div class="grid">
+      {% for c in nav_cats %}
+      <a class="card" href="{{ c.path }}">
+        <h3>{{ c.name }}</h3>
+        <p>{{ c.definition }}</p>
+        <span class="go">{% if counts.get(c.slug) %}{{ counts[c.slug] }} live listing{{ '' if counts[c.slug] == 1 else 's' }}{% else %}Now accepting listings{% endif %} →</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="row mt"><a class="btn" href="/sell/">List your business</a><a class="btn ghost" href="/guides/buying-digital-businesses/">How to buy an online business</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="calc-h">
+  <div class="wrap">
+    <h2 id="calc-h">Quick calculators</h2>
+    <div class="grid">
+      {% for c in nav_calcs %}
+      <a class="card" href="{{ c.path }}"><h3>{{ c.name }}</h3><p>{{ c.short }}</p><span class="go">Open calculator →</span></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="g-h">
+  <div class="wrap">
+    <h2 id="g-h">Guides</h2>
+    <div class="grid">
+      {% for d in guides %}
+      <a class="card" href="/guides/{{ d.slug }}/"><h3>{{ d.title }}</h3><p>{{ d.meta_description }}</p></a>
+      {% endfor %}
+    </div>
+    <p class="mt"><a href="/guides/">All guides</a> · <a href="/glossary/">Glossary of valuation terms</a></p>
+  </div>
+</section>
+{% endblock %}

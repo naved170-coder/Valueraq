@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import listing_card, related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Marketplace{% if page > 1 %} · Page {{ page }} of {{ pages }}{% endif %}</p>
+    <h1>{{ meta.h1 }}{% if page > 1 %} <span class="muted">– page {{ page }}</span>{% endif %}</h1>
+    {% if page == 1 %}<p class="answer">{{ c.definition }}</p>{% endif %}
+    <p class="meta-line"><span>{{ total }} live listing{{ '' if total == 1 else 's' }}{% if filtered %} matching your filters{% endif %}</span><span>Figures are provided by sellers; see each listing's verification status</span></p>
+  </header>
+
+  {% if total or filtered %}
+  <form class="filters" method="get" action="{{ base }}" aria-label="Filter listings">
+    <div class="field"><label for="f-sort">Sort</label><select id="f-sort" name="sort">{% for k, (label, _) in sorts.items() %}<option value="{{ k }}" {% if args.get('sort') == k %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
+    <div class="field"><label for="f-pmax">Max price ($)</label><input id="f-pmax" name="price_max" inputmode="numeric" value="{{ args.get('price_max','') }}"></div>
+    <div class="field"><label for="f-prof">Min profit / mo ($)</label><input id="f-prof" name="profit_min" inputmode="numeric" value="{{ args.get('profit_min','') }}"></div>
+    <div class="field"><label for="f-age">Min age (years)</label><input id="f-age" name="age_min" inputmode="decimal" value="{{ args.get('age_min','') }}"></div>
+    <div class="field"><label for="f-model">Business model</label><select id="f-model" name="model"><option value="">Any</option>{% for m in models %}<option {% if args.get('model') == m %}selected{% endif %}>{{ m }}</option>{% endfor %}</select></div>
+    <div class="row"><button class="btn" type="submit">Apply</button>{% if filtered %}<a href="{{ base }}">Clear</a>{% endif %}</div>
+  </form>
+  {% endif %}
+
+  <section class="section" aria-label="Listings">
+  {% if listings %}
+    <div class="listing-grid">{% for l in listings %}{{ listing_card(l) }}{% endfor %}</div>
+    {% include "partials/pager.html" %}
+  {% elif filtered %}
+    <div class="empty"><p>No listings match these filters.</p><a href="{{ base }}">Clear filters</a></div>
+  {% else %}
+    <div class="empty">
+      <h2 class="h3">No {{ c.plural }} are listed for sale right now</h2>
+      <p>{{ BRAND }} only shows real listings submitted by owners and checked by our team, so this category fills as sellers join. If you own a {{ c.singular }}, you can be among the first listed.</p>
+      <div class="row"><a class="btn" href="/sell/">List your {{ c.singular }}</a><a class="btn ghost" href="{{ tool.path }}">Value a {{ c.singular }} first</a></div>
+    </div>
+  {% endif %}
+  </section>
+</div>
+
+{% if doc %}
+<div class="wrap section">
+  <div class="split">
+    <article class="prose">{{ body|safe }}</article>
+    <aside class="rail sticky">
+      <div class="panel"><h2>Value before you buy</h2><p class="muted">Enter a listing's figures into the {{ tool.name }} to see the range its numbers support.</p><a class="btn quiet" href="{{ tool.path }}">{{ tool.name }}</a></div>
+      <div class="panel"><h2>Check an asking price</h2><p class="muted">Turn any price into revenue and profit multiples.</p><a class="btn quiet" href="/calculators/business-multiple-calculator/">Business Multiple Calculator</a></div>
+    </aside>
+  </div>
+</div>
+{% endif %}
+{{ related_block(related) }}
+{% endblock %}

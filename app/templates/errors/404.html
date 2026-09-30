@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Page not found | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head">
+  <p class="eyebrow">Error 404</p>
+  <h1>This page doesn't exist</h1>
+  <p class="lede">The address may be mistyped, or the page may have moved. These are the most-used parts of {{ BRAND }}:</p>
+  <ul class="grid">
+    <li class="card"><a href="/tools/">Valuation tools</a></li>
+    <li class="card"><a href="/businesses-for-sale/">Businesses for sale</a></li>
+    <li class="card"><a href="/guides/">Guides</a></li>
+    <li class="card"><a href="/search/">Search</a></li>
+  </ul>
+</div>
+{% endblock %}

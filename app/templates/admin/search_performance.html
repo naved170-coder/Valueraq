@@ -1,0 +1,23 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Search performance</h1>
+<p class="muted">Import exports from Google Search Console (Performance → Pages or Queries → Export CSV) and Bing Webmaster Tools. Verification meta tags are set with the GOOGLE_SITE_VERIFICATION and BING_SITE_VERIFICATION settings.</p>
+<form method="post" enctype="multipart/form-data" class="panel mt">
+  <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+  <div class="form-grid">
+    <div class="field"><label for="sp-file">CSV file</label><input id="sp-file" type="file" name="file" accept=".csv"></div>
+    <div class="field"><label for="sp-engine">Engine</label><select id="sp-engine" name="engine"><option value="google">Google</option><option value="bing">Bing</option></select></div>
+    <div class="field"><label for="sp-s">Period start</label><input id="sp-s" name="period_start" placeholder="2026-09-01"></div>
+    <div class="field"><label for="sp-e">Period end</label><input id="sp-e" name="period_end" placeholder="2026-09-30"></div>
+  </div>
+  <button class="btn" type="submit">Import</button>
+</form>
+<section class="section"><h2 class="section-title">Top pages</h2>
+<div class="table-wrap"><table><thead><tr><th>Engine</th><th>Page</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg. position</th></tr></thead><tbody>
+{% for r in pages %}<tr><td>{{ r.engine }}</td><td class="mono">{{ r.path }}</td><td class="r">{{ r.clicks|num }}</td><td class="r">{{ r.impressions|num }}</td><td class="r">{{ ((r.clicks or 0) / r.impressions * 100)|round(1) if r.impressions else '—' }}%</td><td class="r">{{ r.position|round(1) if r.position else '—' }}</td></tr>{% else %}<tr><td colspan="6">No data imported.</td></tr>{% endfor %}
+</tbody></table></div></section>
+<section class="section"><h2 class="section-title">Top queries</h2>
+<div class="table-wrap"><table><thead><tr><th>Engine</th><th>Query</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">Avg. position</th></tr></thead><tbody>
+{% for r in queries %}<tr><td>{{ r.engine }}</td><td>{{ r.query }}</td><td class="r">{{ r.clicks|num }}</td><td class="r">{{ r.impressions|num }}</td><td class="r">{{ r.position|round(1) if r.position else '—' }}</td></tr>{% else %}<tr><td colspan="5">No data imported.</td></tr>{% endfor %}
+</tbody></table></div></section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Analytics · last {{ days }} days</h1>
+<p class="muted">First-party events only. Traffic metrics and business metrics are shown separately: a page can bring visits without bringing valuations or signups.</p>
+<div class="grid mt">
+  <div class="panel"><h2>Sessions by channel</h2><dl class="kv">{% for c in channels %}<dt>{{ c.channel or 'unknown' }}</dt><dd>{{ c.n }}</dd>{% else %}<dt>No data yet</dt><dd></dd>{% endfor %}</dl></div>
+  <div class="panel"><h2>Tool funnel</h2><div class="table-wrap"><table><thead><tr><th>Step</th><th class="r">All</th><th class="r">Organic</th></tr></thead><tbody>{% for i in range(steps_all|length) %}<tr><td>{{ steps_all[i][0] }}</td><td class="r">{{ steps_all[i][1] }}</td><td class="r">{{ steps_org[i][1] }}</td></tr>{% endfor %}</tbody></table></div></div>
+  <div class="panel"><h2>Marketplace funnel</h2><div class="table-wrap"><table><thead><tr><th>Step</th><th class="r">All</th><th class="r">Organic</th></tr></thead><tbody>{% for i in range(market_all|length) %}<tr><td>{{ market_all[i][0] }}</td><td class="r">{{ market_all[i][1] }}</td><td class="r">{{ market_org[i][1] }}</td></tr>{% endfor %}</tbody></table></div></div>
+</div>
+<section class="section"><h2 class="section-title">Organic landing pages</h2>
+<div class="table-wrap"><table><thead><tr><th>Landing page</th><th class="r">Sessions</th><th class="r">Valuations</th><th class="r">Signups</th></tr></thead><tbody>
+{% for r in landings %}<tr><td class="mono">{{ r.landing_path }}</td><td class="r">{{ r.sessions }}</td><td class="r">{{ r.valuations }}</td><td class="r">{{ r.signups }}</td></tr>{% else %}<tr><td colspan="4">No organic sessions recorded yet.</td></tr>{% endfor %}
+</tbody></table></div></section>
+<section class="section"><h2 class="section-title">Core Web Vitals (field data, p75, 28 days)</h2>
+<div class="table-wrap"><table><thead><tr><th>Template</th><th>Metric</th><th class="r">p75</th><th class="r">Samples</th><th>Rating</th></tr></thead><tbody>
+{% for v in vitals %}<tr><td>{{ v.template }}</td><td>{{ v.metric }}</td><td class="r">{{ v.p75 }}</td><td class="r">{{ v.n }}</td><td><span class="sev {{ 'info' if v.rating == 'good' else 'warning' if v.rating == 'needs improvement' else 'critical' }}">{{ v.rating }}</span></td></tr>{% else %}<tr><td colspan="5">No field data yet. It appears once real visitors load pages.</td></tr>{% endfor %}
+</tbody></table></div></section>
+{% endblock %}

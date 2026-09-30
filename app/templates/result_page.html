@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import field %}
+{% block title %}{{ t.name }} result | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head">
+  <p class="eyebrow">{{ t.name }}</p>
+  <h1>{% if error %}Check your figures{% else %}Your valuation estimate{% endif %}</h1>
+</div>
+<div class="wrap">
+  <div class="calc">
+  {% if error %}
+    <form method="post" action="/tools/result/{{ t.key }}/">
+      <p class="alert bad" role="alert">{{ error }}</p>
+      <div class="form-grid">{% for k, spec in field_specs %}{{ field(k, spec, (values.get(k)|float) if spec.kind != 'select' and values.get(k) not in (None, '') else (values.get(k) or None), fields.get(k)) }}{% endfor %}</div>
+      <div class="actions"><button class="btn" type="submit">Calculate value</button></div>
+    </form>
+  {% else %}
+    <div class="result">{{ html|safe }}</div>
+  {% endif %}
+  </div>
+  <p class="mt"><a href="{{ t.path }}">← Back to the {{ t.name }}</a></p>
+</div>
+{% endblock %}

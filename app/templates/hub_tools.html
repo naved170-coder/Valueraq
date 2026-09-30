@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Free · No signup needed</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc and doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+  </header>
+  <div class="table-wrap">
+    <table>
+      <caption class="visually-hidden">Valuation tools and their default methods</caption>
+      <thead><tr><th>Tool</th><th>For</th><th>Values the business on</th><th class="r">Default base range</th></tr></thead>
+      <tbody>
+      {% for t in tools %}{% set b = base[t.key] %}
+        <tr><td><a href="{{ t.path }}">{{ t.name }}</a></td><td>{{ t.short }}</td><td>{{ 'Annual profit (SDE)' if b.method == 'profit' else 'Annual recurring revenue (ARR)' }}</td><td class="r num">{{ b.low|mult }}–{{ b.high|mult }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="hint mt">Base ranges are {{ BRAND }} platform assumptions (methodology v1.0), adjusted for each business's risk. See the <a href="/methodology/">methodology</a>.</p>
+</div>
+<div class="wrap section">
+  <div class="split">
+    <article class="prose">{{ doc.html|safe if doc else '' }}</article>
+    <aside class="rail">
+      <div class="panel"><h2>Quick calculators</h2><div class="toc"><ol>{% for c in calcs %}<li><a href="{{ c.path }}">{{ c.name }}</a></li>{% endfor %}</ol></div></div>
+    </aside>
+  </div>
+</div>
+{% endblock %}

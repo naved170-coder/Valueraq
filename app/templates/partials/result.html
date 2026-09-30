@@ -1,0 +1,62 @@
+{# Server-rendered valuation result. Used by JS (inserted as HTML), the no-JS
+   result page and the private report. `r` = engine result dict. #}
+{% from "partials/macros.html" import range_bar, legend %}
+{% set ex = example is defined and example %}
+{% if ex %}<p class="example-note">Example result for the hypothetical inputs above. Replace them with your own figures and select <b>Calculate value</b>.</p>{% endif %}
+<div class="stack">
+  <p class="summary">Estimated value of this {{ r.type_noun or r.type_label }}: <b class="num">{{ r.value.low|money }} – {{ r.value.high|money }}</b>, with a midpoint of <b class="num">{{ r.value.mid|money }}</b>. Method: {{ r.method[0]|lower }}{{ r.method[1:] }}.</p>
+  {{ range_bar(r.value) }}
+  {% if r.value_including_extras %}
+  <p class="alert">Including inventory at cost: <b class="num">{{ r.value_including_extras.low|money }} – {{ r.value_including_extras.high|money }}</b>.</p>
+  {% endif %}
+  {% for w in r.warnings %}<p class="alert">{{ w }}</p>{% endfor %}
+</div>
+
+<div class="stack">
+  <h3>How this figure was reached</h3>
+  {{ legend() }}
+  <div class="table-wrap">
+  <table>
+    <tbody>
+      <tr><th scope="row">{{ r.metric.label }}</th><td>{{ r.metric.formula }}</td><td class="r num">{{ r.metric.value|money }}</td><td><span class="tag calc">Calculated</span></td></tr>
+      {% if r.margin_pct is not none %}<tr><th scope="row">Profit margin</th><td>Profit ÷ revenue</td><td class="r num">{{ r.margin_pct|pct(1) }}</td><td><span class="tag calc">Calculated</span></td></tr>{% endif %}
+      <tr><th scope="row">Base multiple range</th><td>{{ r.base_multiple.source }}</td><td class="r num">{{ r.base_multiple.low|mult }} – {{ r.base_multiple.high|mult }}</td><td><span class="tag assume">Assumption</span></td></tr>
+      <tr><th scope="row">Combined adjustment</th><td>Product of the adjustments below</td><td class="r num">× {{ '%.2f'|format(r.adjustment_factor) }}</td><td><span class="tag calc">Calculated</span></td></tr>
+      <tr><th scope="row">Adjusted multiple</th><td>Base range × combined adjustment</td><td class="r num">{{ r.multiple.low|mult }} – {{ r.multiple.high|mult }}</td><td><span class="tag calc">Calculated</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+{% if r.adjustments %}
+<div class="stack">
+  <h3>Adjustments applied</h3>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Factor</th><th>Your input</th><th class="r">Effect</th><th>Why</th></tr></thead>
+    <tbody>
+    {% for a in r.adjustments %}
+      <tr><td>{{ a.factor }}</td><td class="num">{{ a.value if a.value is not none else '—' }}</td><td class="r num">{{ a.effect|effect }}</td><td>{{ a.reason }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+{% endif %}
+
+{% if r.cross_check or r.extras %}
+<dl class="kv">
+  {% if r.cross_check %}<dt>{{ r.cross_check.label }}</dt><dd>{{ r.cross_check.value }}×</dd>{% endif %}
+  {% for e in r.extras %}<dt>{{ e.label }}</dt><dd>{{ e.value|money if e.value is number else e.value }}</dd>{% endfor %}
+</dl>
+{% if r.cross_check %}<p class="hint">{{ r.cross_check.note }}</p>{% endif %}
+{% endif %}
+
+<p><b>Confidence: {{ r.confidence }}.</b> {% for c in r.confidence_reasons %}{{ c }} {% endfor %}</p>
+
+{% if not ex and not (report is defined and report) %}
+<div class="row no-print">
+  <a class="btn" href="/account/reports/new/">Get the detailed report</a>
+  <span class="hint">Free account. Adds a sensitivity table, a due-diligence checklist and a saved, printable copy.</span>
+</div>
+{% endif %}

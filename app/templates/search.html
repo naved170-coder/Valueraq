@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head"><h1>Search</h1>
+    <form method="get" action="/search/" class="row" role="search">
+      <label class="visually-hidden" for="q">Search</label>
+      <input id="q" type="search" name="q" value="{{ q }}" placeholder="For example: SaaS multiple, newsletter, due diligence">
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </header>
+  {% if q %}
+    {% if results %}
+    <ol class="stack" aria-label="Results">
+      {% for score, title, path, snippet in results %}
+      <li><a href="{{ path }}"><b>{{ title }}</b></a>{% if snippet %}<br><span class="muted">{{ snippet }}</span>{% endif %}</li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p>No results for “{{ q }}”. Try the <a href="/guides/">guides</a>, the <a href="/glossary/">glossary</a> or <a href="/businesses-for-sale/">businesses for sale</a>.</p>
+    {% endif %}
+  {% endif %}
+</div>
+{% endblock %}

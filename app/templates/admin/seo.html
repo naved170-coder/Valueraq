@@ -1,0 +1,38 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<div class="row"><h1>SEO audit</h1>
+<form method="post" action="/admin/seo/run/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Run audit now</button></form></div>
+<p class="muted">Renders every sitemap URL plus every internally linked page and checks them against the pre-launch checklist. The quality score is an internal QA measure, not a ranking prediction.</p>
+{% if run %}{% set s = run.summary %}
+<div class="stat-row mt">
+  <div class="stat"><small>URLs crawled</small><b>{{ s.pages }}</b></div>
+  <div class="stat"><small>Indexable</small><b>{{ s.indexable }}</b></div>
+  <div class="stat"><small>Noindex (200)</small><b>{{ s.noindex }}</b></div>
+  <div class="stat"><small>Sitemap URLs</small><b>{{ s.sitemap_urls }}</b></div>
+  <div class="stat {{ 'crit' if s.critical else 'ok' }}"><small>Critical</small><b>{{ s.critical }}</b></div>
+  <div class="stat {{ 'warn' if s.warnings else 'ok' }}"><small>Warnings</small><b>{{ s.warnings }}</b></div>
+  <div class="stat"><small>Avg. quality score</small><b>{{ s.avg_score }}</b></div>
+  <div class="stat"><small>Changes since last run</small><b>{{ s.changes or 0 }}</b></div>
+</div>
+<section class="section"><h2 class="section-title">Issues by type</h2>
+  <div class="row">{% for code, n in s.by_code.items() %}<a class="btn small quiet" href="?issue={{ code }}">{{ code|replace('_',' ') }} · {{ n }}</a>{% endfor %}{% if code or sev %}<a href="/admin/seo/">Clear filter</a>{% endif %}</div>
+</section>
+{% if s.site_issues %}<section class="section"><h2 class="section-title">Site-level issues</h2><ul>{% for i in s.site_issues %}<li><span class="sev {{ i.severity }}">{{ i.severity }}</span> {{ i.message }}</li>{% endfor %}</ul></section>{% endif %}
+<section class="section"><h2 class="section-title">Behaviour probes</h2>
+<div class="table-wrap"><table><thead><tr><th>URL</th><th>Expected</th><th>Status</th><th>Result</th></tr></thead><tbody>
+{% for p in s.probes %}<tr><td class="mono">{{ p.path }}</td><td>{{ p.expect }}</td><td>{{ p.status }}</td><td><span class="sev {{ 'info' if p.ok else 'critical' }}">{{ 'pass' if p.ok else 'fail' }}</span></td></tr>{% endfor %}
+</tbody></table></div></section>
+{% if s.change_list %}<section class="section"><h2 class="section-title">Changes since the previous audit</h2>
+<div class="table-wrap"><table><thead><tr><th>URL</th><th>Field</th><th>Before</th><th>After</th></tr></thead><tbody>
+{% for c in s.change_list[:100] %}<tr><td class="mono">{{ c.path }}</td><td>{{ c.field }}</td><td>{{ c.old or '—' }}</td><td>{{ c.new or '—' }}</td></tr>{% endfor %}
+</tbody></table></div></section>{% endif %}
+<section class="section"><h2 class="section-title">Pages{% if code %} with “{{ code }}”{% endif %}</h2>
+<div class="table-wrap"><table><thead><tr><th>URL</th><th>Status</th><th>Robots</th><th class="r">Words</th><th class="r">Inbound</th><th class="r">Render ms</th><th>Score</th><th>Issues</th></tr></thead><tbody>
+{% for p in pages %}
+<tr><td class="mono"><a href="/admin/seo/page/?path={{ p.path|urlencode }}">{{ p.path }}</a></td><td>{{ p.status }}</td><td>{{ (p.robots or '')|replace(', max-image-preview:large, max-snippet:-1','') }}</td><td class="r">{{ p.words or '' }}</td><td class="r">{{ p.inbound }}</td><td class="r">{{ p.render_ms }}</td>
+<td>{% if p.score is not none %}<div class="meter" title="{{ p.score }}"><i style="width: {{ p.score }}%"></i></div> {{ p.score }}{% endif %}</td>
+<td>{% for i in p.issues %}<div><span class="sev {{ i.severity }}">{{ i.severity[:4] }}</span> {{ i.message }}</div>{% endfor %}</td></tr>
+{% endfor %}
+</tbody></table></div></section>
+{% else %}<p class="empty mt">No audit has run yet. Select “Run audit now”.</p>{% endif %}
+{% endblock %}

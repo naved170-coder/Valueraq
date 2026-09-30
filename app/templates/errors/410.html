@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}No longer available | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head">
+  <p class="eyebrow">Error 410</p>
+  <h1>This page has been removed</h1>
+  <p class="lede">The listing or page that was here has been permanently removed, and there is no direct replacement. You can browse similar businesses or value your own.</p>
+  <ul class="grid">
+    {% for c in nav_cats %}<li class="card"><a href="{{ c.path }}">{{ c.name }}</a></li>{% endfor %}
+    <li class="card"><a href="/tools/">Valuation tools</a></li>
+  </ul>
+</div>
+{% endblock %}

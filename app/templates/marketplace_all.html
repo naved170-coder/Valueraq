@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import listing_card %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Marketplace{% if page > 1 %} · Page {{ page }} of {{ pages }}{% endif %}</p>
+    <h1>{{ meta.h1 }}</h1>
+    <p class="lede">Every live listing across all categories. For category-specific guidance, open a category: {% for c in cats %}<a href="{{ c.path }}">{{ c.name|replace(' for Sale','') }}</a>{{ ', ' if not loop.last else '.' }}{% endfor %}</p>
+  </header>
+  {% if listings %}
+    <div class="listing-grid">{% for l in listings %}{{ listing_card(l) }}{% endfor %}</div>
+    {% include "partials/pager.html" %}
+  {% else %}
+    <div class="empty"><h2 class="h3">No live listings yet</h2><p>The marketplace only shows real businesses submitted by their owners and reviewed by our team.</p><a class="btn" href="/sell/">List your business</a></div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Your account | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <header class="page-head"><h1>Hello{% if user.name %}, {{ user.name }}{% endif %}</h1>
+    <p class="meta-line"><span>Plan: <b>{{ {'free':'Free','trial':'Pro trial','pro':'Pro'}[user.plan] }}</b>{% if trial_days is not none %} · {{ trial_days }} day{{ '' if trial_days == 1 else 's' }} left{% endif %}</span></p>
+  </header>
+  {% if user.plan == 'free' and not user.trial_used %}
+  <div class="panel"><h2>Try Pro free for {{ cfg.TRIAL_DAYS }} days</h2><p class="muted">Unlimited saved reports and AI commentary. No card needed.</p>
+    <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Start free trial</button></form></div>
+  {% endif %}
+  <div class="grid mt">
+    <section class="panel"><h2>Recent reports</h2>
+      {% if reports %}<div class="toc"><ol>{% for r in reports %}<li><a href="/reports/private/{{ r.token }}/">{{ r.title }}</a> <span class="muted">· {{ r.created_at|human_date }}</span></li>{% endfor %}</ol></div>
+      {% else %}<p class="muted">No saved reports yet. Run a tool, then choose “Get the detailed report”.</p>{% endif %}
+      <p><a href="/tools/">Valuation tools</a></p></section>
+    <section class="panel"><h2>Your listings</h2>
+      {% if listings %}<div class="toc"><ol>{% for l in listings %}<li>{{ l.title }} <span class="status {{ l.status }}">{{ l.status }}</span></li>{% endfor %}</ol></div>{% else %}<p class="muted">You haven't listed a business.</p>{% endif %}
+      <p><a href="/sell/">List a business</a>{% if inbox %} · <a href="/account/inquiries/">{{ inbox }} new inquir{{ 'y' if inbox == 1 else 'ies' }}</a>{% endif %}</p></section>
+  </div>
+</div>
+{% endblock %}

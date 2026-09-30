@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Blog</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if p.summary %}<p class="lede">{{ p.summary }}</p>{% endif %}
+    <p class="meta-line">
+      <span>By <a href="{{ author.url }}">{{ author.name }}</a></span>
+      {% if meta.published %}<span>Published <time datetime="{{ meta.published }}">{{ meta.published|human_date }}</time></span>{% endif %}
+      {% if meta.updated and meta.updated != meta.published %}<span>Updated <time datetime="{{ meta.updated }}">{{ meta.updated|human_date }}</time></span>{% endif %}
+      {% if p.reviewed_by %}<span>Reviewed by {{ p.reviewed_by }}</span>{% endif %}
+    </p>
+  </header>
+  <article class="prose">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Keyword research</h1>
+<p class="muted">Import keyword data from a real source (Google Keyword Planner, Search Console, Ahrefs, Semrush…). Nothing here is estimated by {{ BRAND }}; empty cells mean the source didn't provide a value.</p>
+<form method="post" enctype="multipart/form-data" class="panel mt">
+  <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+  <h2>Import CSV</h2>
+  <p class="hint">Columns (case-insensitive): keyword, intent, target_path, search_volume, difficulty, cpc. Other columns are ignored.</p>
+  <div class="form-grid">
+    <div class="field"><label for="k-file">CSV file</label><input id="k-file" type="file" name="file" accept=".csv"></div>
+    <div class="field"><label for="k-src">Source</label><input id="k-src" name="source" placeholder="Google Keyword Planner" required></div>
+    <div class="field"><label for="k-date">Source date</label><input id="k-date" name="source_date" placeholder="2026-09"></div>
+  </div>
+  <button class="btn" type="submit">Import</button>
+</form>
+{% if untargeted %}<section class="section"><h2 class="section-title">Important pages with no target keyword ({{ untargeted|length }})</h2><p>{% for p in untargeted %}<a class="mono" href="/admin/seo/page/?path={{ p|urlencode }}">{{ p }}</a>{{ ', ' if not loop.last }}{% endfor %}</p></section>{% endif %}
+<section class="section"><h2 class="section-title">Keywords ({{ rows|length }})</h2>
+<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Intent</th><th>Target page</th><th class="r">Volume</th><th class="r">Difficulty</th><th class="r">CPC</th><th>Source</th></tr></thead><tbody>
+{% for k in rows %}<tr><td>{{ k.keyword }}</td><td>{{ k.intent or '—' }}</td><td class="mono">{{ k.target_path or '—' }}</td><td class="r">{{ k.search_volume|num if k.search_volume is not none else '—' }}</td><td class="r">{{ k.difficulty if k.difficulty is not none else '—' }}</td><td class="r">{{ k.cpc if k.cpc is not none else '—' }}</td><td>{{ k.source }}{% if k.source_date %} · {{ k.source_date }}{% endif %}</td></tr>{% else %}<tr><td colspan="7">No keywords imported.</td></tr>{% endfor %}
+</tbody></table></div></section>
+{% endblock %}

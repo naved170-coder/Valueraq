@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ c.name }} result | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head"><p class="eyebrow">{{ c.name }}</p><h1>{% if error %}Check your figures{% else %}Result{% endif %}</h1></div>
+<div class="wrap">
+  <div class="calc"><div class="result">{% if error %}<p class="alert bad" role="alert">{{ error }}</p>{% else %}{{ html|safe }}{% endif %}</div></div>
+  <p class="mt"><a href="{{ c.path }}">← Back to the {{ c.name }}</a></p>
+</div>
+{% endblock %}

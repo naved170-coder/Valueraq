@@ -1,0 +1,41 @@
+{% extends "page.html" %}
+{% block before_body %}
+<div class="plans">
+  <div class="plan">
+    <h2>Free</h2>
+    <p class="price">$0</p>
+    <ul>
+      <li>All six valuation tools and three calculators</li>
+      <li>Full methodology and every adjustment shown</li>
+      <li>Detailed reports, {{ cfg.FREE_SAVED_REPORTS }} saved at a time</li>
+      <li>Browse listings and contact sellers</li>
+      <li>List a business for sale</li>
+    </ul>
+    {% if user %}<a class="btn quiet" href="/account/">Go to your account</a>{% else %}<a class="btn quiet" href="/signup/">Create a free account</a>{% endif %}
+  </div>
+  <div class="plan pick">
+    <h2>Pro</h2>
+    <p class="price">${{ cfg.PLANS.pro_monthly.price_usd }}<small> / month</small></p>
+    <p class="muted">or ${{ cfg.PLANS.pro_yearly.price_usd }} a year. {{ cfg.TRIAL_DAYS }}-day free trial, no card needed to start.</p>
+    <ul>
+      <li>Everything in Free</li>
+      <li>Unlimited saved reports</li>
+      <li>AI-generated commentary on reports, clearly labelled{% if not cfg.ANTHROPIC_API_KEY %} (coming soon){% endif %}</li>
+      <li>Printable reports for buyers, lenders or partners</li>
+    </ul>
+    {% if user %}
+    <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="next" value="/account/billing/"><button class="btn" type="submit">Start the free trial</button></form>
+    {% else %}<a class="btn" href="/signup/?next=/account/billing/">Start the free trial</a>{% endif %}
+  </div>
+  <div class="plan">
+    <h2>Featured listing</h2>
+    <p class="price">${{ cfg.FEATURED_LISTING.price_usd }}<small> one-off</small></p>
+    <ul>
+      <li>Your listing shown first in its category for {{ cfg.FEATURED_LISTING.days }} days</li>
+      <li>Marked "Featured" on listing cards</li>
+      <li>Available once a listing has passed review</li>
+    </ul>
+    <a class="btn quiet" href="/sell/">List a business</a>
+  </div>
+</div>
+{% endblock %}

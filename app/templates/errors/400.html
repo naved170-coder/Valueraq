@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Request problem | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head">
+  <p class="eyebrow">Error 400</p>
+  <h1>That request couldn't be completed</h1>
+  <p class="lede">{{ message or "Something in the request was missing or invalid." }}</p>
+  <p><a class="btn" href="/">Go to the homepage</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% from "partials/macros.html" import range_bar, legend %}
+{% if c.key == 'website_worth' %}
+  <p class="summary">At <b>{{ r.months|int }} months</b> of profit ({{ r.annual_multiple|mult }} annual profit), a website earning <b class="num">{{ r.monthly_profit|money }}</b> a month works out at <b class="num">{{ r.value|money }}</b>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Months of profit</th><th>Annual multiple</th><th class="r">Value</th></tr></thead>
+    <tbody>{% for row in r.table %}<tr{% if row.months == r.months %} aria-current="true"{% endif %}><td>{{ row.months }}</td><td>{{ row.annual_multiple|mult }}</td><td class="r num">{{ row.value|money }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+  <p class="hint">Formula: monthly profit × months. The multiple is your choice; the <a href="/tools/website-valuation/">Website Valuation Tool</a> estimates one from age, growth and risk.</p>
+{% elif c.key == 'saas_quick' %}
+  <p class="summary">ARR of <b class="num">{{ r.metric.value|money }}</b> at an adjusted multiple of {{ r.multiple.low|mult }}–{{ r.multiple.high|mult }} gives <b class="num">{{ r.value.low|money }} – {{ r.value.high|money }}</b>.</p>
+  {{ range_bar(r.value) }}
+  {% if r.adjustments %}
+  <div class="table-wrap"><table><thead><tr><th>Factor</th><th>Input</th><th class="r">Effect</th></tr></thead>
+  <tbody>{% for a in r.adjustments %}<tr><td>{{ a.factor }}</td><td>{{ a.value }}</td><td class="r num">{{ a.effect|effect }}</td></tr>{% endfor %}</tbody></table></div>
+  {% endif %}
+  <p class="hint">Base range {{ r.base_multiple.low|mult }}–{{ r.base_multiple.high|mult }} ARR is a platform assumption. The <a href="/tools/saas-valuation/">SaaS Valuation Tool</a> adds gross margin, customer concentration and owner time.</p>
+  <p class="no-print"><a class="btn small" href="/account/reports/new/">Get the detailed report</a></p>
+{% else %}
+  <dl class="kv">
+    <dt>Revenue multiple (price ÷ annual revenue)</dt><dd>{{ r.revenue_multiple|mult if r.revenue_multiple else '—' }}</dd>
+    <dt>Profit multiple (price ÷ annual profit)</dt><dd>{{ r.profit_multiple|mult if r.profit_multiple else '—' }}</dd>
+    <dt>Months of profit</dt><dd>{{ r.months_of_profit if r.months_of_profit else '—' }}</dd>
+    <dt>Simple payback (years, before tax and growth)</dt><dd>{{ r.payback_years if r.payback_years else '—' }}</dd>
+    {% if r.margin_pct is defined and r.margin_pct is not none %}<dt>Profit margin</dt><dd>{{ r.margin_pct|pct(1) }}</dd>{% endif %}
+  </dl>
+  {% if r.reference %}
+  <p class="alert{% if r.reference.position == 'within' %} good{% endif %}">
+    {% if r.reference.compare is none %}Add {{ 'annual profit' if r.reference.basis == 'profit' else 'annual revenue' }} to compare with the {{ r.reference.category }} range.
+    {% else %}The implied {{ r.reference.basis }} multiple of {{ r.reference.compare|mult }} is <b>{{ r.reference.position }}</b> {{ BRAND }}'s default {{ r.reference.category }} range of {{ r.reference.low|mult }}–{{ r.reference.high|mult }} (a platform assumption, not market data).{% endif %}
+  </p>
+  {% endif %}
+{% endif %}

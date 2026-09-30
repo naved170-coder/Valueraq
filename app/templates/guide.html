@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block, doc_meta %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">{{ doc.section or 'Guide' }}</p>
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    {{ doc_meta(doc) }}
+  </header>
+  <div class="split">
+    <article class="prose">
+      {{ body|safe }}
+      {% if cta %}
+      <div class="panel mt"><h2>Next step</h2><p>{{ cta.text }}</p><p><a class="btn" href="{{ cta.path }}">Open the {{ cta.title }}</a></p></div>
+      {% endif %}
+      <p class="hint mt">Written by <a href="{{ doc.author.url }}">{{ doc.author.name }}</a>. {{ doc.author.bio }}</p>
+    </article>
+    <aside class="rail sticky">
+      {% if doc.toc %}
+      <nav class="panel toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>{% for t in doc.toc %}<li><a href="#{{ t.id }}">{{ t.name }}</a></li>{% endfor %}</ol>
+      </nav>
+      {% endif %}
+      {% if cta %}<div class="panel"><h2>Try it</h2><p class="muted">{{ cta.text }}</p><a class="btn quiet" href="{{ cta.path }}">{{ cta.title }}</a></div>{% endif %}
+    </aside>
+  </div>
+</div>
+{{ related_block(related) }}
+{% endblock %}

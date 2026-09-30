@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import listing_card, related as related_block %}
+{% block main %}
+<div class="wrap">
+  {% if is_owner and l.status != 'published' %}
+  <p class="alert" role="status">Only you can see this page. Status: <span class="status {{ l.status }}">{{ l.status|capitalize }}</span>{% if l.moderation_note %}. Reviewer note: {{ l.moderation_note }}{% endif %}</p>
+  {% endif %}
+  {% if l.status == 'sold' %}<p class="alert" role="status">This business has been sold. The listing is kept for reference.</p>{% endif %}
+  <header class="page-head">
+    <div class="row"><span class="tag">{{ c.name|replace(' for Sale','') }}</span>{% if l.business_model %}<span class="tag">{{ l.business_model }}</span>{% endif %}<span class="status {{ l.verification }}">{{ l.verification|replace('_',' ')|capitalize }}</span></div>
+    <h1>{{ l.title }}</h1>
+    {% if l.headline %}<p class="lede">{{ l.headline }}</p>{% endif %}
+    <p class="meta-line"><span>Listing #{{ l.id }}</span>{% if l.published_at %}<span>Listed <time datetime="{{ l.published_at|human_date }}">{{ l.published_at|human_date }}</time></span>{% endif %}<span>Updated <time>{{ l.updated_at|human_date }}</time></span></p>
+  </header>
+  <div class="split">
+    <div class="stack">
+      <section aria-labelledby="facts-h">
+        <h2 id="facts-h" class="section-title">Key facts</h2>
+        <div class="table-wrap"><table class="facts-table"><tbody>
+          {% for k, v in facts.items() %}<tr><th scope="row">{{ k }}</th><td class="num">{{ v }}</td></tr>{% endfor %}
+          {% if mult.profit %}<tr><th scope="row">Implied profit multiple</th><td class="num">{{ mult.profit|mult }} annual profit ({{ mult.months }} months) <span class="tag calc">Calculated</span></td></tr>{% endif %}
+          {% if mult.revenue %}<tr><th scope="row">Implied revenue multiple</th><td class="num">{{ mult.revenue|mult }} annual revenue <span class="tag calc">Calculated</span></td></tr>{% endif %}
+        </tbody></table></div>
+        <p class="hint mt">Figures are provided by the seller{% if l.verification == 'unverified' %} and have not been verified by {{ BRAND }}{% else %}; see <a href="/verification/">what "{{ l.verification|replace('_',' ') }}" means</a>{% endif %}. Always complete your own <a href="/guides/digital-business-due-diligence/">due diligence</a>.</p>
+      </section>
+      <section class="prose" aria-labelledby="about-h">
+        <h2 id="about-h">About the business</h2>
+        {% for para in desc.split('\n') if para.strip() %}<p>{{ para }}</p>{% endfor %}
+        {% if l.growth_note %}<h3>Growth</h3><p>{{ l.growth_note }}</p>{% endif %}
+        {% if l.assets_included %}<h3>Included in the sale</h3><p>{{ l.assets_included }}</p>{% endif %}
+        {% if l.reason_for_sale %}<h3>Reason for selling</h3><p>{{ l.reason_for_sale }}</p>{% endif %}
+      </section>
+    </div>
+    <aside class="rail sticky">
+      <div class="panel">
+        <p class="eyebrow">Asking price</p>
+        <p class="price num"><b class="mono">{{ l.asking_price|money(l.currency) }}</b></p>
+        {% if l.status == 'published' %}
+          {% if user and not is_owner %}
+          <form method="post" action="{{ meta.path }}inquire/" class="stack">
+            <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+            <input type="hidden" name="t0" value="{{ form_t0 }}">
+            <div class="hp" aria-hidden="true"><input name="company_website" tabindex="-1" autocomplete="off"></div>
+            <div class="field"><label for="i-msg">Message to the seller</label><textarea id="i-msg" name="message" required placeholder="Introduce yourself and say what you'd like to review."></textarea></div>
+            <button class="btn" type="submit">Contact the seller</button>
+          </form>
+          {% elif not user %}
+          <a class="btn" href="/login/?next={{ meta.path }}">Log in to contact the seller</a>
+          <p class="hint">Seller contact details are never shown publicly.</p>
+          {% else %}
+          <a class="btn quiet" href="/account/listings/">Manage this listing</a>
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="panel"><h2>Is the price fair?</h2><p class="muted">Run these figures through the {{ tool.name }}.</p><a class="btn quiet" href="{{ tool.path }}">{{ tool.name }}</a></div>
+    </aside>
+  </div>
+  {% if similar %}
+  <section class="section" aria-labelledby="sim-h"><h2 id="sim-h" class="section-title">More {{ c.plural }} for sale</h2><div class="listing-grid">{% for s in similar %}{{ listing_card(s) }}{% endfor %}</div></section>
+  {% endif %}
+</div>
+{{ related_block(related) }}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="lede">{{ doc.answer }}</p>{% endif %}
+  </header>
+  <article class="prose">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
+{% endblock %}

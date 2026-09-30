@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Plan and billing | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <h1>Plan and billing</h1>
+  {% if checkout == 'success' %}<p class="alert good">Thanks. Your subscription is being activated; this page updates once the payment provider confirms it.</p>{% endif %}
+  <p class="lede mt">Current plan: <b>{{ {'free':'Free','trial':'Pro trial','pro':'Pro'}[user.plan] }}</b>{% if trial_days is not none %}, {{ trial_days }} day{{ '' if trial_days == 1 else 's' }} left{% endif %}{% if user.subscription_status %} ({{ user.subscription_status }}){% endif %}.</p>
+  <div class="plans mt">
+    {% if not user.trial_used and user.plan == 'free' %}
+    <div class="plan"><h2>Free trial</h2><p>{{ cfg.TRIAL_DAYS }} days of Pro. No card needed.</p>
+      <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Start free trial</button></form></div>
+    {% endif %}
+    {% for key, p in plans.items() %}
+    <div class="plan{% if loop.first %} pick{% endif %}"><h2>{{ p.name }}</h2><p class="price">${{ p.price_usd }}<small> / {{ p.interval }}</small></p>
+      {% if user.plan == 'pro' %}<p class="muted">You're on Pro.</p>
+      {% elif enabled and p.stripe_price_id %}
+      <form method="post" action="/checkout/{{ key }}/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Subscribe{% if not user.trial_used %} with {{ cfg.TRIAL_DAYS }}-day trial{% endif %}</button></form>
+      {% else %}<p class="muted">Online payment isn't available yet.</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% if user.stripe_customer_id %}
+  <form method="post" action="/account/billing/portal/" class="mt"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn quiet" type="submit">Manage billing and invoices</button></form>
+  {% endif %}
+</div>
+{% endblock %}

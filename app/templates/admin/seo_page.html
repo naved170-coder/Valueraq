@@ -1,0 +1,33 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>SEO settings for <span class="mono">{{ path }}</span></h1>
+<p><a href="{{ path }}">View page</a></p>
+<div class="split mt">
+  <form method="post" class="stack">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="path" value="{{ path }}">
+    <p class="muted">Leave a field empty to use the page's generated value. Every change is logged.</p>
+    {% for f, label in [('meta_title','Title tag'),('meta_description','Meta description'),('h1','H1'),('canonical_url','Canonical URL (path or absolute)'),('robots_directive','Robots directive (e.g. noindex, follow)'),('og_title','Open Graph title'),('og_description','Open Graph description'),('og_image','Open Graph image path')] %}
+    <div class="field"><label for="o-{{ f }}">{{ label }}</label><input id="o-{{ f }}" name="{{ f }}" value="{{ ov[f] if ov and ov[f] else '' }}">{% if audit_row and f == 'meta_title' %}<p class="hint">Current: {{ audit_row.title }}</p>{% endif %}{% if audit_row and f == 'meta_description' %}<p class="hint">Current: {{ audit_row.description }}</p>{% endif %}</div>
+    {% endfor %}
+    <div class="field"><label for="o-schema">Extra JSON-LD (must describe visible content)</label><textarea id="o-schema" name="schema_extra">{{ ov.schema_extra if ov and ov.schema_extra else '' }}</textarea></div>
+    <div class="form-grid">
+      <div class="field"><label for="o-idx">Indexable</label><select id="o-idx" name="indexable"><option value="">Default</option><option value="1" {% if ov and ov.indexable == 1 %}selected{% endif %}>Yes</option><option value="0" {% if ov and ov.indexable == 0 %}selected{% endif %}>No (noindex)</option></select></div>
+      <div class="field"><label for="o-sm">In sitemap</label><select id="o-sm" name="sitemap_included"><option value="">Default</option><option value="1" {% if ov and ov.sitemap_included == 1 %}selected{% endif %}>Yes</option><option value="0" {% if ov and ov.sitemap_included == 0 %}selected{% endif %}>No</option></select></div>
+    </div>
+    <div class="field"><label for="o-reason">Reason for change</label><input id="o-reason" name="reason"></div>
+    <button class="btn" type="submit">Save</button>
+  </form>
+  <aside class="rail">
+    <div class="panel"><h2>Latest audit</h2>
+      {% if audit_row %}<dl class="kv"><dt>Status</dt><dd>{{ audit_row.status }}</dd><dt>Score</dt><dd>{{ audit_row.score if audit_row.score is not none else '—' }}</dd><dt>Words</dt><dd>{{ audit_row.words }}</dd><dt>Inbound links</dt><dd>{{ audit_row.inbound }}</dd><dt>Schema</dt><dd>{{ audit_row.schema_types }}</dd></dl>
+      {% for i in issues %}<p><span class="sev {{ i.severity }}">{{ i.severity }}</span> {{ i.message }}</p>{% endfor %}
+      {% else %}<p class="muted">Not in the latest audit.</p>{% endif %}</div>
+    {% if suggestions %}<div class="panel"><h2>Pages that could link here</h2><ul>{% for t, p in suggestions %}<li><a href="/admin/seo/page/?path={{ p|urlencode }}">{{ t }}</a></li>{% endfor %}</ul></div>{% endif %}
+    <div class="panel"><h2>Target keywords</h2>{% if keywords %}<ul>{% for k in keywords %}<li>{{ k.keyword }} <span class="muted">{{ k.search_volume|num if k.search_volume is not none else 'no volume' }} · {{ k.source }}</span></li>{% endfor %}</ul>{% else %}<p class="muted">None imported. <a href="/admin/seo/keywords/">Import keywords</a>.</p>{% endif %}</div>
+  </aside>
+</div>
+<section class="section"><h2 class="section-title">Change history</h2>
+{% if log %}<div class="table-wrap"><table><thead><tr><th>When</th><th>Field</th><th>Before</th><th>After</th><th>By</th><th>Reason</th></tr></thead><tbody>
+{% for c in log %}<tr><td>{{ c.changed_at|human_date }}</td><td>{{ c.field }}</td><td>{{ c.old_value or '—' }}</td><td>{{ c.new_value or '—' }}</td><td>{{ c.changed_by }}</td><td>{{ c.reason or '' }}</td></tr>{% endfor %}
+</tbody></table></div>{% else %}<p class="muted">No changes recorded.</p>{% endif %}</section>
+{% endblock %}

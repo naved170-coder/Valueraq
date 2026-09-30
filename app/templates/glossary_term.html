@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Glossary</p>
+    <h1>{{ meta.h1 }}</h1>
+    <p class="answer"><dfn>{{ term }}</dfn>: {{ doc.definition }}</p>
+    {% if doc.updated %}<p class="meta-line"><span>Updated <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span><span>By <a href="/editorial-policy/">{{ BRAND }} Editorial Team</a></span></p>{% endif %}
+  </header>
+  <article class="prose">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
+{% endblock %}
