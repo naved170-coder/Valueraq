@@ -28,7 +28,7 @@ def signup():
         return redirect(_safe_next())
     error = None
     if request.method == "POST":
-        if auth.honeypot_tripped() or auth.rate_limited("signup", 5, 3600):
+        if auth.honeypot_tripped() or auth.rate_limited("signup", 20, 3600):
             abort(429)
         email = (request.form.get("email") or "").strip().lower()
         pw = request.form.get("password") or ""
@@ -54,7 +54,7 @@ def signup():
 def login():
     error = None
     if request.method == "POST":
-        if auth.rate_limited("login", 10, 900):
+        if auth.rate_limited("login", 20, 900):
             abort(429)
         u = auth.verify(request.form.get("email") or "", request.form.get("password") or "")
         if u:

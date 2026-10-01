@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Please wait a moment | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap page-head">
+  <p class="eyebrow">Error 429</p>
+  <h1>Too many attempts in a short time</h1>
+  <p class="lede">To protect the site from spam, this form briefly limits repeated submissions. Wait a minute, reload the page and try again. If you used your browser's autofill, type the details in by hand.</p>
+  <p><a class="btn" href="/">Go to the homepage</a></p>
+</div>
+{% endblock %}

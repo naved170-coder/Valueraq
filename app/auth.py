@@ -137,7 +137,7 @@ def rate_limited(bucket, limit, window_seconds):
 
 def honeypot_tripped():
     """Hidden 'website' field must stay empty; also reject sub-2s submissions."""
-    if request.form.get("company_website"):
+    if request.form.get("vq_hp"):
         return True
     started = request.form.get("t0")
     if current_app.config.get("TESTING"):

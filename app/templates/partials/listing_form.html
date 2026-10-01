@@ -2,7 +2,7 @@
 <form method="post" class="stack">
   <input type="hidden" name="csrf" value="{{ csrf_token() }}">
   <input type="hidden" name="t0" value="{{ form_t0 }}">
-  <div class="hp" aria-hidden="true"><label for="company_website">Leave empty</label><input id="company_website" name="company_website" tabindex="-1" autocomplete="off"></div>
+  <div class="hp" aria-hidden="true"><label for="vq_hp">Leave empty</label><input id="vq_hp" name="vq_hp" tabindex="-1" autocomplete="off"></div>
   {% if errors %}<p class="alert bad" role="alert">Please fix the highlighted fields.</p>{% endif %}
   <div class="form-grid">
     <div class="field{% if errors.category %} error{% endif %}"><label for="l-cat">Category</label>

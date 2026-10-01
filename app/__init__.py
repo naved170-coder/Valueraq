@@ -150,6 +150,11 @@ def create_app(config_object=Config, **overrides):
         g.robots_header = "noindex, follow"
         return render_template("errors/410.html"), 410
 
+    @app.errorhandler(429)
+    def _429(_e):
+        g.robots_header = "noindex, follow"
+        return render_template("errors/429.html"), 429
+
     @app.errorhandler(400)
     def _400(e):
         return render_template("errors/400.html", message=getattr(e, "description", None)), 400
