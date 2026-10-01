@@ -72,6 +72,7 @@ def tool(slug):
     fields = [(k, V.F[k]) for k in V.TOOL_INPUTS[key]]
     base = V.BASE[key]
     return render_page("tool.html", meta, t=t, doc=doc, body=body, fields=fields, values=V.EXAMPLES[key],
+                       monetization_options=V.F["monetization"]["options"],
                        example=example, related=rel, cat=cat, base=base, key=key,
                        guide_title=linkgraph.title_for(t["guide"]), calc_title=linkgraph.title_for(t["calculator"]))
 
@@ -124,7 +125,7 @@ def tool_result(key):
                                field_specs=[(k, V.F[k]) for k in V.TOOL_INPUTS[key]]), 422
     session["last_valuation"] = {"tool": key, "inputs": x}
     analytics.server_event("valuation_generated", {"tool": key, "confidence": r["confidence"]})
-    html = render_template("partials/result.html", r=r)
+    html = render_template("partials/result.html", r=r, t=t)
     if wants_json:
         return jsonify(ok=True, html=html, value=r["value"])
     return render_template("result_page.html", t=t, r=r, html=html)

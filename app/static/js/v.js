@@ -55,3 +55,14 @@ document.addEventListener("click", function (e) {
   b.setAttribute("aria-pressed", show ? "true" : "false");
   b.setAttribute("aria-label", show ? "Hide password" : "Show password");
 });
+/* Monthly / Yearly switch on plan cards */
+document.addEventListener("click", function (e) {
+  var b = e.target.closest && e.target.closest(".period button[data-period]");
+  if (!b) return;
+  var card = b.closest("[data-period]:not(button)");
+  if (!card) return;
+  card.setAttribute("data-period", b.getAttribute("data-period"));
+  Array.prototype.forEach.call(b.parentNode.querySelectorAll("button"), function (x) {
+    x.setAttribute("aria-pressed", x === b ? "true" : "false");
+  });
+});

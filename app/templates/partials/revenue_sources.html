@@ -1,0 +1,30 @@
+{# Website tool: one row per revenue source. The server adds the rows up into
+   monthly revenue and picks the main monetization (one source over 60% of
+   revenue, otherwise "Mixed"). Rows are added/removed by calc.js. #}
+{% set examples = [('affiliate', 4000), ('display', 2000)] %}
+{% macro row(opts, ex_type=None, ex_amount=None) %}
+<div class="src-row">
+  <select name="src_type" aria-label="Revenue source">
+    <option value="">{{ ('e.g. ' ~ dict(opts)[ex_type]) if ex_type else 'Choose source…' }}</option>
+    {% for v, l in opts if v != 'mixed' %}<option value="{{ v }}">{{ l }}</option>{% endfor %}
+  </select>
+  <div class="input-affix">
+    <span class="pre">$</span>
+    <input name="src_amount" type="text" inputmode="decimal" autocomplete="off" aria-label="Average monthly revenue from this source"
+      placeholder="{{ ('e.g. ' ~ '{:,}'.format(ex_amount)) if ex_amount else 'Monthly revenue' }}">
+  </div>
+  <button type="button" class="src-del" data-src-del aria-label="Remove this revenue source">×</button>
+</div>
+{% endmacro %}
+<fieldset class="field sources" data-fields="monthly_revenue monetization">
+  <legend>Revenue sources</legend>
+  <p class="hint">Add each way the site earns money, with its average monthly revenue over the last 12 months, before expenses.</p>
+  <div class="src-rows" data-src-rows>
+    {% for t_, a_ in examples %}{{ row(monetization_options, t_, a_) }}{% endfor %}
+  </div>
+  <template data-src-template>{{ row(monetization_options) }}</template>
+  <div class="src-foot">
+    <button type="button" class="btn quiet small" data-src-add>+ Add revenue source</button>
+    <p class="src-total">Total monthly revenue: <b class="num" data-src-total>$0</b></p>
+  </div>
+</fieldset>

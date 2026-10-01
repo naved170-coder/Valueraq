@@ -215,7 +215,8 @@ def listings():
         decorated.append(d)
     from flask import current_app
     return _r("account/listings.html", listings=decorated, billing_enabled=billing.enabled(),
-              featured=current_app.config["FEATURED_LISTING"])
+              featured_plans=current_app.config["FEATURED_PLANS"],
+              featured_ok=request.args.get("featured") == "success")
 
 
 @bp.route("/account/listings/<int:lid>/edit/", methods=["GET", "POST"])
@@ -268,7 +269,8 @@ def listing_feature(lid):
     if not l:
         abort(404)
     try:
-        return redirect(billing.featured_checkout(g.user, lid), 303)
+        plan = request.form.get("plan", "featured_monthly")
+        return redirect(billing.featured_checkout(g.user, lid, plan), 303)
     except billing.BillingError as e:
         flash(str(e), "error")
         return redirect(url_for("account.listings"))
@@ -294,6 +296,7 @@ def inquiries():
 def billing_page():
     from flask import current_app
     return _r("account/billing.html", plans=current_app.config["PLANS"], enabled=billing.enabled(),
+              featured_plans=current_app.config["FEATURED_PLANS"],
               trial_days=_trial_days_left(g.user), trial_ends=g.user["trial_ends_at"],
               checkout=request.args.get("checkout"))
 

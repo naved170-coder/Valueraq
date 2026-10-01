@@ -17,7 +17,8 @@
       <p class="example-note">The grey figures are a hypothetical example. Type your own figures in each box; the example result below shows what you will get.</p>
       <p class="alert bad form-error" role="alert" hidden></p>
       <div class="form-grid">
-        {% for k, spec in fields %}{{ field(k, spec, example=values.get(k)) }}{% endfor %}
+        {% if key == 'website' %}{% include "partials/revenue_sources.html" %}{% endif %}
+        {% for k, spec in fields if not (key == 'website' and k in ('monthly_revenue', 'monetization')) %}{{ field(k, spec, example=values.get(k)) }}{% endfor %}
       </div>
       <div class="actions"><button class="btn" type="submit">Calculate value</button><button class="btn quiet" type="reset">Clear form</button><a class="hint" href="/methodology/">How the calculation works</a></div>
     </form>

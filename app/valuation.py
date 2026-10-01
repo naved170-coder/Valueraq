@@ -156,10 +156,53 @@ def _num(raw):
         raise ValuationError("Enter numbers only, for example 4500.")
 
 
+MIX_THRESHOLD = 0.60  # one source above this share of revenue is the "main" monetization
+
+
+def combine_revenue_sources(types, amounts):
+    """Rows of (monetization type, monthly revenue) from the Website tool.
+    Returns (total, main_type, summary_text, errors). Blank rows are ignored."""
+    allowed = dict(F["monetization"]["options"])
+    rows, errors = [], {}
+    for t, a in zip(types, amounts):
+        t = (t or "").strip()
+        try:
+            v = _num(a)
+        except ValuationError as e:
+            errors["monthly_revenue"] = str(e)
+            continue
+        if not t and not v:
+            continue
+        if t and (t not in allowed or t == "mixed"):
+            errors["monetization"] = "Choose one of the listed sources."
+            continue
+        if v is not None and v < 0:
+            errors["monthly_revenue"] = "Revenue can't be negative."
+            continue
+        rows.append((t, v or 0.0))
+    total = sum(v for _, v in rows)
+    by_type = {}
+    for t, v in rows:
+        by_type[t] = by_type.get(t, 0.0) + v
+    main = None
+    typed = {t: v for t, v in by_type.items() if t}
+    if typed and total > 0:
+        top, top_v = max(typed.items(), key=lambda kv: kv[1])
+        main = top if (top_v / total > MIX_THRESHOLD or len(typed) == 1) else "mixed"
+    summary = "; ".join(f"{allowed.get(t, 'Unspecified')} ${v:,.0f}" for t, v in rows) if len(rows) > 1 else None
+    return total, main, summary, errors
+
+
 def parse_inputs(tool, form):
     if tool not in TOOL_INPUTS:
         raise ValuationError("Unknown tool.")
     out, errors = {}, {}
+    summary = None
+    if tool == "website" and hasattr(form, "getlist") and form.getlist("src_amount"):
+        total, main, summary, errors = combine_revenue_sources(form.getlist("src_type"), form.getlist("src_amount"))
+        form = {k: form.get(k) for k in form.keys()}
+        form["monthly_revenue"] = str(total) if total else ""
+        form["monetization"] = main or ""
     for key in TOOL_INPUTS[tool]:
         spec = F[key]
         raw = form.get(key)
@@ -190,6 +233,8 @@ def parse_inputs(tool, form):
         err = ValuationError("Please check the highlighted fields.")
         err.fields = errors
         raise err
+    if summary:
+        out["revenue_sources"] = summary
     return out
 
 
@@ -480,7 +525,8 @@ def value_business(tool, x):
         confidence_reasons=reasons,
         warnings=warnings,
         sensitivity=sens,
-        inputs={k: x.get(k) for k in TOOL_INPUTS[tool]},
+        inputs={**{k: x.get(k) for k in TOOL_INPUTS[tool]},
+                **({"revenue_sources": x["revenue_sources"]} if x.get("revenue_sources") else {})},
         methodology_version=METHODOLOGY_VERSION,
     )
 

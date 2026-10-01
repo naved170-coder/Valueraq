@@ -477,6 +477,74 @@ class Billing(Base):
         self.assertEqual(r.status_code, 200)
         self.assertIn("isn", r.get_data(as_text=True))
 
+    def _hook(self, evt):
+        payload = json.dumps(evt).encode()
+        ts = int(time.time())
+        sig = hmac.new(b"whsec_test", f"{ts}.".encode() + payload, hashlib.sha256).hexdigest()
+        return self.client.post("/api/stripe/webhook/", data=payload, headers={"Stripe-Signature": f"t={ts},v1={sig}"})
+
+    def test_featured_subscription_features_listing_without_touching_plan(self):
+        self.app.config["STRIPE_WEBHOOK_SECRET"] = "whsec_test"
+        self.signup()
+        lst = self.make_listing()
+        with self.app.app_context():
+            uid = db.query("SELECT id FROM users", one=True)["id"]
+            db.execute("UPDATE users SET stripe_customer_id='cus_1'")
+        md = {"kind": "featured", "listing_id": str(lst["id"]), "user_id": str(uid), "plan": "featured_yearly"}
+        self._hook({"id": "evt_f1", "type": "checkout.session.completed",
+                    "data": {"object": {"subscription": "sub_f", "client_reference_id": str(uid), "metadata": md}}})
+        end = int(time.time()) + 365 * 86400
+        r = self._hook({"id": "evt_f2", "type": "customer.subscription.updated",
+                        "data": {"object": {"id": "sub_f", "customer": "cus_1", "status": "active", "metadata": md,
+                                            "items": {"data": [{"current_period_end": end}]}}}})
+        self.assertEqual(r.json["result"], "featured active")
+        with self.app.app_context():
+            l = db.query("SELECT * FROM listings WHERE id=?", (lst["id"],), one=True)
+            self.assertEqual(l["is_featured"], 1)
+            self.assertEqual(l["featured_subscription_id"], "sub_f")
+            self.assertGreater(l["featured_until"], end)
+            self.assertEqual(db.query("SELECT plan FROM users", one=True)["plan"], "free")
+        self._hook({"id": "evt_f3", "type": "customer.subscription.deleted",
+                    "data": {"object": {"id": "sub_f", "customer": "cus_1", "status": "canceled", "metadata": md}}})
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT is_featured FROM listings WHERE id=?", (lst["id"],), one=True)["is_featured"], 0)
+
+    def test_pricing_shows_monthly_yearly_and_comparison(self):
+        html = self.client.get("/pricing/").get_data(as_text=True)
+        self.assertIn('data-period="month"', html)
+        self.assertIn("$390", html)
+        self.assertIn("Save 17%", html)
+        self.assertIn('id="compare"', html)
+        self.assertNotIn("one-off", html)
+
+
+class RevenueSources(Base):
+    def test_combine_rule(self):
+        total, main, summary, errs = V.combine_revenue_sources(["affiliate", "display"], ["4,000", "2000"])
+        self.assertEqual((total, main, errs), (6000, "affiliate", {}))
+        self.assertIn("Affiliate commissions $4,000", summary)
+        _, main, _, _ = V.combine_revenue_sources(["affiliate", "display"], ["3000", "3000"])
+        self.assertEqual(main, "mixed")
+        _, _, _, errs = V.combine_revenue_sources(["affiliate"], ["abc"])
+        self.assertIn("monthly_revenue", errs)
+
+    def test_website_form_posts_rows(self):
+        from werkzeug.datastructures import MultiDict
+        r = self.client.post("/tools/result/website/", headers={"Accept": "application/json"}, data=MultiDict([
+            ("src_type", "display"), ("src_amount", "5000"), ("src_type", "leadgen"), ("src_amount", "1000"),
+            ("src_type", ""), ("src_amount", ""), ("monthly_profit", "4000")]))
+        self.assertTrue(r.json["ok"], r.json)
+        self.assertIn("Value another business", r.json["html"])
+        empty = self.client.post("/tools/result/website/", headers={"Accept": "application/json"},
+                                 data={"src_type": "", "src_amount": "", "monthly_profit": "4000"})
+        self.assertIn("monthly_revenue", empty.json["fields"])
+
+    def test_tool_page_has_grey_examples_and_clear(self):
+        html = self.client.get("/tools/website-valuation/").get_data(as_text=True)
+        self.assertIn("+ Add revenue source", html)
+        self.assertIn('placeholder="e.g. 4,500"', html)
+        self.assertIn('type="reset"', html)
+
 
 # ---------------------------------------------------------------- admin
 class Admin(Base):

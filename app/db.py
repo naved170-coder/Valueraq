@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS listings (
     is_test INTEGER NOT NULL DEFAULT 0,
     is_featured INTEGER NOT NULL DEFAULT 0,
     featured_until INTEGER,
+    featured_subscription_id TEXT,
     replacement_listing_id INTEGER,
     moderation_note TEXT,
     quality_score INTEGER,
@@ -282,7 +283,21 @@ def init_db(app):
     with app.app_context():
         db = get_db()
         db.executescript(SCHEMA)
+        _migrate(db)
         db.commit()
+
+
+# Columns added after launch: (table, column, definition). Applied once, in order.
+MIGRATIONS = [
+    ("listings", "featured_subscription_id", "TEXT"),
+]
+
+
+def _migrate(db):
+    for table, col, decl in MIGRATIONS:
+        have = {r[1] for r in db.execute(f"PRAGMA table_info({table})").fetchall()}
+        if col not in have:
+            db.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
 
 
 def query(sql, args=(), one=False):

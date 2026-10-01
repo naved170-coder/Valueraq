@@ -40,8 +40,8 @@ Run `python manage.py expire-featured` once a day (for example as a Render cron 
 
 ## Payments (Stripe)
 
-1. Create two recurring prices for Pro (monthly, yearly) and one one-off price for a featured listing.
-2. Set `STRIPE_SECRET_KEY` and the three `STRIPE_PRICE_*` IDs.
+1. Create four recurring prices: Pro monthly and yearly, and Featured listing monthly and yearly (one subscription per featured listing).
+2. Set `STRIPE_SECRET_KEY` and the four price IDs: `STRIPE_PRICE_PRO_MONTHLY`, `STRIPE_PRICE_PRO_YEARLY`, `STRIPE_PRICE_FEATURED_MONTHLY`, `STRIPE_PRICE_FEATURED_YEARLY`.
 3. Add a webhook endpoint `https://www.valueraq.com/api/stripe/webhook/` for `checkout.session.completed` and `customer.subscription.*`, then set `STRIPE_WEBHOOK_SECRET`.
 4. Enable the Customer Portal in Stripe.
 
@@ -49,7 +49,7 @@ Until keys are set, payment buttons say payments aren't available, and admins ca
 
 ## Decisions for the owner before launch
 
-- **Prices:** Pro $29/month or $290/year, featured listing $49 for 30 days, and 3 free saved reports are placeholders in `app/config.py`.
+- **Prices:** Pro $29/month or $290/year, featured listing $39/month or $390/year per listing, and 3 free saved reports are placeholders in `app/config.py`.
 - **Default multiples:** the ranges in `app/valuation.py` are editorial assumptions and are labelled as such everywhere. Review them; any change should bump `METHODOLOGY_VERSION` and add a row to the change log in `content/pages/methodology.md`.
 - **Legal pages:** `privacy.md` and `terms.md` describe how the platform actually works, but they are drafts. A lawyer should add the legal entity name, address, governing law and jurisdiction-specific privacy wording.
 - **Contact email:** `CONTACT_EMAIL` defaults to `hello@valueraq.com` (used in Organization schema). Set it to an inbox that exists.

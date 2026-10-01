@@ -1,0 +1,31 @@
+{# Shared pieces for plan cards: the Monthly/Yearly switch and the two price blocks.
+   A card carries data-period="month" (set server-side so nothing shifts on load);
+   v.js flips it to "year". Without JavaScript the monthly block shows and also
+   states the yearly price. #}
+
+{% macro save_pct(monthly, yearly) -%}
+{{ ((1 - yearly / (monthly * 12)) * 100)|round|int if monthly else 0 }}
+{%- endmacro %}
+
+{% macro period_switch(monthly, yearly, label) %}
+<div class="period" role="group" aria-label="Billing period for {{ label }}">
+  <button type="button" data-period="month" aria-pressed="true">Monthly</button>
+  <button type="button" data-period="year" aria-pressed="false">Yearly{% if monthly %} <span class="save">−{{ save_pct(monthly, yearly) }}%</span>{% endif %}</button>
+</div>
+{% endmacro %}
+
+{% macro prices(monthly, yearly) %}
+{% if monthly %}
+<div class="m">
+  <p class="price">${{ monthly }}<small> / month</small></p>
+  <p class="muted small">Billed monthly. Or ${{ yearly }} a year, saving {{ save_pct(monthly, yearly) }}%.</p>
+</div>
+<div class="y">
+  <p class="price"><s class="was">${{ monthly * 12 }}</s> ${{ yearly }}<small> / year</small></p>
+  <p class="muted small">Equal to ${{ '%.2f'|format(yearly / 12) }} a month. <span class="tag good">Save {{ save_pct(monthly, yearly) }}%</span></p>
+</div>
+{% else %}
+<div class="m"><p class="price">$0<small> / month</small></p><p class="muted small">Free, no card needed.</p></div>
+<div class="y"><p class="price">$0<small> / year</small></p><p class="muted small">Free every year, no card needed.</p></div>
+{% endif %}
+{% endmacro %}

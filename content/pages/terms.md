@@ -26,7 +26,7 @@ You must give accurate information, keep your password secure and tell us about 
 
 ## Subscriptions and payments
 
-Pro subscriptions renew automatically until cancelled. You can cancel at any time from your account; access continues to the end of the paid period. The free trial lasts 14 days and doesn't require a card. Featured listings are one-off payments for the stated period. Prices are shown on the [pricing page](/pricing/) before you pay.
+Pro subscriptions renew automatically until cancelled. You can cancel at any time from your account; access continues to the end of the paid period. The free trial lasts 14 days and doesn't require a card. Featured listings are subscriptions for one listing each, billed monthly or annually; they renew automatically until cancelled, and the listing stays featured until the end of the paid period. Prices are shown on the [pricing page](/pricing/) before you pay.
 
 ## Acceptable use
 

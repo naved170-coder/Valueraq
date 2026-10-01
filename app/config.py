@@ -74,8 +74,14 @@ class Config:
         "pro_yearly": {"name": "Pro (annual)", "price_usd": 290, "interval": "year",
                         "stripe_price_id": os.environ.get("STRIPE_PRICE_PRO_YEARLY", "")},
     }
-    FEATURED_LISTING = {"price_usd": 49, "days": 30,
-                        "stripe_price_id": os.environ.get("STRIPE_PRICE_FEATURED_LISTING", "")}
+    # Featured listing: a subscription per listing, monthly or yearly.
+    FEATURED_PLANS = {
+        "featured_monthly": {"name": "Featured listing", "price_usd": 39, "interval": "month",
+                              "stripe_price_id": os.environ.get("STRIPE_PRICE_FEATURED_MONTHLY", "")},
+        "featured_yearly": {"name": "Featured listing (annual)", "price_usd": 390, "interval": "year",
+                             "stripe_price_id": os.environ.get("STRIPE_PRICE_FEATURED_YEARLY", "")},
+    }
+    FEATURED_GRACE_DAYS = 3  # keep featured this long past period end while a renewal is confirmed
     STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
     STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 
@@ -101,7 +107,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 3600
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "4")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "5")
 
 
 class TestConfig(Config):

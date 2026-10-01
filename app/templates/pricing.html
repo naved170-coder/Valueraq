@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% from "partials/macros.html" import related as related_block %}
+{% from "partials/pricing.html" import period_switch, prices, save_pct %}
+{% set pm = cfg.PLANS.pro_monthly.price_usd %}{% set py = cfg.PLANS.pro_yearly.price_usd %}
+{% set fm = cfg.FEATURED_PLANS.featured_monthly.price_usd %}{% set fy = cfg.FEATURED_PLANS.featured_yearly.price_usd %}
 {% block main %}
 <div class="wrap">
   <header class="page-head">
     <h1>{{ meta.h1 }}</h1>
     {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+    <p><a href="#compare">Compare all features</a></p>
   </header>
 
 <div class="plans">
-  <div class="plan">
+  <div class="plan" data-period="month">
     <h2>Free</h2>
-    <p class="price">$0</p>
+    {{ period_switch(0, 0, "Free") }}
+    {{ prices(0, 0) }}
     <ul>
       <li>All six valuation tools and three calculators</li>
       <li>Full methodology and every adjustment shown</li>
@@ -20,31 +25,61 @@
     </ul>
     {% if user %}<a class="btn quiet" href="/account/">Go to your account</a>{% else %}<a class="btn quiet" href="/signup/">Create a free account</a>{% endif %}
   </div>
-  <div class="plan pick">
+  <div class="plan pick" data-period="month">
     <h2>Pro</h2>
-    <p class="price">${{ cfg.PLANS.pro_monthly.price_usd }}<small> / month</small></p>
-    <p class="muted">or ${{ cfg.PLANS.pro_yearly.price_usd }} a year. {{ cfg.TRIAL_DAYS }}-day free trial, no card needed to start.</p>
+    {{ period_switch(pm, py, "Pro") }}
+    {{ prices(pm, py) }}
     <ul>
       <li>Everything in Free</li>
       <li>Unlimited saved reports</li>
       <li>AI-generated commentary on reports, clearly labelled{% if not cfg.ANTHROPIC_API_KEY %} (coming soon){% endif %}</li>
       <li>Printable reports for buyers, lenders or partners</li>
+      <li>{{ cfg.TRIAL_DAYS }}-day free trial, no card needed</li>
     </ul>
     {% if user %}
     <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="next" value="/account/billing/"><button class="btn" type="submit">Start the free trial</button></form>
     {% else %}<a class="btn" href="/signup/?next=/account/billing/">Start the free trial</a>{% endif %}
   </div>
-  <div class="plan">
+  <div class="plan" data-period="month">
     <h2>Featured listing</h2>
-    <p class="price">${{ cfg.FEATURED_LISTING.price_usd }}<small> one-off</small></p>
+    {{ period_switch(fm, fy, "Featured listing") }}
+    {{ prices(fm, fy) }}
     <ul>
-      <li>Your listing shown first in its category for {{ cfg.FEATURED_LISTING.days }} days</li>
+      <li>Add-on for one live listing, on Free or Pro</li>
+      <li>Shown first in its marketplace category</li>
       <li>Marked "Featured" on listing cards</li>
-      <li>Available once a listing has passed review</li>
+      <li>Cancel any time; stays featured to the end of the paid period</li>
     </ul>
-    <a class="btn quiet" href="/sell/">List a business</a>
+    {% if user %}<a class="btn quiet" href="/account/listings/">Feature a listing</a>{% else %}<a class="btn quiet" href="/sell/">List a business</a>{% endif %}
   </div>
 </div>
+
+<section class="section" id="compare" aria-labelledby="compare-h">
+  <h2 id="compare-h">Compare all features</h2>
+  <p class="muted">Featured listing is an add-on for a listing, so you can use it with either Free or Pro.</p>
+  {% set Y = '<span class="yes" role="img" aria-label="Included">✓</span>' %}{% set N = '<span class="no" role="img" aria-label="Not included">–</span>' %}
+  <div class="table-wrap">
+  <table class="compare">
+    <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Pro</th><th scope="col">Featured listing <span class="muted small">(add-on)</span></th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Price, monthly</th><td>$0</td><td>${{ pm }} a month</td><td>${{ fm }} a month per listing</td></tr>
+      <tr><th scope="row">Price, yearly</th><td>$0</td><td>${{ py }} a year <span class="tag good">Save {{ save_pct(pm, py) }}%</span></td><td>${{ fy }} a year per listing <span class="tag good">Save {{ save_pct(fm, fy) }}%</span></td></tr>
+      <tr><th scope="row">Six valuation tools and three calculators</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Full methodology, every adjustment shown</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Detailed valuation reports</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Saved reports</th><td>{{ cfg.FREE_SAVED_REPORTS }} at a time</td><td>Unlimited</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">AI commentary on reports</th><td>{{ N|safe }}</td><td>{{ Y|safe }}{% if not cfg.ANTHROPIC_API_KEY %} <span class="muted small">(coming soon)</span>{% endif %}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Printable reports for buyers, lenders or partners</th><td>{{ N|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Browse listings and contact sellers</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">List a business for sale</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Listing shown first in its category</th><td>{{ N|safe }}</td><td>{{ N|safe }}</td><td>{{ Y|safe }}</td></tr>
+      <tr><th scope="row">"Featured" badge on listing cards</th><td>{{ N|safe }}</td><td>{{ N|safe }}</td><td>{{ Y|safe }}</td></tr>
+      <tr><th scope="row">Free trial</th><td>Not needed</td><td>{{ cfg.TRIAL_DAYS }} days, no card</td><td>{{ N|safe }}</td></tr>
+      <tr><th scope="row">Cancel any time</th><td>Nothing to cancel</td><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
   <article class="prose mt section">{{ body|safe }}</article>
 </div>
 {{ related_block(related) }}

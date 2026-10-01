@@ -57,6 +57,7 @@
 {% if not ex and not (report is defined and report) %}
 <div class="row no-print">
   <a class="btn" href="/account/reports/new/">Get the detailed report</a>
+  {% if t is defined and t %}<a class="btn quiet" href="{{ t.path }}#calc-h" data-new-valuation>Value another business</a>{% endif %}
   <span class="hint">Free account. Adds a sensitivity table, a due-diligence checklist and a saved, printable copy.</span>
 </div>
 {% endif %}

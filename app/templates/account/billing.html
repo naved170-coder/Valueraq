@@ -1,5 +1,14 @@
 {% extends "base.html" %}
+{% from "partials/pricing.html" import period_switch, prices %}
 {% block title %}Plan and billing | {{ BRAND }}{% endblock %}
+{% macro buy(key, p, label, on) %}
+  {% if on and p.stripe_price_id %}
+    <form method="post" action="/checkout/{{ key }}/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">{{ label }}</button></form>
+  {% else %}
+    <div class="stack"><button class="btn quiet" type="button" disabled aria-describedby="pay-soon-{{ key }}">Available soon</button>
+    <p class="hint" id="pay-soon-{{ key }}">Online payment opens soon.</p></div>
+  {% endif %}
+{% endmacro %}
 {% block main %}
 <div class="wrap">
   {% include "account/_nav.html" %}
@@ -17,30 +26,44 @@
   {% if not enabled %}
   <p class="hint mt">Online payment opens soon. Until then the plans below can't be bought yet{% if user.plan == 'trial' %}, and your trial keeps full Pro access{% endif %}.</p>
   {% endif %}
+  <p class="mt"><a href="/pricing/#compare">Compare all features</a></p>
 
+  {% set pm = plans.pro_monthly %}{% set py = plans.pro_yearly %}
+  {% set fm = featured_plans.featured_monthly %}{% set fy = featured_plans.featured_yearly %}
   <div class="plans mt">
     {% if not user.trial_used and user.plan == 'free' %}
     <div class="plan"><h2>Free trial</h2><p>{{ cfg.TRIAL_DAYS }} days of Pro. No card needed.</p>
       <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Start free trial</button></form></div>
     {% endif %}
-    {% for key, p in plans.items() %}
-    <div class="plan{% if loop.first %} pick{% endif %}">
-      <h2>{{ p.name }}</h2>
-      <p class="price">${{ p.price_usd }}<small> / {{ p.interval }}</small></p>
-      {% if p.interval == 'year' %}<p class="muted">Equal to ${{ '%.2f'|format(p.price_usd / 12) }} a month.</p>{% endif %}
+
+    <div class="plan pick" data-period="month">
+      <h2>Pro</h2>
+      {{ period_switch(pm.price_usd, py.price_usd, "Pro") }}
+      {{ prices(pm.price_usd, py.price_usd) }}
       {% if user.plan == 'pro' %}
         <button class="btn quiet" type="button" disabled>Your current plan</button>
-      {% elif enabled and p.stripe_price_id %}
-        <form method="post" action="/checkout/{{ key }}/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Subscribe{% if not user.trial_used %} with {{ cfg.TRIAL_DAYS }}-day trial{% endif %}</button></form>
       {% else %}
-        <div class="stack"><button class="btn quiet" type="button" disabled aria-describedby="pay-soon-{{ key }}">Available soon</button>
-        <p class="hint" id="pay-soon-{{ key }}">Online payment opens soon.</p></div>
+        {% set tl = (' with ' ~ cfg.TRIAL_DAYS ~ '-day trial') if not user.trial_used else '' %}
+        <div class="m">{{ buy('pro_monthly', pm, 'Subscribe monthly' ~ tl, enabled) }}</div>
+        <div class="y">{{ buy('pro_yearly', py, 'Subscribe yearly' ~ tl, enabled) }}</div>
       {% endif %}
     </div>
-    {% endfor %}
+
+    <div class="plan" data-period="month">
+      <h2>Featured listing</h2>
+      {{ period_switch(fm.price_usd, fy.price_usd, "Featured listing") }}
+      {{ prices(fm.price_usd, fy.price_usd) }}
+      <p class="muted small">Per listing. Shows a live listing first in its category with a "Featured" badge.</p>
+      {% if enabled and fm.stripe_price_id %}
+        <a class="btn" href="/account/listings/">Choose a listing to feature</a>
+      {% else %}
+        <div class="stack"><button class="btn quiet" type="button" disabled aria-describedby="pay-soon-featured">Available soon</button>
+        <p class="hint" id="pay-soon-featured">Online payment opens soon.</p></div>
+      {% endif %}
+    </div>
   </div>
   {% if user.stripe_customer_id %}
-  <form method="post" action="/account/billing/portal/" class="mt"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn quiet" type="submit">Manage billing and invoices</button></form>
+  <form method="post" action="/account/billing/portal/" class="mt"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn quiet" type="submit">Manage or cancel subscriptions and invoices</button></form>
   {% endif %}
 </div>
 {% endblock %}

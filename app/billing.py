@@ -3,7 +3,8 @@
 Flows:
   * Pro subscription: Checkout Session (mode=subscription), 14-day trial if the
     account has not already used its trial.
-  * Featured listing: Checkout Session (mode=payment).
+  * Featured listing: Checkout Session (mode=subscription), one subscription per
+    listing, monthly or yearly. It never changes the account's Pro plan.
   * Customer portal for managing/cancelling.
 If STRIPE_SECRET_KEY is not set, payment buttons explain that payments are not
 configured and admins can grant plans manually.
@@ -97,20 +98,37 @@ def subscription_checkout(u, plan_key):
     return _post("checkout/sessions", data)["url"]
 
 
-def featured_checkout(u, listing_id):
-    price = current_app.config["FEATURED_LISTING"]["stripe_price_id"]
-    if not price:
+def featured_checkout(u, listing_id, plan_key):
+    plan = current_app.config["FEATURED_PLANS"].get(plan_key)
+    if not plan or not plan["stripe_price_id"]:
         raise BillingError("Featured listings aren't available for purchase yet.")
     site = current_app.config["SITE_URL"]
+    md = {"user_id": u["id"], "kind": "featured", "listing_id": listing_id, "plan": plan_key}
     return _post("checkout/sessions", {
-        "mode": "payment",
+        "mode": "subscription",
         "customer": _customer(u),
-        "line_items": [{"price": price, "quantity": 1}],
+        "line_items": [{"price": plan["stripe_price_id"], "quantity": 1}],
         "success_url": site + "/account/listings/?featured=success",
         "cancel_url": site + "/account/listings/",
         "client_reference_id": str(u["id"]),
-        "metadata": {"user_id": u["id"], "kind": "featured", "listing_id": listing_id},
+        "metadata": md,
+        "subscription_data": {"metadata": md},
     })["url"]
+
+
+def _period_end(sub):
+    """current_period_end moved onto subscription items in newer Stripe API versions."""
+    end = sub.get("current_period_end")
+    if not end:
+        items = ((sub.get("items") or {}).get("data") or [])
+        end = items[0].get("current_period_end") if items else None
+    return end
+
+
+def _featured_until(period_end):
+    if not period_end:
+        return None
+    return int(period_end) + current_app.config["FEATURED_GRACE_DAYS"] * 86400
 
 
 def portal(u):
@@ -154,9 +172,11 @@ def handle_event(evt):
         md = obj.get("metadata") or {}
         uid = int(md.get("user_id") or obj.get("client_reference_id") or 0)
         if md.get("kind") == "featured" and md.get("listing_id"):
-            days = current_app.config["FEATURED_LISTING"]["days"]
-            db.execute("UPDATE listings SET is_featured=1, featured_until=? WHERE id=? AND seller_id=?",
-                       (db.now() + days * 86400, int(md["listing_id"]), uid))
+            # Featured until the subscription events say otherwise; a first period
+            # end is set when customer.subscription.* arrives.
+            db.execute("UPDATE listings SET is_featured=1, featured_subscription_id=?, "
+                       "featured_until=COALESCE(featured_until, ?) WHERE id=? AND seller_id=?",
+                       (obj.get("subscription"), db.now() + 35 * 86400, int(md["listing_id"]), uid))
             analytics.record("premium_listing", props={"listing": md["listing_id"]}, user_id=uid)
         elif md.get("kind") == "subscription" and obj.get("subscription"):
             db.execute("UPDATE users SET stripe_subscription_id=?, plan='pro', trial_used=1 WHERE id=?",
@@ -165,12 +185,21 @@ def handle_event(evt):
         return "checkout"
     if t in ("customer.subscription.created", "customer.subscription.updated", "customer.subscription.deleted"):
         status = obj.get("status")
+        md = obj.get("metadata") or {}
+        if md.get("kind") == "featured":
+            live = status in ("active", "trialing", "past_due")
+            lid = int(md.get("listing_id") or 0)
+            db.execute("UPDATE listings SET is_featured=?, featured_subscription_id=?, featured_until=? "
+                       "WHERE (id=? AND seller_id=?) OR featured_subscription_id=?",
+                       (1 if live else 0, obj.get("id"), _featured_until(_period_end(obj)) if live else None,
+                        lid, int(md.get("user_id") or 0), obj.get("id")))
+            return "featured " + str(status)
         u = db.query("SELECT * FROM users WHERE stripe_customer_id=?", (obj.get("customer"),), one=True)
         if not u:
             return "unknown customer"
         plan = "pro" if status in ("active", "trialing", "past_due") else "free"
         db.execute("UPDATE users SET plan=?, subscription_status=?, stripe_subscription_id=?, current_period_end=? "
-                   "WHERE id=?", (plan, status, obj.get("id"), obj.get("current_period_end"), u["id"]))
+                   "WHERE id=?", (plan, status, obj.get("id"), _period_end(obj), u["id"]))
         if status == "trialing":
             db.execute("UPDATE users SET trial_used=1 WHERE id=?", (u["id"],))
         return "subscription " + str(status)
