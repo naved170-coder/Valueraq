@@ -28,8 +28,11 @@ def signup():
         return redirect(_safe_next())
     error = None
     if request.method == "POST":
-        if auth.honeypot_tripped() or auth.rate_limited("signup", 20, 3600):
-            abort(429)
+        # No hidden trap field here, so browser autofill works normally.
+        if auth.rate_limited("signup", 20, 3600):
+            current_app.logger.warning("signup blocked: rate limit")
+            return _r("account/signup.html", next=_safe_next(""),
+                      error="Too many attempts from this connection. Wait a few minutes and try again."), 429
         email = (request.form.get("email") or "").strip().lower()
         pw = request.form.get("password") or ""
         if "@" not in email or "." not in email.split("@")[-1]:
@@ -55,7 +58,9 @@ def login():
     error = None
     if request.method == "POST":
         if auth.rate_limited("login", 20, 900):
-            abort(429)
+            current_app.logger.warning("login blocked: rate limit")
+            return _r("account/login.html", next=_safe_next(""),
+                      error="Too many attempts from this connection. Wait a few minutes and try again."), 429
         u = auth.verify(request.form.get("email") or "", request.form.get("password") or "")
         if u:
             auth.login_user(u)
@@ -289,7 +294,8 @@ def inquiries():
 def billing_page():
     from flask import current_app
     return _r("account/billing.html", plans=current_app.config["PLANS"], enabled=billing.enabled(),
-              trial_days=_trial_days_left(g.user), checkout=request.args.get("checkout"))
+              trial_days=_trial_days_left(g.user), trial_ends=g.user["trial_ends_at"],
+              checkout=request.args.get("checkout"))
 
 
 @bp.post("/account/trial/")

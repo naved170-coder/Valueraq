@@ -348,3 +348,5 @@ input:not([type]):focus { outline: 2px solid var(--focus); outline-offset: 0; bo
 .plan { border: 2px solid var(--accent); display: flex; flex-direction: column; gap: .9rem; }
 .plan > :last-child { margin-top: auto; }
 .plan.pick { border-width: 3px; box-shadow: 0 10px 30px -18px var(--accent); }
+.btn[disabled] { opacity: .6; cursor: not-allowed; filter: none; }
+.plan .hint { margin-top: -.4rem; }

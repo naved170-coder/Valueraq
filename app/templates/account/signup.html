@@ -9,7 +9,6 @@
     <input type="hidden" name="csrf" value="{{ csrf_token() }}">
     <input type="hidden" name="t0" value="{{ form_t0 }}">
     <input type="hidden" name="next" value="{{ next }}">
-    <div class="hp" aria-hidden="true"><input name="vq_hp" tabindex="-1" autocomplete="off"></div>
     <div class="field"><label for="s-name">Name (optional)</label><input id="s-name" name="name" type="text" autocomplete="name"></div>
     <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" required autocomplete="email"></div>
     <div class="field"><label for="s-pw">Password</label><div class="pw-wrap"><input id="s-pw" name="password" type="password" required minlength="10" autocomplete="new-password"><button type="button" class="pw-toggle" data-pw-toggle="s-pw" aria-label="Show password" aria-pressed="false"></button></div><p class="hint">At least 10 characters.</p></div>
