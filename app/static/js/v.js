@@ -44,3 +44,14 @@
   d.addEventListener("visibilitychange", function () { if (d.visibilityState === "hidden") flush(); });
   w.addEventListener("pagehide", flush);
 })();
+/* Show/hide password buttons */
+document.addEventListener("click", function (e) {
+  var b = e.target.closest && e.target.closest("[data-pw-toggle]");
+  if (!b) return;
+  var i = document.getElementById(b.getAttribute("data-pw-toggle"));
+  if (!i) return;
+  var show = i.type === "password";
+  i.type = show ? "text" : "password";
+  b.setAttribute("aria-pressed", show ? "true" : "false");
+  b.setAttribute("aria-label", show ? "Hide password" : "Show password");
+});

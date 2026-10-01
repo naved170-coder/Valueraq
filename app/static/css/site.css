@@ -328,3 +328,23 @@ tr[aria-current] td { background: var(--accent-soft); font-weight: 600; }
 @media (min-width: 720px) { .form-grid .field { grid-template-rows: minmax(2.6em, auto) auto auto auto; } .form-grid .field label { align-self: end; } }
 .facts-table td .tag { display: inline-block; width: auto; margin-left: .35rem; vertical-align: middle; }
 .panel .price b { font: 600 1.9rem/1.1 var(--f-mono); }
+
+/* 2026-10-01 change requests */
+input:not([type]) { width: 100%; min-height: 44px; padding: .55rem .7rem; font: 400 1rem/1.4 var(--f-body); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); }
+input:not([type]):focus { outline: 2px solid var(--focus); outline-offset: 0; border-color: transparent; }
+.pw-wrap { position: relative; }
+.pw-wrap input { padding-right: 3rem; }
+.pw-toggle { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 40px; height: 36px; border: 0; border-radius: var(--r);
+  background: transparent center/22px no-repeat; cursor: pointer; color: var(--muted); }
+.pw-toggle::before { content: ""; display: block; width: 22px; height: 22px; margin: auto; background: currentColor;
+  -webkit-mask: var(--eye) center/contain no-repeat; mask: var(--eye) center/contain no-repeat; }
+.pw-toggle { --eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E"); }
+.pw-toggle[aria-pressed="true"] { --eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.94 17.94A10.07 10.07 0 0 1 12 19c-7 0-11-7-11-7a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19'/%3E%3Cpath d='M14.12 14.12a3 3 0 1 1-4.24-4.24'/%3E%3Cline x1='1' y1='1' x2='23' y2='23'/%3E%3C/svg%3E"); color: var(--accent); }
+.pw-toggle:hover { color: var(--ink); }
+.nav .btn.ghost { color: var(--accent); }
+.plans { align-items: stretch; }
+@media (min-width: 900px) { .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.plan { border: 2px solid var(--accent); display: flex; flex-direction: column; gap: .9rem; }
+.plan > :last-child { margin-top: auto; }
+.plan.pick { border-width: 3px; box-shadow: 0 10px 30px -18px var(--accent); }

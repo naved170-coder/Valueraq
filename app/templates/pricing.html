@@ -1,5 +1,12 @@
-{% extends "page.html" %}
-{% block before_body %}
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+  </header>
+
 <div class="plans">
   <div class="plan">
     <h2>Free</h2>
@@ -38,4 +45,7 @@
     <a class="btn quiet" href="/sell/">List a business</a>
   </div>
 </div>
+  <article class="prose mt section">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
 {% endblock %}

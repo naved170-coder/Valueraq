@@ -51,7 +51,7 @@
       <a href="/businesses-for-sale/" {% if current_path.startswith('/businesses-for-sale/') or current_path.startswith('/marketplace/') %}aria-current="page"{% endif %}>Businesses for sale</a>
       <a href="/guides/" {% if current_path.startswith('/guides/') or current_path.startswith('/glossary/') %}aria-current="page"{% endif %}>Guides</a>
       <a href="/pricing/" {% if current_path == '/pricing/' %}aria-current="page"{% endif %}>Pricing</a>
-      {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a>{% endif %}
+      {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a><a class="btn small ghost" href="/signup/">Sign up</a>{% endif %}
       <a class="btn small" href="/sell/">Sell a business</a>
     </nav>
     <details class="menu">
@@ -63,7 +63,7 @@
         <a href="/guides/">Guides</a>
         <a href="/pricing/">Pricing</a>
         <a href="/sell/">Sell a business</a>
-        {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a>{% endif %}
+        {% if user %}<a href="/account/">Account</a>{% else %}<a href="/login/">Log in</a><a href="/signup/">Sign up</a>{% endif %}
       </nav>
     </details>
   </div>
