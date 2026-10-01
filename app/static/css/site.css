@@ -350,3 +350,8 @@ input:not([type]):focus { outline: 2px solid var(--focus); outline-offset: 0; bo
 .plan.pick { border-width: 3px; box-shadow: 0 10px 30px -18px var(--accent); }
 .btn[disabled] { opacity: .6; cursor: not-allowed; filter: none; }
 .plan .hint { margin-top: -.4rem; }
+
+/* Valuation tools: example figures shown as grey hints, not typed values */
+input::placeholder { color: var(--muted); opacity: .75; }
+select:has(option[value=""]:checked) { color: var(--muted); }
+select option { color: var(--ink); }

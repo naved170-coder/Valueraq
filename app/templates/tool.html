@@ -14,12 +14,12 @@
   <div class="calc">
     <div class="calc-head"><h2 id="calc-h">Estimate the value</h2><span class="hint">Takes about two minutes. Your figures are not stored unless you save a report.</span></div>
     <form method="post" action="/tools/result/{{ key }}/" data-calc="{{ key }}" data-out="result" novalidate>
-      <p class="example-note">The form is filled with a hypothetical example. Replace the figures with your own.</p>
+      <p class="example-note">The grey figures are a hypothetical example. Type your own figures in each box; the example result below shows what you will get.</p>
       <p class="alert bad form-error" role="alert" hidden></p>
       <div class="form-grid">
-        {% for k, spec in fields %}{{ field(k, spec, values.get(k)) }}{% endfor %}
+        {% for k, spec in fields %}{{ field(k, spec, example=values.get(k)) }}{% endfor %}
       </div>
-      <div class="actions"><button class="btn" type="submit">Calculate value</button><a class="hint" href="/methodology/">How the calculation works</a></div>
+      <div class="actions"><button class="btn" type="submit">Calculate value</button><button class="btn quiet" type="reset">Clear form</button><a class="hint" href="/methodology/">How the calculation works</a></div>
     </form>
     <div id="result" class="result" aria-live="polite">
       {% with r=example, example=True %}{% include "partials/result.html" %}{% endwith %}

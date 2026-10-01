@@ -6,7 +6,12 @@
   Array.prototype.forEach.call(forms, function (form) {
     var out = document.getElementById(form.getAttribute("data-out"));
     var btn = form.querySelector("button[type=submit]");
-    var started = false;
+    var started = false, initial = out ? out.innerHTML : "";
+    form.addEventListener("reset", function () {
+      clearErrors(form);
+      if (out) out.innerHTML = initial;
+      setTimeout(function () { var f = form.querySelector("input, select"); if (f) f.focus(); }, 0);
+    });
     form.addEventListener("input", function () {
       if (!started && window.vqTrack) { started = true; window.vqTrack("tool_started", { tool: form.getAttribute("data-calc") }); }
     });

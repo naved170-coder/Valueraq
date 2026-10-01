@@ -27,19 +27,19 @@
 </div>
 {% endmacro %}
 
-{% macro field(key, spec, value=None, error=None) %}
+{% macro field(key, spec, value=None, error=None, example=None) %}
 <div class="field{% if error %} error{% endif %}">
   <label for="f-{{ key }}">{{ spec.label }}{% if spec.optional %} <span class="muted">(optional)</span>{% endif %}</label>
   {% if spec.kind == 'select' %}
   <select id="f-{{ key }}" name="{{ key }}">
-    <option value="">Not specified</option>
+    <option value="">{{ "Choose…" if example is not none else "Not specified" }}</option>
     {% for v, l in spec.options %}<option value="{{ v }}" {% if value == v %}selected{% endif %}>{{ l }}</option>{% endfor %}
   </select>
   {% else %}
   <div class="input-affix">
     {% if spec.kind == 'money' %}<span class="pre">$</span>{% endif %}
     <input id="f-{{ key }}" name="{{ key }}" type="text" inputmode="decimal" autocomplete="off"
-      value="{{ '' if value is none else ('%g'|format(value)) }}" {% if error %}aria-invalid="true" aria-describedby="e-{{ key }}"{% endif %}>
+      value="{{ '' if value is none else ('%g'|format(value)) }}"{% if example is not none %} placeholder="e.g. {{ '{:,}'.format(example) if example is integer else ('%g'|format(example)) }}"{% endif %} {% if error %}aria-invalid="true" aria-describedby="e-{{ key }}"{% endif %}>
     {% if spec.kind == 'percent' %}<span class="post">%</span>{% endif %}
   </div>
   {% endif %}

@@ -2,7 +2,7 @@
    result page and the private report. `r` = engine result dict. #}
 {% from "partials/macros.html" import range_bar, legend %}
 {% set ex = example is defined and example %}
-{% if ex %}<p class="example-note">Example result for the hypothetical inputs above. Replace them with your own figures and select <b>Calculate value</b>.</p>{% endif %}
+{% if ex %}<p class="example-note">Example result for the grey example figures above. Type your own figures and select <b>Calculate value</b>.</p>{% endif %}
 <div class="stack">
   <p class="summary">Estimated value of this {{ r.type_noun or r.type_label }}: <b class="num">{{ r.value.low|money }} – {{ r.value.high|money }}</b>, with a midpoint of <b class="num">{{ r.value.mid|money }}</b>. Method: {{ r.method[0]|lower }}{{ r.method[1:] }}.</p>
   {{ range_bar(r.value) }}
