@@ -16,6 +16,9 @@ def load_user():
     uid = session.get("uid")
     if uid:
         u = db.query("SELECT * FROM users WHERE id = ?", (uid,), one=True)
+        if u and session.get("sv", 0) != (u["session_version"] or 0):
+            session.clear()  # password changed elsewhere: this device is signed out
+            u = None
         if u:
             g.user = u
             _expire_trial(u)
@@ -61,8 +64,17 @@ def login_user(u):
         session["last_valuation"] = keep
     session.permanent = True
     session["uid"] = u["id"]
+    session["sv"] = u["session_version"] or 0
     session["csrf"] = secrets.token_urlsafe(24)
     db.execute("UPDATE users SET last_login_at=? WHERE id=?", (db.now(), u["id"]))
+
+
+def change_password(u, new_password):
+    """Store the new password and sign out every other session; this one stays signed in."""
+    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1 WHERE id=?",
+               (generate_password_hash(new_password), u["id"]))
+    session["sv"] = (u["session_version"] or 0) + 1
+    session["csrf"] = secrets.token_urlsafe(24)
 
 
 def start_trial(u):

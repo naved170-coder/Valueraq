@@ -75,6 +75,34 @@ def logout():
     return redirect("/")
 
 
+# ---------------------------------------------------------------- settings
+@bp.route("/account/settings/", methods=["GET", "POST"])
+@auth.login_required
+def settings():
+    errors = {}
+    if request.method == "POST":
+        if auth.rate_limited(f"pwchange:{g.user['id']}", 10, 900):
+            return _r("account/settings.html", errors={"_": "Too many attempts. Wait a few minutes and try again."}), 429
+        cur = request.form.get("current_password") or ""
+        new = request.form.get("new_password") or ""
+        confirm = request.form.get("confirm_password") or ""
+        from werkzeug.security import check_password_hash
+        if not check_password_hash(g.user["password_hash"], cur):
+            errors["current_password"] = "That isn't your current password."
+        if len(new) < 10:
+            errors["new_password"] = "Use at least 10 characters."
+        elif new == cur:
+            errors["new_password"] = "Choose a password different from your current one."
+        if not errors.get("new_password") and new != confirm:
+            errors["confirm_password"] = "The two new passwords don't match."
+        if not errors:
+            auth.change_password(g.user, new)
+            current_app.logger.info("password changed for user %s", g.user["id"])
+            flash("Your password has been changed. Other devices have been signed out.", "ok")
+            return redirect(url_for("account.settings"))
+    return _r("account/settings.html", errors=errors), (422 if errors else 200)
+
+
 # ---------------------------------------------------------------- dashboard
 @bp.get("/account/")
 @auth.login_required

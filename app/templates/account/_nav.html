@@ -4,6 +4,7 @@
   <a href="/account/listings/" {% if current_path.startswith('/account/listings') %}aria-current="page"{% endif %}>My listings</a>
   <a href="/account/inquiries/" {% if current_path.startswith('/account/inquiries') %}aria-current="page"{% endif %}>Inquiries</a>
   <a href="/account/billing/" {% if current_path.startswith('/account/billing') %}aria-current="page"{% endif %}>Plan &amp; billing</a>
+  <a href="/account/settings/" {% if current_path.startswith('/account/settings') %}aria-current="page"{% endif %}>Settings</a>
   {% if user.role == 'admin' %}<a href="/admin/">Admin</a>{% endif %}
   <form method="post" action="/logout/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" type="submit">Log out</button></form>
 </nav>

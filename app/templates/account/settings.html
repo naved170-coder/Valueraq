@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Settings | {{ BRAND }}{% endblock %}
+{% macro pw(id, name, label, ac, hint=None) %}
+<div class="field{% if errors.get(name) %} error{% endif %}">
+  <label for="{{ id }}">{{ label }}</label>
+  <div class="pw-wrap"><input id="{{ id }}" name="{{ name }}" type="password" required autocomplete="{{ ac }}"{% if errors.get(name) %} aria-invalid="true" aria-describedby="e-{{ id }}"{% endif %}><button type="button" class="pw-toggle" data-pw-toggle="{{ id }}" aria-label="Show password" aria-pressed="false"></button></div>
+  {% if hint %}<p class="hint">{{ hint }}</p>{% endif %}
+  {% if errors.get(name) %}<p class="err" id="e-{{ id }}">{{ errors[name] }}</p>{% endif %}
+</div>
+{% endmacro %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <h1>Settings</h1>
+  <p class="lede">Signed in as <b>{{ user.email }}</b>.</p>
+  <section class="panel narrow mt" aria-labelledby="pw-h">
+    <h2 id="pw-h" class="h3">Change password</h2>
+    {% if errors.get('_') %}<p class="alert bad" role="alert">{{ errors['_'] }}</p>
+    {% elif errors %}<p class="alert bad" role="alert">Please check the highlighted fields.</p>{% endif %}
+    <form method="post" class="stack">
+      <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+      <input type="text" name="username" value="{{ user.email }}" autocomplete="username" hidden>
+      {{ pw("c-pw", "current_password", "Current password", "current-password") }}
+      {{ pw("n-pw", "new_password", "New password", "new-password", "At least 10 characters.") }}
+      {{ pw("r-pw", "confirm_password", "Confirm new password", "new-password") }}
+      <div><button class="btn" type="submit">Change password</button></div>
+      <p class="hint">Changing your password signs you out on every other phone or computer.</p>
+    </form>
+  </section>
+</div>
+{% endblock %}

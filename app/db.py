@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS users (
     current_period_end INTEGER,
     is_seller INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL,
-    last_login_at INTEGER
+    last_login_at INTEGER,
+    session_version INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS reports (
@@ -290,6 +291,7 @@ def init_db(app):
 # Columns added after launch: (table, column, definition). Applied once, in order.
 MIGRATIONS = [
     ("listings", "featured_subscription_id", "TEXT"),
+    ("users", "session_version", "INTEGER NOT NULL DEFAULT 0"),
 ]
 
 

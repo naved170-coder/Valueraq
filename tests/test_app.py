@@ -546,6 +546,38 @@ class RevenueSources(Base):
         self.assertIn('type="reset"', html)
 
 
+
+class ChangePassword(Base):
+    def test_change_password_flow(self):
+        self.signup()
+        other = self.app.test_client()
+        with other.session_transaction() as s:
+            s["csrf"] = "tok2"
+        other.post("/login/", data=dict(email="user@example.com", password="correct-horse-1", csrf="tok2"))
+        self.assertEqual(other.get("/account/settings/").status_code, 200)
+        page = self.client.get("/account/settings/").get_data(as_text=True)
+        self.assertIn("Change password", page)
+        tok = self.csrf()
+        bad = self.client.post("/account/settings/", data=dict(csrf=tok, current_password="wrong-one-123",
+                                                               new_password="new-password-99", confirm_password="new-password-99"))
+        self.assertEqual(bad.status_code, 422)
+        self.assertIn("isn&#39;t your current password", bad.get_data(as_text=True))
+        mismatch = self.client.post("/account/settings/", data=dict(csrf=tok, current_password="correct-horse-1",
+                                                                    new_password="new-password-99", confirm_password="other-password-99"))
+        self.assertIn("don&#39;t match", mismatch.get_data(as_text=True))
+        ok = self.client.post("/account/settings/", data=dict(csrf=tok, current_password="correct-horse-1",
+                                                              new_password="new-password-99", confirm_password="new-password-99"),
+                              follow_redirects=True)
+        self.assertIn("Your password has been changed", ok.get_data(as_text=True))
+        self.assertEqual(self.client.get("/account/settings/").status_code, 200)  # this device stays signed in
+        self.assertEqual(other.get("/account/settings/").status_code, 302)       # other device signed out
+        self.logout()
+        with self.app.app_context():
+            from app import auth
+            self.assertIsNone(auth.verify("user@example.com", "correct-horse-1"))
+            self.assertIsNotNone(auth.verify("user@example.com", "new-password-99"))
+
+
 # ---------------------------------------------------------------- admin
 class Admin(Base):
     def login_admin(self):
