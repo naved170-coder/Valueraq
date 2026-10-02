@@ -27,6 +27,9 @@ class Config:
     # Hosts that are allowed to serve without redirect (dev/test).
     DEV_HOSTS = {"localhost", "127.0.0.1", "0.0.0.0", "testserver"}
     ENFORCE_CANONICAL_HOST = _bool("ENFORCE_CANONICAL_HOST", True)
+    # The host platform's health check reaches the instance on an internal host, so
+    # this one path must answer 200 on any host and never 301 to the canonical one.
+    HEALTH_CHECK_PATH = os.environ.get("HEALTH_CHECK_PATH", "/robots.txt")
 
     LANGUAGE = "en-US"
     LOCALE = "en_US"

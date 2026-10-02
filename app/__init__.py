@@ -55,7 +55,9 @@ def create_app(config_object=Config, **overrides):
     def _canonical_host_and_redirects():
         g.t0 = time.perf_counter()
         host = (request.host or "").split(":")[0].lower()
-        if app.config["ENFORCE_CANONICAL_HOST"] and host not in app.config["DEV_HOSTS"]:
+        if (app.config["ENFORCE_CANONICAL_HOST"]
+                and host not in app.config["DEV_HOSTS"]
+                and request.path != app.config["HEALTH_CHECK_PATH"]):
             if host != preferred.hostname or request.scheme != preferred.scheme:
                 return redirect(app.config["SITE_URL"] + request.full_path.rstrip("?"), 301)
         path = request.path
