@@ -4,7 +4,7 @@ meta_title: VALUERAQ Terms of Use
 meta_description: The terms that apply to using VALUERAQ's valuation tools, reports, accounts, subscriptions and marketplace, including the limits of our estimates and our role.
 h1: Terms of Use
 answer: These terms apply to your use of VALUERAQ, including the valuation tools, reports, accounts, subscriptions and the marketplace. By using the site, you agree to them.
-updated: 2026-10-02
+updated: 2026-09-30
 related: /privacy/, /marketplace-rules/, /methodology/
 ---
 
@@ -26,7 +26,7 @@ You must give accurate information, keep your password secure and tell us about 
 
 ## Subscriptions and payments
 
-During the launch period all features are free and no payment is taken. If paid plans are offered later, the following applies. Pro subscriptions renew automatically until cancelled. You can cancel at any time from your account; access continues to the end of the paid period. The free trial lasts 14 days and doesn't require a card. Featured listings are subscriptions for one listing each, billed monthly or annually; they renew automatically until cancelled, and the listing stays featured until the end of the paid period. Prices are shown on the [pricing page](/pricing/) before you pay.
+Pro subscriptions renew automatically until cancelled. You can cancel at any time from your account; access continues to the end of the paid period. The free trial lasts 14 days and doesn't require a card. Featured listings are subscriptions for one listing each, billed monthly or annually; they renew automatically until cancelled, and the listing stays featured until the end of the paid period. Prices are shown on the [pricing page](/pricing/) before you pay.
 
 ## Acceptable use
 

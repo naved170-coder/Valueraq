@@ -34,8 +34,6 @@ def is_premium(u=None):
     u = u if u is not None else g.get("user")
     if not u:
         return False
-    if current_app.config.get("FREE_LAUNCH"):
-        return True  # launch period: every account has the full feature set
     if u["plan"] == "pro" and u["subscription_status"] in ("active", "trialing", "past_due"):
         return True
     if u["plan"] == "trial" and (u["trial_ends_at"] or 0) > db.now():

@@ -415,8 +415,3 @@ a.vbadge:hover { background: var(--accent); color: var(--accent-ink); }
 table.weeks .barcell { width: 55%; min-width: 120px; }
 table.weeks .wbar { display: block; height: 10px; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-/* Free-launch pricing card */
-.plan.launch { max-width: none; }
-.launch-cols { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); margin: .6rem 0 1rem; }
-.launch-cols h3 { margin: 0 0 .3rem; font-size: 1rem; }
-.launch-cols ul { margin: 0; }

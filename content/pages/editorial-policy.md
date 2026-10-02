@@ -4,7 +4,7 @@ meta_title: VALUERAQ Editorial Policy – How Our Content Is Written and Checked
 meta_description: How VALUERAQ writes, reviews, sources and updates its guides and glossary, including our rules on AI assistance, statistics, independence and corrections.
 h1: Editorial Policy
 answer: VALUERAQ's guides, glossary and methodology are written to be accurate, specific and useful. We don't publish invented statistics, sources, quotes or reviews; AI-assisted drafts are reviewed by a person before publication; and we correct mistakes openly.
-updated: 2026-10-02
+updated: 2026-09-30
 related: /methodology/, /data-sources/, /about/
 ---
 
@@ -33,7 +33,7 @@ AI tools may help with research, outlines or first drafts. A person reviews ever
 
 ## Independence
 
-Guides are not sponsored, and we don't accept payment to mention or recommend products. Any paid features, now or in future, don't affect our guides or listing reviews. If we ever use affiliate links, they will be disclosed on the page where they appear.
+Guides are not sponsored, and we don't accept payment to mention or recommend products. Paid features such as featured listings don't affect our guides or listing reviews. If we ever use affiliate links, they will be disclosed on the page where they appear.
 
 ## Updates
 

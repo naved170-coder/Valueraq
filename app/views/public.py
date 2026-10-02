@@ -2,7 +2,7 @@
 import json
 import re
 
-from flask import (Blueprint, abort, current_app, flash, g, jsonify, redirect, render_template, request,
+from flask import (Blueprint, abort, flash, g, jsonify, redirect, render_template, request,
                    session)
 
 from .. import analytics, auth, catalog, content, db, linkgraph, schema, valuation as V
@@ -288,8 +288,8 @@ def glossary_term(slug):
 PAGE_TYPES = {"about": "AboutPage", "contact": "ContactPage", "faq": "FAQPage"}
 
 
-def _static_page(slug, template="page.html", content_slug=None, **extra):
-    doc = content.load("pages", content_slug or slug)
+def _static_page(slug, template="page.html", **extra):
+    doc = content.load("pages", slug)
     if not doc:
         abort(404)
     path = f"/{slug}/"
@@ -331,8 +331,6 @@ def methodology():
 
 @bp.get("/pricing/")
 def pricing():
-    if current_app.config["FREE_LAUNCH"]:
-        return _static_page("pricing", "pricing_free.html", content_slug="pricing-free")
     return _static_page("pricing", "pricing.html")
 
 

@@ -1,10 +1,10 @@
 ---
 title: Frequently Asked Questions
 meta_title: VALUERAQ FAQ – Valuations, Marketplace, Accounts and Data
-meta_description: Answers to common questions about VALUERAQ's valuation tools, accuracy, the marketplace, listing a business, accounts, pricing and how your data is handled.
+meta_description: Answers to common questions about VALUERAQ's valuation tools, accuracy, the marketplace, listing a business, accounts, the free trial and how your data is handled.
 h1: Frequently Asked Questions
 answer: Answers to the questions people ask most about VALUERAQ's valuation tools, the marketplace, accounts and data.
-updated: 2026-10-02
+updated: 2026-09-30
 related: /methodology/, /data-sources/, /pricing/, /marketplace-rules/
 ---
 
@@ -36,7 +36,7 @@ Calculate ARR (MRR × 12), start from a base multiple, and adjust it for growth,
 
 ### Is VALUERAQ free?
 
-Yes. Everything is free while we're in launch: all tools and calculators, saved reports, guides, listing a business and contacting sellers. No card is needed and we take no commission. See [pricing](/pricing/).
+Yes. All tools, calculators, guides and marketplace listings are free. An optional Pro plan adds unlimited saved reports and extra report features. See [pricing](/pricing/).
 
 ### Do you store the figures I enter?
 

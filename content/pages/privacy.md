@@ -4,7 +4,7 @@ meta_title: VALUERAQ Privacy Policy
 meta_description: What personal data VALUERAQ collects, why, who processes it, how long it's kept, the first-party cookies we use and the choices you have.
 h1: Privacy Policy
 answer: This policy explains what personal data VALUERAQ collects, why we collect it, who processes it for us, and the choices you have.
-updated: 2026-10-02
+updated: 2026-09-30
 related: /terms/, /contact/
 ---
 
@@ -28,7 +28,7 @@ We use a session cookie to keep you logged in and protect forms. Our own analyti
 ## Who processes data for us
 
 - **Hosting provider:** stores the website and its database.
-- **Payment provider:** processes subscription and featured-listing payments, if and when paid plans are offered. No payment details are collected during the free launch period.
+- **Payment provider:** processes subscription and featured-listing payments.
 - **Email provider**, if we email you.
 
 We don't sell personal data.

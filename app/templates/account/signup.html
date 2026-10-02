@@ -3,7 +3,7 @@
 {% block main %}
 <div class="wrap page-head narrow">
   <h1>Create a free account</h1>
-  <p class="muted">Save detailed valuation reports, list a business for sale and contact sellers. {% if cfg.FREE_LAUNCH %}Everything is free while we're in launch.{% else %}Free, with an optional {{ cfg.TRIAL_DAYS }}-day Pro trial.{% endif %}</p>
+  <p class="muted">Save detailed valuation reports, list a business for sale and contact sellers. Free, with an optional {{ cfg.TRIAL_DAYS }}-day Pro trial.</p>
   {% if error %}<p class="alert bad" role="alert">{{ error }}</p>{% endif %}
   <form method="post" class="stack">
     <input type="hidden" name="csrf" value="{{ csrf_token() }}">

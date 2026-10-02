@@ -4,7 +4,7 @@ meta_title: About VALUERAQ – Digital Business Valuation & Marketplace
 meta_description: What VALUERAQ is, what it offers, how it makes money and how its valuations work: free valuation tools and a reviewed marketplace for digital businesses.
 h1: About VALUERAQ
 answer: VALUERAQ is a digital business intelligence platform and marketplace. It provides free, transparent valuation tools for websites, SaaS, AI businesses, apps, newsletters and ecommerce stores, and a reviewed marketplace where owners list digital businesses for sale.
-updated: 2026-10-02
+updated: 2026-09-30
 related: /methodology/, /data-sources/, /editorial-policy/, /tools/, /businesses-for-sale/
 ---
 
@@ -30,7 +30,7 @@ Our estimates are starting points for decisions, not appraisals, and they aren't
 
 ## How we make money
 
-{{BRAND}} is free to use while we're in launch: valuations, saved reports, browsing and listing all cost nothing. We don't take a commission on sales. After the launch period we may offer optional paid plans for extra features; any prices will be published on the [pricing page](/pricing/) first, and payment will never affect our guides or how a listing is reviewed.
+{{BRAND}} is free to use for valuations, browsing and listing. We earn revenue from optional [Pro subscriptions](/pricing/), which add unlimited saved reports and other features, and from optional featured placement for live listings. We don't take a commission on sales, and payment doesn't affect our guides or how a listing is reviewed.
 
 ## Contact
 
