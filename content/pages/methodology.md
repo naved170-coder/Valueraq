@@ -11,7 +11,7 @@ related: /data-sources/, /tools/, /calculators/, /guides/, /guides/business-valu
 ## Principles
 
 1. **Transparent.** Every default, rule and formula is published here. Results show each step.
-2. **Labelled.** Each figure is marked as *user-provided*, *platform assumption* or *calculated*. AI-generated commentary, where offered, is labelled separately and never changes the numbers.
+2. **Labelled.** Each figure is marked as *user-provided*, *platform assumption* or *calculated*.
 3. **A range, not a point.** Valuation involves judgement, so results are ranges.
 4. **No invented data.** We don't present assumptions as market statistics. See [data sources](/data-sources/).
 

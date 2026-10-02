@@ -4,7 +4,6 @@ Single source of truth for every tool and calculator. Pure functions, no I/O.
 
 Every number in a result is labelled as one of:
   user-provided · platform assumption · calculated
-AI commentary (optional, premium) is labelled separately by the report view.
 
 IMPORTANT: the base multiple ranges below are VALUERAQ editorial default
 assumptions. They are not derived from a measured transaction dataset. They are

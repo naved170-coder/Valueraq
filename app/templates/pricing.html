@@ -32,7 +32,6 @@
     <ul>
       <li>Everything in Free</li>
       <li>Unlimited saved reports</li>
-      <li>AI-generated commentary on reports, clearly labelled{% if not cfg.ANTHROPIC_API_KEY %} (coming soon){% endif %}</li>
       <li>Printable reports for buyers, lenders or partners</li>
       <li>{{ cfg.TRIAL_DAYS }}-day free trial, no card needed</li>
     </ul>
@@ -68,7 +67,6 @@
       <tr><th scope="row">Full methodology, every adjustment shown</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
       <tr><th scope="row">Detailed valuation reports</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
       <tr><th scope="row">Saved reports</th><td>{{ cfg.FREE_SAVED_REPORTS }} at a time</td><td>Unlimited</td><td>{{ N|safe }}</td></tr>
-      <tr><th scope="row">AI commentary on reports</th><td>{{ N|safe }}</td><td>{{ Y|safe }}{% if not cfg.ANTHROPIC_API_KEY %} <span class="muted small">(coming soon)</span>{% endif %}</td><td>{{ N|safe }}</td></tr>
       <tr><th scope="row">Printable reports for buyers, lenders or partners</th><td>{{ N|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
       <tr><th scope="row">Browse listings and contact sellers</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>
       <tr><th scope="row">List a business for sale</th><td>{{ Y|safe }}</td><td>{{ Y|safe }}</td><td>{{ N|safe }}</td></tr>

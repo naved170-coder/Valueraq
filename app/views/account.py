@@ -4,7 +4,7 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import ai, analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
+from .. import analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
 from ..views.marketplace import LISTING_FIELDS, _read_listing_form
 
 bp = Blueprint("account", __name__)
@@ -194,10 +194,9 @@ def report_new():
         return redirect("/tools/")
     token = secrets.token_hex(16)  # lowercase: URLs are case-normalised
     title = f"{V.TYPE_LABEL[tool]} valuation"
-    commentary = ai.commentary(r) if auth.is_premium() else None
     db.execute("INSERT INTO reports(token, user_id, tool, title, inputs_json, result_json, ai_commentary, "
                "methodology_version, created_at) VALUES (?,?,?,?,?,?,?,?,?)",
-               (token, g.user["id"], tool, title, json.dumps(x), json.dumps(r), commentary, V.METHODOLOGY_VERSION,
+               (token, g.user["id"], tool, title, json.dumps(x), json.dumps(r), None, V.METHODOLOGY_VERSION,
                 db.now()))
     session.pop("last_valuation", None)
     return redirect(url_for("account.report", token=token))
@@ -213,7 +212,7 @@ def report(token):
     analytics.server_event("report_viewed", {"tool": rep["tool"]})
     t = catalog.TOOLS_BY_KEY[rep["tool"]]
     return _r("account/report.html", rep=rep, r=r, t=t, cat=catalog.CAT_BY_TOOL[rep["tool"]],
-              checklist=CHECKLISTS.get(rep["tool"], []) + CHECKLISTS["all"], ai_enabled=ai.enabled())
+              checklist=CHECKLISTS.get(rep["tool"], []) + CHECKLISTS["all"])
 
 
 @bp.post("/reports/private/<token>/delete/")
@@ -222,23 +221,6 @@ def report_delete(token):
     db.execute("DELETE FROM reports WHERE token=? AND user_id=?", (token, g.user["id"]))
     flash("Report deleted.", "ok")
     return redirect(url_for("account.reports"))
-
-
-@bp.post("/reports/private/<token>/commentary/")
-@auth.login_required
-def report_commentary(token):
-    rep = db.query("SELECT * FROM reports WHERE token=? AND user_id=?", (token, g.user["id"]), one=True)
-    if not rep:
-        abort(404)
-    if not auth.is_premium():
-        flash("AI commentary is part of Pro. Start the free trial to add it.", "error")
-    else:
-        c = ai.commentary(json.loads(rep["result_json"]))
-        if c:
-            db.execute("UPDATE reports SET ai_commentary=? WHERE id=?", (c, rep["id"]))
-        else:
-            flash("Commentary couldn't be generated right now. Try again later.", "error")
-    return redirect(url_for("account.report", token=token))
 
 
 CHECKLISTS = {

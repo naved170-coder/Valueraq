@@ -7,7 +7,7 @@
     <p class="meta-line"><span>Plan: <b>{{ {'free':'Free','trial':'Pro trial','pro':'Pro'}[user.plan] }}</b>{% if trial_days is not none %} · {{ trial_days }} day{{ '' if trial_days == 1 else 's' }} left{% endif %}</span></p>
   </header>
   {% if user.plan == 'free' and not user.trial_used %}
-  <div class="panel"><h2>Try Pro free for {{ cfg.TRIAL_DAYS }} days</h2><p class="muted">Unlimited saved reports and AI commentary. No card needed.</p>
+  <div class="panel"><h2>Try Pro free for {{ cfg.TRIAL_DAYS }} days</h2><p class="muted">Unlimited saved reports and printable reports. No card needed.</p>
     <form method="post" action="/account/trial/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit">Start free trial</button></form></div>
   {% endif %}
   <div class="grid mt">

@@ -44,8 +44,6 @@ services:
         sync: false
       - key: R2_BUCKET
         sync: false
-      - key: ANTHROPIC_API_KEY
-        sync: false
       - key: GOOGLE_SITE_VERIFICATION
         sync: false
       - key: BING_SITE_VERIFICATION

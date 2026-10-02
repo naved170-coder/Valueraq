@@ -29,7 +29,7 @@ We don't publish market statistics, benchmarks, search volumes or averages we ca
 
 AI tools may help with research, outlines or first drafts. A person reviews every AI-assisted piece for accuracy, originality and usefulness before publication, and we record that review internally. We don't publish pages generated automatically in bulk.
 
-AI-generated commentary in Pro reports is labelled as AI-generated on the report itself.
+
 
 ## Independence
 

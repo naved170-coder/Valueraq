@@ -29,7 +29,7 @@ python manage.py audit                    # crawl the whole site and list SEO is
 
 1. Put this folder in a GitHub repository.
 2. In Render, choose **New → Blueprint**, select the repository. `render.yaml` creates the web service and a persistent disk for the database.
-3. Fill in `ADMIN_EMAILS` (your email). Leave Stripe and Anthropic keys empty until you're ready.
+3. Fill in `ADMIN_EMAILS` (your email). Leave the Stripe keys empty until you're ready.
 4. After the first deploy, open the site, sign up with your admin email, and visit `/admin/seo/` → **Run audit now**.
 5. Point DNS for `www.valueraq.com` and `valueraq.com` at the service, then set `ENFORCE_CANONICAL_HOST=1`. All other hosts (including the apex domain) then 301 to `https://www.valueraq.com`.
 6. Add the site to Google Search Console and Bing Webmaster Tools, set the verification env vars, and submit `https://www.valueraq.com/sitemap.xml`.
@@ -89,7 +89,7 @@ app/
   marketplace.py     listing lifecycle, quality, duplicates, indexation
   redirects.py       301s without chains, 410s, change logging
   audit.py           SEO QA crawler, quality score, change monitoring, publish gate
-  analytics.py billing.py ai.py auth.py
+  analytics.py billing.py auth.py mailer.py storage.py backup.py
   views/             public, marketplace, account, admin, api, robots/sitemaps
   templates/ static/
 content/             Markdown content

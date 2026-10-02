@@ -89,10 +89,6 @@ class Config:
     STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
     STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 
-    # --- Optional AI commentary (premium) ----------------------------------
-    ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-    ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5-5")
-
     # --- Email through Resend (optional; the site works without it) --------
     RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
     EMAIL_FROM = os.environ.get("EMAIL_FROM", "VALUERAQ <no-reply@valueraq.com>")

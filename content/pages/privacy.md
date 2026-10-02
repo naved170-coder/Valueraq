@@ -29,7 +29,6 @@ We use a session cookie to keep you logged in and protect forms. Our own analyti
 
 - **Hosting provider:** stores the website and its database.
 - **Payment provider:** processes subscription and featured-listing payments.
-- **AI model provider** (Pro reports, where enabled): receives the calculated figures of a report to generate commentary. We don't send your name or email address.
 - **Email provider**, if we email you.
 
 We don't sell personal data.

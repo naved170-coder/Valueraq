@@ -31,7 +31,7 @@ back to the matching tool and guide. Every public page belongs to exactly one to
 | Marketplace filters are useful but create unbounded URLs | Filters and sort use query parameters. Any parameter makes the page `noindex, follow` with a canonical pointing at the clean category URL. Pagination uses path URLs (`/page/2/`), is self-canonical and indexable, and pages past the last one return 404. |
 | An empty marketplace at launch would produce thin category pages | Category pages carry real buying/valuation guidance, metrics definitions and FAQs, so they're useful without inventory. **No listings are fabricated.** |
 | Blog with zero posts | `/blog/` is `noindex` and left out of sitemaps until at least one post is published. |
-| Premium gating vs crawlable methodology | Methodology, formulas, default multiples and limitations are fully public. Only per-user extras (saved reports, AI commentary, sensitivity tables) are gated. |
+| Premium gating vs crawlable methodology | Methodology, formulas, default multiples and limitations are fully public. Only per-user extras (saved reports, sensitivity tables) are gated. |
 | Signup walls | No interstitials. Detailed report requires a free account; the headline estimate never does. |
 | Seven valuation topics × (tool + guide) risks duplicate intent | Pillar guides exist only where the informational intent differs from the tool's commercial intent (website, SaaS, AI, general business valuation). App, newsletter and ecommerce valuation are covered in depth on their tool pages rather than split into near-duplicate guide pages. |
 
@@ -240,8 +240,7 @@ banned phrases and duplicate detection. Honeypot fields, rate limits and CSRF pr
 - Methodology, default multiples, adjustments, assumptions and limitations are public and versioned
   (`methodology v1.0`). The data-sources page states plainly which values are editorial assumptions
   and that no third-party dataset is licensed yet.
-- Results label every figure as **user-provided**, **platform assumption**, **calculated**, or
-  **AI-generated commentary**.
+- Results label every figure as **user-provided**, **platform assumption** or **calculated**.
 - Crawler access is configurable (`CRAWLER_POLICY`), and no named AI crawler is blocked by default.
 - Nothing hidden, no prompt-like text, no fake citations.
 
