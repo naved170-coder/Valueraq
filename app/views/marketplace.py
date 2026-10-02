@@ -69,6 +69,11 @@ def hub():
         "SELECT category, COUNT(*) n FROM listings WHERE status='published' AND is_test=0 GROUP BY category")}
     recent = _decorate(db.query("SELECT * FROM listings WHERE status='published' AND is_test=0 "
                                 "ORDER BY published_at DESC LIMIT 6"))
+    # §8: recently sold. 'sold' is a public status (marketplace.PUBLIC_STATUSES), so these
+    # pages already exist; this surfaces them. The section hides itself when empty, so it
+    # costs nothing while the marketplace is still filling.
+    sold = _decorate(db.query("SELECT * FROM listings WHERE status='sold' AND is_test=0 "
+                              "ORDER BY updated_at DESC LIMIT 3"))
     doc = content.load("hubs", "businesses-for-sale")
     meta = PageMeta(path="/businesses-for-sale/", title="Digital Businesses for Sale",
                     meta_title="Digital Businesses for Sale – Websites, SaaS, Apps & More",
@@ -77,7 +82,8 @@ def hub():
                     breadcrumbs=[("Businesses for sale", "/businesses-for-sale/")], template="hub")
     meta.schema.append(schema.collection_page(meta.path, meta.title, meta.description,
                                               [(c["name"], c["path"]) for c in catalog.CATEGORIES]))
-    return render_page("bfs_hub.html", meta, cats=catalog.CATEGORIES, counts=counts, recent=recent, doc=doc)
+    return render_page("bfs_hub.html", meta, cats=catalog.CATEGORIES, counts=counts, recent=recent,
+                       sold=sold, doc=doc)
 
 
 # ---------------------------------------------------------------- category pages
