@@ -11,6 +11,7 @@
     <div class="field"><label for="l-pw">Password</label><div class="pw-wrap"><input id="l-pw" name="password" type="password" required autocomplete="current-password"><button type="button" class="pw-toggle" data-pw-toggle="l-pw" aria-label="Show password" aria-pressed="false"></button></div></div>
     <button class="btn" type="submit">Log in</button>
   </form>
+  <p><a href="/forgot-password/">Forgot password?</a></p>
   <p>New here? <a href="/signup/{% if next %}?next={{ next|urlencode }}{% endif %}">Create a free account</a></p>
 </div>
 {% endblock %}

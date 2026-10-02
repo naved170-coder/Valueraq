@@ -55,6 +55,7 @@ class Config:
     ]
     NOINDEX_PATH_PREFIXES = PRIVATE_PATH_PREFIXES + [
         "/search/", "/login/", "/signup/", "/logout/", "/sell/", "/tools/result/",
+        "/forgot-password/", "/reset-password/",
     ]
 
     # --- App --------------------------------------------------------------
@@ -92,8 +93,18 @@ class Config:
     ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
     ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-5-5")
 
-    # --- Email (optional; in-app notifications work without it) ----------
-    SMTP_URL = os.environ.get("SMTP_URL", "")  # smtp://user:pass@host:587
+    # --- Email through Resend (optional; the site works without it) --------
+    RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
+    EMAIL_FROM = os.environ.get("EMAIL_FROM", "VALUERAQ <no-reply@valueraq.com>")
+    PASSWORD_RESET_MINUTES = 60
+
+    # --- Off-site database backups to Cloudflare R2 (optional) --------------
+    R2_ENDPOINT = os.environ.get("R2_ENDPOINT", "")
+    R2_ACCESS_KEY_ID = os.environ.get("R2_ACCESS_KEY_ID", "")
+    R2_SECRET_ACCESS_KEY = os.environ.get("R2_SECRET_ACCESS_KEY", "")
+    R2_BUCKET = os.environ.get("R2_BUCKET", "")
+    BACKUP_EVERY_HOURS = 24
+    BACKUP_KEEP = 30
 
     # --- SEO thresholds ----------------------------------------------------
     TITLE_MAX = 60
@@ -110,7 +121,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 3600
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "5")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "6")
 
 
 class TestConfig(Config):

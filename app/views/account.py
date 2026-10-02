@@ -4,7 +4,7 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import ai, analytics, auth, billing, catalog, db, marketplace as M, valuation as V
+from .. import ai, analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
 from ..views.marketplace import LISTING_FIELDS, _read_listing_form
 
 bp = Blueprint("account", __name__)
@@ -49,6 +49,7 @@ def signup():
             auth.login_user(u)
             g.user = u
             analytics.server_event("signup")
+            mailer.welcome(u)
             return redirect(_safe_next())
     return _r("account/signup.html", error=error, next=_safe_next(""))
 
@@ -67,6 +68,45 @@ def login():
             return redirect(_safe_next())
         error = "That email and password don't match an account."
     return _r("account/login.html", error=error, next=_safe_next(""))
+
+
+@bp.route("/forgot-password/", methods=["GET", "POST"])
+def forgot_password():
+    sent = False
+    if request.method == "POST":
+        if auth.rate_limited("forgot", 8, 3600):
+            return _r("account/forgot.html", sent=False,
+                      error="Too many attempts from this connection. Wait a few minutes and try again."), 429
+        email = (request.form.get("email") or "").strip().lower()
+        u = db.query("SELECT * FROM users WHERE email=?", (email,), one=True) if email else None
+        if u:
+            token = auth.create_reset_token(u)
+            if token:
+                mailer.password_reset(u, token)
+            current_app.logger.info("password reset requested for user %s (%s)", u["id"],
+                                    "sent" if token else "throttled")
+        # Same answer whether or not the account exists, so the form can't be used to find accounts.
+        sent = True
+    return _r("account/forgot.html", sent=sent, error=None)
+
+
+@bp.route("/reset-password/<token>/", methods=["GET", "POST"])
+def reset_password(token):
+    if not auth.reset_token_user(token):
+        return _r("account/reset.html", invalid=True, errors={}), 410
+    errors = {}
+    if request.method == "POST":
+        new = request.form.get("new_password") or ""
+        confirm = request.form.get("confirm_password") or ""
+        if len(new) < 10:
+            errors["new_password"] = "Use at least 10 characters."
+        elif new != confirm:
+            errors["confirm_password"] = "The two passwords don't match."
+        if not errors and auth.reset_password(token, new):
+            session.clear()
+            flash("Your password has been changed. Log in with your new password.", "ok")
+            return redirect(url_for("account.login"))
+    return _r("account/reset.html", invalid=False, errors=errors), (422 if errors else 200)
 
 
 @bp.post("/logout/")
@@ -287,6 +327,7 @@ def listing_status(lid):
         flash("Listing withdrawn.", "ok")
     elif action == "submit" and l["status"] == "draft":
         M.set_status(lid, "pending", by=f"user:{g.user['id']}")
+        mailer.admin_new_listing(l["title"], l["category"], g.user["email"])
     return redirect(url_for("account.listings"))
 
 

@@ -263,7 +263,14 @@ def listing_action(lid):
     note = request.form.get("note") or None
     if action in ("published", "rejected", "suspended", "removed", "pending"):
         rep = request.form.get("replacement_id")
-        M.set_status(lid, action, by=_who(), note=note, replacement_id=int(rep) if rep and rep.isdigit() else None)
+        before = db.query("SELECT status FROM listings WHERE id=?", (lid,), one=True)
+        l = M.set_status(lid, action, by=_who(), note=note, replacement_id=int(rep) if rep and rep.isdigit() else None)
+        if l and before and before["status"] != action and action in ("published", "rejected"):
+            seller = db.query("SELECT email FROM users WHERE id=?", (l["seller_id"],), one=True)
+            if seller:
+                from .. import mailer
+                mailer.listing_decision(seller["email"], l["title"], action, note,
+                                        current_app.config["SITE_URL"] + M.listing_path(l))
     elif action == "verify":
         v = request.form.get("verification")
         if v in ("unverified", "revenue_verified", "traffic_verified", "fully_verified"):
@@ -416,3 +423,57 @@ def users():
 def messages():
     rows = db.query("SELECT * FROM contact_messages ORDER BY created_at DESC LIMIT 300")
     return render_template("admin/messages.html", rows=rows, section="messages")
+
+
+# ---------------------------------------------------------------- backups and email status
+@bp.get("/backups/")
+@auth.admin_required
+def backups():
+    from .. import backup, mailer
+    rows = db.query("SELECT * FROM backups ORDER BY created_at DESC LIMIT 60")
+    return render_template("admin/backups.html", rows=rows, section="backups", configured=backup.configured(),
+                           last=backup.last_ok(), keep=current_app.config["BACKUP_KEEP"],
+                           every=current_app.config["BACKUP_EVERY_HOURS"], email_on=mailer.enabled(),
+                           email_from=current_app.config["EMAIL_FROM"])
+
+
+@bp.post("/backups/run/")
+@auth.admin_required
+def backups_run():
+    from .. import backup
+    row = backup.run("manual")
+    if row["status"] == "ok":
+        flash(f"Backup saved ({row['bytes'] // 1024 or 1} KB).", "ok")
+    else:
+        flash(f"Backup failed: {row['error']}", "error")
+    return redirect(url_for("admin.backups"))
+
+
+@bp.get("/backups/<int:bid>/download/")
+@auth.admin_required
+def backups_download(bid):
+    from .. import backup
+    from ..storage import StorageError
+    row = db.query("SELECT * FROM backups WHERE id=? AND status='ok'", (bid,), one=True)
+    if not row:
+        abort(404)
+    try:
+        data = backup.client().get(row["object_key"])
+    except StorageError as e:
+        flash(f"Couldn't download that backup: {e}", "error")
+        return redirect(url_for("admin.backups"))
+    resp = current_app.response_class(data, mimetype="application/gzip")
+    resp.headers["Content-Disposition"] = f'attachment; filename="{row["object_key"].rsplit("/", 1)[-1]}"'
+    resp.headers["Cache-Control"] = "no-store"
+    return resp
+
+
+@bp.post("/email-test/")
+@auth.admin_required
+def email_test():
+    from .. import mailer
+    ok = mailer.send(g.user["email"], f"Test email from {current_app.config['BRAND']}",
+                     "This is a test email. If you can read it, the website can send email.")
+    flash(f"Test email sent to {g.user['email']}. Check your inbox (and spam folder) in a minute." if ok
+          else "Email isn't switched on yet: RESEND_API_KEY is missing.", "ok" if ok else "error")
+    return redirect(url_for("admin.backups"))

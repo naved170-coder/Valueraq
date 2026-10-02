@@ -59,6 +59,12 @@ def human_date(v):
     return d.strftime("%B %-d, %Y")
 
 
+def datetime_utc(v):
+    if not v:
+        return ""
+    return datetime.datetime.fromtimestamp(v, datetime.timezone.utc).strftime("%b %-d, %Y %H:%M")
+
+
 def mult(v):
     if v is None:
         return "—"
@@ -68,7 +74,7 @@ def mult(v):
 def register(app):
     import json as _json
     app.jinja_env.filters['fromjson'] = _json.loads
-    app.jinja_env.filters.update(money=money, num=num, pct=pct, effect=effect, human_date=human_date, mult=mult)
+    app.jinja_env.filters.update(money=money, num=num, pct=pct, effect=effect, human_date=human_date, mult=mult, datetime_utc=datetime_utc)
 
     @app.context_processor
     def _ctx():

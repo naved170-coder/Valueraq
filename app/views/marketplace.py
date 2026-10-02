@@ -3,7 +3,7 @@ import math
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import analytics, auth, catalog, content, db, linkgraph, marketplace as M, schema
+from .. import analytics, auth, catalog, content, db, linkgraph, mailer, marketplace as M, schema
 from ..seo import PageMeta, abs_url, iso
 from . import render_page
 
@@ -253,6 +253,9 @@ def inquire(cat, slug_id):
         db.execute("INSERT INTO inquiries(listing_id, buyer_id, message, created_at) VALUES (?,?,?,?)",
                    (l["id"], g.user["id"], msg[:4000], db.now()))
         analytics.server_event("listing_inquiry", {"listing": l["id"]})
+        seller = db.query("SELECT email FROM users WHERE id=?", (l["seller_id"],), one=True)
+        if seller:
+            mailer.inquiry_to_seller(seller["email"], l["title"], g.user["email"], msg[:4000])
         flash("Inquiry sent. The seller will see it in their account.", "ok")
     return redirect(M.listing_path(l))
 
@@ -330,6 +333,7 @@ def sell():
                 analytics.server_event("seller_registration")
             analytics.server_event("listing_created", {"listing": lid, "category": data["category"]})
             l = M.refresh(lid)
+            mailer.admin_new_listing(data["title"], data["category"], g.user["email"])
             flash("Listing submitted for review. We check every listing before it goes live, usually within two "
                   "business days.", "ok")
             if l["quality_flags"]:

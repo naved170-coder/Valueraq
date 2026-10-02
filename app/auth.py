@@ -77,6 +77,43 @@ def change_password(u, new_password):
     session["csrf"] = secrets.token_urlsafe(24)
 
 
+def _reset_hash(token):
+    import hashlib
+    return hashlib.sha256(token.encode()).hexdigest()
+
+
+def create_reset_token(u):
+    """Returns a one-time token to email, or None if this account asked too often."""
+    recent = db.query("SELECT COUNT(*) n FROM password_resets WHERE user_id=? AND created_at>?",
+                      (u["id"], db.now() - 3600), one=True)["n"]
+    if recent >= 3:
+        return None
+    token = secrets.token_hex(24)  # lowercase hex survives the lowercase-URL redirect
+    minutes = current_app.config["PASSWORD_RESET_MINUTES"]
+    db.execute("INSERT INTO password_resets(token_hash, user_id, created_at, expires_at) VALUES (?,?,?,?)",
+               (_reset_hash(token), u["id"], db.now(), db.now() + minutes * 60))
+    return token
+
+
+def reset_token_user(token):
+    """The user a valid, unused, unexpired token belongs to, else None."""
+    r = db.query("SELECT * FROM password_resets WHERE token_hash=? AND used_at IS NULL AND expires_at>?",
+                 (_reset_hash(token or ""), db.now()), one=True)
+    return db.query("SELECT * FROM users WHERE id=?", (r["user_id"],), one=True) if r else None
+
+
+def reset_password(token, new_password):
+    """Set the password from a reset link. Every reset link for the account stops working
+    and every signed-in device is signed out."""
+    u = reset_token_user(token)
+    if not u:
+        return False
+    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1 WHERE id=?",
+               (generate_password_hash(new_password), u["id"]))
+    db.execute("UPDATE password_resets SET used_at=? WHERE user_id=? AND used_at IS NULL", (db.now(), u["id"]))
+    return True
+
+
 def start_trial(u):
     if u["trial_used"]:
         return False

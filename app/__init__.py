@@ -42,6 +42,9 @@ def create_app(config_object=Config, **overrides):
     db.init_db(app)
     app.teardown_appcontext(db.close_db)
 
+    from . import backup
+    backup.start_scheduler(app)
+
     from . import filters
     filters.register(app)
 

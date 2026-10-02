@@ -34,6 +34,16 @@ services:
         sync: false
       - key: STRIPE_PRICE_FEATURED_LISTING
         sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: R2_ENDPOINT
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_BUCKET
+        sync: false
       - key: ANTHROPIC_API_KEY
         sync: false
       - key: GOOGLE_SITE_VERIFICATION

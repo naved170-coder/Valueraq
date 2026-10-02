@@ -578,6 +578,167 @@ class ChangePassword(Base):
             self.assertIsNotNone(auth.verify("user@example.com", "new-password-99"))
 
 
+
+class Emails(Base):
+    def outbox(self):
+        return self.app.extensions.setdefault("outbox", [])
+
+    def test_welcome_inquiry_contact_and_listing_emails(self):
+        self.signup("seller@example.com")
+        self.assertEqual(self.outbox()[-1]["subject"], "Welcome to VALUERAQ")
+        lst = self.make_listing()
+        self.logout()
+        self.signup("buyer@example.com")
+        path = M.listing_path(lst)
+        self.client.post(path + "inquire/", data=dict(csrf=self.csrf(), message="I'd like to see the last 12 months of revenue, please."))
+        m = self.outbox()[-1]
+        self.assertEqual(m["to"], ["seller@example.com"])
+        self.assertEqual(m["reply_to"], "buyer@example.com")
+        self.assertIn("last 12 months", m["text"])
+        self.assertNotIn("don\'t reply", m["html"])
+        self.client.post("/contact/", data=dict(csrf=self.csrf(), name="Ann", email="ann@example.com", topic="Help",
+                                                message="Please tell me how featured listings work."))
+        m = self.outbox()[-1]
+        self.assertEqual(m["to"], ["admin@example.com"])
+        self.assertEqual(m["reply_to"], "ann@example.com")
+        with self.app.app_context():
+            from app import mailer
+            mailer.listing_decision("seller@example.com", "My SaaS", "rejected", "Add 12 months of revenue.", "https://x/")
+        self.assertIn("Add 12 months of revenue.", self.outbox()[-1]["text"])
+
+    def test_email_without_key_never_breaks_the_page(self):
+        self.app.config["TESTING"] = False  # real code path, no API key
+        try:
+            with self.app.test_request_context():
+                from app import mailer
+                self.assertFalse(mailer.send("a@example.com", "Hi", "Body"))
+        finally:
+            self.app.config["TESTING"] = True
+
+
+class ForgotPassword(Base):
+    def test_reset_flow(self):
+        self.signup()
+        self.logout()
+        box = self.app.extensions.setdefault("outbox", [])
+        self.assertIn("Forgot password?", self.client.get("/login/").get_data(as_text=True))
+        # unknown address: same answer, no email
+        n = len(box)
+        r = self.client.post("/forgot-password/", data=dict(csrf=self.csrf(), email="nobody@example.com"))
+        self.assertIn("If that email has an account", r.get_data(as_text=True))
+        self.assertEqual(len(box), n)
+        r = self.client.post("/forgot-password/", data=dict(csrf=self.csrf(), email="User@Example.com"))
+        self.assertIn("If that email has an account", r.get_data(as_text=True))
+        link = re.search(r"/reset-password/([0-9a-f]+)/", box[-1]["text"])
+        self.assertTrue(link)
+        url = link.group(0)
+        self.assertEqual(self.client.get(url).status_code, 200)
+        self.assertIn("noindex", self.client.get(url).get_data(as_text=True))
+        short = self.client.post(url, data=dict(csrf=self.csrf(), new_password="short", confirm_password="short"))
+        self.assertEqual(short.status_code, 422)
+        ok = self.client.post(url, data=dict(csrf=self.csrf(), new_password="brand-new-pass-9", confirm_password="brand-new-pass-9"))
+        self.assertEqual(ok.status_code, 302)
+        self.assertEqual(self.client.get(url).status_code, 410)  # link works once
+        with self.app.app_context():
+            from app import auth
+            self.assertIsNone(auth.verify("user@example.com", "correct-horse-1"))
+            self.assertIsNotNone(auth.verify("user@example.com", "brand-new-pass-9"))
+            self.assertIsNone(db.query("SELECT 1 FROM password_resets WHERE token_hash=?", (link.group(1),), one=True))
+
+    def test_expired_and_throttled(self):
+        self.signup()
+        with self.app.app_context():
+            from app import auth
+            u = db.query("SELECT * FROM users", one=True)
+            t = auth.create_reset_token(u)
+            db.execute("UPDATE password_resets SET expires_at=?", (db.now() - 1,))
+            self.assertIsNone(auth.reset_token_user(t))
+            auth.create_reset_token(u), auth.create_reset_token(u)
+            self.assertIsNone(auth.create_reset_token(u))  # 3 per hour per account
+        self.assertEqual(self.client.get("/reset-password/" + t + "/").status_code, 410)
+
+
+class FakeStore:
+    def __init__(self):
+        self.objects = {}
+
+    def put(self, key, data, content_type=None):
+        self.objects[key] = data
+
+    def get(self, key):
+        return self.objects[key]
+
+    def delete(self, key):
+        del self.objects[key]
+
+    def list(self, prefix=""):
+        return [(k, len(v), "") for k, v in sorted(self.objects.items()) if k.startswith(prefix)]
+
+
+class Backups(Base):
+    def test_signing_matches_aws_published_examples(self):
+        from app.storage import EMPTY_SHA, sign
+        ak, sk, d, host = "AKIAIOSFODNN7EXAMPLE", "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY", "20130524T000000Z", "examplebucket.s3.amazonaws.com"
+        self.assertTrue(sign("GET", host, "/test.txt", {}, {"Range": "bytes=0-9"}, EMPTY_SHA, ak, sk, "us-east-1", d)
+                        .endswith("f0e8bdb87c964420e857bd35b5d6ed310bd44f0170aba48dd91039c6036bdb41"))
+        self.assertTrue(sign("GET", host, "/", {"max-keys": "2", "prefix": "J"}, {}, EMPTY_SHA, ak, sk, "us-east-1", d)
+                        .endswith("34b48302e7b5fa45bde8084f4b7868a86f0a534bc59db6670ed5711ef69dc6f7"))
+        ph = hashlib.sha256(b"Welcome to Amazon S3.").hexdigest()
+        self.assertTrue(sign("PUT", host, "/test%24file.text", {}, {"Date": "Fri, 24 May 2013 00:00:00 GMT",
+                             "x-amz-storage-class": "REDUCED_REDUNDANCY"}, ph, ak, sk, "us-east-1", d)
+                        .endswith("98ad721746da40c64f1a55b78f14c238d841ea1380cd77a1b5971af0ece108bd"))
+
+    def test_backup_restores_to_identical_data_and_prunes(self):
+        import gzip
+        import sqlite3
+        from app import backup
+        self.signup()
+        self.make_listing()
+        store = FakeStore()
+        self.app.config["BACKUP_KEEP"] = 2
+        with self.app.app_context():
+            self.assertTrue(backup.due())
+            row = backup.run("manual", store=store)
+            self.assertEqual(row["status"], "ok", row)
+            self.assertFalse(backup.due())
+            restored = os.path.join(self.tmp, "restored.db")
+            with open(restored, "wb") as fh:
+                fh.write(gzip.decompress(store.objects[row["object_key"]]))
+            conn = sqlite3.connect(restored)
+            self.assertEqual(conn.execute("PRAGMA integrity_check").fetchone()[0], "ok")
+            self.assertEqual(conn.execute("SELECT email FROM users").fetchone()[0], "user@example.com")
+            self.assertEqual(conn.execute("SELECT COUNT(*) FROM listings").fetchone()[0], 1)
+            store.objects["backups/valueraq-20200101-000000.db.gz"] = b"old"
+            store.objects["backups/valueraq-20200102-000000.db.gz"] = b"old"
+            backup.prune(store)
+            self.assertEqual(len(store.objects), 2)
+            self.assertIn(row["object_key"], store.objects)
+
+    def test_failure_is_recorded_not_raised_and_one_worker_claims(self):
+        from app import backup
+
+        class Broken(FakeStore):
+            def put(self, *a, **k):
+                raise RuntimeError("storage down")
+        with self.app.app_context():
+            row = backup.run("scheduled", store=Broken())
+            self.assertEqual(row["status"], "failed")
+            self.assertIn("storage down", db.query("SELECT error FROM backups", one=True)["error"])
+            self.assertTrue(backup.due())
+            self.assertTrue(backup._claim("2026100211"))
+            self.assertFalse(backup._claim("2026100211"))
+            self.assertIsNone(backup.tick())  # storage not configured in tests
+
+    def test_admin_backups_page_requires_admin(self):
+        self.signup()
+        self.assertEqual(self.client.get("/admin/backups/").status_code, 404)
+        self.logout()
+        self.signup("admin@example.com")
+        html = self.client.get("/admin/backups/").get_data(as_text=True)
+        self.assertIn("Backups are off", html)
+        self.assertIn("Send me a test email", html)
+
+
 # ---------------------------------------------------------------- admin
 class Admin(Base):
     def login_admin(self):

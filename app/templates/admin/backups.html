@@ -1,0 +1,42 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Backups &amp; email</h1>
+
+<section class="section">
+  <h2 class="section-title">Database backups</h2>
+  {% if not configured %}
+  <p class="alert bad">Backups are off: the file storage settings (R2_ENDPOINT, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET) are missing.</p>
+  {% elif last %}
+  <p class="alert good">✓ Last successful backup: <b>{{ last.created_at|human_date }}</b> ({{ (last.bytes / 1024)|round(1) }} KB). A new one is taken automatically every {{ every }} hours; the newest {{ keep }} are kept.</p>
+  {% else %}
+  <p class="alert">No backup yet. The first automatic backup runs within a few minutes of the site starting. You can also take one now.</p>
+  {% endif %}
+  <form method="post" action="/admin/backups/run/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn" type="submit" {% if not configured %}disabled{% endif %}>Back up now</button></form>
+  <div class="table-wrap mt">
+  <table>
+    <thead><tr><th>Date (UTC)</th><th>Type</th><th>Result</th><th class="r">Size</th><th>File</th><th></th></tr></thead>
+    <tbody>
+    {% for b in rows %}
+      <tr><td>{{ b.created_at|datetime_utc }}</td><td>{{ b.kind|capitalize }}</td>
+      <td>{% if b.status == 'ok' %}<span class="tag good">Saved</span>{% elif b.status == 'pruned' %}<span class="tag">Removed (older than newest {{ keep }})</span>{% else %}<span class="tag bad">Failed</span> {{ b.error }}{% endif %}</td>
+      <td class="r num">{% if b.bytes %}{{ (b.bytes / 1024)|round(1) }} KB{% endif %}</td>
+      <td class="mono">{{ b.object_key.rsplit('/', 1)[-1] }}</td>
+      <td>{% if b.status == 'ok' %}<a href="/admin/backups/{{ b.id }}/download/">Download</a>{% endif %}</td></tr>
+    {% else %}<tr><td colspan="6">No backups recorded yet.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="hint">Backups are stored privately in Cloudflare R2. A downloaded backup contains every account and listing, so keep it somewhere safe.</p>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Email</h2>
+  {% if email_on %}
+  <p class="alert good">✓ Email is switched on. Messages are sent from <b>{{ email_from }}</b>.</p>
+  {% else %}
+  <p class="alert bad">Email is off: RESEND_API_KEY is missing.</p>
+  {% endif %}
+  <form method="post" action="/admin/email-test/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn quiet" type="submit">Send me a test email</button></form>
+  <p class="hint mt">The website emails: welcome, forgot password, new buyer inquiry (to the seller), listing approved or needs changes (to the seller), and new listing or contact message (to admins).</p>
+</section>
+{% endblock %}

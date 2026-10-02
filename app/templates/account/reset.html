@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Choose a new password | {{ BRAND }}{% endblock %}
+{% macro pw(id, name, label, errs, hint=None) %}
+<div class="field{% if errs.get(name) %} error{% endif %}">
+  <label for="{{ id }}">{{ label }}</label>
+  <div class="pw-wrap"><input id="{{ id }}" name="{{ name }}" type="password" required autocomplete="new-password"{% if errs.get(name) %} aria-invalid="true" aria-describedby="e-{{ id }}"{% endif %}><button type="button" class="pw-toggle" data-pw-toggle="{{ id }}" aria-label="Show password" aria-pressed="false"></button></div>
+  {% if hint %}<p class="hint">{{ hint }}</p>{% endif %}
+  {% if errs.get(name) %}<p class="err" id="e-{{ id }}">{{ errs[name] }}</p>{% endif %}
+</div>
+{% endmacro %}
+{% block main %}
+<div class="wrap page-head narrow">
+  {% if invalid %}
+  <h1>This link has expired</h1>
+  <p class="lede">Password reset links work once and expire after 1 hour.</p>
+  <p><a class="btn" href="/forgot-password/">Send a new link</a></p>
+  {% else %}
+  <h1>Choose a new password</h1>
+  <form method="post" class="stack">
+    <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+    {{ pw("n-pw", "new_password", "New password", errors, "At least 10 characters.") }}
+    {{ pw("r-pw", "confirm_password", "Confirm new password", errors) }}
+    <button class="btn" type="submit">Change password</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

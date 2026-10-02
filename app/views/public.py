@@ -347,6 +347,9 @@ def contact():
         else:
             db.execute("INSERT INTO contact_messages(name, email, topic, message, created_at) VALUES (?,?,?,?,?)",
                        (request.form.get("name"), email, request.form.get("topic"), msg[:5000], db.now()))
+            from .. import mailer
+            mailer.admin_contact_message((request.form.get("name") or "")[:80], email[:200],
+                                         (request.form.get("topic") or "")[:80], msg[:5000])
             sent = True
     html, status = _static_page("contact", "contact.html", sent=sent)
     return html, status

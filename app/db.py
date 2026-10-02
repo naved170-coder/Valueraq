@@ -221,6 +221,29 @@ CREATE TABLE IF NOT EXISTS contact_messages (
     created_at INTEGER NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS password_resets (
+    token_hash TEXT PRIMARY KEY,           -- SHA-256 of the emailed token; the token itself is never stored
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    created_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL,
+    used_at INTEGER
+);
+CREATE INDEX IF NOT EXISTS idx_password_resets_user ON password_resets(user_id, created_at);
+
+CREATE TABLE IF NOT EXISTS backups (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    object_key TEXT NOT NULL,
+    kind TEXT NOT NULL,                     -- scheduled | manual
+    status TEXT NOT NULL,                   -- ok | failed | pruned
+    bytes INTEGER NOT NULL DEFAULT 0,
+    db_bytes INTEGER NOT NULL DEFAULT 0,
+    error TEXT,
+    created_at INTEGER NOT NULL,
+    finished_at INTEGER
+);
+CREATE INDEX IF NOT EXISTS idx_backups_created ON backups(created_at);
+CREATE TABLE IF NOT EXISTS backup_claims (slot TEXT PRIMARY KEY, claimed_at INTEGER NOT NULL);
+
 CREATE TABLE IF NOT EXISTS seo_audit_runs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     started_at INTEGER NOT NULL,

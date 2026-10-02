@@ -47,6 +47,23 @@ Run `python manage.py expire-featured` once a day (for example as a Render cron 
 
 Until keys are set, payment buttons say payments aren't available, and admins can grant Pro manually at `/admin/users/`.
 
+## Email (Resend)
+
+Set `RESEND_API_KEY` (and optionally `EMAIL_FROM`, default `VALUERAQ <no-reply@valueraq.com>`; the domain must be verified in Resend). The site then sends: welcome, forgot password, buyer inquiry to the seller, listing approved / needs changes, and new listing or contact message to the admins in `ADMIN_EMAILS`. Email never blocks a page: it is sent on a background thread and failures are only logged. `/admin/backups/` has a "Send me a test email" button.
+
+## Backups (Cloudflare R2)
+
+Set `R2_ENDPOINT`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` and `R2_BUCKET` (a private bucket; token with Object Read & Write on that bucket only). The web service then uploads a compressed, integrity-checked snapshot of the database to `backups/` every 24 hours and keeps the newest 30. Status, "Back up now" and downloads are at `/admin/backups/`.
+
+To restore, open the Render **Shell** for the web service and run:
+
+```bash
+python manage.py restore-backup backups/valueraq-YYYYMMDD-HHMMSS.db.gz          # downloads and verifies only
+python manage.py restore-backup backups/valueraq-YYYYMMDD-HHMMSS.db.gz --apply  # replaces the live database
+```
+
+`--apply` keeps the previous database as `valueraq.db.before-restore`. Restart the service afterwards.
+
 ## Decisions for the owner before launch
 
 - **Prices:** Pro $29/month or $290/year, featured listing $39/month or $390/year per listing, and 3 free saved reports are placeholders in `app/config.py`.

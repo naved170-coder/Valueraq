@@ -54,6 +54,37 @@ def main(argv):
             for i in summary["site_issues"]:
                 print(f"  [{i['severity']}] site: {i['message']}")
             return 1 if summary["critical"] else 0
+        if cmd == "backup":
+            from app import backup
+            row = backup.run("manual")
+            print(row["status"], row["object_key"], row.get("error") or f'{row["bytes"]} bytes')
+            return 0 if row["status"] == "ok" else 1
+        if cmd == "restore-backup":
+            # python manage.py restore-backup backups/valueraq-YYYYMMDD-HHMMSS.db.gz [--apply]
+            import shutil
+            import sqlite3
+            from app import backup
+            raw = backup.fetch(argv[1])
+            target = app.config["DATABASE_PATH"]
+            staged = target + ".restore"
+            with open(staged, "wb") as fh:
+                fh.write(raw)
+            ok = sqlite3.connect(staged).execute("PRAGMA integrity_check").fetchone()[0]
+            if ok != "ok":
+                print("Downloaded backup failed its integrity check:", ok)
+                return 1
+            print(f"Backup downloaded and verified: {staged} ({len(raw)} bytes)")
+            if "--apply" not in argv:
+                print("Nothing was changed. Re-run with --apply to replace the live database with it.")
+                return 0
+            shutil.copy2(target, target + ".before-restore")
+            for ext in ("-wal", "-shm"):
+                if os.path.exists(target + ext):
+                    os.remove(target + ext)
+            os.replace(staged, target)
+            print("Live database replaced. The previous one is saved as", target + ".before-restore",
+                  "- restart the web service now.")
+            return 0
         if cmd == "expire-featured":
             from app import billing
             billing.expire_featured()
