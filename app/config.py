@@ -120,7 +120,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 3600
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "7")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "9")
 
 
 class TestConfig(Config):
