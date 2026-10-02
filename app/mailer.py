@@ -266,4 +266,4 @@ def login_code(to, code, purpose="login"):
             f'<p style="font:700 28px/1.2 monospace;letter-spacing:4px;margin:16px 0">{_html.escape(code)}</p>'
             f"<p>It works for {minutes} minutes. If you didn't ask for this, someone may know your password: "
             "change it in Account &gt; Settings.</p>")
-    return send(to, f"Your login code: {code}", text, html)
+    return send(to, f"Your {current_app.config['BRAND']} login code", text, html)  # the code stays out of the subject, which is logged
