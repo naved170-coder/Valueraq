@@ -1,4 +1,6 @@
 """Accounts, sessions, CSRF, rate limiting and spam traps."""
+import hashlib
+import hmac
 import secrets
 import time
 from collections import defaultdict, deque
@@ -198,4 +200,43 @@ def honeypot_tripped():
             return True
     except ValueError:
         return True
+    return False
+
+
+# ---------------------------------------------------------------- two-step login (emailed codes)
+def twofa_active(u):
+    """Two-step login applies to admins who switched it on (and only while ADMIN_2FA is not disabled)."""
+    return bool(current_app.config.get("ADMIN_2FA", True) and u["role"] == "admin" and u["twofa_enabled"])
+
+
+def _code_hash(code):
+    return hashlib.sha256((str(current_app.config["SECRET_KEY"]) + ":code:" + code).encode()).hexdigest()
+
+
+def issue_code(u, purpose):
+    """Create a six-digit code valid for a few minutes. Returns None if too many were requested."""
+    now = db.now()
+    recent = db.query("SELECT COUNT(*) n FROM login_codes WHERE user_id=? AND created_at>?", (u["id"], now - 900),
+                      one=True)["n"]
+    if recent >= 5:
+        return None
+    code = f"{secrets.randbelow(10 ** 6):06d}"
+    db.execute("DELETE FROM login_codes WHERE user_id=? AND purpose=? AND created_at<=?", (u["id"], purpose, now - 900))
+    db.execute("UPDATE login_codes SET expires_at=0 WHERE user_id=? AND purpose=?", (u["id"], purpose))  # only the newest works
+    db.execute("INSERT INTO login_codes(user_id, purpose, code_hash, created_at, expires_at) VALUES (?,?,?,?,?)",
+               (u["id"], purpose, _code_hash(code), now, now + current_app.config["LOGIN_CODE_MINUTES"] * 60))
+    return code
+
+
+def check_code(u, purpose, code):
+    """True once for the right, unexpired code. Five wrong tries cancel the code."""
+    code = "".join(ch for ch in (code or "") if ch.isdigit())
+    row = db.query("SELECT * FROM login_codes WHERE user_id=? AND purpose=? AND expires_at>? ORDER BY id DESC LIMIT 1",
+                   (u["id"], purpose, db.now()), one=True)
+    if not row or row["attempts"] >= 5:
+        return False
+    if len(code) == 6 and hmac.compare_digest(row["code_hash"], _code_hash(code)):
+        db.execute("UPDATE login_codes SET expires_at=0 WHERE id=?", (row["id"],))
+        return True
+    db.execute("UPDATE login_codes SET attempts=attempts+1 WHERE id=?", (row["id"],))
     return False

@@ -4,7 +4,7 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import activity, analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
+from .. import activity, analytics, auth, billing, catalog, db, insights, mailer, marketplace as M, ownership, valuation as V
 from ..views.marketplace import LISTING_FIELDS, _read_listing_form
 
 bp = Blueprint("account", __name__)
@@ -64,6 +64,17 @@ def login():
             return _r("account/login.html", next=_safe_next(""),
                       error="Too many attempts from this connection. Wait a few minutes and try again."), 429
         u = auth.verify(request.form.get("email") or "", request.form.get("password") or "")
+        if u and auth.twofa_active(u):
+            code = auth.issue_code(u, "login")
+            if code:
+                mailer.login_code(u["email"], code)
+            keep = session.get("last_valuation")
+            session.clear()
+            if keep:
+                session["last_valuation"] = keep
+            session["pending_uid"], session["pending_at"], session["pending_next"] = u["id"], db.now(), _safe_next()
+            activity.record("login_code_sent", user=u)
+            return redirect(url_for("account.login_code"))
         if u:
             auth.login_user(u)
             activity.record("login", user=u)
@@ -71,6 +82,44 @@ def login():
         activity.record("login_failed", email=(request.form.get("email") or "").strip().lower())
         error = "That email and password don't match an account."
     return _r("account/login.html", error=error, next=_safe_next(""))
+
+
+def _pending_user():
+    uid, at = session.get("pending_uid"), session.get("pending_at") or 0
+    if not uid or at < db.now() - 900:
+        return None
+    return db.query("SELECT * FROM users WHERE id=?", (uid,), one=True)
+
+
+@bp.route("/login/code/", methods=["GET", "POST"])
+def login_code():
+    """Second step for admins with two-step login: the code we emailed."""
+    u = _pending_user()
+    if not u:
+        session.pop("pending_uid", None)
+        flash("Please log in again.", "error")
+        return redirect(url_for("account.login"))
+    error = None
+    if request.method == "POST":
+        if auth.rate_limited("login", 20, 900):
+            return _r("account/login_code.html", email=u["email"],
+                      error="Too many attempts from this connection. Wait a few minutes and try again."), 429
+        if request.form.get("resend"):
+            code = auth.issue_code(u, "login")
+            if code:
+                mailer.login_code(u["email"], code)
+                flash("We sent a new code. Only the newest code works.", "ok")
+            else:
+                flash("Too many codes requested. Wait 15 minutes and try again.", "error")
+            return redirect(url_for("account.login_code"))
+        if auth.check_code(u, "login", request.form.get("code")):
+            nxt = session.get("pending_next") or "/account/"
+            auth.login_user(u)
+            activity.record("login", user=u, detail="two-step")
+            return redirect(nxt if nxt.startswith("/") and not nxt.startswith("//") else "/account/")
+        activity.record("login_code_failed", user=u)
+        error = "That code isn't right or has expired. Check the newest email, or send a new code."
+    return _r("account/login_code.html", email=u["email"], error=error), (422 if error else 200)
 
 
 @bp.route("/forgot-password/", methods=["GET", "POST"])
@@ -150,6 +199,44 @@ def settings():
     return _r("account/settings.html", errors=errors), (422 if errors else 200)
 
 
+@bp.post("/account/settings/two-step/")
+@auth.login_required
+def two_step():
+    """Admins switch two-step login on by proving the emailed code arrives, so they can't lock themselves out."""
+    u = g.user
+    if u["role"] != "admin" or not current_app.config["ADMIN_2FA"]:
+        abort(404)
+    action = request.form.get("action")
+    if auth.rate_limited(f"twostep:{u['id']}", 15, 900):
+        abort(429)
+    if action == "send" and not u["twofa_enabled"]:
+        code = auth.issue_code(u, "enable")
+        if code and mailer.login_code(u["email"], code, "enable"):
+            session["twofa_setup"] = True
+            flash(f"We emailed a code to {u['email']}. Enter it below to switch two-step login on.", "ok")
+        elif code:
+            flash("Email isn't working on the website yet, so two-step login can't be switched on.", "error")
+        else:
+            flash("Too many codes requested. Wait 15 minutes and try again.", "error")
+    elif action == "confirm" and not u["twofa_enabled"]:
+        if auth.check_code(u, "enable", request.form.get("code")):
+            db.execute("UPDATE users SET twofa_enabled=1 WHERE id=?", (u["id"],))
+            session.pop("twofa_setup", None)
+            activity.record("two_step_enabled")
+            flash("Two-step login is on. From now on we email you a code each time you log in.", "ok")
+        else:
+            flash("That code isn't right or has expired. Send a new code and try again.", "error")
+    elif action == "disable" and u["twofa_enabled"]:
+        from werkzeug.security import check_password_hash
+        if check_password_hash(u["password_hash"], request.form.get("current_password") or ""):
+            db.execute("UPDATE users SET twofa_enabled=0 WHERE id=?", (u["id"],))
+            activity.record("two_step_disabled")
+            flash("Two-step login is off.", "ok")
+        else:
+            flash("That isn't your current password, so two-step login stays on.", "error")
+    return redirect(url_for("account.settings") + "#two-step")
+
+
 # ---------------------------------------------------------------- dashboard
 @bp.get("/account/")
 @auth.login_required
@@ -159,7 +246,16 @@ def home():
     listings = db.query("SELECT * FROM listings WHERE seller_id=? ORDER BY updated_at DESC LIMIT 5", (u["id"],))
     from .market_account import unread_count
     inbox = unread_count(u)
-    return _r("account/home.html", reports=reports, listings=listings, inbox=inbox,
+    n = lambda sql: db.query(sql, (u["id"],), one=True)["n"]
+    steps = [
+        dict(done=bool(reports), label="Value a business and save the report", href="/tools/", cta="Open the valuation tools"),
+        dict(done=n("SELECT (SELECT COUNT(*) FROM watchlist WHERE user_id=?1) + (SELECT COUNT(*) FROM saved_searches "
+                    "WHERE user_id=?1) n") > 0, label="Save a listing or a search to get email alerts",
+             href="/businesses-for-sale/", cta="Browse businesses for sale"),
+        dict(done=bool(listings), label="List a business for sale (free)", href="/sell/", cta="Create a listing"),
+    ]
+    return _r("account/home.html", reports=reports, listings=listings, inbox=inbox, steps=steps,
+              steps_done=sum(s["done"] for s in steps),
               tools=catalog.TOOLS, trial_days=_trial_days_left(u))
 
 
@@ -269,8 +365,12 @@ def listings():
         d["path"] = M.listing_path(r)
         d["flags"] = M.decode_flags(r["quality_flags"])
         d["inquiries"] = db.query("SELECT COUNT(*) n FROM inquiries WHERE listing_id=?", (r["id"],), one=True)["n"]
+        if r["status"] not in ("removed", "suspended", "sold"):
+            d["strength"] = insights.strength(r, ownership_verified=bool(r["ownership_verified_at"]))
+            d["price_check"] = insights.price_check(r)
+            d["own_host"] = ownership.host_of(r["website_url"])
+            d["own_code"] = ownership.code_for(r) if d["own_host"] else None
         decorated.append(d)
-    from flask import current_app
     return _r("account/listings.html", listings=decorated, billing_enabled=billing.enabled(),
               featured_plans=current_app.config["FEATURED_PLANS"],
               featured_ok=request.args.get("featured") == "success")
@@ -294,6 +394,10 @@ def listing_edit(lid):
             new_status = "pending" if l["status"] in ("published", "rejected") else l["status"]
             db.execute(f"UPDATE listings SET {sets}, status=?, updated_at=? WHERE id=?",
                        (*[data[f] for f in LISTING_FIELDS], new_status, db.now(), lid))
+            if l["ownership_verified_at"] and ownership.host_of(data["website_url"]) != l["ownership_host"]:
+                # The check was for a different website: the badge can't carry over.
+                db.execute("UPDATE listings SET ownership_verified_at=NULL, ownership_method=NULL, ownership_host=NULL "
+                           "WHERE id=?", (lid,))
             M.refresh(lid)
             flash("Changes saved. Edited listings are re-checked before they go live again.", "ok")
             return redirect(url_for("account.listings"))

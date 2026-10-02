@@ -22,7 +22,8 @@ CREATE TABLE IF NOT EXISTS users (
     is_seller INTEGER NOT NULL DEFAULT 0,
     created_at INTEGER NOT NULL,
     last_login_at INTEGER,
-    session_version INTEGER NOT NULL DEFAULT 0
+    session_version INTEGER NOT NULL DEFAULT 0,
+    twofa_enabled INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS reports (
@@ -69,6 +70,9 @@ CREATE TABLE IF NOT EXISTS listings (
     verification_requested_at INTEGER,
     verification_request_type TEXT,
     verification_request_note TEXT,
+    ownership_verified_at INTEGER,
+    ownership_method TEXT,
+    ownership_host TEXT,
     replacement_listing_id INTEGER,
     moderation_note TEXT,
     quality_score INTEGER,
@@ -234,6 +238,29 @@ CREATE TABLE IF NOT EXISTS messages (            -- replies inside an inquiry th
 );
 CREATE INDEX IF NOT EXISTS idx_messages_inquiry ON messages(inquiry_id, created_at);
 
+CREATE TABLE IF NOT EXISTS message_files (       -- files attached to a thread; the bytes live in private file storage
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    inquiry_id INTEGER NOT NULL REFERENCES inquiries(id),
+    message_id INTEGER REFERENCES messages(id),
+    uploader_id INTEGER NOT NULL REFERENCES users(id),
+    name TEXT NOT NULL,
+    bytes INTEGER NOT NULL,
+    object_key TEXT NOT NULL UNIQUE,
+    created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_message_files_inquiry ON message_files(inquiry_id);
+
+CREATE TABLE IF NOT EXISTS login_codes (         -- emailed codes for two-step login
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    purpose TEXT NOT NULL,                       -- login | enable
+    code_hash TEXT NOT NULL,
+    attempts INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_login_codes_user ON login_codes(user_id, purpose);
+
 CREATE TABLE IF NOT EXISTS watchlist (
     user_id INTEGER NOT NULL REFERENCES users(id),
     listing_id INTEGER NOT NULL REFERENCES listings(id),
@@ -385,6 +412,10 @@ MIGRATIONS = [
     ("listings", "verification_requested_at", "INTEGER"),
     ("listings", "verification_request_type", "TEXT"),
     ("listings", "verification_request_note", "TEXT"),
+    ("listings", "ownership_verified_at", "INTEGER"),
+    ("listings", "ownership_method", "TEXT"),
+    ("listings", "ownership_host", "TEXT"),
+    ("users", "twofa_enabled", "INTEGER NOT NULL DEFAULT 0"),
 ]
 
 

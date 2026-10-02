@@ -7,12 +7,22 @@
     <h1>{{ meta.h1 }}</h1>
     {% if doc and doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
   </header>
-  <div class="table-wrap">
-    <table>
-      <caption class="visually-hidden">Marketplace categories</caption>
-      <thead><tr><th>Category</th><th>What's included</th><th class="r">Live listings</th></tr></thead>
-      <tbody>{% for c in cats %}<tr><td><a href="{{ c.path }}">{{ c.name }}</a></td><td>{{ c.definition }}</td><td class="r num">{{ counts.get(c.slug, 0) }}</td></tr>{% endfor %}</tbody>
-    </table>
+  {% if not counts %}
+  <div class="empty">
+    <h2 class="h3">The marketplace is open for its first listings</h2>
+    <p>We only show real businesses submitted by their owners and reviewed by our team, so there are no placeholder listings here.</p>
+    <div class="row"><a class="btn" href="/sell/">List your business free</a><a class="btn quiet" href="#categories">Get an email when one is listed</a></div>
+  </div>
+  {% endif %}
+  <h2 id="categories" class="section-title{% if not counts %} mt{% endif %}">Browse by type</h2>
+  <div class="grid">
+    {% for c in cats %}
+    <a class="card" href="{{ c.path }}">
+      <h3>{{ c.name }}</h3>
+      <p>{{ c.definition }}</p>
+      <span class="go">{% if counts.get(c.slug) %}{{ counts[c.slug] }} live listing{{ '' if counts[c.slug] == 1 else 's' }}{% else %}No listings yet · save a search for alerts{% endif %} →</span>
+    </a>
+    {% endfor %}
   </div>
   {% if top_cats %}
   <section class="section" aria-labelledby="topcat-h">

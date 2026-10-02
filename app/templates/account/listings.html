@@ -9,11 +9,29 @@
   {% if not listings %}<p class="empty">You haven't listed a business yet. <a href="/sell/">Create your first listing</a>.</p>{% endif %}
   <div class="stack mt">
   {% for l in listings %}
-    <article class="panel">
+    <article class="panel" id="listing-{{ l.id }}">
       <div class="row"><h2 class="h3">{{ l.title }}</h2><span class="status {{ l.status }}">{{ l.status|capitalize }}</span>{% if l.is_featured %}<span class="tag good">Featured{% if l.featured_until %} until {{ l.featured_until|human_date }}{% endif %}</span>{% endif %}</div>
-      <p class="meta-line"><span>{{ l.view_count }} views</span><span>{{ l.inquiries }} message{{ '' if l.inquiries == 1 else 's' }}</span><span><a href="/account/analytics/">Analytics</a></span><span>Quality score {{ l.quality_score }}/100</span><span>{{ 'Eligible for search engines' if l.indexable else 'Not shown in search engines yet' }}</span></p>
+      <p class="meta-line"><span>{{ l.view_count }} views</span><span>{{ l.inquiries }} message{{ '' if l.inquiries == 1 else 's' }}</span><span><a href="/account/analytics/">Analytics</a></span>{% if l.strength %}<span>Listing strength <b>{{ l.strength.score }}/100</b> · {{ l.strength.label }}</span>{% endif %}<span>{{ 'Eligible for search engines' if l.indexable else 'Not shown in search engines yet' }}</span></p>
       {% if l.moderation_note %}<p class="alert">Reviewer note: {{ l.moderation_note }}</p>{% endif %}
       {% if l.flags %}<ul>{% for sev, msg in l.flags %}<li><span class="sev {{ sev }}">{{ sev }}</span> {{ msg }}</li>{% endfor %}</ul>{% endif %}
+      {% if l.strength %}
+      <div class="insight">
+        <div class="meter" role="img" aria-label="Listing strength {{ l.strength.score }} out of 100"><span style="width: {{ l.strength.score }}%"></span></div>
+        {% if l.strength.tips %}
+        <details{% if l.strength.score < 60 %} open{% endif %}><summary>{{ l.strength.tips|length }} way{{ '' if l.strength.tips|length == 1 else 's' }} to make this listing stronger</summary>
+          <ul>{% for tip in l.strength.tips %}<li>{{ tip }}</li>{% endfor %}</ul>
+          {% if l.status not in ('removed','suspended','sold') %}<p><a href="/account/listings/{{ l.id }}/edit/">Edit the listing</a></p>{% endif %}
+        </details>
+        {% else %}<p class="muted">Nothing left to improve. Buyers have everything they usually ask for.</p>{% endif %}
+        {% if l.price_check %}{% set pc = l.price_check %}
+        <p class="pricecheck {{ pc.verdict }}"><b>Price check:</b>
+          your asking price of {{ pc.ask|money(l.currency) }} is
+          {% if pc.verdict == 'within' %}inside{% elif pc.verdict == 'above' %}{{ pc.pct }}% above{% else %}{{ pc.pct }}% below{% endif %}
+          the range of {{ pc.low|money(l.currency) }} to {{ pc.high|money(l.currency) }} that our <a href="{{ pc.tool_path }}">{{ pc.tool_name }}</a> gives for your revenue, profit and age.
+          <span class="muted">The tool can give a closer range when you also enter growth, owner hours and the other questions.</span></p>
+        {% endif %}
+      </div>
+      {% endif %}
       <div class="row">
         {% if l.status in ('published','sold','pending','draft') %}<a class="btn small quiet" href="{{ l.path }}">View</a>{% endif %}
         {% if l.status not in ('removed','suspended','sold') %}<a class="btn small quiet" href="/account/listings/{{ l.id }}/edit/">Edit</a>{% endif %}
@@ -30,6 +48,28 @@
         {% endif %}
         {% if l.status not in ('removed','suspended') %}<form method="post" action="/account/listings/{{ l.id }}/status/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" name="action" value="withdraw">Withdraw</button></form>{% endif %}
       </div>
+      {% if l.status in ('published','pending','draft') %}
+      <div class="verify-box">
+        {% if l.ownership_verified_at %}
+        <p><span class="vbadge">Website ownership confirmed</span> {{ l.ownership_host }} · checked {{ l.ownership_verified_at|human_date }}. This badge is shown on your listing.</p>
+        {% elif l.own_code %}
+        <details>
+          <summary>Prove you own {{ l.own_host }} (free, automatic, takes a few minutes)</summary>
+          <p class="mt">Do <b>one</b> of these three, then press the button. Your web developer or hosting company can do it for you if you send them this box.</p>
+          <ol class="own-steps">
+            <li><b>Upload a file.</b> Create a text file named <code>valueraq-verify.txt</code> containing only the code below, and upload it so it opens at <code>https://{{ l.own_host }}/valueraq-verify.txt</code></li>
+            <li><b>Or add a meta tag</b> inside the <code>&lt;head&gt;</code> of your home page:<br><code class="block">&lt;meta name="valueraq-verify" content="{{ l.own_code }}"&gt;</code></li>
+            <li><b>Or add a DNS TXT record</b> on the domain with the value:<br><code class="block">valueraq-verify={{ l.own_code }}</code></li>
+          </ol>
+          <p>Your code: <code class="block">{{ l.own_code }}</code></p>
+          <form method="post" action="/account/listings/{{ l.id }}/ownership/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small" type="submit">Check my website now</button></form>
+          <p class="hint">You can remove the file, tag or record after the badge appears. <a href="/verification/#website-ownership">How this works</a></p>
+        </details>
+        {% else %}
+        <p class="muted">Add your website address to the listing (Edit, then Website URL) to get the free "Website ownership confirmed" badge.</p>
+        {% endif %}
+      </div>
+      {% endif %}
       {% if l.status == 'published' %}
       <div class="verify-box">
         {% if l.verification != 'unverified' %}<p><span class="vbadge">{{ verify_labels[l.verification] }}</span> This badge is shown on your listing. <a href="/verification/">What it means</a></p>{% endif %}

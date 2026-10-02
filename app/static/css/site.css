@@ -419,3 +419,34 @@ table.weeks .wbar { display: block; height: 10px; min-width: 2px; background: va
 /* Saved search control and admin error traces */
 .save-search { margin: .6rem 0 0; }
 pre.trace { background: var(--sunk); border: 1px solid var(--rule); border-radius: var(--r); padding: .7rem; overflow: auto; max-height: 320px; font: 400 .78rem/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* ---- Phase 2: insights, ownership check, attachments, two-step login, UX ---- */
+.dd-list { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; gap: .5rem; }
+.dd-list li { display: grid; grid-template-columns: 4.2rem 1fr; gap: .7rem; align-items: start; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: .7rem .8rem; }
+.dd-list p { margin: .15rem 0 0; color: var(--muted); font-size: .93rem; }
+.dd-mark { font: 600 .72rem/1 var(--f-mono); text-transform: uppercase; letter-spacing: .04em; padding: .35rem .3rem; border-radius: 3px; text-align: center; }
+.dd-risk .dd-mark { background: var(--bad-soft); color: var(--bad); }
+.dd-caution .dd-mark { background: var(--warn-soft); color: var(--warn); }
+.dd-good .dd-mark { background: var(--good-soft); color: var(--good); }
+.dd-ask { display: grid; gap: .4rem; padding-left: 1.2rem; margin: .7rem 0; }
+.insight { display: grid; gap: .6rem; margin: .4rem 0 .8rem; }
+.meter { height: 8px; background: var(--sunk); border-radius: 999px; overflow: hidden; max-width: 420px; }
+.meter span { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
+.insight ul { margin: .5rem 0; padding-left: 1.2rem; display: grid; gap: .3rem; }
+.pricecheck { font-size: .95rem; border-left: 3px solid var(--good); padding: .1rem 0 .1rem .7rem; }
+.pricecheck.above { border-left-color: var(--warn); }
+.pricecheck.below { border-left-color: var(--rule); }
+.own-steps { display: grid; gap: .6rem; padding-left: 1.2rem; }
+code.block { display: inline-block; max-width: 100%; overflow-wrap: anywhere; background: var(--sunk); border: 1px solid var(--rule); border-radius: 4px; padding: .3rem .5rem; margin-top: .3rem; font: 500 .85rem/1.4 var(--f-mono); user-select: all; }
+.verify-box + .verify-box { margin-top: .6rem; }
+.msg-file { margin: .4rem 0 0; font-size: .93rem; }
+.msg-file a::before { content: "\1F4CE\00a0"; }
+input.code-input { font: 600 1.4rem/1.2 var(--f-mono); letter-spacing: .3em; max-width: 12rem; text-align: center; }
+fieldset.group { border: 1px solid var(--rule); border-radius: var(--r); padding: 1rem; margin: 0; display: grid; gap: 1rem; min-width: 0; background: var(--surface); }
+fieldset.group > legend { font: 600 1rem/1.2 var(--f-display); padding: 0 .4rem; }
+.checklist { list-style: none; padding: 0; margin: .6rem 0 0; display: grid; gap: .5rem; }
+.checklist li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .6rem; align-items: start; }
+.checklist .tick { width: 1.4rem; height: 1.4rem; border: 1.5px solid var(--rule); border-radius: 50%; display: grid; place-items: center; font-size: .8rem; font-weight: 700; color: var(--accent-ink); }
+.checklist .done .tick { background: var(--accent); border-color: var(--accent); }
+.checklist .done { color: var(--muted); }
+.paths .card h3 { font-size: 1.2rem; }

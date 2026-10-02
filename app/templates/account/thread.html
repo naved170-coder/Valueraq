@@ -10,14 +10,19 @@
     {% for m in msgs %}
     <li class="msg{% if m.mine %} mine{% endif %}">
       <p class="meta-line"><span><b>{{ m.who }}</b></span><span>{{ m.created_at|datetime_utc }} UTC</span></p>
-      <p class="msg-body">{{ m.body }}</p>
+      {% if m.body %}<p class="msg-body">{{ m.body }}</p>{% endif %}
+      {% for f in m.files %}<p class="msg-file"><a href="/account/inquiries/{{ t.id }}/files/{{ f.id }}/" download>{{ f.name }}</a> <span class="muted">· {% if f.bytes < 1048576 %}{{ [1, (f.bytes / 1024)|round|int]|max }} KB{% else %}{{ (f.bytes / 1048576)|round(1) }} MB{% endif %}</span></p>{% endfor %}
     </li>
     {% endfor %}
   </ol>
-  <form method="post" class="stack mt">
+  <form method="post" class="stack mt"{% if can_attach %} enctype="multipart/form-data"{% endif %}>
     <input type="hidden" name="csrf" value="{{ csrf_token() }}">
-    <div class="field"><label for="m-body">Your reply</label><textarea id="m-body" name="message" required maxlength="4000" rows="4"></textarea>
+    <div class="field"><label for="m-body">Your reply</label><textarea id="m-body" name="message"{% if not can_attach %} required{% endif %} maxlength="4000" rows="4"></textarea>
       <p class="hint">The other person is emailed when you reply. Don't share passwords or payment details here.</p></div>
+    {% if can_attach %}
+    <div class="field"><label for="m-file">Attach a file (optional)</label><input id="m-file" name="file" type="file" accept=".pdf,.png,.jpg,.jpeg,.csv,.txt,.xlsx,.docx">
+      <p class="hint">One file per message, up to {{ max_mb }} MB: PDF, PNG, JPG, CSV, TXT, XLSX or DOCX. Only you and the other person can download it. Open files from people you don't know with care.</p></div>
+    {% endif %}
     <div><button class="btn" type="submit">Send message</button></div>
   </form>
 </div>

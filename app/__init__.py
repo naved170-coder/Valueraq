@@ -164,6 +164,11 @@ def create_app(config_object=Config, **overrides):
         g.robots_header = "noindex, follow"
         return render_template("errors/429.html"), 429
 
+    @app.errorhandler(413)
+    def _413(_e):
+        return render_template("errors/400.html", message="That upload is too big. Files can be up to "
+                               f"{app.config['ATTACH_MAX_BYTES'] // (1024 * 1024)} MB."), 413
+
     @app.errorhandler(400)
     def _400(e):
         return render_template("errors/400.html", message=getattr(e, "description", None)), 400

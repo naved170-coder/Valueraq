@@ -255,3 +255,15 @@ def admin_error_alert(error_type, message, method, path, count):
             "<p>Visitors saw the standard error page. You'll get at most one email a day about this particular problem.</p>"
             + _btn(url, "See error details"))
     return send(_admins(), f"Website error: {error_type}", text, html)
+
+
+def login_code(to, code, purpose="login"):
+    minutes = current_app.config["LOGIN_CODE_MINUTES"]
+    what = "finish logging in" if purpose == "login" else "turn on two-step login"
+    text = (f"Your {current_app.config['BRAND']} code is {code}\n\nEnter it to {what}. It works for {minutes} minutes.\n\n"
+            "If you didn't ask for this, someone may know your password: change it in Account > Settings.")
+    html = (f"<p>Enter this code to {what}:</p>"
+            f'<p style="font:700 28px/1.2 monospace;letter-spacing:4px;margin:16px 0">{_html.escape(code)}</p>'
+            f"<p>It works for {minutes} minutes. If you didn't ask for this, someone may know your password: "
+            "change it in Account &gt; Settings.</p>")
+    return send(to, f"Your login code: {code}", text, html)

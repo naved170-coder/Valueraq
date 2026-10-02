@@ -66,7 +66,11 @@ class Config:
     SESSION_COOKIE_SAMESITE = "Lax"
     SESSION_COOKIE_SECURE = _bool("SESSION_COOKIE_SECURE", True)
     PERMANENT_SESSION_LIFETIME = 60 * 60 * 24 * 30
-    MAX_CONTENT_LENGTH = 2 * 1024 * 1024
+    MAX_CONTENT_LENGTH = 6 * 1024 * 1024
+    ATTACH_MAX_BYTES = 5 * 1024 * 1024       # one file in a message thread
+    ATTACH_PER_THREAD = 20
+    ADMIN_2FA = _bool("ADMIN_2FA", True)      # emergency switch: ADMIN_2FA=0 turns two-step login off
+    LOGIN_CODE_MINUTES = 10
     TESTING = False
 
     # --- Plans & billing (placeholders — set real prices before launch) ----
@@ -120,7 +124,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "10")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "11")
 
 
 class TestConfig(Config):

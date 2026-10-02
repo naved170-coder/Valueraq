@@ -1,10 +1,13 @@
 """Buyer and seller account features: watchlist, message threads, seller analytics
 and verification requests. All private (login required, noindex)."""
 import datetime
+import secrets
 
-from flask import Blueprint, abort, flash, g, redirect, render_template, request, url_for
+from flask import Blueprint, Response, abort, current_app, flash, g, redirect, render_template, request, url_for
+from werkzeug.utils import secure_filename
 
-from .. import analytics, auth, catalog, db, mailer, marketplace as M
+from .. import activity, analytics, auth, backup, catalog, db, mailer, marketplace as M, ownership
+from ..storage import StorageError
 
 bp = Blueprint("market_account", __name__)
 
@@ -255,6 +258,67 @@ def inquiries():
     return render_template("account/inquiries.html", threads=threads)
 
 
+# File types allowed in a thread, with the bytes each must start with (None = plain text, checked separately).
+ATTACH_TYPES = {"pdf": b"%PDF", "png": b"\x89PNG", "jpg": b"\xff\xd8\xff", "jpeg": b"\xff\xd8\xff",
+                "xlsx": b"PK\x03\x04", "docx": b"PK\x03\x04", "csv": None, "txt": None}
+
+
+def _file_store():
+    """Private file storage for attachments (the same bucket as backups), or None when it isn't set up."""
+    store = current_app.extensions.get("file_store")
+    if store is None and backup.configured():
+        store = backup.client()
+    return store
+
+
+def attachments_enabled():
+    return _file_store() is not None
+
+
+def _read_upload(fs):
+    """Validate one uploaded file. Returns (name, data, error)."""
+    name = secure_filename(fs.filename or "")[:80]
+    ext = name.rsplit(".", 1)[-1].lower() if "." in name else ""
+    if ext not in ATTACH_TYPES:
+        return None, None, "That file type isn't allowed. Use PDF, PNG, JPG, CSV, TXT, XLSX or DOCX."
+    limit = current_app.config["ATTACH_MAX_BYTES"]
+    data = fs.stream.read(limit + 1)
+    if len(data) > limit:
+        return None, None, f"That file is too big. The limit is {limit // (1024 * 1024)} MB."
+    if not data:
+        return None, None, "That file is empty."
+    magic = ATTACH_TYPES[ext]
+    if magic is not None:
+        ok = data.startswith(magic)
+    else:
+        try:
+            ok = b"\x00" not in data and bool(data.decode("utf-8"))
+        except UnicodeDecodeError:
+            ok = False
+    if not ok:
+        return None, None, "That file doesn't look like the type its name says. Save it again and retry."
+    return name, data, None
+
+
+@bp.get("/account/inquiries/<int:iid>/files/<int:fid>/")
+@auth.login_required
+def thread_file(iid, fid):
+    _thread(iid)  # 404 unless the signed-in user is the buyer or the seller
+    f = db.query("SELECT * FROM message_files WHERE id=? AND inquiry_id=?", (fid, iid), one=True)
+    store = _file_store()
+    if not f or store is None:
+        abort(404)
+    try:
+        data = store.get(f["object_key"])
+    except (StorageError, KeyError):
+        flash("That file couldn't be fetched just now. Try again in a minute.", "error")
+        return redirect(url_for("market_account.thread", iid=iid))
+    # Always a download, never shown inside the site, so a file can't run as a page.
+    return Response(data, mimetype="application/octet-stream", headers={
+        "Content-Disposition": f'attachment; filename="{f["name"]}"', "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "private, no-store"})
+
+
 @bp.route("/account/inquiries/<int:iid>/", methods=["GET", "POST"])
 @auth.login_required
 def thread(iid):
@@ -265,13 +329,34 @@ def thread(iid):
         if auth.rate_limited(f"message:{uid}", 30, 3600):
             abort(429)
         body = (request.form.get("message") or "").strip()
-        if len(body) < 2:
+        fs = request.files.get("file")
+        name = data = err = None
+        store = _file_store()
+        if fs and fs.filename and store is not None:
+            name, data, err = _read_upload(fs)
+            if not err and db.query("SELECT COUNT(*) n FROM message_files WHERE inquiry_id=?", (iid,), one=True)["n"] \
+                    >= current_app.config["ATTACH_PER_THREAD"]:
+                err = "This conversation has reached its limit of files."
+            if not err:
+                key = f"attachments/{iid}/{secrets.token_hex(8)}-{name}"
+                try:
+                    store.put(key, data)
+                except StorageError:
+                    err = "The file couldn't be stored just now. Your message was not sent; please try again."
+        if err:
+            flash(err, "error")
+        elif len(body) < 2 and not data:
             flash("Write a message first.", "error")
         else:
-            db.execute("INSERT INTO messages(inquiry_id, sender_id, body, created_at) VALUES (?,?,?,?)",
-                       (iid, uid, body[:4000], db.now()))
+            mid = db.execute("INSERT INTO messages(inquiry_id, sender_id, body, created_at) VALUES (?,?,?,?)",
+                             (iid, uid, body[:4000], db.now()))
+            if data:
+                db.execute("INSERT INTO message_files(inquiry_id, message_id, uploader_id, name, bytes, object_key, "
+                           "created_at) VALUES (?,?,?,?,?,?,?)", (iid, mid, uid, name, len(data), key, db.now()))
+                activity.record("file_attached", target=f"conversation #{iid}", detail=f"{name} ({len(data)} bytes)")
             to = t["buyer_email"] if i_am_seller else t["seller_email"]
-            mailer.message_notification(to, t["title"], "the seller" if i_am_seller else "the buyer", body[:4000], iid)
+            note = (body[:4000] + ("\n\n" if body else "") + (f"[File attached: {name}]" if data else "")).strip()
+            mailer.message_notification(to, t["title"], "the seller" if i_am_seller else "the buyer", note, iid)
             analytics.server_event("message_sent", {"listing": t["lid"]})
             flash("Message sent.", "ok")
         return redirect(url_for("market_account.thread", iid=iid))
@@ -282,11 +367,16 @@ def thread(iid):
         db.execute("UPDATE inquiries SET status='read' WHERE id=?", (iid,))
     msgs = [dict(sender_id=t["buyer_id"], body=t["message"], created_at=t["created_at"])]
     msgs += [dict(m) for m in db.query("SELECT * FROM messages WHERE inquiry_id=? ORDER BY created_at, id", (iid,))]
+    files = {}
+    for f in db.query("SELECT * FROM message_files WHERE inquiry_id=? ORDER BY id", (iid,)):
+        files.setdefault(f["message_id"], []).append(f)
     for m in msgs:
+        m["files"] = files.get(m.get("id"), [])
         m["mine"] = m["sender_id"] == uid
         m["who"] = "You" if m["mine"] else ("Buyer" if m["sender_id"] == t["buyer_id"] else "Seller")
     other = (t["buyer_name"] or t["buyer_email"]) if i_am_seller else "the seller"
     return render_template("account/thread.html", t=t, msgs=msgs, i_am_seller=i_am_seller, other=other,
+                           can_attach=attachments_enabled(), max_mb=current_app.config["ATTACH_MAX_BYTES"] // (1024 * 1024),
                            listing_path=f"/marketplace/{t['category']}/{t['slug']}-{t['lid']}/")
 
 
@@ -357,3 +447,30 @@ def request_verification(lid):
         analytics.server_event("verification_requested", {"listing": lid})
         flash("Verification requested. A reviewer will email you to arrange the evidence check.", "ok")
     return redirect(url_for("account.listings"))
+
+
+# ---------------------------------------------------------------- automatic ownership check
+@bp.post("/account/listings/<int:lid>/ownership/")
+@auth.login_required
+def check_ownership(lid):
+    l = db.query("SELECT * FROM listings WHERE id=? AND seller_id=?", (lid, g.user["id"]), one=True)
+    if not l or l["status"] in ("removed", "suspended"):
+        abort(404)
+    if auth.rate_limited(f"ownership:{g.user['id']}", 12, 3600):
+        abort(429)
+    host = ownership.host_of(l["website_url"])
+    if not host:
+        flash("Add the website address to the listing first (Edit, then Website URL).", "error")
+        return redirect(url_for("account.listings"))
+    method = ownership.check(l)
+    if method:
+        db.execute("UPDATE listings SET ownership_verified_at=?, ownership_method=?, ownership_host=? WHERE id=?",
+                   (db.now(), method, host, lid))
+        activity.record("ownership_verified", target=f"listing #{lid}", detail=f"{host} via {method}")
+        analytics.server_event("ownership_verified", {"listing": lid})
+        flash(f"Ownership of {host} confirmed. The badge now shows on your listing.", "ok")
+    else:
+        activity.record("ownership_check_failed", target=f"listing #{lid}", detail=host)
+        flash(f"We couldn't find the code on {host} yet. Check it was saved exactly as shown. "
+              "A DNS record can take up to an hour to appear; a file or meta tag works straight away.", "error")
+    return redirect(url_for("account.listings") + f"#listing-{lid}")

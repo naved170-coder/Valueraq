@@ -27,5 +27,32 @@
       <p class="hint">Changing your password signs you out on every other phone or computer.</p>
     </form>
   </section>
+  {% if user.role == 'admin' and cfg.ADMIN_2FA %}
+  <section class="panel narrow mt" aria-labelledby="two-step" >
+    <h2 id="two-step" class="h3">Two-step login {% if user.twofa_enabled %}<span class="tag good">On</span>{% else %}<span class="tag">Off</span>{% endif %}</h2>
+    {% if user.twofa_enabled %}
+    <p>Each time you log in, we email a six-digit code to {{ user.email }} and ask for it after your password.</p>
+    <details><summary>Switch two-step login off</summary>
+      <form method="post" action="/account/settings/two-step/" class="stack mt">
+        <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+        <div class="field"><label for="ts-pw">Current password</label><input id="ts-pw" name="current_password" type="password" required autocomplete="current-password"></div>
+        <div><button class="btn quiet" type="submit" name="action" value="disable">Switch off</button></div>
+      </form>
+    </details>
+    {% else %}
+    <p>Protects the admin area. After your password, you enter a six-digit code that we email to {{ user.email }}. Someone who learns your password still can't get in without your email.</p>
+    <form method="post" action="/account/settings/two-step/" class="stack">
+      <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+      {% if session.get('twofa_setup') %}
+      <div class="field"><label for="ts-code">Code from the email</label><input id="ts-code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="7" class="code-input"></div>
+      <div class="row"><button class="btn" type="submit" name="action" value="confirm">Switch on</button><button class="btn quiet" type="submit" name="action" value="send">Send a new code</button></div>
+      {% else %}
+      <div><button class="btn" type="submit" name="action" value="send">Email me a code to switch it on</button></div>
+      {% endif %}
+      <p class="hint">It only switches on after you enter the code, which proves the emails reach you.</p>
+    </form>
+    {% endif %}
+  </section>
+  {% endif %}
 </div>
 {% endblock %}

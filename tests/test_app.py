@@ -4,6 +4,7 @@ Run:  python -m unittest discover -s tests -v
 """
 import hashlib
 import hmac
+import io
 import json
 import os
 import re
@@ -11,6 +12,7 @@ import sys
 import tempfile
 import time
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -993,6 +995,263 @@ class Phase2SearchHubAndLogs(Base):
             self.assertTrue(canonical(html).endswith(path))
         sm = "".join(self.client.get(p).get_data(as_text=True) for p in ("/sitemap.xml", "/sitemap-pages.xml"))
         self.assertNotIn("llms.txt", sm)
+
+
+class Phase2Insights(Base):
+    def setUp(self):
+        super().setUp()
+        self.box = self.app.extensions.setdefault("outbox", [])
+        self.signup("seller@example.com")
+
+    def login(self, email, pw="correct-horse-1"):
+        return self.client.post("/login/", data=dict(email=email, password=pw, csrf=self.csrf()))
+
+    # ---- price check, listing strength and buyer checks
+    def test_price_check_matches_the_valuation_engine(self):
+        from app import insights, valuation as V
+        l = self.make_listing(asking_price=480000)            # SaaS: $20k MRR, $12k profit, 4 years
+        with self.app.app_context():
+            pc = insights.price_check(l)
+            r = V.value_business("saas", dict(mrr=20000, monthly_profit=12000, age_years=4))
+            self.assertEqual((pc["low"], pc["high"]), (r["value"]["low"], r["value"]["high"]))
+            self.assertEqual(pc["verdict"], "within" if r["value"]["low"] <= 480000 <= r["value"]["high"] else pc["verdict"])
+            db.execute("UPDATE listings SET asking_price=? WHERE id=?", (r["value"]["high"] * 2, l["id"]))
+            l2 = db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True)
+            pc2 = insights.price_check(l2)
+            self.assertEqual((pc2["verdict"], pc2["pct"]), ("above", 100))
+            db.execute("UPDATE listings SET category='websites', monthly_profit=0 WHERE id=?", (l["id"],))
+            self.assertIsNone(insights.price_check(db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True)))
+
+    def test_listing_strength_rises_with_detail_and_shows_on_my_listings(self):
+        from app import insights
+        l = self.make_listing()
+        with self.app.app_context():
+            before = insights.strength(l)
+            db.execute("UPDATE listings SET growth_note='Up 20% year on year', assets_included='Code, domain, customers', "
+                       "reason_for_sale='Starting a new company', industry='Dental', country='United States', "
+                       "website_url='https://example.com' WHERE id=?", (l["id"],))
+            after = insights.strength(db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True))
+        self.assertGreater(after["score"], before["score"])
+        self.assertLess(len(after["tips"]), len(before["tips"]))
+        self.assertLessEqual(after["score"], 100)
+        page = self.client.get("/account/listings/").get_data(as_text=True)
+        self.assertIn("Listing strength", page)
+        self.assertIn("Price check:", page)
+        self.assertIn("Prove you own example.com", page)
+
+    def test_buyer_checks_on_listing_page(self):
+        from app import insights
+        l = self.make_listing(asking_price=3000000, age_years=0.5)
+        with self.app.app_context():
+            dd = insights.due_diligence(l)
+        titles = " | ".join(f["title"] for f in dd["flags"])
+        self.assertIn("Less than one year old", titles)
+        self.assertIn("Figures are not verified", titles)
+        self.assertEqual(dd["flags"][0]["level"], "risk")                       # risks listed first
+        self.assertTrue(any("12.5× annual recurring revenue" in f["title"] and f["level"] == "risk" for f in dd["flags"]))
+        self.assertTrue(any("billing-system export" in q for q in dd["checklist"]))
+        self.logout()
+        page = self.client.get(M.listing_path(l)).get_data(as_text=True)
+        self.assertIn("Automatic checks", page)
+        self.assertIn("not a verification and not advice", page)
+        with self.app.app_context():
+            M.set_status(l["id"], "sold", by="test")
+        self.assertNotIn("Automatic checks", self.client.get(M.listing_path(l)).get_data(as_text=True))
+
+    # ---- website ownership
+    def test_ownership_host_rules_block_private_and_odd_addresses(self):
+        from app import ownership as O
+        self.assertEqual(O.host_of("https://www.Example.com/path"), "www.example.com")
+        for bad in ("http://127.0.0.1/", "http://localhost/", "https://10.0.0.5/", "ftp://example.com/",
+                    "https://user:pw@example.com/", "https://example.com:8080/", "http://169.254.169.254/latest/",
+                    "https://[::1]/", "javascript:alert(1)", "", None):
+            self.assertIsNone(O.host_of(bad), bad)
+        with mock.patch("socket.getaddrinfo", return_value=[(2, 1, 6, "", ("10.1.2.3", 443))]):
+            self.assertFalse(O._public("intranet.example.com"))
+            self.assertIsNone(O.http_get("https://intranet.example.com/"))     # resolves to a private address
+        with mock.patch("socket.getaddrinfo", return_value=[(2, 1, 6, "", ("93.184.216.34", 443))]):
+            self.assertTrue(O._public("example.com"))
+
+    def test_ownership_check_by_file_meta_and_dns(self):
+        from app import ownership as O
+        l = self.make_listing()
+        with self.app.app_context():
+            db.execute("UPDATE listings SET website_url='https://www.example.com' WHERE id=?", (l["id"],))
+            l = db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True)
+            code = O.code_for(l)
+            none = lambda *_: None
+            self.assertIsNone(O.check(l, fetch=none, txt=lambda h: []))
+            self.assertIsNone(O.check(l, fetch=lambda u: "wrong", txt=lambda h: ["valueraq-verify=nope"]))
+            self.assertEqual(O.check(l, fetch=lambda u: code if u.endswith("/valueraq-verify.txt") else "", txt=lambda h: []), "file")
+            meta = f'<html><head><meta name="valueraq-verify" content="{code}"></head></html>'
+            self.assertEqual(O.check(l, fetch=lambda u: meta if u.endswith(".com/") else None, txt=lambda h: []), "meta")
+            self.assertIsNone(O.check(l, fetch=lambda u: f"<p>{code}</p>" if u.endswith(".com/") else None, txt=lambda h: []))
+            self.assertEqual(O.check(l, fetch=none, txt=lambda h: [f"valueraq-verify={code}"] if h == "example.com" else []), "dns")
+            other = dict(l); other["seller_id"] = 999
+            self.assertNotEqual(O.code_for(other), code)                        # codes are per seller
+
+    def test_ownership_badge_flow_and_reset_on_url_change(self):
+        from app import ownership as O
+        l = self.make_listing()
+        path = M.listing_path(l)
+        post = lambda: self.client.post(f"/account/listings/{l['id']}/ownership/", data=dict(csrf=self.csrf()))
+        post()                                                                 # no website address yet
+        with self.app.app_context():
+            self.assertIsNone(db.query("SELECT ownership_verified_at v FROM listings", one=True)["v"])
+            db.execute("UPDATE listings SET website_url='https://example.com' WHERE id=?", (l["id"],))
+        with mock.patch.object(O, "http_get", return_value=None), mock.patch.object(O, "dns_txt", return_value=[]):
+            post()
+        self.assertNotIn("Website ownership confirmed", self.client.get(path).get_data(as_text=True))
+        with self.app.app_context():
+            code = O.code_for(db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True))
+        with mock.patch.object(O, "http_get", return_value=code), mock.patch.object(O, "dns_txt", return_value=[]):
+            post()
+        self.assertIn("Website ownership confirmed", self.client.get(path).get_data(as_text=True))
+        with self.app.app_context():
+            row = db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True)
+            self.assertEqual((row["ownership_method"], row["ownership_host"]), ("file", "example.com"))
+            self.assertTrue(db.query("SELECT 1 FROM activity_log WHERE action='ownership_verified'", one=True))
+            form = {f: ("" if row[f] is None else row[f]) for f in
+                    ("category", "title", "headline", "description", "business_model", "asking_price",
+                     "monthly_revenue", "monthly_profit", "age_years")}
+        form.update(csrf=self.csrf(), website_url="https://another-site.com", confirm="1")
+        self.assertEqual(self.client.post(f"/account/listings/{l['id']}/edit/", data=form).status_code, 302)
+        with self.app.app_context():
+            self.assertIsNone(db.query("SELECT ownership_verified_at v FROM listings", one=True)["v"])
+        # someone else can't run the check on this listing
+        self.logout()
+        self.signup("other@example.com")
+        self.assertEqual(post().status_code, 404)
+
+    # ---- attachments
+    def _thread(self):
+        l = self.make_listing()
+        self.logout()
+        self.signup("buyer@example.com")
+        self.client.post(M.listing_path(l) + "inquire/", data=dict(csrf=self.csrf(), message="Could you share the last 12 months of revenue?"))
+        with self.app.app_context():
+            return db.query("SELECT id FROM inquiries", one=True)["id"]
+
+    def test_attachments_upload_download_limits_and_privacy(self):
+        iid = self._thread()
+        url = f"/account/inquiries/{iid}/"
+        self.assertNotIn('type="file"', self.client.get(url).get_data(as_text=True))   # storage not set up: no upload box
+        store = self.app.extensions["file_store"] = FakeStore()
+        self.assertIn('type="file"', self.client.get(url).get_data(as_text=True))
+        send = lambda name, data, msg="": self.client.post(url, data=dict(
+            csrf=self.csrf(), message=msg, file=(io.BytesIO(data), name)), content_type="multipart/form-data")
+        send("statement.pdf", b"%PDF-1.7 fake statement", "Here is the statement")
+        send("run.exe", b"MZ....")                                             # type not allowed
+        send("fake.pdf", b"<html>not a pdf</html>")                            # content doesn't match the name
+        send("big.txt", b"a" * (self.app.config["ATTACH_MAX_BYTES"] + 1))      # too big
+        send("notes.txt", b"plain notes")                                      # a file with no message is fine
+        with self.app.app_context():
+            files = db.query("SELECT * FROM message_files ORDER BY id")
+        self.assertEqual([f["name"] for f in files], ["statement.pdf", "notes.txt"])
+        self.assertEqual(len(store.objects), 2)
+        self.assertTrue(all(k.startswith(f"attachments/{iid}/") for k in store.objects))
+        self.assertIn("[File attached: statement.pdf]", self.box[-2]["text"])
+        page = self.client.get(url).get_data(as_text=True)
+        self.assertIn("statement.pdf", page)
+        r = self.client.get(f"{url}files/{files[0]['id']}/")
+        self.assertEqual(r.data, b"%PDF-1.7 fake statement")
+        self.assertIn("attachment", r.headers["Content-Disposition"])
+        self.assertEqual(r.headers["X-Content-Type-Options"], "nosniff")
+        self.assertEqual(r.mimetype, "application/octet-stream")
+        self.logout()
+        self.login("seller@example.com")
+        self.assertEqual(self.client.get(f"{url}files/{files[0]['id']}/").status_code, 200)   # the seller can
+        self.logout()
+        self.signup("other@example.com")
+        self.assertEqual(self.client.get(f"{url}files/{files[0]['id']}/").status_code, 404)   # nobody else
+        self.logout()
+        self.assertEqual(self.client.get(f"{url}files/{files[0]['id']}/").status_code, 302)
+
+    def test_attachment_limit_per_conversation(self):
+        iid = self._thread()
+        self.app.extensions["file_store"] = FakeStore()
+        self.app.config["ATTACH_PER_THREAD"] = 2
+        for i in range(3):
+            self.client.post(f"/account/inquiries/{iid}/", data=dict(csrf=self.csrf(), message="", file=(io.BytesIO(b"x"), f"n{i}.txt")),
+                             content_type="multipart/form-data")
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM message_files", one=True)["n"], 2)
+
+    # ---- two-step login
+    def _code(self):
+        import re
+        return re.search(r"\b(\d{6})\b", self.box[-1]["text"]).group(1)
+
+    def test_two_step_login_for_admin(self):
+        self.logout()
+        self.signup("admin@example.com")
+        page = self.client.get("/account/settings/").get_data(as_text=True)
+        self.assertIn("Two-step login", page)
+        ts = lambda **kw: self.client.post("/account/settings/two-step/", data=dict(csrf=self.csrf(), **kw))
+        ts(action="confirm", code="000000")                                    # can't switch on without a real code
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT twofa_enabled v FROM users WHERE email='admin@example.com'", one=True)["v"], 0)
+        ts(action="send")
+        ts(action="confirm", code=self._code())
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT twofa_enabled v FROM users WHERE email='admin@example.com'", one=True)["v"], 1)
+        self.logout()
+        r = self.login("admin@example.com")
+        self.assertTrue(r.headers["Location"].endswith("/login/code/"))
+        self.assertEqual(self.client.get("/admin/").status_code, 302)           # password alone isn't enough
+        self.assertEqual(self.client.post("/login/code/", data=dict(csrf=self.csrf(), code="123456")).status_code, 422)
+        good = self._code()
+        self.client.post("/login/code/", data=dict(csrf=self.csrf(), resend="1"))
+        self.assertEqual(self.client.post("/login/code/", data=dict(csrf=self.csrf(), code=good)).status_code, 422)  # old code dead
+        r = self.client.post("/login/code/", data=dict(csrf=self.csrf(), code=self._code()))
+        self.assertEqual(r.status_code, 302)
+        self.assertEqual(self.client.get("/admin/").status_code, 200)
+        ts(action="disable", current_password="wrong")
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT twofa_enabled v FROM users WHERE email='admin@example.com'", one=True)["v"], 1)
+        ts(action="disable", current_password="correct-horse-1")
+        self.logout()
+        self.assertTrue(self.login("admin@example.com").headers["Location"].endswith("/account/"))
+
+    def test_two_step_code_locks_after_five_wrong_tries_and_is_admin_only(self):
+        self.assertNotIn("Two-step login", self.client.get("/account/settings/").get_data(as_text=True))
+        self.assertEqual(self.client.post("/account/settings/two-step/", data=dict(csrf=self.csrf(), action="send")).status_code, 404)
+        self.assertEqual(self.client.get("/login/code/").status_code, 302)     # nothing pending
+        self.logout()
+        self.signup("admin@example.com")
+        with self.app.app_context():
+            db.execute("UPDATE users SET twofa_enabled=1 WHERE email='admin@example.com'")
+        self.logout()
+        self.login("admin@example.com")
+        good = self._code()
+        for _ in range(5):
+            self.client.post("/login/code/", data=dict(csrf=self.csrf(), code="000001"))
+        self.assertEqual(self.client.post("/login/code/", data=dict(csrf=self.csrf(), code=good)).status_code, 422)
+        # the emergency switch turns the second step off
+        self.app.config["ADMIN_2FA"] = False
+        self.assertTrue(self.login("admin@example.com").headers["Location"].endswith("/account/"))
+
+    # ---- UX and content
+    def test_home_paths_hub_cards_getting_started_and_new_pages(self):
+        self.logout()
+        home = self.client.get("/").get_data(as_text=True)
+        self.assertIn("What would you like to do?", home)
+        hub = self.client.get("/businesses-for-sale/").get_data(as_text=True)
+        self.assertIn("The marketplace is open for its first listings", hub)
+        self.assertIn("Browse by type", hub)
+        self.signup("new@example.com")
+        acct = self.client.get("/account/").get_data(as_text=True)
+        self.assertIn("Getting started", acct)
+        self.assertIn("0 of 3 done", acct)
+        self.client.post("/account/searches/save/", data=dict(csrf=self.csrf(), category="saas"))
+        self.assertIn("1 of 3 done", self.client.get("/account/").get_data(as_text=True))
+        self.assertIn("1. The basics", self.client.get("/sell/").get_data(as_text=True))
+        for path in ("/guides/newsletter-valuation/", "/guides/app-valuation/", "/guides/ecommerce-valuation/",
+                     "/glossary/earnout/", "/glossary/escrow/", "/glossary/asset-sale/", "/glossary/letter-of-intent/",
+                     "/glossary/seller-financing/", "/glossary/net-revenue-retention/", "/glossary/average-order-value/",
+                     "/glossary/open-rate/"):
+            self.assertEqual(self.client.get(path).status_code, 200, path)
+        self.assertIn("Website ownership", self.client.get("/verification/").get_data(as_text=True))
 
 
 class Admin(Base):

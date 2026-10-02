@@ -66,3 +66,17 @@ document.addEventListener("click", function (e) {
     x.setAttribute("aria-pressed", x === b ? "true" : "false");
   });
 });
+/* Live word count under a textarea: data-wordcount="<id of the hint>" data-wordgoal="120" */
+(function () {
+  function update(t) {
+    var out = document.getElementById(t.getAttribute("data-wordcount"));
+    if (!out) return;
+    var n = (t.value.match(/[A-Za-z0-9']+/g) || []).length;
+    var goal = parseInt(t.getAttribute("data-wordgoal"), 10) || 0;
+    out.textContent = n + " word" + (n === 1 ? "" : "s") + (goal ? (n >= goal ? " · long enough for search engines" : " · " + (goal - n) + " more to reach " + goal) : "");
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("textarea[data-wordcount]"), function (t) {
+    update(t);
+    t.addEventListener("input", function () { update(t); });
+  });
+})();

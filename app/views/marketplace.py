@@ -4,7 +4,7 @@ import math
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import analytics, auth, catalog, content, db, linkgraph, mailer, marketplace as M, schema
+from .. import analytics, auth, catalog, content, db, insights, linkgraph, mailer, marketplace as M, schema
 from ..seo import PageMeta, abs_url, iso
 from . import render_page
 
@@ -233,7 +233,8 @@ def listing(cat, slug_id):
                                  "ORDER BY published_at DESC LIMIT 3", (l["category"], l["id"])))
     resp = current_app.make_response(render_page(
         "listing.html", meta, l=l, c=c, facts=facts, desc=desc_public, tool=tool, related=rel,
-        similar=similar, is_owner=is_owner, mult=M.implied_multiples(l), saved=_is_saved(u, l["id"])))
+        similar=similar, is_owner=is_owner, mult=M.implied_multiples(l), saved=_is_saved(u, l["id"]),
+        dd=insights.due_diligence(l, bool(l["ownership_verified_at"])) if l["status"] == "published" else None))
     resp.headers["Cache-Control"] = "no-cache"  # every view reaches the app: accurate view counts, instant updates
     return resp
 
