@@ -9,7 +9,7 @@ order: 30
 answer: A revenue multiple divides a business's price by its annual revenue; a profit multiple divides it by annual profit. Profit multiples are used for most small, owner-run online businesses because they reflect what the owner keeps. Revenue multiples are used mainly for SaaS and other recurring-revenue businesses, especially when profit is being reinvested in growth.
 published: 2026-09-30
 updated: 2026-09-30
-related: /glossary/revenue-multiple/, /glossary/profit-multiple/, /calculators/business-multiple-calculator/, /guides/business-valuation/
+related: /glossary/revenue-multiple/, /glossary/profit-multiple/, /calculators/business-multiple-calculator/, /calculators/, /guides/business-valuation/
 cta: /calculators/business-multiple-calculator/
 cta_text: Turn any asking price into its revenue and profit multiples with the free Business Multiple Calculator.
 ---

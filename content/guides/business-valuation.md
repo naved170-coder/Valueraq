@@ -10,7 +10,7 @@ answer: Most small digital businesses are valued with the market-multiple method
 published: 2026-09-30
 updated: 2026-09-30
 methodology_version: 1.0
-related: /tools/, /glossary/sde/, /glossary/ebitda/, /guides/revenue-vs-profit-multiples/, /tools/app-valuation/, /tools/newsletter-valuation/, /tools/ecommerce-valuation/
+related: /tools/, /calculators/, /glossary/sde/, /glossary/ebitda/, /guides/revenue-vs-profit-multiples/, /tools/app-valuation/, /tools/newsletter-valuation/, /tools/ecommerce-valuation/
 cta: /tools/
 cta_text: Choose the valuation tool for your type of business and see the method applied to your own figures.
 ---
