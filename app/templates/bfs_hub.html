@@ -21,13 +21,20 @@
     <p class="mt"><a href="/marketplace/">See all listings</a></p>
   </section>
   {% endif %}
+  {% if sold %}
+  <section class="section" aria-labelledby="sold-h">
+    <h2 id="sold-h" class="section-title">Recently sold</h2>
+    <p class="muted">Listings whose owners have marked them sold. The figure shown is the price the business was listed at, not the price it sold for.</p>
+    <div class="listing-grid">{% for l in sold %}{{ listing_card(l, sold=true) }}{% endfor %}</div>
+  </section>
+  {% endif %}
 </div>
 <div class="wrap section">
   <div class="split">
     <article class="prose">{{ doc.html|safe if doc else '' }}</article>
     <aside class="rail">
-      <div class="panel"><h2>Selling?</h2><p class="muted">Listing is free. Every listing is reviewed before it goes live.</p><a class="btn" href="/sell/">List your business</a></div>
-      <div class="panel"><h2>Buying?</h2><p class="muted">Check any asking price with the <a href="/calculators/business-multiple-calculator/">Business Multiple Calculator</a>.</p></div>
+      <div class="panel"><h2>Selling?</h2><p class="muted">Listing is free. Every listing is reviewed before it goes live.</p><a class="btn" href="/sell/">List your business</a><p class="muted mt"><a href="/guides/selling-digital-businesses/">How to sell a digital business</a></p></div>
+      <div class="panel"><h2>Buying?</h2><p class="muted">Check any asking price with the <a href="/calculators/business-multiple-calculator/">Business Multiple Calculator</a>.</p><p class="muted"><a href="/guides/buying-digital-businesses/">How to buy a digital business</a> · <a href="/guides/digital-business-due-diligence/">Due diligence checklist</a></p></div>
     </aside>
   </div>
 </div>

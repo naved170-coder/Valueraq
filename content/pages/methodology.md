@@ -5,7 +5,7 @@ meta_description: How VALUERAQ estimates the value of websites, SaaS, AI busines
 h1: Valuation Methodology
 answer: VALUERAQ estimates a digital business's value by multiplying a base metric (annual net profit, or annual recurring revenue for SaaS and AI) by a multiple. The multiple starts from a published default range for the business type and is adjusted up or down by fixed, published rules for age, growth and risk. The result is a low, midpoint and high value.
 updated: 2026-09-30
-related: /data-sources/, /tools/, /guides/business-valuation/, /editorial-policy/
+related: /data-sources/, /tools/, /calculators/, /guides/, /guides/business-valuation/, /editorial-policy/
 ---
 
 ## Principles
