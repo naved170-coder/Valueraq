@@ -42,6 +42,10 @@ def create_app(config_object=Config, **overrides):
     db.init_db(app)
     app.teardown_appcontext(db.close_db)
 
+    if not app.debug and not app.config.get("TESTING"):
+        import logging
+        app.logger.setLevel(logging.INFO)  # so "email sent" and "backup ok" lines reach the host's logs
+
     from . import backup
     backup.start_scheduler(app)
 

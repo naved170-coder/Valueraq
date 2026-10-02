@@ -133,6 +133,13 @@ def start_scheduler(app):
 
     def loop():
         time.sleep(45)  # let the worker finish booting
+        try:
+            with app.app_context():
+                last = last_ok()
+                app.logger.info("backups: scheduler running; last successful backup: %s",
+                                f"{last['object_key']} ({last['bytes']} bytes)" if last else "none yet")
+        except Exception as e:
+            app.logger.error("backup scheduler error: %s", e)
         while True:
             try:
                 with app.app_context():
