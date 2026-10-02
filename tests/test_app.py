@@ -859,6 +859,41 @@ class MarketplaceAccountFeatures(Base):
         self.assertNotIn("Request a higher verification level", self.client.get("/account/listings/").get_data(as_text=True))
 
 
+
+class FreeLaunch(Base):
+    def setUp(self):
+        super().setUp()
+        self.app.config["FREE_LAUNCH"] = True
+
+    def test_pricing_page_is_free_with_no_prices(self):
+        html = self.client.get("/pricing/").get_data(as_text=True)
+        self.assertIn("Free while we", html)
+        for gone in ("$29", "$290", "$39", "$390", "Save 17%", "Featured listing", "free trial"):
+            self.assertNotIn(gone, html, gone)
+        self.assertIn('rel="canonical" href="https://www.valueraq.com/pricing/"', html)
+        self.assertNotIn("noindex", html)
+
+    def test_every_account_has_unlimited_reports_and_no_billing(self):
+        self.signup()
+        for _ in range(5):
+            self.client.post("/tools/result/website/", data={k: str(v) for k, v in V.EXAMPLES["website"].items()})
+            self.client.get("/account/reports/new/")
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM reports", one=True)["n"], 5)
+        home = self.client.get("/account/").get_data(as_text=True)
+        self.assertNotIn("Plan &amp; billing", home)
+        self.assertNotIn("Try Pro", home)
+        self.assertEqual(self.client.get("/account/billing/").headers["Location"], "/pricing/")
+        self.make_listing()
+        with self.app.app_context():
+            db.execute("UPDATE listings SET seller_id=(SELECT id FROM users LIMIT 1)")
+        self.assertNotIn("Feature:", self.client.get("/account/listings/").get_data(as_text=True))
+
+    def test_paid_mode_still_works_when_switched_back(self):
+        self.app.config["FREE_LAUNCH"] = False
+        self.assertIn("$390", self.client.get("/pricing/").get_data(as_text=True))
+
+
 # ---------------------------------------------------------------- admin
 class Admin(Base):
     def login_admin(self):

@@ -47,6 +47,10 @@ Run `python manage.py expire-featured` once a day (for example as a Render cron 
 
 Until keys are set, payment buttons say payments aren't available, and admins can grant Pro manually at `/admin/users/`.
 
+## Free launch mode
+
+`FREE_LAUNCH` is on by default: every account gets the Pro features, `/pricing/` shows "Free while we're in launch" (content in `content/pages/pricing-free.md`), and the plan, trial and featured-listing buttons are hidden. The Stripe code is untouched. To bring paid plans back, set `FREE_LAUNCH=0` in the environment and review the wording about pricing in `about.md`, `faq.md`, `terms.md`, `marketplace-rules.md` and `privacy.md`.
+
 ## Email (Resend)
 
 Set `RESEND_API_KEY` (and optionally `EMAIL_FROM`, default `VALUERAQ <no-reply@valueraq.com>`; the domain must be verified in Resend). The site then sends: welcome, forgot password, buyer inquiry to the seller, listing approved / needs changes, and new listing or contact message to the admins in `ADMIN_EMAILS`. Email never blocks a page: it is sent on a background thread and failures are only logged. `/admin/backups/` has a "Send me a test email" button.

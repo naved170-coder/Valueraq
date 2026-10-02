@@ -69,6 +69,12 @@ class Config:
     MAX_CONTENT_LENGTH = 2 * 1024 * 1024
     TESTING = False
 
+    # --- Launch mode -------------------------------------------------------
+    # FREE_LAUNCH=1 (default): everything is free. Every account gets the Pro features, prices
+    # and payment buttons are hidden, and /pricing/ says "Free while we're in launch".
+    # Set FREE_LAUNCH=0 to bring back the paid plans below (the payment code is untouched).
+    FREE_LAUNCH = _bool("FREE_LAUNCH", True)
+
     # --- Plans & billing (placeholders — set real prices before launch) ----
     TRIAL_DAYS = 14
     FREE_SAVED_REPORTS = 3
@@ -120,11 +126,12 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 3600
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "7")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "8")
 
 
 class TestConfig(Config):
     TESTING = True
+    FREE_LAUNCH = False  # the paid-plan tests run with plans on; free-launch tests switch it on
     SECRET_KEY = "test"
     SESSION_COOKIE_SECURE = False
     ENFORCE_CANONICAL_HOST = False

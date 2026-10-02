@@ -334,6 +334,8 @@ def listing_feature(lid):
 @auth.login_required
 def billing_page():
     from flask import current_app
+    if current_app.config["FREE_LAUNCH"]:
+        return redirect("/pricing/")
     return _r("account/billing.html", plans=current_app.config["PLANS"], enabled=billing.enabled(),
               featured_plans=current_app.config["FEATURED_PLANS"],
               trial_days=_trial_days_left(g.user), trial_ends=g.user["trial_ends_at"],
@@ -343,6 +345,9 @@ def billing_page():
 @bp.post("/account/trial/")
 @auth.login_required
 def trial():
+    if current_app.config["FREE_LAUNCH"]:
+        flash("Everything is free while we're in launch, so no trial is needed.", "ok")
+        return redirect("/account/")
     if auth.start_trial(g.user):
         analytics.server_event("trial_started")
         flash(f"Your {current_app.config['TRIAL_DAYS']}-day Pro trial has started. No card needed.", "ok")

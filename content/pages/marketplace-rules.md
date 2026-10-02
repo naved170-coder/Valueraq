@@ -4,7 +4,7 @@ meta_title: VALUERAQ Marketplace Rules – Listing Standards and Moderation
 meta_description: The rules for listing a digital business on VALUERAQ: who can list, what's not allowed, accuracy standards, how moderation works and when listings are removed.
 h1: Marketplace Rules
 answer: Only owners, or people authorised by them, may list a business on VALUERAQ. Listings must be accurate, specific and written for buyers, and every listing is reviewed before it goes live. Misleading, duplicate, spam or prohibited listings are rejected or removed.
-updated: 2026-09-30
+updated: 2026-10-02
 related: /verification/, /sell/, /guides/selling-digital-businesses/
 ---
 
@@ -41,4 +41,4 @@ We may remove or suspend a listing that breaks these rules, receives credible re
 
 ## Fees
 
-Listing is free. Optional featured placement is available for live listings; see [pricing](/pricing/). {{BRAND}} doesn't take a commission and doesn't handle payment between buyers and sellers.
+Listing is free, and there is no charge for any marketplace feature during our launch period; see [pricing](/pricing/). {{BRAND}} doesn't take a commission and doesn't handle payment between buyers and sellers.

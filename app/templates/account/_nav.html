@@ -6,7 +6,7 @@
   <a href="/account/analytics/" {% if current_path.startswith('/account/analytics') %}aria-current="page"{% endif %}>Analytics</a>
   {% set unread = unread_messages() %}
   <a href="/account/inquiries/" {% if current_path.startswith('/account/inquiries') %}aria-current="page"{% endif %}>Messages{% if unread %} <span class="count" aria-label="{{ unread }} unread">{{ unread }}</span>{% endif %}</a>
-  <a href="/account/billing/" {% if current_path.startswith('/account/billing') %}aria-current="page"{% endif %}>Plan &amp; billing</a>
+  {% if not cfg.FREE_LAUNCH %}<a href="/account/billing/" {% if current_path.startswith('/account/billing') %}aria-current="page"{% endif %}>Plan &amp; billing</a>{% endif %}
   <a href="/account/settings/" {% if current_path.startswith('/account/settings') %}aria-current="page"{% endif %}>Settings</a>
   {% if user.role == 'admin' %}<a href="/admin/">Admin</a>{% endif %}
   <form method="post" action="/logout/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" type="submit">Log out</button></form>

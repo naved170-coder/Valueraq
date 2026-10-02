@@ -20,7 +20,7 @@
         {% if l.status == 'published' %}
           <form method="post" action="/account/listings/{{ l.id }}/status/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" name="action" value="sold">Mark sold</button></form>
           {% set fm = featured_plans.featured_monthly %}{% set fy = featured_plans.featured_yearly %}
-          {% if not l.is_featured %}<form method="post" action="/account/listings/{{ l.id }}/feature/" class="feature-buy"><input type="hidden" name="csrf" value="{{ csrf_token() }}">
+          {% if cfg.FREE_LAUNCH %}{% elif not l.is_featured %}<form method="post" action="/account/listings/{{ l.id }}/feature/" class="feature-buy"><input type="hidden" name="csrf" value="{{ csrf_token() }}">
             {% set off = not billing_enabled or not fm.stripe_price_id %}
             <button class="btn small" name="plan" value="featured_monthly" {% if off %}disabled{% endif %}>Feature: ${{ fm.price_usd }}/month</button>
             <button class="btn small" name="plan" value="featured_yearly" {% if off %}disabled{% endif %}>${{ fy.price_usd }}/year <span class="save">−{{ save_pct(fm.price_usd, fy.price_usd) }}%</span></button>

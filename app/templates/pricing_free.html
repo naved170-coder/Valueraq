@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import related as related_block %}
+{% block main %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>{{ meta.h1 }}</h1>
+    {% if doc.answer %}<p class="answer">{{ doc.answer }}</p>{% endif %}
+  </header>
+
+  <div class="plan pick launch">
+    <p class="eyebrow">Launch offer</p>
+    <h2>Free while we're in launch</h2>
+    <p class="price">$0<small> · no card needed</small></p>
+    <div class="launch-cols">
+      <div>
+        <h3>Valuation</h3>
+        <ul>
+          <li>All six valuation tools and three calculators</li>
+          <li>Full methodology and every adjustment shown</li>
+          <li>Detailed reports with a sensitivity table and due-diligence checklist</li>
+          <li>Unlimited saved reports, private to you</li>
+          <li>Printable reports for buyers, lenders or partners</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Buying</h3>
+        <ul>
+          <li>Browse every listing</li>
+          <li>Message sellers on the site</li>
+          <li>Watchlist with email alerts when a price drops or a business sells</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Selling</h3>
+        <ul>
+          <li>List a business for sale: no listing fee, no commission</li>
+          <li>Messages from buyers, with email notifications</li>
+          <li>Analytics for each listing: views, saves and messages</li>
+          {% if cfg.VERIFICATION_REQUESTS_ENABLED %}<li>Verification badge on request</li>{% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      {% if user %}<a class="btn" href="/account/">Go to your account</a>{% else %}<a class="btn" href="/signup/">Create a free account</a>{% endif %}
+      <a class="btn quiet" href="/tools/">Value a business</a>
+      <a class="btn quiet" href="/sell/">List a business</a>
+    </div>
+  </div>
+
+  <article class="prose mt section">{{ body|safe }}</article>
+</div>
+{{ related_block(related) }}
+{% endblock %}
