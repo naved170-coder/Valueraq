@@ -415,3 +415,7 @@ a.vbadge:hover { background: var(--accent); color: var(--accent-ink); }
 table.weeks .barcell { width: 55%; min-width: 120px; }
 table.weeks .wbar { display: block; height: 10px; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Saved search control and admin error traces */
+.save-search { margin: .6rem 0 0; }
+pre.trace { background: var(--sunk); border: 1px solid var(--rule); border-radius: var(--r); padding: .7rem; overflow: auto; max-height: 320px; font: 400 .78rem/1.45 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; }

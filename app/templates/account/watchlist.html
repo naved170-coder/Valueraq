@@ -20,7 +20,22 @@
   {% endfor %}
   </div>
   {% else %}
-  <p class="empty">Nothing saved yet. Open a listing and choose “Save to watchlist”. <a href="/businesses-for-sale/">Browse businesses for sale</a>.</p>
+  <p class="empty">No listings saved yet. Open a listing and choose “Save to watchlist”. <a href="/businesses-for-sale/">Browse businesses for sale</a>.</p>
   {% endif %}
+
+  <section class="section" aria-labelledby="ss-h">
+    <h2 id="ss-h" class="section-title">Saved searches</h2>
+    <p class="muted">We email you when a newly listed business matches one of these.</p>
+    {% if searches %}
+    <div class="stack">
+    {% for s in searches %}
+      <div class="panel row"><a href="{{ s.url }}"><b>{{ s.label }}</b></a><span class="muted">Saved {{ s.created_at|human_date }}</span>
+        <form method="post" action="/account/searches/{{ s.id }}/delete/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" type="submit">Delete</button></form></div>
+    {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty">No saved searches. Open a <a href="/businesses-for-sale/">category</a>, set your filters and choose “Save this search”.</p>
+    {% endif %}
+  </section>
 </div>
 {% endblock %}

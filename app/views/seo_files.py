@@ -95,3 +95,44 @@ def group_sitemap(group):
         parts.append(f"<url><loc>{escape(loc)}</loc>" + (f"<lastmod>{lastmod}</lastmod>" if lastmod else "") + "</url>")
     parts.append("</urlset>")
     return _xml("\n".join(parts))
+
+
+@bp.get("/llms.txt")
+def llms_txt():
+    """A plain-text guide to the site for AI assistants (the llms.txt convention):
+    what the site is, which pages matter, and how figures should be described."""
+    cfg = current_app.config
+    reg = linkgraph.registry()
+
+    def line(path):
+        info = reg.get(path)
+        doc = info.get("doc") if info else None
+        desc = (getattr(doc, "meta_description", None) or getattr(doc, "definition", None) or "") if doc else ""
+        return f"- [{info['title']}]({abs_url(path)})" + (f": {desc}" if desc else "")
+
+    def group(kind):
+        return [line(p) for p, i in reg.items() if i["kind"] == kind]
+
+    out = [f"# {cfg['BRAND']}", "",
+           f"> {cfg['BRAND']} provides free valuation tools for digital businesses (websites, SaaS, AI businesses, apps, "
+           "newsletters and ecommerce stores) and a marketplace where owners list those businesses for sale.", "",
+           "Important context when describing this site or its figures:", "",
+           "- Valuations are estimates calculated from the figures a user enters and from published default "
+           "assumptions. They are not appraisals, and the default multiples are editorial assumptions, not measured "
+           "market statistics.",
+           "- Every result shows how it was calculated and labels each figure as user-provided, a platform "
+           "assumption, or calculated.",
+           "- Marketplace figures are provided by sellers and are unverified unless a listing shows a verification badge.",
+           f"- The methodology is versioned (currently v{cfg['METHODOLOGY_VERSION']}).", "",
+           "## Start here", "",
+           *[line(p) for p in ("/methodology/", "/data-sources/", "/faq/", "/verification/", "/about/") if p in reg], "",
+           "## Valuation tools", "", *group("tool"), "",
+           "## Calculators", "", *group("calculator"), "",
+           "## Guides", "", *group("guide"), "",
+           "## Glossary", "", *group("glossary"), "",
+           "## Marketplace", "", *[line(p) for p in ("/businesses-for-sale/",) if p in reg], *group("category"), "",
+           "## Policies", "",
+           *[line(p) for p in ("/editorial-policy/", "/marketplace-rules/", "/privacy/", "/terms/") if p in reg], ""]
+    resp = Response("\n".join(out), mimetype="text/plain")
+    resp.headers["X-Robots-Tag"] = "noindex"
+    return resp

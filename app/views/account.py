@@ -4,7 +4,7 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
+from .. import activity, analytics, auth, billing, catalog, db, mailer, marketplace as M, valuation as V
 from ..views.marketplace import LISTING_FIELDS, _read_listing_form
 
 bp = Blueprint("account", __name__)
@@ -49,6 +49,7 @@ def signup():
             auth.login_user(u)
             g.user = u
             analytics.server_event("signup")
+            activity.record("signup", user=u)
             mailer.welcome(u)
             return redirect(_safe_next())
     return _r("account/signup.html", error=error, next=_safe_next(""))
@@ -65,7 +66,9 @@ def login():
         u = auth.verify(request.form.get("email") or "", request.form.get("password") or "")
         if u:
             auth.login_user(u)
+            activity.record("login", user=u)
             return redirect(_safe_next())
+        activity.record("login_failed", email=(request.form.get("email") or "").strip().lower())
         error = "That email and password don't match an account."
     return _r("account/login.html", error=error, next=_safe_next(""))
 
@@ -83,6 +86,7 @@ def forgot_password():
             token = auth.create_reset_token(u)
             if token:
                 mailer.password_reset(u, token)
+            activity.record("password_reset_requested", user=u)
             current_app.logger.info("password reset requested for user %s (%s)", u["id"],
                                     "sent" if token else "throttled")
         # Same answer whether or not the account exists, so the form can't be used to find accounts.
@@ -102,7 +106,9 @@ def reset_password(token):
             errors["new_password"] = "Use at least 10 characters."
         elif new != confirm:
             errors["confirm_password"] = "The two passwords don't match."
+        u = auth.reset_token_user(token)
         if not errors and auth.reset_password(token, new):
+            activity.record("password_reset_completed", user=u)
             session.clear()
             flash("Your password has been changed. Log in with your new password.", "ok")
             return redirect(url_for("account.login"))
@@ -137,6 +143,7 @@ def settings():
             errors["confirm_password"] = "The two new passwords don't match."
         if not errors:
             auth.change_password(g.user, new)
+            activity.record("password_changed")
             current_app.logger.info("password changed for user %s", g.user["id"])
             flash("Your password has been changed. Other devices have been signed out.", "ok")
             return redirect(url_for("account.settings"))
@@ -301,6 +308,8 @@ def listing_status(lid):
     if not l:
         abort(404)
     action = request.form.get("action")
+    if action in ("sold", "withdraw", "submit"):
+        activity.record("listing_" + action, target=f"listing #{lid}")
     if action == "sold" and l["status"] == "published":
         M.set_status(lid, "sold", by=f"user:{g.user['id']}")
         from .market_account import notify_watchers

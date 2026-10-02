@@ -229,3 +229,29 @@ def verification_decision(seller_email, listing_title, label, granted, note, pub
                 + (f"<p><b>Reviewer note:</b> {_html.escape(note)}</p>" if note else "")
                 + _btn(c["SITE_URL"] + "/account/listings/", "Open My listings"))
     return send(seller_email, subject, text, html)
+
+
+def search_alert(to, search_label, listing_title, listing_path, price_text):
+    c = current_app.config
+    url = c["SITE_URL"] + listing_path
+    manage = c["SITE_URL"] + "/account/watchlist/"
+    text = (f"A new listing matches your saved search \"{search_label}\".\n\n{listing_title}\n{price_text}\n\n{url}\n\n"
+            f"Manage or delete your saved searches: {manage}")
+    html = (f"<p>A new listing matches your saved search <b>{_html.escape(search_label)}</b>.</p>"
+            f"<p><b>{_html.escape(listing_title)}</b><br>{_html.escape(price_text)}</p>" + _btn(url, "View the listing")
+            + f'<p style="font-size:13px;color:#5b6b66">Manage or delete your saved searches in your '
+              f'<a href="{manage}" style="color:#0d6a54">watchlist</a>.</p>')
+    return send(to, f"New listing: {listing_title[:60]}", text, html)
+
+
+def admin_error_alert(error_type, message, method, path, count):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/errors/"
+    text = (f"The website hit a server error.\n\nType: {error_type}\nMessage: {message}\nRequest: {method} {path}\n"
+            f"Times seen: {count}\n\nDetails: {url}\n\nVisitors saw the standard error page. You'll get at most one "
+            "email a day about this particular problem.")
+    html = (f"<p>The website hit a server error.</p><p><b>{_html.escape(error_type)}</b>: {_html.escape(message)}<br>"
+            f"Request: {_html.escape(method)} {_html.escape(path)}<br>Times seen: {count}</p>"
+            "<p>Visitors saw the standard error page. You'll get at most one email a day about this particular problem.</p>"
+            + _btn(url, "See error details"))
+    return send(_admins(), f"Website error: {error_type}", text, html)

@@ -1,0 +1,16 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Activity log</h1>
+<p class="lede">Who did what: sign-ins, password changes, listing and admin actions. Newest first, last 300 entries.</p>
+<form method="get" class="row mt"><input name="q" value="{{ q }}" placeholder="Filter by action, email or target" aria-label="Filter"><button class="btn small" type="submit">Filter</button>{% if q %}<a href="/admin/activity/">Clear</a>{% endif %}</form>
+<div class="table-wrap mt">
+<table>
+  <thead><tr><th>When (UTC)</th><th>Who</th><th>Action</th><th>Target</th><th>Detail</th><th>IP address</th></tr></thead>
+  <tbody>
+  {% for r in rows %}
+    <tr><td>{{ r.at|datetime_utc }}</td><td>{{ r.user_email or '—' }}</td><td class="mono">{{ r.action|replace('_', ' ') }}</td><td>{{ r.target or '' }}</td><td>{{ r.detail or '' }}</td><td class="mono">{{ r.ip or '' }}</td></tr>
+  {% else %}<tr><td colspan="6">Nothing recorded yet{% if q %} for “{{ q }}”{% endif %}.</td></tr>{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

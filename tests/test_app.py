@@ -860,6 +860,141 @@ class MarketplaceAccountFeatures(Base):
 
 
 # ---------------------------------------------------------------- admin
+class Phase2SearchHubAndLogs(Base):
+    def setUp(self):
+        super().setUp()
+        self.box = self.app.extensions.setdefault("outbox", [])
+
+    def test_saved_search_save_duplicate_alert_and_delete(self):
+        self.signup("seller@example.com")
+        self.make_listing()
+        self.logout()
+        page = self.client.get("/businesses-for-sale/saas/").get_data(as_text=True)
+        self.assertIn("to save this search and get an email", page)
+        self.signup("buyer@example.com")
+        self.assertIn("Save this search", self.client.get("/businesses-for-sale/saas/").get_data(as_text=True))
+        for _ in range(2):                                                      # second time is a duplicate
+            r = self.client.post("/account/searches/save/", data=dict(csrf=self.csrf(), category="saas"))
+            self.assertEqual(r.status_code, 302)
+        self.assertEqual(self.client.post("/account/searches/save/", data=dict(csrf=self.csrf(), category="nope")).status_code, 400)
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM saved_searches", one=True)["n"], 1)
+            sid = db.query("SELECT id FROM saved_searches", one=True)["id"]
+        self.assertIn("Saved searches", self.client.get("/account/watchlist/").get_data(as_text=True))
+        other = self.make_listing(category="ecommerce", title="Outdoor gear ecommerce store with repeat buyers")
+        match = self.make_listing(title="Invoicing SaaS for freelance designers and studios")
+        with self.app.app_context():
+            from app.views.market_account import notify_saved_searches
+            seller = db.query("SELECT id FROM users WHERE email='seller@example.com'", one=True)["id"]
+            db.execute("UPDATE listings SET seller_id=?", (seller,))
+            n = len(self.box)
+            self.assertEqual(notify_saved_searches(other["id"]), 0)             # wrong category
+            self.assertEqual(notify_saved_searches(match["id"]), 1)
+            self.assertEqual(len(self.box), n + 1)
+            self.assertEqual(self.box[-1]["to"], ["buyer@example.com"])
+            self.assertIn("Invoicing SaaS", self.box[-1]["text"])
+            db.execute("UPDATE listings SET seller_id=(SELECT id FROM users WHERE email='buyer@example.com')")
+            self.assertEqual(notify_saved_searches(match["id"]), 0)             # never about your own listing
+            self.assertIn(M.listing_path(match), self.box[-1]["text"])
+        self.client.post(f"/account/searches/{sid}/delete/", data=dict(csrf=self.csrf()))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM saved_searches", one=True)["n"], 0)
+
+    def test_saved_search_limit_and_ownership(self):
+        from app.views import market_account as MA
+        self.signup("buyer@example.com")
+        for i in range(MA.SEARCH_LIMIT + 2):
+            self.client.post("/account/searches/save/", data=dict(csrf=self.csrf(), category="saas", price_max=str(1000 + i)))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM saved_searches", one=True)["n"], MA.SEARCH_LIMIT)
+            sid = db.query("SELECT id FROM saved_searches", one=True)["id"]
+        self.logout()
+        self.signup("other@example.com")
+        self.client.post(f"/account/searches/{sid}/delete/", data=dict(csrf=self.csrf()))   # not theirs
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM saved_searches", one=True)["n"], MA.SEARCH_LIMIT)
+
+    def test_hub_sections_appear_only_with_data(self):
+        self.assertNotIn("Most viewed this month", self.client.get("/businesses-for-sale/").get_data(as_text=True))
+        self.signup("seller@example.com")
+        lst = self.make_listing()
+        self.logout()
+        self.client.get(M.listing_path(lst))
+        self.signup("buyer@example.com")
+        self.client.post(M.listing_path(lst) + "save/", data=dict(csrf=self.csrf()))
+        hub = self.client.get("/businesses-for-sale/").get_data(as_text=True)
+        for heading in ("Top categories", "Most viewed this month", "Most saved by buyers"):
+            self.assertIn(heading, hub)
+        self.assertNotIn("Featured listings", hub)                              # nothing is featured
+
+    def test_listing_page_is_not_edge_cached(self):
+        self.signup("seller@example.com")
+        lst = self.make_listing()
+        self.logout()
+        self.assertEqual(self.client.get(M.listing_path(lst)).headers["Cache-Control"], "no-cache")
+
+    def test_activity_log_records_and_is_admin_only(self):
+        self.signup("user@example.com")
+        self.logout()
+        self.client.post("/login/", data=dict(email="user@example.com", password="wrong-password-9", csrf=self.csrf()))
+        self.client.post("/login/", data=dict(email="user@example.com", password="correct-horse-1", csrf=self.csrf()))
+        self.assertEqual(self.client.get("/admin/activity/").status_code, 404)
+        self.assertEqual(self.client.get("/admin/errors/").status_code, 404)
+        with self.app.app_context():
+            acts = [r["action"] for r in db.query("SELECT action FROM activity_log ORDER BY id")]
+        self.assertEqual(acts, ["signup", "login_failed", "login"])
+        self.logout()
+        self.signup("admin@example.com")
+        page = self.client.get("/admin/activity/").get_data(as_text=True)
+        self.assertIn("login failed", page)
+        self.assertIn("user@example.com", page)
+        self.assertNotIn("wrong-password-9", page)                              # passwords are never logged
+
+    def test_error_log_groups_repeats_and_alerts_once(self):
+        from app import activity
+        def boom():
+            raise ValueError("kaboom <b>")
+        for _ in range(3):
+            with self.app.test_request_context("/tools/website-valuation/"):
+                try:
+                    boom()
+                except ValueError as e:
+                    activity.record_error(e)
+        with self.app.app_context():
+            rows = db.query("SELECT * FROM error_log")
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["count"], 3)
+        alerts = [m for m in self.box if m["subject"].startswith("Website error")]
+        self.assertEqual(len(alerts), 1)
+        self.assertEqual(alerts[0]["to"], ["admin@example.com"])
+        self.signup("admin@example.com")
+        page = self.client.get("/admin/errors/").get_data(as_text=True)
+        self.assertIn("ValueError", page)
+        self.assertIn("kaboom &lt;b&gt;", page)
+        with self.app.app_context():
+            fp = db.query("SELECT fingerprint FROM error_log", one=True)["fingerprint"]
+        self.client.post("/admin/errors/", data=dict(csrf=self.csrf(), fingerprint=fp))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM error_log", one=True)["n"], 0)
+
+    def test_llms_txt_and_comparison_guides(self):
+        r = self.client.get("/llms.txt")
+        self.assertEqual(r.status_code, 200)
+        self.assertTrue(r.mimetype.startswith("text/plain"))
+        body = r.get_data(as_text=True)
+        self.assertIn("/guides/sde-vs-ebitda/", body)
+        self.assertNotIn("/account/", body)
+        self.assertNotIn("/admin/", body)
+        for path in ("/guides/sde-vs-ebitda/", "/guides/ways-to-sell-a-digital-business/"):
+            r = self.client.get(path)
+            self.assertEqual(r.status_code, 200)
+            html = r.get_data(as_text=True)
+            self.assertEqual(html.count("<h1"), 1)
+            self.assertTrue(canonical(html).endswith(path))
+        sm = "".join(self.client.get(p).get_data(as_text=True) for p in ("/sitemap.xml", "/sitemap-pages.xml"))
+        self.assertNotIn("llms.txt", sm)
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")

@@ -20,6 +20,22 @@
   </form>
   {% endif %}
 
+  {% if save_search is defined and save_search %}
+  <div class="save-search">
+    {% if user %}
+    <form method="post" action="/account/searches/save/" class="row">
+      <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+      <input type="hidden" name="category" value="{{ save_search.category or '' }}">
+      {% for k in ('price_max', 'profit_min', 'age_min', 'model', 'verified') %}{% if args.get(k) %}<input type="hidden" name="{{ k }}" value="{{ args.get(k) }}">{% endif %}{% endfor %}
+      <button class="btn small quiet" type="submit">Save this search</button>
+      <span class="hint">Get an email when a new listing matches{% if filtered %} these filters{% endif %}.</span>
+    </form>
+    {% else %}
+    <p class="hint"><a href="/login/?next={{ base|urlencode }}">Log in</a> to save this search and get an email when a new listing matches.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
   <section class="section" aria-label="Listings">
   {% if listings %}
     <div class="listing-grid">{% for l in listings %}{{ listing_card(l) }}{% endfor %}</div>

@@ -1,4 +1,5 @@
 """Marketplace: category landing pages, pagination, facets, listings, selling and inquiries."""
+import datetime
 import math
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
@@ -74,6 +75,20 @@ def hub():
     # costs nothing while the marketplace is still filling.
     sold = _decorate(db.query("SELECT * FROM listings WHERE status='sold' AND is_test=0 "
                               "ORDER BY updated_at DESC LIMIT 3"))
+    live = "l.status='published' AND l.is_test=0"
+    featured = _decorate(db.query(f"SELECT l.* FROM listings l WHERE {live} AND l.is_featured=1 "
+                                  "ORDER BY l.published_at DESC LIMIT 3"))
+    since = (datetime.datetime.now(datetime.timezone.utc).date() - datetime.timedelta(days=29)).isoformat()
+    most_viewed = _decorate(db.query(
+        f"SELECT l.*, SUM(v.views) recent_views FROM listings l JOIN listing_views v ON v.listing_id=l.id "
+        f"WHERE {live} AND v.day>=? GROUP BY l.id HAVING recent_views>0 ORDER BY recent_views DESC, l.id DESC LIMIT 3",
+        (since,)))
+    most_saved = _decorate(db.query(
+        f"SELECT l.*, COUNT(w.user_id) saves FROM listings l JOIN watchlist w ON w.listing_id=l.id "
+        f"WHERE {live} GROUP BY l.id ORDER BY saves DESC, l.id DESC LIMIT 3"))
+    # Top categories: only shown once listings exist; ordered by how many are live.
+    top_cats = sorted([c for c in catalog.CATEGORIES if counts.get(c["slug"])],
+                      key=lambda c: -counts[c["slug"]])[:3]
     doc = content.load("hubs", "businesses-for-sale")
     meta = PageMeta(path="/businesses-for-sale/", title="Digital Businesses for Sale",
                     meta_title="Digital Businesses for Sale – Websites, SaaS, Apps & More",
@@ -83,7 +98,8 @@ def hub():
     meta.schema.append(schema.collection_page(meta.path, meta.title, meta.description,
                                               [(c["name"], c["path"]) for c in catalog.CATEGORIES]))
     return render_page("bfs_hub.html", meta, cats=catalog.CATEGORIES, counts=counts, recent=recent,
-                       sold=sold, doc=doc)
+                       sold=sold, doc=doc, featured=featured, most_viewed=most_viewed, most_saved=most_saved,
+                       top_cats=top_cats)
 
 
 # ---------------------------------------------------------------- category pages
@@ -130,7 +146,7 @@ def _category(cat, page):
     return render_page("category.html", meta, c=c, listings=listings, total=total, page=page, pages=pages,
                        base=base, doc=doc if page == 1 else None, body=body, related=rel, tool=tool,
                        models=catalog.BUSINESS_MODELS.get(cat, []), sorts=catalog.SORTS, filtered=filtered,
-                       args=request.args)
+                       args=request.args, save_search={"category": cat} if page == 1 else None)
 
 
 # ---------------------------------------------------------------- all listings
@@ -215,9 +231,11 @@ def listing(cat, slug_id):
                                                           "/verification/"], cluster=linkgraph.CAT_CLUSTER[l["category"]])
     similar = _decorate(db.query("SELECT * FROM listings WHERE category=? AND status='published' AND is_test=0 AND id!=? "
                                  "ORDER BY published_at DESC LIMIT 3", (l["category"], l["id"])))
-    return render_page("listing.html", meta, l=l, c=c, facts=facts, desc=desc_public, tool=tool, related=rel,
-                       similar=similar, is_owner=is_owner, mult=M.implied_multiples(l),
-                       saved=_is_saved(u, l["id"]))
+    resp = current_app.make_response(render_page(
+        "listing.html", meta, l=l, c=c, facts=facts, desc=desc_public, tool=tool, related=rel,
+        similar=similar, is_owner=is_owner, mult=M.implied_multiples(l), saved=_is_saved(u, l["id"])))
+    resp.headers["Cache-Control"] = "no-cache"  # every view reaches the app: accurate view counts, instant updates
+    return resp
 
 
 def _is_saved(user, listing_id):
@@ -342,6 +360,8 @@ def sell():
             analytics.server_event("listing_created", {"listing": lid, "category": data["category"]})
             l = M.refresh(lid)
             mailer.admin_new_listing(data["title"], data["category"], g.user["email"])
+            from .. import activity
+            activity.record("listing_created", target=f"listing #{lid}", detail=data["title"])
             flash("Listing submitted for review. We check every listing before it goes live, usually within two "
                   "business days.", "ok")
             if l["quality_flags"]:

@@ -5,7 +5,7 @@ import json
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import analytics, audit, auth, catalog, content, db, linkgraph, marketplace as M, redirects
+from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, marketplace as M, redirects
 from ..seo import log_change
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -269,13 +269,17 @@ def listings():
 def listing_action(lid):
     action = request.form.get("action")
     note = request.form.get("note") or None
+    activity.record("admin_listing_" + str(action)[:20], target=f"listing #{lid}",
+                    detail=request.form.get("verification") if action == "verify" else note)
     if action in ("published", "rejected", "suspended", "removed", "pending"):
         rep = request.form.get("replacement_id")
-        before = db.query("SELECT status FROM listings WHERE id=?", (lid,), one=True)
+        before = db.query("SELECT status, published_at FROM listings WHERE id=?", (lid,), one=True)
         l = M.set_status(lid, action, by=_who(), note=note, replacement_id=int(rep) if rep and rep.isdigit() else None)
         if l and before and action in ("published", "sold"):
-            from .market_account import notify_watchers
+            from .market_account import notify_saved_searches, notify_watchers
             notify_watchers(lid, old_status=before["status"])
+            if action == "published" and not before["published_at"]:
+                notify_saved_searches(lid)  # only the first time a listing goes live
         if l and before and before["status"] != action and action in ("published", "rejected"):
             seller = db.query("SELECT email FROM users WHERE id=?", (l["seller_id"],), one=True)
             if seller:
@@ -433,6 +437,7 @@ def users():
         if plan in ("free", "pro"):
             db.execute("UPDATE users SET plan=?, subscription_status=? WHERE id=?",
                        (plan, "active" if plan == "pro" else None, uid))
+            activity.record("admin_plan_change", target=f"user #{uid}", detail=plan)
             flash("Plan updated (manual grant; no payment taken).", "ok")
         return redirect(url_for("admin.users"))
     rows = db.query("SELECT * FROM users ORDER BY created_at DESC LIMIT 500")
@@ -463,6 +468,7 @@ def backups():
 def backups_run():
     from .. import backup
     row = backup.run("manual")
+    activity.record("admin_backup_run", detail=row["status"])
     if row["status"] == "ok":
         flash(f"Backup saved ({row['bytes'] // 1024 or 1} KB).", "ok")
     else:
@@ -483,6 +489,7 @@ def backups_download(bid):
     except StorageError as e:
         flash(f"Couldn't download that backup: {e}", "error")
         return redirect(url_for("admin.backups"))
+    activity.record("admin_backup_download", target=row["object_key"])
     resp = current_app.response_class(data, mimetype="application/gzip")
     resp.headers["Content-Disposition"] = f'attachment; filename="{row["object_key"].rsplit("/", 1)[-1]}"'
     resp.headers["Cache-Control"] = "no-store"
@@ -498,3 +505,30 @@ def email_test():
     flash(f"Test email sent to {g.user['email']}. Check your inbox (and spam folder) in a minute." if ok
           else "Email isn't switched on yet: RESEND_API_KEY is missing.", "ok" if ok else "error")
     return redirect(url_for("admin.backups"))
+
+
+# ---------------------------------------------------------------- activity log and error log
+@bp.get("/activity/")
+@auth.admin_required
+def activity_log():
+    q = (request.args.get("q") or "").strip()
+    if q:
+        like = f"%{q}%"
+        rows = db.query("SELECT * FROM activity_log WHERE action LIKE ? OR user_email LIKE ? OR target LIKE ? "
+                        "ORDER BY id DESC LIMIT 300", (like, like, like))
+    else:
+        rows = db.query("SELECT * FROM activity_log ORDER BY id DESC LIMIT 300")
+    return render_template("admin/activity.html", rows=rows, q=q, section="activity")
+
+
+@bp.route("/errors/", methods=["GET", "POST"])
+@auth.admin_required
+def errors():
+    if request.method == "POST":
+        fp = request.form.get("fingerprint")
+        db.execute("DELETE FROM error_log WHERE fingerprint=?", (fp,))
+        activity.record("admin_error_cleared", target=fp)
+        flash("Marked as dealt with.", "ok")
+        return redirect(url_for("admin.errors"))
+    rows = db.query("SELECT * FROM error_log ORDER BY last_at DESC LIMIT 100")
+    return render_template("admin/errors.html", rows=rows, section="errors")

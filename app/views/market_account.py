@@ -64,7 +64,9 @@ def watchlist():
         d["category_name"] = catalog.CATS_BY_SLUG[r["category"]]["name"].replace(" for Sale", "")
         d["available"] = r["status"] in M.PUBLIC_STATUSES
         out.append(d)
-    return render_template("account/watchlist.html", rows=out)
+    searches = [dict(s, label=search_label(s), url=search_url(s)) for s in
+                db.query("SELECT * FROM saved_searches WHERE user_id=? ORDER BY created_at DESC", (g.user["id"],))]
+    return render_template("account/watchlist.html", rows=out, searches=searches)
 
 
 def notify_watchers(listing_id, old_status=None):
@@ -87,6 +89,120 @@ def notify_watchers(listing_id, old_status=None):
         if l["status"] == "published" and l["asking_price"] != w["last_price"]:
             db.execute("UPDATE watchlist SET last_price=? WHERE user_id=? AND listing_id=?",
                        (l["asking_price"], w["user_id"], listing_id))
+    return sent
+
+
+# ---------------------------------------------------------------- saved searches
+SEARCH_LIMIT = 20
+
+
+def _int(v):
+    try:
+        return int(float(v)) if v not in (None, "") else None
+    except (TypeError, ValueError):
+        return None
+
+
+def search_label(s):
+    """Plain-English description of a saved search, e.g. 'SaaS businesses, up to $500,000, verified only'."""
+    from ..filters import money
+    cat = catalog.CATS_BY_SLUG.get(s["category"] or "")
+    bits = [cat["name"].replace(" for Sale", "") if cat else "All businesses"]
+    if s["model"]:
+        bits.append(s["model"])
+    if s["price_max"]:
+        bits.append(f"up to {money(s['price_max'])}")
+    if s["profit_min"]:
+        bits.append(f"profit from {money(s['profit_min'])} a month")
+    if s["age_min"]:
+        bits.append(f"at least {s['age_min']:g} years old")
+    if s["verified"]:
+        bits.append("verified only")
+    return ", ".join(bits)
+
+
+def search_url(s):
+    from urllib.parse import urlencode
+    cat = catalog.CATS_BY_SLUG.get(s["category"] or "")
+    q = {k: v for k, v in (("price_max", s["price_max"]), ("profit_min", s["profit_min"]),
+                           ("age_min", f"{s['age_min']:g}" if s["age_min"] else None), ("model", s["model"]),
+                           ("verified", "1" if s["verified"] else None)) if v}
+    return (cat["path"] if cat else "/marketplace/") + ("?" + urlencode(q) if q else "")
+
+
+def search_matches(s, l):
+    if s["category"] and s["category"] != l["category"]:
+        return False
+    if s["price_max"] and (l["asking_price"] is None or l["asking_price"] > s["price_max"]):
+        return False
+    if s["profit_min"] and (l["monthly_profit"] is None or l["monthly_profit"] < s["profit_min"]):
+        return False
+    if s["age_min"] and (l["age_years"] is None or l["age_years"] < s["age_min"]):
+        return False
+    if s["model"] and s["model"] != l["business_model"]:
+        return False
+    if s["verified"] and l["verification"] == "unverified":
+        return False
+    return True
+
+
+@bp.post("/account/searches/save/")
+@auth.login_required
+def save_search():
+    f = request.form
+    cat = f.get("category") or None
+    if cat and cat not in catalog.CATS_BY_SLUG:
+        abort(400)
+    age = None
+    try:
+        age = float(f.get("age_min")) if f.get("age_min") else None
+    except ValueError:
+        pass
+    row = dict(category=cat, price_max=_int(f.get("price_max")), profit_min=_int(f.get("profit_min")), age_min=age,
+               model=(f.get("model") or "")[:80] or None, verified=1 if f.get("verified") == "1" else 0)
+    back = search_url(row)
+    n = db.query("SELECT COUNT(*) n FROM saved_searches WHERE user_id=?", (g.user["id"],), one=True)["n"]
+    same = db.query("SELECT 1 FROM saved_searches WHERE user_id=? AND IFNULL(category,'')=? AND IFNULL(price_max,0)=? "
+                    "AND IFNULL(profit_min,0)=? AND IFNULL(age_min,0)=? AND IFNULL(model,'')=? AND verified=?",
+                    (g.user["id"], cat or "", row["price_max"] or 0, row["profit_min"] or 0, age or 0,
+                     row["model"] or "", row["verified"]), one=True)
+    if same:
+        flash("You've already saved this search.", "ok")
+    elif n >= SEARCH_LIMIT:
+        flash(f"You can keep {SEARCH_LIMIT} saved searches. Delete one in your watchlist to add another.", "error")
+    else:
+        db.execute("INSERT INTO saved_searches(user_id, category, price_max, profit_min, age_min, model, verified, created_at) "
+                   "VALUES (?,?,?,?,?,?,?,?)", (g.user["id"], cat, row["price_max"], row["profit_min"], age, row["model"],
+                                                row["verified"], db.now()))
+        analytics.server_event("search_saved", {"category": cat})
+        flash("Search saved. We'll email you when a new listing matches. Manage it in your watchlist.", "ok")
+    return redirect(back)
+
+
+@bp.post("/account/searches/<int:sid>/delete/")
+@auth.login_required
+def delete_search(sid):
+    db.execute("DELETE FROM saved_searches WHERE id=? AND user_id=?", (sid, g.user["id"]))
+    flash("Saved search deleted.", "ok")
+    return redirect(url_for("market_account.watchlist"))
+
+
+def notify_saved_searches(listing_id):
+    """Email each buyer whose saved search matches a newly published listing (one email per buyer)."""
+    from ..filters import money
+    l = db.query("SELECT * FROM listings WHERE id=?", (listing_id,), one=True)
+    if not l or l["status"] != "published" or l["is_test"]:
+        return 0
+    sent, seen = 0, set()
+    for s in db.query("SELECT s.*, u.email FROM saved_searches s JOIN users u ON u.id=s.user_id ORDER BY s.id"):
+        if s["user_id"] in seen or s["user_id"] == l["seller_id"] or not search_matches(s, l):
+            continue
+        seen.add(s["user_id"])
+        price = f"Asking {money(l['asking_price'], l['currency'])}" if l["asking_price"] else "Price on request"
+        if l["monthly_profit"]:
+            price += f" · profit {money(l['monthly_profit'], l['currency'])} a month"
+        mailer.search_alert(s["email"], search_label(s), l["title"], M.listing_path(l), price)
+        sent += 1
     return sent
 
 
@@ -236,6 +352,8 @@ def request_verification(lid):
         db.execute("UPDATE listings SET verification_requested_at=?, verification_request_type=?, "
                    "verification_request_note=? WHERE id=?", (db.now(), kind, note[:1500], lid))
         mailer.admin_verification_request(l["title"], VERIFY_TYPES[kind], g.user["email"], note[:1500])
+        from .. import activity
+        activity.record("verification_requested", target=f"listing #{lid}", detail=kind)
         analytics.server_event("verification_requested", {"listing": lid})
         flash("Verification requested. A reviewer will email you to arrange the evidence check.", "ok")
     return redirect(url_for("account.listings"))

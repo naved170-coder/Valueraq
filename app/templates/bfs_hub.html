@@ -14,11 +14,37 @@
       <tbody>{% for c in cats %}<tr><td><a href="{{ c.path }}">{{ c.name }}</a></td><td>{{ c.definition }}</td><td class="r num">{{ counts.get(c.slug, 0) }}</td></tr>{% endfor %}</tbody>
     </table>
   </div>
+  {% if top_cats %}
+  <section class="section" aria-labelledby="topcat-h">
+    <h2 id="topcat-h" class="section-title">Top categories</h2>
+    <div class="row">{% for c in top_cats %}<a class="btn quiet" href="{{ c.path }}">{{ c.name }} · {{ counts[c.slug] }}</a>{% endfor %}</div>
+  </section>
+  {% endif %}
+  {% if featured %}
+  <section class="section" aria-labelledby="feat-h">
+    <h2 id="feat-h" class="section-title">Featured listings</h2>
+    <p class="muted">Sellers pay to feature a listing. Featuring doesn't change how a listing is reviewed or verified.</p>
+    <div class="listing-grid">{% for l in featured %}{{ listing_card(l) }}{% endfor %}</div>
+  </section>
+  {% endif %}
   {% if recent %}
   <section class="section" aria-labelledby="recent-h">
     <h2 id="recent-h" class="section-title">Newest listings</h2>
     <div class="listing-grid">{% for l in recent %}{{ listing_card(l) }}{% endfor %}</div>
     <p class="mt"><a href="/marketplace/">See all listings</a></p>
+  </section>
+  {% endif %}
+  {% if most_viewed %}
+  <section class="section" aria-labelledby="viewed-h">
+    <h2 id="viewed-h" class="section-title">Most viewed this month</h2>
+    <div class="listing-grid">{% for l in most_viewed %}{{ listing_card(l) }}{% endfor %}</div>
+  </section>
+  {% endif %}
+  {% if most_saved %}
+  <section class="section" aria-labelledby="saved-h">
+    <h2 id="saved-h" class="section-title">Most saved by buyers</h2>
+    <p class="muted">Listings on the most buyer watchlists.</p>
+    <div class="listing-grid">{% for l in most_saved %}{{ listing_card(l) }}{% endfor %}</div>
   </section>
   {% endif %}
   {% if sold %}

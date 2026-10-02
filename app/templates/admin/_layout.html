@@ -3,7 +3,7 @@
 {% block main %}
 <div class="wrap">
   <nav class="admin-nav" aria-label="Admin">
-    {% for key, label, href in [('home','Overview','/admin/'),('seo','SEO audit','/admin/seo/'),('redirects','Redirects & 410s','/admin/seo/redirects/'),('log','SEO change log','/admin/seo/log/'),('keywords','Keywords','/admin/seo/keywords/'),('search','Search performance','/admin/seo/search-performance/'),('listings','Listings','/admin/listings/'),('blog','Blog','/admin/blog/'),('analytics','Analytics','/admin/analytics/'),('users','Users','/admin/users/'),('messages','Messages','/admin/messages/'),('backups','Backups & email','/admin/backups/')] %}
+    {% for key, label, href in [('home','Overview','/admin/'),('seo','SEO audit','/admin/seo/'),('redirects','Redirects & 410s','/admin/seo/redirects/'),('log','SEO change log','/admin/seo/log/'),('keywords','Keywords','/admin/seo/keywords/'),('search','Search performance','/admin/seo/search-performance/'),('listings','Listings','/admin/listings/'),('blog','Blog','/admin/blog/'),('analytics','Analytics','/admin/analytics/'),('users','Users','/admin/users/'),('messages','Messages','/admin/messages/'),('backups','Backups & email','/admin/backups/'),('activity','Activity log','/admin/activity/'),('errors','Errors','/admin/errors/')] %}
     <a href="{{ href }}" {% if section == key %}aria-current="page"{% endif %}>{{ label }}</a>
     {% endfor %}
   </nav>

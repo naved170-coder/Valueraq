@@ -129,7 +129,7 @@ def create_app(config_object=Config, **overrides):
                 resp.headers["Cache-Control"] = "private, no-store"
             else:
                 resp.headers["Cache-Control"] = (f"public, max-age={cfg['PUBLIC_CACHE_SECONDS']}, "
-                                                 f"s-maxage={cfg['CDN_CACHE_SECONDS']}, stale-while-revalidate=86400")
+                                                 f"s-maxage={cfg['CDN_CACHE_SECONDS']}, stale-while-revalidate=300")
                 resp.headers["Vary"] = "Accept-Encoding, Cookie"
 
         if g.get("t0"):
@@ -169,7 +169,9 @@ def create_app(config_object=Config, **overrides):
         return render_template("errors/400.html", message=getattr(e, "description", None)), 400
 
     @app.errorhandler(500)
-    def _500(_e):
+    def _500(e):
+        from . import activity
+        activity.record_error(getattr(e, "original_exception", None) or e)
         return render_template("errors/500.html"), 500
 
     return app

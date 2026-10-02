@@ -250,6 +250,44 @@ CREATE TABLE IF NOT EXISTS listing_views (       -- one row per listing per UTC 
     PRIMARY KEY (listing_id, day)
 );
 
+CREATE TABLE IF NOT EXISTS saved_searches (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    category TEXT,                           -- NULL = every category
+    price_max INTEGER,
+    profit_min INTEGER,
+    age_min REAL,
+    model TEXT,
+    verified INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_saved_searches_user ON saved_searches(user_id);
+
+CREATE TABLE IF NOT EXISTS activity_log (        -- who did what: sign-ins, password changes, admin actions
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    at INTEGER NOT NULL,
+    user_id INTEGER,
+    user_email TEXT,
+    ip TEXT,
+    action TEXT NOT NULL,
+    target TEXT,
+    detail TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_activity_at ON activity_log(at);
+
+CREATE TABLE IF NOT EXISTS error_log (           -- one row per distinct server error, with a counter
+    fingerprint TEXT PRIMARY KEY,
+    first_at INTEGER NOT NULL,
+    last_at INTEGER NOT NULL,
+    count INTEGER NOT NULL DEFAULT 1,
+    method TEXT,
+    path TEXT,
+    error_type TEXT,
+    message TEXT,
+    traceback TEXT,
+    notified_at INTEGER
+);
+
 CREATE TABLE IF NOT EXISTS password_resets (
     token_hash TEXT PRIMARY KEY,           -- SHA-256 of the emailed token; the token itself is never stored
     user_id INTEGER NOT NULL REFERENCES users(id),
