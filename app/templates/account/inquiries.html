@@ -1,14 +1,22 @@
 {% extends "base.html" %}
-{% block title %}Inquiries | {{ BRAND }}{% endblock %}
+{% block title %}Messages | {{ BRAND }}{% endblock %}
 {% block main %}
 <div class="wrap">
   {% include "account/_nav.html" %}
-  <h1>Inquiries</h1>
-  <section class="section"><h2 class="section-title">Received about your listings</h2>
-  {% if received %}<div class="stack">{% for i in received %}<article class="panel"><p class="meta-line"><span>{{ i.title }}</span><span>{{ i.created_at|human_date }}</span><span>From {{ i.buyer_email }}</span></p><p>{{ i.message }}</p></article>{% endfor %}</div>
-  {% else %}<p class="muted">No inquiries yet.</p>{% endif %}</section>
-  <section class="section"><h2 class="section-title">Sent by you</h2>
-  {% if sent %}<div class="stack">{% for i in sent %}<article class="panel"><p class="meta-line"><span><a href="/marketplace/{{ i.category }}/{{ i.slug }}-{{ i.lid }}/">{{ i.title }}</a></span><span>{{ i.created_at|human_date }}</span></p><p>{{ i.message }}</p></article>{% endfor %}</div>
-  {% else %}<p class="muted">You haven't contacted any sellers.</p>{% endif %}</section>
+  <h1>Messages</h1>
+  <p class="lede">Conversations between buyers and sellers about listings. Contact details are never shown publicly.</p>
+  {% if threads %}
+  <div class="stack mt">
+  {% for t in threads %}
+    <a class="thread-row{% if t.unread %} unread{% endif %}" href="/account/inquiries/{{ t.id }}/">
+      <div class="row"><b>{{ t.title }}</b>{% if t.unread %}<span class="count" aria-label="{{ t.unread }} unread">{{ t.unread }} new</span>{% endif %}</div>
+      <p class="meta-line"><span>{{ 'From ' ~ t.other if t.i_am_seller else 'You asked the seller' }}</span><span>{{ t.last_at|human_date }}</span><span>{{ t.replies + 1 }} message{{ '' if t.replies == 0 else 's' }}</span></p>
+      <p class="muted">{{ t.snippet }}{% if t.snippet|length >= 140 %}…{% endif %}</p>
+    </a>
+  {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">No messages yet. To contact a seller, open a listing and use the message box. <a href="/businesses-for-sale/">Browse businesses for sale</a>.</p>
+  {% endif %}
 </div>
 {% endblock %}

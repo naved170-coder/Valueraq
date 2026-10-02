@@ -52,8 +52,8 @@ def create_app(config_object=Config, **overrides):
     from . import filters
     filters.register(app)
 
-    from .views import public, marketplace, account, api, admin, seo_files
-    for bp in (public.bp, marketplace.bp, account.bp, api.bp, admin.bp, seo_files.bp):
+    from .views import public, marketplace, account, api, admin, seo_files, market_account
+    for bp in (public.bp, marketplace.bp, account.bp, api.bp, admin.bp, seo_files.bp, market_account.bp):
         app.register_blueprint(bp)
 
     preferred = urlsplit(app.config["SITE_URL"])

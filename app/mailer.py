@@ -164,3 +164,68 @@ def admin_contact_message(name, email, topic, message):
             f"white-space:pre-wrap\">{_html.escape(message)}</blockquote>"
             "<p>Reply to this email to answer them.</p>" + _btn(url, "All messages"))
     return send(_admins(), f"Contact form: {(topic or 'new message')[:60]}", text, html, reply_to=email)
+
+
+# ---------------------------------------------------------------- marketplace notifications
+def watch_alert(to, listing_title, kind, listing_path, old_price=None, new_price=None, currency="USD"):
+    c = current_app.config
+    url = c["SITE_URL"] + listing_path
+    manage = c["SITE_URL"] + "/account/watchlist/"
+    title = _html.escape(listing_title)
+    if kind == "sold":
+        subject = f"Sold: {listing_title[:60]}"
+        text = (f"A listing on your watchlist has been sold: \"{listing_title}\".\n\n{url}\n\n"
+                f"Manage your watchlist: {manage}")
+        html = f"<p>A listing on your watchlist has been <b>sold</b>: {title}.</p>" + _btn(manage, "Open your watchlist")
+    else:
+        from .filters import money
+        old, new = money(old_price, currency), money(new_price, currency)
+        subject = f"Price reduced: {listing_title[:55]}"
+        text = (f"The asking price of a listing on your watchlist has dropped.\n\n\"{listing_title}\"\n"
+                f"Was {old}, now {new}.\n\n{url}\n\nManage your watchlist: {manage}")
+        html = (f"<p>The asking price of a listing on your watchlist has dropped.</p><p><b>{title}</b><br>"
+                f"Was {old}, now <b>{new}</b>.</p>" + _btn(url, "View the listing"))
+    return send(to, subject, text, html)
+
+
+def message_notification(to, listing_title, from_role, body, inquiry_id):
+    c = current_app.config
+    url = f"{c['SITE_URL']}/account/inquiries/{inquiry_id}/"
+    text = (f"You have a new message from {from_role} about \"{listing_title}\".\n\n{body}\n\n"
+            f"Reply on {c['BRAND']}: {url}")
+    html = (f"<p>You have a new message from {from_role} about <b>{_html.escape(listing_title)}</b>.</p>"
+            f"<blockquote style=\"margin:0;padding:12px 16px;background:#f2f5f3;border-left:3px solid #0d6a54;"
+            f"white-space:pre-wrap\">{_html.escape(body)}</blockquote>" + _btn(url, "Reply"))
+    return send(to, f"New message about \"{listing_title[:55]}\"", text, html)
+
+
+def admin_verification_request(listing_title, kind, seller_email, note):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/listings/?status=published&verification=requested"
+    text = (f"A seller has asked for verification.\n\nListing: {listing_title}\nRequested: {kind}\n"
+            f"Seller: {seller_email}\n\nEvidence they can share:\n{note}\n\nReview: {url}")
+    html = (f"<p>A seller has asked for verification.</p><p><b>{_html.escape(listing_title)}</b><br>"
+            f"Requested: {_html.escape(kind)}<br>Seller: {_html.escape(seller_email)}</p>"
+            f"<blockquote style=\"margin:0;padding:12px 16px;background:#f2f5f3;border-left:3px solid #0d6a54;"
+            f"white-space:pre-wrap\">{_html.escape(note)}</blockquote>"
+            "<p>Reply to this email to arrange the evidence check with the seller.</p>" + _btn(url, "Review requests"))
+    return send(_admins(), f"Verification request: {listing_title[:55]}", text, html, reply_to=seller_email)
+
+
+def verification_decision(seller_email, listing_title, label, granted, note, public_url):
+    c = current_app.config
+    if granted:
+        subject = f"Your listing is now {label.lower()}"
+        text = (f"Your listing \"{listing_title}\" now shows the \"{label}\" badge.\n\n{public_url}\n\n"
+                f"What the badge means: {c['SITE_URL']}/verification/")
+        html = (f"<p>Your listing <b>{_html.escape(listing_title)}</b> now shows the "
+                f"<b>{_html.escape(label)}</b> badge.</p>" + _btn(public_url, "View your listing"))
+    else:
+        subject = "Your verification request"
+        why = f"\n\nReviewer note: {note}" if note else ""
+        text = (f"We couldn't verify your listing \"{listing_title}\" this time.{why}\n\n"
+                f"You can request verification again from My listings: {c['SITE_URL']}/account/listings/")
+        html = (f"<p>We couldn't verify your listing <b>{_html.escape(listing_title)}</b> this time.</p>"
+                + (f"<p><b>Reviewer note:</b> {_html.escape(note)}</p>" if note else "")
+                + _btn(c["SITE_URL"] + "/account/listings/", "Open My listings"))
+    return send(seller_email, subject, text, html)

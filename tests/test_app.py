@@ -739,6 +739,126 @@ class Backups(Base):
         self.assertIn("Send me a test email", html)
 
 
+
+class MarketplaceAccountFeatures(Base):
+    def setUp(self):
+        super().setUp()
+        self.signup("seller@example.com")
+        self.lst = self.make_listing(asking_price=480000)
+        self.path = M.listing_path(self.lst)
+        self.logout()
+        self.box = self.app.extensions.setdefault("outbox", [])
+
+    def login(self, email, pw="correct-horse-1"):
+        return self.client.post("/login/", data=dict(email=email, password=pw, csrf=self.csrf()))
+
+    def test_watchlist_save_remove_and_alerts(self):
+        self.assertIn("Save to watchlist", self.client.get(self.path).get_data(as_text=True))
+        self.assertEqual(self.client.post(self.path + "save/", data=dict(csrf=self.csrf())).status_code, 302)  # to login
+        self.signup("buyer@example.com")
+        self.client.post(self.path + "save/", data=dict(csrf=self.csrf()))
+        self.assertIn("Saved", self.client.get(self.path).get_data(as_text=True))
+        page = self.client.get("/account/watchlist/").get_data(as_text=True)
+        self.assertIn(self.lst["title"], page)
+        self.assertIn("noindex", page)
+        with self.app.app_context():
+            from app.views.market_account import notify_watchers
+            self.assertEqual(notify_watchers(self.lst["id"]), 0)                 # nothing changed
+            db.execute("UPDATE listings SET asking_price=400000 WHERE id=?", (self.lst["id"],))
+            self.assertEqual(notify_watchers(self.lst["id"]), 1)
+            self.assertIn("Price reduced", self.box[-1]["subject"])
+            self.assertIn("$400,000", self.box[-1]["text"])
+            self.assertEqual(notify_watchers(self.lst["id"]), 0)                 # not told twice
+            M.set_status(self.lst["id"], "sold", by="test")
+            self.assertEqual(notify_watchers(self.lst["id"], old_status="published"), 1)
+            self.assertTrue(self.box[-1]["subject"].startswith("Sold"))
+        self.assertIn("Sold", self.client.get("/account/watchlist/").get_data(as_text=True))
+        # the seller can't save their own listing
+        self.logout()
+        self.login("seller@example.com")
+        with self.app.app_context():
+            M.set_status(self.lst["id"], "published", by="test")
+        self.client.post(self.path + "save/", data=dict(csrf=self.csrf()))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM watchlist", one=True)["n"], 1)
+
+    def test_message_thread_unread_and_privacy(self):
+        self.signup("buyer@example.com")
+        self.client.post(self.path + "inquire/", data=dict(csrf=self.csrf(), message="Could you share the last 12 months of revenue?"))
+        with self.app.app_context():
+            iid = db.query("SELECT id FROM inquiries", one=True)["id"]
+        self.logout()
+        self.login("seller@example.com")
+        self.assertIn('aria-label="1 unread"', self.client.get("/account/").get_data(as_text=True))
+        t = self.client.get(f"/account/inquiries/{iid}/").get_data(as_text=True)
+        self.assertIn("last 12 months of revenue", t)
+        self.assertNotIn("unread", self.client.get("/account/").get_data(as_text=True))
+        self.client.post(f"/account/inquiries/{iid}/", data=dict(csrf=self.csrf(), message="Yes, <b>here</b> it is."))
+        self.assertEqual(self.box[-1]["to"], ["buyer@example.com"])
+        self.assertIn(f"/account/inquiries/{iid}/", self.box[-1]["text"])
+        self.logout()
+        self.login("buyer@example.com")
+        lst = self.client.get("/account/inquiries/").get_data(as_text=True)
+        self.assertIn("1 new", lst)
+        self.assertNotIn("seller@example.com", lst)                             # seller's email stays private
+        t = self.client.get(f"/account/inquiries/{iid}/").get_data(as_text=True)
+        self.assertIn("&lt;b&gt;here&lt;/b&gt;", t)                              # user text is escaped
+        self.assertNotIn("seller@example.com", t)
+        self.assertNotIn("1 new", self.client.get("/account/inquiries/").get_data(as_text=True))
+        # a third person can't open the thread
+        self.logout()
+        self.signup("other@example.com")
+        self.assertEqual(self.client.get(f"/account/inquiries/{iid}/").status_code, 404)
+        self.assertEqual(self.client.post(f"/account/inquiries/{iid}/", data=dict(csrf=self.csrf(), message="hi there")).status_code, 404)
+
+    def test_seller_analytics_counts_views_messages_and_saves(self):
+        for _ in range(3):
+            self.client.get(self.path)                                         # anonymous views
+        self.signup("buyer@example.com")
+        self.client.post(self.path + "save/", data=dict(csrf=self.csrf()))
+        self.client.post(self.path + "inquire/", data=dict(csrf=self.csrf(), message="Interested, please send more detail."))
+        self.logout()
+        self.login("seller@example.com")
+        self.client.get(self.path)                                             # owner view is not counted
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT SUM(views) n FROM listing_views", one=True)["n"],
+                             db.query("SELECT view_count FROM listings", one=True)["view_count"])
+        html = self.client.get("/account/analytics/").get_data(as_text=True)
+        self.assertIn("Views by week", html)
+        self.assertIn(self.lst["title"], html)
+        self.logout()
+        self.signup("nolistings@example.com")
+        self.assertIn("haven't listed a business yet", self.client.get("/account/analytics/").get_data(as_text=True))
+
+    def test_verification_request_and_badge(self):
+        self.assertNotIn("vbadge", self.client.get(self.path).get_data(as_text=True))
+        self.login("seller@example.com")
+        self.assertIn("Get a verification badge", self.client.get("/account/listings/").get_data(as_text=True))
+        lid = self.lst["id"]
+        short = self.client.post(f"/account/listings/{lid}/verification/", data=dict(csrf=self.csrf(), type="revenue_verified", note="x"),
+                                 follow_redirects=True)
+        self.assertIn("what evidence", short.get_data(as_text=True))
+        self.client.post(f"/account/listings/{lid}/verification/", data=dict(
+            csrf=self.csrf(), type="revenue_verified", note="Read-only Stripe access and 12 months of payout statements."))
+        self.assertEqual(self.box[-1]["to"], ["admin@example.com"])
+        self.assertIn("Verification requested on", self.client.get("/account/listings/").get_data(as_text=True))
+        self.logout()
+        self.signup("admin@example.com")
+        self.assertIn("Read-only Stripe access", self.client.get("/admin/listings/?verification=requested").get_data(as_text=True))
+        self.client.post(f"/admin/listings/{lid}/", data=dict(csrf=self.csrf(), action="verify", verification="revenue_verified"))
+        self.assertEqual(self.box[-1]["to"], ["seller@example.com"])
+        self.assertIn("revenue verified", self.box[-1]["subject"])
+        self.logout()
+        page = self.client.get(self.path).get_data(as_text=True)
+        self.assertIn('class="vbadge"', page)
+        self.assertIn("Revenue verified", page)
+        with self.app.app_context():
+            self.assertIsNone(db.query("SELECT verification_requested_at v FROM listings", one=True)["v"])
+        self.app.config["VERIFICATION_REQUESTS_ENABLED"] = False
+        self.login("seller@example.com")
+        self.assertNotIn("Request a higher verification level", self.client.get("/account/listings/").get_data(as_text=True))
+
+
 # ---------------------------------------------------------------- admin
 class Admin(Base):
     def login_admin(self):

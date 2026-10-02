@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Watchlist | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <h1>Watchlist</h1>
+  <p class="lede">Listings you've saved. We email you if the asking price drops or the business sells.</p>
+  {% if rows %}
+  <div class="stack mt">
+  {% for l in rows %}
+    <article class="panel">
+      <div class="row"><h2 class="h3">{% if l.available %}<a href="{{ l.path }}">{{ l.title }}</a>{% else %}{{ l.title }}{% endif %}</h2>
+        <span class="tag">{{ l.category_name }}</span>
+        {% if l.status == 'sold' %}<span class="tag">Sold</span>{% elif not l.available %}<span class="tag">No longer listed</span>{% endif %}
+        {% if l.verification != 'unverified' %}<span class="vbadge">{{ verify_labels[l.verification] }}</span>{% endif %}</div>
+      <p class="meta-line"><span>{{ 'Was asking' if l.status == 'sold' else 'Asking' }} <b class="num">{{ l.asking_price|money(l.currency) }}</b></span><span>Profit {{ l.monthly_profit|money(l.currency) }}/mo</span><span>Saved {{ l.saved_at|human_date }}</span></p>
+      <form method="post" action="/marketplace/{{ l.category }}/{{ l.slug }}-{{ l.id }}/save/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="next" value="/account/watchlist/">
+        {% if l.available %}<button class="btn small quiet" type="submit">Remove</button>{% endif %}</form>
+    </article>
+  {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">Nothing saved yet. Open a listing and choose “Save to watchlist”. <a href="/businesses-for-sale/">Browse businesses for sale</a>.</p>
+  {% endif %}
+</div>
+{% endblock %}

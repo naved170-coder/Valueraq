@@ -243,8 +243,13 @@ def search_performance():
 @auth.admin_required
 def listings():
     status = request.args.get("status", "pending")
-    rows = db.query("SELECT l.*, u.email seller_email FROM listings l JOIN users u ON u.id=l.seller_id WHERE status=? "
-                    "ORDER BY updated_at DESC LIMIT 200", (status,))
+    requested = request.args.get("verification") == "requested"
+    if requested:
+        rows = db.query("SELECT l.*, u.email seller_email FROM listings l JOIN users u ON u.id=l.seller_id "
+                        "WHERE l.verification_requested_at IS NOT NULL ORDER BY l.verification_requested_at LIMIT 200")
+    else:
+        rows = db.query("SELECT l.*, u.email seller_email FROM listings l JOIN users u ON u.id=l.seller_id WHERE status=? "
+                        "ORDER BY updated_at DESC LIMIT 200", (status,))
     out = []
     for r in rows:
         d = dict(r)
@@ -252,8 +257,11 @@ def listings():
         d["flags"] = M.decode_flags(r["quality_flags"])
         out.append(d)
     counts = {r["status"]: r["n"] for r in db.query("SELECT status, COUNT(*) n FROM listings GROUP BY status")}
-    return render_template("admin/listings.html", rows=out, status=status, counts=counts, statuses=M.STATUSES,
-                           section="listings")
+    waiting = db.query("SELECT COUNT(*) n FROM listings WHERE verification_requested_at IS NOT NULL", one=True)["n"]
+    from .market_account import VERIFY_TYPES
+    return render_template("admin/listings.html", rows=out, status=None if requested else status, counts=counts,
+                           statuses=M.STATUSES, section="listings", requested=requested, waiting=waiting,
+                           verify_types=VERIFY_TYPES)
 
 
 @bp.post("/listings/<int:lid>/")
@@ -265,6 +273,9 @@ def listing_action(lid):
         rep = request.form.get("replacement_id")
         before = db.query("SELECT status FROM listings WHERE id=?", (lid,), one=True)
         l = M.set_status(lid, action, by=_who(), note=note, replacement_id=int(rep) if rep and rep.isdigit() else None)
+        if l and before and action in ("published", "sold"):
+            from .market_account import notify_watchers
+            notify_watchers(lid, old_status=before["status"])
         if l and before and before["status"] != action and action in ("published", "rejected"):
             seller = db.query("SELECT email FROM users WHERE id=?", (l["seller_id"],), one=True)
             if seller:
@@ -274,8 +285,18 @@ def listing_action(lid):
     elif action == "verify":
         v = request.form.get("verification")
         if v in ("unverified", "revenue_verified", "traffic_verified", "fully_verified"):
-            db.execute("UPDATE listings SET verification=?, updated_at=? WHERE id=?", (v, db.now(), lid))
+            before = db.query("SELECT l.*, u.email seller_email FROM listings l JOIN users u ON u.id=l.seller_id "
+                              "WHERE l.id=?", (lid,), one=True)
+            db.execute("UPDATE listings SET verification=?, updated_at=?, verification_requested_at=NULL WHERE id=?",
+                       (v, db.now(), lid))
             M.refresh(lid)
+            if before and (before["verification"] != v or before["verification_requested_at"]):
+                from .. import mailer
+                from .market_account import VERIFY_LABELS
+                granted = v != "unverified"
+                if granted or before["verification_requested_at"]:
+                    mailer.verification_decision(before["seller_email"], before["title"], VERIFY_LABELS[v], granted,
+                                                 note, current_app.config["SITE_URL"] + M.listing_path(before))
     elif action == "test":
         db.execute("UPDATE listings SET is_test=1-is_test WHERE id=?", (lid,))
         M.refresh(lid)

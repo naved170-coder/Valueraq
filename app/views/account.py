@@ -150,8 +150,8 @@ def home():
     u = g.user
     reports = db.query("SELECT * FROM reports WHERE user_id=? ORDER BY created_at DESC LIMIT 5", (u["id"],))
     listings = db.query("SELECT * FROM listings WHERE seller_id=? ORDER BY updated_at DESC LIMIT 5", (u["id"],))
-    inbox = db.query("SELECT COUNT(*) n FROM inquiries i JOIN listings l ON l.id=i.listing_id WHERE l.seller_id=? "
-                     "AND i.status='new'", (u["id"],), one=True)["n"]
+    from .market_account import unread_count
+    inbox = unread_count(u)
     return _r("account/home.html", reports=reports, listings=listings, inbox=inbox,
               tools=catalog.TOOLS, trial_days=_trial_days_left(u))
 
@@ -303,6 +303,8 @@ def listing_status(lid):
     action = request.form.get("action")
     if action == "sold" and l["status"] == "published":
         M.set_status(lid, "sold", by=f"user:{g.user['id']}")
+        from .market_account import notify_watchers
+        notify_watchers(lid, old_status=l["status"])
         flash("Marked as sold. The page stays visible with a sold notice and leaves search results.", "ok")
     elif action == "withdraw":
         M.set_status(lid, "removed", by=f"user:{g.user['id']}", note="withdrawn by seller")
@@ -325,20 +327,6 @@ def listing_feature(lid):
     except billing.BillingError as e:
         flash(str(e), "error")
         return redirect(url_for("account.listings"))
-
-
-# ---------------------------------------------------------------- inquiries
-@bp.get("/account/inquiries/")
-@auth.login_required
-def inquiries():
-    received = db.query("SELECT i.*, l.title, l.id lid, u.email buyer_email FROM inquiries i JOIN listings l ON "
-                        "l.id=i.listing_id JOIN users u ON u.id=i.buyer_id WHERE l.seller_id=? ORDER BY i.created_at DESC",
-                        (g.user["id"],))
-    sent = db.query("SELECT i.*, l.title, l.slug, l.category, l.id lid FROM inquiries i JOIN listings l ON "
-                    "l.id=i.listing_id WHERE i.buyer_id=? ORDER BY i.created_at DESC", (g.user["id"],))
-    db.execute("UPDATE inquiries SET status='read' WHERE status='new' AND listing_id IN "
-               "(SELECT id FROM listings WHERE seller_id=?)", (g.user["id"],))
-    return _r("account/inquiries.html", received=received, sent=sent)
 
 
 # ---------------------------------------------------------------- billing

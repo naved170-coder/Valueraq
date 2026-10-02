@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS listings (
     is_featured INTEGER NOT NULL DEFAULT 0,
     featured_until INTEGER,
     featured_subscription_id TEXT,
+    verification_requested_at INTEGER,
+    verification_request_type TEXT,
+    verification_request_note TEXT,
     replacement_listing_id INTEGER,
     moderation_note TEXT,
     quality_score INTEGER,
@@ -221,6 +224,32 @@ CREATE TABLE IF NOT EXISTS contact_messages (
     created_at INTEGER NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS messages (            -- replies inside an inquiry thread (the inquiry itself is message one)
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    inquiry_id INTEGER NOT NULL REFERENCES inquiries(id),
+    sender_id INTEGER NOT NULL REFERENCES users(id),
+    body TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    read_at INTEGER
+);
+CREATE INDEX IF NOT EXISTS idx_messages_inquiry ON messages(inquiry_id, created_at);
+
+CREATE TABLE IF NOT EXISTS watchlist (
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    listing_id INTEGER NOT NULL REFERENCES listings(id),
+    created_at INTEGER NOT NULL,
+    last_price INTEGER,                      -- asking price the buyer last saw or was told about
+    PRIMARY KEY (user_id, listing_id)
+);
+CREATE INDEX IF NOT EXISTS idx_watchlist_listing ON watchlist(listing_id);
+
+CREATE TABLE IF NOT EXISTS listing_views (       -- one row per listing per UTC day, for seller analytics
+    listing_id INTEGER NOT NULL REFERENCES listings(id),
+    day TEXT NOT NULL,                       -- YYYY-MM-DD
+    views INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (listing_id, day)
+);
+
 CREATE TABLE IF NOT EXISTS password_resets (
     token_hash TEXT PRIMARY KEY,           -- SHA-256 of the emailed token; the token itself is never stored
     user_id INTEGER NOT NULL REFERENCES users(id),
@@ -315,6 +344,9 @@ def init_db(app):
 MIGRATIONS = [
     ("listings", "featured_subscription_id", "TEXT"),
     ("users", "session_version", "INTEGER NOT NULL DEFAULT 0"),
+    ("listings", "verification_requested_at", "INTEGER"),
+    ("listings", "verification_request_type", "TEXT"),
+    ("listings", "verification_request_note", "TEXT"),
 ]
 
 

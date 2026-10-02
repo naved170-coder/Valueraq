@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Analytics | {{ BRAND }}{% endblock %}
+{% block main %}
+<div class="wrap">
+  {% include "account/_nav.html" %}
+  <h1>Listing analytics</h1>
+  {% if not rows %}
+  <p class="empty">You haven't listed a business yet. <a href="/sell/">Create your first listing</a> to see views, saves and messages here.</p>
+  {% else %}
+  <div class="stat-row mt">
+    <div class="stat"><small>Views, last 30 days</small><b class="num">{{ totals.views30|num }}</b></div>
+    <div class="stat"><small>Views, all time</small><b class="num">{{ totals.views|num }}</b></div>
+    <div class="stat"><small>Buyer messages</small><b class="num">{{ totals.inquiries|num }}</b></div>
+    <div class="stat"><small>Saved to watchlists</small><b class="num">{{ totals.saves|num }}</b></div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">Views by week</h2>
+    <div class="table-wrap">
+    <table class="weeks">
+      <thead><tr><th scope="col">Week starting</th><th scope="col" class="r">Views</th><th scope="col"><span class="sr">Relative size</span></th></tr></thead>
+      <tbody>
+      {% for w in weeks %}
+        <tr><th scope="row">{{ w.start.strftime('%b %-d') }}{% if w.current %} <span class="muted">(this week)</span>{% endif %}</th>
+        <td class="r num">{{ w.views|num }}</td>
+        <td class="barcell"><span class="wbar" style="width: {{ (w.views / peak * 100)|round(1) }}%"></span></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <p class="hint">All your listings combined. Your own visits and search-engine audits are not counted. Daily counting started on October 2, 2026, so earlier weeks show 0.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">By listing</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>Listing</th><th>Status</th><th class="r">Views (30 days)</th><th class="r">Views (all)</th><th class="r">Messages</th><th class="r">Saves</th><th class="r">Messages per 100 views</th><th class="r">Quality</th></tr></thead>
+      <tbody>
+      {% for l in rows %}
+        <tr><td>{% if l.status in ('published','sold') %}<a href="{{ l.path }}">{{ l.title }}</a>{% else %}{{ l.title }}{% endif %}</td>
+        <td><span class="status {{ l.status }}">{{ l.status|capitalize }}</span></td>
+        <td class="r num">{{ l.views30|num }}</td><td class="r num">{{ l.view_count|num }}</td>
+        <td class="r num">{{ l.inquiries|num }}</td><td class="r num">{{ l.saves|num }}</td>
+        <td class="r num">{{ '%.1f'|format(l.rate) if l.rate is not none else '—' }}</td>
+        <td class="r num">{{ l.quality_score if l.quality_score is not none else '—' }}/100</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <p class="hint">“Saves” is how many buyers have the listing on their watchlist. A low message rate with many views often means the price or the description needs work; see <a href="/guides/selling-digital-businesses/">how to sell a digital business</a>.</p>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

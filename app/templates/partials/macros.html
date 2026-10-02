@@ -56,7 +56,7 @@
    actually sold for, so the card must not let one be read as the other. #}
 {% macro listing_card(l, sold=false) %}
 <a class="lcard" href="{{ l.path }}">
-  <div class="row"><span class="tag">{{ l.category_name }}</span>{% if sold %}<span class="tag">Sold</span>{% endif %}{% if l.is_featured and not sold %}<span class="tag good">Featured</span>{% endif %}{% if l.verification != 'unverified' %}<span class="tag user">{{ l.verification|replace('_',' ')|capitalize }}</span>{% endif %}</div>
+  <div class="row"><span class="tag">{{ l.category_name }}</span>{% if sold %}<span class="tag">Sold</span>{% endif %}{% if l.is_featured and not sold %}<span class="tag good">Featured</span>{% endif %}{% if l.verification != 'unverified' %}<span class="vbadge">{{ l.verification|replace('_',' ')|capitalize }}</span>{% endif %}</div>
   <h3>{{ l.title }}</h3>
   {% if l.headline %}<p class="muted">{{ l.headline }}</p>{% endif %}
   <div class="facts">

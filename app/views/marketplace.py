@@ -207,6 +207,8 @@ def listing(cat, slug_id):
     meta.schema.append(schema.listing_product(l, canonical_path, {k: v for k, v in facts.items() if k != "Verification"}))
     if not is_owner and not request.headers.get("X-VQ-Audit"):
         db.execute("UPDATE listings SET view_count=view_count+1 WHERE id=?", (l["id"],))
+        from .market_account import record_view
+        record_view(l["id"])
         analytics.server_event("listing_viewed", {"listing": l["id"], "category": l["category"]})
     tool = catalog.TOOLS_BY_KEY[c["tool"]]
     rel = linkgraph.related_for(canonical_path, explicit=[c["path"], tool["path"], "/guides/digital-business-due-diligence/",
@@ -214,7 +216,13 @@ def listing(cat, slug_id):
     similar = _decorate(db.query("SELECT * FROM listings WHERE category=? AND status='published' AND is_test=0 AND id!=? "
                                  "ORDER BY published_at DESC LIMIT 3", (l["category"], l["id"])))
     return render_page("listing.html", meta, l=l, c=c, facts=facts, desc=desc_public, tool=tool, related=rel,
-                       similar=similar, is_owner=is_owner, mult=M.implied_multiples(l))
+                       similar=similar, is_owner=is_owner, mult=M.implied_multiples(l),
+                       saved=_is_saved(u, l["id"]))
+
+
+def _is_saved(user, listing_id):
+    from .market_account import is_saved
+    return is_saved(user, listing_id)
 
 
 def _listing_description(l, c):

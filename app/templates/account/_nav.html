@@ -1,8 +1,11 @@
 <nav class="admin-nav" aria-label="Account">
   <a href="/account/" {% if current_path == '/account/' %}aria-current="page"{% endif %}>Overview</a>
   <a href="/account/reports/" {% if current_path.startswith('/account/reports') %}aria-current="page"{% endif %}>Reports</a>
+  <a href="/account/watchlist/" {% if current_path.startswith('/account/watchlist') %}aria-current="page"{% endif %}>Watchlist</a>
   <a href="/account/listings/" {% if current_path.startswith('/account/listings') %}aria-current="page"{% endif %}>My listings</a>
-  <a href="/account/inquiries/" {% if current_path.startswith('/account/inquiries') %}aria-current="page"{% endif %}>Inquiries</a>
+  <a href="/account/analytics/" {% if current_path.startswith('/account/analytics') %}aria-current="page"{% endif %}>Analytics</a>
+  {% set unread = unread_messages() %}
+  <a href="/account/inquiries/" {% if current_path.startswith('/account/inquiries') %}aria-current="page"{% endif %}>Messages{% if unread %} <span class="count" aria-label="{{ unread }} unread">{{ unread }}</span>{% endif %}</a>
   <a href="/account/billing/" {% if current_path.startswith('/account/billing') %}aria-current="page"{% endif %}>Plan &amp; billing</a>
   <a href="/account/settings/" {% if current_path.startswith('/account/settings') %}aria-current="page"{% endif %}>Settings</a>
   {% if user.role == 'admin' %}<a href="/admin/">Admin</a>{% endif %}

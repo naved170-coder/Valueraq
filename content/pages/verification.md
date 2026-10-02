@@ -4,7 +4,7 @@ meta_title: How VALUERAQ Verifies Marketplace Listings
 meta_description: What each VALUERAQ listing verification status means, what evidence our team checks, and what verification doesn't cover.
 h1: Listing Verification
 answer: A verification status on a VALUERAQ listing means our team has checked specific evidence supplied by the seller, such as revenue against payment-processor records or traffic against analytics access. Unverified listings have passed moderation, but their figures haven't been checked against evidence.
-updated: 2026-09-30
+updated: 2026-10-02
 related: /marketplace-rules/, /guides/digital-business-due-diligence/, /businesses-for-sale/
 ---
 
@@ -19,7 +19,7 @@ related: /marketplace-rules/, /guides/digital-business-due-diligence/, /business
 
 ## How verification works
 
-1. The seller requests verification and grants read-only access or provides original statements.
+1. The seller requests verification from **My listings** in their account (it's free) and says what evidence they can share. A reviewer then emails them to arrange read-only access or original statements.
 2. A reviewer compares the evidence with the listing's figures.
 3. If they match within reasonable rounding, the status is applied. If not, the seller is asked to correct the listing.
 4. The status applies to the period checked. If the seller later edits their figures, the listing is reviewed again.

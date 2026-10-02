@@ -99,6 +99,9 @@ class Config:
     R2_ACCESS_KEY_ID = os.environ.get("R2_ACCESS_KEY_ID", "")
     R2_SECRET_ACCESS_KEY = os.environ.get("R2_SECRET_ACCESS_KEY", "")
     R2_BUCKET = os.environ.get("R2_BUCKET", "")
+    # Sellers can ask for a verification badge; a reviewer (a person) checks the evidence.
+    # Set VERIFICATION_REQUESTS=0 to hide the request form while nobody is available to review.
+    VERIFICATION_REQUESTS_ENABLED = _bool("VERIFICATION_REQUESTS", True)
     BACKUP_EVERY_HOURS = 24
     BACKUP_KEEP = 30
 
@@ -117,7 +120,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 3600
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "6")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "7")
 
 
 class TestConfig(Config):

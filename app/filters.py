@@ -76,6 +76,10 @@ def register(app):
     app.jinja_env.filters['fromjson'] = _json.loads
     app.jinja_env.filters.update(money=money, num=num, pct=pct, effect=effect, human_date=human_date, mult=mult, datetime_utc=datetime_utc)
 
+    def _unread():
+        from .views.market_account import unread_count
+        return unread_count(g.get("user"))
+
     @app.context_processor
     def _ctx():
         cfg = current_app.config
@@ -97,4 +101,7 @@ def register(app):
             current_path=request.path,
             year=datetime.date.today().year,
             form_t0=int(__import__('time').time()),
+            unread_messages=_unread,
+            verify_labels={"unverified": "Unverified", "revenue_verified": "Revenue verified",
+                           "traffic_verified": "Traffic verified", "fully_verified": "Fully verified"},
         )

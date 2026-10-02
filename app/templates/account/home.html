@@ -17,7 +17,7 @@
       <p><a href="/tools/">Valuation tools</a></p></section>
     <section class="panel"><h2>Your listings</h2>
       {% if listings %}<div class="toc"><ol>{% for l in listings %}<li>{{ l.title }} <span class="status {{ l.status }}">{{ l.status }}</span></li>{% endfor %}</ol></div>{% else %}<p class="muted">You haven't listed a business.</p>{% endif %}
-      <p><a href="/sell/">List a business</a>{% if inbox %} · <a href="/account/inquiries/">{{ inbox }} new inquir{{ 'y' if inbox == 1 else 'ies' }}</a>{% endif %}</p></section>
+      <p><a href="/sell/">List a business</a>{% if inbox %} · <a href="/account/inquiries/">{{ inbox }} new message{{ '' if inbox == 1 else 's' }}</a>{% endif %}</p></section>
   </div>
 </div>
 {% endblock %}

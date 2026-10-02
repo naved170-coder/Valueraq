@@ -11,7 +11,7 @@
   {% for l in listings %}
     <article class="panel">
       <div class="row"><h2 class="h3">{{ l.title }}</h2><span class="status {{ l.status }}">{{ l.status|capitalize }}</span>{% if l.is_featured %}<span class="tag good">Featured{% if l.featured_until %} until {{ l.featured_until|human_date }}{% endif %}</span>{% endif %}</div>
-      <p class="meta-line"><span>{{ l.view_count }} views</span><span>{{ l.inquiries }} inquiries</span><span>Quality score {{ l.quality_score }}/100</span><span>{{ 'Eligible for search engines' if l.indexable else 'Not shown in search engines yet' }}</span></p>
+      <p class="meta-line"><span>{{ l.view_count }} views</span><span>{{ l.inquiries }} message{{ '' if l.inquiries == 1 else 's' }}</span><span><a href="/account/analytics/">Analytics</a></span><span>Quality score {{ l.quality_score }}/100</span><span>{{ 'Eligible for search engines' if l.indexable else 'Not shown in search engines yet' }}</span></p>
       {% if l.moderation_note %}<p class="alert">Reviewer note: {{ l.moderation_note }}</p>{% endif %}
       {% if l.flags %}<ul>{% for sev, msg in l.flags %}<li><span class="sev {{ sev }}">{{ sev }}</span> {{ msg }}</li>{% endfor %}</ul>{% endif %}
       <div class="row">
@@ -30,6 +30,32 @@
         {% endif %}
         {% if l.status not in ('removed','suspended') %}<form method="post" action="/account/listings/{{ l.id }}/status/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small quiet" name="action" value="withdraw">Withdraw</button></form>{% endif %}
       </div>
+      {% if l.status == 'published' %}
+      <div class="verify-box">
+        {% if l.verification != 'unverified' %}<p><span class="vbadge">{{ verify_labels[l.verification] }}</span> This badge is shown on your listing. <a href="/verification/">What it means</a></p>{% endif %}
+        {% if l.verification_requested_at %}
+        <p class="muted">Verification requested on {{ l.verification_requested_at|human_date }}. A reviewer will email you to arrange the evidence check.</p>
+        {% elif l.verification != 'fully_verified' and cfg.VERIFICATION_REQUESTS_ENABLED %}
+        <details>
+          <summary>{{ 'Request a higher verification level' if l.verification != 'unverified' else 'Get a verification badge (free)' }}</summary>
+          <form method="post" action="/account/listings/{{ l.id }}/verification/" class="stack mt">
+            <input type="hidden" name="csrf" value="{{ csrf_token() }}">
+            <div class="field"><label for="v-type-{{ l.id }}">What should we verify?</label>
+              <select id="v-type-{{ l.id }}" name="type" required>
+                <option value="">Choose…</option>
+                <option value="revenue_verified">Revenue</option>
+                <option value="traffic_verified">Traffic</option>
+                <option value="fully_verified">Revenue, traffic and ownership (full)</option>
+              </select></div>
+            <div class="field"><label for="v-note-{{ l.id }}">What evidence can you share?</label>
+              <textarea id="v-note-{{ l.id }}" name="note" rows="3" required maxlength="1500" placeholder="For example: read-only access to Stripe and Google Analytics, or 12 months of payout statements."></textarea>
+              <p class="hint">Don't paste passwords here. A reviewer emails you to arrange read-only access or statements. <a href="/verification/">How verification works</a></p></div>
+            <div><button class="btn small" type="submit">Request verification</button></div>
+          </form>
+        </details>
+        {% endif %}
+      </div>
+      {% endif %}
     </article>
   {% endfor %}
   </div>
