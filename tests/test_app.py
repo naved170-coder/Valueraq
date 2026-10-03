@@ -1298,12 +1298,12 @@ class GoogleAnalytics(Base):
 class ContactAndRefundPolicy(Base):
     def test_contact_details_on_page_and_in_schema(self):
         html = self.client.get("/contact/").get_data(as_text=True)
-        self.assertIn('href="mailto:help@valueraq.com"', html)
+        self.assertIn('href="mailto:hello@valueraq.com"', html)
         self.assertIn('href="tel:+12172909383"', html)
         self.assertIn("+1 217 290 9383", html)
         graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1))["@graph"]
         org = [n for n in graph if n["@type"] == "Organization"][0]
-        self.assertEqual((org["email"], org["telephone"]), ("help@valueraq.com", "+12172909383"))
+        self.assertEqual((org["email"], org["telephone"]), ("hello@valueraq.com", "+12172909383"))
         self.assertEqual(org["contactPoint"]["contactType"], "customer support")
 
     def test_refund_policy_page(self):
@@ -1316,6 +1316,31 @@ class ContactAndRefundPolicy(Base):
         self.assertIn("/refund-policy/</loc>", self.client.get("/sitemap-pages.xml").get_data(as_text=True))
         self.assertIn('href="/refund-policy/"', self.client.get("/").get_data(as_text=True))
         self.assertIn("/refund-policy/", self.client.get("/terms/").get_data(as_text=True))
+        self.assertIn("mailto:refund@valueraq.com", html)
+        self.assertNotIn("help@valueraq.com", html)
+
+    def test_policy_and_help_pages_exist_and_are_linked(self):
+        home = self.client.get("/").get_data(as_text=True)
+        sm = self.client.get("/sitemap-pages.xml").get_data(as_text=True)
+        for slug in ("cookie-policy", "disclaimer", "buyer-safety", "how-it-works", "fees", "report-a-listing"):
+            r = self.client.get(f"/{slug}/")
+            self.assertEqual(r.status_code, 200, slug)
+            html = r.get_data(as_text=True)
+            self.assertEqual(html.count("<h1"), 1, slug)
+            self.assertTrue(canonical(html).endswith(f"/{slug}/"))
+            self.assertIn(f'href="/{slug}/"', home)                             # in the footer of every page
+            self.assertIn(f"/{slug}/</loc>", sm)
+            self.assertNotIn("help@valueraq.com", html)
+        fees = self.client.get("/fees/").get_data(as_text=True)
+        cfg = self.app.config
+        for plan in ("pro_monthly", "pro_yearly"):
+            self.assertIn(f"${cfg['PLANS'][plan]['price_usd']}", fees)          # the page can't drift from real prices
+        for plan in ("featured_monthly", "featured_yearly"):
+            self.assertIn(f"${cfg['FEATURED_PLANS'][plan]['price_usd']}", fees)
+        cookies = self.client.get("/cookie-policy/").get_data(as_text=True)
+        for name in ("vq_sid", "vq_ch", "vq_lp", "_ga", "vq_cookie_choice"):
+            self.assertIn(name, cookies)
+        self.assertIn('href="/cookie-policy/"', home.split('id="cookie-bar"')[1][:600])
 
 
 class Admin(Base):

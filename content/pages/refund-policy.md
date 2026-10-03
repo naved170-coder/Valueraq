@@ -50,7 +50,7 @@ We do refund a Featured listing payment when:
 
 ## How to ask for a refund
 
-Email [help@valueraq.com](mailto:help@valueraq.com) from the email address on your account, or use the [contact form](/contact/#form) and choose **Billing**. Tell us which payment it is and why you're asking. We reply within two business days.
+Email [refund@valueraq.com](mailto:refund@valueraq.com) from the email address on your account, or use the [contact form](/contact/#form) and choose **Billing**. Tell us which payment it is and why you're asking. We reply within two business days.
 
 Approved refunds go back to the original payment method. Your bank or card provider usually takes 5 to 10 business days to show it. We can't refund to a different card or account.
 

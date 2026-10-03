@@ -285,6 +285,7 @@ def glossary_term(slug):
 
 
 # ---------------------------------------------------------------- trust & company pages
+LEGAL_PAGES = ("privacy", "terms", "refund-policy", "cookie-policy", "disclaimer")  # no automatic glossary links
 PAGE_TYPES = {"about": "AboutPage", "contact": "ContactPage", "faq": "FAQPage"}
 
 
@@ -303,12 +304,12 @@ def _static_page(slug, template="page.html", **extra):
     else:
         meta.schema.append(schema.web_page(path, doc.title, doc.meta_description, ptype, updated=doc.updated))
     rel = linkgraph.related_for(path, explicit=doc.related)
-    body = linkgraph.autolink_glossary(doc.html) if slug not in ("privacy", "terms", "refund-policy") else doc.html
+    body = linkgraph.autolink_glossary(doc.html) if slug not in LEGAL_PAGES else doc.html
     return render_page(template, meta, doc=doc, body=body, related=rel, **extra)
 
 
 for _slug in ("about", "data-sources", "editorial-policy", "verification", "marketplace-rules", "privacy", "terms",
-              "refund-policy"):
+              "refund-policy", "cookie-policy", "disclaimer", "buyer-safety", "how-it-works", "fees", "report-a-listing"):
     bp.add_url_rule(f"/{_slug}/", f"page_{_slug.replace('-', '_')}", (lambda s=_slug: _static_page(s)))
 
 

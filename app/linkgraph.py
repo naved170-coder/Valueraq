@@ -13,6 +13,8 @@ STATIC_PAGES = [
     ("about", "pages"), ("methodology", "pages"), ("data-sources", "pages"), ("pricing", "pages"),
     ("faq", "pages"), ("contact", "pages"), ("editorial-policy", "pages"), ("verification", "pages"),
     ("marketplace-rules", "pages"), ("privacy", "pages"), ("terms", "pages"), ("refund-policy", "pages"),
+    ("cookie-policy", "pages"), ("disclaimer", "pages"), ("buyer-safety", "pages"), ("how-it-works", "pages"),
+    ("fees", "pages"), ("report-a-listing", "pages"),
 ]
 
 TOOL_CLUSTER = {"website": "website", "saas": "saas", "ai": "ai", "app": "app",

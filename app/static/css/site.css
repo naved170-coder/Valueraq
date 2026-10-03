@@ -288,7 +288,7 @@ a.card:hover { border-color: var(--accent); }
 
 /* ---------- footer ---------- */
 .site-foot { margin-top: 3rem; background: var(--surface); border-top: 1px solid var(--rule); padding-block: 2.5rem 2rem; font-size: .92rem; }
-.foot-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); }
+.foot-grid { display: grid; gap: 2rem 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); }
 .foot-grid h2 { font: 500 .75rem/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
 .foot-grid ul { list-style: none; padding: 0; display: grid; gap: .4rem; }
 .foot-grid a { color: var(--ink); text-decoration: none; }

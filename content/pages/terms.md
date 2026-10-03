@@ -5,7 +5,7 @@ meta_description: The terms that apply to using VALUERAQ's valuation tools, repo
 h1: Terms of Use
 answer: These terms apply to your use of VALUERAQ, including the valuation tools, reports, accounts, subscriptions and the marketplace. By using the site, you agree to them.
 updated: 2026-10-04
-related: /privacy/, /marketplace-rules/, /methodology/
+related: /privacy/, /disclaimer/, /refund-policy/, /marketplace-rules/, /report-a-listing/
 ---
 
 ## The service
