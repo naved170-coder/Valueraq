@@ -1348,6 +1348,28 @@ class ContactAndRefundPolicy(Base):
         self.assertIn('href="/cookie-policy/"', home.split('id="cookie-bar"')[1][:600])
 
 
+class CoreGuidesAndComparisons(Base):
+    def test_core_guides_and_comparison_pages_exist(self):
+        slugs = ["website-valuation", "saas-valuation", "how-to-sell-a-website", "how-to-buy-a-saas-business",
+                 "digital-business-due-diligence", "website-valuation-methods", "saas-valuation-methods",
+                 "ai-business-valuation-methods", "valueraq-vs-flippa", "valueraq-vs-acquire",
+                 "website-vs-saas-investment", "buy-vs-build-saas"]
+        index = self.client.get("/guides/").get_data(as_text=True)
+        for slug in slugs:
+            r = self.client.get(f"/guides/{slug}/")
+            self.assertEqual(r.status_code, 200, slug)
+            self.assertEqual(r.get_data(as_text=True).count("<h1"), 1, slug)
+            self.assertIn(f"/guides/{slug}/", index, slug)
+
+    def test_competitor_pages_are_honest_and_sourced(self):
+        for slug, name in (("valueraq-vs-flippa", "Flippa"), ("valueraq-vs-acquire", "Acquire.com")):
+            html = self.client.get(f"/guides/{slug}/").get_data(as_text=True)
+            self.assertIn("is not affiliated with", html)
+            self.assertIn("no track record of completed sales", html)           # says plainly that the site is new
+            self.assertIn("checked on 4 October 2026", html)
+            self.assertIn(f"When {name} is the better choice", html)
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")
