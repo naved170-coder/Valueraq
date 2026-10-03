@@ -1254,6 +1254,19 @@ class Phase2Insights(Base):
         self.assertIn("Website ownership", self.client.get("/verification/").get_data(as_text=True))
 
 
+class SocialProfiles(Base):
+    def test_footer_links_and_schema_same_as(self):
+        html = self.client.get("/").get_data(as_text=True)
+        urls = ["https://www.linkedin.com/company/145275373/", "https://x.com/valueraq",
+                "https://www.facebook.com/profile.php?id=61594665137424"]
+        for u in urls:
+            self.assertIn(f'href="{u}" target="_blank" rel="noopener me"', html)
+        graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1))["@graph"]
+        org = [n for n in graph if n["@type"] == "Organization"][0]
+        self.assertEqual(org["sameAs"], urls)
+        self.assertIn("Follow VALUERAQ", self.client.get("/guides/saas-valuation/").get_data(as_text=True))
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")

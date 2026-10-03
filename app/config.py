@@ -37,8 +37,15 @@ class Config:
     PRIMARY_MARKET = "US"
 
     CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "hello@valueraq.com")
-    SOCIAL_PROFILES = [u for u in os.environ.get("SOCIAL_PROFILES", "").split(",") if u]
-    TWITTER_HANDLE = os.environ.get("TWITTER_HANDLE", "")  # e.g. "@valueraq"
+    # Official accounts: shown in the footer and listed as sameAs in the Organization schema.
+    SOCIAL_LINKS = [
+        ("LinkedIn", "https://www.linkedin.com/company/145275373/"),
+        ("X", "https://x.com/valueraq"),
+        ("Facebook", "https://www.facebook.com/profile.php?id=61594665137424"),
+    ]
+    SOCIAL_PROFILES = [u.strip() for u in os.environ.get("SOCIAL_PROFILES", "").split(",") if u.strip()] \
+        or [url for _, url in SOCIAL_LINKS]
+    TWITTER_HANDLE = os.environ.get("TWITTER_HANDLE", "@valueraq")
     DEFAULT_OG_IMAGE = "/static/og/valueraq-default.png"
 
     # --- Search engine verification --------------------------------------
@@ -124,7 +131,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "11")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "12")
 
 
 class TestConfig(Config):

@@ -450,3 +450,8 @@ fieldset.group > legend { font: 600 1rem/1.2 var(--f-display); padding: 0 .4rem;
 .checklist .done .tick { background: var(--accent); border-color: var(--accent); }
 .checklist .done { color: var(--muted); }
 .paths .card h3 { font-size: 1.2rem; }
+.social { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; }
+.social span { font: 500 .75rem/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.social a { color: var(--ink); font-weight: 600; text-decoration: none; padding: .35rem 0; }
+.social a:hover { color: var(--accent); text-decoration: underline; }
+.social + .disclaimer { margin-top: 1.2rem; }
