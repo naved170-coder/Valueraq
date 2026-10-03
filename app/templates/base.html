@@ -38,6 +38,7 @@
 {% block head %}{% endblock %}
 </head>
 <body data-template="{{ m.template if m else 'app' }}">
+{% set ga_on = cfg.GA_MEASUREMENT_ID and not request.path.startswith(('/admin/', '/account/', '/reports/private/')) %}
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
@@ -135,9 +136,17 @@
     <div class="disclaimer">
       <p>{{ BRAND }} valuations are estimates calculated from the information you enter and the assumptions published in our <a href="/methodology/">methodology</a>. They are not appraisals, audits, or investment, tax or legal advice.</p>
       <p>Marketplace listings are provided by sellers. Figures are unverified unless a listing shows a verification status. © {{ year }} {{ BRAND }}.</p>
+      {% if ga_on %}<p><button type="button" class="linklike" data-cookie-settings>Cookie settings</button></p>{% endif %}
     </div>
   </div>
 </footer>
+{% if ga_on %}
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie notice" hidden>
+  <p>We use Google Analytics cookies to see how the site is used. Nothing is used for advertising. <a href="/privacy/#cookies-and-analytics">Privacy</a></p>
+  <div class="row"><button type="button" class="btn small" data-cookie-choice="granted">Accept</button><button type="button" class="btn small quiet" data-cookie-choice="denied">No thanks</button></div>
+</div>
+<script src="{{ static('js/ga.js') }}" data-ga-id="{{ cfg.GA_MEASUREMENT_ID }}" defer></script>
+{% endif %}
 <script src="{{ static('js/v.js') }}" defer></script>
 {% block scripts %}{% endblock %}
 </body>

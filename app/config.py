@@ -49,6 +49,8 @@ class Config:
     DEFAULT_OG_IMAGE = "/static/og/valueraq-default.png"
 
     # --- Search engine verification --------------------------------------
+    # Google Analytics 4. Runs cookie-free until the visitor accepts the cookie notice. Set to "" to switch it off.
+    GA_MEASUREMENT_ID = os.environ.get("GA_MEASUREMENT_ID", "G-TR4Q35LERR")
     GOOGLE_SITE_VERIFICATION = os.environ.get("GOOGLE_SITE_VERIFICATION", "")
     BING_SITE_VERIFICATION = os.environ.get("BING_SITE_VERIFICATION", "")
 
@@ -131,11 +133,12 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "12")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "13")
 
 
 class TestConfig(Config):
     TESTING = True
+    GA_MEASUREMENT_ID = "G-TEST123"
     SECRET_KEY = "test"
     SESSION_COOKIE_SECURE = False
     ENFORCE_CANONICAL_HOST = False

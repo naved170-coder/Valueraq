@@ -109,10 +109,17 @@ def create_app(config_object=Config, **overrides):
         resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
         resp.headers.setdefault("X-Frame-Options", "DENY")
         resp.headers.setdefault("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        # Google Analytics is the only outside script allowed, and only when it is switched on.
+        ga = bool(app.config.get("GA_MEASUREMENT_ID"))
+        ga_script = " https://www.googletagmanager.com" if ga else ""
+        ga_img = " https://www.googletagmanager.com https://*.google-analytics.com" if ga else ""
+        ga_connect = (" https://www.googletagmanager.com https://*.google-analytics.com "
+                      "https://*.analytics.google.com") if ga else ""
         resp.headers.setdefault(
             "Content-Security-Policy",
-            "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-            "font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; "
+            "default-src 'self'; script-src 'self'" + ga_script + "; style-src 'self' 'unsafe-inline' "
+            "https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; "
+            "img-src 'self' data:" + ga_img + "; connect-src 'self'" + ga_connect + "; "
             "frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com "
             "https://billing.stripe.com; object-src 'none'")
         if not app.config.get("TESTING") and request.scheme == "https":

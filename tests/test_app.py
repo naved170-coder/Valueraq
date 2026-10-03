@@ -1267,6 +1267,34 @@ class SocialProfiles(Base):
         self.assertIn("Follow VALUERAQ", self.client.get("/guides/saas-valuation/").get_data(as_text=True))
 
 
+class GoogleAnalytics(Base):
+    def test_ga_loads_on_public_pages_with_consent_bar_and_csp(self):
+        r = self.client.get("/")
+        html = r.get_data(as_text=True)
+        self.assertIn('data-ga-id="G-TEST123"', html)
+        self.assertIn('id="cookie-bar"', html)
+        self.assertIn(" hidden>", html.split('id="cookie-bar"')[1][:80])        # shown by script only when no choice is stored
+        self.assertIn("data-cookie-settings", html)
+        csp = r.headers["Content-Security-Policy"]
+        self.assertIn("script-src 'self' https://www.googletagmanager.com;", csp)
+        self.assertIn("https://*.google-analytics.com", csp)
+        self.assertNotIn("unsafe-inline' https://www.googletagmanager", csp)
+        self.assertNotIn("<script>", html)                                      # still no inline scripts
+        js = self.client.get("/static/js/ga.js").get_data(as_text=True)
+        self.assertIn('ad_storage: "denied"', js)
+        self.assertIn('analytics_storage: choice === "granted" ? "granted" : "denied"', js)
+        self.assertIn("Google Analytics", self.client.get("/privacy/").get_data(as_text=True))
+
+    def test_ga_not_on_private_pages_and_can_be_switched_off(self):
+        self.signup()
+        self.assertNotIn("data-ga-id", self.client.get("/account/").get_data(as_text=True))
+        self.app.config["GA_MEASUREMENT_ID"] = ""
+        r = self.client.get("/")
+        self.assertNotIn("ga.js", r.get_data(as_text=True))
+        self.assertIn("script-src 'self';", r.headers["Content-Security-Policy"])
+        self.assertNotIn("google", r.headers["Content-Security-Policy"].replace("fonts.googleapis.com", ""))
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")

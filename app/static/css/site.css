@@ -455,3 +455,8 @@ fieldset.group > legend { font: 600 1rem/1.2 var(--f-display); padding: 0 .4rem;
 .social a { color: var(--ink); font-weight: 600; text-decoration: none; padding: .35rem 0; }
 .social a:hover { color: var(--accent); text-decoration: underline; }
 .social + .disclaimer { margin-top: 1.2rem; }
+.cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--surface); border-top: 1px solid var(--rule); box-shadow: 0 -4px 16px rgba(0,0,0,.08); padding: .8rem var(--gutter) calc(.8rem + env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; justify-content: center; font-size: .92rem; }
+.cookie-bar[hidden] { display: none; }
+.cookie-bar p { margin: 0; max-width: 60ch; }
+button.linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
+@media print { .cookie-bar { display: none !important; } }
