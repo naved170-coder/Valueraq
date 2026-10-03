@@ -460,3 +460,6 @@ fieldset.group > legend { font: 600 1rem/1.2 var(--f-display); padding: 0 .4rem;
 .cookie-bar p { margin: 0; max-width: 60ch; }
 button.linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
 @media print { .cookie-bar { display: none !important; } }
+.contact-list { list-style: none; padding: 0; margin: .6rem 0 1.6rem; display: grid; gap: .5rem; }
+.contact-list span { display: inline-block; min-width: 4.5rem; color: var(--muted); }
+.contact-list a { font-weight: 600; }

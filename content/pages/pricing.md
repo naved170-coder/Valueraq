@@ -4,7 +4,7 @@ meta_title: VALUERAQ Pricing – Free Valuation Tools, Pro Plan & Featured Listi
 meta_description: VALUERAQ's valuation tools, calculators and marketplace listings are free. Pro adds unlimited saved reports and more, with a 14-day free trial and no card needed.
 h1: Pricing
 answer: The valuation tools, calculators, guides and marketplace listings are free. Pro adds unlimited saved reports and extra report features, with a 14-day free trial that doesn't need a card. Sellers can feature a live listing for $39 a month or $390 a year.
-updated: 2026-10-01
+updated: 2026-10-04
 related: /tools/, /sell/, /faq/
 ---
 
@@ -14,7 +14,7 @@ Start the trial from your account or this page. It lasts 14 days and doesn't nee
 
 ## Subscriptions and cancellation
 
-Pro is billed monthly or annually through our payment provider. Paying yearly costs about 17% less than paying monthly. You can cancel at any time from **Plan and billing** in your account; Pro stays active until the end of the period you've paid for.
+Pro is billed monthly or annually through our payment provider. Paying yearly costs about 17% less than paying monthly. You can cancel at any time from **Plan and billing** in your account; Pro stays active until the end of the period you've paid for. See the [refund and cancellation policy](/refund-policy/) for when a payment can be refunded.
 
 ## Featured listings
 

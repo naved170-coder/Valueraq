@@ -303,11 +303,12 @@ def _static_page(slug, template="page.html", **extra):
     else:
         meta.schema.append(schema.web_page(path, doc.title, doc.meta_description, ptype, updated=doc.updated))
     rel = linkgraph.related_for(path, explicit=doc.related)
-    body = linkgraph.autolink_glossary(doc.html) if slug not in ("privacy", "terms") else doc.html
+    body = linkgraph.autolink_glossary(doc.html) if slug not in ("privacy", "terms", "refund-policy") else doc.html
     return render_page(template, meta, doc=doc, body=body, related=rel, **extra)
 
 
-for _slug in ("about", "data-sources", "editorial-policy", "verification", "marketplace-rules", "privacy", "terms"):
+for _slug in ("about", "data-sources", "editorial-policy", "verification", "marketplace-rules", "privacy", "terms",
+              "refund-policy"):
     bp.add_url_rule(f"/{_slug}/", f"page_{_slug.replace('-', '_')}", (lambda s=_slug: _static_page(s)))
 
 

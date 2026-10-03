@@ -1,5 +1,10 @@
 {% extends "page.html" %}
 {% block after_body %}
+<h2 id="reach-us">Email and phone</h2>
+<ul class="contact-list">
+  <li><span>Email</span> <a href="mailto:{{ cfg.CONTACT_EMAIL }}">{{ cfg.CONTACT_EMAIL }}</a></li>
+  {% if cfg.CONTACT_PHONE %}<li><span>Phone</span> <a href="tel:{{ cfg.CONTACT_PHONE }}">{{ cfg.CONTACT_PHONE_DISPLAY }}</a></li>{% endif %}
+</ul>
 <h2 id="form">Send a message</h2>
 {% if sent %}
 <p class="alert good" role="status">Thanks. Your message has been received and we reply by email, usually within two business days.</p>

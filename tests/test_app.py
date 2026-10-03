@@ -1295,6 +1295,29 @@ class GoogleAnalytics(Base):
         self.assertNotIn("google", r.headers["Content-Security-Policy"].replace("fonts.googleapis.com", ""))
 
 
+class ContactAndRefundPolicy(Base):
+    def test_contact_details_on_page_and_in_schema(self):
+        html = self.client.get("/contact/").get_data(as_text=True)
+        self.assertIn('href="mailto:help@valueraq.com"', html)
+        self.assertIn('href="tel:+12172909383"', html)
+        self.assertIn("+1 217 290 9383", html)
+        graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S).group(1))["@graph"]
+        org = [n for n in graph if n["@type"] == "Organization"][0]
+        self.assertEqual((org["email"], org["telephone"]), ("help@valueraq.com", "+12172909383"))
+        self.assertEqual(org["contactPoint"]["contactType"], "customer support")
+
+    def test_refund_policy_page(self):
+        r = self.client.get("/refund-policy/")
+        self.assertEqual(r.status_code, 200)
+        html = r.get_data(as_text=True)
+        self.assertEqual(html.count("<h1"), 1)
+        self.assertIn("within 7 days", html)
+        self.assertTrue(canonical(html).endswith("/refund-policy/"))
+        self.assertIn("/refund-policy/</loc>", self.client.get("/sitemap-pages.xml").get_data(as_text=True))
+        self.assertIn('href="/refund-policy/"', self.client.get("/").get_data(as_text=True))
+        self.assertIn("/refund-policy/", self.client.get("/terms/").get_data(as_text=True))
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")

@@ -1,11 +1,11 @@
 ---
 title: Contact
 meta_title: Contact VALUERAQ
-meta_description: Contact VALUERAQ about valuations, the methodology, a marketplace listing, billing or press. We reply by email, usually within two business days.
+meta_description: Contact VALUERAQ by email, phone or the contact form about valuations, a marketplace listing, billing or press. We usually reply within two business days.
 h1: Contact VALUERAQ
-answer: Use the form below to contact the VALUERAQ team about valuations, the methodology, a marketplace listing, billing or press enquiries. We reply by email, usually within two business days.
-updated: 2026-09-30
-related: /faq/, /about/, /marketplace-rules/
+answer: Email help@valueraq.com, call +1 217 290 9383 or use the form below to contact the VALUERAQ team about valuations, the methodology, a marketplace listing, billing or press enquiries. We reply by email, usually within two business days.
+updated: 2026-10-04
+related: /faq/, /about/, /marketplace-rules/, /refund-policy/
 ---
 
 ## Before you write

@@ -12,7 +12,7 @@ STATIC_PAGES = [
     # slug, sitemap group
     ("about", "pages"), ("methodology", "pages"), ("data-sources", "pages"), ("pricing", "pages"),
     ("faq", "pages"), ("contact", "pages"), ("editorial-policy", "pages"), ("verification", "pages"),
-    ("marketplace-rules", "pages"), ("privacy", "pages"), ("terms", "pages"),
+    ("marketplace-rules", "pages"), ("privacy", "pages"), ("terms", "pages"), ("refund-policy", "pages"),
 ]
 
 TOOL_CLUSTER = {"website": "website", "saas": "saas", "ai": "ai", "app": "app",

@@ -27,6 +27,11 @@ def organization():
         "description": cfg["BRAND_DESCRIPTION"],
         "email": cfg["CONTACT_EMAIL"],
     }
+    if cfg.get("CONTACT_PHONE"):
+        node["telephone"] = cfg["CONTACT_PHONE"]
+        node["contactPoint"] = {"@type": "ContactPoint", "contactType": "customer support",
+                                "email": cfg["CONTACT_EMAIL"], "telephone": cfg["CONTACT_PHONE"],
+                                "availableLanguage": "English"}
     if cfg["SOCIAL_PROFILES"]:
         node["sameAs"] = cfg["SOCIAL_PROFILES"]
     return node

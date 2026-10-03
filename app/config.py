@@ -36,7 +36,9 @@ class Config:
     DEFAULT_CURRENCY = "USD"
     PRIMARY_MARKET = "US"
 
-    CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "hello@valueraq.com")
+    CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "help@valueraq.com")
+    CONTACT_PHONE = os.environ.get("CONTACT_PHONE", "+12172909383")           # dialled form
+    CONTACT_PHONE_DISPLAY = os.environ.get("CONTACT_PHONE_DISPLAY", "+1 217 290 9383")
     # Official accounts: shown in the footer and listed as sameAs in the Organization schema.
     SOCIAL_LINKS = [
         ("LinkedIn", "https://www.linkedin.com/company/145275373/"),
@@ -133,7 +135,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "13")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "14")
 
 
 class TestConfig(Config):
