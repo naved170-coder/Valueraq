@@ -8,6 +8,10 @@ updated: 2026-10-04
 related: /methodology/, /terms/, /verification/, /data-sources/
 ---
 
+## Who runs this website
+
+{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan. It is an independent website and isn't a bank, broker, investment adviser or licensed appraiser.
+
 ## Valuation estimates
 
 The valuation tools, calculators and reports give an estimated range based on the figures you enter and the assumptions set out in our [methodology](/methodology/). The default multiples are {{BRAND}}'s own published assumptions, as explained on the [data sources](/data-sources/) page; they are not taken from a measured set of completed sales.

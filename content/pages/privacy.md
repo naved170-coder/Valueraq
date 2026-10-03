@@ -8,6 +8,10 @@ updated: 2026-10-04
 related: /terms/, /contact/
 ---
 
+## Who is responsible for your data
+
+{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan, who decides how and why the personal data described on this page is used. For any privacy question or request, email [hello@valueraq.com](mailto:hello@valueraq.com).
+
 ## Data we collect
 
 | Data | When | Why |

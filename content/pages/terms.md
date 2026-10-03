@@ -8,6 +8,10 @@ updated: 2026-10-04
 related: /privacy/, /disclaimer/, /refund-policy/, /marketplace-rules/, /report-a-listing/
 ---
 
+## Who we are
+
+{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan. In these terms, "we", "us" and "our" mean the owner and operator of {{BRAND}}. You can reach us at [hello@valueraq.com](mailto:hello@valueraq.com).
+
 ## The service
 
 {{BRAND}} provides online valuation tools and calculators, educational content, private valuation reports, and a marketplace where owners list digital businesses for sale.

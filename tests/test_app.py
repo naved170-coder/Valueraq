@@ -1319,6 +1319,11 @@ class ContactAndRefundPolicy(Base):
         self.assertIn("mailto:refund@valueraq.com", html)
         self.assertNotIn("help@valueraq.com", html)
 
+    def test_legal_pages_name_the_owner(self):
+        for slug in ("terms", "privacy", "disclaimer"):
+            self.assertIn("owned and operated by Naveed Anjum, based in Pakistan",
+                          self.client.get(f"/{slug}/").get_data(as_text=True), slug)
+
     def test_policy_and_help_pages_exist_and_are_linked(self):
         home = self.client.get("/").get_data(as_text=True)
         sm = self.client.get("/sitemap-pages.xml").get_data(as_text=True)
