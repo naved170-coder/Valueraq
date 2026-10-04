@@ -1325,8 +1325,15 @@ class ContactAndRefundPolicy(Base):
 
     def test_legal_pages_name_the_owner(self):
         for slug in ("terms", "privacy", "disclaimer"):
-            self.assertIn("owned and operated by Naveed Anjum, based in Pakistan",
-                          self.client.get(f"/{slug}/").get_data(as_text=True), slug)
+            html = self.client.get(f"/{slug}/").get_data(as_text=True)
+            self.assertIn("owned and operated by Advent Business Consultax LLC", html, slug)
+            self.assertIn("18W100 22nd St, Suite 124, Oakbrook Terrace, IL 60181", html, slug)
+            self.assertNotIn("Pakistan", html, slug)
+        home = self.client.get("/").get_data(as_text=True)
+        graph = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', home, re.S).group(1))["@graph"]
+        org = [n for n in graph if n["@type"] == "Organization"][0]
+        self.assertEqual(org["legalName"], "Advent Business Consultax LLC")
+        self.assertEqual((org["address"]["postalCode"], org["address"]["addressCountry"]), ("60181", "US"))
 
     def test_policy_and_help_pages_exist_and_are_linked(self):
         home = self.client.get("/").get_data(as_text=True)

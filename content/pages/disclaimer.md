@@ -10,7 +10,7 @@ related: /methodology/, /terms/, /verification/, /data-sources/
 
 ## Who runs this website
 
-{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan. It is an independent website and isn't a bank, broker, investment adviser or licensed appraiser.
+{{BRAND}} (www.valueraq.com) is owned and operated by Advent Business Consultax LLC, a United States limited liability company with its office at 18W100 22nd St, Suite 124, Oakbrook Terrace, IL 60181, United States. It is an independent website and isn't a bank, broker, investment adviser or licensed appraiser.
 
 ## Valuation estimates
 

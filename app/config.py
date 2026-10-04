@@ -36,6 +36,10 @@ class Config:
     DEFAULT_CURRENCY = "USD"
     PRIMARY_MARKET = "US"
 
+    # Legal owner and operator, shown in the Organization schema (the legal pages name it in their own text).
+    LEGAL_NAME = os.environ.get("LEGAL_NAME", "Advent Business Consultax LLC")
+    LEGAL_ADDRESS = {"streetAddress": "18W100 22nd St, Suite 124", "addressLocality": "Oakbrook Terrace",
+                     "addressRegion": "IL", "postalCode": "60181", "addressCountry": "US"}
     CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "hello@valueraq.com")
     REFUND_EMAIL = os.environ.get("REFUND_EMAIL", "refund@valueraq.com")
     CONTACT_PHONE = os.environ.get("CONTACT_PHONE", "+12172909383")           # dialled form

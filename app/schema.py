@@ -27,6 +27,9 @@ def organization():
         "description": cfg["BRAND_DESCRIPTION"],
         "email": cfg["CONTACT_EMAIL"],
     }
+    if cfg.get("LEGAL_NAME"):
+        node["legalName"] = cfg["LEGAL_NAME"]
+        node["address"] = {"@type": "PostalAddress", **cfg["LEGAL_ADDRESS"]}
     if cfg.get("CONTACT_PHONE"):
         node["telephone"] = cfg["CONTACT_PHONE"]
         node["contactPoint"] = {"@type": "ContactPoint", "contactType": "customer support",

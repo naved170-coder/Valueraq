@@ -10,7 +10,7 @@ related: /terms/, /contact/
 
 ## Who is responsible for your data
 
-{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan, who decides how and why the personal data described on this page is used. For any privacy question or request, email [hello@valueraq.com](mailto:hello@valueraq.com).
+{{BRAND}} (www.valueraq.com) is owned and operated by Advent Business Consultax LLC, a United States limited liability company with its office at 18W100 22nd St, Suite 124, Oakbrook Terrace, IL 60181, United States, which decides how and why the personal data described on this page is used. For any privacy question or request, email [hello@valueraq.com](mailto:hello@valueraq.com).
 
 ## Data we collect
 

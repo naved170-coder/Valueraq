@@ -10,7 +10,7 @@ related: /privacy/, /disclaimer/, /refund-policy/, /marketplace-rules/, /report-
 
 ## Who we are
 
-{{BRAND}} (www.valueraq.com) is owned and operated by Naveed Anjum, based in Pakistan. In these terms, "we", "us" and "our" mean the owner and operator of {{BRAND}}. You can reach us at [hello@valueraq.com](mailto:hello@valueraq.com).
+{{BRAND}} (www.valueraq.com) is owned and operated by Advent Business Consultax LLC, a United States limited liability company with its office at 18W100 22nd St, Suite 124, Oakbrook Terrace, IL 60181, United States. In these terms, "we", "us" and "our" mean the owner and operator of {{BRAND}}. You can reach us at [hello@valueraq.com](mailto:hello@valueraq.com).
 
 ## The service
 
