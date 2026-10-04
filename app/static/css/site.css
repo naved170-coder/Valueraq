@@ -463,3 +463,6 @@ button.linklike { background: none; border: 0; padding: 0; font: inherit; color:
 .contact-list { list-style: none; padding: 0; margin: .6rem 0 1.6rem; display: grid; gap: .5rem; }
 .contact-list span { display: inline-block; min-width: 4.5rem; color: var(--muted); }
 .contact-list a { font-weight: 600; }
+.hero .slogan { margin-top: .9rem; font: 600 var(--s2)/1.3 var(--f-display); color: var(--accent); max-width: 26ch; }
+.foot-slogan { margin-top: 1.6rem; color: var(--ink); font-size: .95rem; }
+.foot-slogan + .disclaimer { margin-top: 1rem; }

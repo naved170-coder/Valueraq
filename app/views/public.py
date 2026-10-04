@@ -25,8 +25,8 @@ def home():
         path="/",
         title="Digital Business Valuation & Marketplace",
         meta_title="VALUERAQ – Value, Buy and Sell Digital Businesses",
-        description="Free valuation tools for websites, SaaS, AI businesses, apps, newsletters and online "
-                    "stores, with a public methodology and a marketplace of businesses for sale.",
+        description="All valuation features, at much lower fees than the leading marketplaces. Free tools for "
+                    "websites, SaaS, AI, apps, newsletters and ecommerce.",
         h1="What is your digital business worth?",
         template="home",
     )

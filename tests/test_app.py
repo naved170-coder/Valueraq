@@ -1381,6 +1381,16 @@ class CoreGuidesAndComparisons(Base):
             self.assertIn(f"When {name} is the better choice", html)
 
 
+class Slogan(Base):
+    def test_slogan_on_home_footer_and_description(self):
+        slogan = "All valuation features, at much lower fees than the leading marketplaces."
+        home = self.client.get("/").get_data(as_text=True)
+        self.assertIn(f'<p class="slogan">{slogan}</p>', home)
+        self.assertTrue(meta(home, "description").startswith(slogan))
+        self.assertLessEqual(len(meta(home, "description")), 158)
+        self.assertIn(slogan, self.client.get("/guides/saas-valuation/").get_data(as_text=True).split("site-foot")[1])
+
+
 class Admin(Base):
     def login_admin(self):
         self.signup("admin@example.com")

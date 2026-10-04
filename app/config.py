@@ -16,6 +16,7 @@ def _bool(name, default=False):
 class Config:
     # --- Brand & entity -------------------------------------------------
     BRAND = os.environ.get("BRAND_NAME", "VALUERAQ")
+    SLOGAN = "All valuation features, at much lower fees than the leading marketplaces."
     BRAND_DESCRIPTION = (
         "VALUERAQ is a digital business intelligence platform and marketplace. "
         "It provides free valuation tools for websites, SaaS, AI businesses, apps, "
@@ -140,7 +141,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "15")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "16")
 
 
 class TestConfig(Config):
