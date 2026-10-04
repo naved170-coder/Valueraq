@@ -3,7 +3,7 @@ title: Fees
 meta_title: VALUERAQ Fees – What Is Free and What Is Paid
 meta_description: A plain list of what VALUERAQ charges: free valuation tools, free listings, no commission on sales, and the prices of the optional Pro and Featured listing plans.
 h1: Fees
-answer: Valuing a business, browsing, messaging and listing a business for sale on VALUERAQ are free, and VALUERAQ takes no commission when a business sells. The only charges are two optional subscriptions: Pro at $29 a month or $290 a year, and Featured listing at $39 a month or $390 a year per listing.
+answer: Valuing a business, browsing, messaging and listing a business for sale on VALUERAQ are free, and VALUERAQ takes no commission when a business sells. The only charges are two optional subscriptions: Pro at $29 a month or $250 a year, and Featured listing at $39 a month or $350 a year per listing.
 updated: 2026-10-04
 related: /pricing/, /refund-policy/, /how-it-works/, /marketplace-rules/
 ---
@@ -21,8 +21,8 @@ related: /pricing/, /refund-policy/, /how-it-works/, /marketplace-rules/
 
 | Plan | Monthly | Yearly | What you get |
 |---|---|---|---|
-| Pro | $29 | $290 | Unlimited saved reports and printable reports. Includes a 14-day free trial with no card. |
-| Featured listing | $39 per listing | $390 per listing | Your live listing shown first in its category and marked "Featured". |
+| Pro | $29 | $250 | Unlimited saved reports and printable reports. Includes a 14-day free trial with no card. |
+| Featured listing | $39 per listing | $350 per listing | Your live listing shown first in its category and marked "Featured". |
 
 Both are optional and can be cancelled at any time. Full details are on the [pricing page](/pricing/), and refunds are covered by the [refund and cancellation policy](/refund-policy/). Online payment isn't open yet; until it is, nothing on {{BRAND}} can be charged for.
 

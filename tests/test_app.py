@@ -514,8 +514,12 @@ class Billing(Base):
     def test_pricing_shows_monthly_yearly_and_comparison(self):
         html = self.client.get("/pricing/").get_data(as_text=True)
         self.assertIn('data-period="month"', html)
-        self.assertIn("$390", html)
-        self.assertIn("Save 17%", html)
+        self.assertIn("$250", html)
+        self.assertIn("$350", html)
+        self.assertIn("Save 28%", html)
+        self.assertIn("Save 25%", html)
+        self.assertNotIn("$290", html)
+        self.assertNotIn("$390", html)
         self.assertIn('id="compare"', html)
         self.assertNotIn("one-off", html)
 

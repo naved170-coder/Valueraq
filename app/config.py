@@ -91,14 +91,14 @@ class Config:
     PLANS = {
         "pro_monthly": {"name": "Pro", "price_usd": 29, "interval": "month",
                          "stripe_price_id": os.environ.get("STRIPE_PRICE_PRO_MONTHLY", "")},
-        "pro_yearly": {"name": "Pro (annual)", "price_usd": 290, "interval": "year",
+        "pro_yearly": {"name": "Pro (annual)", "price_usd": 250, "interval": "year",
                         "stripe_price_id": os.environ.get("STRIPE_PRICE_PRO_YEARLY", "")},
     }
     # Featured listing: a subscription per listing, monthly or yearly.
     FEATURED_PLANS = {
         "featured_monthly": {"name": "Featured listing", "price_usd": 39, "interval": "month",
                               "stripe_price_id": os.environ.get("STRIPE_PRICE_FEATURED_MONTHLY", "")},
-        "featured_yearly": {"name": "Featured listing (annual)", "price_usd": 390, "interval": "year",
+        "featured_yearly": {"name": "Featured listing (annual)", "price_usd": 350, "interval": "year",
                              "stripe_price_id": os.environ.get("STRIPE_PRICE_FEATURED_YEARLY", "")},
     }
     FEATURED_GRACE_DAYS = 3  # keep featured this long past period end while a renewal is confirmed

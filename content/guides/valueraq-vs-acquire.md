@@ -26,9 +26,9 @@ Acquire.com is an established marketplace that charges sellers a monthly fee and
 |---|---|---|
 | What it is | Free valuation tools plus a new marketplace of digital businesses for sale. Not a broker. | A marketplace for buying and selling startups and online businesses, started as MicroAcquire |
 | What you can sell | Digital businesses such as websites, SaaS, AI businesses, apps, newsletters and ecommerce stores | SaaS, ecommerce, agencies, content sites, newsletters, mobile apps and other online businesses |
-| Cost to list | Free. Optional Featured listing at $39/month or $390/year | A monthly listing fee of $25, $50 or $100, depending on the asking price |
+| Cost to list | Free. Optional Featured listing at $39/month or $350/year | A monthly listing fee of $25, $50 or $100, depending on the asking price |
 | Commission | None. No success fee | A closing fee of 8% (asking price up to $250,000), 7% ($250,000 to $1 million) or 6% (above $1 million), payable only if you sell |
-| Buyer costs | No commission or fee on a purchase. Optional Pro at $29/month or $290/year (unlimited saved reports, printable reports, 14-day free trial) | Free Basic plan shows public listing information only. Premium at $390/year and Platinum at $780/year are needed to message founders and request private details |
+| Buyer costs | No commission or fee on a purchase. Optional Pro at $29/month or $250/year (unlimited saved reports, printable reports, 14-day free trial) | Free Basic plan shows public listing information only. Premium at $350/year and Platinum at $780/year are needed to message founders and request private details |
 | Escrow and payment | None. {{BRAND}} does not handle the purchase price; buyers and sellers arrange their own escrow | Closing through Escrow.com or a partner law firm, described by Acquire.com as free |
 | Verification | Every listing reviewed before it goes live; automatic rule-based checks; free "Website ownership confirmed" badge; revenue and traffic verification on request | Acquire.com describes its listings and its buyers as vetted |
 | Valuation tool | Six free tools and three calculators; method and default multiples published in full | A free valuation tool, promoted as a free SaaS valuation |
