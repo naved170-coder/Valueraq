@@ -1523,7 +1523,7 @@ Body text for the test page. It links to the [methodology](/methodology/).
     def reset(self):
         self.content.reset_caches()
         for f in (self.linkgraph._registry, self.linkgraph._glossary_patterns_at, self.seoauto.run_dates,
-                  self.seoauto._run_raw, self.seoauto.config):
+                  self.seoauto._run_raw, self.seoauto.config, self.seoauto.calendar):
             if hasattr(f, "cache_clear"):
                 f.cache_clear()
 
@@ -1573,7 +1573,9 @@ Body text for the test page. It links to the [methodology](/methodology/).
         page = self.client.get("/admin/approvals/").get_data(as_text=True)
         self.assertIn("Zz Test Timed Page", page)
         self.assertIn("Mentions a competitor price", page)
-        self.assertIn("Approvals (1)", self.client.get("/admin/").get_data(as_text=True))
+        with self.app.app_context():
+            n = len(self.seoauto.pending())
+        self.assertIn(f"Approvals ({n})", self.client.get("/admin/").get_data(as_text=True))
         r = self.client.post("/admin/approvals/", data=dict(csrf=tok, path=url, action="approve"), follow_redirects=True)
         self.assertIn("Approved", r.get_data(as_text=True))
         self.client.get("/logout/")
@@ -1586,7 +1588,8 @@ Body text for the test page. It links to the [methodology](/methodology/).
         tok = self.admin()
         self.client.post("/admin/approvals/", data=dict(csrf=tok, path="/guides/zz-test-held/", action="reject"))
         self.assertEqual(self.app.test_client().get("/guides/zz-test-held/").status_code, 404)
-        self.assertNotIn("Approvals (1)", self.client.get("/admin/").get_data(as_text=True))
+        with self.app.app_context():
+            self.assertNotIn("/guides/zz-test-held/", [d.path for d in self.seoauto.pending()])
 
     def test_approvals_need_admin_and_a_real_held_page(self):
         self.assertIn(self.client.get("/admin/approvals/").status_code, (302, 403, 404))
@@ -1656,6 +1659,20 @@ Body text for the test page. It links to the [methodology](/methodology/).
             self.assertTrue(all(u.startswith(SITE) for u in sent[0]["urlList"]))
             self.assertEqual(self.seoauto.indexnow_tick(post=lambda url, body: sent.append(body) or 200), [])
             self.assertEqual(len(sent), 1)
+
+    def test_calendar_page_and_publishing_guard(self):
+        self.admin()
+        page = self.client.get("/admin/seo-reports/calendar/").get_data(as_text=True)
+        self.assertIn("Day 30", page)
+        self.assertIn("SaaS Valuation Multiples", page)
+        self.write("zz-test-timed", "publish_at: 2031-05-01T19:00Z")
+        self.write("zz-test-timed-two", "publish_at: 2031-05-01T19:00Z\npage_type: reference\nimage: /static/img/articles/nope.png")
+        with self.app.app_context():
+            text = "\n".join(self.seoauto.validate())
+        for expected in ("same release time", "meta description must be 120-158", "page_type must be article or reference",
+                         "no featured image", "image file missing: /static/img/articles/nope.png", "needs 300-650",
+                         "Frequently asked questions"):
+            self.assertIn(expected, text)
 
     def test_featured_image_on_article(self):
         self.write("zz-test-img", "image: /static/og/valueraq-default.png\nimage_alt: A test chart")

@@ -123,6 +123,8 @@ def main(argv=None):
         pairs = [(k.strip(), float(v)) for k, v in (x.split("=", 1) for x in a.data.split(",") if "=" in x)]
         if not 2 <= len(pairs) <= 10:
             sys.exit("give between 2 and 10 bars")
+        if any(v < 0 for _, v in pairs):
+            sys.exit("bar charts cannot show negative numbers; use a table instead")
         path = bar(a.slug, a.name, a.title, pairs, a.unit)
         desc = ", ".join(f"{k} {v:g}{a.unit}" for k, v in pairs)
         print(f"{os.path.getsize(path)} bytes  {path}")

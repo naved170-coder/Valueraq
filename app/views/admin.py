@@ -572,6 +572,12 @@ def seo_reports():
                            local_time=seoauto.local_time, cfg_seo=seoauto.config(), section="seoreports")
 
 
+@bp.get("/seo-reports/calendar/")
+@auth.admin_required
+def seo_calendar():
+    return render_template("admin/seo_calendar.html", cal=seoauto.calendar(), section="seoreports")
+
+
 @bp.get("/seo-reports/export.csv")
 @auth.admin_required
 def seo_reports_csv():

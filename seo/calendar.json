@@ -1,0 +1,1887 @@
+{
+ "note": "30-day calendar. Each day: four pages released at 00:00, 06:00, 12:00 and 18:00 Pakistan time, in the order listed. A daily run takes the first day whose pages are not all in content/ yet.",
+ "slots_utc": [
+  "19:00 (previous day)",
+  "01:00",
+  "07:00",
+  "13:00"
+ ],
+ "days": [
+  {
+   "day": 1,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "valuation-multiple",
+     "title": "What Is Valuation Multiple?",
+     "term": "Valuation Multiple",
+     "primary_keyword": "valuation multiple",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "website-worth-examples",
+     "title": "How Much Is My Website Worth? Seven Worked Examples",
+     "primary_keyword": "how much is my website worth",
+     "secondary_keywords": [
+      "website worth calculator",
+      "value my website",
+      "website value estimator"
+     ],
+     "cluster": "website",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/website-worth-calculator/",
+     "brief": "Seven site types (content, affiliate, ad-funded, lead-gen, small store, newsletter-led, new site) each valued step by step with the default multiples; shows what moves the number. Must not repeat the method walkthrough in /guides/website-valuation/; link to it.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "enterprise-value",
+     "title": "What Is Enterprise Value?",
+     "term": "Enterprise Value",
+     "primary_keyword": "enterprise value",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-find-out-what-a-business-is-worth",
+     "title": "How Do You Find Out What a Business Is Worth?",
+     "primary_keyword": "how to find out how much a business is worth",
+     "cluster": "analysis",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "add-backs",
+     "title": "What Is Add-Backs?",
+     "term": "Add-Backs",
+     "primary_keyword": "add-backs",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "saas-valuation-multiples",
+     "title": "SaaS Valuation Multiples: What They Are and How to Use Them",
+     "primary_keyword": "saas valuation multiples",
+     "secondary_keywords": [
+      "saas revenue multiples",
+      "saas company valuation multiples",
+      "saas ebitda multiples"
+     ],
+     "cluster": "saas",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "What an ARR multiple is, why ranges differ by growth, churn and size, how VALUERAQ's default range is built, worked example. State clearly that public-company multiples do not apply to small SaaS.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "trailing-twelve-months",
+     "title": "What Is Trailing Twelve Months (TTM)?",
+     "term": "Trailing Twelve Months (TTM)",
+     "primary_keyword": "trailing twelve months",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "what-multiple-do-websites-sell-for",
+     "title": "What Multiple Do Websites Sell For?",
+     "primary_keyword": "website valuation multiple",
+     "cluster": "website",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "run-rate",
+     "title": "What Is Run Rate?",
+     "term": "Run Rate",
+     "primary_keyword": "run rate",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "business-valuation-formula",
+     "title": "Business Valuation Formulas: Four Ways to Put a Number on a Business",
+     "primary_keyword": "business valuation formula",
+     "secondary_keywords": [
+      "company valuation formula",
+      "formula to value a business",
+      "how to determine the value of a business"
+     ],
+     "cluster": "analysis",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "brief": "Earnings multiple, revenue multiple, asset-based and discounted cash flow, each with formula and worked example, and which fits a small digital business.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "discounted-cash-flow",
+     "title": "What Is Discounted Cash Flow (DCF)?",
+     "term": "Discounted Cash Flow (DCF)",
+     "primary_keyword": "discounted cash flow",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-value-a-business-with-no-profit",
+     "title": "How Do You Value a Business That Makes No Profit?",
+     "primary_keyword": "how to value a business with no profit",
+     "cluster": "analysis",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "comparable-sales",
+     "title": "What Is Comparable Sales?",
+     "term": "Comparable Sales",
+     "primary_keyword": "comparable sales",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "financial-due-diligence-checklist",
+     "title": "Financial Due Diligence Checklist for Buying an Online Business",
+     "primary_keyword": "financial due diligence checklist",
+     "secondary_keywords": [
+      "due diligence checklist for buying a business",
+      "documents for due diligence"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/guides/digital-business-due-diligence/",
+     "brief": "A checklist limited to the money: revenue proof, cost check, add-backs, bank matching, tax records. Goes deeper than the general due diligence guide and links to it.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "fair-market-value",
+     "title": "What Is Fair Market Value?",
+     "term": "Fair Market Value",
+     "primary_keyword": "fair market value",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-verify-website-revenue",
+     "title": "How Do You Verify a Website's Revenue Before Buying?",
+     "primary_keyword": "verify website revenue",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/buyer-safety/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "asking-price",
+     "title": "What Is Asking Price?",
+     "term": "Asking Price",
+     "primary_keyword": "asking price",
+     "cluster": "selling",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "shopify-store-valuation",
+     "title": "How to Value a Shopify Store",
+     "primary_keyword": "shopify store valuation",
+     "secondary_keywords": [
+      "ecommerce business valuation",
+      "shopify stores for sale",
+      "ecommerce valuation multiples"
+     ],
+     "cluster": "ecommerce",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/ecommerce-valuation/",
+     "brief": "Inputs specific to Shopify stores: stock, ad dependence, repeat rate, supplier terms; worked example with the ecommerce tool.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "net-profit",
+     "title": "What Is Net Profit?",
+     "term": "Net Profit",
+     "primary_keyword": "net profit",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-verify-website-traffic",
+     "title": "How Do You Verify a Website's Traffic Before Buying?",
+     "primary_keyword": "verify website traffic",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/buyer-safety/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "gross-profit",
+     "title": "What Is Gross Profit?",
+     "term": "Gross Profit",
+     "primary_keyword": "gross profit",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-sell-a-saas-business",
+     "title": "How to Sell a SaaS Business: Steps, Timeline and Documents",
+     "primary_keyword": "sell saas business",
+     "secondary_keywords": [
+      "sell your saas",
+      "saas business for sale",
+      "sell saas company"
+     ],
+     "cluster": "saas",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "Preparation, metrics buyers ask for, where to list, negotiation, handover of code and customers.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "cost-of-goods-sold",
+     "title": "What Is Cost of Goods Sold (COGS)?",
+     "term": "Cost of Goods Sold (COGS)",
+     "primary_keyword": "cost of goods sold",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-transfer-a-website-to-a-new-owner",
+     "title": "How Do You Transfer a Website to a New Owner?",
+     "primary_keyword": "transfer website ownership",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/how-to-sell-a-website/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "cash-flow",
+     "title": "What Is Cash Flow?",
+     "term": "Cash Flow",
+     "primary_keyword": "cash flow",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-buy-a-website",
+     "title": "How to Buy a Website: A First-Time Buyer's Guide",
+     "primary_keyword": "buy websites",
+     "secondary_keywords": [
+      "websites for sale",
+      "website business for sale",
+      "buy and sell websites"
+     ],
+     "cluster": "website",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/businesses-for-sale/websites/",
+     "brief": "Finding, screening, valuing, checking and transferring a content or affiliate website; mistakes first-time buyers make.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "working-capital",
+     "title": "What Is Working Capital?",
+     "term": "Working Capital",
+     "primary_keyword": "working capital",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-escrow-works-for-website-sales",
+     "title": "How Does Escrow Work When You Buy or Sell a Website?",
+     "primary_keyword": "escrow for website sale",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/buyer-safety/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "goodwill",
+     "title": "What Is Goodwill?",
+     "term": "Goodwill",
+     "primary_keyword": "goodwill",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "amazon-fba-business-valuation",
+     "title": "How to Value an Amazon FBA Business",
+     "primary_keyword": "amazon business valuation",
+     "secondary_keywords": [
+      "fba business for sale",
+      "amazon business worth",
+      "sell amazon business"
+     ],
+     "cluster": "ecommerce",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/ecommerce-valuation/",
+     "brief": "What is different about FBA: account health, stock in transit, dependence on one marketplace, brand registry; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "book-value",
+     "title": "What Is Book Value?",
+     "term": "Book Value",
+     "primary_keyword": "book value",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "what-documents-do-buyers-ask-for",
+     "title": "What Documents Do Buyers Ask For When You Sell an Online Business?",
+     "primary_keyword": "documents for due diligence",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/digital-business-due-diligence/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "recurring-revenue",
+     "title": "What Is Recurring Revenue?",
+     "term": "Recurring Revenue",
+     "primary_keyword": "recurring revenue",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "domain-appraisal-explained",
+     "title": "Domain Appraisal: What a Domain Name Is Worth and Why",
+     "primary_keyword": "domain appraisal",
+     "secondary_keywords": [
+      "domain appraisal free",
+      "check domain price value",
+      "how to value a domain name"
+     ],
+     "cluster": "website",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "How automated domain appraisals work and their limits; difference between a bare domain and a website with earnings; be clear VALUERAQ values earning websites, not bare domains.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "arpu",
+     "title": "What Is Average Revenue per User (ARPU)?",
+     "term": "Average Revenue per User (ARPU)",
+     "primary_keyword": "average revenue per user",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-write-a-business-for-sale-listing",
+     "title": "How Do You Write a Good Business-for-Sale Listing?",
+     "primary_keyword": "business for sale listing",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/sell/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "burn-rate",
+     "title": "What Is Burn Rate?",
+     "term": "Burn Rate",
+     "primary_keyword": "burn rate",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-sell-a-shopify-store",
+     "title": "How to Sell a Shopify Store",
+     "primary_keyword": "sell shopify store",
+     "secondary_keywords": [
+      "shopify business for sale",
+      "ecommerce business for sale",
+      "online stores for sale"
+     ],
+     "cluster": "ecommerce",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/ecommerce-valuation/",
+     "brief": "Preparing records, valuing stock, listing, transferring the store and supplier accounts.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "payback-period",
+     "title": "What Is Payback Period?",
+     "term": "Payback Period",
+     "primary_keyword": "payback period",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "can-you-sell-a-website-with-no-revenue",
+     "title": "Can You Sell a Website That Has No Revenue?",
+     "primary_keyword": "sell website with no revenue",
+     "cluster": "website",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "rule-of-40",
+     "title": "What Is Rule of 40?",
+     "term": "Rule of 40",
+     "primary_keyword": "rule of 40",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "valuing-a-business-on-revenue",
+     "title": "Valuing a Business on Revenue: When It Works and When It Misleads",
+     "primary_keyword": "business value based on revenue",
+     "secondary_keywords": [
+      "how to value a business",
+      "revenue multiple"
+     ],
+     "cluster": "analysis",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "brief": "When revenue multiples are appropriate (recurring revenue, growth) and when profit must be used; examples of two businesses with equal revenue and different values.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "revenue-churn",
+     "title": "What Is Revenue Churn?",
+     "term": "Revenue Churn",
+     "primary_keyword": "revenue churn",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-value-an-email-list",
+     "title": "How Do You Value an Email List?",
+     "primary_keyword": "how to value an email list",
+     "cluster": "newsletter",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/newsletter-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "expansion-revenue",
+     "title": "What Is Expansion Revenue?",
+     "term": "Expansion Revenue",
+     "primary_keyword": "expansion revenue",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "flippa-alternatives",
+     "title": "Flippa Alternatives: Where Else to Sell or Buy an Online Business",
+     "primary_keyword": "sites like flippa",
+     "secondary_keywords": [
+      "websites like flippa",
+      "flippa alternatives",
+      "other sites like flippa"
+     ],
+     "cluster": "selling",
+     "section": "Comparisons",
+     "words": "1,500-2,500",
+     "tool_link": "/fees/",
+     "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
+     "hold": true,
+     "hold_reason": "Names competitors and their fees",
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "retention-rate",
+     "title": "What Is Retention Rate?",
+     "term": "Retention Rate",
+     "primary_keyword": "retention rate",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-calculate-sde",
+     "title": "How Do You Calculate SDE?",
+     "primary_keyword": "how to calculate sde",
+     "cluster": "analysis",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "cohort-analysis",
+     "title": "What Is Cohort Analysis?",
+     "term": "Cohort Analysis",
+     "primary_keyword": "cohort analysis",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-blog",
+     "title": "How to Value a Blog or Content Website",
+     "primary_keyword": "how to value a blog",
+     "secondary_keywords": [
+      "website valuation",
+      "site valuation",
+      "blog for sale"
+     ],
+     "cluster": "website",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "Traffic sources, earnings mix, content quality and owner time; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "monthly-active-users",
+     "title": "What Is Monthly Active Users (MAU)?",
+     "term": "Monthly Active Users (MAU)",
+     "primary_keyword": "monthly active users",
+     "cluster": "app",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-calculate-arr-from-mrr",
+     "title": "How Do You Calculate ARR from MRR?",
+     "primary_keyword": "arr from mrr",
+     "cluster": "saas",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/calculators/saas-valuation-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "organic-traffic",
+     "title": "What Is Organic Traffic?",
+     "term": "Organic Traffic",
+     "primary_keyword": "organic traffic",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "ecommerce-valuation-multiples",
+     "title": "Ecommerce Valuation Multiples Explained",
+     "primary_keyword": "ecommerce valuation multiples",
+     "secondary_keywords": [
+      "ecommerce ebitda multiples",
+      "ecommerce business valuation multiple"
+     ],
+     "cluster": "ecommerce",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/ecommerce-valuation/",
+     "brief": "What multiple applies to which earnings figure, how stock is treated, what raises or lowers the default range.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "backlink",
+     "title": "What Is Backlink?",
+     "term": "Backlink",
+     "primary_keyword": "backlink",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "when-to-sell-an-online-business",
+     "title": "When Is the Right Time to Sell an Online Business?",
+     "primary_keyword": "when to sell my online business",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/sell/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 15,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "rpm",
+     "title": "What Is Revenue per Thousand Visits (RPM)?",
+     "term": "Revenue per Thousand Visits (RPM)",
+     "primary_keyword": "revenue per thousand visits",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-sell-an-app",
+     "title": "How to Sell a Mobile App",
+     "primary_keyword": "sell app business",
+     "secondary_keywords": [
+      "apps for sale",
+      "mobile apps for sale",
+      "sell your app online"
+     ],
+     "cluster": "app",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/app-valuation/",
+     "brief": "Valuing, listing and transferring an app, including app-store transfer rules (cite Apple and Google's own documentation).",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "earnings-per-click",
+     "title": "What Is Earnings per Click (EPC)?",
+     "term": "Earnings per Click (EPC)",
+     "primary_keyword": "earnings per click",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-finance-buying-an-online-business",
+     "title": "How Can You Finance Buying an Online Business?",
+     "primary_keyword": "finance buying online business",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/buying-digital-businesses/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "affiliate-marketing",
+     "title": "What Is Affiliate Marketing?",
+     "term": "Affiliate Marketing",
+     "primary_keyword": "affiliate marketing",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-buy-an-ecommerce-business",
+     "title": "How to Buy an Ecommerce Business",
+     "primary_keyword": "buy ecommerce business",
+     "secondary_keywords": [
+      "ecommerce business for sale",
+      "ecommerce stores for sale",
+      "online stores for sale"
+     ],
+     "cluster": "ecommerce",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/businesses-for-sale/ecommerce/",
+     "brief": "Screening, stock and supplier checks, ad account history, transfer.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "display-advertising",
+     "title": "What Is Display Advertising?",
+     "term": "Display Advertising",
+     "primary_keyword": "display advertising",
+     "cluster": "website",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "what-is-included-when-you-buy-a-website",
+     "title": "What Is Included When You Buy a Website?",
+     "primary_keyword": "what is included when buying a website",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/businesses-for-sale/websites/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 17,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "click-through-rate",
+     "title": "What Is Click-Through Rate (CTR)?",
+     "term": "Click-Through Rate (CTR)",
+     "primary_keyword": "click-through rate",
+     "cluster": "newsletter",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "micro-saas-valuation",
+     "title": "Micro-SaaS Valuation: Pricing a Small Software Business",
+     "primary_keyword": "micro saas valuation",
+     "secondary_keywords": [
+      "saas startup valuation",
+      "saas company valuation",
+      "saas for sale"
+     ],
+     "cluster": "saas",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "Why very small SaaS is often priced on profit not ARR, founder dependence, churn at small numbers; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "sponsorship-revenue",
+     "title": "What Is Sponsorship Revenue?",
+     "term": "Sponsorship Revenue",
+     "primary_keyword": "sponsorship revenue",
+     "cluster": "newsletter",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-spot-a-fake-website-listing",
+     "title": "How Do You Spot a Fake or Misleading Website Listing?",
+     "primary_keyword": "website for sale scam",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/buyer-safety/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 18,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "dropshipping",
+     "title": "What Is Dropshipping?",
+     "term": "Dropshipping",
+     "primary_keyword": "dropshipping",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "sde-add-backs",
+     "title": "SDE Add-Backs: What Counts and What Buyers Reject",
+     "primary_keyword": "sde add backs",
+     "secondary_keywords": [
+      "sde business valuation calculator",
+      "how to calculate sde"
+     ],
+     "cluster": "analysis",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "brief": "Legitimate add-backs versus ones buyers refuse; worked SDE calculation; links to SDE vs EBITDA guide.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "fulfillment-by-amazon",
+     "title": "What Is Fulfillment by Amazon (FBA)?",
+     "term": "Fulfillment by Amazon (FBA)",
+     "primary_keyword": "fulfillment by amazon",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-negotiate-buying-an-online-business",
+     "title": "How Do You Negotiate the Price of an Online Business?",
+     "primary_keyword": "negotiate buying a business",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 19,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "private-label",
+     "title": "What Is Private Label?",
+     "term": "Private Label",
+     "primary_keyword": "private label",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "increase-website-value-before-selling",
+     "title": "How to Increase the Value of a Website Before You Sell",
+     "primary_keyword": "increase website value",
+     "secondary_keywords": [
+      "sell website",
+      "how to sell a website"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "Changes that move the valuation inputs in 3 to 12 months: diversify income, document processes, clean records, reduce owner hours.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "inventory-turnover",
+     "title": "What Is Inventory Turnover?",
+     "term": "Inventory Turnover",
+     "primary_keyword": "inventory turnover",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "what-happens-after-you-sell-a-website",
+     "title": "What Happens After You Sell Your Website?",
+     "primary_keyword": "after selling a website",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/how-to-sell-a-website/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 20,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "chargeback",
+     "title": "What Is Chargeback?",
+     "term": "Chargeback",
+     "primary_keyword": "chargeback",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "affiliate-website-valuation",
+     "title": "How to Value an Affiliate Website",
+     "primary_keyword": "affiliate website valuation",
+     "secondary_keywords": [
+      "website valuation",
+      "website worth"
+     ],
+     "cluster": "website",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "Programme dependence, commission changes, traffic mix; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "return-on-ad-spend",
+     "title": "What Is Return on Ad Spend (ROAS)?",
+     "term": "Return on Ad Spend (ROAS)",
+     "primary_keyword": "return on ad spend",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-many-months-of-data-do-buyers-want",
+     "title": "How Many Months of Records Do Buyers Want to See?",
+     "primary_keyword": "how much history to sell a website",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/digital-business-due-diligence/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 21,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "non-compete-agreement",
+     "title": "What Is Non-Compete Agreement?",
+     "term": "Non-Compete Agreement",
+     "primary_keyword": "non-compete agreement",
+     "cluster": "selling",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "broker-vs-marketplace",
+     "title": "Business Broker or Marketplace: Which Way to Sell an Online Business",
+     "primary_keyword": "online business broker",
+     "secondary_keywords": [
+      "domain broker",
+      "sell my online business",
+      "website broker"
+     ],
+     "cluster": "selling",
+     "section": "Comparisons",
+     "words": "1,500-2,500",
+     "tool_link": "/fees/",
+     "brief": "How each works, typical fee structures in general terms (cite sources), what size of business suits which; no named competitor fees unless opened and cited, in which case hold.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "non-disclosure-agreement",
+     "title": "What Is Non-Disclosure Agreement (NDA)?",
+     "term": "Non-Disclosure Agreement (NDA)",
+     "primary_keyword": "non-disclosure agreement",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "is-revenue-or-profit-more-important",
+     "title": "Is Revenue or Profit More Important in a Valuation?",
+     "primary_keyword": "revenue or profit valuation",
+     "cluster": "analysis",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/revenue-vs-profit-multiples/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 22,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "data-room",
+     "title": "What Is Data Room?",
+     "term": "Data Room",
+     "primary_keyword": "data room",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-long-to-sell-an-online-business",
+     "title": "How Long Does It Take to Sell an Online Business?",
+     "primary_keyword": "how long does it take to sell an online business",
+     "secondary_keywords": [
+      "sell my online business",
+      "selling online business"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/sell/",
+     "brief": "Stages and what slows each one down; what the seller controls. No invented averages: use cited sources or describe ranges as typical stages without numbers.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "proof-of-funds",
+     "title": "What Is Proof of Funds?",
+     "term": "Proof of Funds",
+     "primary_keyword": "proof of funds",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-transfer-a-shopify-store",
+     "title": "How Do You Transfer a Shopify Store to a Buyer?",
+     "primary_keyword": "transfer shopify store ownership",
+     "cluster": "ecommerce",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/ecommerce-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 23,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "purchase-agreement",
+     "title": "What Is Purchase Agreement?",
+     "term": "Purchase Agreement",
+     "primary_keyword": "purchase agreement",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "saas-metrics-buyers-check",
+     "title": "The SaaS Metrics Buyers Check Before Making an Offer",
+     "primary_keyword": "saas metrics",
+     "secondary_keywords": [
+      "saas valuation",
+      "saas company valuation"
+     ],
+     "cluster": "saas",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "MRR, churn, NRR, CAC, LTV, concentration: what each tells a buyer and how to verify it from billing data.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "transition-period",
+     "title": "What Is Transition Period?",
+     "term": "Transition Period",
+     "primary_keyword": "transition period",
+     "cluster": "selling",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-transfer-an-app-to-a-new-owner",
+     "title": "How Do You Transfer an App to a New Owner?",
+     "primary_keyword": "transfer app ownership",
+     "cluster": "app",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/app-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 24,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "holdback",
+     "title": "What Is Holdback?",
+     "term": "Holdback",
+     "primary_keyword": "holdback",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "adsense-website-valuation",
+     "title": "How to Value a Website That Earns from Display Ads",
+     "primary_keyword": "adsense website valuation",
+     "secondary_keywords": [
+      "website worth",
+      "value my website"
+     ],
+     "cluster": "website",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "RPM, traffic stability, ad network terms; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "stock-sale",
+     "title": "What Is Stock Sale?",
+     "term": "Stock Sale",
+     "primary_keyword": "stock sale",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-much-does-it-cost-to-sell-an-online-business",
+     "title": "How Much Does It Cost to Sell an Online Business?",
+     "primary_keyword": "cost to sell online business",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/fees/",
+     "hold": true,
+     "hold_reason": "Mentions fees; held",
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 25,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "business-broker",
+     "title": "What Is Business Broker?",
+     "term": "Business Broker",
+     "primary_keyword": "business broker",
+     "cluster": "selling",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "deal-structures-for-online-business-sales",
+     "title": "Deal Structures for Small Online Business Sales",
+     "primary_keyword": "how to structure a business sale",
+     "secondary_keywords": [
+      "seller financing",
+      "earnout",
+      "escrow"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/buyer-safety/",
+     "brief": "All-cash, seller financing, earnout, holdback; when each is used; worked example of the same price paid three ways.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "success-fee",
+     "title": "What Is Success Fee?",
+     "term": "Success Fee",
+     "primary_keyword": "success fee",
+     "cluster": "selling",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "should-i-sell-my-online-business",
+     "title": "Should You Sell Your Online Business or Keep It?",
+     "primary_keyword": "should i sell my online business",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 26,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "exclusivity-period",
+     "title": "What Is Exclusivity Period?",
+     "term": "Exclusivity Period",
+     "primary_keyword": "exclusivity period",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "valuation-mistakes",
+     "title": "Nine Mistakes People Make When Valuing an Online Business",
+     "primary_keyword": "online business valuation",
+     "secondary_keywords": [
+      "how much is my business worth",
+      "business valuation mistakes"
+     ],
+     "cluster": "analysis",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/",
+     "brief": "Common errors: using revenue for a low-margin business, ignoring owner time, one good month, wrong multiple basis.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "representations-and-warranties",
+     "title": "What Is Representations and Warranties?",
+     "term": "Representations and Warranties",
+     "primary_keyword": "representations and warranties",
+     "cluster": "buying",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "what-is-a-fair-price-for-a-small-saas",
+     "title": "What Is a Fair Price for a Small SaaS Business?",
+     "primary_keyword": "saas business valuation",
+     "cluster": "saas",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/saas-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 27,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "technical-debt",
+     "title": "What Is Technical Debt?",
+     "term": "Technical Debt",
+     "primary_keyword": "technical debt",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-business-with-ebitda",
+     "title": "How to Value a Business Using EBITDA",
+     "primary_keyword": "how to value a business using ebitda",
+     "secondary_keywords": [
+      "ebitda valuation calculator",
+      "ebitda formula for business valuation"
+     ],
+     "cluster": "analysis",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "brief": "Calculating adjusted EBITDA, choosing a multiple, when EBITDA is the wrong figure for a small owner-run business.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "key-person-risk",
+     "title": "What Is Key Person Risk?",
+     "term": "Key Person Risk",
+     "primary_keyword": "key person risk",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-value-a-newsletter-with-sponsors",
+     "title": "How Do You Value a Newsletter That Earns from Sponsors?",
+     "primary_keyword": "newsletter valuation",
+     "cluster": "newsletter",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/newsletter-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 28,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "platform-risk",
+     "title": "What Is Platform Risk?",
+     "term": "Platform Risk",
+     "primary_keyword": "platform risk",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "selling-an-online-business-from-the-uk",
+     "title": "Selling an Online Business from the UK: A Practical Guide",
+     "primary_keyword": "sell online business uk",
+     "secondary_keywords": [
+      "sell my online business",
+      "sell website"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/sell/",
+     "brief": "Process for a UK-based seller with overseas buyers: currency, escrow, contracts in general terms; tells readers to take local tax and legal advice. Country guide: always held.",
+     "hold": true,
+     "hold_reason": "Country-specific guide",
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "seasonality",
+     "title": "What Is Seasonality?",
+     "term": "Seasonality",
+     "primary_keyword": "seasonality",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "how-to-read-a-profit-and-loss-statement",
+     "title": "How Do You Read a Profit and Loss Statement When Buying a Business?",
+     "primary_keyword": "read profit and loss statement",
+     "cluster": "buying",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/guides/digital-business-due-diligence/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 29,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "year-over-year-growth",
+     "title": "What Is Year-over-Year Growth?",
+     "term": "Year-over-Year Growth",
+     "primary_keyword": "year-over-year growth",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "data-room-checklist",
+     "title": "Data Room Checklist for Selling an Online Business",
+     "primary_keyword": "due diligence data room checklist",
+     "secondary_keywords": [
+      "documents for due diligence",
+      "due diligence list"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/guides/digital-business-due-diligence/",
+     "brief": "What a seller should gather before listing, by folder, and how to share it safely.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "unit-economics",
+     "title": "What Is Unit Economics?",
+     "term": "Unit Economics",
+     "primary_keyword": "unit economics",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "website-valuation-for-a-new-site",
+     "title": "How Do You Value a Website Less Than a Year Old?",
+     "primary_keyword": "value new website",
+     "cluster": "website",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 30,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "contribution-margin",
+     "title": "What Is Contribution Margin?",
+     "term": "Contribution Margin",
+     "primary_keyword": "contribution margin",
+     "cluster": "ecommerce",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "buying-an-online-business-from-the-gulf",
+     "title": "Buying an Online Business from the UAE or Saudi Arabia",
+     "primary_keyword": "buy online business uae",
+     "secondary_keywords": [
+      "online business for sale",
+      "buy websites"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/businesses-for-sale/",
+     "brief": "Cross-border buying in general terms: payment, escrow availability, time zones, taking local advice. Country guide: always held.",
+     "hold": true,
+     "hold_reason": "Country-specific guide",
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "micro-saas",
+     "title": "What Is Micro-SaaS?",
+     "term": "Micro-SaaS",
+     "primary_keyword": "micro-saas",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Question answered",
+     "slug": "tax-when-you-sell-a-website",
+     "title": "Do You Pay Tax When You Sell a Website?",
+     "primary_keyword": "tax on selling a website",
+     "cluster": "selling",
+     "section": "Quick answers",
+     "words": "300-600",
+     "tool_link": "/disclaimer/",
+     "hold": true,
+     "hold_reason": "Tax topic; held",
+     "images": "1 featured image"
+    }
+   ]
+  }
+ ]
+}

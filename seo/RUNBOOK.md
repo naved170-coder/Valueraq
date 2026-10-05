@@ -1,0 +1,186 @@
+# VALUERAQ daily SEO run: runbook
+
+This file is the full instruction set for the scheduled daily run. Follow it exactly.
+The owner (Naveed) is not technical and is not watching. Never ask him a question
+during a run; decide, and write what you decided in the day's report.
+
+## 0. Ground rules
+
+- Repository: `naved170-coder/Valueraq`, branch `main`. Render deploys `main` automatically (1 to 2 minutes).
+- You write files and push. You never log in to the website and never need a password or API key.
+- If the tests, the SEO audit or `seo-check` fail and you cannot fix it, push nothing. Stop and report in your final message.
+- Never edit: `content/pages/` (terms, privacy, refund, cookie, disclaimer and the rest), prices, fees, `app/` code,
+  or anything about commission. If one of those looks wrong, add a line to `notes` in the report.
+- US English, US dollars, written for a US reader first. Plain words. Short paragraphs.
+
+## 1. Start
+
+```
+git clone https://github.com/naved170-coder/Valueraq.git && cd Valueraq   (or git pull if already present)
+pip install -r requirements.txt --break-system-packages
+```
+
+Read `seo/config.json`. If `active` is false, stop: the run is switched off.
+
+Work out the run date: today's date in Pakistan time (UTC+5). If `seo/runs/<run date>.json` already exists, stop:
+today's run is done (this is the guard against publishing twice).
+
+## 2. Pick the work
+
+Open `seo/calendar.json`. Take the first day whose four pages are not all present under `content/`.
+Write those four pages, in the listed order. If a page of that day already exists, skip it and take
+only the missing ones. Never write more than four pages in one run.
+
+After day 30 of the calendar (or from `reduce_after` in config.json), write only the first two pages per day
+(one article, one reference page) from the next calendar the monthly run prepares. If the calendar is used up,
+write nothing new, say so in `notes`, and still write the report.
+
+## 3. Before writing each page: duplicate check
+
+List `content/guides/` and `content/glossary/`. If an existing page answers the same search question, do not
+write the page. Record it in the report as `"action": "skipped"` with the overlapping path. Otherwise record
+`"duplicate": "pass (closest: /guides/x/, /glossary/y/)"`.
+
+## 4. Research
+
+- Use WebSearch and WebFetch. Open every source you rely on. Cite it with a link in the page.
+  Prefer primary and high-authority sources: SBA.gov, IRS.gov, SEC.gov, Investopedia, AICPA, university pages,
+  Apple, Google, Shopify, Amazon and Stripe documentation.
+- No invented statistics, averages, "studies show", or market sizes. If you cannot open a source for a number, leave the number out.
+- Multiples: quote only VALUERAQ's own default assumptions. Read them from `app/valuation.py` (`BASE`) and
+  `content/pages/methodology.md`, and describe them as "VALUERAQ's default range", never as market data.
+- Describe VALUERAQ accurately: six free valuation tools, three calculators, free listings, a marketplace with messaging.
+  Check `content/pages/fees.md` and `content/pages/how-it-works.md` before stating anything it offers. No guarantees of results.
+
+## 5. Write
+
+Article (`content/guides/<slug>.md`), 1,500 to 2,500 words. Front matter:
+
+```
+---
+title: <as in the calendar>
+meta_title: <60 characters or fewer, unique>
+meta_description: <120 to 158 characters, unique>
+h1: <title>
+section: <section from the calendar>
+cluster: <cluster from the calendar>
+order: 60
+page_type: article
+answer: <one or two sentences that answer the search question directly>
+keywords: <primary keyword>, <secondary keywords actually used>
+published: <the Pakistan date the page goes live>
+updated: <same>
+publish_at: <release time in UTC, see section 7>
+image: /static/img/articles/<slug>.png
+image_alt: <what the image shows, 8+ characters>
+score: <editorial score, section 6>
+related: <4 to 6 existing paths, comma separated>
+cta: <tool_link from the calendar>
+cta_text: <one soft sentence>
+---
+```
+
+Body, in this order: `## Key takeaway`; the main sections with H2 and H3 headings; at least one comparison table;
+one worked example with the arithmetic shown; one or two charts made with `scripts/seo_image.py bar` that show only
+figures stated in the text; `## Frequently asked questions` with 3 to 5 `###` questions; `## Sources` listing the links.
+Link in the text to the matching tool, to 3 or more related guides or glossary pages, and to `/methodology/` when a multiple is mentioned.
+
+Reference page, 300 to 600 words, `page_type: reference`, one featured image, no charts needed:
+
+- Glossary term → `content/glossary/<slug>.md` with `title`, `term`, `aliases`, `meta_title`, `meta_description`, `h1`,
+  `definition` (one sentence), `cluster`, `related`, `updated`, plus `page_type`, `keywords`, `publish_at`, `image`, `image_alt`, `score`.
+  Sections: How it works, Example (with numbers), Why it matters in a valuation, Related terms.
+  Copy the shape of `content/glossary/earnout.md`.
+- Question answered → `content/guides/<slug>.md` with `section: Quick answers`, same front matter as an article,
+  a direct answer first, then the detail, then a 2 to 3 question FAQ.
+
+Images for every page:
+
+```
+python scripts/seo_image.py feature --slug <slug> --title "<title>" --label "<Guide|Glossary|Quick answer> · <Topic>"
+python scripts/seo_image.py bar --slug <slug> --name <short-name> --title "<chart title>" --unit "x" --data "A=1,B=2"
+```
+
+Paste the lines each command prints. Never use an outside image, a stock photo or an AI image service.
+
+Banned: "in today's fast-paced world", "delve", "unlock", "game-changer", "ever-evolving", "look no further",
+and any sentence that says nothing. No year in the page address.
+
+## 6. Editorial review (a separate pass, after writing)
+
+Re-read each page as a strict editor and score 0 to 10 on each point, then average to one decimal:
+
+1 matches the search intent · 2 original value (examples, workflows, numbers) · 3 facts checked · 4 authoritative sources cited ·
+5 no filler · 6 natural keyword use · 7 accurate about VALUERAQ · 8 clear structure · 9 internal links ·
+10 external links to high-authority sources · 11 shows real industry knowledge · 12 images relevant with alt text ·
+13 readability · 14 soft, relevant call to action · 15 meta title and description compelling and within length.
+
+- Below 8.5: rewrite once and score again. Still below 8.5: keep the page but add `hold: yes` and
+  `hold_reason: Scored <n> after one rewrite: <weakest points>`.
+- Automatic reject (delete the page, record as skipped): an invented fact or feature, a guaranteed outcome, a duplicate topic, a broken image.
+
+Always add `hold: yes` with a plain-English `hold_reason` when the page: names a competitor or its fees or features;
+states tax or legal rules for a specific country; mentions VALUERAQ's own prices or commission beyond linking to /fees/;
+or is marked `"hold": true` in the calendar. Held pages are hidden until the owner presses Approve in Admin → Approvals.
+
+## 7. Release times
+
+Pages go live the day after the run, Pakistan time, one every six hours, in calendar order.
+For run date D (Pakistan), use these `publish_at` values:
+
+| Order | Pakistan time | publish_at (UTC) |
+|---|---|---|
+| 1 | D+1, 12:00 am | `<D>T19:00Z` |
+| 2 | D+1, 6:00 am | `<D+1>T01:00Z` |
+| 3 | D+1, 12:00 pm | `<D+1>T07:00Z` |
+| 4 | D+1, 6:00 pm | `<D+1>T13:00Z` |
+
+## 8. Gates (all must pass before pushing)
+
+```
+python manage.py seo-check          # 0 problems
+python -m unittest tests.test_app   # all pass
+python manage.py audit              # 0 critical, 0 warnings
+```
+
+Also check every internal link you wrote points to a page that exists, and that every external link opened for you during research.
+
+## 9. Report file
+
+Write `seo/runs/<run date>.json`:
+
+```
+{
+  "summary": "One plain sentence: what was written and what needs the owner.",
+  "model": "<model that ran>",
+  "items": [
+    {"path": "/guides/<slug>/", "action": "new", "type": "Article", "score": 9.1,
+     "duplicate": "pass (closest: /guides/x/)", "images": "1 featured, 2 charts",
+     "keywords": ["primary", "secondary"], "note": ""}
+  ],
+  "checks": ["Tests: 111 passed", "SEO audit: 0 critical, 0 warnings", "Internal links: 0 broken", "External links: 9 opened, 0 broken", "Live check of yesterday's pages: 4 of 4 load, images load"],
+  "notes": ["Anything the owner should know or do, in plain words. Empty list if nothing."]
+}
+```
+
+`action` is `new`, `refresh`, `fix` or `skipped`.
+
+## 10. Check yesterday's pages on the live site
+
+For each page in the previous report whose release time has passed, fetch `https://www.valueraq.com<path>?v=<run date>`
+and its image. Record the result in `checks`. If one does not load and is not waiting for approval, say so in `notes`.
+
+## 11. Push
+
+```
+git add -A content seo app/static/img/articles
+git commit -m "SEO run <run date>: <n> pages"
+git push origin main
+```
+
+Then confirm the push reached GitHub (`git log origin/main -1`). If the push is refused, do not retry in a loop:
+finish with a final message that says "PUSH FAILED" and why. The website shows the owner an alert when a day has no report.
+
+## 12. Final message
+
+Three lines at most: pages written, pages held for approval, anything that failed.

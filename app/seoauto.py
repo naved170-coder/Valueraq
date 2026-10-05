@@ -182,6 +182,85 @@ def export_csv():
     return buf.getvalue()
 
 
+@lru_cache(maxsize=1)
+def calendar():
+    """The content plan (seo/calendar.json) with a done flag for each page already written."""
+    cal = _read_json(os.path.join(SEO_DIR, "calendar.json"), {"days": []})
+    for day in cal.get("days", []):
+        for pg in day.get("pages", []):
+            pg["path"] = content.KIND_PREFIX.get(pg.get("kind"), "/") + pg.get("slug", "") + "/"
+            pg["written"] = content.load(pg.get("kind"), pg.get("slug")) is not None
+        day["written"] = all(pg["written"] for pg in day.get("pages", []))
+    return cal
+
+
+# ---------------------------------------------------------------- pre-publish checks (the publishing guard)
+BANNED = ("in today's fast-paced", "fast-paced world", "delve", "unlock", "game-changer", "game changer",
+          "ever-evolving", "in the realm of", "it's important to note", "look no further", "tapestry")
+MAX_PER_DAY = 4
+LIMITS = {"article": (1500, 2700), "reference": (300, 650)}
+
+
+def validate():
+    """Check every timed page against the content rules. Returns a list of problems (empty means safe to publish)."""
+    problems, per_day, stamps = [], {}, {}
+    static_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
+    tz = config()["tz_hours"]
+    for kind in KINDS:
+        for d in content.all_docs(kind):
+            if not d.meta.get("publish_at"):
+                continue
+            def bad(msg, d=d):
+                problems.append(f"{d.path}: {msg}")
+            ts = d.publish_ts
+            if ts is None:
+                bad("publish_at cannot be read; use 2026-10-09T19:00Z")
+                continue
+            day = (datetime.datetime.fromtimestamp(ts, datetime.timezone.utc) + datetime.timedelta(hours=tz)).date().isoformat()
+            per_day.setdefault(day, []).append(d.path)
+            if ts in stamps:
+                bad(f"same release time as {stamps[ts]}")
+            stamps[ts] = d.path
+            if re.search(r"(19|20)\d\d", d.slug):
+                bad("page address contains a year")
+            if not d.keywords:
+                bad("no keywords listed")
+            mt, md = d.meta_title or "", d.meta_description or ""
+            if not mt or len(mt) > 60:
+                bad(f"meta title must be 1-60 characters (is {len(mt)})")
+            if not 120 <= len(md) <= 158:
+                bad(f"meta description must be 120-158 characters (is {len(md)})")
+            lo, hi = LIMITS.get(d.meta.get("page_type", ""), (0, 0))
+            if not hi:
+                bad("page_type must be article or reference")
+            elif not lo <= d.words <= hi:
+                bad(f"{d.words} words; a {d.page_type} page needs {lo}-{hi}")
+            if not d.image:
+                bad("no featured image")
+            imgs = ([d.image] if d.image else []) + re.findall(r'src="(/static/[^"]+)"', d.html)
+            for src in imgs:
+                if not src.startswith("/static/") or not os.path.isfile(os.path.join(static_root, src[len("/static/"):])):
+                    bad(f"image file missing: {src}")
+            if re.search(r"<img(?![^>]*\balt=\"[^\"]{8,})", d.html):
+                bad("an image has no meaningful alt text")
+            low = d.body_md.lower()
+            for phrase in BANNED:
+                if phrase in low:
+                    bad(f'banned filler phrase: "{phrase}"')
+            if kind == "guides" and len(d.faqs()) < 2:
+                bad("needs a 'Frequently asked questions' section with at least two questions")
+            if kind == "guides" and not d.answer:
+                bad("needs a one-sentence 'answer' at the top")
+            if kind == "glossary" and not (d.term and d.definition):
+                bad("glossary page needs 'term' and 'definition'")
+            if d.held and not d.hold_reason:
+                bad("held page needs a hold_reason")
+    for day, paths in per_day.items():
+        if len(paths) > MAX_PER_DAY:
+            problems.append(f"{day}: {len(paths)} pages scheduled; the daily cap is {MAX_PER_DAY}")
+    return problems
+
+
 # ---------------------------------------------------------------- missed-run alert
 def alert():
     """Describe a missed daily run, or return None when everything is on schedule."""

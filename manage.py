@@ -3,6 +3,7 @@
   python manage.py run                   # development server on :5000
   python manage.py create-admin EMAIL    # create or promote an admin (prompts for password)
   python manage.py audit                 # run the SEO acceptance audit; exit 1 on critical issues
+  python manage.py seo-check              # check timed pages against the content rules; exit 1 on any problem
   python manage.py expire-featured       # clear featured flags past their end date (run daily)
 """
 import getpass
@@ -54,6 +55,13 @@ def main(argv):
             for i in summary["site_issues"]:
                 print(f"  [{i['severity']}] site: {i['message']}")
             return 1 if summary["critical"] else 0
+        if cmd == "seo-check":
+            from app import seoauto
+            problems = seoauto.validate()
+            for p in problems:
+                print("  [problem]", p)
+            print(f"{len(problems)} problem(s) in timed pages.")
+            return 1 if problems else 0
         if cmd == "backup":
             from app import backup
             row = backup.run("manual")

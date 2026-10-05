@@ -1,0 +1,17 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<p><a href="/admin/seo-reports/">← All SEO reports</a></p>
+<h1>Content calendar</h1>
+<p class="lede">The plan the daily run follows: four pages a day, in this order. To move or drop a topic, tell Claude in the chat.</p>
+{% for day in cal.days %}
+<h2 class="h3 mt">Day {{ day.day }}{% if day.written %} <span class="tag good">written</span>{% endif %}</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Page</th><th>Type</th><th>Main keyword</th><th>Length</th><th></th></tr></thead>
+  <tbody>
+  {% for p in day.pages %}
+  <tr><td>{% if p.written %}<a href="{{ p.path }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}{% if p.brief %}<br><span class="muted">{{ p.brief }}</span>{% endif %}</td><td>{{ p.type }}</td><td>{{ p.primary_keyword }}</td><td>{{ p.words }} words</td><td>{% if p.hold %}<span class="tag assume">needs your approval</span>{% endif %}{% if p.written %}<span class="tag good">written</span>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endfor %}
+{% endblock %}

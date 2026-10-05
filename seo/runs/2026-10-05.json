@@ -1,0 +1,34 @@
+{
+ "summary": "Setup day: two trial pages written and held for your approval; the 30-day calendar is ready.",
+ "model": "claude-opus-5-5",
+ "items": [
+  {
+   "path": "/guides/website-worth-examples/",
+   "action": "new",
+   "type": "Article",
+   "score": 9.0,
+   "duplicate": "pass (closest: /guides/website-valuation/, /calculators/website-worth-calculator/)",
+   "images": "1 featured, 1 chart",
+   "note": "Trial article"
+  },
+  {
+   "path": "/glossary/valuation-multiple/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.9,
+   "duplicate": "pass (closest: /glossary/profit-multiple/, /glossary/revenue-multiple/)",
+   "images": "1 featured",
+   "note": "Trial reference page"
+  }
+ ],
+ "checks": [
+  "Tests: 112 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "External links: 2 opened, 0 broken"
+ ],
+ "notes": [
+  "Open Admin, then Approvals, read the two trial pages and press Approve or Reject.",
+  "Open SEO reports, then Content calendar, and tell Claude in the chat which topics to move or drop."
+ ]
+}

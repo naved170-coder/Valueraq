@@ -1,6 +1,6 @@
 {% extends "admin/_layout.html" %}
 {% block admin %}
-<div class="row"><h1>SEO reports</h1><a class="btn quiet" href="/admin/seo-reports/export.csv">Download all as a spreadsheet (CSV)</a></div>
+<div class="row"><h1>SEO reports</h1><a class="btn quiet" href="/admin/seo-reports/calendar/">Content calendar</a><a class="btn quiet" href="/admin/seo-reports/export.csv">Download all as a spreadsheet (CSV)</a></div>
 <p class="lede">One entry for each day the SEO run worked. Tap a date to see what was written or fixed, with a link to each page and the keywords it targets.</p>
 {% if not cfg_seo.active %}<p class="alert mt">The daily run is not switched on yet.</p>{% endif %}
 {% if not runs %}<p class="alert mt">No reports yet. The first one appears after the first daily run.</p>{% else %}
