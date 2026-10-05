@@ -1643,8 +1643,10 @@ Body text for the test page. It links to the [methodology](/methodology/).
             self.assertIn("Action needed: the daily SEO run", self.client.get("/admin/").get_data(as_text=True))
 
     def test_no_alert_while_switched_off(self):
-        with self.app.app_context():
-            self.assertIsNone(self.seoauto.alert())
+        with mock.patch.object(self.seoauto, "config", lambda: dict(active=False, start="2026-01-01", tz_hours=5,
+                                                                    tz_name="Pakistan time", run_hour=20, grace_hours=3)):
+            with self.app.app_context():
+                self.assertIsNone(self.seoauto.alert())
 
     def test_indexnow_announces_each_page_once(self):
         r = self.client.get("/indexnow-key.txt")
