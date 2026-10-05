@@ -21,6 +21,7 @@ pip install -r requirements.txt --break-system-packages
 ```
 
 Read `seo/config.json`. If `active` is false, stop: the run is switched off.
+If today's date in Pakistan time is before `start`, stop without changing anything.
 
 Work out the run date: today's date in Pakistan time (UTC+5). If `seo/runs/<run date>.json` already exists, stop:
 today's run is done (this is the guard against publishing twice).
