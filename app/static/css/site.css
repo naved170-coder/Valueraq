@@ -472,3 +472,15 @@ button.linklike { background: none; border: 0; padding: 0; font: inherit; color:
 .prose img { max-width: 100%; height: auto; border-radius: var(--r); border: 1px solid var(--rule); }
 .prose figure { margin: 1.5rem 0; }
 .prose figcaption { font-size: .85rem; color: var(--muted); margin-top: .4rem; }
+
+/* Admin: task data grid */
+.task-legend { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: 1rem; font-size: .93rem; }
+.tick { font-weight: 700; font-size: 1.05rem; }
+.tick.scheduled { color: #d97706; }
+.tick.done { color: #15803d; }
+.tick.missed { color: #dc2626; }
+.task-grid table { border-collapse: separate; border-spacing: 0; }
+.task-grid th, .task-grid td { padding: .45rem .4rem; text-align: center; min-width: 2rem; }
+.task-grid tbody th, .task-grid thead th:first-child { text-align: left; min-width: 11.5rem; max-width: 11.5rem; white-space: normal; font-weight: 500; position: sticky; left: 0; background: var(--surface); z-index: 1; border-right: 1px solid var(--rule); }
+.task-grid .today { background: var(--accent-soft); }
+.month-list { list-style: none; padding: 0; display: grid; gap: .5rem; }

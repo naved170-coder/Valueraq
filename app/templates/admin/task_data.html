@@ -1,0 +1,22 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Task data: {{ grid.name }}</h1>
+<p class="lede">The daily SEO checklist, one column for each date. Slide the table sideways to see the whole month.</p>
+<p class="task-legend"><span><b class="tick scheduled">✓</b> Scheduled</span><span><b class="tick done">✓</b> Done</span><span><b class="tick missed">✗</b> Missed</span><span class="muted">Empty: not due that day</span></p>
+<p class="meta-line"><span>{{ grid.counts.done }} done</span><span>{{ grid.counts.scheduled }} scheduled</span><span>{{ grid.counts.missed }} missed</span></p>
+<div class="table-wrap task-grid"><table>
+  <thead><tr><th scope="col">Task</th>{% for d in grid.days %}<th scope="col"{% if d.isoformat() == grid.today %} class="today"{% endif %}>{% if grid.rows[0].cells[loop.index0].has_report %}<a href="/admin/seo-reports/{{ d.isoformat() }}/">{{ d.day }}</a>{% else %}{{ d.day }}{% endif %}</th>{% endfor %}</tr></thead>
+  <tbody>
+  {% for r in grid.rows %}
+  <tr><th scope="row">{{ r.label }}</th>{% for c in r.cells %}<td{% if c.date == grid.today %} class="today"{% endif %}>{% if c.state %}<b class="tick {{ c.state }}" title="{{ c.state|capitalize }}, {{ c.date|human_date }}" aria-label="{{ c.state|capitalize }}">{{ '✗' if c.state == 'missed' else '✓' }}</b>{% endif %}</td>{% endfor %}</tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+<p class="hint">Tap a date that has a report to see that day's pages, links and keywords. "Pages published" and "announced to Bing" turn green by themselves when the last page of that day's batch goes live, which is the following evening.</p>
+<h2 class="mt">Months</h2>
+<ul class="month-list">
+{% for m, name in months %}
+  <li>{% if m == grid.month %}<strong>{{ name }}</strong>{% else %}<a href="/admin/task-data/{{ m }}/">{{ name }}</a>{% endif %}{% if m == current %} <span class="tag">current month</span>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endblock %}

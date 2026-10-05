@@ -36,6 +36,19 @@ After day 30 of the calendar (or from `reduce_after` in config.json), write only
 (one article, one reference page) from the next calendar the monthly run prepares. If the calendar is used up,
 write nothing new, say so in `notes`, and still write the report.
 
+### On the 1st of the month: content refresh
+
+On the 1st (Pakistan date), write only the first two missing pages of the day (the article and one reference page), then:
+
+1. Refresh up to five existing pages under `content/guides/` or `content/glossary/`, oldest `updated` date first:
+   re-open the cited sources, correct anything out of date, fix broken links, improve internal links to newer pages,
+   check every multiple still matches `app/valuation.py`, and set `updated` to today. Do not change the address, the title's meaning or `publish_at`.
+2. Never refresh a page that names a competitor or its fees (for example `valueraq-vs-flippa`, `valueraq-vs-acquire`).
+   Open the competitor's own pricing page, and if anything differs from our page, describe the difference in `notes` for the owner.
+3. Record each refreshed page in the report with `"action": "refresh"` and a `note` saying what changed, and add `refresh` to `tasks`.
+4. If fewer than 30 unwritten days remain in `seo/calendar.json`, add new days in the same format. Run the duplicate check
+   in section 3 on every new topic against existing pages and against the rest of the calendar before adding it.
+
 ## 3. Before writing each page: duplicate check
 
 List `content/guides/` and `content/glossary/`. If an existing page answers the same search question, do not
@@ -159,12 +172,17 @@ Write `seo/runs/<run date>.json`:
      "duplicate": "pass (closest: /guides/x/)", "images": "1 featured, 2 charts",
      "keywords": ["primary", "secondary"], "note": ""}
   ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "live_check", "link_check", "report"],
   "checks": ["Tests: 111 passed", "SEO audit: 0 critical, 0 warnings", "Internal links: 0 broken", "External links: 9 opened, 0 broken", "Live check of yesterday's pages: 4 of 4 load, images load"],
   "notes": ["Anything the owner should know or do, in plain words. Empty list if nothing."]
 }
 ```
 
 `action` is `new`, `refresh`, `fix` or `skipped`.
+
+`tasks` drives the Admin → Task data checklist (green tick = done). List a key only if you really did that task in this run:
+`duplicate_check`, `research`, `article`, `reference_pages`, `images`, `editorial_review`, `gates`, `scheduled`,
+`live_check`, `link_check`, `report`, and `refresh` (1st of the month only). A key you leave out shows as a red cross.
 
 ## 10. Check yesterday's pages on the live site
 

@@ -30,5 +30,17 @@
  "notes": [
   "Open Admin, then Approvals, read the two trial pages and press Approve or Reject.",
   "Open SEO reports, then Content calendar, and tell Claude in the chat which topics to move or drop."
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
  ]
 }

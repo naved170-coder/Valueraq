@@ -261,6 +261,98 @@ def validate():
     return problems
 
 
+# ---------------------------------------------------------------- task data (daily checklist by date)
+TASKS = [
+    # key, label, who records it ("run" = the daily run's report, "site" = worked out by the website)
+    ("duplicate_check", "Duplicate check on every topic", "run"),
+    ("research", "Research with sources opened", "run"),
+    ("article", "Long article written", "run"),
+    ("reference_pages", "Reference pages written", "run"),
+    ("images", "Featured images and charts made", "run"),
+    ("editorial_review", "Editorial review scored", "run"),
+    ("gates", "Tests, SEO audit and content rules passed", "run"),
+    ("scheduled", "Release times set (one page every 6 hours)", "run"),
+    ("live_check", "Earlier pages and images checked on the live site", "run"),
+    ("link_check", "Broken-link check", "run"),
+    ("report", "Daily report filed", "run"),
+    ("published", "Pages published on the website", "site"),
+    ("bing", "New pages announced to Bing", "site"),
+    ("refresh", "Content refresh (1st of each month)", "run"),
+]
+
+
+def _months_between(first, last):
+    out, y, m = [], first.year, first.month
+    while (y, m) <= (last.year, last.month):
+        out.append(f"{y:04d}-{m:02d}")
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return out
+
+
+def task_months():
+    """Months that have task data, newest first: from the first report or the start date up to this month."""
+    today = local_now().date()
+    firsts = [d for d in (run_dates()[-1:] + [config().get("start") or ""]) if _DATE_RE.match(d or "")]
+    first = min(datetime.date.fromisoformat(d) for d in firsts) if firsts else today
+    return list(reversed(_months_between(min(first, today), today)))
+
+
+def task_grid(month):
+    """Checklist for one month: rows of tasks, one cell per date.
+
+    Cell states: done (green tick), scheduled (orange tick), missed (red cross), '' (not applicable)."""
+    if not re.match(r"^\d{4}-\d\d$", month or ""):
+        return None
+    y, m = int(month[:4]), int(month[5:])
+    if not 1 <= m <= 12:
+        return None
+    import calendar as _cal
+    days = [datetime.date(y, m, d) for d in range(1, _cal.monthrange(y, m)[1] + 1)]
+    c = config()
+    now = local_now()
+    today = now.date()
+    try:
+        start = datetime.date.fromisoformat(c["start"]) if c["active"] and c["start"] else None
+    except ValueError:
+        start = None
+    pinged = {r["path"] for r in db.query("SELECT path FROM indexnow_pings")}
+    late = now.hour >= c["run_hour"] + c["grace_hours"]
+    rows = []
+    for key, label, source in TASKS:
+        cells = []
+        for d in days:
+            iso = d.isoformat()
+            raw = _run_raw(iso)
+            planned = start is not None and d >= start and (key != "refresh" or d.day == 1)
+            if isinstance(raw, dict):
+                done = set(raw.get("tasks") or [])
+                new = [doc_for(i.get("path")) for i in raw.get("items") or [] if i.get("action", "new") == "new"]
+                new = [x for x in new if x is not None and state(x)[0] != "rejected"]
+                if key == "published":
+                    st = "" if not new else "done" if all(content.is_live(x) for x in new) else "scheduled"
+                elif key == "bing":
+                    st = "" if not new else "done" if all(x.path in pinged for x in new) else "scheduled"
+                elif key == "report":
+                    st = "done"
+                elif key in done:
+                    st = "done"
+                elif key == "refresh" and d.day != 1:
+                    st = ""
+                else:
+                    st = "missed" if planned else ""
+            elif not planned:
+                st = ""
+            elif d > today or (d == today and not late):
+                st = "scheduled"
+            else:
+                st = "missed"
+            cells.append(dict(day=d.day, date=iso, state=st, has_report=isinstance(raw, dict)))
+        rows.append(dict(key=key, label=label, cells=cells))
+    counts = {k: sum(1 for r in rows for x in r["cells"] if x["state"] == k) for k in ("done", "scheduled", "missed")}
+    return dict(month=month, name=datetime.date(y, m, 1).strftime("%B %Y"), days=days, rows=rows, counts=counts,
+                today=today.isoformat())
+
+
 # ---------------------------------------------------------------- missed-run alert
 def alert():
     """Describe a missed daily run, or return None when everything is on schedule."""

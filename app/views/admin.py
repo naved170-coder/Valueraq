@@ -592,3 +592,15 @@ def seo_report(date):
     if not r:
         abort(404)
     return render_template("admin/seo_report.html", r=r, section="seoreports")
+
+
+@bp.get("/task-data/")
+@bp.get("/task-data/<month>/")
+@auth.admin_required
+def task_data(month=None):
+    months = seoauto.task_months()
+    grid = seoauto.task_grid(month or months[0])
+    if not grid or grid["month"] not in months:
+        abort(404)
+    names = [(m, seoauto.task_grid(m)["name"]) for m in months]
+    return render_template("admin/task_data.html", grid=grid, months=names, current=months[0], section="taskdata")

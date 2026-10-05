@@ -1676,6 +1676,39 @@ Body text for the test page. It links to the [methodology](/methodology/).
                          "Frequently asked questions"):
             self.assertIn(expected, text)
 
+    def test_task_data_grid(self):
+        cfg = dict(active=True, start="2031-04-28", tz_hours=5, tz_name="Pakistan time", run_hour=20, grace_hours=3)
+        self.write("zz-test-timed", "publish_at: 2031-04-29T19:00Z")
+        with open(os.path.join(self.runs, "2031-04-29.json"), "w") as fh:
+            json.dump(dict(items=[dict(path="/guides/zz-test-timed/", action="new")],
+                           tasks=["duplicate_check", "article", "report"]), fh)
+        self.reset()
+        with mock.patch.object(self.seoauto, "config", lambda: cfg):
+            self.content._now = lambda: self.content.parse_when("2031-04-30T10:00Z")     # 30 April, 3 pm in Pakistan
+            with self.app.app_context():
+                g = self.seoauto.task_grid("2031-04")
+                cell = lambda key, day: next(r for r in g["rows"] if r["key"] == key)["cells"][day - 1]["state"]
+                self.assertEqual(cell("article", 27), "")              # before the start date
+                self.assertEqual(cell("article", 28), "missed")        # started, no report that day
+                self.assertEqual(cell("article", 29), "done")
+                self.assertEqual(cell("research", 29), "missed")       # report filed without this task
+                self.assertEqual(cell("published", 29), "done")        # its page is live
+                self.assertEqual(cell("bing", 29), "scheduled")        # not announced yet
+                self.assertEqual(cell("article", 30), "scheduled")     # today, run not due yet
+                self.assertEqual(cell("refresh", 30), "")              # only due on the 1st
+                self.assertEqual(self.seoauto.task_grid("2031-05")["rows"][-1]["cells"][0]["state"], "scheduled")
+                self.assertEqual(self.seoauto.task_months()[0], "2031-04")
+                self.assertIsNone(self.seoauto.task_grid("2031-13"))
+            self.admin()
+            page = self.client.get("/admin/task-data/").get_data(as_text=True)
+            self.assertIn("Task data: April 2031", page)
+            self.assertIn('class="tick done"', page)
+            self.assertIn('class="tick scheduled"', page)
+            self.assertIn('href="/admin/seo-reports/2031-04-29/"', page)
+            self.assertEqual(self.client.get("/admin/task-data/2031-04/").status_code, 200)
+            self.assertEqual(self.client.get("/admin/task-data/2031-09/").status_code, 404)
+            self.assertEqual(self.client.get("/admin/task-data/nonsense/").status_code, 404)
+
     def test_featured_image_on_article(self):
         self.write("zz-test-img", "image: /static/og/valueraq-default.png\nimage_alt: A test chart")
         html = self.client.get("/guides/zz-test-img/").get_data(as_text=True)
