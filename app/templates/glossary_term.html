@@ -2,13 +2,14 @@
 {% from "partials/macros.html" import related as related_block %}
 {% block main %}
 <div class="wrap">
+  {% if preview %}<p class="flash error" role="status">Preview only. Visitors and search engines cannot see this page yet.</p>{% endif %}
   <header class="page-head">
     <p class="eyebrow">Glossary</p>
     <h1>{{ meta.h1 }}</h1>
     <p class="answer"><dfn>{{ term }}</dfn>: {{ doc.definition }}</p>
     {% if doc.updated %}<p class="meta-line"><span>Updated <time datetime="{{ doc.updated }}">{{ doc.updated|human_date }}</time></span><span>By <a href="/editorial-policy/">{{ BRAND }} Editorial Team</a></span></p>{% endif %}
   </header>
-  <article class="prose">{{ body|safe }}</article>
+  <article class="prose">{% if doc.image %}<figure class="feature"><img src="{{ doc.image }}" alt="{{ doc.image_alt or doc.title }}" width="1200" height="630" decoding="async"></figure>{% endif %}{{ body|safe }}</article>
 </div>
 {{ related_block(related) }}
 {% endblock %}

@@ -55,6 +55,8 @@ class Config:
         or [url for _, url in SOCIAL_LINKS]
     TWITTER_HANDLE = os.environ.get("TWITTER_HANDLE", "@valueraq")
     DEFAULT_OG_IMAGE = "/static/og/valueraq-default.png"
+    # Announce newly published pages to Bing and other IndexNow search engines. Set INDEXNOW=0 to switch off.
+    INDEXNOW = os.environ.get("INDEXNOW", "1") == "1"
 
     # --- Search engine verification --------------------------------------
     # Google Analytics 4. Runs cookie-free until the visitor accepts the cookie notice. Set to "" to switch it off.
@@ -141,7 +143,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "16")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "17")
 
 
 class TestConfig(Config):
@@ -151,3 +153,4 @@ class TestConfig(Config):
     SESSION_COOKIE_SECURE = False
     ENFORCE_CANONICAL_HOST = False
     ADMIN_EMAILS = ["admin@example.com"]
+    INDEXNOW = False

@@ -3,15 +3,24 @@ import csv
 import io
 import json
 
-from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
+from flask import Blueprint, Response, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, marketplace as M, redirects
+from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, marketplace as M, redirects, seoauto
 from ..seo import log_change
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
 OVERRIDE_FIELDS = ["meta_title", "meta_description", "h1", "canonical_url", "robots_directive", "og_title",
                    "og_description", "og_image", "schema_extra"]
+
+
+@bp.context_processor
+def _seo_banner():
+    """Every admin page shows a banner when a daily SEO run was missed, and a count of pages awaiting approval."""
+    try:
+        return dict(seo_alert=seoauto.alert(), seo_pending=len(seoauto.pending()), seo_tz=seoauto.config()["tz_name"])
+    except Exception:
+        return dict(seo_alert=None, seo_pending=0, seo_tz="")
 
 
 def _who():
@@ -532,3 +541,48 @@ def errors():
         return redirect(url_for("admin.errors"))
     rows = db.query("SELECT * FROM error_log ORDER BY last_at DESC LIMIT 100")
     return render_template("admin/errors.html", rows=rows, section="errors")
+
+
+# ---------------------------------------------------------------- SEO automation: approvals and daily reports
+@bp.route("/approvals/", methods=["GET", "POST"])
+@auth.admin_required
+def approvals():
+    if request.method == "POST":
+        path = request.form.get("path") or ""
+        decision = {"approve": "approved", "reject": "rejected"}.get(request.form.get("action"))
+        if decision and seoauto.decide(path, decision, g.user["email"]):
+            activity.record("admin_content_" + decision, target=path)
+            doc = seoauto.doc_for(path)
+            if decision == "approved":
+                key, label = seoauto.state(doc)
+                flash(f"Approved: {doc.title}. " + ("It is live now (allow a few minutes)." if key == "live" else label + "."), "ok")
+            else:
+                flash(f"Rejected: {doc.title}. It will not be published; the next daily run removes or rewrites it.", "ok")
+        else:
+            flash("That page could not be found.", "error")
+        return redirect(url_for("admin.approvals"))
+    return render_template("admin/approvals.html", docs=seoauto.pending(), decided=seoauto.decided(),
+                           state=seoauto.state, local_time=seoauto.local_time, section="approvals")
+
+
+@bp.get("/seo-reports/")
+@auth.admin_required
+def seo_reports():
+    return render_template("admin/seo_reports.html", runs=seoauto.run_index(), upcoming=seoauto.upcoming(),
+                           local_time=seoauto.local_time, cfg_seo=seoauto.config(), section="seoreports")
+
+
+@bp.get("/seo-reports/export.csv")
+@auth.admin_required
+def seo_reports_csv():
+    return Response(seoauto.export_csv(), mimetype="text/csv",
+                    headers={"Content-Disposition": "attachment; filename=valueraq-seo-reports.csv"})
+
+
+@bp.get("/seo-reports/<date>/")
+@auth.admin_required
+def seo_report(date):
+    r = seoauto.run(date)
+    if not r:
+        abort(404)
+    return render_template("admin/seo_report.html", r=r, section="seoreports")

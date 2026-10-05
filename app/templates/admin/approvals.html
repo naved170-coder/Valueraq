@@ -1,0 +1,33 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<h1>Approvals</h1>
+<p class="lede">Pages the daily SEO run wrote but did not publish on its own, because they scored below the quality bar or touch a sensitive subject (law, tax, prices, competitors). Nothing here is visible to visitors or search engines until you approve it.</p>
+{% if not docs %}<p class="alert good mt">✓ Nothing is waiting for approval.</p>{% endif %}
+<div class="stack mt">
+{% for d in docs %}
+  <article class="panel">
+    <div class="row"><h2 class="h3">{{ d.title }}</h2><span class="tag">{{ 'Article' if d.kind == 'guides' else 'Reference page' }}</span></div>
+    {% if d.hold_reason %}<p><strong>Why it was held:</strong> {{ d.hold_reason }}</p>{% endif %}
+    <p class="meta-line"><span>{{ d.words }} words</span>{% if d.score %}<span>Quality score {{ d.score }} / 10</span>{% endif %}{% if d.publish_ts %}<span>Planned for {{ local_time(d.publish_ts) }} ({{ seo_tz }})</span>{% endif %}</p>
+    {% if d.keywords %}<p class="hint">Keywords: {{ d.keywords|join(', ') }}</p>{% endif %}
+    <div class="row mt">
+      <a class="btn quiet" href="{{ d.path }}" target="_blank" rel="noopener">Read the page</a>
+      <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="path" value="{{ d.path }}"><input type="hidden" name="action" value="approve"><button class="btn" type="submit">Approve</button></form>
+      <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="path" value="{{ d.path }}"><input type="hidden" name="action" value="reject"><button class="btn quiet" type="submit">Reject</button></form>
+    </div>
+  </article>
+{% endfor %}
+</div>
+{% if decided %}
+<h2 class="mt">Already decided</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Page</th><th>Decision</th><th>When (UTC)</th><th>Status</th><th></th></tr></thead>
+  <tbody>
+  {% for d, r in decided %}
+  <tr><td><a href="{{ d.path }}" target="_blank" rel="noopener">{{ d.title }}</a></td><td>{{ r.decision|capitalize }}</td><td>{{ r.decided_at|datetime_utc }}</td><td>{{ state(d)[1] }}</td>
+    <td><form method="post"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="path" value="{{ d.path }}"><input type="hidden" name="action" value="{{ 'reject' if r.decision == 'approved' else 'approve' }}"><button class="btn small quiet" type="submit">{{ 'Take down' if r.decision == 'approved' else 'Approve after all' }}</button></form></td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endif %}
+{% endblock %}

@@ -1486,6 +1486,185 @@ if __name__ == "__main__":
     unittest.main()
 
 
+class SeoAutomation(Base):
+    """Timed publishing, approvals, daily reports, the missed-run alert and IndexNow."""
+    DOC = """---
+title: Zz Test Timed Page
+meta_title: Zz Test Timed Page for the Test Suite
+meta_description: A page that only exists while the tests run, used to check timed publishing and approvals work.
+published: 2026-01-01
+updated: 2026-01-01
+section: Valuation
+cluster: website
+keywords: test keyword one, test keyword two
+%s
+---
+Body text for the test page. It links to the [methodology](/methodology/).
+"""
+
+    def setUp(self):
+        super().setUp()
+        from app import content, linkgraph, seoauto
+        self.content, self.linkgraph, self.seoauto = content, linkgraph, seoauto
+        self.files = []
+        self.runs = tempfile.mkdtemp()
+        self._runs_dir, seoauto.RUNS_DIR = seoauto.RUNS_DIR, self.runs
+        self._now = content._now
+        self.reset()
+
+    def tearDown(self):
+        for f in self.files:
+            if os.path.exists(f):
+                os.remove(f)
+        self.content._now = self._now
+        self.seoauto.RUNS_DIR = self._runs_dir
+        self.reset()
+
+    def reset(self):
+        self.content.reset_caches()
+        for f in (self.linkgraph._registry, self.linkgraph._glossary_patterns_at, self.seoauto.run_dates,
+                  self.seoauto._run_raw, self.seoauto.config):
+            if hasattr(f, "cache_clear"):
+                f.cache_clear()
+
+    def write(self, slug, extra):
+        path = os.path.join(self.content.CONTENT_DIR, "guides", slug + ".md")
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(self.DOC % extra)
+        self.files.append(path)
+        self.reset()
+
+    def admin(self):
+        with self.app.app_context():
+            from app import auth
+            uid = auth.create_user("admin@example.com", "correct-horse-1")
+            db.execute("UPDATE users SET role='admin' WHERE id=?", (uid,))
+        tok = self.csrf()
+        self.client.post("/login/", data=dict(email="admin@example.com", password="correct-horse-1", csrf=tok))
+        return self.csrf()
+
+    def test_timed_page_is_hidden_until_its_time(self):
+        self.write("zz-test-timed", "publish_at: 2031-05-01T19:00Z")
+        url = "/guides/zz-test-timed/"
+        self.assertEqual(self.client.get(url).status_code, 404)
+        self.assertNotIn(url, self.client.get("/guides/").get_data(as_text=True))
+        self.assertNotIn(url, self.client.get("/sitemap-guides.xml").get_data(as_text=True))
+        self.assertNotIn(url, self.client.get("/llms.txt").get_data(as_text=True))
+        self.content._now = lambda: self.content.parse_when("2031-05-01T19:01Z")
+        r = self.client.get(url)
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(meta(r.get_data(as_text=True), "robots").split(",")[0], "index")
+        self.assertIn(url, self.client.get("/guides/").get_data(as_text=True))
+        self.assertIn(url, self.client.get("/sitemap-guides.xml").get_data(as_text=True))
+
+    def test_unreadable_timer_keeps_page_hidden(self):
+        self.write("zz-test-badtime", "publish_at: tomorrow morning")
+        self.assertEqual(self.client.get("/guides/zz-test-badtime/").status_code, 404)
+
+    def test_held_page_needs_admin_approval(self):
+        self.write("zz-test-held", "hold: yes\nhold_reason: Mentions a competitor price\nscore: 8.1")
+        url = "/guides/zz-test-held/"
+        self.assertEqual(self.client.get(url).status_code, 404)
+        tok = self.admin()
+        r = self.client.get(url)                                   # admin preview, never indexable
+        self.assertEqual(r.status_code, 200)
+        self.assertIn("noindex", meta(r.get_data(as_text=True), "robots"))
+        self.assertIn("Preview only", r.get_data(as_text=True))
+        page = self.client.get("/admin/approvals/").get_data(as_text=True)
+        self.assertIn("Zz Test Timed Page", page)
+        self.assertIn("Mentions a competitor price", page)
+        self.assertIn("Approvals (1)", self.client.get("/admin/").get_data(as_text=True))
+        r = self.client.post("/admin/approvals/", data=dict(csrf=tok, path=url, action="approve"), follow_redirects=True)
+        self.assertIn("Approved", r.get_data(as_text=True))
+        self.client.get("/logout/")
+        anon = self.app.test_client()
+        self.assertEqual(anon.get(url).status_code, 200)
+        self.assertIn(url, anon.get("/sitemap-guides.xml").get_data(as_text=True))
+
+    def test_rejected_page_stays_hidden(self):
+        self.write("zz-test-held", "hold: yes")
+        tok = self.admin()
+        self.client.post("/admin/approvals/", data=dict(csrf=tok, path="/guides/zz-test-held/", action="reject"))
+        self.assertEqual(self.app.test_client().get("/guides/zz-test-held/").status_code, 404)
+        self.assertNotIn("Approvals (1)", self.client.get("/admin/").get_data(as_text=True))
+
+    def test_approvals_need_admin_and_a_real_held_page(self):
+        self.assertIn(self.client.get("/admin/approvals/").status_code, (302, 403, 404))
+        tok = self.admin()
+        r = self.client.post("/admin/approvals/", data=dict(csrf=tok, path="/guides/website-valuation/",
+                                                            action="reject"), follow_redirects=True)
+        self.assertIn("could not be found", r.get_data(as_text=True))
+        self.assertEqual(self.app.test_client().get("/guides/website-valuation/").status_code, 200)
+
+    def test_daily_report_pages_and_csv(self):
+        self.write("zz-test-timed", "publish_at: 2031-05-01T19:00Z")
+        with open(os.path.join(self.runs, "2031-04-30.json"), "w") as fh:
+            json.dump(dict(summary="One article written.", items=[
+                dict(path="/guides/zz-test-timed/", action="new", type="Article", score=9.1),
+                dict(path="/guides/website-valuation/", action="refresh", note="Updated figures")],
+                notes=["Nothing needs your attention."], checks=["Internal links: 0 broken"]), fh)
+        self.reset()
+        self.admin()
+        idx = self.client.get("/admin/seo-reports/").get_data(as_text=True)
+        self.assertIn("/admin/seo-reports/2031-04-30/", idx)
+        self.assertIn("One article written.", idx)
+        day = self.client.get("/admin/seo-reports/2031-04-30/").get_data(as_text=True)
+        self.assertIn('href="/guides/zz-test-timed/"', day)
+        self.assertIn("test keyword one, test keyword two", day)
+        self.assertIn("Goes live 2 May 2031, 12:00 am", day)          # 19:00 UTC is midnight in Pakistan
+        self.assertIn("Updated figures", day)
+        csv_text = self.client.get("/admin/seo-reports/export.csv").get_data(as_text=True)
+        self.assertIn("test keyword one; test keyword two", csv_text)
+        self.assertEqual(self.client.get("/admin/seo-reports/2031-04-29/").status_code, 404)
+        self.assertEqual(self.client.get("/admin/seo-reports/..%2f..%2fconfig/").status_code, 404)
+
+    def test_missed_run_alert_banner_and_single_email(self):
+        cfg = dict(active=True, start="2031-04-28", tz_hours=5, tz_name="Pakistan time", run_hour=20, grace_hours=3)
+        with mock.patch.object(self.seoauto, "config", lambda: cfg):
+            with open(os.path.join(self.runs, "2031-04-29.json"), "w") as fh:
+                json.dump(dict(items=[]), fh)
+            self.reset()
+            self.content._now = lambda: self.content.parse_when("2031-04-30T10:00Z")   # 3 pm in Pakistan
+            with self.app.app_context():
+                self.assertIsNone(self.seoauto.alert())                 # yesterday's run exists, today's not yet due
+            self.content._now = lambda: self.content.parse_when("2031-04-30T18:30Z")   # 11:30 pm in Pakistan
+            with self.app.app_context():
+                a = self.seoauto.alert()
+                self.assertEqual(a["day"], "2031-04-30")
+                with mock.patch("app.mailer.send") as send:
+                    self.assertTrue(self.seoauto.send_alert_once())
+                    self.assertFalse(self.seoauto.send_alert_once())
+                    self.assertEqual(send.call_count, 1)
+                    self.assertIn("daily SEO run missed", send.call_args[0][1])
+            self.admin()
+            self.assertIn("Action needed: the daily SEO run", self.client.get("/admin/").get_data(as_text=True))
+
+    def test_no_alert_while_switched_off(self):
+        with self.app.app_context():
+            self.assertIsNone(self.seoauto.alert())
+
+    def test_indexnow_announces_each_page_once(self):
+        r = self.client.get("/indexnow-key.txt")
+        self.assertEqual(r.status_code, 200)
+        self.assertRegex(r.get_data(as_text=True), r"^[0-9a-f]{32}$")
+        sent = []
+        with self.app.app_context():
+            self.app.config["INDEXNOW"] = True
+            first = self.seoauto.indexnow_tick(post=lambda url, body: sent.append(body) or 200)
+            self.assertIn("/guides/website-valuation/", first)
+            self.assertEqual(sent[0]["key"], r.get_data(as_text=True))
+            self.assertTrue(all(u.startswith(SITE) for u in sent[0]["urlList"]))
+            self.assertEqual(self.seoauto.indexnow_tick(post=lambda url, body: sent.append(body) or 200), [])
+            self.assertEqual(len(sent), 1)
+
+    def test_featured_image_on_article(self):
+        self.write("zz-test-img", "image: /static/og/valueraq-default.png\nimage_alt: A test chart")
+        html = self.client.get("/guides/zz-test-img/").get_data(as_text=True)
+        self.assertIn('alt="A test chart"', html)
+        self.assertIn('property="og:image" content="%s/static/og/valueraq-default.png"' % SITE, html)
+        self.assertIn('"image": "%s/static/og/valueraq-default.png"' % SITE, html.replace('":"', '": "'))
+
+
 class StaticAssets(Base):
     def test_referenced_assets_exist(self):
         for p in ("/static/css/site.css", "/static/js/v.js", "/static/js/calc.js", "/static/brand/favicon.svg",

@@ -232,16 +232,31 @@ def guide(slug):
     doc = content.load("guides", slug)
     if not doc or doc.meta.get("status", "published") != "published":
         abort(404)
+    preview = _preview_or_404(doc)
     path = f"/guides/{slug}/"
     meta = PageMeta(path=path, title=doc.title, meta_title=doc.meta_title, description=doc.meta_description,
                     h1=doc.h1 or doc.title, og_type="article", published=doc.published, updated=doc.updated,
                     breadcrumbs=[("Guides", "/guides/"), (doc.title, path)], template="guide")
     meta.schema.append(schema.article(path, doc.h1 or doc.title, doc.meta_description, doc.author,
-                                      doc.published, doc.updated, doc.section))
+                                      doc.published, doc.updated, doc.section, image=doc.image))
+    if doc.image:
+        meta.og_image = doc.image
+    if preview:
+        meta.robots, meta.sitemap, meta.noindex_reason = "noindex, nofollow", False, "not yet published"
     rel = linkgraph.related_for(path, explicit=doc.related, cluster=doc.cluster)
     body = linkgraph.autolink_glossary(doc.html)
     cta = _cta_for(doc)
-    return render_page("guide.html", meta, doc=doc, body=body, related=rel, cta=cta)
+    return render_page("guide.html", meta, doc=doc, body=body, related=rel, cta=cta, preview=preview)
+
+
+def _preview_or_404(doc):
+    """Pages waiting for their time or an approval are invisible, except to a logged-in admin."""
+    if content.is_live(doc):
+        return False
+    u = g.get("user")
+    if u is None or u["role"] != "admin":
+        abort(404)
+    return True
 
 
 def _cta_for(doc):
@@ -270,8 +285,9 @@ def glossary_index():
 @bp.get("/glossary/<slug>/")
 def glossary_term(slug):
     doc = content.load("glossary", slug)
-    if not doc:
+    if not doc or doc.meta.get("status", "published") != "published":
         abort(404)
+    preview = _preview_or_404(doc)
     path = f"/glossary/{slug}/"
     term = doc.term or doc.title
     meta = PageMeta(path=path, title=doc.title, meta_title=doc.meta_title, description=doc.meta_description,
@@ -279,9 +295,13 @@ def glossary_term(slug):
                     breadcrumbs=[("Glossary", "/glossary/"), (term, path)], template="glossary")
     meta.schema.append(schema.defined_term(path, term, doc.definition))
     meta.schema.append(schema.web_page(path, doc.title, doc.meta_description, updated=doc.updated))
+    if doc.image:
+        meta.og_image = doc.image
+    if preview:
+        meta.robots, meta.sitemap, meta.noindex_reason = "noindex, nofollow", False, "not yet published"
     rel = linkgraph.related_for(path, explicit=doc.related, cluster=doc.cluster)
     body = linkgraph.autolink_glossary(doc.html, self_slug=slug)
-    return render_page("glossary_term.html", meta, doc=doc, body=body, related=rel, term=term)
+    return render_page("glossary_term.html", meta, doc=doc, body=body, related=rel, term=term, preview=preview)
 
 
 # ---------------------------------------------------------------- trust & company pages

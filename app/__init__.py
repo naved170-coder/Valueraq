@@ -48,6 +48,8 @@ def create_app(config_object=Config, **overrides):
 
     from . import backup
     backup.start_scheduler(app)
+    from . import seoauto
+    seoauto.start_scheduler(app)
 
     from . import filters
     filters.register(app)

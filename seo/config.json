@@ -1,0 +1,8 @@
+{
+  "active": false,
+  "start": null,
+  "tz_hours": 5,
+  "tz_name": "Pakistan time",
+  "run_hour": 20,
+  "grace_hours": 3
+}

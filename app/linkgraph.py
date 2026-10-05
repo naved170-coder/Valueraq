@@ -22,8 +22,12 @@ TOOL_CLUSTER = {"website": "website", "saas": "saas", "ai": "ai", "app": "app",
 CAT_CLUSTER = {c["slug"]: TOOL_CLUSTER[c["tool"]] for c in catalog.CATEGORIES}
 
 
-@lru_cache(maxsize=1)
 def registry():
+    return _registry(content.epoch())
+
+
+@lru_cache(maxsize=2)
+def _registry(_epoch):
     pages = {}
 
     def add(path, title, kind, group, cluster=None, updated=None, doc=None):
@@ -99,8 +103,12 @@ def related_for(path, explicit=None, cluster=None, limit_per_group=4):
 # Glossary auto-linking: first mention only, max 3 per page, never in headings
 # or existing links.
 # --------------------------------------------------------------------------
-@lru_cache(maxsize=1)
 def _glossary_patterns():
+    return _glossary_patterns_at(content.epoch())
+
+
+@lru_cache(maxsize=2)
+def _glossary_patterns_at(_epoch):
     pats = []
     for g in content.list_docs("glossary"):
         names = [g.term or g.title] + (g.aliases or [])

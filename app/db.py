@@ -302,6 +302,24 @@ CREATE TABLE IF NOT EXISTS activity_log (        -- who did what: sign-ins, pass
 );
 CREATE INDEX IF NOT EXISTS idx_activity_at ON activity_log(at);
 
+CREATE TABLE IF NOT EXISTS content_approvals (   -- admin decision on a held page (files stay in the repository)
+    path TEXT PRIMARY KEY,
+    decision TEXT NOT NULL,                      -- approved | rejected
+    decided_at INTEGER NOT NULL,
+    decided_by TEXT
+);
+
+CREATE TABLE IF NOT EXISTS seo_alerts (          -- one "daily SEO run missed" email per day
+    day TEXT PRIMARY KEY,
+    sent_at INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS indexnow_pings (      -- pages already announced to Bing and other IndexNow engines
+    path TEXT PRIMARY KEY,
+    pinged_at INTEGER NOT NULL,
+    status TEXT
+);
+
 CREATE TABLE IF NOT EXISTS error_log (           -- one row per distinct server error, with a counter
     fingerprint TEXT PRIMARY KEY,
     first_at INTEGER NOT NULL,

@@ -97,6 +97,15 @@ def group_sitemap(group):
     return _xml("\n".join(parts))
 
 
+@bp.get("/indexnow-key.txt")
+def indexnow_key():
+    """Proves to Bing and other IndexNow search engines that page announcements come from this site."""
+    from .. import seoauto
+    resp = Response(seoauto.indexnow_key(), mimetype="text/plain")
+    resp.headers["X-Robots-Tag"] = "noindex"
+    return resp
+
+
 @bp.get("/llms.txt")
 def llms_txt():
     """A plain-text guide to the site for AI assistants (the llms.txt convention):

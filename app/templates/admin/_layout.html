@@ -3,10 +3,21 @@
 {% block main %}
 <div class="wrap">
   <nav class="admin-nav" aria-label="Admin">
-    {% for key, label, href in [('home','Overview','/admin/'),('seo','SEO audit','/admin/seo/'),('redirects','Redirects & 410s','/admin/seo/redirects/'),('log','SEO change log','/admin/seo/log/'),('keywords','Keywords','/admin/seo/keywords/'),('search','Search performance','/admin/seo/search-performance/'),('listings','Listings','/admin/listings/'),('blog','Blog','/admin/blog/'),('analytics','Analytics','/admin/analytics/'),('users','Users','/admin/users/'),('messages','Messages','/admin/messages/'),('backups','Backups & email','/admin/backups/'),('activity','Activity log','/admin/activity/'),('errors','Errors','/admin/errors/')] %}
-    <a href="{{ href }}" {% if section == key %}aria-current="page"{% endif %}>{{ label }}</a>
+    {% for key, label, href in [('home','Overview','/admin/'),('approvals','Approvals','/admin/approvals/'),('seoreports','SEO reports','/admin/seo-reports/'),('seo','SEO audit','/admin/seo/'),('redirects','Redirects & 410s','/admin/seo/redirects/'),('log','SEO change log','/admin/seo/log/'),('keywords','Keywords','/admin/seo/keywords/'),('search','Search performance','/admin/seo/search-performance/'),('listings','Listings','/admin/listings/'),('blog','Blog','/admin/blog/'),('analytics','Analytics','/admin/analytics/'),('users','Users','/admin/users/'),('messages','Messages','/admin/messages/'),('backups','Backups & email','/admin/backups/'),('activity','Activity log','/admin/activity/'),('errors','Errors','/admin/errors/')] %}
+    <a href="{{ href }}" {% if section == key %}aria-current="page"{% endif %}>{{ label }}{% if key == 'approvals' and seo_pending %} ({{ seo_pending }}){% endif %}</a>
     {% endfor %}
   </nav>
+  {% if seo_alert %}
+  <div class="alert bad mt" role="alert">
+    <strong>Action needed: the daily SEO run for {{ seo_alert.day|human_date }} did not happen.</strong>
+    The usual reason is that the Claude usage allowance has run out or a payment is due. Open Claude → Settings → Usage, add usage or wait for the reset, then run the scheduled task once by hand.
+    {% if seo_alert.queued %}{{ seo_alert.queued }} finished page{{ '' if seo_alert.queued == 1 else 's' }} still queued, until {{ seo_alert.queue_ends }} ({{ seo_tz }}).{% else %}No finished pages are left in the queue.{% endif %}
+    <a href="/admin/seo-reports/">Open SEO reports</a>
+  </div>
+  {% endif %}
+  {% if seo_pending and section != 'approvals' %}
+  <p class="alert mt"><strong>{{ seo_pending }} page{{ '' if seo_pending == 1 else 's' }} waiting for your approval.</strong> <a href="/admin/approvals/">Review now</a></p>
+  {% endif %}
   {% block admin %}{% endblock %}
 </div>
 {% endblock %}

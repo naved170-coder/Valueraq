@@ -93,7 +93,7 @@ def web_application(path, name, description, category="BusinessApplication"):
     }
 
 
-def article(path, headline, description, author, published, updated, section=None):
+def article(path, headline, description, author, published, updated, section=None, image=None):
     node = {
         "@type": "Article",
         "@id": abs_url(path) + "#article",
@@ -109,6 +109,8 @@ def article(path, headline, description, author, published, updated, section=Non
     }
     if section:
         node["articleSection"] = section
+    if image:
+        node["image"] = abs_url(image)
     return node
 
 

@@ -1,0 +1,28 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<div class="row"><h1>SEO reports</h1><a class="btn quiet" href="/admin/seo-reports/export.csv">Download all as a spreadsheet (CSV)</a></div>
+<p class="lede">One entry for each day the SEO run worked. Tap a date to see what was written or fixed, with a link to each page and the keywords it targets.</p>
+{% if not cfg_seo.active %}<p class="alert mt">The daily run is not switched on yet.</p>{% endif %}
+{% if not runs %}<p class="alert mt">No reports yet. The first one appears after the first daily run.</p>{% else %}
+<div class="table-wrap mt"><table>
+  <thead><tr><th>Date</th><th>Work done</th><th>New pages</th><th>Waiting for approval</th><th>Summary</th></tr></thead>
+  <tbody>
+  {% for r in runs %}
+  <tr><td><a href="/admin/seo-reports/{{ r.date }}/"><strong>{{ r.date|human_date }}</strong></a></td><td>{{ r.count }}</td><td>{{ r.new }}</td><td>{% if r.waiting %}<a href="/admin/approvals/">{{ r.waiting }}</a>{% else %}0{% endif %}</td><td>{{ r.summary }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endif %}
+<h2 class="mt">Queued to publish</h2>
+{% if not upcoming %}<p class="muted">No finished pages are waiting for their publishing time.</p>{% else %}
+<p class="hint">Times are {{ seo_tz }}. These pages are finished and publish by themselves.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Goes live</th><th>Page</th><th>Type</th><th>Keywords</th></tr></thead>
+  <tbody>
+  {% for d in upcoming %}
+  <tr><td>{{ local_time(d.publish_ts) }}</td><td><a href="{{ d.path }}" target="_blank" rel="noopener">{{ d.title }}</a>{% if d.held %} <span class="tag">needs approval</span>{% endif %}</td><td>{{ 'Article' if d.kind == 'guides' else 'Reference page' }}</td><td>{{ (d.keywords or [])|join(', ') }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endif %}
+{% endblock %}

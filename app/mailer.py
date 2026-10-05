@@ -257,6 +257,26 @@ def admin_error_alert(error_type, message, method, path, count):
     return send(_admins(), f"Website error: {error_type}", text, html)
 
 
+def seo_run_missed(a):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/seo-reports/"
+    queue = (f"{a['queued']} finished page(s) are still queued and will keep publishing until {a['queue_ends']}."
+             if a["queued"] else "No finished pages are left in the queue, so nothing new will publish until the run works again.")
+    last = f"The last report on file is for {a['last']}." if a["last"] else "No report is on file yet."
+    text = (f"The daily SEO run for {a['day']} did not happen. {last}\n\n{queue}\n\n"
+            "The most common reason is that the Claude usage allowance has run out or a payment is due. "
+            "Open Claude > Settings > Usage, and add usage or wait for the reset. Then open the scheduled task "
+            "in Claude and run it once by hand.\n\n"
+            f"Reports: {url}\n\nYou get this email once for each missed day.")
+    html = (f"<p>The daily SEO run for <b>{_html.escape(a['day'])}</b> did not happen. {_html.escape(last)}</p>"
+            f"<p>{_html.escape(queue)}</p>"
+            "<p>The most common reason is that the Claude usage allowance has run out or a payment is due. "
+            "Open Claude &gt; Settings &gt; Usage, and add usage or wait for the reset. Then open the scheduled task "
+            "in Claude and run it once by hand.</p><p>You get this email once for each missed day.</p>"
+            + _btn(url, "Open SEO reports"))
+    return send(_admins(), f"Action needed: daily SEO run missed ({a['day']})", text, html)
+
+
 def login_code(to, code, purpose="login"):
     minutes = current_app.config["LOGIN_CODE_MINUTES"]
     what = "finish logging in" if purpose == "login" else "turn on two-step login"

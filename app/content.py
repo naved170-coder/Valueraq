@@ -9,15 +9,18 @@ comma separated. Example:
     related: /tools/website-valuation/, /guides/saas-valuation/
     ---
 """
+import calendar
 import os
 import re
+import time
 from functools import lru_cache
 
 import markdown
 from markupsafe import Markup
 
 CONTENT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "content")
-LIST_KEYS = {"related", "glossary", "aliases", "tags"}
+LIST_KEYS = {"related", "glossary", "aliases", "tags", "keywords"}
+KIND_PREFIX = {"guides": "/guides/", "glossary": "/glossary/"}
 
 AUTHORS = {
     # Do not add qualifications that are not true. Add real people here with
@@ -97,6 +100,20 @@ class Doc:
         return self.meta.get(item)
 
     @property
+    def path(self):
+        pre = KIND_PREFIX.get(self.kind)
+        return f"{pre}{self.slug}/" if pre else f"/{self.slug}/"
+
+    @property
+    def publish_ts(self):
+        """Unix time this page goes public (from `publish_at`), or None if it has no timer."""
+        return parse_when(self.meta.get("publish_at"))
+
+    @property
+    def held(self):
+        return str(self.meta.get("hold", "")).strip().lower() in ("yes", "true", "1")
+
+    @property
     def author(self):
         return AUTHORS.get(self.meta.get("author", "editorial"), AUTHORS["editorial"])
 
@@ -125,7 +142,8 @@ def load(kind, slug):
 
 
 @lru_cache(maxsize=None)
-def list_docs(kind):
+def all_docs(kind):
+    """Every published-status document of a kind, including ones still waiting for their time or an approval."""
     d = os.path.join(CONTENT_DIR, kind)
     if not os.path.isdir(d):
         return []
@@ -133,6 +151,91 @@ def list_docs(kind):
     docs = [x for x in docs if x and x.meta.get("status", "published") == "published"]
     docs.sort(key=lambda x: (int(x.meta.get("order", 100)), x.meta.get("title", "")))
     return docs
+
+
+def list_docs(kind):
+    """Documents the public can see right now."""
+    return _live_docs(kind, epoch())
+
+
+@lru_cache(maxsize=16)
+def _live_docs(kind, _epoch):
+    return [d for d in all_docs(kind) if is_live(d)]
+
+
+# --------------------------------------------------------------------------
+# Timed publishing and approvals.
+#
+#   publish_at: 2026-10-07T19:00Z   the page stays hidden (404, out of sitemaps,
+#                                   menus and internal links) until this moment
+#   hold: yes                       the page also needs a click on Admin > Approvals
+#
+# Files live in the repository; the approve / reject decision lives in the database.
+# --------------------------------------------------------------------------
+_now = time.time
+_decisions_cache = {"at": 0.0, "data": {}}
+DECISION_TTL = 20
+
+
+def parse_when(value):
+    """'2026-10-07T19:00Z' or '2026-10-07 19:00' (always UTC) -> unix time, or None."""
+    m = re.match(r"^\s*(\d{4})-(\d\d)-(\d\d)(?:[T ](\d\d):(\d\d))?", str(value or ""))
+    if not m:
+        return None
+    y, mo, d, h, mi = (int(x) if x else 0 for x in m.groups())
+    try:
+        return calendar.timegm((y, mo, d, h, mi, 0))
+    except (ValueError, OverflowError):
+        return None
+
+
+def decisions(fresh=False):
+    """{path: 'approved' | 'rejected'} from the database, cached briefly per worker."""
+    c = _decisions_cache
+    if fresh or _now() - c["at"] > DECISION_TTL:
+        data = {}
+        try:
+            from . import db
+            data = {r["path"]: r["decision"] for r in db.query("SELECT path, decision FROM content_approvals")}
+        except Exception:
+            data = dict(c["data"]) if not fresh else {}
+        c["data"], c["at"] = data, _now()
+    return c["data"]
+
+
+def is_live(doc):
+    if not doc or doc.meta.get("status", "published") != "published":
+        return False
+    ts = doc.publish_ts
+    if doc.meta.get("publish_at") and ts is None:
+        return False  # unreadable timer: stay hidden rather than publish by accident
+    if ts is not None and ts > _now():
+        return False
+    if doc.held and decisions().get(doc.path) != "approved":
+        return False
+    return True
+
+
+@lru_cache(maxsize=1)
+def _timers():
+    out = []
+    for kind in KIND_PREFIX:
+        out += [d.publish_ts for d in all_docs(kind) if d.publish_ts is not None]
+    return sorted(out)
+
+
+def epoch():
+    """A value that changes whenever the set of public pages changes; used as a cache key."""
+    now = _now()
+    due = sum(1 for t in _timers() if t <= now)
+    dec = decisions()
+    return (due, len(dec), hash(frozenset(dec.items())))
+
+
+def reset_caches():
+    for f in (load, all_docs, _live_docs, _timers):
+        f.cache_clear()
+    _decisions_cache["at"] = 0.0
 
 
 def md_inline(text):

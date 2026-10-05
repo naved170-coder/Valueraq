@@ -1,0 +1,22 @@
+{% extends "admin/_layout.html" %}
+{% block admin %}
+<p><a href="/admin/seo-reports/">← All SEO reports</a></p>
+<h1>SEO report: {{ r.date|human_date }}</h1>
+{% if r.summary %}<p class="lede">{{ r.summary }}</p>{% endif %}
+<div class="table-wrap mt"><table>
+  <thead><tr><th>Page</th><th>What was done</th><th>Words</th><th>Score</th><th>Keywords used</th><th>Status</th></tr></thead>
+  <tbody>
+  {% for i in r['items'] %}
+  <tr>
+    <td>{% if i.path %}<a href="{{ i.path }}" target="_blank" rel="noopener">{{ i.title }}</a>{% else %}{{ i.title }}{% endif %}{% if i.type %}<br><span class="muted">{{ i.type }}</span>{% endif %}{% if i.duplicate %}<br><span class="muted">Duplicate check: {{ i.duplicate }}</span>{% endif %}{% if i.images %}<br><span class="muted">Images: {{ i.images }}</span>{% endif %}</td>
+    <td>{{ {'new': 'New page', 'refresh': 'Updated', 'fix': 'Fixed'}.get(i.action or 'new', i.action) }}{% if i.note %}<br><span class="muted">{{ i.note }}</span>{% endif %}</td>
+    <td>{{ i.words or '' }}</td><td>{{ i.score or '' }}</td>
+    <td>{{ i.keywords|join(', ') }}</td>
+    <td>{% if i.state == 'waiting' %}<a href="/admin/approvals/">{{ i.state_label }}</a>{% else %}{{ i.state_label }}{% endif %}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% if r.checks %}<h2 class="mt">Checks run</h2><ul>{% for c in r.checks %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+{% if r.notes %}<h2 class="mt">Notes for you</h2><ul>{% for n in r.notes %}<li>{{ n }}</li>{% endfor %}</ul>{% endif %}
+{% endblock %}
