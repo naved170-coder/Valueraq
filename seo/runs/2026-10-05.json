@@ -1,5 +1,5 @@
 {
- "summary": "Setup day: two trial pages written and held for your approval; the 30-day calendar is ready.",
+ "summary": "Setup day: two trial pages written and published; the 30-day calendar is ready.",
  "model": "claude-opus-5-5",
  "items": [
   {
@@ -28,8 +28,7 @@
   "External links: 2 opened, 0 broken"
  ],
  "notes": [
-  "Open Admin, then Approvals, read the two trial pages and press Approve or Reject.",
-  "Open SEO reports, then Content calendar, and tell Claude in the chat which topics to move or drop."
+  "Both trial pages were released on 6 October at your request."
  ],
  "tasks": [
   "duplicate_check",

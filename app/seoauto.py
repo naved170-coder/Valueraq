@@ -255,6 +255,14 @@ def validate():
                 bad("glossary page needs 'term' and 'definition'")
             if d.held and not d.hold_reason:
                 bad("held page needs a hold_reason")
+            for href in set(re.findall(r'href="(/(?:guides|glossary)/[a-z0-9-]+/)"', d.html)):
+                target = doc_for(href)
+                if target is None:
+                    bad(f"links to {href}, which does not exist")
+                elif target.publish_ts is not None and target.publish_ts > ts:
+                    bad(f"links to {href}, which goes live later than this page")
+                elif target.held and content.decisions().get(target.path) != "approved" and not d.held:
+                    bad(f"links to {href}, which is waiting for approval")
     for day, paths in per_day.items():
         if len(paths) > MAX_PER_DAY:
             problems.append(f"{day}: {len(paths)} pages scheduled; the daily cap is {MAX_PER_DAY}")

@@ -12,8 +12,6 @@ keywords: how much is my website worth, website worth calculator, value my websi
 published: 2026-10-06
 updated: 2026-10-06
 publish_at: 2026-10-06T01:00Z
-hold: yes
-hold_reason: Trial article for your review before the daily run starts.
 image: /static/img/articles/website-worth-examples.png
 image_alt: Featured image for the guide How Much Is My Website Worth, with seven worked examples
 score: 9.0

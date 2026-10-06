@@ -12,8 +12,6 @@ keywords: valuation multiple, valuation multiples, earnings multiple, what is a 
 related: /glossary/profit-multiple/, /glossary/revenue-multiple/, /glossary/sde/, /guides/revenue-vs-profit-multiples/, /calculators/business-multiple-calculator/
 updated: 2026-10-06
 publish_at: 2026-10-06T07:00Z
-hold: yes
-hold_reason: Trial reference page for your review before the daily run starts.
 image: /static/img/articles/valuation-multiple.png
 image_alt: Featured image for the glossary entry What Is a Valuation Multiple
 score: 8.9

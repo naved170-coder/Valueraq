@@ -28,9 +28,10 @@ today's run is done (this is the guard against publishing twice).
 
 ## 2. Pick the work
 
-Open `seo/calendar.json`. Take the first day whose four pages are not all present under `content/`.
-Write those four pages, in the listed order. If a page of that day already exists, skip it and take
-only the missing ones. Never write more than four pages in one run.
+Open `seo/calendar.json`. Go through the days in order and collect the pages that are not yet present under
+`content/`, in the listed order, until you have four (carry on into the next day if a day is partly written).
+Write those four. Never write more than four pages in one run. Before choosing release times, list the `publish_at`
+values already used by existing pages: never reuse one, and never put more than four pages on one Pakistan date.
 
 After day 30 of the calendar (or from `reduce_after` in config.json), write only the first two pages per day
 (one article, one reference page) from the next calendar the monthly run prepares. If the calendar is used up,
@@ -157,6 +158,7 @@ python -m unittest tests.test_app   # all pass
 python manage.py audit              # 0 critical, 0 warnings
 ```
 
+A page may only link to pages that are already live or that go live before it; `seo-check` enforces this, so order the release times accordingly or leave the link out.
 Also check every internal link you wrote points to a page that exists, and that every external link opened for you during research.
 
 ## 9. Report file
