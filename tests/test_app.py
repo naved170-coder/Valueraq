@@ -1692,11 +1692,13 @@ Body text for the test page. It links to the [methodology](/methodology/).
                 self.assertEqual(cell("article", 28), "missed")        # started, no report that day
                 self.assertEqual(cell("article", 29), "done")
                 self.assertEqual(cell("research", 29), "missed")       # report filed without this task
-                self.assertEqual(cell("published", 29), "done")        # its page is live
-                self.assertEqual(cell("bing", 29), "scheduled")        # not announced yet
+                self.assertEqual(cell("published", 30), "done")        # the page went live on 30 April, Pakistan time
+                self.assertEqual(cell("bing", 30), "scheduled")        # live but not announced yet
+                self.assertEqual(cell("published", 29), "")            # nothing was due to go live that day
                 self.assertEqual(cell("article", 30), "scheduled")     # today, run not due yet
                 self.assertEqual(cell("refresh", 30), "")              # only due on the 1st
                 self.assertEqual(self.seoauto.task_grid("2031-05")["rows"][-1]["cells"][0]["state"], "scheduled")
+                self.assertEqual(self.seoauto.task_grid("2031-05")["rows"][-3]["cells"][0]["state"], "scheduled")
                 self.assertEqual(self.seoauto.task_months()[0], "2031-04")
                 self.assertIsNone(self.seoauto.task_grid("2031-13"))
             self.admin()

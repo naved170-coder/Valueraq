@@ -325,6 +325,14 @@ def task_grid(month):
         start = None
     pinged = {r["path"] for r in db.query("SELECT path FROM indexnow_pings")}
     late = now.hour >= c["run_hour"] + c["grace_hours"]
+    # Pages grouped by the date they go live (owner's time zone), for the two "site" rows.
+    by_day = {}
+    for kind in KINDS:
+        for doc in content.all_docs(kind):
+            if doc.publish_ts is not None and state(doc)[0] != "rejected":
+                day = (datetime.datetime.fromtimestamp(doc.publish_ts, datetime.timezone.utc)
+                       + datetime.timedelta(hours=c["tz_hours"])).date()
+                by_day.setdefault(day, []).append(doc)
     rows = []
     for key, label, source in TASKS:
         cells = []
@@ -332,17 +340,19 @@ def task_grid(month):
             iso = d.isoformat()
             raw = _run_raw(iso)
             planned = start is not None and d >= start and (key != "refresh" or d.day == 1)
-            if isinstance(raw, dict):
+            if source == "site":
+                # Shown on the date the pages go live, not the date they were written.
+                docs = by_day.get(d, [])
+                if docs:
+                    ok = (lambda x: content.is_live(x)) if key == "published" else (lambda x: x.path in pinged)
+                    st = "done" if all(ok(x) for x in docs) else "scheduled" if d >= today else "missed"
+                elif start is not None and d > start and d > today:
+                    st = "scheduled"          # the run on the evening before fills this date
+                else:
+                    st = ""
+            elif isinstance(raw, dict):
                 done = set(raw.get("tasks") or [])
-                new = [doc_for(i.get("path")) for i in raw.get("items") or [] if i.get("action", "new") == "new"]
-                new = [x for x in new if x is not None and state(x)[0] != "rejected"]
-                if key == "published":
-                    st = "" if not new else "done" if all(content.is_live(x) for x in new) else "scheduled"
-                elif key == "bing":
-                    st = "" if not new else "done" if all(x.path in pinged for x in new) else "scheduled"
-                elif key == "report":
-                    st = "done"
-                elif key in done:
+                if key == "report" or key in done:
                     st = "done"
                 elif key == "refresh" and d.day != 1:
                     st = ""
@@ -354,7 +364,8 @@ def task_grid(month):
                 st = "scheduled"
             else:
                 st = "missed"
-            cells.append(dict(day=d.day, date=iso, state=st, has_report=isinstance(raw, dict)))
+            cells.append(dict(day=d.day, date=iso, state=st, has_report=isinstance(raw, dict),
+                              pages=len(by_day.get(d, []))))
         rows.append(dict(key=key, label=label, cells=cells))
     counts = {k: sum(1 for r in rows for x in r["cells"] if x["state"] == k) for k in ("done", "scheduled", "missed")}
     return dict(month=month, name=datetime.date(y, m, 1).strftime("%B %Y"), days=days, rows=rows, counts=counts,
