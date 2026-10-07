@@ -32,6 +32,7 @@ from . import content, db
 
 SEO_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "seo")
 RUNS_DIR = os.path.join(SEO_DIR, "runs")
+WATCH_DIR = os.path.join(SEO_DIR, "watch")
 KINDS = ("guides", "glossary")
 _DATE_RE = re.compile(r"^\d{4}-\d\d-\d\d$")
 
@@ -286,6 +287,7 @@ TASKS = [
     ("published", "Pages published on the website", "site"),
     ("bing", "New pages announced to Bing", "site"),
     ("refresh", "Content refresh (1st of each month)", "run"),
+    ("selfcheck", "Morning self-check by Claude", "watch"),
 ]
 
 
@@ -340,7 +342,22 @@ def task_grid(month):
             iso = d.isoformat()
             raw = _run_raw(iso)
             planned = start is not None and d >= start and (key != "refresh" or d.day == 1)
-            if source == "site":
+            if source == "watch":
+                w = watch(iso)
+                wstart = None
+                try:
+                    wstart = datetime.date.fromisoformat(c.get("watch_start") or "") if c["active"] else None
+                except ValueError:
+                    pass
+                if w:
+                    st = "missed" if w.get("status") == "needs_owner" else "done"
+                elif wstart is None or d < wstart:
+                    st = ""
+                elif d > today or (d == today and now.hour < 12):
+                    st = "scheduled"
+                else:
+                    st = "missed"
+            elif source == "site":
                 # Shown on the date the pages go live, not the date they were written.
                 docs = by_day.get(d, [])
                 if docs:
@@ -370,6 +387,58 @@ def task_grid(month):
     counts = {k: sum(1 for r in rows for x in r["cells"] if x["state"] == k) for k in ("done", "scheduled", "missed")}
     return dict(month=month, name=datetime.date(y, m, 1).strftime("%B %Y"), days=days, rows=rows, counts=counts,
                 today=today.isoformat())
+
+
+# ---------------------------------------------------------------- morning self-check (seo/watch/<date>.json)
+@lru_cache(maxsize=1)
+def watch_dates():
+    if not os.path.isdir(WATCH_DIR):
+        return []
+    return sorted((f[:-5] for f in os.listdir(WATCH_DIR) if f.endswith(".json") and _DATE_RE.match(f[:-5])), reverse=True)
+
+
+@lru_cache(maxsize=None)
+def watch(date):
+    """One morning self-check: {"status": "ok" | "fixed" | "needs_owner", "summary", "checks", "fixed", "needs_owner", "weekly"}."""
+    if not _DATE_RE.match(date or ""):
+        return None
+    raw = _read_json(os.path.join(WATCH_DIR, date + ".json"), None)
+    if not isinstance(raw, dict):
+        return None
+    out = dict(date=date, status=raw.get("status") or "ok", summary=raw.get("summary", ""))
+    for k in ("checks", "fixed", "needs_owner"):
+        out[k] = [str(x) for x in (raw.get(k) or [])]
+    out["weekly"] = raw.get("weekly") if isinstance(raw.get("weekly"), dict) else None
+    return out
+
+
+def watch_list(limit=14):
+    return [w for w in (watch(d) for d in watch_dates()[:limit]) if w]
+
+
+def weekly_list(limit=12):
+    return [w for w in (watch(d) for d in watch_dates()) if w and w["weekly"]][:limit]
+
+
+def owner_items():
+    """Things the latest self-check could not fix and the owner has to deal with."""
+    dates = watch_dates()
+    w = watch(dates[0]) if dates else None
+    return w if w and w["status"] == "needs_owner" and w["needs_owner"] else None
+
+
+def send_owner_items_once():
+    w = owner_items()
+    if not w:
+        return False
+    conn = db.get_db()
+    cur = conn.execute("INSERT OR IGNORE INTO seo_alerts(day, sent_at) VALUES (?,?)", ("watch:" + w["date"], db.now()))
+    conn.commit()
+    if not cur.rowcount:
+        return False
+    from . import mailer
+    mailer.seo_needs_owner(w)
+    return True
 
 
 # ---------------------------------------------------------------- missed-run alert
@@ -460,6 +529,7 @@ def start_scheduler(app):
             try:
                 with app.app_context():
                     send_alert_once()
+                    send_owner_items_once()
                     # Only one worker should announce: claim the ten-minute slot through the database.
                     slot = "indexnow:" + time.strftime("%Y%m%d%H") + str(int(time.strftime("%M")) // 10)
                     conn = db.get_db()

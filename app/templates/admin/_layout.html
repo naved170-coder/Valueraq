@@ -15,6 +15,12 @@
     <a href="/admin/seo-reports/">Open SEO reports</a>
   </div>
   {% endif %}
+  {% if seo_owner %}
+  <div class="alert bad mt" role="alert">
+    <strong>The automatic self-check on {{ seo_owner.date|human_date }} found {{ seo_owner.needs_owner|length }} thing{{ '' if seo_owner.needs_owner|length == 1 else 's' }} it could not fix by itself:</strong>
+    <ul>{% for i in seo_owner.needs_owner %}<li>{{ i }}</li>{% endfor %}</ul>
+  </div>
+  {% endif %}
   {% if seo_pending and section != 'approvals' %}
   <p class="alert mt"><strong>{{ seo_pending }} page{{ '' if seo_pending == 1 else 's' }} waiting for your approval.</strong> <a href="/admin/approvals/">Review now</a></p>
   {% endif %}

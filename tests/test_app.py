@@ -1509,6 +1509,8 @@ Body text for the test page. It links to the [methodology](/methodology/).
         self.files = []
         self.runs = tempfile.mkdtemp()
         self._runs_dir, seoauto.RUNS_DIR = seoauto.RUNS_DIR, self.runs
+        self.watchdir = tempfile.mkdtemp()
+        self._watch_dir, seoauto.WATCH_DIR = seoauto.WATCH_DIR, self.watchdir
         self._now = content._now
         self.reset()
 
@@ -1518,12 +1520,14 @@ Body text for the test page. It links to the [methodology](/methodology/).
                 os.remove(f)
         self.content._now = self._now
         self.seoauto.RUNS_DIR = self._runs_dir
+        self.seoauto.WATCH_DIR = self._watch_dir
         self.reset()
 
     def reset(self):
         self.content.reset_caches()
         for f in (self.linkgraph._registry, self.linkgraph._glossary_patterns_at, self.seoauto.run_dates,
-                  self.seoauto._run_raw, self.seoauto.config, self.seoauto.calendar):
+                  self.seoauto._run_raw, self.seoauto.config, self.seoauto.calendar,
+                  self.seoauto.watch_dates, self.seoauto.watch):
             if hasattr(f, "cache_clear"):
                 f.cache_clear()
 
@@ -1697,8 +1701,8 @@ Body text for the test page. It links to the [methodology](/methodology/).
                 self.assertEqual(cell("published", 29), "")            # nothing was due to go live that day
                 self.assertEqual(cell("article", 30), "scheduled")     # today, run not due yet
                 self.assertEqual(cell("refresh", 30), "")              # only due on the 1st
-                self.assertEqual(self.seoauto.task_grid("2031-05")["rows"][-1]["cells"][0]["state"], "scheduled")
-                self.assertEqual(self.seoauto.task_grid("2031-05")["rows"][-3]["cells"][0]["state"], "scheduled")
+                may = {r["key"]: r["cells"][0]["state"] for r in self.seoauto.task_grid("2031-05")["rows"]}
+                self.assertEqual((may["refresh"], may["published"]), ("scheduled", "scheduled"))
                 self.assertEqual(self.seoauto.task_months()[0], "2031-04")
                 self.assertIsNone(self.seoauto.task_grid("2031-13"))
             self.admin()
@@ -1710,6 +1714,32 @@ Body text for the test page. It links to the [methodology](/methodology/).
             self.assertEqual(self.client.get("/admin/task-data/2031-04/").status_code, 200)
             self.assertEqual(self.client.get("/admin/task-data/2031-09/").status_code, 404)
             self.assertEqual(self.client.get("/admin/task-data/nonsense/").status_code, 404)
+
+    def test_morning_self_check_shows_and_escalates_once(self):
+        cfg = dict(active=True, start="2031-04-28", watch_start="2031-04-28", tz_hours=5, tz_name="Pakistan time",
+                   run_hour=20, grace_hours=3)
+        with open(os.path.join(self.watchdir, "2031-04-29.json"), "w") as fh:
+            json.dump(dict(status="fixed", summary="One broken link repaired.", fixed=["Link in add-backs page"],
+                           checks=["Last night's run: done"], weekly=dict(summary="28 pages this week.", lines=["0 held"])), fh)
+        with open(os.path.join(self.watchdir, "2031-04-30.json"), "w") as fh:
+            json.dump(dict(status="needs_owner", summary="Deploy failed.", needs_owner=["Render deploy failed twice"]), fh)
+        self.reset()
+        with mock.patch.object(self.seoauto, "config", lambda: cfg):
+            self.content._now = lambda: self.content.parse_when("2031-04-30T10:00Z")
+            with self.app.app_context():
+                g = self.seoauto.task_grid("2031-04")
+                row = next(r for r in g["rows"] if r["key"] == "selfcheck")["cells"]
+                self.assertEqual([row[d - 1]["state"] for d in (27, 28, 29, 30)], ["", "missed", "done", "missed"])
+                with mock.patch("app.mailer.send") as send:
+                    self.assertTrue(self.seoauto.send_owner_items_once())
+                    self.assertFalse(self.seoauto.send_owner_items_once())
+                    self.assertIn("need you", send.call_args[0][1])
+            self.admin()
+            page = self.client.get("/admin/seo-reports/").get_data(as_text=True)
+            for expected in ("Morning self-checks", "One broken link repaired.", "Render deploy failed twice",
+                             "Week ending April 29, 2031", "28 pages this week."):
+                self.assertIn(expected, page)
+            self.assertIn("could not fix by itself", self.client.get("/admin/").get_data(as_text=True))
 
     def test_featured_image_on_article(self):
         self.write("zz-test-img", "image: /static/og/valueraq-default.png\nimage_alt: A test chart")

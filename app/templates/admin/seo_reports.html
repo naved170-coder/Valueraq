@@ -13,6 +13,30 @@
   </tbody>
 </table></div>
 {% endif %}
+<h2 class="mt">Morning self-checks</h2>
+<p class="hint">Every morning a separate automatic run checks that last night's run happened, the pages went live, images load and the site is healthy. It repairs what it can and lists anything that needs you.</p>
+{% if not checks %}<p class="muted">No self-check has run yet. The first one is on the morning after the first daily run.</p>{% else %}
+<div class="table-wrap"><table>
+  <thead><tr><th>Date</th><th>Result</th><th>Summary</th></tr></thead>
+  <tbody>
+  {% for w in checks %}
+  <tr><td>{{ w.date|human_date }}</td><td>{% if w.status == 'needs_owner' %}<span class="tag ai">needs you</span>{% elif w.status == 'fixed' %}<span class="tag assume">repaired</span>{% else %}<span class="tag good">all fine</span>{% endif %}</td>
+    <td>{{ w.summary }}{% if w.fixed %}<br><span class="muted">Repaired: {{ w.fixed|join('; ') }}</span>{% endif %}{% if w.needs_owner %}<br><strong>Needs you: {{ w.needs_owner|join('; ') }}</strong>{% endif %}
+      {% if w.checks %}<details><summary>What was checked</summary><ul>{% for c in w.checks %}<li>{{ c }}</li>{% endfor %}</ul></details>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody>
+</table></div>
+{% endif %}
+{% if weekly %}
+<h2 class="mt">Weekly reports</h2>
+<div class="stack">
+{% for w in weekly %}
+  <article class="panel"><h3>Week ending {{ w.date|human_date }}</h3>
+    {% if w.weekly.summary %}<p>{{ w.weekly.summary }}</p>{% endif %}
+    <ul>{% for line in w.weekly.lines or [] %}<li>{{ line }}</li>{% endfor %}</ul></article>
+{% endfor %}
+</div>
+{% endif %}
 <h2 class="mt">Queued to publish</h2>
 {% if not upcoming %}<p class="muted">No finished pages are waiting for their publishing time.</p>{% else %}
 <p class="hint">Times are {{ seo_tz }}. These pages are finished and publish by themselves.</p>

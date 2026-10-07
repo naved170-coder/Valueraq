@@ -277,6 +277,18 @@ def seo_run_missed(a):
     return send(_admins(), f"Action needed: daily SEO run missed ({a['day']})", text, html)
 
 
+def seo_needs_owner(w):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/seo-reports/"
+    items = w["needs_owner"]
+    text = ("This morning's automatic check of the SEO system found something it could not fix by itself:\n\n"
+            + "\n".join(f"- {i}" for i in items) + f"\n\nDetails: {url}\n\nEverything else was checked and is working.")
+    html = ("<p>This morning's automatic check of the SEO system found something it could not fix by itself:</p><ul>"
+            + "".join(f"<li>{_html.escape(i)}</li>" for i in items)
+            + "</ul><p>Everything else was checked and is working.</p>" + _btn(url, "Open SEO reports"))
+    return send(_admins(), f"VALUERAQ SEO: {len(items)} item(s) need you", text, html)
+
+
 def login_code(to, code, purpose="login"):
     minutes = current_app.config["LOGIN_CODE_MINUTES"]
     what = "finish logging in" if purpose == "login" else "turn on two-step login"

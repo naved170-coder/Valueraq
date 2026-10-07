@@ -18,9 +18,10 @@ OVERRIDE_FIELDS = ["meta_title", "meta_description", "h1", "canonical_url", "rob
 def _seo_banner():
     """Every admin page shows a banner when a daily SEO run was missed, and a count of pages awaiting approval."""
     try:
-        return dict(seo_alert=seoauto.alert(), seo_pending=len(seoauto.pending()), seo_tz=seoauto.config()["tz_name"])
+        return dict(seo_alert=seoauto.alert(), seo_pending=len(seoauto.pending()), seo_tz=seoauto.config()["tz_name"],
+                    seo_owner=seoauto.owner_items())
     except Exception:
-        return dict(seo_alert=None, seo_pending=0, seo_tz="")
+        return dict(seo_alert=None, seo_pending=0, seo_tz="", seo_owner=None)
 
 
 def _who():
@@ -569,6 +570,7 @@ def approvals():
 @auth.admin_required
 def seo_reports():
     return render_template("admin/seo_reports.html", runs=seoauto.run_index(), upcoming=seoauto.upcoming(),
+                           checks=seoauto.watch_list(), weekly=seoauto.weekly_list(),
                            local_time=seoauto.local_time, cfg_seo=seoauto.config(), section="seoreports")
 
 

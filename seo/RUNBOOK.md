@@ -188,8 +188,11 @@ Write `seo/runs/<run date>.json`:
 
 ## 10. Check yesterday's pages on the live site
 
-For each page in the previous report whose release time has passed, fetch `https://www.valueraq.com<path>?v=<run date>`
-and its image. Record the result in `checks`. If one does not load and is not waiting for approval, say so in `notes`.
+For each page in the previous report whose release time has passed and that is not held, confirm it answers on the
+live site. Try WebFetch on `https://www.valueraq.com<path>`; if fetching is refused, use the Render tools to look for that
+path with status 200 in the request logs (service `srv-dav6fknpn0mc73aclre0`, workspace `tea-d8cutaurnols739us400`).
+Record the result in `checks`. If you have no way to check, write "Live check: not possible in this run" and leave
+`live_check` out of `tasks`; the morning self-check repeats it. If a page really does not load, say so in `notes`.
 
 ## 11. Push
 
