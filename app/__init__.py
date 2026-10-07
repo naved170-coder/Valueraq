@@ -50,6 +50,8 @@ def create_app(config_object=Config, **overrides):
     backup.start_scheduler(app)
     from . import seoauto
     seoauto.start_scheduler(app)
+    from . import gsc
+    gsc.start_scheduler(app)
 
     from . import filters
     filters.register(app)

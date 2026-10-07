@@ -15,6 +15,9 @@
     <a href="/admin/seo-reports/">Open SEO reports</a>
   </div>
   {% endif %}
+  {% if gsc_problem and section != 'search' %}
+  <p class="alert bad mt" role="alert"><strong>The Google Search Console connection is not working.</strong> {{ gsc_problem }} <a href="/admin/seo/search-performance/">Open Search performance</a></p>
+  {% endif %}
   {% if seo_owner %}
   <div class="alert bad mt" role="alert">
     <strong>The automatic self-check on {{ seo_owner.date|human_date }} found {{ seo_owner.needs_owner|length }} thing{{ '' if seo_owner.needs_owner|length == 1 else 's' }} it could not fix by itself:</strong>

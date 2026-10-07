@@ -57,6 +57,11 @@ class Config:
     DEFAULT_OG_IMAGE = "/static/og/valueraq-default.png"
     # Announce newly published pages to Bing and other IndexNow search engines. Set INDEXNOW=0 to switch off.
     INDEXNOW = os.environ.get("INDEXNOW", "1") == "1"
+    # Google Search Console: the whole key file of a Google service account that has been added as a user of the
+    # property. Leave empty to keep the connection off.
+    GSC_SERVICE_ACCOUNT_JSON = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "")
+    # Long random string. Lets the automatic SEO runs read search figures at /api/seo/feed/<token>.json.
+    SEO_FEED_TOKEN = os.environ.get("SEO_FEED_TOKEN", "")
 
     # --- Search engine verification --------------------------------------
     # Google Analytics 4. Runs cookie-free until the visitor accepts the cookie notice. Set to "" to switch it off.
@@ -154,3 +159,5 @@ class TestConfig(Config):
     ENFORCE_CANONICAL_HOST = False
     ADMIN_EMAILS = ["admin@example.com"]
     INDEXNOW = False
+    GSC_SERVICE_ACCOUNT_JSON = ""
+    SEO_FEED_TOKEN = ""

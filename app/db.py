@@ -320,6 +320,17 @@ CREATE TABLE IF NOT EXISTS indexnow_pings (      -- pages already announced to B
     status TEXT
 );
 
+CREATE TABLE IF NOT EXISTS gsc_rows (            -- figures fetched from Google Search Console
+    kind TEXT NOT NULL,                          -- day | query | page | status
+    key TEXT NOT NULL,
+    clicks REAL NOT NULL DEFAULT 0,
+    impressions REAL NOT NULL DEFAULT 0,
+    ctr REAL NOT NULL DEFAULT 0,
+    position REAL NOT NULL DEFAULT 0,
+    extra TEXT,
+    PRIMARY KEY (kind, key)
+);
+
 CREATE TABLE IF NOT EXISTS error_log (           -- one row per distinct server error, with a counter
     fingerprint TEXT PRIMARY KEY,
     first_at INTEGER NOT NULL,

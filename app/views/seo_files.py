@@ -106,6 +106,24 @@ def indexnow_key():
     return resp
 
 
+@bp.get("/seo-feed/<token>.json")
+def seo_feed(token):
+    """Search figures and publishing state for the automatic SEO runs. Needs the secret token; otherwise it does not exist."""
+    from flask import abort, jsonify
+    from .. import content, gsc, seoauto
+    if not gsc.feed_ok(token):
+        abort(404)
+    data = gsc.summary()
+    data["connected"] = gsc.configured()
+    data["waiting_for_approval"] = [d.path for d in seoauto.pending()]
+    data["queued"] = [dict(path=d.path, goes_live=seoauto.local_time(d.publish_ts)) for d in seoauto.upcoming()]
+    data["live_pages"] = len(linkgraph.registry())
+    resp = jsonify(data)
+    resp.headers["X-Robots-Tag"] = "noindex, nofollow"
+    resp.headers["Cache-Control"] = "private, no-store"
+    return resp
+
+
 @bp.get("/llms.txt")
 def llms_txt():
     """A plain-text guide to the site for AI assistants (the llms.txt convention):

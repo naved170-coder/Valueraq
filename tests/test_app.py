@@ -1749,6 +1749,79 @@ Body text for the test page. It links to the [methodology](/methodology/).
         self.assertIn('"image": "%s/static/og/valueraq-default.png"' % SITE, html.replace('":"', '": "'))
 
 
+class SearchConsole(Base):
+    """Automatic Google Search Console connection, with Google replaced by a stand-in."""
+    def key(self):
+        from cryptography.hazmat.primitives import serialization
+        from cryptography.hazmat.primitives.asymmetric import rsa
+        pem = rsa.generate_private_key(public_exponent=65537, key_size=2048).private_bytes(
+            serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8, serialization.NoEncryption()).decode()
+        return json.dumps(dict(client_email="seo@valueraq.iam.gserviceaccount.com", private_key=pem))
+
+    def google(self, sites, calls):
+        def http(method, url, body=None, headers=None):
+            calls.append((method, url))
+            if url.endswith("/token"):
+                assert b"jwt-bearer" in body
+                return {"access_token": "tok"}
+            if url.endswith("/sites"):
+                return {"siteEntry": sites}
+            if url.endswith("/sitemaps"):
+                return {"sitemap": []}
+            if "/sitemaps/" in url and method == "PUT":
+                return {}
+            dim = json.loads(body)["dimensions"][0]
+            return {"rows": {"date": [{"keys": ["2031-04-01"], "clicks": 3, "impressions": 100, "ctr": 0.03, "position": 12.0},
+                                      {"keys": ["2031-04-02"], "clicks": 5, "impressions": 300, "ctr": 0.016, "position": 8.0}],
+                             "query": [{"keys": ["website valuation"], "clicks": 6, "impressions": 250, "ctr": 0.02, "position": 9.4}],
+                             "page": [{"keys": [SITE + "/guides/website-valuation/"], "clicks": 8, "impressions": 400,
+                                       "ctr": 0.02, "position": 9.0}]}[dim]}
+        return http
+
+    def test_fetch_stores_figures_and_submits_sitemap(self):
+        from app import gsc
+        self.app.config["GSC_SERVICE_ACCOUNT_JSON"] = self.key()
+        calls = []
+        with self.app.app_context():
+            st = gsc.run(http=self.google([{"siteUrl": "sc-domain:valueraq.com", "permissionLevel": "siteFullUser"}], calls))
+            self.assertTrue(st["ok"], st)
+            self.assertEqual(st["site"], "sc-domain:valueraq.com")
+            self.assertIn("submitted", st["note"])
+            self.assertTrue(any(m == "PUT" and "sitemap.xml" in u for m, u in calls))
+            s = gsc.summary()
+            self.assertEqual((s["last"]["clicks"], s["last"]["impressions"]), (8, 400))
+            self.assertEqual(s["last"]["position"], 9.0)                      # weighted by impressions
+            self.assertEqual(s["pages"][0]["key"], "/guides/website-valuation/")
+            gsc.run(http=self.google([{"siteUrl": "sc-domain:valueraq.com", "permissionLevel": "siteFullUser"}], calls))
+            self.assertEqual(gsc.summary()["last"]["clicks"], 8)              # a second fetch does not double count
+
+    def test_key_not_added_to_property_gives_plain_instruction(self):
+        from app import gsc
+        self.app.config["GSC_SERVICE_ACCOUNT_JSON"] = self.key()
+        with self.app.app_context():
+            st = gsc.run(http=self.google([{"siteUrl": "https://other.example/", "permissionLevel": "siteOwner"}], []))
+            self.assertFalse(st["ok"])
+            self.assertIn("Users and permissions", st["error"])
+            self.assertIn("seo@valueraq.iam.gserviceaccount.com", st["error"])
+            self.app.config["GSC_SERVICE_ACCOUNT_JSON"] = "not a key"
+            self.assertIn("could not be read", gsc.run()["error"])
+
+    def test_admin_page_and_secret_feed(self):
+        self.signup("admin@example.com")
+        page = self.client.get("/admin/seo/search-performance/").get_data(as_text=True)
+        self.assertIn("Not connected yet", page)
+        self.assertIn("GSC_SERVICE_ACCOUNT_JSON", page)
+        self.assertEqual(self.client.get("/seo-feed/anything.json").status_code, 404)          # no token set: no feed
+        self.app.config["SEO_FEED_TOKEN"] = "t" * 32
+        self.assertEqual(self.client.get("/seo-feed/wrong.json").status_code, 404)
+        r = self.app.test_client().get("/seo-feed/%s.json" % ("t" * 32))
+        self.assertEqual(r.status_code, 200)
+        self.assertIn("noindex", r.headers["X-Robots-Tag"])
+        self.assertIn("queued", r.json)
+        self.assertFalse(r.json["connected"])
+        self.assertNotIn("seo-feed", self.client.get("/robots.txt").get_data(as_text=True))
+
+
 class StaticAssets(Base):
     def test_referenced_assets_exist(self):
         for p in ("/static/css/site.css", "/static/js/v.js", "/static/js/calc.js", "/static/brand/favicon.svg",

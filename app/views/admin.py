@@ -5,7 +5,7 @@ import json
 
 from flask import Blueprint, Response, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, marketplace as M, redirects, seoauto
+from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, gsc, marketplace as M, redirects, seoauto
 from ..seo import log_change
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -19,9 +19,16 @@ def _seo_banner():
     """Every admin page shows a banner when a daily SEO run was missed, and a count of pages awaiting approval."""
     try:
         return dict(seo_alert=seoauto.alert(), seo_pending=len(seoauto.pending()), seo_tz=seoauto.config()["tz_name"],
-                    seo_owner=seoauto.owner_items())
+                    seo_owner=seoauto.owner_items(), gsc_problem=_gsc_problem())
     except Exception:
-        return dict(seo_alert=None, seo_pending=0, seo_tz="", seo_owner=None)
+        return dict(seo_alert=None, seo_pending=0, seo_tz="", seo_owner=None, gsc_problem=None)
+
+
+def _gsc_problem():
+    if not gsc.configured():
+        return None
+    st = gsc.status()
+    return st["error"] if st and not st.get("ok") and st.get("error") else None
 
 
 def _who():
@@ -245,7 +252,21 @@ def search_performance():
                      "ORDER BY clicks DESC LIMIT 200")
     queries = db.query("SELECT engine, query, SUM(clicks) clicks, SUM(impressions) impressions, AVG(position) position "
                        "FROM search_performance WHERE query IS NOT NULL GROUP BY engine, query ORDER BY clicks DESC LIMIT 200")
-    return render_template("admin/search_performance.html", pages=pages, queries=queries, section="search")
+    return render_template("admin/search_performance.html", pages=pages, queries=queries, section="search",
+                           g_on=gsc.configured(), g_email=gsc.service_email(), g=gsc.summary())
+
+
+@bp.post("/seo/search-performance/fetch/")
+@auth.admin_required
+def search_performance_fetch():
+    if not gsc.configured():
+        flash("Not connected yet. Follow the steps on this page first.", "error")
+    else:
+        st = gsc.run()
+        activity.record("admin_gsc_fetch", target="ok" if st["ok"] else "failed")
+        flash("Search Console figures updated. " + (st.get("note") or "") if st["ok"] else "Google said: " + st["error"],
+              "ok" if st["ok"] else "error")
+    return redirect(url_for("admin.search_performance"))
 
 
 # ---------------------------------------------------------------- listing moderation

@@ -1,6 +1,53 @@
 {% extends "admin/_layout.html" %}
 {% block admin %}
 <h1>Search performance</h1>
+<h2 class="mt">Google Search Console: automatic connection</h2>
+{% set st = g.status %}
+{% if not g_on %}
+<div class="alert mt">
+  <p><strong>Not connected yet.</strong> One-time setup, about 15 minutes. After that the website collects the figures itself every day.</p>
+  <ol>
+    <li>Open <strong>console.cloud.google.com</strong> with the same Google account you use for Search Console. Create a project named VALUERAQ.</li>
+    <li>In the search box at the top type <strong>Google Search Console API</strong>, open it and press <strong>Enable</strong>.</li>
+    <li>Open the menu → <strong>IAM &amp; Admin → Service Accounts → Create service account</strong>. Name it valueraq-seo and press Done. No roles are needed.</li>
+    <li>Tap the new account → <strong>Keys → Add key → Create new key → JSON</strong>. A file downloads. Keep it private.</li>
+    <li>Copy the account's email address (it ends with gserviceaccount.com). In <strong>Search Console → Settings → Users and permissions → Add user</strong>, paste it and choose <strong>Full</strong>.</li>
+    <li>In <strong>Render → valueraq → Environment → Add environment variable</strong>, name it <strong>GSC_SERVICE_ACCOUNT_JSON</strong> and paste the whole contents of the downloaded file as the value. Save. The site restarts by itself.</li>
+  </ol>
+  <p>Never send the key file by chat, email or photo. It goes only into Render.</p>
+</div>
+{% else %}
+<div class="panel mt">
+  <div class="row"><h3>{% if st and st.ok %}<span class="tag good">Connected</span>{% elif st %}<span class="tag ai">Problem</span>{% else %}<span class="tag">Waiting for the first fetch</span>{% endif %}</h3>
+    <form method="post" action="/admin/seo/search-performance/fetch/"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="btn small" type="submit">Fetch now</button></form></div>
+  {% if st and not st.ok %}<p><strong>Google said:</strong> {{ st.error }}</p>{% endif %}
+  <p class="meta-line">{% if g_email %}<span>Key: {{ g_email }}</span>{% endif %}{% if st and st.site %}<span>Property: {{ st.site }}</span>{% endif %}{% if st and st.last_ok_at %}<span>Last updated {{ st.last_ok_at|datetime_utc }} UTC</span>{% endif %}</p>
+  {% if st and st.note %}<p class="hint">{{ st.note }}</p>{% endif %}
+  <p class="hint">Fetched automatically once a day. Google's figures arrive two to three days late.</p>
+</div>
+{% if g.last.days %}
+<div class="table-wrap mt"><table>
+  <thead><tr><th></th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg. position</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Last 28 days</th><td class="r">{{ g.last.clicks|num }}</td><td class="r">{{ g.last.impressions|num }}</td><td class="r">{{ g.last.ctr if g.last.ctr is not none else '—' }}%</td><td class="r">{{ g.last.position or '—' }}</td></tr>
+    {% if g.previous.days %}<tr><th scope="row">28 days before that</th><td class="r">{{ g.previous.clicks|num }}</td><td class="r">{{ g.previous.impressions|num }}</td><td class="r">{{ g.previous.ctr if g.previous.ctr is not none else '—' }}%</td><td class="r">{{ g.previous.position or '—' }}</td></tr>{% endif %}
+  </tbody>
+</table></div>
+<p class="hint">{{ g.pages_with_impressions }} page{{ '' if g.pages_with_impressions == 1 else 's' }} appeared in Google search in the last 28 days.</p>
+<h3 class="mt">Searches that showed your site (last 28 days)</h3>
+<div class="table-wrap"><table><thead><tr><th>Search</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">Avg. position</th></tr></thead><tbody>
+{% for r in g.queries[:50] %}<tr><td>{{ r.key }}</td><td class="r">{{ r.clicks|num }}</td><td class="r">{{ r.impressions|num }}</td><td class="r">{{ r.position }}</td></tr>{% else %}<tr><td colspan="4">Google has not reported any searches yet. On a new site this takes a few weeks.</td></tr>{% endfor %}
+</tbody></table></div>
+<h3 class="mt">Pages shown in Google (last 28 days)</h3>
+<div class="table-wrap"><table><thead><tr><th>Page</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">Avg. position</th></tr></thead><tbody>
+{% for r in g.pages[:50] %}<tr><td class="mono">{% if r.key.startswith('/') %}<a href="{{ r.key }}" target="_blank" rel="noopener">{{ r.key }}</a>{% else %}{{ r.key }}{% endif %}</td><td class="r">{{ r.clicks|num }}</td><td class="r">{{ r.impressions|num }}</td><td class="r">{{ r.position }}</td></tr>{% else %}<tr><td colspan="4">No pages reported yet.</td></tr>{% endfor %}
+</tbody></table></div>
+{% elif st and st.ok %}
+<p class="alert mt">Connected, but Google has no figures for this site yet. That is normal for a new site; they appear once Google starts showing your pages.</p>
+{% endif %}
+{% endif %}
+
+<h2 class="mt">Import a file by hand</h2>
 <p class="muted">Import exports from Google Search Console (Performance → Pages or Queries → Export CSV) and Bing Webmaster Tools. Verification meta tags are set with the GOOGLE_SITE_VERIFICATION and BING_SITE_VERIFICATION settings.</p>
 <form method="post" enctype="multipart/form-data" class="panel mt">
   <input type="hidden" name="csrf" value="{{ csrf_token() }}">

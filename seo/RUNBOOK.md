@@ -50,6 +50,12 @@ On the 1st (Pakistan date), write only the first two missing pages of the day (t
 4. If fewer than 30 unwritten days remain in `seo/calendar.json`, add new days in the same format. Run the duplicate check
    in section 3 on every new topic against existing pages and against the rest of the calendar before adding it.
 
+### Search figures
+
+If your instructions include a "search feed" address, fetch it with WebFetch before writing (never write the address or
+its token into any file). When it has data, use `queries` to choose which secondary keywords to work into today's pages:
+prefer real searches the site already appears for. If it cannot be read, carry on without it.
+
 ## 3. Before writing each page: duplicate check
 
 List `content/guides/` and `content/glossary/`. If an existing page answers the same search question, do not

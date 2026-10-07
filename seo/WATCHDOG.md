@@ -29,6 +29,13 @@ If `seo/watch/<today>.json` exists, stop: today's check is done.
 7. **Calendar supply.** Count the days in `seo/calendar.json` whose pages are not all written.
 8. **Approvals.** Count pages with `hold: yes` (you cannot see whether the owner has decided them; just report the count of held files).
 
+9. **Search figures.** If your instructions include a "search feed" address, fetch it with WebFetch. It returns JSON from
+   Google Search Console: `status`, `last` and `previous` (28-day totals of clicks, impressions, CTR, position), `daily`,
+   `queries`, `pages`, plus `waiting_for_approval`, `queued` and `live_pages`. Never write the address or its token into
+   any file. If `connected` is false, the owner has not finished the Google setup: say so once a week, on Monday, in
+   `needs_owner`, pointing him to Admin, Search performance. If `status.ok` is false, put Google's message in `needs_owner`.
+   If the fetch is refused or fails, record "Search figures: could not be read in this run" and carry on.
+
 ## 3. Repair what you safely can
 
 You may change only `content/guides/`, `content/glossary/`, `app/static/img/articles/`, and files under `seo/`.
@@ -52,8 +59,14 @@ Describe each in one plain sentence a non-technical person can act on, and add w
 
 Add a `weekly` object to today's file: a one-sentence `summary` and `lines` (plain sentences) covering: pages published
 in the last 7 days (count, split long/reference), pages held and still waiting, days with a missed run, repairs made,
-broken links found, unwritten days left in the calendar, and the three topics coming next. Do not invent traffic,
-ranking or indexing numbers: there is no Search Console connection, so say that those figures need the owner's monthly export.
+broken links found, unwritten days left in the calendar, and the three topics coming next.
+
+From the search feed, when it has data, add: clicks and impressions for the last 28 days against the 28 days before;
+how many pages appeared in Google; the five searches with the most impressions; searches where the site sits at
+position 8 to 20 with real impressions (the best targets for a new or improved page); and pages with many impressions
+but a click rate under 1% (their titles need work). Then act on it: move up to three matching topics to the front of
+`seo/calendar.json`, or add them with the duplicate check, and list what you moved. Use only numbers that are in the
+feed. If the feed has no data yet, say that Google has not reported figures yet and give no numbers.
 
 ## 5. Write the result and push
 
