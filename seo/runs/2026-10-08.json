@@ -1,0 +1,59 @@
+{
+ "summary": "The automatic run started at 7:50 pm but did not publish anything, so Friday's four pages were written in the chat instead. None needs approval.",
+ "model": "claude-opus-5-5 (in the chat)",
+ "items": [
+  {
+   "path": "/guides/how-to-value-a-business-with-no-profit/",
+   "action": "new",
+   "type": "Question answered",
+   "score": 8.8,
+   "duplicate": "pass (closest: /guides/business-valuation-formula/)",
+   "images": "1 featured"
+  },
+  {
+   "path": "/glossary/comparable-sales/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.7,
+   "duplicate": "pass (closest: /guides/website-valuation-methods/)",
+   "images": "1 featured"
+  },
+  {
+   "path": "/guides/financial-due-diligence-checklist/",
+   "action": "new",
+   "type": "Article",
+   "score": 9.0,
+   "duplicate": "pass (closest: /guides/digital-business-due-diligence/)",
+   "images": "1 featured, 1 chart"
+  },
+  {
+   "path": "/glossary/fair-market-value/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.7,
+   "duplicate": "pass (closest: /glossary/comparable-sales/)",
+   "images": "1 featured"
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "External sources opened: 4"
+ ],
+ "notes": [
+  "The scheduled run reported success but pushed nothing; the runbook now requires every run to file a report even when it stops, so the reason will show here next time."
+ ]
+}

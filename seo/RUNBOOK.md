@@ -13,6 +13,13 @@ during a run; decide, and write what you decided in the day's report.
   or anything about commission. If one of those looks wrong, add a line to `notes` in the report.
 - US English, US dollars, written for a US reader first. Plain words. Short paragraphs.
 
+## Always leave a trace
+
+Whatever happens after the stop checks in section 1, the run must end by pushing `seo/runs/<run date>.json`.
+If you stop early (a gate fails, a page cannot be finished, research is blocked, anything), push only that report file with
+`"status": "failed"`, a plain-English `"summary"` saying what stopped you, the `tasks` you did finish, and nothing else.
+A silent run is the one outcome that is never acceptable: the owner and the morning self-check rely on this file.
+
 ## 1. Start
 
 ```

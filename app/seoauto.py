@@ -376,7 +376,7 @@ def task_grid(month):
                 else:
                     st = "missed" if planned else ""
             elif not planned:
-                st = ""
+                st = "ahead" if by_day.get(d) and source == "run" and key not in ("refresh", "live_check") else ""
             elif d > today or (d == today and not late):
                 st = "scheduled"
             else:

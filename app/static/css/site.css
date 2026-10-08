@@ -484,3 +484,4 @@ button.linklike { background: none; border: 0; padding: 0; font: inherit; color:
 .task-grid tbody th, .task-grid thead th:first-child { text-align: left; min-width: 11.5rem; max-width: 11.5rem; white-space: normal; font-weight: 500; position: sticky; left: 0; background: var(--surface); z-index: 1; border-right: 1px solid var(--rule); }
 .task-grid .today { background: var(--accent-soft); }
 .month-list { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.tick.ahead { color: var(--muted); }
