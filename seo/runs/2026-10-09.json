@@ -1,0 +1,14 @@
+{
+  "summary": "Four pages were written and scheduled for 12 am to 6 pm tomorrow (Pakistan time); none needs approval, and the Shopify guide was skipped as a duplicate.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-verify-website-revenue/", "action": "new", "type": "Question answered", "score": 8.7, "duplicate": "pass (closest: /guides/financial-due-diligence-checklist/, /guides/digital-business-due-diligence/)", "images": "1 featured", "keywords": ["verify website revenue"], "note": ""},
+    {"path": "/glossary/asking-price/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/fair-market-value/)", "images": "1 featured", "keywords": ["asking price"], "note": ""},
+    {"path": "/guides/shopify-store-valuation/", "action": "skipped", "type": "Article", "duplicate": "overlaps /guides/ecommerce-valuation/", "note": "Existing ecommerce guide already covers stock, channel reliance and a worked example, and no verified Shopify source was available."},
+    {"path": "/glossary/net-profit/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/sde/, /glossary/gross-margin/)", "images": "1 featured", "keywords": ["net profit"], "note": ""},
+    {"path": "/guides/how-to-verify-website-traffic/", "action": "new", "type": "Question answered", "score": 8.6, "duplicate": "pass (closest: /guides/how-to-verify-website-revenue/, /guides/digital-business-due-diligence/)", "images": "1 featured", "keywords": ["verify website traffic"], "note": ""}
+  ],
+  "tasks": ["duplicate_check", "research", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 116 passed", "SEO audit: 0 critical, 0 warnings", "Content rules check: 0 problems", "Internal links: 0 broken", "External sources: only sources already verified in seo/sources.json were cited", "Live check: not possible in this run"],
+  "notes": ["Web fetching and search were refused in this run, so pages use only the verified source library and worked arithmetic.", "The search figures feed could not be read.", "Release times: 19:00Z today, then 01:00Z, 07:00Z and 13:00Z tomorrow."]
+}
