@@ -1,0 +1,21 @@
+{
+  "status": "needs_owner",
+  "summary": "The website is healthy, but no new pages are scheduled after 6 pm Pakistan time today, and this morning's check could not write the missing ones.",
+  "checks": [
+    "Last night's run: report filed (4 pages: Friday's pages were pushed in the chat session)",
+    "Queue: 3 of 4 pages for the next 36 hours are scheduled; the last release is 12:00Z today (6 pm Pakistan), nothing is scheduled after that (the 19:00Z, 01:00Z, 07:00Z and 13:00Z slots are empty)",
+    "Tests: 116 passed",
+    "Content rules check: 0 problems",
+    "SEO audit: 104 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy is live, no error log lines since yesterday morning",
+    "Live pages: could not check (web fetch refused in this run; Render request logs show no recorded visits yet)",
+    "Task data: last night's report matches the repository (4 pages and their images are present, release times set)",
+    "Calendar supply: 27 days still have unwritten pages, so no new days are needed",
+    "Approvals: 0 pages on hold",
+    "Search figures: could not be read in this run"
+  ],
+  "fixed": [],
+  "needs_owner": [
+    "No pages are scheduled after 6 pm Pakistan time today. This morning's check could not write the four missing pages because it cannot open web sources to research them. Tonight's 8 pm run should write them (its release slots start at 12 am tomorrow); if Admin shows no report for tonight, please start the daily run from the Claude chat."
+  ]
+}
