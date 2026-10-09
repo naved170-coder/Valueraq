@@ -42,6 +42,7 @@ You may change only `content/guides/`, `content/glossary/`, `app/static/img/arti
 Never change `app/` code, `content/pages/`, prices, fees or tests.
 
 - **Last night's run is missing, or the queue has gaps:** do the daily run now, following `seo/RUNBOOK.md` in full
+  (if web research is refused, use its section "When web research is not available"; do not give up)
   (it will record today's report, and tonight's scheduled run will then stop by itself). Record this under `fixed`.
 - **A broken internal link, a missing image file, a meta title or description out of range, a banned phrase, a wrong figure
   compared with `app/valuation.py`:** fix it in the page, set `updated` to today, re-run the gates.

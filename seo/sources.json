@@ -1,0 +1,146 @@
+{
+ "note": "Sources opened and checked by hand. Quotes are exact. Runs may cite these when they cannot open web pages themselves. Add a source here only after opening it.",
+ "sources": [
+  {
+   "id": "sba-sell",
+   "title": "U.S. Small Business Administration, Close or sell your business",
+   "url": "https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business",
+   "verified": "2026-10-05",
+   "quotes": [
+    "Use business valuation to set a monetary value.",
+    "[Income approach] Looks at projected revenue and accounts for potential risks.",
+    "[Market approach] Compares your business to other similar businesses that have recently sold.",
+    "[Assets approach] Subtracts total business liabilities from the total value of all assets.",
+    "Accurately value all property and real estate tied to your small business. This can include intangible assets like brand presence, intellectual property, customer information, and projection of future revenue."
+   ],
+   "facts": [
+    "Recommends an attorney review the sales agreement."
+   ]
+  },
+  {
+   "id": "sba-buy",
+   "title": "U.S. Small Business Administration, Buy an existing business or franchise",
+   "url": "https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise",
+   "verified": "2026-10-08",
+   "quotes": [
+    "thorough, objective investigation",
+    "Consider hiring an attorney and an accountant."
+   ],
+   "facts": [
+    "Lists financial statements and tax returns among documents to evaluate.",
+    "Says to ask about contracts, leases, existing cash flow and inventory.",
+    "Names a letter of intent, confidentiality agreement, sales agreement and purchase price adjustment as documents professionals can help with."
+   ]
+  },
+  {
+   "id": "cfi-multiples",
+   "title": "Corporate Finance Institute, Multiples analysis",
+   "url": "https://corporatefinanceinstitute.com/resources/valuation/multiples-analysis",
+   "verified": "2026-10-05",
+   "quotes": [
+    "utilizes different financial metrics from comparable companies to value a target company",
+    "make quick computations to assess a company's value",
+    "It only considers the company's position for a certain time period"
+   ],
+   "facts": [
+    "Lists oversimplification and comparability problems (different accounting methods) as disadvantages."
+   ]
+  },
+  {
+   "id": "cfi-ev",
+   "title": "Corporate Finance Institute, Enterprise Value (EV)",
+   "url": "https://corporatefinanceinstitute.com/resources/capital_markets/what-is-enterprise-value-ev",
+   "verified": "2026-10-06",
+   "quotes": [
+    "Enterprise Value (EV) is the measure of a company's total value."
+   ],
+   "facts": [
+    "EV = market capitalization + market value of debt - cash and equivalents."
+   ]
+  },
+  {
+   "id": "cfi-ev-revenue",
+   "title": "Corporate Finance Institute, Enterprise Value to Revenue Multiple",
+   "url": "https://corporatefinanceinstitute.com/resources/valuation/ev-to-revenue-multiple",
+   "verified": "2026-10-06",
+   "quotes": [
+    "ignores profitability and cash flow generation",
+    "does not take into account the company's capital structure"
+   ],
+   "facts": [
+    "Used when a company has no positive EBITDA or net income."
+   ]
+  },
+  {
+   "id": "cfi-run-rate",
+   "title": "Corporate Finance Institute, Revenue Run Rate",
+   "url": "https://corporatefinanceinstitute.com/resources/accounting/revenue-run-rate/",
+   "verified": "2026-10-06",
+   "quotes": [
+    "takes a company's current revenue in a certain period (a week, month, quarter, etc.) and converts it to an annual figure"
+   ],
+   "facts": [
+    "Risks listed: assumes conditions stay unchanged, seasonality, one-off events."
+   ]
+  },
+  {
+   "id": "cfi-dcf",
+   "title": "Corporate Finance Institute, DCF Formula",
+   "url": "https://corporatefinanceinstitute.com/resources/valuation/dcf-formula-guide/",
+   "verified": "2026-10-06",
+   "quotes": [
+    "used to value investments by discounting the estimated future cash flows"
+   ],
+   "facts": [
+    "Discount rate is typically the weighted average cost of capital."
+   ]
+  },
+  {
+   "id": "cfi-ttm",
+   "title": "Corporate Finance Institute, Trailing Twelve Months (TTM)",
+   "url": "https://corporatefinanceinstitute.com/resources/valuation/railing-twelve-months-ttm-definition",
+   "verified": "2026-10-06",
+   "quotes": [],
+   "facts": [
+    "TTM = latest fiscal year + current year to date - prior-year same period. Also called LTM."
+   ]
+  },
+  {
+   "id": "stripe-saas",
+   "title": "Stripe, Essential SaaS metrics",
+   "url": "https://stripe.com/resources/more/essential-saas-metrics",
+   "verified": "2026-10-06",
+   "quotes": [
+    "The total amount of money a company can expect to receive from its existing customers each month.",
+    "The percentage of total customers who discontinue using a product or service during a given period.",
+    "The percentage of revenue that is retained from existing customers over a given period of time."
+   ],
+   "facts": [
+    "Defines MRR, ARR, churn and net revenue retention as quoted. Does not define the Rule of 40."
+   ]
+  },
+  {
+   "id": "bizbuysell-addbacks",
+   "title": "BizBuySell Learning Center, Add-Backs for Seller's Discretionary Earnings",
+   "url": "https://www.bizbuysell.com/learning-center/article/add-backs-sde/",
+   "verified": "2026-10-06",
+   "quotes": [
+    "Add-backs are expenses added back to a company's bottom-line profits when determining Seller's Discretionary Earnings (SDE) or EBITDA.",
+    "some add-backs can unrealistically overvalue the company"
+   ],
+   "facts": [
+    "Categories: discretionary personal, discretionary operating, non-operating, non-recurring, depreciation and amortization."
+   ]
+  },
+  {
+   "id": "irs-p561",
+   "title": "Internal Revenue Service, Publication 561",
+   "url": "https://www.irs.gov/publications/p561",
+   "verified": "2026-10-08",
+   "quotes": [
+    "FMV is the price that property would sell for on the open market."
+   ],
+   "facts": []
+  }
+ ]
+}

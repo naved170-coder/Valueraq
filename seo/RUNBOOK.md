@@ -80,6 +80,16 @@ write the page. Record it in the report as `"action": "skipped"` with the overla
 - Describe VALUERAQ accurately: six free valuation tools, three calculators, free listings, a marketplace with messaging.
   Check `content/pages/fees.md` and `content/pages/how-it-works.md` before stating anything it offers. No guarantees of results.
 
+### When web research is not available
+
+Scheduled runs are sometimes refused by WebSearch and WebFetch. That is not a reason to stop. Then:
+
+- Cite only sources listed in `seo/sources.json`, and quote only the exact `quotes` given there (paraphrase `facts`).
+- Every number must come from those sources, from `app/valuation.py`, or from your own worked arithmetic.
+- Prefer topics in the calendar that these sources and the methodology can support well. If a topic needs a source you
+  do not have, skip it this run, take the next calendar topic, and say which one you skipped in `notes`.
+- If you do manage to open a new source, add it to `seo/sources.json` with its exact quotes.
+
 ## 5. Write
 
 Article (`content/guides/<slug>.md`), 1,500 to 2,500 words. Front matter:
