@@ -1,0 +1,88 @@
+{
+ "summary": "Catch-up run: four pages were written and scheduled for 12 am to 6 pm tomorrow (Pakistan time); none needs approval, and the Shopify guide was skipped again as a duplicate.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/glossary/gross-profit/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/gross-margin/, /glossary/net-profit/)",
+   "images": "1 featured",
+   "keywords": [
+    "gross profit"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/how-to-sell-a-saas-business/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.7,
+   "duplicate": "pass (closest: /guides/how-to-sell-a-website/, /guides/selling-digital-businesses/)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "sell saas business",
+    "sell your saas"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/cost-of-goods-sold/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/gross-margin/)",
+   "images": "1 featured",
+   "keywords": [
+    "cost of goods sold"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/how-to-transfer-a-website-to-a-new-owner/",
+   "action": "new",
+   "type": "Question answered",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/how-to-sell-a-website/)",
+   "images": "1 featured",
+   "keywords": [
+    "transfer website ownership"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/shopify-store-valuation/",
+   "action": "skipped",
+   "type": "Article",
+   "duplicate": "overlaps /guides/ecommerce-valuation/",
+   "note": "Still overlaps the existing ecommerce guide and no verified Shopify source is available."
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 116 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "Internal links: 0 broken",
+  "External sources: only sources already verified in seo/sources.json were cited",
+  "Live check: not possible in this run"
+ ],
+ "notes": [
+  "Written by the morning self-check as a catch-up because the 12 am to 6 pm slots after today 6 pm were empty.",
+  "Web fetching was refused, so pages use only the verified source library and worked arithmetic.",
+  "The search figures feed could not be read.",
+  "Release times: 19:00Z today, then 01:00Z, 07:00Z and 13:00Z tomorrow."
+ ]
+}
