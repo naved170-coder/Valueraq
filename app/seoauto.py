@@ -281,7 +281,7 @@ TASKS = [
     ("editorial_review", "Editorial review scored", "run"),
     ("gates", "Tests, SEO audit and content rules passed", "run"),
     ("scheduled", "Release times set (one page every 6 hours)", "run"),
-    ("live_check", "Earlier pages and images checked on the live site", "run"),
+    ("live_check", "Pages and images checked on the live site", "site"),
     ("link_check", "Broken-link check", "run"),
     ("report", "Daily report filed", "run"),
     ("published", "Pages published on the website", "site"),
@@ -326,6 +326,7 @@ def task_grid(month):
     except ValueError:
         start = None
     pinged = {r["path"] for r in db.query("SELECT path FROM indexnow_pings")}
+    checked_ok = {r["path"] for r in db.query("SELECT path FROM live_checks WHERE ok=1")}
     late = now.hour >= c["run_hour"] + c["grace_hours"]
     # Pages grouped by the date they go live (owner's time zone), for the two "site" rows.
     by_day = {}
@@ -350,7 +351,7 @@ def task_grid(month):
                 except ValueError:
                     pass
                 if w:
-                    st = "missed" if w.get("status") == "needs_owner" else "done"
+                    st = "warn" if w.get("status") == "needs_owner" else "done"
                 elif wstart is None or d < wstart:
                     st = ""
                 elif d > today or (d == today and now.hour < 12):
@@ -361,7 +362,8 @@ def task_grid(month):
                 # Shown on the date the pages go live, not the date they were written.
                 docs = by_day.get(d, [])
                 if docs:
-                    ok = (lambda x: content.is_live(x)) if key == "published" else (lambda x: x.path in pinged)
+                    ok = {"published": lambda x: content.is_live(x), "bing": lambda x: x.path in pinged,
+                          "live_check": lambda x: x.path in checked_ok}[key]
                     st = "done" if all(ok(x) for x in docs) else "scheduled" if d >= today else "missed"
                 elif start is not None and d > start and d > today:
                     st = "scheduled"          # the run on the evening before fills this date
@@ -518,6 +520,44 @@ def indexnow_tick(post=None):
     return todo
 
 
+# ---------------------------------------------------------------- live check of released pages
+def _get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "VALUERAQ-live-check/1.0"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        return r.status, r.read(400_000).decode("utf-8", "replace")
+
+
+def live_check_tick(get=None, max_age_days=7):
+    """Open each page released in the last week (and its featured image) on the public site, once it is live.
+    Pages that pass are not checked again; failures are retried on the next tick."""
+    get = get or _get
+    site = current_app.config["SITE_URL"]
+    done = {r["path"] for r in db.query("SELECT path FROM live_checks WHERE ok=1")}
+    now = content._now()
+    checked = []
+    for kind in KINDS:
+        for d in content.all_docs(kind):
+            ts = d.publish_ts
+            if ts is None or ts > now or now - ts > max_age_days * 86400 or d.path in done or not content.is_live(d):
+                continue
+            detail, ok = "", False
+            try:
+                status, html = get(f"{site}{d.path}?lc={int(now)}")
+                ok = status == 200 and "<h1" in html and "Preview only" not in html
+                detail = f"page {status}"
+                if ok and d.image:
+                    istatus, _ = get(site + d.image)
+                    ok = istatus == 200
+                    detail += f", image {istatus}"
+            except Exception as e:
+                detail = f"could not open: {e}"[:200]
+            db.execute("INSERT INTO live_checks(path, checked_at, ok, detail) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE "
+                       "SET checked_at=excluded.checked_at, ok=excluded.ok, detail=excluded.detail",
+                       (d.path, db.now(), int(ok), detail))
+            checked.append((d.path, ok))
+    return checked
+
+
 # ---------------------------------------------------------------- background checks
 def start_scheduler(app):
     if app.config.get("TESTING") or app.extensions.get("seo_scheduler"):
@@ -539,6 +579,8 @@ def start_scheduler(app):
                         conn.execute("DELETE FROM seo_alerts WHERE day LIKE 'indexnow:%' AND day != ?", (slot,))
                         conn.commit()
                         indexnow_tick()
+                        if not app.config.get("TESTING"):
+                            live_check_tick()
             except Exception as e:
                 app.logger.error("seo scheduler error: %s", e)
             time.sleep(600)

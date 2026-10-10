@@ -197,7 +197,7 @@ Write `seo/runs/<run date>.json`:
      "duplicate": "pass (closest: /guides/x/)", "images": "1 featured, 2 charts",
      "keywords": ["primary", "secondary"], "note": ""}
   ],
-  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "live_check", "link_check", "report"],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
   "checks": ["Tests: 111 passed", "SEO audit: 0 critical, 0 warnings", "Internal links: 0 broken", "External links: 9 opened, 0 broken", "Live check of yesterday's pages: 4 of 4 load, images load"],
   "notes": ["Anything the owner should know or do, in plain words. Empty list if nothing."]
 }
@@ -207,15 +207,12 @@ Write `seo/runs/<run date>.json`:
 
 `tasks` drives the Admin → Task data checklist (green tick = done). List a key only if you really did that task in this run:
 `duplicate_check`, `research`, `article`, `reference_pages`, `images`, `editorial_review`, `gates`, `scheduled`,
-`live_check`, `link_check`, `report`, and `refresh` (1st of the month only). A key you leave out shows as a red cross.
+`link_check`, `report`, and `refresh` (1st of the month only). A key you leave out shows as a red cross.
 
-## 10. Check yesterday's pages on the live site
+## 10. Live check
 
-For each page in the previous report whose release time has passed and that is not held, confirm it answers on the
-live site. Try WebFetch on `https://www.valueraq.com<path>`; if fetching is refused, use the Render tools to look for that
-path with status 200 in the request logs (service `srv-dav6fknpn0mc73aclre0`, workspace `tea-d8cutaurnols739us400`).
-Record the result in `checks`. If you have no way to check, write "Live check: not possible in this run" and leave
-`live_check` out of `tasks`; the morning self-check repeats it. If a page really does not load, say so in `notes`.
+The website opens each released page and its image by itself and ticks "Pages and images checked on the live site" in
+Task data. You do not need to fetch pages. If a page you wrote earlier shows as failed there, fix it in this run.
 
 ## 11. Push
 

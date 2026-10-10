@@ -1729,7 +1729,7 @@ Body text for the test page. It links to the [methodology](/methodology/).
             with self.app.app_context():
                 g = self.seoauto.task_grid("2031-04")
                 row = next(r for r in g["rows"] if r["key"] == "selfcheck")["cells"]
-                self.assertEqual([row[d - 1]["state"] for d in (27, 28, 29, 30)], ["", "missed", "done", "missed"])
+                self.assertEqual([row[d - 1]["state"] for d in (27, 28, 29, 30)], ["", "missed", "done", "warn"])
                 with mock.patch("app.mailer.send") as send:
                     self.assertTrue(self.seoauto.send_owner_items_once())
                     self.assertFalse(self.seoauto.send_owner_items_once())
@@ -1740,6 +1740,29 @@ Body text for the test page. It links to the [methodology](/methodology/).
                              "Week ending April 29, 2031", "28 pages this week."):
                 self.assertIn(expected, page)
             self.assertIn("could not fix by itself", self.client.get("/admin/").get_data(as_text=True))
+
+    def test_live_check_opens_released_pages_once(self):
+        self.write("zz-test-timed", "publish_at: 2031-05-01T19:00Z\nimage: /static/og/valueraq-default.png")
+        self.content._now = lambda: self.content.parse_when("2031-05-02T00:00Z")
+        calls = []
+        def get(url):
+            calls.append(url)
+            return (200, "<html><h1>Hi</h1></html>")
+        with self.app.app_context():
+            out = self.seoauto.live_check_tick(get=get)
+            self.assertIn(("/guides/zz-test-timed/", True), out)
+            self.assertTrue(any(u.endswith("/static/og/valueraq-default.png") for u in calls))
+            self.assertEqual([p for p, _ in self.seoauto.live_check_tick(get=get)], [])     # passed pages are not re-checked
+            g = self.seoauto.task_grid("2031-05")
+            row = next(r for r in g["rows"] if r["key"] == "live_check")["cells"]
+            self.assertEqual(row[1]["state"], "done")                                          # 2 May in Pakistan time
+
+    def test_live_check_records_failure_and_retries(self):
+        self.write("zz-test-timed", "publish_at: 2031-05-01T19:00Z")
+        self.content._now = lambda: self.content.parse_when("2031-05-02T00:00Z")
+        with self.app.app_context():
+            self.assertEqual(self.seoauto.live_check_tick(get=lambda u: (404, "")), [("/guides/zz-test-timed/", False)])
+            self.assertEqual(self.seoauto.live_check_tick(get=lambda u: (200, "<h1>x</h1>")), [("/guides/zz-test-timed/", True)])
 
     def test_featured_image_on_article(self):
         self.write("zz-test-img", "image: /static/og/valueraq-default.png\nimage_alt: A test chart")

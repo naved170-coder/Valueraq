@@ -320,6 +320,13 @@ CREATE TABLE IF NOT EXISTS indexnow_pings (      -- pages already announced to B
     status TEXT
 );
 
+CREATE TABLE IF NOT EXISTS live_checks (         -- the website opening its own new pages and images after release
+    path TEXT PRIMARY KEY,
+    checked_at INTEGER NOT NULL,
+    ok INTEGER NOT NULL,
+    detail TEXT
+);
+
 CREATE TABLE IF NOT EXISTS gsc_rows (            -- figures fetched from Google Search Console
     kind TEXT NOT NULL,                          -- day | query | page | status
     key TEXT NOT NULL,

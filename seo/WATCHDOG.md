@@ -16,14 +16,15 @@ If `seo/watch/<today>.json` exists, stop: today's check is done.
 ## 2. Check, in this order
 
 1. **Last night's run.** Is there a `seo/runs/<yesterday>.json` (Pakistan dates)? Skip this check if yesterday is before `start`.
-2. **The queue.** List pages under `content/guides/` and `content/glossary/` whose `publish_at` is in the next 36 hours.
-   There should be one for each remaining release slot (19:00Z, 01:00Z, 07:00Z, 13:00Z).
+2. **The queue.** Pages for today's remaining release slots, up to 13:00Z (6 pm Pakistan time), must already exist.
+   Slots from 19:00Z tonight onward are written by tonight's 7:50 pm run, so an empty queue after 13:00Z is normal in the
+   morning and is NOT a gap. Never write tonight's pages yourself unless last night's report is missing.
 3. **Code health.** `python manage.py seo-check` (0 problems), `python -m unittest tests.test_app` (all pass),
    `python manage.py audit` (0 critical, 0 warnings).
 4. **Deploy.** With the Render tools: the newest deploy is `live`, and there are no `error`-level log lines since the last check.
-5. **Pages that should be live.** For each page whose `publish_at` passed in the last 36 hours and that has no `hold: yes`:
-   confirm it answers. Try WebFetch on `https://www.valueraq.com<path>`; if fetching is refused, look in the Render request
-   logs for that path with status 200. If neither tool is available, record "could not check" and do not treat it as a failure.
+5. **Pages that should be live.** The website opens each newly released page and its image itself and records the
+   result; the Task data row "Pages and images checked on the live site" shows it. You do not need to fetch pages. If the
+   search feed is readable, you may compare; otherwise skip this check.
 6. **Task data honesty.** Compare the `tasks` list in last night's report with what is really in the repository
    (pages written, images present, release times set). A task ticked but not done is a problem.
 7. **Calendar supply.** Count the days in `seo/calendar.json` whose pages are not all written.

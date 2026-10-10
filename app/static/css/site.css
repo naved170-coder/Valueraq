@@ -485,3 +485,4 @@ button.linklike { background: none; border: 0; padding: 0; font: inherit; color:
 .task-grid .today { background: var(--accent-soft); }
 .month-list { list-style: none; padding: 0; display: grid; gap: .5rem; }
 .tick.ahead { color: var(--muted); }
+.tick.warn { color: #d97706; }

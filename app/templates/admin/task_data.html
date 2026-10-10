@@ -2,17 +2,17 @@
 {% block admin %}
 <h1>Task data: {{ grid.name }}</h1>
 <p class="lede">The daily SEO checklist, one column for each date. Slide the table sideways to see the whole month.</p>
-<p class="task-legend"><span><b class="tick scheduled">✓</b> Scheduled</span><span><b class="tick done">✓</b> Done</span><span><b class="tick missed">✗</b> Missed</span><span><b class="tick ahead">–</b> Done in advance</span><span class="muted">Empty: not due that day</span></p>
+<p class="task-legend"><span><b class="tick scheduled">✓</b> Scheduled</span><span><b class="tick done">✓</b> Done</span><span><b class="tick missed">✗</b> Missed</span><span><b class="tick ahead">–</b> Done in advance</span><span><b class="tick warn">!</b> Done, but needs your attention</span><span class="muted">Empty: not due that day</span></p>
 <p class="meta-line"><span>{{ grid.counts.done }} done</span><span>{{ grid.counts.scheduled }} scheduled</span><span>{{ grid.counts.missed }} missed</span></p>
 <div class="table-wrap task-grid"><table>
   <thead><tr><th scope="col">Task</th>{% for d in grid.days %}<th scope="col"{% if d.isoformat() == grid.today %} class="today"{% endif %}>{% if grid.rows[0].cells[loop.index0].has_report %}<a href="/admin/seo-reports/{{ d.isoformat() }}/">{{ d.day }}</a>{% else %}{{ d.day }}{% endif %}</th>{% endfor %}</tr></thead>
   <tbody>
   {% for r in grid.rows %}
-  <tr><th scope="row">{{ r.label }}</th>{% for c in r.cells %}<td{% if c.date == grid.today %} class="today"{% endif %}>{% if c.state %}<b class="tick {{ c.state }}" title="{{ 'Written in advance' if c.state == 'ahead' else c.state|capitalize }}, {{ c.date|human_date }}" aria-label="{{ 'Done in advance' if c.state == 'ahead' else c.state|capitalize }}">{{ '✗' if c.state == 'missed' else '–' if c.state == 'ahead' else '✓' }}</b>{% endif %}</td>{% endfor %}</tr>
+  <tr><th scope="row">{{ r.label }}</th>{% for c in r.cells %}<td{% if c.date == grid.today %} class="today"{% endif %}>{% if c.state %}<b class="tick {{ c.state }}" title="{{ 'Written in advance' if c.state == 'ahead' else 'Done, needs your attention' if c.state == 'warn' else c.state|capitalize }}, {{ c.date|human_date }}" aria-label="{{ 'Done in advance' if c.state == 'ahead' else c.state|capitalize }}">{{ '✗' if c.state == 'missed' else '–' if c.state == 'ahead' else '!' if c.state == 'warn' else '✓' }}</b>{% endif %}</td>{% endfor %}</tr>
   {% endfor %}
   </tbody>
 </table></div>
-<p class="hint">The writing tasks are ticked on the date the work was done. "Pages published" and "announced to Bing" are ticked on the date the pages go live: orange until the last page of that date is out, then green. A date with no writing ticks means no run was needed that day because its pages were written earlier. Tap a date that has a report to see that day's pages, links and keywords.</p>
+<p class="hint">The writing tasks are ticked on the date the work was done. "Pages published", "checked on the live site" and "announced to Bing" are done by the website itself and ticked on the date the pages go live: orange until the last page of that date is out, then green. A date with no writing ticks means no run was needed that day because its pages were written earlier. Tap a date that has a report to see that day's pages, links and keywords.</p>
 <h2 class="mt">Months</h2>
 <ul class="month-list">
 {% for m, name in months %}
