@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "summary": "No pages were written today: this run was not allowed to execute the site's own scripts (seo-check, tests, audit, image tool), so the required gates could not be run and nothing was published.",
+  "model": "claude-sonnet-5-5",
+  "items": [],
+  "tasks": [],
+  "checks": [],
+  "notes": [
+    "The run environment blocked running python code from the repository, which the three gates and the image tool need. The search feed could not be read either. Please check the scheduled task's permission setting (automatic approval) and re-run."
+  ]
+}
