@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "summary": "Everything is in order: last night's run is filed, today's pages are queued, and all checks pass.",
+  "checks": [
+    "Last night's run: report filed (4 pages)",
+    "Queue: 4 of 4 slots filled (last release 13:00Z today)",
+    "Tests: 118 passed",
+    "Content rules check: 0 problems",
+    "SEO audit: 112 URLs, 108 indexable, 0 critical, 0 warnings",
+    "Deploy: newest deploy is live, no error log lines since the last check",
+    "Live pages: left to the website's own live check; not fetched in this run",
+    "Task data: last night's report matches the repository (pages, images and release times present)",
+    "Calendar supply: 25 days still have unwritten pages, so no new days are needed",
+    "Approvals: 0 pages on hold",
+    "Search figures: could not be read in this run"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
