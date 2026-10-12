@@ -1,0 +1,80 @@
+{
+ "summary": "Catch-up run: last night's run had failed, so four pages were written and scheduled for the next free release slots; none needs approval.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/glossary/cash-flow/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/net-profit/, /glossary/discounted-cash-flow/)",
+   "images": "1 featured",
+   "keywords": [
+    "cash flow"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/how-to-buy-a-website/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/buying-digital-businesses/, /guides/how-to-buy-a-saas-business/)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "buy websites",
+    "websites for sale",
+    "website business for sale"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/working-capital/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/cash-flow/, /glossary/net-profit/)",
+   "images": "1 featured",
+   "keywords": [
+    "working capital"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/how-escrow-works-for-website-sales/",
+   "action": "new",
+   "type": "Question answered",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/escrow/, /guides/how-to-transfer-a-website-to-a-new-owner/)",
+   "images": "1 featured",
+   "keywords": [
+    "escrow for website sale"
+   ],
+   "note": ""
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 118 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "Internal links: 0 broken",
+  "External sources: only sources already verified in seo/sources.json were cited",
+  "Live check: not possible in this run"
+ ],
+ "notes": [
+  "Web research was not used; every source cited comes from the verified list in seo/sources.json, and every number comes from the VALUERAQ default assumptions or worked arithmetic.",
+  "Release times: the four pages use the next free slots (07:00Z and 13:00Z today, 19:00Z today, 01:00Z tomorrow UTC), so tomorrow's 07:00Z and 13:00Z slots are empty until the next nightly run fills later ones."
+ ]
+}

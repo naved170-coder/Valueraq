@@ -1,0 +1,34 @@
+{
+ "status": "fixed",
+ "summary": "Last night's run had failed and written nothing, so this check did the catch-up run: four pages written and scheduled; all gates pass.",
+ "checks": [
+  "Last night's run: report says failed (no pages written); repaired with a catch-up run",
+  "Queue: 4 new pages queued (07:00Z and 19:00Z today, 13:00Z today, 01:00Z tomorrow); tomorrow's 07:00Z and 13:00Z slots stay empty until the next nightly run",
+  "Tests: 118 passed",
+  "Content rules check: 0 problems",
+  "SEO audit: 114 URLs, 110 indexable, 0 critical, 0 warnings",
+  "Deploy: newest deploy is live",
+  "Live pages: left to the website's own live check; not fetched in this run",
+  "Task data: last night's report listed no tasks, so nothing was ticked wrongly",
+  "Calendar supply: 24 days still have unwritten pages, so no new days are needed",
+  "Approvals: 0 pages on hold",
+  "Search figures: could not be read in this run"
+ ],
+ "fixed": [
+  "Wrote the four pages that last night's failed run missed (cash flow, working capital, how to buy a website, how escrow works for website sales) and filed today's report"
+ ],
+ "needs_owner": [],
+ "weekly": {
+  "summary": "Last week 23 pages were scheduled to go live (5 long guides, 18 reference pages), with two nights lost to failed or missing runs that were caught up.",
+  "lines": [
+   "Pages released in the last 7 days: 23 (5 long guides, 18 reference pages).",
+   "Pages held and still waiting for approval: 0.",
+   "Days with a missed run: 2 (October 7 left no report; October 11 failed because the run could not execute the site's scripts).",
+   "Repairs made: one catch-up run today, four pages.",
+   "Broken links found: 0.",
+   "Unwritten days left in the calendar: 24, so no new days are needed yet.",
+   "Next three topics: What Is Goodwill?, How to Value an Amazon FBA Business, What Is Book Value?",
+   "Search figures: could not be read in this run, so no Google numbers and no topic changes this week."
+  ]
+ }
+}
