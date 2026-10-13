@@ -1,0 +1,80 @@
+{
+ "summary": "Catch-up run: the 07:00Z and 13:00Z slots for today were empty, so four pages were written and scheduled for the next free slots; none needs approval.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/guides/shopify-store-valuation/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/ecommerce-valuation/, /guides/revenue-vs-profit-multiples/)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "shopify store valuation",
+    "ecommerce business valuation"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/goodwill/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/fair-market-value/, /glossary/asset-sale/)",
+   "images": "1 featured",
+   "keywords": [
+    "goodwill"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/amazon-fba-business-valuation/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/ecommerce-valuation/, /guides/shopify-store-valuation/)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "amazon fba business valuation",
+    "sell amazon fba business"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/book-value/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/fair-market-value/, /glossary/goodwill/)",
+   "images": "1 featured",
+   "keywords": [
+    "book value"
+   ],
+   "note": ""
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 118 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "Internal links: 0 broken",
+  "External sources: only sources already verified in seo/sources.json were cited",
+  "Live check: not possible in this run"
+ ],
+ "notes": [
+  "Web research was not used; every source cited comes from the verified list in seo/sources.json, and every number comes from the VALUERAQ default assumptions or worked arithmetic.",
+  "Release times: the four pages use the next free slots (07:00Z and 13:00Z and 19:00Z today, 01:00Z tomorrow); tomorrow's 07:00Z and 13:00Z slots are empty until the next nightly run fills later ones."
+ ]
+}
