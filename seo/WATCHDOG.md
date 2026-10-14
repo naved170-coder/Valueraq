@@ -57,7 +57,28 @@ Anything else is for the owner: a failed deploy, failing tests you did not cause
 a page that will not load after its release time, something that looks wrong in the Admin screens.
 Describe each in one plain sentence a non-technical person can act on, and add what you would suggest.
 
-## 4. On Mondays: the weekly report
+## 4. On Mondays and Thursdays: the ranking review
+
+The website records Search Console history and creates an action plan by fixed rules. It writes a summary to its log
+once a day. Read it with the Render tools: `list_logs` on service `srv-dav6fknpn0mc73aclre0`, workspace
+`tea-d8cutaurnols739us400`, text `rankings-snapshot`, last 2 days; take the newest line and parse the JSON after
+`rankings-snapshot `. It holds totals, position groups, gains, losses, new searches, open `actions` (id, kind, query,
+page, priority, fix) and recent `achievements`. Positions in it are Search Console averages, not live ranks: say so.
+
+1. Carry out up to five open actions you can do safely within your limits (section 3), highest priority first:
+   - `low_ctr`: rewrite that page's `meta_title` and `meta_description` to answer the search directly (keep the limits).
+   - `striking` / `page_two`: add a short section answering the search on that page, and links to it from two related pages.
+   - `cannibal`: link the other pages to the main page with the search phrase; make each page's focus distinct.
+   - `mapping`: add the link the action describes.
+   - `new_page`: add the topic to `seo/calendar.json` after the duplicate check.
+   Leave `decline` actions alone until their recheck date unless the cause is clear.
+2. Append one entry per action you carried out to `seo/actions_done.json`: `{"id": "<id>", "date": "<today>", "note": "<what you changed>"}`.
+   The website then marks it done and rechecks the metric 14 days later.
+3. Add a `review` object to today's file: `summary` (one sentence) and `lines` (plain sentences): totals against the previous
+   period, position groups, top gains and losses, new achievements, actions carried out, actions left for the owner.
+   Use only numbers from the snapshot. If the snapshot says `ready: false` or cannot be read, say Google has no figures yet.
+
+## 4b. On Mondays: the weekly report
 
 Add a `weekly` object to today's file: a one-sentence `summary` and `lines` (plain sentences) covering: pages published
 in the last 7 days (count, split long/reference), pages held and still waiting, days with a missed run, repairs made,

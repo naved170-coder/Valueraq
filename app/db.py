@@ -327,6 +327,51 @@ CREATE TABLE IF NOT EXISTS live_checks (         -- the website opening its own 
     detail TEXT
 );
 
+CREATE TABLE IF NOT EXISTS gsc_daily (           -- permanent ranking history from Search Console, one row per day and combination
+    date TEXT NOT NULL,
+    query TEXT NOT NULL,
+    page TEXT NOT NULL,
+    country TEXT NOT NULL,
+    device TEXT NOT NULL,
+    clicks REAL NOT NULL DEFAULT 0,
+    impressions REAL NOT NULL DEFAULT 0,
+    ctr REAL NOT NULL DEFAULT 0,
+    position REAL NOT NULL DEFAULT 0,
+    PRIMARY KEY (date, query, page, country, device)
+);
+CREATE INDEX IF NOT EXISTS idx_gsc_daily_query ON gsc_daily(query);
+
+CREATE TABLE IF NOT EXISTS rank_events (          -- achievements and notable changes, recorded once each
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    found_on TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    query TEXT NOT NULL DEFAULT '',
+    page TEXT NOT NULL DEFAULT '',
+    before TEXT,
+    after TEXT,
+    period TEXT,
+    UNIQUE (kind, query, page)
+);
+
+CREATE TABLE IF NOT EXISTS rank_actions (         -- diagnosis log and action plan, generated from the data by fixed rules
+    id TEXT PRIMARY KEY,
+    found_on TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    query TEXT NOT NULL DEFAULT '',
+    page TEXT NOT NULL DEFAULT '',
+    evidence TEXT NOT NULL,
+    explanation TEXT NOT NULL,
+    confidence TEXT NOT NULL,
+    priority TEXT NOT NULL,
+    fix TEXT NOT NULL,
+    metric TEXT NOT NULL,
+    baseline TEXT,
+    recheck_on TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'open',          -- open | done | dismissed
+    status_note TEXT,
+    result TEXT
+);
+
 CREATE TABLE IF NOT EXISTS gsc_rows (            -- figures fetched from Google Search Console
     kind TEXT NOT NULL,                          -- day | query | page | status
     key TEXT NOT NULL,

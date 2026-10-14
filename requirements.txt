@@ -2,3 +2,4 @@ Flask>=3.0,<4
 Markdown>=3.5,<4
 gunicorn>=22,<24
 cryptography>=42
+openpyxl>=3.1

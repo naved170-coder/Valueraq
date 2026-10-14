@@ -1793,7 +1793,11 @@ class SearchConsole(Base):
                 return {"sitemap": []}
             if "/sitemaps/" in url and method == "PUT":
                 return {}
-            dim = json.loads(body)["dimensions"][0]
+            dims = json.loads(body)["dimensions"]
+            if len(dims) == 5:
+                return {"rows": [{"keys": ["2031-04-02", "website valuation", SITE + "/guides/website-valuation/", "usa", "MOBILE"],
+                                  "clicks": 2, "impressions": 40, "ctr": 0.05, "position": 7.0}]}
+            dim = dims[0]
             return {"rows": {"date": [{"keys": ["2031-04-01"], "clicks": 3, "impressions": 100, "ctr": 0.03, "position": 12.0},
                                       {"keys": ["2031-04-02"], "clicks": 5, "impressions": 300, "ctr": 0.016, "position": 8.0}],
                              "query": [{"keys": ["website valuation"], "clicks": 6, "impressions": 250, "ctr": 0.02, "position": 9.4}],
@@ -1817,6 +1821,9 @@ class SearchConsole(Base):
             self.assertEqual(s["pages"][0]["key"], "/guides/website-valuation/")
             gsc.run(http=self.google([{"siteUrl": "sc-domain:valueraq.com", "permissionLevel": "siteFullUser"}], calls))
             self.assertEqual(gsc.summary()["last"]["clicks"], 8)              # a second fetch does not double count
+            rows = db.query("SELECT * FROM gsc_daily")
+            self.assertEqual(len(rows), 1)                                    # history is upserted, not duplicated
+            self.assertEqual((rows[0]["page"], rows[0]["country"], rows[0]["device"]), ("/guides/website-valuation/", "USA", "MOBILE"))
 
     def test_key_not_added_to_property_gives_plain_instruction(self):
         from app import gsc
@@ -1843,6 +1850,91 @@ class SearchConsole(Base):
         self.assertIn("queued", r.json)
         self.assertFalse(r.json["connected"])
         self.assertNotIn("seo-feed", self.client.get("/robots.txt").get_data(as_text=True))
+
+
+class Rankings(Base):
+    """Ranking intelligence from Search Console history."""
+    def seed(self):
+        import datetime as dt
+        end = dt.date(2031, 4, 28)
+        rows = []
+        for i in range(14):
+            day = (end - dt.timedelta(days=i)).isoformat()
+            recent = i < 7
+            # improving search: position 15 -> 8; low-CTR search on page one; two pages sharing one search
+            rows.append((day, "website valuation", "/guides/website-valuation/", "USA", "DESKTOP", 0, 10, 0, 8.0 if recent else 15.0))
+            rows.append((day, "saas multiples", "/guides/saas-valuation/", "USA", "DESKTOP", 0, 20, 0, 6.0))
+            rows.append((day, "sde", "/glossary/sde/", "USA", "MOBILE", 1, 6, 0.16, 12.0))
+            rows.append((day, "sde", "/guides/sde-vs-ebitda/", "USA", "MOBILE", 0, 5, 0, 14.0))
+        with self.app.app_context():
+            conn = db.get_db()
+            conn.executemany("INSERT INTO gsc_daily VALUES (?,?,?,?,?,?,?,?,?)", rows)
+            conn.commit()
+
+    def test_analysis_events_actions_and_followup(self):
+        import datetime as dt
+        from app import rankings
+        self.seed()
+        with self.app.app_context():
+            a = rankings.analysis()
+            self.assertTrue(a["ready"])
+            self.assertEqual(a["t7"]["impressions"], 7 * 41)
+            self.assertEqual(a["groups"]["4-10"], 1)                         # saas multiples at 6
+            self.assertEqual(a["groups"]["11-20"], 2)                        # website valuation averages 11.5 over 28 days; sde 12.9
+            gain = next(m for m in a["gains"] if m["query"] == "website valuation")
+            self.assertEqual((gain["before"], gain["after"], gain["change"]), (15.0, 8.0, 7.0))
+            self.assertEqual(a["low_ctr"][0]["query"], "saas multiples")
+            self.assertEqual(a["cannibal"][0]["query"], "sde")
+            self.assertEqual(rankings.record_events(today=dt.date(2031, 4, 29)) > 0, True)
+            kinds = {(e["kind"], e["query"]) for e in rankings.events()}
+            self.assertIn(("top10", "website valuation"), kinds)
+            self.assertNotIn(("top20", "website valuation"), kinds)                     # it was already in the top 20
+            self.assertEqual(rankings.record_events(today=dt.date(2031, 4, 30)), 0)          # recorded once only
+            n = rankings.generate_actions(today=dt.date(2031, 4, 29))
+            kinds = {r["kind"] for r in rankings.actions()}
+            self.assertTrue({"low_ctr", "striking", "cannibal", "page_two"} <= kinds, kinds)
+            self.assertEqual(rankings.generate_actions(today=dt.date(2031, 4, 30)), 0)       # no duplicates
+            act = next(r for r in rankings.actions() if r["kind"] == "low_ctr")
+            self.assertIn("Search Console", act["evidence"])
+            self.assertEqual(act["recheck_on"], "2031-05-13")
+            self.assertEqual(rankings.follow_up(today=dt.date(2031, 5, 1)), 0)              # not due yet
+            self.assertGreater(rankings.follow_up(today=dt.date(2031, 5, 13)), 0)
+            self.assertIn("then", db.query("SELECT result FROM rank_actions WHERE id=?", (act["id"],), one=True)["result"])
+
+    def test_done_file_admin_page_and_export(self):
+        import datetime as dt
+        from app import rankings
+        self.seed()
+        with self.app.app_context():
+            rankings.generate_actions(today=dt.date(2031, 4, 29))
+            aid = rankings.actions()[0]["id"]
+            path = os.path.join(tempfile.mkdtemp(), "done.json")
+            with open(path, "w") as fh:
+                json.dump([{"id": aid, "date": "2031-04-30", "note": "Title rewritten"}, {"id": "../bad"}], fh)
+            with mock.patch.object(rankings, "ACTIONS_DONE_FILE", path):
+                self.assertEqual(rankings.apply_done_file(), 1)
+            self.assertEqual(db.query("SELECT status FROM rank_actions WHERE id=?", (aid,), one=True)["status"], "done")
+        self.signup("admin@example.com")
+        self.app.config["GSC_SERVICE_ACCOUNT_JSON"] = "x"
+        page = self.client.get("/admin/rankings/").get_data(as_text=True)
+        for expected in ("Keyword map", "website valuation", "Action plan", "Title rewritten", "averages"):
+            self.assertIn(expected, page)
+        with self.app.app_context():
+            open_id = rankings.actions("open")[0]["id"]
+        r = self.client.post("/admin/rankings/", data=dict(csrf=self.csrf(), id=open_id, status="dismissed"), follow_redirects=True)
+        self.assertIn("Action updated", r.get_data(as_text=True))
+        x = self.client.get("/admin/rankings/export.xlsx")
+        self.assertEqual(x.status_code, 200)
+        from openpyxl import load_workbook
+        wb = load_workbook(io.BytesIO(x.data))
+        self.assertEqual(wb.sheetnames, ["SEO Dashboard", "Keyword Map", "Movers", "Opportunities", "Cannibalisation",
+                                         "Action Plan", "Achievements", "GSC Performance", "Change Log"])
+        self.assertEqual(wb["GSC Performance"].max_row, 57)
+
+    def test_empty_state(self):
+        self.signup("admin@example.com")
+        self.assertIn("Search Console is not connected", self.client.get("/admin/rankings/").get_data(as_text=True))
+        self.assertEqual(self.client.get("/admin/rankings/export.xlsx").status_code, 200)
 
 
 class StaticAssets(Base):

@@ -137,6 +137,9 @@ def fetch(http=None, today=None):
     queries = query("query", 500)
     pages = query("page", 500)
 
+    detail_days = 90 if not db.query("SELECT 1 FROM gsc_daily LIMIT 1", one=True) else 10
+    detail = _detail_rows(http, q, auth, end - datetime.timedelta(days=detail_days - 1), end)
+
     sitemap_note = ""
     sitemap_url = current_app.config["SITE_URL"] + "/sitemap.xml"
     try:
@@ -163,10 +166,36 @@ def fetch(http=None, today=None):
     conn.executemany("INSERT INTO gsc_rows(kind, key, clicks, impressions, ctr, position) VALUES (?,?,?,?,?,?) "
                      "ON CONFLICT(kind, key) DO UPDATE SET clicks=excluded.clicks, impressions=excluded.impressions, "
                      "ctr=excluded.ctr, position=excluded.position", rows)
+    conn.executemany("INSERT INTO gsc_daily(date, query, page, country, device, clicks, impressions, ctr, position) "
+                     "VALUES (?,?,?,?,?,?,?,?,?) ON CONFLICT(date, query, page, country, device) DO UPDATE SET "
+                     "clicks=excluded.clicks, impressions=excluded.impressions, ctr=excluded.ctr, position=excluded.position",
+                     [(d, qy[:300], _path(pg, site_url)[:300], c, dv, cl, im, ct, po) for d, qy, pg, c, dv, cl, im, ct, po in detail])
     conn.execute("DELETE FROM gsc_rows WHERE kind='day' AND key < ?",
                  ((end - datetime.timedelta(days=KEEP_DAYS)).isoformat(),))
     conn.commit()
     return _save_status(ok=True, site=site, level=level, note=sitemap_note, period=f"{start.isoformat()} to {end.isoformat()}")
+
+
+def _path(url, site_url):
+    return (url[len(site_url):] or "/") if url.startswith(site_url) else url
+
+
+def _detail_rows(http, q, auth, start, end):
+    """Every (date, search, page, country, device) row Google has for the period; kept permanently as ranking history."""
+    out, start_row = [], 0
+    while True:
+        body = json.dumps({"startDate": start.isoformat(), "endDate": end.isoformat(),
+                           "dimensions": ["date", "query", "page", "country", "device"], "rowLimit": 25000,
+                           "startRow": start_row, "dataState": "all"}).encode()
+        rows = http("POST", f"{API}/sites/{q}/searchAnalytics/query", body, auth).get("rows") or []
+        for r in rows:
+            k = r.get("keys") or []
+            if len(k) == 5:
+                out.append((k[0], k[1], k[2], k[3].upper(), k[4].upper(), r.get("clicks", 0), r.get("impressions", 0),
+                            r.get("ctr", 0), r.get("position", 0)))
+        if len(rows) < 25000 or start_row > 200000:
+            return out
+        start_row += 25000
 
 
 def _save_status(ok, error="", **extra):
@@ -192,13 +221,19 @@ def status():
 def run(http=None):
     """Fetch and never raise; the outcome is stored for the admin page."""
     try:
-        return fetch(http=http)
+        st = fetch(http=http)
     except GscError as e:
         current_app.logger.warning("search console: %s", e)
         return _save_status(ok=False, error=str(e))
     except Exception as e:  # never let a scheduler thread die on this
         current_app.logger.error("search console unexpected error: %s", e)
         return _save_status(ok=False, error="Unexpected error; see Admin, Errors.")
+    try:
+        from . import rankings
+        rankings.daily_job()
+    except Exception as e:
+        current_app.logger.error("rankings update error: %s", e)
+    return st
 
 
 def summary(days=28):

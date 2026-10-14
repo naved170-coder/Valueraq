@@ -411,6 +411,7 @@ def watch(date):
     for k in ("checks", "fixed", "needs_owner"):
         out[k] = [str(x) for x in (raw.get(k) or [])]
     out["weekly"] = raw.get("weekly") if isinstance(raw.get("weekly"), dict) else None
+    out["review"] = raw.get("review") if isinstance(raw.get("review"), dict) else None
     return out
 
 
@@ -419,7 +420,7 @@ def watch_list(limit=14):
 
 
 def weekly_list(limit=12):
-    return [w for w in (watch(d) for d in watch_dates()) if w and w["weekly"]][:limit]
+    return [w for w in (watch(d) for d in watch_dates()) if w and (w["weekly"] or w.get("review"))][:limit]
 
 
 def owner_items():

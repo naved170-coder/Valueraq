@@ -1,0 +1,64 @@
+{% extends "admin/_layout.html" %}
+{% macro pos(v) %}{{ v if v is not none else '—' }}{% endmacro %}
+{% block admin %}
+<div class="row"><h1>Rankings</h1><a class="btn quiet" href="/admin/rankings/export.xlsx">Download spreadsheet (opens in Google Sheets)</a></div>
+<p class="lede">How VALUERAQ appears in Google, built from Search Console. Positions are Google's <strong>averages</strong>, weighted by how often each result was shown, not live ranks. Google's figures run two to three days behind.</p>
+<p class="meta-line"><a href="#dash">Dashboard</a><a href="#map">Keyword map</a><a href="#movers">Gains and losses</a><a href="#opps">Opportunities</a><a href="#actions">Action plan</a><a href="#wins">Achievements</a></p>
+{% if not g_on %}<p class="alert mt">Search Console is not connected, so there is nothing to show. Set it up under <a href="/admin/seo/search-performance/">Search performance</a>.</p>
+{% elif not a.ready %}<p class="alert mt">Connected{% if g_status and not g_status.ok %}, but the last fetch failed: {{ g_status.error }}{% endif %}. Google has not reported any searches for the site yet; this page fills in by itself as it does.</p>
+{% else %}
+<h2 id="dash" class="mt">Dashboard <span class="muted h3">data up to {{ a.last|human_date }}</span></h2>
+<div class="table-wrap"><table><thead><tr><th>Period</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg position</th><th class="r">Searches</th><th class="r">Pages</th></tr></thead><tbody>
+{% for label, t in [('Last 3 days', a.t3), ('Previous 3 days', a.p3), ('Last 7 days', a.t7), ('Previous 7 days', a.p7), ('Last 28 days', a.t28), ('Previous 28 days', a.p28)] %}{% if t %}
+<tr><th scope="row">{{ label }}<br><span class="muted">{{ t.start }} to {{ t.end }}</span></th><td class="r">{{ t.clicks }}</td><td class="r">{{ t.impressions }}</td><td class="r">{{ t.ctr }}%</td><td class="r">{{ pos(t.position) }}</td><td class="r">{{ t.queries }}</td><td class="r">{{ t.pages }}</td></tr>{% endif %}{% endfor %}
+</tbody></table></div>
+<h3 class="mt">Searches by average position (last 28 days, {{ a.tracked }} searches)</h3>
+<div class="table-wrap"><table><thead><tr>{% for g in a.groups %}<th class="r">{{ g }}</th>{% endfor %}</tr></thead><tbody><tr>{% for g, n in a.groups.items() %}<td class="r">{{ n }}</td>{% endfor %}</tr></tbody></table></div>
+{% if a.devices %}<p class="hint">Devices: {% for d in a.devices %}{{ d.key|lower }} {{ d.impressions }} impressions{{ ', ' if not loop.last }}{% endfor %}. Top countries: {% for c in a.countries[:5] %}{{ c.key }} {{ c.impressions }}{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
+
+<h2 id="map" class="mt">Keyword map</h2>
+<p class="hint">Each page's main keyword and what Google does with it over the last 28 days.</p>
+<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Target page</th><th>Status</th><th class="r">Avg position</th><th class="r">Impressions</th></tr></thead><tbody>
+{% for k in a.kmap %}<tr><td>{{ k.keyword }}</td><td><a href="{{ k.target }}" target="_blank" rel="noopener">{{ k.target }}</a></td><td>{{ k.status }}{% if k.status == 'another page ranks for it' %}<br><span class="muted">{{ k.ranking_page }}</span>{% endif %}</td><td class="r">{{ pos(k.position) }}</td><td class="r">{{ k.impressions }}</td></tr>{% endfor %}
+</tbody></table></div>
+
+<h2 id="movers" class="mt">Gains and losses (last 7 days against the 7 before)</h2>
+<div class="table-wrap"><table><thead><tr><th>Search</th><th class="r">Before</th><th class="r">Now</th><th class="r">Change</th><th class="r">Impressions</th></tr></thead><tbody>
+{% for m in a.gains + a.losses %}<tr><td>{{ m.query }}</td><td class="r">{{ m.before }}</td><td class="r">{{ m.after }}</td><td class="r">{% if m.change > 0 %}<span class="tick done">▲ {{ m.change }}</span>{% else %}<span class="tick missed">▼ {{ -m.change }}</span>{% endif %}</td><td class="r">{{ m.impressions }}</td></tr>{% else %}<tr><td colspan="5">Not enough history yet: this needs two weeks of data for the same searches.</td></tr>{% endfor %}
+</tbody></table></div>
+{% if a.new %}<p class="hint"><strong>New this week:</strong> {% for n in a.new[:12] %}{{ n.query }} ({{ n.position }}){{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
+{% if a.lost %}<p class="hint"><strong>Not shown this week:</strong> {% for n in a.lost[:12] %}{{ n.query }}{{ ', ' if not loop.last }}{% endfor %}. Missing from Google's report is not proof of a loss; it can mean too few impressions to report.</p>{% endif %}
+
+<h2 id="opps" class="mt">Opportunities</h2>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Search</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg position</th></tr></thead><tbody>
+{% for r in a.low_ctr %}<tr><td>Seen but rarely clicked</td><td>{{ r.query }}</td><td class="r">{{ r.impressions }}</td><td class="r">{{ r.ctr }}%</td><td class="r">{{ r.position }}</td></tr>{% endfor %}
+{% for r in a.near %}<tr><td>{{ 'Page one, not top 3' if r.position <= 10.5 else 'Page two' }}</td><td>{{ r.query }}</td><td class="r">{{ r.impressions }}</td><td class="r">{{ r.ctr }}%</td><td class="r">{{ r.position }}</td></tr>{% endfor %}
+{% for r in a.unmapped[:15] %}<tr><td>No page targets it</td><td>{{ r.query }}</td><td class="r">{{ r.impressions }}</td><td class="r">{{ r.ctr }}%</td><td class="r">{{ r.position }}</td></tr>{% endfor %}
+{% for c in a.cannibal %}<tr><td>Two of our pages compete</td><td>{{ c.query }}<br><span class="muted">{% for p in c.pages %}{{ p.page }} ({{ p.impressions }}){{ ', ' if not loop.last }}{% endfor %}</span></td><td class="r">{{ c.impressions }}</td><td></td><td></td></tr>{% endfor %}
+</tbody></table></div>
+{% endif %}
+
+<h2 id="actions" class="mt">Action plan</h2>
+<p class="hint">Created from the data by fixed rules, each with its evidence and how sure we are of the cause. The twice-weekly self-check carries out the ones it safely can; each is rechecked after {{ 14 }} days and the result recorded.</p>
+{% if not acts %}<p class="muted">No actions yet.</p>{% endif %}
+<div class="stack">
+{% for r in acts %}
+<article class="panel">
+  <div class="row"><h3 class="h3">{{ r.fix }}</h3><span class="tag {{ 'ai' if r.priority in ('critical','high') else '' }}">{{ r.priority }}</span></div>
+  <p class="meta-line"><span>Found {{ r.found_on|human_date }}</span><span>Confidence: {{ r.confidence }}</span><span>Recheck {{ r.recheck_on|human_date }}</span><span>Status: {{ r.status }}</span></p>
+  <p><strong>Evidence:</strong> {{ r.evidence }}</p>
+  <p><strong>Likely explanation:</strong> {{ r.explanation }}</p>
+  <p class="hint">Measure: {{ r.metric }} (was {{ r.baseline }}){% if r.result %}. Follow-up: {{ r.result }}{% endif %}{% if r.status_note %}. {{ r.status_note }}{% endif %}</p>
+  {% if r.status == 'open' %}<div class="row">
+    <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="id" value="{{ r.id }}"><input type="hidden" name="status" value="done"><button class="btn small quiet" type="submit">Mark done</button></form>
+    <form method="post"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><input type="hidden" name="id" value="{{ r.id }}"><input type="hidden" name="status" value="dismissed"><button class="btn small quiet" type="submit">Dismiss</button></form>
+  </div>{% endif %}
+</article>
+{% endfor %}
+</div>
+
+<h2 id="wins" class="mt">Achievements</h2>
+<div class="table-wrap"><table><thead><tr><th>Found</th><th>Achievement</th><th>Search or page</th><th>Before</th><th>After</th></tr></thead><tbody>
+{% for e in evts %}<tr><td>{{ e.found_on|human_date }}</td><td>{{ e.label }}</td><td>{{ e.query or e.page }}</td><td>{{ e.before }}</td><td>{{ e.after }}</td></tr>{% else %}<tr><td colspan="5">None yet. The first ones will be pages shown in Google for the first time.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

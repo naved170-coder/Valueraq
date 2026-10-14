@@ -5,7 +5,7 @@ import json
 
 from flask import Blueprint, Response, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, gsc, marketplace as M, redirects, seoauto
+from .. import activity, analytics, audit, auth, catalog, content, db, linkgraph, gsc, marketplace as M, rankings, redirects, seoauto
 from ..seo import log_change
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -627,3 +627,27 @@ def task_data(month=None):
         abort(404)
     names = [(m, seoauto.task_grid(m)["name"]) for m in months]
     return render_template("admin/task_data.html", grid=grid, months=names, current=months[0], section="taskdata")
+
+
+# ---------------------------------------------------------------- rankings (Search Console history)
+@bp.route("/rankings/", methods=["GET", "POST"])
+@auth.admin_required
+def rankings_view():
+    if request.method == "POST":
+        aid, status = request.form.get("id", ""), request.form.get("status", "")
+        if rankings.set_status(aid, status, f"Marked {status} by {g.user['email']}"):
+            db.get_db().commit()
+            activity.record("admin_rank_action_" + status, target=aid)
+            flash("Action updated.", "ok")
+        else:
+            flash("That action could not be found.", "error")
+        return redirect(url_for("admin.rankings_view") + "#actions")
+    return render_template("admin/rankings.html", a=rankings.analysis(), acts=rankings.actions(), evts=rankings.events(),
+                           g_on=gsc.configured(), g_status=gsc.status(), section="rankings")
+
+
+@bp.get("/rankings/export.xlsx")
+@auth.admin_required
+def rankings_export():
+    return Response(rankings.export_xlsx(), mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    headers={"Content-Disposition": "attachment; filename=valueraq-seo-tracking.xlsx"})

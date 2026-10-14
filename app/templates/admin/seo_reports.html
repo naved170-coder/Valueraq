@@ -28,12 +28,16 @@
 </table></div>
 {% endif %}
 {% if weekly %}
-<h2 class="mt">Weekly reports</h2>
+<h2 class="mt">Weekly and ranking reports</h2>
 <div class="stack">
 {% for w in weekly %}
-  <article class="panel"><h3>Week ending {{ w.date|human_date }}</h3>
+  <article class="panel">
+    {% if w.weekly %}<h3>Week ending {{ w.date|human_date }}</h3>
     {% if w.weekly.summary %}<p>{{ w.weekly.summary }}</p>{% endif %}
-    <ul>{% for line in w.weekly.lines or [] %}<li>{{ line }}</li>{% endfor %}</ul></article>
+    <ul>{% for line in w.weekly.lines or [] %}<li>{{ line }}</li>{% endfor %}</ul>{% endif %}
+    {% if w.review %}<h3>Ranking review, {{ w.date|human_date }}</h3>
+    {% if w.review.summary %}<p>{{ w.review.summary }}</p>{% endif %}
+    <ul>{% for line in w.review.lines or [] %}<li>{{ line }}</li>{% endfor %}</ul>{% endif %}</article>
 {% endfor %}
 </div>
 {% endif %}

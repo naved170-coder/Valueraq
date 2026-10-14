@@ -105,7 +105,7 @@ cluster: <cluster from the calendar>
 order: 60
 page_type: article
 answer: <one or two sentences that answer the search question directly>
-keywords: <primary keyword>, <secondary keywords actually used>
+keywords: <primary keyword first: it becomes the page's target in Admin → Rankings>, <secondary keywords actually used>
 published: <the Pakistan date the page goes live>
 updated: <same>
 publish_at: <release time in UTC, see section 7>
