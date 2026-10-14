@@ -167,7 +167,13 @@ def analysis():
                       key=lambda r: -r["impressions"])
     countries = _by(w28, "country")[:10]
     devices = _by(w28, "device")
-    return dict(ready=True, last=last.isoformat(), t3=totals(w3), p3=totals(p3), t7=totals(w7), p7=totals(p7),
+    since = (last - datetime.timedelta(days=6)).isoformat()
+    ev7 = {k: db.query("SELECT COUNT(*) n FROM rank_events WHERE kind=? AND period >= ?", (k, since), one=True)["n"]
+           for k in ("top3", "top10", "top20")}
+    open_by = {r["priority"]: r["n"] for r in db.query("SELECT priority, COUNT(*) n FROM rank_actions WHERE status='open' GROUP BY priority")}
+    daily_rows = [dict(r) for r in db.query("SELECT date, SUM(clicks) clicks, SUM(impressions) impressions FROM gsc_daily "
+                                             "WHERE date >= ? GROUP BY date ORDER BY date", (window(90)[0],))]
+    return dict(ready=True, last=last.isoformat(), entered=ev7, open_actions=open_by, chart=_chart(daily_rows), t3=totals(w3), p3=totals(p3), t7=totals(w7), p7=totals(p7),
                 t28=totals(w28), p28=totals(p28), groups=groups, tracked=len(q28),
                 gains=[m for m in movers if m["change"] > 0][:15], losses=sorted([m for m in movers if m["change"] < 0],
                                                                                   key=lambda m: m["change"])[:15],
@@ -175,8 +181,28 @@ def analysis():
                 pages_down=sorted([p for p in pages if p["change"] < 0], key=lambda p: p["change"])[:10],
                 low_ctr=low_ctr[:20], near=near[:30], cannibal=cannibal[:20], kmap=kmap, unmapped=unmapped[:30],
                 countries=countries, devices=devices,
-                daily=[dict(r) for r in db.query("SELECT date, SUM(clicks) clicks, SUM(impressions) impressions FROM gsc_daily "
-                                                  "WHERE date >= ? GROUP BY date ORDER BY date", (window(90)[0],))])
+                daily=daily_rows)
+
+
+def _chart(rows, w=720, h=220):
+    """Inline SVG bar chart of daily impressions with clicks marked; no scripts needed."""
+    if not rows:
+        return ""
+    mx = max(r["impressions"] for r in rows) or 1
+    bw = w / len(rows)
+    bars = []
+    for i, r in enumerate(rows):
+        bh = (h - 70) * r["impressions"] / mx
+        x = i * bw
+        bars.append(f'<rect x="{x + 1:.1f}" y="{h - 34 - bh:.1f}" width="{max(bw - 2, 1):.1f}" height="{bh:.1f}" fill="#0d6a54">'
+                    f'<title>{r["date"]}: {int(r["impressions"])} impressions, {int(r["clicks"])} clicks</title></rect>')
+        if r["clicks"]:
+            bars.append(f'<circle cx="{x + bw / 2:.1f}" cy="{h - 42 - bh:.1f}" r="5" fill="#d99a14"/>')
+    return (f'<svg viewBox="0 0 {w} {h}" width="100%" role="img" aria-label="Daily impressions from {rows[0]["date"]} to '
+            f'{rows[-1]["date"]}, highest {int(mx)}">' + "".join(bars) +
+            f'<text x="0" y="{h - 6}" font-size="20" fill="currentColor">{rows[0]["date"]}</text>'
+            f'<text x="{w}" y="{h - 6}" font-size="20" text-anchor="end" fill="currentColor">{rows[-1]["date"]}</text>'
+            f'<text x="0" y="22" font-size="20" fill="currentColor">Highest day: {int(mx)} impressions</text></svg>')
 
 
 def _by(win, col):

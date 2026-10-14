@@ -1920,7 +1920,8 @@ class Rankings(Base):
         self.signup("admin@example.com")
         self.app.config["GSC_SERVICE_ACCOUNT_JSON"] = "x"
         page = self.client.get("/admin/rankings/").get_data(as_text=True)
-        for expected in ("Keyword map", "website valuation", "Action plan", "Title rewritten", "averages"):
+        for expected in ("Keyword map", "website valuation", "Action plan", "Title rewritten", "averages", "This week at a glance",
+                         "Visibility trend", "<svg viewBox", "Pages with the biggest changes"):
             self.assertIn(expected, page)
         with self.app.app_context():
             open_id = rankings.actions("open")[0]["id"]

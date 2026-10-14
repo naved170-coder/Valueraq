@@ -12,6 +12,15 @@
 {% for label, t in [('Last 3 days', a.t3), ('Previous 3 days', a.p3), ('Last 7 days', a.t7), ('Previous 7 days', a.p7), ('Last 28 days', a.t28), ('Previous 28 days', a.p28)] %}{% if t %}
 <tr><th scope="row">{{ label }}<br><span class="muted">{{ t.start }} to {{ t.end }}</span></th><td class="r">{{ t.clicks }}</td><td class="r">{{ t.impressions }}</td><td class="r">{{ t.ctr }}%</td><td class="r">{{ pos(t.position) }}</td><td class="r">{{ t.queries }}</td><td class="r">{{ t.pages }}</td></tr>{% endif %}{% endfor %}
 </tbody></table></div>
+<h3 class="mt">This week at a glance</h3>
+<div class="table-wrap"><table><tbody>
+<tr><th scope="row">Entered the top 3 / top 10 / top 20 (last 7 days)</th><td class="r">{{ a.entered.top3 }} / {{ a.entered.top10 }} / {{ a.entered.top20 }}</td></tr>
+<tr><th scope="row">New searches / searches no longer shown (7 days)</th><td class="r">{{ a.new|length }} / {{ a.lost|length }}</td></tr>
+<tr><th scope="row">Open actions: critical / high / medium / low</th><td class="r"><a href="#actions">{{ a.open_actions.get('critical', 0) }} / {{ a.open_actions.get('high', 0) }} / {{ a.open_actions.get('medium', 0) }} / {{ a.open_actions.get('low', 0) }}</a></td></tr>
+</tbody></table></div>
+<h3 class="mt">Visibility trend (impressions a day; gold dots are days with clicks)</h3>
+<div class="panel">{{ a.chart|safe }}</div>
+<p class="hint">Average position is the impression-weighted average of Google's reported positions: each search's position counts in proportion to how often it was shown.</p>
 <h3 class="mt">Searches by average position (last 28 days, {{ a.tracked }} searches)</h3>
 <div class="table-wrap"><table><thead><tr>{% for g in a.groups %}<th class="r">{{ g }}</th>{% endfor %}</tr></thead><tbody><tr>{% for g, n in a.groups.items() %}<td class="r">{{ n }}</td>{% endfor %}</tr></tbody></table></div>
 {% if a.devices %}<p class="hint">Devices: {% for d in a.devices %}{{ d.key|lower }} {{ d.impressions }} impressions{{ ', ' if not loop.last }}{% endfor %}. Top countries: {% for c in a.countries[:5] %}{{ c.key }} {{ c.impressions }}{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
@@ -28,6 +37,11 @@
 </tbody></table></div>
 {% if a.new %}<p class="hint"><strong>New this week:</strong> {% for n in a.new[:12] %}{{ n.query }} ({{ n.position }}){{ ', ' if not loop.last }}{% endfor %}</p>{% endif %}
 {% if a.lost %}<p class="hint"><strong>Not shown this week:</strong> {% for n in a.lost[:12] %}{{ n.query }}{{ ', ' if not loop.last }}{% endfor %}. Missing from Google's report is not proof of a loss; it can mean too few impressions to report.</p>{% endif %}
+
+<h3 class="mt">Pages with the biggest changes (impressions, last 7 days against the 7 before)</h3>
+<div class="table-wrap"><table><thead><tr><th>Page</th><th class="r">Before</th><th class="r">Now</th><th class="r">Clicks now</th></tr></thead><tbody>
+{% for p in a.pages_up[:5] + a.pages_down[:5] %}<tr><td><a href="{{ p.page }}" target="_blank" rel="noopener">{{ p.page }}</a></td><td class="r">{{ p.impressions_before }}</td><td class="r">{{ p.impressions }} {% if p.change > 0 %}<span class="tick done">▲</span>{% else %}<span class="tick missed">▼</span>{% endif %}</td><td class="r">{{ p.clicks }}</td></tr>{% else %}<tr><td colspan="4">Not enough history yet.</td></tr>{% endfor %}
+</tbody></table></div>
 
 <h2 id="opps" class="mt">Opportunities</h2>
 <div class="table-wrap"><table><thead><tr><th>Type</th><th>Search</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg position</th></tr></thead><tbody>
