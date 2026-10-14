@@ -221,7 +221,7 @@ def cannibalisation(qp):
     for q, rows in by_q.items():
         total = sum(v["impressions"] for _, v in rows)
         strong = [(p, v) for p, v in rows if v["impressions"] >= 5 and total and v["impressions"] / total >= 0.1]
-        if len(strong) >= 2:
+        if len(strong) >= 2 and total >= 20:
             strong.sort(key=lambda pv: -pv[1]["impressions"])
             out.append(dict(query=q, impressions=total,
                             pages=[dict(page=p, impressions=v["impressions"], position=v["position"]) for p, v in strong]))
@@ -315,7 +315,7 @@ def generate_actions(today=None):
             f"Make {c['pages'][0]['page']} the main page for \"{c['query']}\", link to it from the others with that phrase, and focus the others on their own keywords.",
             "Share of impressions on the main page", f"{c['pages'][0]['impressions']} of {c['impressions']}")
     for m in a["losses"]:
-        if m["change"] <= -3:
+        if m["change"] <= -3 and m["before"] <= 30 and m["impressions"] >= 20:   # deeper positions move too much to mean anything
             pg = top_page.get(m["query"], ("", 0))[0]
             add("decline", m["query"], pg, f"Average position moved from {m['before']} to {m['after']} week on week ({m['impressions']} impressions), Search Console.",
                 "The cause is not known from this data; it may be normal movement for a new site.", "low", "medium",
@@ -393,6 +393,9 @@ def set_status(aid, status, note=""):
 
 # ---------------------------------------------------------------- daily job and the snapshot the automatic runs read
 def daily_job():
+    # Tidy actions created under earlier, looser rules (positions beyond 30 move too much to diagnose).
+    db.execute("UPDATE rank_actions SET status='dismissed', status_note='Closed automatically: position too deep to diagnose' "
+               "WHERE status='open' AND kind='decline' AND CAST(baseline AS REAL) > 30")
     events_n = record_events()
     actions_n = generate_actions()
     done_n = apply_done_file()
