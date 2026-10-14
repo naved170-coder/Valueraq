@@ -1701,6 +1701,9 @@ Body text for the test page. It links to the [methodology](/methodology/).
                 self.assertEqual(cell("published", 29), "")            # nothing was due to go live that day
                 self.assertEqual(cell("article", 30), "scheduled")     # today, run not due yet
                 self.assertEqual(cell("refresh", 30), "")              # only due on the 1st
+                self.assertEqual(cell("gsc", 30), "")                  # Search Console not connected in tests
+                self.assertEqual(cell("review", 28), "missed")         # a Monday with no ranking review
+                self.assertEqual(cell("review", 29), "")               # Tuesday: not a review day
                 may = {r["key"]: r["cells"][0]["state"] for r in self.seoauto.task_grid("2031-05")["rows"]}
                 self.assertEqual((may["refresh"], may["published"]), ("scheduled", "scheduled"))
                 self.assertEqual(self.seoauto.task_months()[0], "2031-04")

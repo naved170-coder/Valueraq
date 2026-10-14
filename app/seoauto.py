@@ -288,6 +288,8 @@ TASKS = [
     ("bing", "New pages announced to Bing", "site"),
     ("refresh", "Content refresh (1st of each month)", "run"),
     ("selfcheck", "Morning self-check by Claude", "watch"),
+    ("gsc", "Google Search Console figures saved", "gsc"),
+    ("review", "Ranking review and actions (Mon and Thu)", "review"),
 ]
 
 
@@ -327,6 +329,9 @@ def task_grid(month):
         start = None
     pinged = {r["path"] for r in db.query("SELECT path FROM indexnow_pings")}
     checked_ok = {r["path"] for r in db.query("SELECT path FROM live_checks WHERE ok=1")}
+    fetched = {r["day"]: r["ok"] for r in db.query("SELECT day, ok FROM gsc_fetch_log")}
+    from . import gsc as _gsc
+    gsc_on = _gsc.configured()
     late = now.hour >= c["run_hour"] + c["grace_hours"]
     # Pages grouped by the date they go live (owner's time zone), for the two "site" rows.
     by_day = {}
@@ -343,7 +348,22 @@ def task_grid(month):
             iso = d.isoformat()
             raw = _run_raw(iso)
             planned = start is not None and d >= start and (key != "refresh" or d.day == 1)
-            if source == "watch":
+            if source == "gsc":
+                if not gsc_on or start is None or d < max(start, datetime.date(2026, 10, 14)):
+                    st = ""
+                elif iso in fetched:
+                    st = "done" if fetched[iso] else "missed"
+                else:
+                    st = "scheduled" if d >= today else "missed"
+            elif source == "review":
+                w = watch(iso)
+                if d.weekday() not in (0, 3) or start is None or d < max(start, datetime.date(2026, 10, 15)):
+                    st = ""
+                elif w and w.get("review"):
+                    st = "done"
+                else:
+                    st = "scheduled" if d > today or (d == today and now.hour < 12) else "missed"
+            elif source == "watch":
                 w = watch(iso)
                 wstart = None
                 try:

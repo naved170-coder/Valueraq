@@ -341,6 +341,12 @@ CREATE TABLE IF NOT EXISTS gsc_daily (           -- permanent ranking history fr
 );
 CREATE INDEX IF NOT EXISTS idx_gsc_daily_query ON gsc_daily(query);
 
+CREATE TABLE IF NOT EXISTS gsc_fetch_log (        -- one row per day the website fetched Search Console
+    day TEXT PRIMARY KEY,
+    ok INTEGER NOT NULL,
+    detail TEXT
+);
+
 CREATE TABLE IF NOT EXISTS rank_events (          -- achievements and notable changes, recorded once each
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     found_on TEXT NOT NULL,

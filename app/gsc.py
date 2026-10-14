@@ -229,6 +229,15 @@ def run(http=None):
         current_app.logger.error("search console unexpected error: %s", e)
         return _save_status(ok=False, error="Unexpected error; see Admin, Errors.")
     try:
+        from . import seoauto
+        day = seoauto.local_now().date().isoformat()
+        db.execute("INSERT INTO gsc_fetch_log(day, ok, detail) VALUES (?,?,?) ON CONFLICT(day) DO UPDATE SET "
+                   "ok=MAX(ok, excluded.ok), detail=excluded.detail", (day, 1 if st.get("ok") else 0, st.get("error") or ""))
+    except Exception:
+        pass
+    if not st.get("ok"):
+        return st
+    try:
         from . import rankings
         rankings.daily_job()
     except Exception as e:
