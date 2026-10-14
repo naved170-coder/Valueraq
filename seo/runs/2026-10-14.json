@@ -1,0 +1,78 @@
+{
+ "summary": "Catch-up run by the morning check: today's 07:00Z and 13:00Z slots were empty, so four pages were written and scheduled for the next free slots; none needs approval.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/guides/what-documents-do-buyers-ask-for/",
+   "action": "new",
+   "type": "Question answered",
+   "score": 8.7,
+   "duplicate": "pass (closest: digital-business-due-diligence, financial-due-diligence-checklist)",
+   "images": "1 featured",
+   "keywords": [
+    "documents for due diligence"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/recurring-revenue/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: mrr, arr)",
+   "images": "1 featured",
+   "keywords": [
+    "recurring revenue"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/guides/domain-appraisal-explained/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: website-valuation, website-worth-examples)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "domain appraisal",
+    "how to value a domain name"
+   ],
+   "note": ""
+  },
+  {
+   "path": "/glossary/arpu/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: mrr, ltv)",
+   "images": "1 featured",
+   "keywords": [
+    "average revenue per user"
+   ],
+   "note": ""
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 118 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "Content rules check: 0 problems",
+  "Internal links: 0 broken",
+  "Live check: not possible in this run"
+ ],
+ "notes": [
+  "Web research was not used; sources come from seo/sources.json and numbers from VALUERAQ default assumptions or worked arithmetic.",
+  "Release times: 07:00Z, 13:00Z and 19:00Z today, 01:00Z tomorrow. Tomorrow's 07:00Z and 13:00Z slots stay empty until the next nightly run."
+ ]
+}
