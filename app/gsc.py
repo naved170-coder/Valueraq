@@ -237,6 +237,8 @@ def run(http=None):
         pass
     if not st.get("ok"):
         return st
+    current_app.logger.info("search console: fetched ok (%s), %s; history rows: %s", st.get("site"), st.get("period"),
+                            db.query("SELECT COUNT(*) n FROM gsc_daily", one=True)["n"])
     try:
         from . import rankings
         rankings.daily_job()
@@ -284,8 +286,10 @@ def start_scheduler(app):
                 with app.app_context():
                     if configured():
                         st = status() or {}
-                        if db.now() - (st.get("checked_at") or 0) > 20 * 3600:
-                            slot = "gsc:" + time.strftime("%Y%m%d")
+                        age = db.now() - (st.get("checked_at") or 0)
+                        empty = not db.query("SELECT 1 FROM gsc_daily LIMIT 1", one=True)
+                        if age > 20 * 3600 or (empty and age > 3600):
+                            slot = "gsc:" + time.strftime("%Y%m%d%H")
                             conn = db.get_db()
                             cur = conn.execute("INSERT OR IGNORE INTO seo_alerts(day, sent_at) VALUES (?,?)", (slot, db.now()))
                             conn.commit()
