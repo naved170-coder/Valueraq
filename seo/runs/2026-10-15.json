@@ -1,0 +1,21 @@
+{
+  "summary": "Four pages written and scheduled for Oct 16 Pakistan time (one article, one quick answer, two glossary terms); none needs approval. Web research and the search feed were refused, so only sources already in seo/sources.json were used.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-write-a-business-for-sale-listing/", "action": "new", "type": "Question answered", "score": 8.6,
+     "duplicate": "pass (closest: /guides/how-to-sell-a-website/, /guides/selling-digital-businesses/)", "images": "1 featured",
+     "keywords": ["business for sale listing", "how to write a business listing"], "note": "Release 12:00 am Oct 16 PKT."},
+    {"path": "/glossary/burn-rate/", "action": "new", "type": "Glossary term", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/cash-flow/, /glossary/mrr/)", "images": "1 featured",
+     "keywords": ["burn rate", "net burn"], "note": "Release 6:00 am Oct 16 PKT. Worked arithmetic only, no outside statistics."},
+    {"path": "/guides/how-to-sell-a-shopify-store/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/shopify-store-valuation/, /guides/how-to-sell-a-website/)", "images": "1 featured, 1 chart",
+     "keywords": ["sell shopify store", "shopify business for sale", "ecommerce business for sale"], "note": "Release 12:00 pm Oct 16 PKT. Cites only SBA and BizBuySell pages from sources.json; no Shopify-specific transfer steps were stated because Shopify's help pages could not be opened."},
+    {"path": "/glossary/payback-period/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/profit-multiple/, /glossary/cac/)", "images": "1 featured",
+     "keywords": ["payback period", "cac payback period"], "note": "Release 6:00 pm Oct 16 PKT."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 121 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 3 cited from seo/sources.json (opened and verified earlier), none newly opened", "Live check of yesterday's pages: not done, no web access this run"],
+  "notes": ["WebFetch and WebSearch were refused this run, so the search feed could not be read and no new sources were opened.", "Consider the Shopify article for a later refresh once Shopify's own help pages can be opened."]
+}
