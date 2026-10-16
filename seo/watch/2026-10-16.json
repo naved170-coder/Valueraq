@@ -1,0 +1,19 @@
+{
+ "status": "ok",
+ "summary": "Last night's run is in place, today's pages are scheduled and all checks pass; nothing needs the owner.",
+ "checks": [
+  "Last night's run: report for Oct 15 present, 4 pages",
+  "Queue: today's 01:00Z, 07:00Z and 13:00Z slots are filled; later slots are written by tonight's run",
+  "Tests: 121 passed",
+  "Content rules check: 0 problems",
+  "SEO audit: 0 critical, 0 warnings",
+  "Deploy: not checked in this run (no Render deploy status read)",
+  "Live pages: left to the website's own live check; not fetched in this run",
+  "Task data: last night's tasks match the repository (4 pages, images present, release times set)",
+  "Calendar supply: 21 days with unwritten pages remain, so no new days are needed",
+  "Approvals: 0 pages on hold",
+  "Search figures: could not be read in this run (feed fetch was not permitted)"
+ ],
+ "fixed": [],
+ "needs_owner": []
+}
