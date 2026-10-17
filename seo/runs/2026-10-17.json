@@ -1,0 +1,20 @@
+{
+  "summary": "Wrote 4 pages (1 article, 3 reference pages); none held; the search feed could not be read and three calendar topics were skipped.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/glossary/retention-rate/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/churn/, /glossary/net-revenue-retention/)", "images": "1 featured", "keywords": ["retention rate", "customer retention rate"], "note": ""},
+    {"path": "/guides/how-to-calculate-sde/", "action": "new", "type": "Quick answer", "score": 8.6, "duplicate": "pass (closest: /glossary/sde/, /guides/sde-vs-ebitda/)", "images": "1 featured", "keywords": ["how to calculate sde", "sde formula"], "note": ""},
+    {"path": "/glossary/cohort-analysis/", "action": "new", "type": "Glossary term", "score": 8.5, "duplicate": "pass (closest: /glossary/churn/, /glossary/retention-rate/)", "images": "1 featured", "keywords": ["cohort analysis", "cohort retention"], "note": ""},
+    {"path": "/guides/how-to-value-a-blog/", "action": "new", "type": "Article", "score": 8.6, "duplicate": "pass (closest: /guides/website-valuation/, /guides/website-worth-examples/)", "images": "1 featured, 2 charts", "keywords": ["how to value a blog", "website valuation"], "note": ""},
+    {"path": "/glossary/rule-of-40/", "action": "skipped", "type": "Glossary term", "note": "No verified source in seo/sources.json and web pages could not be opened."},
+    {"path": "/glossary/revenue-churn/", "action": "skipped", "type": "Glossary term", "note": "Overlaps /glossary/churn/, which already covers revenue churn."},
+    {"path": "/guides/flippa-alternatives/", "action": "skipped", "type": "Article", "note": "Needs competitor pages opened on the day; web fetch was unavailable."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 121 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken (seo-check)", "External links: not opened this run (web fetch unavailable); only links from seo/sources.json used"],
+  "notes": [
+    "The search feed could not be read (permission request unanswered), so keywords were chosen without real search data.",
+    "Rule of 40 needs a verified source added to seo/sources.json; Revenue Churn stays skipped as a duplicate of Churn; Flippa Alternatives is a held competitor page that needs live web access and stays in the calendar.",
+    "Worked examples (blog profit, customer cohorts, SDE add-backs) are labelled as illustrations, not market data."
+  ]
+}
