@@ -1,0 +1,116 @@
+{
+  "summary": "Wrote 4 pages (2 glossary terms, 2 quick answers), none held; the search feed could not be read and six calendar topics were skipped again.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/glossary/rpm/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass",
+      "images": "1 featured",
+      "keywords": [
+        "revenue per thousand visits",
+        "rpm"
+      ],
+      "note": "Worked example is labelled an illustration."
+    },
+    {
+      "path": "/glossary/earnings-per-click/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass",
+      "images": "1 featured",
+      "keywords": [
+        "earnings per click",
+        "epc"
+      ],
+      "note": "Worked example is labelled an illustration."
+    },
+    {
+      "path": "/guides/how-to-finance-buying-an-online-business/",
+      "action": "new",
+      "type": "Quick answer",
+      "score": 8.5,
+      "duplicate": "pass",
+      "images": "1 featured",
+      "keywords": [
+        "finance buying online business",
+        "seller financing online business"
+      ],
+      "note": "Cites only the SBA page from seo/sources.json."
+    },
+    {
+      "path": "/guides/what-is-included-when-you-buy-a-website/",
+      "action": "new",
+      "type": "Quick answer",
+      "score": 8.5,
+      "duplicate": "pass",
+      "images": "1 featured",
+      "keywords": [
+        "what is included when buying a website"
+      ],
+      "note": "Cites only the SBA page from seo/sources.json."
+    },
+    {
+      "path": "/glossary/rule-of-40/",
+      "action": "skipped",
+      "type": "",
+      "note": "No verified source and web pages could not be opened."
+    },
+    {
+      "path": "/glossary/revenue-churn/",
+      "action": "skipped",
+      "type": "",
+      "note": "Overlaps /glossary/churn/."
+    },
+    {
+      "path": "/guides/flippa-alternatives/",
+      "action": "skipped",
+      "type": "",
+      "note": "Needs competitor pages opened on the day; web fetch unavailable."
+    },
+    {
+      "path": "/guides/how-to-calculate-arr-from-mrr/",
+      "action": "skipped",
+      "type": "",
+      "note": "Overlaps /glossary/arr/."
+    },
+    {
+      "path": "/guides/ecommerce-valuation-multiples/",
+      "action": "skipped",
+      "type": "",
+      "note": "Overlaps /guides/ecommerce-valuation/."
+    },
+    {
+      "path": "/guides/how-to-sell-an-app/",
+      "action": "skipped",
+      "type": "",
+      "note": "Needs Apple and Google documentation, which could not be opened."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 121 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken (seo-check)",
+    "External links: not opened this run (web fetch unavailable); only the SBA link from seo/sources.json used"
+  ],
+  "notes": [
+    "The search feed could not be read (permission request unanswered), so keywords were chosen without real search data.",
+    "Web research was not available. Six earlier-skipped calendar topics keep reappearing as unwritten; consider replacing them in the next monthly calendar.",
+    "pip install was offline; dependencies were already installed so the gates ran."
+  ]
+}
