@@ -1,0 +1,133 @@
+{
+  "summary": "Wrote 4 glossary terms (revenue churn, affiliate marketing, display advertising, click-through rate), none held; no article this run because the search feed and web research were unavailable and the next article topics were duplicates or lacked sources.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/glossary/revenue-churn/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/churn/, /glossary/rpm/)",
+      "images": "1 featured",
+      "keywords": [
+        "revenue churn",
+        "gross revenue churn",
+        "net revenue churn"
+      ],
+      "note": "Closest existing page /glossary/churn/ covers revenue churn in one line; this page adds gross vs net. Worked example labelled an illustration."
+    },
+    {
+      "path": "/glossary/affiliate-marketing/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/rpm/, /glossary/earnings-per-click/)",
+      "images": "1 featured",
+      "keywords": [
+        "affiliate marketing",
+        "affiliate income"
+      ],
+      "note": "Example labelled an illustration. No specific country's rules stated."
+    },
+    {
+      "path": "/glossary/display-advertising/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/rpm/, /glossary/earnings-per-click/)",
+      "images": "1 featured",
+      "keywords": [
+        "display advertising",
+        "cpm"
+      ],
+      "note": "Example labelled an illustration."
+    },
+    {
+      "path": "/glossary/click-through-rate/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/rpm/, /glossary/earnings-per-click/)",
+      "images": "1 featured",
+      "keywords": [
+        "click-through rate",
+        "ctr"
+      ],
+      "note": "Example labelled an illustration."
+    },
+    {
+      "path": "/glossary/rule-of-40/",
+      "action": "skipped",
+      "type": "-",
+      "score": null,
+      "duplicate": "no opened source defines it",
+      "images": "-",
+      "keywords": [],
+      "note": "no opened source defines it"
+    },
+    {
+      "path": "/guides/flippa-alternatives/",
+      "action": "skipped",
+      "type": "-",
+      "score": null,
+      "duplicate": "needs competitor pages opened on the day",
+      "images": "-",
+      "keywords": [],
+      "note": "needs competitor pages opened on the day"
+    },
+    {
+      "path": "/guides/how-to-calculate-arr-from-mrr/",
+      "action": "skipped",
+      "type": "-",
+      "score": null,
+      "duplicate": "duplicates /glossary/arr/ and /glossary/mrr/",
+      "images": "-",
+      "keywords": [],
+      "note": "duplicates /glossary/arr/ and /glossary/mrr/"
+    },
+    {
+      "path": "/guides/ecommerce-valuation-multiples/",
+      "action": "skipped",
+      "type": "-",
+      "score": null,
+      "duplicate": "duplicates /guides/ecommerce-valuation/",
+      "images": "-",
+      "keywords": [],
+      "note": "duplicates /guides/ecommerce-valuation/"
+    },
+    {
+      "path": "/guides/how-to-sell-an-app/",
+      "action": "skipped",
+      "type": "-",
+      "score": null,
+      "duplicate": "needs Apple and Google documentation, not openable",
+      "images": "-",
+      "keywords": [],
+      "note": "needs Apple and Google documentation, not openable"
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 121 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken (seo-check)",
+    "External links: only the Stripe link from seo/sources.json used; not opened this run"
+  ],
+  "notes": [
+    "The search feed could not be read (permission request unanswered), so keywords were chosen without real search data.",
+    "Web research was not available; only sources in seo/sources.json were cited.",
+    "Skipped calendar topics again: rule-of-40, flippa-alternatives, how-to-calculate-arr-from-mrr, ecommerce-valuation-multiples, how-to-sell-an-app. Consider replacing them in the next monthly calendar.",
+    "pip install failed (offline, gunicorn unavailable); dependencies were already installed so the gates ran."
+  ]
+}
