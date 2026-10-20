@@ -1904,6 +1904,16 @@ class Rankings(Base):
             self.assertGreater(rankings.follow_up(today=dt.date(2031, 5, 13)), 0)
             self.assertIn("then", db.query("SELECT result FROM rank_actions WHERE id=?", (act["id"],), one=True)["result"])
 
+    def test_website_writes_review_on_mondays_and_thursdays(self):
+        import datetime as dt
+        from app import rankings
+        self.seed()
+        with self.app.app_context():
+            self.assertIsNone(rankings.write_review(today=dt.date(2031, 4, 29)))          # a Tuesday
+            self.assertIn("impressions", rankings.write_review(today=dt.date(2031, 5, 1)))  # a Thursday
+            self.assertIsNone(rankings.write_review(today=dt.date(2031, 5, 1)))           # once only
+            self.assertEqual(rankings.reviews()[0]["day"], "2031-05-01")
+
     def test_done_file_admin_page_and_export(self):
         import datetime as dt
         from app import rankings

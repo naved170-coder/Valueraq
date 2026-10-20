@@ -347,6 +347,12 @@ CREATE TABLE IF NOT EXISTS gsc_fetch_log (        -- one row per day the website
     detail TEXT
 );
 
+CREATE TABLE IF NOT EXISTS rank_reviews (         -- Monday and Thursday ranking review written by the website from the data
+    day TEXT PRIMARY KEY,
+    summary TEXT NOT NULL,
+    lines TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS rank_events (          -- achievements and notable changes, recorded once each
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     found_on TEXT NOT NULL,

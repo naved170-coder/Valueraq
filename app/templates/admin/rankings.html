@@ -3,7 +3,7 @@
 {% block admin %}
 <div class="row"><h1>Rankings</h1><a class="btn quiet" href="/admin/rankings/export.xlsx">Download spreadsheet (opens in Google Sheets)</a></div>
 <p class="lede">How VALUERAQ appears in Google, built from Search Console. Positions are Google's <strong>averages</strong>, weighted by how often each result was shown, not live ranks. Google's figures run two to three days behind.</p>
-<p class="meta-line"><a href="#dash">Dashboard</a><a href="#map">Keyword map</a><a href="#movers">Gains and losses</a><a href="#opps">Opportunities</a><a href="#actions">Action plan</a><a href="#wins">Achievements</a></p>
+<p class="meta-line"><a href="#reviews">Reviews</a><a href="#dash">Dashboard</a><a href="#map">Keyword map</a><a href="#movers">Gains and losses</a><a href="#opps">Opportunities</a><a href="#actions">Action plan</a><a href="#wins">Achievements</a></p>
 {% if not g_on %}<p class="alert mt">Search Console is not connected, so there is nothing to show. Set it up under <a href="/admin/seo/search-performance/">Search performance</a>.</p>
 {% elif not a.ready %}<p class="alert mt">Connected{% if g_status and not g_status.ok %}, but the last fetch failed: {{ g_status.error }}{% endif %}. Google has not reported any searches for the site yet; this page fills in by itself as it does.</p>
 {% else %}
@@ -51,6 +51,10 @@
 {% for c in a.cannibal %}<tr><td>Two of our pages compete</td><td>{{ c.query }}<br><span class="muted">{% for p in c.pages %}{{ p.page }} ({{ p.impressions }}){{ ', ' if not loop.last }}{% endfor %}</span></td><td class="r">{{ c.impressions }}</td><td></td><td></td></tr>{% endfor %}
 </tbody></table></div>
 {% endif %}
+
+<h2 id="reviews" class="mt">Ranking reviews (Mondays and Thursdays)</h2>
+{% if not revs %}<p class="muted">The first review is written on the next Monday or Thursday.</p>{% endif %}
+{% for r in revs %}<article class="panel mt"><h3 class="h3">{{ r.day|human_date }}</h3><p>{{ r.summary }}</p><ul>{% for l in r.lines %}<li>{{ l }}</li>{% endfor %}</ul></article>{% endfor %}
 
 <h2 id="actions" class="mt">Action plan</h2>
 <p class="hint">Created from the data by fixed rules, each with its evidence and how sure we are of the cause. The twice-weekly self-check carries out the ones it safely can; each is rechecked after {{ 14 }} days and the result recorded.</p>

@@ -400,9 +400,52 @@ def daily_job():
     actions_n = generate_actions()
     done_n = apply_done_file()
     follow_n = follow_up()
+    write_review()
     snap = snapshot()
     current_app.logger.info("rankings-snapshot %s", json.dumps(snap, separators=(",", ":"))[:9000])
     return dict(events=events_n, actions=actions_n, done=done_n, followed=follow_n)
+
+
+def write_review(today=None):
+    """On Mondays and Thursdays (Pakistan time) the website writes the ranking review itself, from the data only."""
+    from . import seoauto
+    today = today or seoauto.local_now().date()
+    if today.weekday() not in (0, 3) or db.query("SELECT 1 FROM rank_reviews WHERE day=?", (today.isoformat(),), one=True):
+        return None
+    a = analysis()
+    if not a.get("ready"):
+        summary, lines = "Google has not reported figures for the site yet.", []
+    else:
+        t, p = a["t7"], a["p7"]
+        def ch(x, y):
+            return f"{x} ({'+' if x >= y else ''}{x - y} on the week before)"
+        summary = (f"Last 7 days: {ch(t['impressions'], p['impressions'])} impressions and {ch(t['clicks'], p['clicks'])} clicks; "
+                   f"average position {t['position']} (Search Console average).")
+        g = a["groups"]
+        lines = [f"Searches by average position (28 days): top 3: {g['1-3']}, 4-10: {g['4-10']}, 11-20: {g['11-20']}, "
+                 f"21-50: {g['21-50']}, 51-100: {g['51-100']}."]
+        if a["gains"]:
+            lines.append("Biggest gains: " + "; ".join(f"{m['query']} {m['before']} to {m['after']}" for m in a["gains"][:3]) + ".")
+        if a["losses"]:
+            lines.append("Biggest drops: " + "; ".join(f"{m['query']} {m['before']} to {m['after']}" for m in a["losses"][:3]) + ".")
+        if a["new"]:
+            lines.append(f"{len(a['new'])} searches showed the site for the first time this week, including "
+                         + ", ".join(n["query"] for n in a["new"][:5]) + ".")
+        ev = [e for e in events(50) if e["found_on"] >= (today - datetime.timedelta(days=4)).isoformat()]
+        if ev:
+            lines.append("New achievements: " + "; ".join(f"{e['label']}: {e['query'] or e['page']}" for e in ev[:5]) + ".")
+        opn = actions("open")
+        done_recent = db.query("SELECT COUNT(*) n FROM rank_actions WHERE status='done' AND status_note LIKE 'Done by Claude%'", one=True)["n"]
+        lines.append(f"Action plan: {len(opn)} open ({sum(1 for r in opn if r['priority'] == 'high')} high priority); "
+                     f"{done_recent} carried out by the automatic runs so far.")
+    db.execute("INSERT OR IGNORE INTO rank_reviews(day, summary, lines) VALUES (?,?,?)",
+               (today.isoformat(), summary, json.dumps(lines)))
+    return summary
+
+
+def reviews(limit=20):
+    return [dict(day=r["day"], summary=r["summary"], lines=json.loads(r["lines"]))
+            for r in db.query("SELECT * FROM rank_reviews ORDER BY day DESC LIMIT ?", (limit,))]
 
 
 def snapshot():

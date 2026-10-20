@@ -643,6 +643,7 @@ def rankings_view():
             flash("That action could not be found.", "error")
         return redirect(url_for("admin.rankings_view") + "#actions")
     return render_template("admin/rankings.html", a=rankings.analysis(), acts=rankings.actions(), evts=rankings.events(),
+                           revs=rankings.reviews(),
                            g_on=gsc.configured(), g_status=gsc.status(), section="rankings")
 
 

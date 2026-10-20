@@ -7,6 +7,12 @@ what truly needs him. Nobody is watching. Never ask a question.
 Repository `naved170-coder/Valueraq`, branch `main`; pushing to `main` deploys the website in 1 to 2 minutes.
 Website hosting: Render service `srv-dav6fknpn0mc73aclre0`, workspace `tea-d8cutaurnols739us400` (use the Render tools if you have them).
 
+## Always leave a trace
+
+Write `seo/watch/<today>.json` with `"status": "ok"` and a one-line summary as soon as the stop checks pass, and push it
+before the long work. Update and push it again at the end. If anything stops you, the file must say what. A missing
+file is the one outcome that is never acceptable.
+
 ## 1. Start
 
 Clone the repository, `pip install -r requirements.txt --break-system-packages`, read `seo/config.json`.
@@ -64,7 +70,7 @@ once a day. Read it with the Render tools: `list_logs` on service `srv-dav6fknpn
 `rankings-snapshot `. It holds totals, position groups, gains, losses, new searches, open `actions` (id, kind, query,
 page, priority, fix) and recent `achievements`. Positions in it are Search Console averages, not live ranks: say so.
 
-1. Carry out up to five open actions you can do safely within your limits (section 3), highest priority first:
+1. The website writes the review summary itself. Your part is to carry out up to three open actions you can do safely within your limits (section 3), highest priority first:
    - `low_ctr`: rewrite that page's `meta_title` and `meta_description` to answer the search directly (keep the limits).
    - `striking` / `page_two`: add a short section answering the search on that page, and links to it from two related pages.
    - `cannibal`: link the other pages to the main page with the search phrase; make each page's focus distinct.
@@ -73,9 +79,8 @@ page, priority, fix) and recent `achievements`. Positions in it are Search Conso
    Leave `decline` actions alone until their recheck date unless the cause is clear.
 2. Append one entry per action you carried out to `seo/actions_done.json`: `{"id": "<id>", "date": "<today>", "note": "<what you changed>"}`.
    The website then marks it done and rechecks the metric 14 days later.
-3. Add a `review` object to today's file: `summary` (one sentence) and `lines` (plain sentences): totals against the previous
-   period, position groups, top gains and losses, new achievements, actions carried out, actions left for the owner.
-   Use only numbers from the snapshot. If the snapshot says `ready: false` or cannot be read, say Google has no figures yet.
+3. In today's file, list the actions you carried out under `fixed`. If the Render logs cannot be read, say so in
+   `checks` and carry on with the rest of the check: never let this step stop the run.
 
 ## 4b. On Mondays: the weekly report
 
