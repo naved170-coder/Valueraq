@@ -714,26 +714,6 @@
      "images": "1 featured image"
     },
     {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "flippa-alternatives",
-     "title": "Flippa Alternatives: Where Else to Sell or Buy an Online Business",
-     "primary_keyword": "sites like flippa",
-     "secondary_keywords": [
-      "websites like flippa",
-      "flippa alternatives",
-      "other sites like flippa"
-     ],
-     "cluster": "selling",
-     "section": "Comparisons",
-     "words": "1,500-2,500",
-     "tool_link": "/fees/",
-     "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
-     "hold": true,
-     "hold_reason": "Names competitors and their fees",
-     "images": "1 featured image + 1 or 2 charts"
-    },
-    {
      "kind": "glossary",
      "type": "Glossary term",
      "slug": "retention-rate",
@@ -811,13 +791,13 @@
     {
      "kind": "guides",
      "type": "Question answered",
-     "slug": "how-to-calculate-arr-from-mrr",
-     "title": "How Do You Calculate ARR from MRR?",
-     "primary_keyword": "arr from mrr",
-     "cluster": "saas",
+     "slug": "how-to-value-a-website-with-falling-traffic",
+     "title": "How Do You Value a Website Whose Traffic Is Falling?",
+     "primary_keyword": "value website declining traffic",
+     "cluster": "website",
      "section": "Quick answers",
      "words": "300-600",
-     "tool_link": "/calculators/saas-valuation-calculator/",
+     "tool_link": "/tools/website-valuation/",
      "hold": false,
      "hold_reason": null,
      "images": "1 featured image"
@@ -842,18 +822,19 @@
     {
      "kind": "guides",
      "type": "Article",
-     "slug": "ecommerce-valuation-multiples",
-     "title": "Ecommerce Valuation Multiples Explained",
-     "primary_keyword": "ecommerce valuation multiples",
+     "slug": "red-flags-when-buying-a-website",
+     "title": "Red Flags When Buying a Website: What to Check Before You Pay",
+     "primary_keyword": "buying a website red flags",
      "secondary_keywords": [
-      "ecommerce ebitda multiples",
-      "ecommerce business valuation multiple"
+      "website for sale scam",
+      "buy websites",
+      "due diligence checklist for buying a business"
      ],
-     "cluster": "ecommerce",
-     "section": "Valuation",
+     "cluster": "buying",
+     "section": "Buying",
      "words": "1,500-2,500",
-     "tool_link": "/tools/ecommerce-valuation/",
-     "brief": "What multiple applies to which earnings figure, how stock is treated, what raises or lowers the default range.",
+     "tool_link": "/buyer-safety/",
+     "brief": "Warning signs in listings, figures, traffic and the seller's behaviour, each with how to check it; links to the due diligence and verification pages. Uses sba-buy and the site's own buyer-safety page; no invented fraud statistics.",
      "hold": false,
      "hold_reason": null,
      "images": "1 featured image + 1 or 2 charts"
@@ -1880,6 +1861,26 @@
      "hold": true,
      "hold_reason": "Tax topic; held",
      "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "flippa-alternatives",
+     "title": "Flippa Alternatives: Where Else to Sell or Buy an Online Business",
+     "primary_keyword": "sites like flippa",
+     "secondary_keywords": [
+      "websites like flippa",
+      "flippa alternatives",
+      "other sites like flippa"
+     ],
+     "cluster": "selling",
+     "section": "Comparisons",
+     "words": "1,500-2,500",
+     "tool_link": "/fees/",
+     "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
+     "hold": true,
+     "hold_reason": "Names competitors and their fees",
+     "images": "1 featured image + 1 or 2 charts"
     }
    ]
   }

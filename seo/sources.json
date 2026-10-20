@@ -141,6 +141,69 @@
     "FMV is the price that property would sell for on the open market."
    ],
    "facts": []
+  },
+  {
+   "id": "cfi-rule-of-40",
+   "title": "Corporate Finance Institute, The SaaS Rule of 40 Explained",
+   "url": "https://corporatefinanceinstitute.com/resources/valuation/rule-of-40",
+   "verified": "2026-10-20",
+   "quotes": [
+    "Rule of 40 = Revenue Growth Rate (%) + Profit Margin (%)",
+    "oversimplifies a company's financial prospects by focusing on just two metrics",
+    "doesn't distinguish between different types of growth"
+   ],
+   "facts": [
+    "A score of 40% or higher is the target.",
+    "EBITDA margin is the most common profit measure used.",
+    "Described as a back-of-the-envelope calculation, generally better for mature companies than startups."
+   ]
+  },
+  {
+   "id": "apple-app-transfer",
+   "title": "Apple, App Store Connect Help: Overview of app transfer",
+   "url": "https://developer.apple.com/help/app-store-connect/transfer-an-app/overview-of-app-transfer/",
+   "verified": "2026-10-20",
+   "quotes": [
+    "You'll need to transfer the ownership of an app when you've sold the app to another developer or you want to move it to another App Store Connect account or organization.",
+    "During and after the transfer, the app retains its reviews and ratings, and users continue to receive updates.",
+    "If you transfer an app that uses Apple Pay, the merchant ID isn't transferred along with the app."
+   ],
+   "facts": [
+    "Steps: check the transfer criteria, back up all app information, the Account Holder starts the transfer, the receiving Account Holder accepts it.",
+    "The Bundle ID stays the same.",
+    "iCloud containers and Sign in with Apple service IDs transfer; Game Center groups and matchmaking configuration do not."
+   ]
+  },
+  {
+   "id": "apple-app-transfer-criteria",
+   "title": "Apple, App Store Connect Help: App transfer criteria",
+   "url": "https://developer.apple.com/help/app-store-connect/transfer-an-app/app-transfer-criteria/",
+   "verified": "2026-10-20",
+   "quotes": [
+    "The app must have at least one version that was released to the App Store.",
+    "Apple Arcade apps can't be transferred."
+   ],
+   "facts": [
+    "Both accounts must have accepted the latest agreements and not be in a pending state.",
+    "The app cannot be on pre-order or in review at the time of transfer.",
+    "In-App Purchase product IDs cannot clash with products in the recipient's account."
+   ]
+  },
+  {
+   "id": "google-play-transfer",
+   "title": "Google, Play Console Help: Transfer apps to a different developer account",
+   "url": "https://support.google.com/googleplay/android-developer/answer/6230247?hl=en",
+   "verified": "2026-10-20",
+   "quotes": [
+    "both Google Play developer accounts need to be registered and active",
+    "Orders that are created before the app is transferred will remain in the original account."
+   ],
+   "facts": [
+    "Users, statistics, ratings, reviews and subscriptions transfer with the app.",
+    "Paid apps or apps with in-app products need an active payments profile on the receiving account.",
+    "The receiving account's registration transaction ID is needed; a new account costs a US$25 registration fee.",
+    "Promotions, test groups and earnings reports do not transfer."
+   ]
   }
  ]
 }

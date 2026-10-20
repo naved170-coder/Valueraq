@@ -35,10 +35,20 @@ today's run is done (this is the guard against publishing twice).
 
 ## 2. Pick the work
 
-Open `seo/calendar.json`. Go through the days in order and collect the pages that are not yet present under
-`content/`, in the listed order, until you have four (carry on into the next day if a day is partly written).
-Write those four. Never write more than four pages in one run. Before choosing release times, list the `publish_at`
-values already used by existing pages: never reuse one, and never put more than four pages on one Pakistan date.
+Open `seo/calendar.json`. Every run writes **one long article and three reference pages** (glossary terms or
+question pages). Choose them like this:
+
+1. **The article:** the first article in calendar order that is not yet written and that you can write properly.
+   If an article topic is blocked (needs a source you cannot open, or duplicates an existing page), skip it, note why,
+   and take the next article further down the calendar. Never fill the article's place with a reference page.
+2. **The reference pages:** the first three unwritten reference pages in calendar order that you can write properly.
+3. A topic skipped in two runs is moved to the end of `seo/calendar.json` by you, with a note in the report, so it
+   stops blocking the queue. A duplicate topic is removed and replaced with a new topic from `seo/keywords.json`
+   after the duplicate check.
+
+Never write more than four pages in one run. Before choosing release times, list the `publish_at` values already used
+by existing pages: never reuse one, and never put more than four pages on one Pakistan date. The article takes the
+6:00 am Pakistan slot when it is free.
 
 After day 30 of the calendar (or from `reduce_after` in config.json), write only the first two pages per day
 (one article, one reference page) from the next calendar the monthly run prepares. If the calendar is used up,
@@ -59,9 +69,10 @@ On the 1st (Pakistan date), write only the first two missing pages of the day (t
 
 ### Search figures
 
-If your instructions include a "search feed" address, fetch it with WebFetch before writing (never write the address or
-its token into any file). When it has data, use `queries` to choose which secondary keywords to work into today's pages:
-prefer real searches the site already appears for. If it cannot be read, carry on without it.
+Read the website's daily ranking summary with the Render tools: `list_logs` on service `srv-dav6fknpn0mc73aclre0`,
+workspace `tea-d8cutaurnols739us400`, text `rankings-snapshot`, last 2 days; parse the JSON after `rankings-snapshot `.
+Use its `new` searches and the queries in `actions` to choose secondary keywords for today's pages: prefer real
+searches the site already appears for. Do not use WebFetch for the website's own data. If it cannot be read, carry on.
 
 ## 3. Before writing each page: duplicate check
 
