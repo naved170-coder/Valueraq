@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Self-check started; checks in progress.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "ok",
+  "summary": "Last night's run is in place, today's pages are scheduled and all checks pass; nothing needs the owner.",
+  "checks": [
+    "Last night's run: report for Oct 20 present, 4 glossary pages written, 5 topics skipped with reasons",
+    "Queue: today's 01:00Z, 07:00Z and 13:00Z slots are filled; later slots are written by tonight's run",
+    "Tests: 122 passed",
+    "Content rules check: 0 problems",
+    "SEO audit: 0 critical, 0 warnings (148 URLs, 144 indexable)",
+    "Deploy: newest deploy is live, no error-level log lines since the last check",
+    "Live pages: left to the website's own live check; not fetched in this run",
+    "Task data: last night's tasks match the repository (pages present, release times set)",
+    "Calendar supply: 19 days with unwritten pages remain, so no new days are needed",
+    "Approvals: 0 pages on hold",
+    "Search figures: snapshot read from the logs (last data 2026-10-20): 3 clicks and 6,405 impressions over 28 days, 92 pages shown in Google; average positions are Search Console averages, not live ranks. No ranking review today (Wednesday)",
+    "Article: last night's report has no Article item; the feed and web research were unavailable and the next article topics were duplicates or lacked sources (Rule of 40, Flippa alternatives, ARR from MRR, ecommerce multiples, how to sell an app)"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
