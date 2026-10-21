@@ -1,0 +1,30 @@
+{
+  "summary": "Wrote 1 article (how to sell a mobile app) and 3 reference pages (Rule of 40, valuing a website with falling traffic, sponsorship revenue); none held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-sell-an-app/", "action": "new", "type": "Article", "score": 8.9,
+     "duplicate": "pass (closest: /guides/app-valuation/, /guides/how-to-sell-a-website/)",
+     "images": "1 featured, 2 charts", "keywords": ["sell app business", "apps for sale", "mobile apps for sale", "sell your app online"],
+     "note": "Uses Apple and Google transfer documentation from sources.json. Worked examples match app valuation tool output. Releases 6:00 am Pakistan on 22 Oct."},
+    {"path": "/glossary/rule-of-40/", "action": "new", "type": "Glossary term", "score": 8.7,
+     "duplicate": "pass (closest: /glossary/arr/, /glossary/net-revenue-retention/)",
+     "images": "1 featured", "keywords": ["rule of 40", "rule of 40 saas"],
+     "note": "Cites CFI Rule of 40 page from sources.json; example labelled an illustration."},
+    {"path": "/guides/how-to-value-a-website-with-falling-traffic/", "action": "new", "type": "Question answered", "score": 8.6,
+     "duplicate": "pass (closest: /guides/website-valuation/, /guides/how-to-verify-website-traffic/)",
+     "images": "1 featured", "keywords": ["value website declining traffic", "website losing traffic value"],
+     "note": "Worked example matches website valuation tool output."},
+    {"path": "/glossary/sponsorship-revenue/", "action": "new", "type": "Glossary term", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/display-advertising/, /glossary/earnings-per-click/)",
+     "images": "1 featured", "keywords": ["sponsorship revenue", "newsletter sponsorship revenue"],
+     "note": "Example labelled an illustration."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 122 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"],
+  "notes": [
+    "Web research was not available; only sources in seo/sources.json were cited. Ranking data was read from the Render logs.",
+    "Article topic red-flags-when-buying-a-website was skipped again: it overlaps the due diligence and verification guides and no verified fraud source is available. Other earlier-skipped topics remain unwritten: how-to-buy-an-ecommerce-business, micro-saas-valuation, flippa-alternatives. Consider replacing them in the next monthly calendar.",
+    "Search data suggests new topics: 'sell my saas', 'working capital definition', 'what is cash flow', 'website value estimator'.",
+    "pip install failed offline (gunicorn unavailable); dependencies were already installed so the gates ran."
+  ]
+}
