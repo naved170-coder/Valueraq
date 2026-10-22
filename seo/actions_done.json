@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "182e31974ac8",
+    "date": "2026-10-22",
+    "note": "Linked 'how to value a website' to /guides/website-valuation/ from the falling-traffic guide."
+  },
+  {
+    "id": "219905d0b3bc",
+    "date": "2026-10-22",
+    "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the buying-a-SaaS guide."
+  },
+  {
+    "id": "73b92c5e69a4",
+    "date": "2026-10-22",
+    "note": "Linked 'AI business value' to /guides/ai-business-valuation/ from the business valuation and SaaS multiples guides."
+  }
+]

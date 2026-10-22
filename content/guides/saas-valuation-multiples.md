@@ -141,7 +141,7 @@ Profit multiples apply once a SaaS business is mature and reliably profitable. F
 
 ### Do AI products get the same multiples?
 
-{{BRAND}} uses a lower default range for AI businesses, 1.5 to 4.5 times ARR, because many depend on an outside model provider for both cost and capability. The [AI business valuation tool](/tools/ai-business-valuation/) applies it.
+{{BRAND}} uses a lower default range for AI businesses, 1.5 to 4.5 times ARR, because many depend on an outside model provider for both cost and capability. The [AI business valuation tool](/tools/ai-business-valuation/) applies it. To see how AI products are priced, read [AI business value explained](/guides/ai-business-valuation/).
 
 ### Does annual billing change the multiple?
 

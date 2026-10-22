@@ -26,7 +26,7 @@ A digital business is any business that earns most of its revenue online: websit
 The most common method for small online businesses. You take a financial metric and multiply it by a figure that reflects risk and growth.
 
 - **Profit multiples** apply to websites, apps, newsletters and ecommerce stores, using [seller's discretionary earnings (SDE)](/glossary/sde/) for owner-run businesses or [EBITDA](/glossary/ebitda/) for businesses with a management team.
-- **Revenue multiples**, usually on [ARR](/glossary/arr/), apply to SaaS and AI businesses whose recurring revenue is predictable, or which are investing their profit into growth.
+- **Revenue multiples**, usually on [ARR](/glossary/arr/), apply to SaaS and AI businesses whose recurring revenue is predictable, or which are investing their profit into growth. For AI products in particular, see [AI business value](/guides/ai-business-valuation/).
 
 Multiples are quick to apply and easy to compare between listings. Their weakness is that the multiple itself involves judgement.
 

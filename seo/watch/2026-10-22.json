@@ -1,1 +1,25 @@
-{"status":"ok","summary":"Self-check started; checks in progress."}
+{
+  "status": "fixed",
+  "summary": "Last night's run is in place and all checks pass; I carried out three ranking-review links, nothing needs the owner.",
+  "checks": [
+    "Last night's run: report for Oct 21 present, 4 pages written (1 article, 3 reference/question pages)",
+    "Queue: today's 01:00Z, 07:00Z and 13:00Z slots are filled; later slots are written by tonight's run",
+    "Tests: 122 passed",
+    "Content rules check: 0 problems",
+    "SEO audit: 0 critical, 0 warnings (152 URLs, 148 indexable)",
+    "Deploy: last deploy before this check was live; no error-level log lines since the last check",
+    "Live pages: left to the website's own live check; not fetched in this run",
+    "Task data: last night's tasks match the repository (pages, images and release times present)",
+    "Calendar supply: 16 days with unwritten pages remain, so no new days are needed",
+    "Approvals: 0 pages on hold",
+    "Search figures: snapshot read from the logs (last data 2026-10-21): 3 clicks and 6,866 impressions over 28 days, 93 pages shown in Google; positions are Search Console averages, not live ranks",
+    "Article: last night's report has an Article item (how to sell a mobile app)",
+    "Ranking review (Thursday): 15 open actions, mostly cannibal; three carried out safely within limits, tool-page cases left because they are app code"
+  ],
+  "fixed": [
+    "Ranking action 182e31974ac8: linked 'how to value a website' to the main website valuation guide from the falling-traffic guide",
+    "Ranking action 219905d0b3bc: linked 'how to value a SaaS company' to the main SaaS valuation guide from the guide to buying a SaaS business",
+    "Ranking action 73b92c5e69a4: linked 'AI business value' to the main AI business valuation guide from two related guides"
+  ],
+  "needs_owner": []
+}

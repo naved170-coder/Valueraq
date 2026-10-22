@@ -44,7 +44,7 @@ A steady site with the same profit and a 3.2 midpoint is worth about $115,000. T
 
 ## What can help the price
 
-Show the cause and what you did about it. Document recovery steps, new revenue sources and a clean traffic record. Buyers can check your figures against [verified traffic data](/guides/how-to-verify-website-traffic/), so use real numbers. For the full method, see [website valuation](/guides/website-valuation/).
+Show the cause and what you did about it. Document recovery steps, new revenue sources and a clean traffic record. Buyers can check your figures against [verified traffic data](/guides/how-to-verify-website-traffic/), so use real numbers. For the full method, see [website valuation](/guides/website-valuation/). For the full method, see [how to value a website](/guides/website-valuation/).
 
 ## Frequently asked questions
 

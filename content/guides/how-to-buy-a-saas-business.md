@@ -45,7 +45,7 @@ Four figures tell you most of what a SaaS listing is worth.
 
 On {{BRAND}}, each listing shows automatic checks calculated from the seller's own figures, and you can save listings and searches to compare them later. Those checks describe what the seller entered. They don't confirm it.
 
-To see how these numbers affect price, enter them in the [SaaS Valuation Tool](/tools/saas-valuation/). {{BRAND}}'s default assumption for SaaS is 2.0× to 5.0× ARR, adjusted for growth, churn, margin, concentration, age and owner hours, with combined adjustments capped at −50% and +40%. It's a published assumption, not market data; [how to value a SaaS business](/guides/saas-valuation/) explains it.
+To see how these numbers affect price, enter them in the [SaaS Valuation Tool](/tools/saas-valuation/). {{BRAND}}'s default assumption for SaaS is 2.0× to 5.0× ARR, adjusted for growth, churn, margin, concentration, age and owner hours, with combined adjustments capped at −50% and +40%. It's a published assumption, not market data; [how to value a SaaS business](/guides/saas-valuation/) explains it. For the method behind those numbers, read [how to value a SaaS company](/guides/saas-valuation/).
 
 ## Step 3: Ask the seller the right questions
 
