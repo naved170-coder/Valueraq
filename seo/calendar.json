@@ -820,26 +820,6 @@
      "images": "1 featured image"
     },
     {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "red-flags-when-buying-a-website",
-     "title": "Red Flags When Buying a Website: What to Check Before You Pay",
-     "primary_keyword": "buying a website red flags",
-     "secondary_keywords": [
-      "website for sale scam",
-      "buy websites",
-      "due diligence checklist for buying a business"
-     ],
-     "cluster": "buying",
-     "section": "Buying",
-     "words": "1,500-2,500",
-     "tool_link": "/buyer-safety/",
-     "brief": "Warning signs in listings, figures, traffic and the seller's behaviour, each with how to check it; links to the due diligence and verification pages. Uses sba-buy and the site's own buyer-safety page; no invented fraud statistics.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
-    },
-    {
      "kind": "glossary",
      "type": "Glossary term",
      "slug": "backlink",
@@ -946,26 +926,6 @@
      "images": "1 featured image"
     },
     {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "how-to-buy-an-ecommerce-business",
-     "title": "How to Buy an Ecommerce Business",
-     "primary_keyword": "buy ecommerce business",
-     "secondary_keywords": [
-      "ecommerce business for sale",
-      "ecommerce stores for sale",
-      "online stores for sale"
-     ],
-     "cluster": "ecommerce",
-     "section": "Buying",
-     "words": "1,500-2,500",
-     "tool_link": "/businesses-for-sale/ecommerce/",
-     "brief": "Screening, stock and supplier checks, ad account history, transfer.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
-    },
-    {
      "kind": "glossary",
      "type": "Glossary term",
      "slug": "display-advertising",
@@ -1009,26 +969,6 @@
      "images": "1 featured image"
     },
     {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "micro-saas-valuation",
-     "title": "Micro-SaaS Valuation: Pricing a Small Software Business",
-     "primary_keyword": "micro saas valuation",
-     "secondary_keywords": [
-      "saas startup valuation",
-      "saas company valuation",
-      "saas for sale"
-     ],
-     "cluster": "saas",
-     "section": "Valuation",
-     "words": "1,500-2,500",
-     "tool_link": "/tools/saas-valuation/",
-     "brief": "Why very small SaaS is often priced on profit not ARR, founder dependence, churn at small numbers; worked example.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
-    },
-    {
      "kind": "glossary",
      "type": "Glossary term",
      "slug": "sponsorship-revenue",
@@ -1070,25 +1010,6 @@
      "words": "300-600",
      "hold": false,
      "images": "1 featured image"
-    },
-    {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "sde-add-backs",
-     "title": "SDE Add-Backs: What Counts and What Buyers Reject",
-     "primary_keyword": "sde add backs",
-     "secondary_keywords": [
-      "sde business valuation calculator",
-      "how to calculate sde"
-     ],
-     "cluster": "analysis",
-     "section": "Valuation",
-     "words": "1,500-2,500",
-     "tool_link": "/calculators/business-multiple-calculator/",
-     "brief": "Legitimate add-backs versus ones buyers refuse; worked SDE calculation; links to SDE vs EBITDA guide.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
     },
     {
      "kind": "glossary",
@@ -1880,6 +1801,71 @@
      "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
      "hold": true,
      "hold_reason": "Names competitors and their fees",
+     "images": "1 featured image + 1 or 2 charts"
+    }
+   ]
+  },
+  {
+   "day": 31,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "red-flags-when-buying-a-website",
+     "title": "Red Flags When Buying a Website: What to Check Before You Pay",
+     "primary_keyword": "buying a website red flags",
+     "secondary_keywords": [
+      "website for sale scam",
+      "buy websites",
+      "due diligence checklist for buying a business"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/buyer-safety/",
+     "brief": "Warning signs in listings, figures, traffic and the seller's behaviour, each with how to check it; links to the due diligence and verification pages. Uses sba-buy and the site's own buyer-safety page; no invented fraud statistics.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-buy-an-ecommerce-business",
+     "title": "How to Buy an Ecommerce Business",
+     "primary_keyword": "buy ecommerce business",
+     "secondary_keywords": [
+      "ecommerce business for sale",
+      "ecommerce stores for sale",
+      "online stores for sale"
+     ],
+     "cluster": "ecommerce",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/businesses-for-sale/ecommerce/",
+     "brief": "Screening, stock and supplier checks, ad account history, transfer.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "micro-saas-valuation",
+     "title": "Micro-SaaS Valuation: Pricing a Small Software Business",
+     "primary_keyword": "micro saas valuation",
+     "secondary_keywords": [
+      "saas startup valuation",
+      "saas company valuation",
+      "saas for sale"
+     ],
+     "cluster": "saas",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "Why very small SaaS is often priced on profit not ARR, founder dependence, churn at small numbers; worked example.",
+     "hold": false,
+     "hold_reason": null,
      "images": "1 featured image + 1 or 2 charts"
     }
    ]
