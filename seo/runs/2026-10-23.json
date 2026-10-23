@@ -1,0 +1,36 @@
+{
+  "summary": "Wrote 1 article (affiliate website valuation) and 3 reference pages (negotiating the price of an online business, private label, inventory turnover); none held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/affiliate-website-valuation/", "action": "new", "type": "Article", "score": 8.7,
+     "duplicate": "pass (closest: /guides/website-valuation/, /guides/website-worth-examples/)",
+     "images": "1 featured, 2 charts", "keywords": ["affiliate website valuation", "how to value an affiliate website", "website valuation", "website worth"],
+     "note": "Worked example computed with app/valuation.py (website tool). Releases 6:00 am Pakistan on 24 Oct."},
+    {"path": "/guides/how-to-negotiate-buying-an-online-business/", "action": "new", "type": "Question answered", "score": 8.6,
+     "duplicate": "pass (closest: /guides/how-to-buy-a-website/, /guides/digital-business-due-diligence/)",
+     "images": "1 featured", "keywords": ["negotiate buying a business", "negotiate website price"],
+     "note": "Releases 12:00 am Pakistan on 24 Oct."},
+    {"path": "/glossary/private-label/", "action": "new", "type": "Glossary term", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/dropshipping/, /guides/amazon-fba-business-valuation/)",
+     "images": "1 featured", "keywords": ["private label", "private label business"],
+     "note": "Example is an illustration using VALUERAQ's default ecommerce range. Releases 12:00 pm Pakistan on 24 Oct."},
+    {"path": "/glossary/inventory-turnover/", "action": "new", "type": "Glossary term", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/cost-of-goods-sold/, /glossary/working-capital/)",
+     "images": "1 featured", "keywords": ["inventory turnover", "inventory turnover formula"],
+     "note": "Own arithmetic only. Releases 6:00 pm Pakistan on 24 Oct."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web research was not available; only sources in seo/sources.json were cited. Ranking data was read from the Render logs.",
+    "The calendar's day-18 and day-19 'Question answered' pages count as reference pages, so the first unwritten Article was affiliate-website-valuation (day 20). what-happens-after-you-sell-a-website is still waiting as a reference page.",
+    "Search data suggests topics: 'sell my saas company', 'cash flow formula', 'gross profit def', 'how much is a site worth', 'website value calculator'.",
+    "pip install failed offline (gunicorn unavailable); dependencies were already present so the gates ran."
+  ]
+}
