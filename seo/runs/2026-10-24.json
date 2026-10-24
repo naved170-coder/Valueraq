@@ -1,0 +1,36 @@
+{
+  "summary": "Wrote 1 article (SaaS metrics buyers check) and 3 reference pages (what happens after you sell a website, chargeback, return on ad spend); none held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/saas-metrics-buyers-check/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/saas-valuation/, /guides/saas-valuation-multiples/)",
+     "images": "1 featured, 2 charts", "keywords": ["saas metrics", "saas metrics buyers check", "saas churn", "net revenue retention"],
+     "note": "Worked example computed with app/valuation.py (saas). Focuses on the metrics a buyer verifies, not the method. Releases 6:00 am Pakistan on 25 Oct."},
+    {"path": "/guides/what-happens-after-you-sell-a-website/", "action": "new", "type": "Question answered", "score": 8.5,
+     "duplicate": "pass (closest: /guides/how-to-sell-a-website/, /guides/how-to-transfer-a-website-to-a-new-owner/)",
+     "images": "1 featured", "keywords": ["after selling a website", "website handover"],
+     "note": "Releases 12:00 am Pakistan on 25 Oct. No tax advice given."},
+    {"path": "/glossary/chargeback/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/escrow/, /guides/ecommerce-valuation/)",
+     "images": "1 featured", "keywords": ["chargeback", "chargeback rate"],
+     "note": "Example figures are labelled as assumptions. Releases 12:00 pm Pakistan on 25 Oct."},
+    {"path": "/glossary/return-on-ad-spend/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/cac/, /glossary/conversion-rate/)",
+     "images": "1 featured", "keywords": ["return on ad spend", "roas"],
+     "note": "Own arithmetic only. Releases 6:00 pm Pakistan on 25 Oct."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web research was not available; only sources in seo/sources.json were cited. Ranking data was read from the Render logs.",
+    "Article topics broker-vs-marketplace (needs broker fee sources) and how-long-to-sell-an-online-business (no verified timing source) were skipped this run; saas-metrics-buyers-check was the next article I could write properly.",
+    "Search data suggests topics: 'cash flow formula', 'recurring revenue', 'how to value website', 'website revenue checker', 'sell my saas company'.",
+    "pip install was not run (offline); dependencies were already present so the gates ran."
+  ]
+}
