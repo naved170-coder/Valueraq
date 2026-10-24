@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":["started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "ok",
+  "summary": "All checks passed; last night's run is complete, today's four pages are queued, and nothing needs the owner.",
+  "checks": [
+    "Last night's run: done, 4 pages (1 article, 1 question answered, 2 glossary)",
+    "Queue: 4 of 4 slots for 24 Oct filled (publish times set, images present); tonight's pages come from the 7:50 pm run",
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: previous deploy live, no error-level log lines since the last check; today's start-file deploy was still in progress when checked",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 13 unwritten days left (no top-up needed)",
+    "Approvals: 0 held pages",
+    "Search figures: snapshot saved daily (latest 23 Oct, data to 22 Oct); positions are Search Console averages, not live ranks",
+    "Article written: yes (affiliate website valuation)",
+    "Ranking review: not a Monday or Thursday, skipped",
+    "pip install failed offline (gunicorn unavailable); dependencies were already present so gates ran"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
