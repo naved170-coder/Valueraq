@@ -1179,26 +1179,6 @@
      "images": "1 featured image"
     },
     {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "broker-vs-marketplace",
-     "title": "Business Broker or Marketplace: Which Way to Sell an Online Business",
-     "primary_keyword": "online business broker",
-     "secondary_keywords": [
-      "domain broker",
-      "sell my online business",
-      "website broker"
-     ],
-     "cluster": "selling",
-     "section": "Comparisons",
-     "words": "1,500-2,500",
-     "tool_link": "/fees/",
-     "brief": "How each works, typical fee structures in general terms (cite sources), what size of business suits which; no named competitor fees unless opened and cited, in which case hold.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
-    },
-    {
      "kind": "glossary",
      "type": "Glossary term",
      "slug": "non-disclosure-agreement",
@@ -1240,25 +1220,6 @@
      "words": "300-600",
      "hold": false,
      "images": "1 featured image"
-    },
-    {
-     "kind": "guides",
-     "type": "Article",
-     "slug": "how-long-to-sell-an-online-business",
-     "title": "How Long Does It Take to Sell an Online Business?",
-     "primary_keyword": "how long does it take to sell an online business",
-     "secondary_keywords": [
-      "sell my online business",
-      "selling online business"
-     ],
-     "cluster": "selling",
-     "section": "Selling",
-     "words": "1,500-2,500",
-     "tool_link": "/sell/",
-     "brief": "Stages and what slows each one down; what the seller controls. No invented averages: use cited sources or describe ranges as typical stages without numbers.",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image + 1 or 2 charts"
     },
     {
      "kind": "glossary",
@@ -1864,6 +1825,45 @@
      "words": "1,500-2,500",
      "tool_link": "/tools/saas-valuation/",
      "brief": "Why very small SaaS is often priced on profit not ARR, founder dependence, churn at small numbers; worked example.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "broker-vs-marketplace",
+     "title": "Business Broker or Marketplace: Which Way to Sell an Online Business",
+     "primary_keyword": "online business broker",
+     "secondary_keywords": [
+      "domain broker",
+      "sell my online business",
+      "website broker"
+     ],
+     "cluster": "selling",
+     "section": "Comparisons",
+     "words": "1,500-2,500",
+     "tool_link": "/fees/",
+     "brief": "How each works, typical fee structures in general terms (cite sources), what size of business suits which; no named competitor fees unless opened and cited, in which case hold.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-long-to-sell-an-online-business",
+     "title": "How Long Does It Take to Sell an Online Business?",
+     "primary_keyword": "how long does it take to sell an online business",
+     "secondary_keywords": [
+      "sell my online business",
+      "selling online business"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1,500-2,500",
+     "tool_link": "/sell/",
+     "brief": "Stages and what slows each one down; what the seller controls. No invented averages: use cited sources or describe ranges as typical stages without numbers.",
      "hold": false,
      "hold_reason": null,
      "images": "1 featured image + 1 or 2 charts"

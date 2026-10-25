@@ -1,0 +1,37 @@
+{
+  "summary": "Wrote 1 article (valuing a website that earns from display ads) and 3 reference pages (months of records buyers want, non-compete agreement, non-disclosure agreement); none held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/adsense-website-valuation/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/how-to-value-a-blog/, /guides/website-valuation-methods/)",
+     "images": "1 featured, 2 charts", "keywords": ["adsense website valuation", "how to value a website with ads", "how to value website", "website value estimate"],
+     "note": "Worked example computed with app/valuation.py (website). Cites only SBA and BizBuySell from sources.json; no ad-network claims. Releases 6:00 am Pakistan on 26 Oct."},
+    {"path": "/guides/how-many-months-of-data-do-buyers-want/", "action": "new", "type": "Question answered", "score": 8.5,
+     "duplicate": "pass (closest: /guides/what-documents-do-buyers-ask-for/, /guides/digital-business-due-diligence/)",
+     "images": "1 featured", "keywords": ["how much history to sell a website", "trailing twelve months"],
+     "note": "Uses only the 12-24 month guidance already on the site and VALUERAQ's own rules. Releases 12:00 am Pakistan on 26 Oct."},
+    {"path": "/glossary/non-disclosure-agreement/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/due-diligence/, /glossary/letter-of-intent/)",
+     "images": "1 featured", "keywords": ["non-disclosure agreement", "nda"],
+     "note": "Cites the SBA page for confidentiality agreements. No country-specific legal rules. Releases 12:00 pm Pakistan on 26 Oct."},
+    {"path": "/glossary/non-compete-agreement/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/letter-of-intent/, /glossary/earnout/)",
+     "images": "1 featured", "keywords": ["non-compete agreement", "seller non-compete"],
+     "note": "No country-specific legal rules stated; says validity varies and to ask a lawyer. Releases 6:00 pm Pakistan on 26 Oct."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web research was not available; only sources in seo/sources.json were cited. Ranking data was read from the Render logs.",
+    "broker-vs-marketplace and how-long-to-sell-an-online-business were skipped for the second run in a row and moved to the end of the calendar (they need broker fee and timing sources not in sources.json).",
+    "The reference page order was swapped so the NDA page releases before the non-compete page, which links to it.",
+    "Search data suggests topics: 'cohort analysis', 'recurring revenue', 'cash flow formula', 'how to value website', 'website value estimate', 'arpu meaning'.",
+    "Pages in the Pakistan day 26 Oct use the 19:00Z, 01:00Z, 07:00Z and 13:00Z slots. pip install was not run (offline); dependencies were already present so the gates ran."
+  ]
+}
