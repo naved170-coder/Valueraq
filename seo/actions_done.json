@@ -13,5 +13,20 @@
     "id": "73b92c5e69a4",
     "date": "2026-10-22",
     "note": "Linked 'AI business value' to /guides/ai-business-valuation/ from the business valuation and SaaS multiples guides."
+  },
+  {
+    "id": "88ccb2a1c8c9",
+    "date": "2026-10-26",
+    "note": "Linked 'saas company valuation calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation guide."
+  },
+  {
+    "id": "eb03047d87ce",
+    "date": "2026-10-26",
+    "note": "Linked 'ARR valuation calculator' to /calculators/saas-valuation-calculator/ from the ARR glossary page."
+  },
+  {
+    "id": "b6f8b2874df5",
+    "date": "2026-10-26",
+    "note": "Linked 'SaaS calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation methods guide."
   }
 ]

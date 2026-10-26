@@ -8,7 +8,7 @@ cluster: saas
 order: 9
 answer: SaaS businesses are valued in five main ways: a multiple of recurring revenue (ARR or MRR), a multiple of profit (SDE or EBITDA), discounted cash flow, growth-plus-margin screens such as the rule of 40, and comparison with similar businesses that have sold. Small SaaS businesses are usually priced on an ARR multiple and checked against a profit multiple, and the two often give different answers.
 published: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-26
 methodology_version: 1.0
 related: /tools/saas-valuation/, /calculators/saas-valuation-calculator/, /guides/saas-valuation/, /guides/sde-vs-ebitda/, /guides/revenue-vs-profit-multiples/, /businesses-for-sale/saas/, /glossary/arr/, /glossary/mrr/
 cta: /tools/saas-valuation/
@@ -17,7 +17,7 @@ cta_text: See the ARR-multiple method and its profit cross-check on your own fig
 
 ## Key takeaway
 
-A SaaS valuation method is a way of turning subscription figures into a price. The methods differ mainly in whether they pay for revenue, for profit, or for a forecast. A fast-growing product that reinvests everything looks valuable on revenue and nearly worthless on profit, so the method chosen can matter as much as the numbers. This guide compares the methods. For the inputs and a full walkthrough, see [how to value a SaaS business](/guides/saas-valuation/).
+A SaaS valuation method is a way of turning subscription figures into a price. The methods differ mainly in whether they pay for revenue, for profit, or for a forecast. A fast-growing product that reinvests everything looks valuable on revenue and nearly worthless on profit, so the method chosen can matter as much as the numbers. This guide compares the methods. For the inputs and a full walkthrough, see [how to value a SaaS business](/guides/saas-valuation/). To run the numbers yourself, use the [SaaS calculator](/calculators/saas-valuation-calculator/).
 
 ## The five methods at a glance
 

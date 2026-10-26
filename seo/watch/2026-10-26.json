@@ -1,1 +1,37 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":["Started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; three SaaS calculator internal links were added from the ranking review and the weekly report is included.",
+  "checks": [
+    "Last night's run: done, 4 pages (1 article, 1 question answered, 2 glossary)",
+    "Queue: 4 of 4 slots for 26 Oct filled; tonight's pages come from the 7:50 pm run",
+    "Tests: 122 passed",
+    "SEO audit: 168 URLs, 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy live, no error-level log lines since the last check",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 11 unwritten days left (no top-up needed)",
+    "Approvals: 0 held pages",
+    "Search figures: snapshot saved daily (latest 25 Oct, data to 24 Oct); positions are Search Console averages, not live ranks",
+    "Article written: yes (AdSense website valuation)",
+    "Ranking review: 16 open actions, all 'cannibal'; 3 carried out",
+    "pip install failed offline; dependencies were already present so the gates ran"
+  ],
+  "fixed": [
+    "Linked 'saas company valuation calculator' to the SaaS calculator page from the SaaS valuation guide",
+    "Linked 'ARR valuation calculator' to the SaaS calculator page from the ARR glossary page",
+    "Linked 'SaaS calculator' to the SaaS calculator page from the SaaS valuation methods guide"
+  ],
+  "needs_owner": [],
+  "weekly": {
+    "summary": "40 items were recorded in the last 7 runs, no run was missed, and Google impressions rose from 2,973 to 3,801 week on week while clicks stay in single digits.",
+    "lines": [
+      "Pages published in the last 7 days: about 28 (7 runs of 4 pages, mostly reference pages plus 6 articles); none held.",
+      "Days with a missed run: none. Repairs this week: 3 internal links added; broken links found: 0.",
+      "Unwritten days left in the calendar: 11.",
+      "Next topics: non-compete agreement, non-disclosure agreement, is revenue or profit more important, then data room, proof of funds, how to transfer a Shopify store.",
+      "Search Console, last 7 days to 24 Oct against the 7 before: clicks 4 against 1, impressions 3,801 against 2,973, average position 66.9 against 70.1; 62 pages appeared in Google over the 7 days (last 28 days: 6 clicks, 8,677 impressions, 103 pages).",
+      "The snapshot does not list the top five searches by impressions, so none are named. Searches closest to the target range with real impressions: 'website valuation methods' (average 13.6), 'how much your website worth' (19.1), 'how much is my web worth' (20.4).",
+      "Pages with many impressions but a click rate under 1% cannot be listed from the snapshot; overall click rate is 0.11%.",
+      "No topics were moved in the calendar this week."
+    ]
+  }
+}

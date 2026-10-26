@@ -8,14 +8,14 @@ h1: ARR (Annual Recurring Revenue)
 definition: Annual recurring revenue (ARR) is the yearly value of a business's active subscription contracts, usually calculated as monthly recurring revenue (MRR) multiplied by 12.
 cluster: saas
 related: /glossary/mrr/, /glossary/churn/, /tools/saas-valuation/, /calculators/saas-valuation-calculator/
-updated: 2026-09-30
+updated: 2026-10-26
 ---
 
 ## Formula
 
 **ARR = MRR × 12**
 
-For businesses that sell annual contracts, ARR can also be calculated as the sum of the annualised value of all active contracts. Both approaches should give the same answer if MRR is calculated correctly.
+For businesses that sell annual contracts, ARR can also be calculated as the sum of the annualised value of all active contracts. Both approaches should give the same answer if MRR is calculated correctly. To turn ARR into a price, use the [ARR valuation calculator](/calculators/saas-valuation-calculator/).
 
 ## What to include and exclude
 
