@@ -1189,20 +1189,6 @@
      "words": "300-600",
      "hold": false,
      "images": "1 featured image"
-    },
-    {
-     "kind": "guides",
-     "type": "Question answered",
-     "slug": "is-revenue-or-profit-more-important",
-     "title": "Is Revenue or Profit More Important in a Valuation?",
-     "primary_keyword": "revenue or profit valuation",
-     "cluster": "analysis",
-     "section": "Quick answers",
-     "words": "300-600",
-     "tool_link": "/guides/revenue-vs-profit-multiples/",
-     "hold": false,
-     "hold_reason": null,
-     "images": "1 featured image"
     }
    ]
   },

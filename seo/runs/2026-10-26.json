@@ -1,0 +1,41 @@
+{
+  "summary": "Wrote 1 article (deal structures for online business sales) and 3 reference pages (data room, proof of funds, purchase agreement); none held; one duplicate topic removed from the calendar.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/deal-structures-for-online-business-sales/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/how-to-finance-buying-an-online-business/, /guides/how-escrow-works-for-website-sales/)",
+     "images": "1 featured, 2 charts", "keywords": ["how to structure a business sale", "seller financing", "earnout", "escrow"],
+     "note": "One $120,000 price paid four ways, arithmetic shown. Cites only SBA pages from sources.json. Releases 6:00 am Pakistan on 27 Oct."},
+    {"path": "/glossary/data-room/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/due-diligence/, /guides/digital-business-due-diligence/)",
+     "images": "1 featured", "keywords": ["data room", "virtual data room"],
+     "note": "No outside facts. Releases 12:00 am Pakistan on 27 Oct."},
+    {"path": "/glossary/proof-of-funds/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/escrow/, /glossary/seller-financing/)",
+     "images": "1 featured", "keywords": ["proof of funds", "proof of funds letter"],
+     "note": "No outside facts; example arithmetic only. Releases 12:00 pm Pakistan on 27 Oct."},
+    {"path": "/glossary/purchase-agreement/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/asset-sale/, /glossary/letter-of-intent/)",
+     "images": "1 featured", "keywords": ["purchase agreement", "asset purchase agreement"],
+     "note": "Cites the SBA page recommending attorney review. No country-specific legal rules. Releases 6:00 pm Pakistan on 27 Oct."},
+    {"path": "/guides/is-revenue-or-profit-more-important/", "action": "skipped", "type": "Question answered", "score": 0,
+     "duplicate": "overlaps /guides/revenue-vs-profit-multiples/", "images": "", "keywords": [],
+     "note": "Same search question as the existing revenue vs profit multiples guide. Removed from the calendar."},
+    {"path": "/guides/how-to-transfer-a-shopify-store/", "action": "skipped", "type": "Question answered", "score": 0,
+     "duplicate": "", "images": "", "keywords": [],
+     "note": "Needs a Shopify source that could not be opened and overlaps /guides/how-to-transfer-a-website-to-a-new-owner/. Skipped once; stays in the calendar."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json.",
+    "The 'is revenue or profit more important' question page was removed as a duplicate; no replacement topic was added today.",
+    "Search figures read from Render logs: 4 clicks and 3,706 impressions in the last 7 days."
+  ]
+}
