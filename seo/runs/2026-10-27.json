@@ -1,0 +1,38 @@
+{
+  "summary": "Wrote 1 article (nine valuation mistakes) and 3 reference pages (transition period, transfer an app, holdback); none held; the Shopify transfer question was moved to the end of the calendar.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/valuation-mistakes/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/revenue-vs-profit-multiples/, /guides/website-worth-examples/)",
+     "images": "1 featured, 2 charts", "keywords": ["online business valuation", "how much is my business worth", "business valuation mistakes"],
+     "note": "Nine mistakes with worked arithmetic using VALUERAQ default multiples and adjustment rules. Cites CFI, BizBuySell and SBA from sources.json. Releases 6:00 am Pakistan on 28 Oct."},
+    {"path": "/glossary/transition-period/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /guides/what-happens-after-you-sell-a-website/, /guides/how-to-transfer-a-website-to-a-new-owner/)",
+     "images": "1 featured", "keywords": ["transition period", "handover period"],
+     "note": "No outside facts; example arithmetic only. Releases 12:00 am Pakistan on 28 Oct."},
+    {"path": "/guides/how-to-transfer-an-app-to-a-new-owner/", "action": "new", "type": "Question answered", "score": 8.5,
+     "duplicate": "pass (closest: /guides/how-to-sell-an-app/ step 7, kept short and linked to it)",
+     "images": "1 featured", "keywords": ["transfer app ownership", "google play transfer app"],
+     "note": "Uses only Apple and Google sources from sources.json. Releases 12:00 pm Pakistan on 28 Oct."},
+    {"path": "/glossary/holdback/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /guides/deal-structures-for-online-business-sales/, /glossary/escrow/)",
+     "images": "1 featured", "keywords": ["holdback", "purchase price holdback"],
+     "note": "No outside facts; example arithmetic only. Releases 6:00 pm Pakistan on 28 Oct."},
+    {"path": "/guides/how-to-transfer-a-shopify-store/", "action": "skipped", "type": "Question answered", "score": 0,
+     "duplicate": "overlaps /guides/how-to-sell-a-shopify-store/ and /guides/how-to-transfer-a-website-to-a-new-owner/", "images": "", "keywords": [],
+     "note": "Skipped a second time (no verified Shopify source). Moved to the end of the calendar."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json.",
+    "Calendar days 22 to 25 still hold unwritten pages (holdback now written; stock-sale, business-broker, success-fee and others remain).",
+    "Search figures from Render logs: 4 clicks and 3,632 impressions in the last 7 days; the page 'how to sell an app' got its first click."
+  ]
+}
