@@ -1,0 +1,31 @@
+{
+  "summary": "Wrote 1 article (valuing a business with EBITDA) and 3 reference pages (stock sale, business broker, success fee); none held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-value-a-business-with-ebitda/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/sde-vs-ebitda/, /glossary/ebitda/; this page covers the valuation steps and links there for the SDE comparison)",
+     "images": "1 featured, 2 charts", "keywords": ["how to value a business with ebitda", "ebitda valuation", "adjusted ebitda"],
+     "note": "Worked example with invented company; multiples are VALUERAQ website defaults applied to SDE, converted to EBITDA multiples; sensitivity multiples labelled as illustrations. Cites CFI and BizBuySell and SBA from sources.json. Releases 6:00 am Pakistan on 29 Oct."},
+    {"path": "/glossary/stock-sale/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/asset-sale/)", "images": "1 featured", "keywords": ["stock sale", "stock sale vs asset sale"],
+     "note": "No outside facts; no country tax rules. Releases 12:00 am Pakistan on 29 Oct."},
+    {"path": "/glossary/business-broker/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/marketplace/, /guides/ways-to-sell-a-digital-business/)", "images": "1 featured", "keywords": ["business broker", "what does a business broker do"],
+     "note": "Fee percentage is a labelled invented figure; no competitor named. Releases 12:00 pm Pakistan on 29 Oct."},
+    {"path": "/glossary/success-fee/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/business-broker/, /glossary/earnout/)", "images": "1 featured", "keywords": ["success fee", "success fee business sale"],
+     "note": "Rate is a labelled invented figure; no VALUERAQ fees mentioned. Releases 6:00 pm Pakistan on 29 Oct."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json. Render ranking logs were not read this run.",
+    "Calendar day 24 cost-to-sell page (held) and days 25 to 29 items remain unwritten."
+  ]
+}
