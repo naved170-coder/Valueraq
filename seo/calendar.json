@@ -1855,6 +1855,258 @@
      "images": "1 featured image"
     }
    ]
+  },
+  {
+   "day": 32,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "operating-expenses",
+     "title": "What Are Operating Expenses?",
+     "term": "Operating Expenses",
+     "primary_keyword": "operating expenses",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-calculate-roi-when-buying-a-website",
+     "title": "How to Calculate ROI When Buying a Website",
+     "primary_keyword": "roi of buying a website",
+     "secondary_keywords": [
+      "website investment return",
+      "return on investment business"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "Worked ROI and payback arithmetic for a purchase price against monthly net profit, with a simple sensitivity table. Own arithmetic only; no market statistics; no guaranteed returns.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "return-on-investment",
+     "title": "What Is Return on Investment (ROI)?",
+     "term": "Return on Investment",
+     "primary_keyword": "return on investment",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "ebit",
+     "title": "What Is EBIT?",
+     "term": "EBIT",
+     "primary_keyword": "ebit",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 33,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "capitalization-rate",
+     "title": "What Is a Capitalization Rate?",
+     "term": "Capitalization Rate",
+     "primary_keyword": "capitalization rate",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "what-is-a-good-profit-margin-for-an-online-business",
+     "title": "What Is a Good Profit Margin for an Online Business?",
+     "primary_keyword": "profit margin online business",
+     "secondary_keywords": [
+      "net profit margin",
+      "gross margin"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/calculators/",
+     "brief": "How to calculate gross, operating and net margin with worked examples, and why buyers read margin together with trend. No industry averages unless in sources.json.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "operating-income",
+     "title": "What Is Operating Income?",
+     "term": "Operating Income",
+     "primary_keyword": "operating income",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "gross-merchandise-value",
+     "title": "What Is Gross Merchandise Value (GMV)?",
+     "term": "Gross Merchandise Value",
+     "primary_keyword": "gross merchandise value",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 34,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "bounce-rate",
+     "title": "What Is Bounce Rate?",
+     "term": "Bounce Rate",
+     "primary_keyword": "bounce rate",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-membership-site",
+     "title": "How to Value a Membership Site",
+     "primary_keyword": "membership site valuation",
+     "secondary_keywords": [
+      "subscription business valuation",
+      "membership website worth"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/saas-valuation/",
+     "brief": "Valuing recurring membership revenue using churn, retention and profit, with worked examples using VALUERAQ default ranges. Links to MRR, churn and retention pages.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "subscription-business-model",
+     "title": "What Is a Subscription Business Model?",
+     "term": "Subscription Business Model",
+     "primary_keyword": "subscription business model",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "revenue-per-visitor",
+     "title": "What Is Revenue per Visitor?",
+     "term": "Revenue per Visitor",
+     "primary_keyword": "revenue per visitor",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 35,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "net-income",
+     "title": "What Is Net Income?",
+     "term": "Net Income",
+     "primary_keyword": "net income",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-business-using-a-capitalization-rate",
+     "title": "How to Value a Business Using a Capitalization Rate",
+     "primary_keyword": "capitalization rate business valuation",
+     "secondary_keywords": [
+      "cap rate valuation",
+      "income approach valuation"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1,500-2,500",
+     "tool_link": "/tools/website-valuation/",
+     "brief": "Income approach explained: cap rate as the inverse of a profit multiple, with worked conversions between rate and multiple. Own arithmetic; no market rates quoted.",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image + 1 or 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "owner-operator",
+     "title": "What Is an Owner-Operator Business?",
+     "term": "Owner-Operator",
+     "primary_keyword": "owner-operator business",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "customer-retention-cost",
+     "title": "What Is Customer Retention Cost?",
+     "term": "Customer Retention Cost",
+     "primary_keyword": "customer retention cost",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
   }
  ]
 }

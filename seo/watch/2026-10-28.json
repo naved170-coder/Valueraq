@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Self-check started.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; the calendar was running low on unwritten days, so four new days were added.",
+  "checks": [
+    "Last night's run: done, 4 pages (1 article, 3 reference pages)",
+    "Queue: 4 of 4 slots for 28 Oct filled; tonight's pages come from the 7:50 pm run",
+    "Tests: 122 passed",
+    "SEO audit: 176 URLs, 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy live; no error-level log lines since the last check",
+    "Task data honesty: last night's tasks match the repository (4 pages and images present)",
+    "Calendar supply: 8 unwritten days left before top-up, 12 after",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 27 Oct, data to 26 Oct): 4 clicks and 3,772 impressions in the last 7 days; positions are Search Console averages, not live ranks",
+    "Article written: yes (nine valuation mistakes)",
+    "Ranking review: not a Monday or Thursday, skipped",
+    "pip install failed offline for gunicorn only; other dependencies installed and the gates ran"
+  ],
+  "fixed": ["Added calendar days 32 to 35 (4 articles, 12 reference pages, none held) after the duplicate check against existing pages and the rest of the calendar"],
+  "needs_owner": []
+}
