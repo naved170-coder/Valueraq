@@ -8,7 +8,7 @@ cluster: saas
 order: 2
 answer: Small SaaS businesses are usually valued as a multiple of annual recurring revenue (ARR) or of annual profit. The multiple rises with growth, low churn, high gross margin and a broad customer base, and falls with decline, high churn, thin margins and dependence on a few customers or on the founder.
 published: 2026-09-30
-updated: 2026-10-26
+updated: 2026-10-29
 methodology_version: 1.0
 related: /tools/saas-valuation/, /calculators/saas-valuation-calculator/, /businesses-for-sale/saas/, /glossary/arr/, /glossary/churn/, /guides/website-vs-saas-valuation/
 cta: /tools/saas-valuation/
@@ -107,7 +107,7 @@ Divide the annual plan's price by 12 and include it in MRR for each month of the
 
 ### Does high churn make a SaaS business unsellable?
 
-No, but it lowers the multiple. A buyer who understands why customers leave and can fix it may still pay a fair price.
+No, but it lowers the multiple. A buyer who understands why customers leave and can fix it may still pay a fair price. If you are deciding where to sell my SaaS company, see [where to sell a SaaS company](/guides/how-to-sell-a-saas-business/).
 
 ### How is SaaS valuation different from website valuation?
 

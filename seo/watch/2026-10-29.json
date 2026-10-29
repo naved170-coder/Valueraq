@@ -1,1 +1,25 @@
-{"status":"ok","summary":"Check started; stop conditions passed.","checks":["started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; as part of the Thursday ranking review, three internal-link fixes were made.",
+  "checks": [
+    "Last night's run: done, 4 pages (1 article, 3 reference pages)",
+    "Queue: 4 of 4 slots for 29 Oct filled; tonight's pages come from the 7:50 pm run",
+    "Tests: 122 passed",
+    "SEO audit: 180 URLs, 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy live; no error-level log lines since the last check",
+    "Pages pending live check: skipped (snapshot not read)",
+    "Task data honesty: last night's tasks match the repository (4 pages and images present)",
+    "Calendar supply: 12 days with unwritten pages left, no top-up needed",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 28 Oct, data to 27 Oct): 4 clicks and 3,395 impressions in the last 7 days; positions are Search Console averages, not live ranks",
+    "Article written: yes (how to value a business with EBITDA)",
+    "Ranking review (Thursday): carried out 3 of the open actions; the other cannibalisation actions on /tools/ pages need changes outside what this check may edit, and two actions for the same phrase point at different main pages, so they were left alone",
+    "pip install failed offline for gunicorn only; other dependencies installed and the gates ran"
+  ],
+  "fixed": [
+    "Linked 'how to value a website' to the website valuation tool from the website valuation methods guide",
+    "Linked the AI business valuation tool from the website-vs-SaaS investment guide",
+    "Linked 'where to sell a SaaS company' to the how-to-sell-a-SaaS guide from the SaaS valuation guide"
+  ],
+  "needs_owner": []
+}

@@ -8,7 +8,7 @@ cluster: analysis
 order: 32
 answer: Websites cost less per dollar of profit and need marketing skill; their main risk is a search-engine update removing traffic overnight. SaaS costs more per dollar of profit and needs technical capacity; its main risk is churn and competition, which arrive gradually rather than suddenly. Choose by which risk you can manage and which work you can actually do each week.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-29
 related: /guides/website-vs-saas-valuation/, /guides/buying-digital-businesses/, /tools/website-valuation/, /tools/saas-valuation/, /businesses-for-sale/websites/
 cta: /businesses-for-sale/
 cta_text: Compare live listings in both categories.
@@ -89,4 +89,4 @@ Yes, and the risks are largely uncorrelated — a search update that hits a cont
 
 ### Do these multiples apply to AI tools too?
 
-AI businesses are valued on their own basis, with different risks around model dependency and defensibility. See [AI business valuation](/guides/ai-business-valuation/).
+AI businesses are valued on their own basis, with different risks around model dependency and defensibility. See [AI business valuation](/guides/ai-business-valuation/), or try the free [AI business valuation tool](/tools/ai-business-valuation/).

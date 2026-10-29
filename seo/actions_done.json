@@ -28,5 +28,20 @@
     "id": "b6f8b2874df5",
     "date": "2026-10-26",
     "note": "Linked 'SaaS calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation methods guide."
+  },
+  {
+    "id": "bdea347d6495",
+    "date": "2026-10-29",
+    "note": "Linked 'how to value a website' to /tools/website-valuation/ from the website valuation methods guide."
+  },
+  {
+    "id": "ff50cdf98310",
+    "date": "2026-10-29",
+    "note": "Linked the AI business valuation tool from the website-vs-SaaS investment guide."
+  },
+  {
+    "id": "0ccd2beb8792",
+    "date": "2026-10-29",
+    "note": "Linked 'where to sell a SaaS company' to /guides/how-to-sell-a-saas-business/ from the SaaS valuation guide."
   }
 ]

@@ -8,7 +8,7 @@ cluster: website
 order: 8
 answer: There are six common ways to value a website: a multiple of annual profit, a multiple of revenue, a value per visitor, the cost to rebuild it, discounted cash flow, and comparison with similar sites that have sold. For a profitable site, the profit multiple is the method most buyers use, and the others serve as cross-checks or as fallbacks when there is little or no profit.
 published: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-29
 methodology_version: 1.0
 related: /tools/website-valuation/, /calculators/website-worth-calculator/, /guides/website-valuation/, /guides/revenue-vs-profit-multiples/, /guides/business-valuation/, /businesses-for-sale/websites/, /glossary/sde/, /glossary/profit-multiple/
 cta: /tools/website-valuation/
@@ -17,7 +17,7 @@ cta_text: See the profit-multiple method applied to your own figures with the fr
 
 ## Key takeaway
 
-A website valuation method is a rule for turning what you know about a site into a price. Different methods start from different facts, so they can give very different answers for the same site. Knowing which method a number came from tells you how much weight to give it. This guide compares the methods. For a step-by-step walkthrough of the main one, see [how to value a website](/guides/website-valuation/).
+A website valuation method is a rule for turning what you know about a site into a price. Different methods start from different facts, so they can give very different answers for the same site. Knowing which method a number came from tells you how much weight to give it. This guide compares the methods. For a step-by-step walkthrough of the main one, see [how to value a website](/guides/website-valuation/). To apply it to your own site, use the free [how to value a website tool](/tools/website-valuation/).
 
 ## The six methods at a glance
 
