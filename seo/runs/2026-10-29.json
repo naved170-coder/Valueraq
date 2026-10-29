@@ -1,0 +1,83 @@
+{
+  "summary": "Wrote 1 article (data room checklist) and 3 reference pages (exclusivity period, representations and warranties, should you sell or keep); none held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/data-room-checklist/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/what-documents-do-buyers-ask-for/, /guides/digital-business-due-diligence/, /glossary/data-room/; this page is the seller-side folder checklist and staged sharing, and links to them)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "due diligence data room checklist",
+        "documents for due diligence",
+        "due diligence list"
+      ],
+      "note": "Cites SBA and BizBuySell from sources.json. Worked example uses invented figures and the website default 3.2x. Releases 6:00 am Pakistan on 30 Oct."
+    },
+    {
+      "path": "/glossary/exclusivity-period/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/letter-of-intent/)",
+      "images": "1 featured",
+      "keywords": [
+        "exclusivity period",
+        "no-shop clause"
+      ],
+      "note": "No outside facts. Releases 12:00 am Pakistan on 30 Oct."
+    },
+    {
+      "path": "/glossary/representations-and-warranties/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/purchase-agreement/)",
+      "images": "1 featured",
+      "keywords": [
+        "representations and warranties",
+        "reps and warranties"
+      ],
+      "note": "No country-specific legal rules. Releases 12:00 pm Pakistan on 30 Oct."
+    },
+    {
+      "path": "/guides/should-i-sell-my-online-business/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/when-to-sell-an-online-business/)",
+      "images": "1 featured",
+      "keywords": [
+        "should i sell my online business",
+        "sell or keep a business"
+      ],
+      "note": "Worked example uses the website default 3.2x. Releases 6:00 pm Pakistan on 30 Oct."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 122 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 0 opened (web access unavailable; only sources from seo/sources.json cited)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json. Render rankings snapshot was read; no new keywords changed the plan.",
+    "Skipped the held cost-to-sell page (mentions fees) again and moved it to the end of the calendar.",
+    "Day 28 UK article (country tax, held) and day 26 fair-price SaaS page remain unwritten."
+  ]
+}
