@@ -1534,25 +1534,6 @@
           "images": "1 featured image"
         },
         {
-          "kind": "guides",
-          "type": "Article",
-          "slug": "selling-an-online-business-from-the-uk",
-          "title": "Selling an Online Business from the UK: A Practical Guide",
-          "primary_keyword": "sell online business uk",
-          "secondary_keywords": [
-            "sell my online business",
-            "sell website"
-          ],
-          "cluster": "selling",
-          "section": "Selling",
-          "words": "1,500-2,500",
-          "tool_link": "/sell/",
-          "brief": "Process for a UK-based seller with overseas buyers: currency, escrow, contracts in general terms; tells readers to take local tax and legal advice. Country guide: always held.",
-          "hold": true,
-          "hold_reason": "Country-specific guide",
-          "images": "1 featured image + 1 or 2 charts"
-        },
-        {
           "kind": "glossary",
           "type": "Glossary term",
           "slug": "seasonality",
@@ -1658,25 +1639,6 @@
           "images": "1 featured image"
         },
         {
-          "kind": "guides",
-          "type": "Article",
-          "slug": "buying-an-online-business-from-the-gulf",
-          "title": "Buying an Online Business from the UAE or Saudi Arabia",
-          "primary_keyword": "buy online business uae",
-          "secondary_keywords": [
-            "online business for sale",
-            "buy websites"
-          ],
-          "cluster": "buying",
-          "section": "Buying",
-          "words": "1,500-2,500",
-          "tool_link": "/businesses-for-sale/",
-          "brief": "Cross-border buying in general terms: payment, escrow availability, time zones, taking local advice. Country guide: always held.",
-          "hold": true,
-          "hold_reason": "Country-specific guide",
-          "images": "1 featured image + 1 or 2 charts"
-        },
-        {
           "kind": "glossary",
           "type": "Glossary term",
           "slug": "micro-saas",
@@ -1701,26 +1663,6 @@
           "hold": true,
           "hold_reason": "Tax topic; held",
           "images": "1 featured image"
-        },
-        {
-          "kind": "guides",
-          "type": "Article",
-          "slug": "flippa-alternatives",
-          "title": "Flippa Alternatives: Where Else to Sell or Buy an Online Business",
-          "primary_keyword": "sites like flippa",
-          "secondary_keywords": [
-            "websites like flippa",
-            "flippa alternatives",
-            "other sites like flippa"
-          ],
-          "cluster": "selling",
-          "section": "Comparisons",
-          "words": "1,500-2,500",
-          "tool_link": "/fees/",
-          "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
-          "hold": true,
-          "hold_reason": "Names competitors and their fees",
-          "images": "1 featured image + 1 or 2 charts"
         }
       ]
     },
@@ -2105,6 +2047,69 @@
           "hold": true,
           "hold_reason": "Mentions fees; held",
           "images": "1 featured image"
+        }
+      ]
+    },
+    {
+      "day": 36,
+      "pages": [
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "selling-an-online-business-from-the-uk",
+          "title": "Selling an Online Business from the UK: A Practical Guide",
+          "primary_keyword": "sell online business uk",
+          "secondary_keywords": [
+            "sell my online business",
+            "sell website"
+          ],
+          "cluster": "selling",
+          "section": "Selling",
+          "words": "1,500-2,500",
+          "tool_link": "/sell/",
+          "brief": "Process for a UK-based seller with overseas buyers: currency, escrow, contracts in general terms; tells readers to take local tax and legal advice. Country guide: always held.",
+          "hold": true,
+          "hold_reason": "Country-specific guide",
+          "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "buying-an-online-business-from-the-gulf",
+          "title": "Buying an Online Business from the UAE or Saudi Arabia",
+          "primary_keyword": "buy online business uae",
+          "secondary_keywords": [
+            "online business for sale",
+            "buy websites"
+          ],
+          "cluster": "buying",
+          "section": "Buying",
+          "words": "1,500-2,500",
+          "tool_link": "/businesses-for-sale/",
+          "brief": "Cross-border buying in general terms: payment, escrow availability, time zones, taking local advice. Country guide: always held.",
+          "hold": true,
+          "hold_reason": "Country-specific guide",
+          "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "flippa-alternatives",
+          "title": "Flippa Alternatives: Where Else to Sell or Buy an Online Business",
+          "primary_keyword": "sites like flippa",
+          "secondary_keywords": [
+            "websites like flippa",
+            "flippa alternatives",
+            "other sites like flippa"
+          ],
+          "cluster": "selling",
+          "section": "Comparisons",
+          "words": "1,500-2,500",
+          "tool_link": "/fees/",
+          "brief": "Fair comparison of marketplace types and named alternatives using only facts from each site's own public pages, opened on the day. Competitor content: always held for approval.",
+          "hold": true,
+          "hold_reason": "Names competitors and their fees",
+          "images": "1 featured image + 1 or 2 charts"
         }
       ]
     }

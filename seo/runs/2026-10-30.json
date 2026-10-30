@@ -1,0 +1,33 @@
+{
+  "summary": "Wrote 1 article (red flags when buying a website) and 3 reference pages (fair price for a small SaaS, technical debt, key person risk); none held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/red-flags-when-buying-a-website/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/how-to-spot-a-fake-website-listing/, /guides/digital-business-due-diligence/, /guides/how-to-verify-website-revenue/; this is a 14-flag long guide with a worked example and links to them)",
+     "images": "1 featured, 2 charts",
+     "keywords": ["buying a website red flags", "website for sale scam", "buy websites", "due diligence checklist for buying a business", "how to buy an online business"],
+     "note": "Cites SBA (sba-buy) from sources.json only; no fraud statistics. Worked example uses invented figures and the website default 3.2x. Releases 6:00 am Pakistan on 31 Oct. Earlier runs skipped this topic as overlapping; it was written this run because the article slot must not be left empty."},
+    {"path": "/guides/what-is-a-fair-price-for-a-small-saas/", "action": "new", "type": "Question answered", "score": 8.5,
+     "duplicate": "pass (closest: /guides/saas-valuation/, /guides/saas-valuation-multiples/)",
+     "images": "1 featured",
+     "keywords": ["saas business valuation", "saas company valuation", "saas worth"],
+     "note": "Only VALUERAQ default multiples (2.0x/3.5x/5.0x) and adjustment rules from app/valuation.py. Releases 12:00 am Pakistan on 31 Oct."},
+    {"path": "/glossary/technical-debt/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /guides/saas-metrics-buyers-check/)",
+     "images": "1 featured",
+     "keywords": ["technical debt", "tech debt"],
+     "note": "No outside facts; invented example. Releases 12:00 pm Pakistan on 31 Oct."},
+    {"path": "/glossary/key-person-risk/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/customer-concentration/)",
+     "images": "1 featured",
+     "keywords": ["key person risk", "owner dependence"],
+     "note": "Uses the owner-hours rule from app/valuation.py. Releases 6:00 pm Pakistan on 31 Oct."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 123 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 1 (SBA, from verified sources.json), not re-opened (web access refused)"],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json. Render rankings snapshot was read (secondary keywords chosen from it).",
+    "Skipped the held country and competitor articles again (UK seller, UAE/Saudi buyer, Flippa alternatives): no verified sources. They were moved to the end of the calendar as day 36.",
+    "Publish times: 19:00Z 30 Oct, 01:00Z, 07:00Z, 13:00Z 31 Oct. Nothing held."
+  ]
+}
