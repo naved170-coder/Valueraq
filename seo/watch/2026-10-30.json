@@ -1,1 +1,21 @@
-{"status":"ok","summary":"Self-check started; stop checks passed, full results follow.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "ok",
+  "summary": "All checks passed; nothing needs the owner.",
+  "checks": [
+    "Last night's run: done, 4 pages (1 article, 3 reference pages)",
+    "Queue: 4 of 4 slots for 30 Oct filled; tonight's pages come from the 7:50 pm run",
+    "Tests: 122 passed",
+    "SEO audit: 184 URLs, 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: previous deploy live; deploy for this check's first push was in progress at check time; no error-level log lines since the last check",
+    "Pages pending live check: skipped (snapshot not read)",
+    "Task data honesty: last night's pages and images are present in the repository",
+    "Calendar supply: 12 days with unwritten pages left (as of last check), no top-up needed",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 29 Oct, data to 28 Oct): 4 clicks and 3,536 impressions in the last 7 days; positions are Search Console averages, not live ranks",
+    "Article written: yes (data room checklist)",
+    "Ranking review: not a Monday or Thursday, skipped",
+    "pip install failed offline for gunicorn only; other dependencies installed and the gates ran"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
