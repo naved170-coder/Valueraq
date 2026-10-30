@@ -70,9 +70,21 @@ def totals(win):
     r = db.query("SELECT SUM(clicks) c, SUM(impressions) i, SUM(position * impressions) pw, COUNT(DISTINCT query) q, "
                  "COUNT(DISTINCT page) p FROM gsc_daily WHERE date BETWEEN ? AND ?", win, one=True)
     imp = r["i"] or 0
-    return dict(start=win[0], end=win[1], clicks=int(r["c"] or 0), impressions=int(imp),
-                ctr=round((r["c"] or 0) / imp * 100, 2) if imp else 0.0,
-                position=round(r["pw"] / imp, 1) if imp else None, queries=r["q"] or 0, pages=r["p"] or 0)
+    out = dict(start=win[0], end=win[1], clicks=int(r["c"] or 0), impressions=int(imp),
+               ctr=round((r["c"] or 0) / imp * 100, 2) if imp else 0.0,
+               position=round(r["pw"] / imp, 1) if imp else None, queries=r["q"] or 0, pages=r["p"] or 0,
+               source="searches")
+    # Google's own daily totals include searches it keeps private, so they match Search Console. Use them when
+    # every day of the window is there; the search-by-search figures stay in listed_clicks / listed_impressions.
+    d = db.query("SELECT COUNT(*) n, SUM(clicks) c, SUM(impressions) i, SUM(position * impressions) pw FROM gsc_rows "
+                 "WHERE kind='day' AND key BETWEEN ? AND ?", win, one=True)
+    days = (datetime.date.fromisoformat(win[1]) - datetime.date.fromisoformat(win[0])).days + 1
+    if d and d["n"] == days:
+        gi = d["i"] or 0
+        out.update(listed_clicks=out["clicks"], listed_impressions=out["impressions"], source="google",
+                   clicks=int(d["c"] or 0), impressions=int(gi), ctr=round((d["c"] or 0) / gi * 100, 2) if gi else 0.0,
+                   position=round(d["pw"] / gi, 1) if gi else None)
+    return out
 
 
 def bucket(pos):

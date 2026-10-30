@@ -1904,6 +1904,17 @@ class Rankings(Base):
             self.assertGreater(rankings.follow_up(today=dt.date(2031, 5, 13)), 0)
             self.assertIn("then", db.query("SELECT result FROM rank_actions WHERE id=?", (act["id"],), one=True)["result"])
 
+    def test_dashboard_totals_use_google_daily_totals(self):
+        from app import rankings
+        with self.app.app_context():
+            db.execute("INSERT INTO gsc_daily(date, query, page, country, device, clicks, impressions, ctr, position) "
+                       "VALUES ('2031-05-01','a','/x','usa','DESKTOP',1,100,0.01,50)")
+            win = ("2031-05-01", "2031-05-01")
+            self.assertEqual(rankings.totals(win)["source"], "searches")
+            db.execute("INSERT INTO gsc_rows(kind, key, clicks, impressions, ctr, position) VALUES ('day','2031-05-01',4,130,0.03,40)")
+            t = rankings.totals(win)
+            self.assertEqual((t["clicks"], t["impressions"], t["position"], t["listed_clicks"]), (4, 130, 40.0, 1))
+
     def test_website_writes_review_on_mondays_and_thursdays(self):
         import datetime as dt
         from app import rankings

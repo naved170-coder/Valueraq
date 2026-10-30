@@ -12,6 +12,7 @@
 {% for label, t in [('Last 3 days', a.t3), ('Previous 3 days', a.p3), ('Last 7 days', a.t7), ('Previous 7 days', a.p7), ('Last 28 days', a.t28), ('Previous 28 days', a.p28)] %}{% if t %}
 <tr><th scope="row">{{ label }}<br><span class="muted">{{ t.start }} to {{ t.end }}</span></th><td class="r">{{ t.clicks }}</td><td class="r">{{ t.impressions }}</td><td class="r">{{ t.ctr }}%</td><td class="r">{{ pos(t.position) }}</td><td class="r">{{ t.queries }}</td><td class="r">{{ t.pages }}</td></tr>{% endif %}{% endfor %}
 </tbody></table></div>
+<p class="muted">Clicks, impressions, CTR and average position are Google's own daily totals, the same figures as Search Console (its "28 days" may include one more, still incomplete day). Google keeps the wording of rare searches private, so the search-by-search tables below add up to less{% if a.t28 and a.t28.listed_clicks is defined %}: in the last 28 days they cover {{ a.t28.listed_clicks }} of {{ a.t28.clicks }} clicks and {{ a.t28.listed_impressions }} of {{ a.t28.impressions }} impressions{% endif %}.</p>
 <h3 class="mt">This week at a glance</h3>
 <div class="table-wrap"><table><tbody>
 <tr><th scope="row">Entered the top 3 / top 10 / top 20 (last 7 days)</th><td class="r">{{ a.entered.top3 }} / {{ a.entered.top10 }} / {{ a.entered.top20 }}</td></tr>
