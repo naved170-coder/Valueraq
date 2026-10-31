@@ -1,0 +1,38 @@
+{
+  "summary": "Wrote 1 article (how to buy an ecommerce business) and 3 reference pages (platform risk, seasonality, how to read a profit and loss statement); none held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-buy-an-ecommerce-business/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/ecommerce-valuation/, /guides/how-to-buy-a-website/, /guides/buying-digital-businesses/; this one covers screening, stock count, suppliers, channels and transfer for stores, and links to them)",
+     "images": "1 featured, 2 charts",
+     "keywords": ["buy ecommerce business", "buying a business online", "ecommerce business for sale", "ecommerce stores for sale", "online stores for sale"],
+     "note": "Cites SBA (sba-buy) and BizBuySell (bizbuysell-addbacks) from sources.json only; no market statistics. Worked example uses invented figures and the ecommerce defaults from app/valuation.py. Secondary keyword 'buying a business online' taken from the Render rankings snapshot. Releases 6:00 am Pakistan on 1 Nov."},
+    {"path": "/glossary/platform-risk/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/customer-concentration/)",
+     "images": "1 featured",
+     "keywords": ["platform risk", "platform dependency", "channel concentration"],
+     "note": "Uses only the channel, affiliate and model-provider adjustments from app/valuation.py. Invented example. Releases 12:00 am Pakistan on 1 Nov."},
+    {"path": "/glossary/seasonality/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/trailing-twelve-months/, /glossary/run-rate/)",
+     "images": "1 featured",
+     "keywords": ["seasonality", "seasonal business", "seasonal revenue"],
+     "note": "Paraphrases the CFI run-rate source (seasonality listed as a risk). Invented example with arithmetic shown. Releases 12:00 pm Pakistan on 1 Nov."},
+    {"path": "/guides/how-to-read-a-profit-and-loss-statement/", "action": "new", "type": "Question answered", "score": 8.5,
+     "duplicate": "pass (closest: /guides/financial-due-diligence-checklist/, /guides/how-to-calculate-sde/; this page is a short how-to-read answer and links to both)",
+     "images": "1 featured",
+     "keywords": ["read profit and loss statement", "profit and loss statement", "how to read a p&l"],
+     "note": "Quotes SBA and BizBuySell from sources.json. Invented example. Releases 6:00 pm Pakistan on 1 Nov."},
+    {"path": "/guides/how-to-value-a-newsletter-with-sponsors/", "action": "skipped", "type": "Question answered", "score": null,
+     "duplicate": "overlaps /guides/newsletter-valuation/ (already has a sponsor-funded worked example) and /glossary/sponsorship-revenue/",
+     "images": "none", "keywords": ["newsletter valuation"],
+     "note": "Duplicate topic: removed from the calendar and replaced with 'How Accurate Is a Business Valuation Calculator?' (keyword 'business valuation calculator' from keywords.json, Valuation calculators cluster) at the end of day 36."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 123 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken (seo-check)", "External links: 2 (SBA, BizBuySell, from verified sources.json), not re-opened (web access not used)"],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json. The Render rankings snapshot was read (secondary keyword chosen from its new searches).",
+    "Held country and competitor articles (UK seller, UAE/Saudi buyer, Flippa alternatives) are still at the end of the calendar with no verified sources; they were not touched.",
+    "Publish times: 19:00Z 31 Oct, 01:00Z, 07:00Z and 13:00Z on 1 Nov. Nothing held.",
+    "pip install could not resolve gunicorn in this environment, but the app, tests and audit run fine without it."
+  ]
+}

@@ -1501,20 +1501,6 @@
           "words": "300-600",
           "hold": false,
           "images": "1 featured image"
-        },
-        {
-          "kind": "guides",
-          "type": "Question answered",
-          "slug": "how-to-value-a-newsletter-with-sponsors",
-          "title": "How Do You Value a Newsletter That Earns from Sponsors?",
-          "primary_keyword": "newsletter valuation",
-          "cluster": "newsletter",
-          "section": "Quick answers",
-          "words": "300-600",
-          "tool_link": "/tools/newsletter-valuation/",
-          "hold": false,
-          "hold_reason": null,
-          "images": "1 featured image"
         }
       ]
     },
@@ -2110,6 +2096,20 @@
           "hold": true,
           "hold_reason": "Names competitors and their fees",
           "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "guides",
+          "type": "Question answered",
+          "slug": "how-accurate-is-a-business-valuation-calculator",
+          "title": "How Accurate Is a Business Valuation Calculator?",
+          "primary_keyword": "business valuation calculator",
+          "cluster": "analysis",
+          "section": "Quick answers",
+          "words": "300-600",
+          "tool_link": "/calculators/business-multiple-calculator/",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
         }
       ]
     }
