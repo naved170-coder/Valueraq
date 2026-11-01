@@ -1,6 +1,6 @@
 {
-  "status": "ok",
-  "summary": "All checks passed; nothing needs the owner.",
+  "status": "fixed",
+  "summary": "All checks passed; the content calendar was topped up with 3 new days.",
   "checks": [
     "Last night's run: done (31 Oct), 4 pages (1 article, 3 reference pages)",
     "Queue: slots for 1 Nov up to 13:00Z filled; tonight's pages come from the 7:50 pm run",
@@ -9,13 +9,15 @@
     "Deploy: newest deploy live; no error-level log lines since the last check",
     "Pages pending live check: skipped (snapshot not read)",
     "Task data honesty: last night's pages and images are present in the repository",
-    "Calendar supply: 36 calendar days listed, no top-up needed yet",
+    "Calendar supply: 8 days with unwritten pages left (below 10); topped up to 11",
     "Approvals: 0 held pages in content",
     "Search figures: snapshot saved daily (latest 1 Nov, data to 31 Oct): 3 clicks and 3,567 impressions in the last 7 days; 28 days: 28 clicks, 13,049 impressions; positions are Search Console averages, not live ranks",
     "Article written: yes (how to buy an ecommerce business)",
     "Ranking review: not a Monday or Thursday, skipped",
     "pip install failed offline for gunicorn only; other dependencies installed and the gates ran"
   ],
-  "fixed": [],
+  "fixed": [
+    "Added days 37 to 39 to the content calendar (12 new pages: website flipping, Shopify buying, app buying, glossary terms and quick answers), each topic checked against existing pages and the calendar for duplicates"
+  ],
   "needs_owner": []
 }

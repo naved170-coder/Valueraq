@@ -2112,6 +2112,192 @@
           "images": "1 featured image"
         }
       ]
+    },
+    {
+      "day": 37,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "website-flipping",
+          "title": "What Is Website Flipping?",
+          "term": "Website Flipping",
+          "primary_keyword": "website flipping",
+          "cluster": "website",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "website-flipping-guide",
+          "title": "Website Flipping: How It Works and What to Check",
+          "primary_keyword": "website flipping",
+          "secondary_keywords": [
+            "flipping websites",
+            "website flipping sites"
+          ],
+          "cluster": "website",
+          "section": "Buying",
+          "words": "1,500-2,500",
+          "tool_link": "/tools/website-valuation/",
+          "brief": "Plain explanation of buying a site, improving it and reselling; what changes value, holding costs, due diligence and realistic risks. Worked example with invented figures and default multiples. No promised returns; link to red flags and ROI pages.",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "premium-domain",
+          "title": "What Is Premium Domain?",
+          "term": "Premium Domain",
+          "primary_keyword": "buy premium domain",
+          "cluster": "domains",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Question answered",
+          "slug": "how-to-determine-enterprise-value",
+          "title": "How Do You Determine Enterprise Value?",
+          "primary_keyword": "how to determine enterprise value",
+          "cluster": "analysis",
+          "section": "Quick answers",
+          "words": "300-600",
+          "tool_link": "/tools/",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
+    },
+    {
+      "day": 38,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "domain-broker",
+          "title": "What Is Domain Broker?",
+          "term": "Domain Broker",
+          "primary_keyword": "premium domain broker",
+          "cluster": "domains",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "how-to-buy-a-shopify-store",
+          "title": "How to Buy a Shopify Store: Checks Before You Pay",
+          "primary_keyword": "shopify business for sale",
+          "secondary_keywords": [
+            "buy a store",
+            "buy shopify store"
+          ],
+          "cluster": "ecommerce",
+          "section": "Buying",
+          "words": "1,500-2,500",
+          "tool_link": "/tools/ecommerce-valuation/",
+          "brief": "Shopify-specific buying steps: store admin access, app dependencies, theme and domain ownership, supplier terms, payment processor history. Must not repeat the general ecommerce buying guide; link to it and to the Shopify transfer guide.",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "earn-out",
+          "title": "What Is Earn-Out?",
+          "term": "Earn-Out",
+          "primary_keyword": "earn out",
+          "cluster": "buying",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Question answered",
+          "slug": "how-to-find-the-book-value-of-a-company",
+          "title": "How Do You Find the Book Value of a Company?",
+          "primary_keyword": "how to find the book value of a company",
+          "cluster": "analysis",
+          "section": "Quick answers",
+          "words": "300-600",
+          "tool_link": "/tools/",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
+    },
+    {
+      "day": 39,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "customer-acquisition-cost",
+          "title": "What Is Customer Acquisition Cost?",
+          "term": "Customer Acquisition Cost",
+          "primary_keyword": "customer acquisition cost",
+          "cluster": "saas",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Article",
+          "slug": "how-to-buy-an-app",
+          "title": "How to Buy an App: What to Check Before You Pay",
+          "primary_keyword": "mobile apps for sale",
+          "secondary_keywords": [
+            "apps for sale",
+            "buy an app"
+          ],
+          "cluster": "apps",
+          "section": "Buying",
+          "words": "1,500-2,500",
+          "tool_link": "/tools/app-valuation/",
+          "brief": "Buyer steps for apps: developer account transfer, store policy, source code and backend access, user and revenue evidence, subscription data. Link to the app transfer and app valuation pages without repeating them.",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image + 1 or 2 charts"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "lifetime-value",
+          "title": "What Is Customer Lifetime Value?",
+          "term": "Customer Lifetime Value",
+          "primary_keyword": "customer lifetime value",
+          "cluster": "saas",
+          "words": "300-600",
+          "hold": false,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "guides",
+          "type": "Question answered",
+          "slug": "how-to-buy-a-domain-name",
+          "title": "How Do You Buy a Domain Name Safely?",
+          "primary_keyword": "domain marketplace",
+          "cluster": "domains",
+          "section": "Quick answers",
+          "words": "300-600",
+          "tool_link": "/tools/domain-valuation/",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
     }
   ]
 }
