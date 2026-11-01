@@ -7,8 +7,8 @@ meta_description: A revenue multiple is a business's price divided by its annual
 h1: Revenue Multiple
 definition: A revenue multiple is a business's price or value divided by its annual revenue, showing how many years of revenue a buyer is paying for.
 cluster: analysis
-related: /glossary/profit-multiple/, /guides/revenue-vs-profit-multiples/, /calculators/business-multiple-calculator/, /glossary/arr/
-updated: 2026-09-30
+related: /glossary/profit-multiple/, /guides/revenue-vs-profit-multiples/, /calculators/business-multiple-calculator/, /glossary/arr/, /glossary/valuation-multiple/
+updated: 2026-11-01
 ---
 
 ## Formula
@@ -40,3 +40,5 @@ At 3.5× revenue, a business with a 40% margin is priced at 8.75× profit; one w
 ## Revenue multiples on {{BRAND}}
 
 The [SaaS](/tools/saas-valuation/) and [AI](/tools/ai-business-valuation/) tools use ARR multiples. Every marketplace listing shows its implied revenue multiple, and the [Business Multiple Calculator](/calculators/business-multiple-calculator/) calculates it for any price.
+
+For the general idea behind both kinds of multiple, see [valuation multiple](/glossary/valuation-multiple/).

@@ -7,8 +7,8 @@ meta_description: A profit multiple is a business's price divided by its annual 
 h1: Profit Multiple
 definition: A profit multiple is a business's price or value divided by its annual profit, usually seller's discretionary earnings (SDE) or EBITDA, showing how many years of current profit a buyer is paying for.
 cluster: analysis
-related: /glossary/sde/, /glossary/revenue-multiple/, /calculators/website-worth-calculator/, /calculators/business-multiple-calculator/
-updated: 2026-09-30
+related: /glossary/sde/, /glossary/revenue-multiple/, /calculators/website-worth-calculator/, /calculators/business-multiple-calculator/, /guides/how-to-calculate-sde/
+updated: 2026-11-01
 ---
 
 ## Formula
@@ -40,3 +40,5 @@ The website, app, newsletter and ecommerce [tools](/tools/) value businesses as 
 ## Profit vs revenue multiples
 
 Profit multiples reflect what the owner keeps, which is why they're standard for owner-run online businesses. [Revenue multiples](/glossary/revenue-multiple/) are more common for SaaS. See [revenue vs profit multiples](/guides/revenue-vs-profit-multiples/).
+
+The profit in the formula is usually [SDE](/glossary/sde/). To build it step by step from a profit and loss statement, see [how to calculate SDE](/guides/how-to-calculate-sde/).

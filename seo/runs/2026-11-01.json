@@ -1,0 +1,92 @@
+{
+  "summary": "1st of the month: wrote 1 article (micro-SaaS valuation) and 1 reference page (year-over-year growth), and refreshed 5 glossary pages; nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/micro-saas-valuation/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/saas-valuation/, /guides/saas-valuation-methods/, /guides/what-is-a-fair-price-for-a-small-saas/; this one covers small-count churn, founder hours and profit-vs-ARR for very small products, and links to them)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "micro saas valuation",
+        "saas startup valuation",
+        "saas company valuation",
+        "saas for sale",
+        "small saas valuation"
+      ],
+      "note": "Cites Stripe, BizBuySell and SBA from sources.json only. Invented example; every figure computed with app/valuation.py rules. Releases 6:00 am Pakistan on 2 Nov."
+    },
+    {
+      "path": "/glossary/year-over-year-growth/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/trailing-twelve-months/, /glossary/run-rate/)",
+      "images": "1 featured",
+      "keywords": [
+        "year-over-year growth",
+        "yoy growth",
+        "year over year revenue growth"
+      ],
+      "note": "Uses only the revenue-trend bands from app/valuation.py. Releases 12:00 am Pakistan on 2 Nov."
+    },
+    {
+      "path": "/glossary/churn/",
+      "action": "refresh",
+      "type": "Glossary term",
+      "note": "Multiples and churn bands match app/valuation.py; arithmetic table rechecked; added links to revenue churn and SaaS metrics guide."
+    },
+    {
+      "path": "/glossary/customer-concentration/",
+      "action": "refresh",
+      "type": "Glossary term",
+      "note": "6%/12% bands match app/valuation.py; fixed methodology link anchor; added platform-risk link."
+    },
+    {
+      "path": "/glossary/mrr/",
+      "action": "refresh",
+      "type": "Glossary term",
+      "note": "Example arithmetic rechecked; added run-rate and SaaS metrics links."
+    },
+    {
+      "path": "/glossary/profit-multiple/",
+      "action": "refresh",
+      "type": "Glossary term",
+      "note": "Arithmetic rechecked; added SDE and how-to-calculate-SDE links."
+    },
+    {
+      "path": "/glossary/revenue-multiple/",
+      "action": "refresh",
+      "type": "Glossary term",
+      "note": "Arithmetic rechecked; added valuation-multiple link."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report",
+    "refresh"
+  ],
+  "checks": [
+    "Tests: 123 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: 3 (Stripe, BizBuySell, SBA, from verified sources.json), not re-opened (web access not used)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; sources came from seo/sources.json. Refreshes could not re-open external sources, so they checked multiples, arithmetic and internal links only.",
+    "The Render rankings snapshot was read; 'saas company valuation' and 'saas for sale' style queries guided the article's secondary keywords.",
+    "Publish times: 19:00Z 1 Nov and 01:00Z 2 Nov. Nothing held.",
+    "pip install could not resolve gunicorn here, but the app, tests and audit run fine without it."
+  ]
+}

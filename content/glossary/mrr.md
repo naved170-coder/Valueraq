@@ -7,8 +7,8 @@ meta_description: MRR is the monthly value of active subscriptions. See how to c
 h1: MRR (Monthly Recurring Revenue)
 definition: Monthly recurring revenue (MRR) is the predictable subscription revenue a business expects to receive each month from its active customers.
 cluster: saas
-related: /glossary/arr/, /glossary/churn/, /tools/saas-valuation/, /guides/saas-valuation/
-updated: 2026-09-30
+related: /glossary/arr/, /glossary/churn/, /tools/saas-valuation/, /guides/saas-valuation/, /glossary/run-rate/, /guides/saas-metrics-buyers-check/
+updated: 2026-11-01
 ---
 
 ## Formula
@@ -46,3 +46,5 @@ Net new MRR = $1,500 + $400 − $200 − $600 = $1,100. **Closing MRR = $16,100.
 ## Why MRR matters for valuation
 
 MRR is the input to [ARR](/glossary/arr/) (MRR × 12), which is the base of most SaaS valuations. Its month-by-month trend shows growth and [churn](/glossary/churn/) more clearly than annual figures. The [SaaS Valuation Tool](/tools/saas-valuation/) asks for current MRR.
+
+MRR is a current figure. To turn a recent period into an annual one, see [run rate](/glossary/run-rate/); for the other numbers buyers ask for, see [SaaS metrics buyers check](/guides/saas-metrics-buyers-check/).

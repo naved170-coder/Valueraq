@@ -7,8 +7,8 @@ meta_description: Churn is the share of customers or revenue lost in a period. L
 h1: Churn Rate
 definition: Churn is the share of customers, or of recurring revenue, that a subscription business loses over a period, usually measured monthly.
 cluster: saas
-related: /glossary/mrr/, /glossary/ltv/, /tools/saas-valuation/, /guides/saas-valuation/
-updated: 2026-09-30
+related: /glossary/mrr/, /glossary/ltv/, /tools/saas-valuation/, /guides/saas-valuation/, /glossary/revenue-churn/, /guides/saas-metrics-buyers-check/
+updated: 2026-11-01
 ---
 
 ## Formulas
@@ -45,3 +45,5 @@ These are arithmetic results, not benchmarks.
 High churn means a business must win many new customers just to keep revenue flat, so buyers pay less for each dollar of recurring revenue. {{BRAND}}'s [SaaS](/tools/saas-valuation/) and [AI](/tools/ai-business-valuation/) tools raise the multiple for monthly churn under 2% and lower it for churn above 5%.
 
 Churn also sets customer lifetime: an average lifetime of roughly 1 ÷ monthly churn months, which feeds into [LTV](/glossary/ltv/).
+
+See also [revenue churn](/glossary/revenue-churn/) for the dollar version, and [SaaS metrics buyers check](/guides/saas-metrics-buyers-check/) for how buyers read churn alongside margin and growth.

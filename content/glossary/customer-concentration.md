@@ -7,8 +7,8 @@ meta_description: Customer concentration measures how much revenue depends on a 
 h1: Customer Concentration
 definition: Customer concentration is the degree to which a business's revenue depends on a small number of customers, sponsors, partners or programmes.
 cluster: analysis
-related: /tools/saas-valuation/, /tools/newsletter-valuation/, /glossary/churn/, /guides/digital-business-due-diligence/
-updated: 2026-09-30
+related: /tools/saas-valuation/, /tools/newsletter-valuation/, /glossary/churn/, /guides/digital-business-due-diligence/, /glossary/platform-risk/
+updated: 2026-11-01
 ---
 
 ## How to measure it
@@ -31,7 +31,7 @@ If that sponsor stopped, the newsletter would lose nearly a third of its revenue
 
 When a large share of revenue depends on one relationship, a buyer is partly buying that relationship, which could end with the sale or at any time after. Buyers reduce what they'll pay, ask for contracts to be assigned, or request an earn-out tied to the customer staying.
 
-{{BRAND}}'s tools lower the multiple by 6% when one customer provides more than 15% of revenue, and by 12% above 30%. The thresholds are published in the [methodology](/methodology/#adjustments).
+{{BRAND}}'s tools lower the multiple by 6% when one customer provides more than 15% of revenue, and by 12% above 30%. The thresholds are published in the [methodology](/methodology/).
 
 ## Reducing concentration before a sale
 
@@ -39,3 +39,5 @@ When a large share of revenue depends on one relationship, a buyer is partly buy
 - Put long-term contracts in writing with key customers.
 - Diversify affiliate programmes or ad networks.
 - Document the relationship history, so a buyer can judge how stable it is.
+
+A related risk is [platform risk](/glossary/platform-risk/): depending on one channel or marketplace instead of one customer.
