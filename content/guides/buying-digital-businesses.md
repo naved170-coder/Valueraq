@@ -8,7 +8,7 @@ cluster: buying
 order: 10
 answer: To buy an online business, decide what you want to own and can run, shortlist listings whose figures match, check each asking price against its earnings, verify every important figure through due diligence, agree terms in a written purchase agreement, pay through escrow, and follow a planned handover of every asset and account.
 published: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-02
 related: /businesses-for-sale/, /guides/digital-business-due-diligence/, /calculators/business-multiple-calculator/, /glossary/due-diligence/
 cta: /businesses-for-sale/
 cta_text: Browse digital businesses for sale, with implied multiples calculated on every listing.
@@ -84,7 +84,7 @@ Many small online acquisitions are paid in cash. Some buyers use seller financin
 
 ### How much does it cost to buy an online business?
 
-Prices range from a few thousand dollars for small sites to millions for established SaaS. Price follows earnings and risk; see [how digital businesses are valued](/guides/business-valuation/).
+Prices range from a few thousand dollars for small sites to millions for established SaaS. Price follows earnings and risk; see [digital valuation explained](/guides/business-valuation/), which covers how digital businesses are valued.
 
 ### Is it safer to buy than to build?
 

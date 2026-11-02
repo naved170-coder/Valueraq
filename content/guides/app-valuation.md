@@ -8,7 +8,7 @@ cluster: app
 order: 6
 answer: Most small mobile apps are valued as a multiple of annual net profit. The multiple is higher for subscription revenue, availability on both major app stores, steady growth and a low owner workload, and lower for ad-funded or paid-download apps, heavy reliance on one acquisition channel, a short history and declining revenue. Download counts alone do not set the price.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-02
 methodology_version: 1.0
 related: /tools/app-valuation/, /businesses-for-sale/apps/, /glossary/sde/, /glossary/churn/, /glossary/cac/, /guides/business-valuation/
 cta: /tools/app-valuation/
@@ -84,7 +84,7 @@ A hypothetical subscription app:
 | Age | 3 years |
 | Owner time | 12 hours a week |
 
-Subscription revenue adds 5% to the multiple and being on both stores adds 3%. Getting 65% of installs from one channel takes off 6%. Growth of 5% counts as roughly flat, and age and owner time sit in their baseline bands. Multiplied together (1.05 × 1.03 × 0.94), the combined adjustment is about +1.7%, giving an adjusted multiple of roughly 2.0× to 3.6× annual profit: around $134,000 to $235,000, with a midpoint near $181,000. The [App Valuation Tool](/tools/app-valuation/) opens with these figures.
+Subscription revenue adds 5% to the multiple and being on both stores adds 3%. Getting 65% of installs from one channel takes off 6%. Growth of 5% counts as roughly flat, and age and owner time sit in their baseline bands. Multiplied together (1.05 × 1.03 × 0.94), the combined adjustment is about +1.7%, giving an adjusted multiple of roughly 2.0× to 3.6× annual profit: around $134,000 to $235,000, with a midpoint near $181,000. The [mobile app estimation tool](/tools/app-valuation/) (the App Valuation Tool) opens with these figures.
 
 These numbers are illustrative, not market data.
 

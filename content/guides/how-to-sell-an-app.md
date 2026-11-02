@@ -10,7 +10,7 @@ page_type: article
 answer: To sell a mobile app, work out its annual net profit, price it with a profit multiple, gather 12 months of store payouts and user data, list it with honest figures, agree terms in writing, and then transfer it through Apple's or Google's own app transfer process so reviews, ratings and users move with it.
 keywords: sell app business, apps for sale, mobile apps for sale, sell your app online
 published: 2026-10-22
-updated: 2026-10-22
+updated: 2026-11-02
 publish_at: 2026-10-22T01:00Z
 image: /static/img/articles/how-to-sell-an-app.png
 image_alt: Featured image for the guide How to Sell a Mobile App
@@ -172,7 +172,7 @@ Check Apple's and Google's current pages before you start. The stores change the
 
 ### How much can I sell my app for?
 
-It depends mainly on profit, revenue model, growth and how much of the income depends on you or one channel. VALUERAQ's default range is 2.0 to 3.5 times annual net profit, adjusted by published rules. Use the [App Valuation Tool](/tools/app-valuation/) for an estimate, and treat the result as a starting point for negotiation.
+It depends mainly on profit, revenue model, growth and how much of the income depends on you or one channel. VALUERAQ's default range is 2.0 to 3.5 times annual net profit, adjusted by published rules. Use the free [mobile app estimation tool](/tools/app-valuation/) for an estimate, and treat the result as a starting point for negotiation.
 
 ### Can I sell an app that makes no money?
 

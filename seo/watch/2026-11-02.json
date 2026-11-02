@@ -1,1 +1,41 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; two ranking actions carried out with link edits, and the weekly report is added.",
+  "checks": [
+    "Last night's run: done (1 Nov), 2 pages (1 article, 1 reference page) plus 5 glossary refreshes",
+    "Queue: 2 of 2 slots filled (19:00Z 1 Nov and 01:00Z 2 Nov); two pages a day is the normal rate from day 30",
+    "Tests: 123 passed",
+    "SEO audit: 196 URLs, 192 indexable, 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy live; no error-level log lines since the last check",
+    "Pages pending live check: skipped (snapshot not read)",
+    "Task data honesty: last night's pages and images are present in the repository",
+    "Calendar supply: 11 days with unwritten pages left (10 or more, no top-up needed)",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 1 Nov, data to 31 Oct); positions are Search Console averages, not live ranks",
+    "Article written: yes (micro-SaaS valuation)",
+    "Ranking review (Monday): carried out 2 of the 3 allowed actions; the rest are tool-page edits outside what the check may change",
+    "pip install failed offline for gunicorn only; the gates ran fine"
+  ],
+  "fixed": [
+    "Ranking action 'mobile app estimation' (6cf6ac20c960): linked the phrase to the App Valuation Tool from the app valuation and how-to-sell-an-app guides; the tool page itself was not edited (outside the allowed area)",
+    "Ranking action 'digital valuation' (1419df8afb32): linked the phrase to the business valuation guide from the buying and selling digital businesses guides"
+  ],
+  "needs_owner": [],
+  "weekly": {
+    "summary": "A steady week: about 29 pages released, nothing held, no missed runs, and Google impressions are flat-to-slightly-up while clicks are low.",
+    "lines": [
+      "Pages released in the last 7 days: about 29 (12 articles and 17 reference pages).",
+      "Pages held and still waiting: 0.",
+      "Days with a missed run: 0.",
+      "Repairs made: 2 ranking-action link fixes today, and a calendar top-up on 1 Nov.",
+      "Broken links found: 0.",
+      "Unwritten days left in the calendar: 11.",
+      "Coming next: unit economics, website valuation for a new site, contribution margin.",
+      "Search Console, last 28 days (to 31 Oct): 28 clicks and 13,359 impressions (28 days before were not in the snapshot); last 7 days: 3 clicks and 3,877 impressions against 15 clicks and 4,423 impressions the week before.",
+      "Pages shown in Google: 124 in the last 28 days.",
+      "Click rate is about 0.08% over the last 7 days, so titles on pages with many impressions need work.",
+      "Searches in the 4-10 group: 35; in the 11-20 group: 48 (the best targets for improvement). 'mobile app estimation' sits near position 4.9 and 'buying business through internet' near 8.0.",
+      "No topics were moved in the calendar this week."
+    ]
+  }
+}

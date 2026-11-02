@@ -8,7 +8,7 @@ cluster: selling
 order: 20
 answer: To sell a digital business, start by valuing it from 12 months of verified profit, then prepare clean records and documentation, reduce the risks buyers discount for, set a price you can justify, list it with complete figures, answer due-diligence requests quickly, agree terms in writing, and close through escrow with a planned handover.
 published: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-02
 related: /sell/, /tools/, /guides/business-valuation/, /guides/digital-business-due-diligence/
 cta: /tools/
 cta_text: Value your business before you list it, and see which factors are lowering its multiple.
@@ -82,7 +82,7 @@ It varies with price, quality and demand. Preparation often takes longer than th
 
 ### What multiple can I expect?
 
-It depends on the business's age, growth and risks. See [how digital businesses are valued](/guides/business-valuation/) and run the [tool](/tools/) for your type.
+It depends on the business's age, growth and risks. See [digital valuation explained](/guides/business-valuation/), which covers how digital businesses are valued, and run the [tool](/tools/) for your type.
 
 ### Should I tell my customers I'm selling?
 
