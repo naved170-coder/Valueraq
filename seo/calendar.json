@@ -1718,19 +1718,18 @@
         {
           "kind": "guides",
           "type": "Article",
-          "slug": "broker-vs-marketplace",
-          "title": "Business Broker or Marketplace: Which Way to Sell an Online Business",
-          "primary_keyword": "online business broker",
+          "slug": "seasonal-business-valuation",
+          "title": "How Seasonality Affects the Value of an Online Business",
+          "primary_keyword": "seasonal business valuation",
           "secondary_keywords": [
-            "domain broker",
-            "sell my online business",
-            "website broker"
+            "seasonal ecommerce business value",
+            "seasonality in business valuation"
           ],
-          "cluster": "selling",
-          "section": "Comparisons",
+          "cluster": "analysis",
+          "section": "Valuation",
           "words": "1,500-2,500",
-          "tool_link": "/fees/",
-          "brief": "How each works, typical fee structures in general terms (cite sources), what size of business suits which; no named competitor fees unless opened and cited, in which case hold.",
+          "tool_link": "/tools/ecommerce-valuation/",
+          "brief": "Why buyers look at a full 12 months, how to show a seasonal peak honestly, and a worked example of trailing-twelve-month profit for a business with a holiday peak. Own arithmetic only; link to /glossary/seasonality/ and /glossary/trailing-twelve-months/ and do not repeat them.",
           "hold": false,
           "hold_reason": null,
           "images": "1 featured image + 1 or 2 charts"

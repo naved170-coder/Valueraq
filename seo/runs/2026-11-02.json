@@ -1,0 +1,91 @@
+{
+  "summary": "Wrote 1 article (how long it takes to sell an online business) and 3 reference pages (unit economics, contribution margin, new-website valuation); nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/broker-vs-marketplace/",
+      "action": "skipped",
+      "type": "Article",
+      "duplicate": "fail (overlaps /guides/ways-to-sell-a-digital-business/, titled Broker vs Marketplace vs Selling Directly)",
+      "note": "Same search question as an existing page. Removed from the calendar and replaced with a new article, seasonal-business-valuation, in the same slot."
+    },
+    {
+      "path": "/guides/how-long-to-sell-an-online-business/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/ways-to-sell-a-digital-business/, /guides/when-to-sell-an-online-business/, /guides/how-to-sell-a-website/; this one is about the timeline of a sale, stage by stage)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "how long does it take to sell an online business",
+        "sell my online business",
+        "selling online business"
+      ],
+      "note": "Cites SBA (two pages) and BizBuySell from sources.json only. The 15, 19 and 25 week timeline is labelled as invented. Price example uses the website default range 2.5x to 4.0x from app/valuation.py. Releases 6:00 am Pakistan on 3 Nov."
+    },
+    {
+      "path": "/glossary/unit-economics/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/cac/, /glossary/ltv/, /glossary/gross-margin/)",
+      "images": "1 featured",
+      "keywords": [
+        "unit economics",
+        "unit economics formula",
+        "unit economics ecommerce"
+      ],
+      "note": "Invented per-order example, labelled. Releases 12:00 am Pakistan on 3 Nov."
+    },
+    {
+      "path": "/guides/website-valuation-for-a-new-site/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/can-you-sell-a-website-with-no-revenue/, /guides/how-to-value-a-business-with-no-profit/; this one covers the age adjustment for an earning site)",
+      "images": "1 featured",
+      "keywords": [
+        "value new website",
+        "new website valuation"
+      ],
+      "note": "Age rule (minus 20% under one year, minus 10% for one to two years) and website range match app/valuation.py. Releases 12:00 pm Pakistan on 3 Nov."
+    },
+    {
+      "path": "/glossary/contribution-margin/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/gross-margin/, /glossary/net-profit/)",
+      "images": "1 featured",
+      "keywords": [
+        "contribution margin",
+        "contribution margin formula",
+        "contribution margin vs gross margin"
+      ],
+      "note": "Invented store example, labelled. Releases 6:00 pm Pakistan on 3 Nov."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 123 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: 0 opened (web fetch unavailable); only links from seo/sources.json used"
+  ],
+  "notes": [
+    "Web search returned only broker and marketplace company blogs, so no new outside sources were added; pages cite sources already in seo/sources.json.",
+    "Calendar: broker-vs-marketplace was a duplicate of ways-to-sell-a-digital-business and was replaced by seasonal-business-valuation."
+  ]
+}
