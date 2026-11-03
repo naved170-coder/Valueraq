@@ -1,0 +1,31 @@
+{
+  "summary": "Wrote 1 article (how seasonality affects the value of an online business) and 3 reference pages (micro-SaaS, operating expenses, return on investment); nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/seasonal-business-valuation/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/seasonality/, /glossary/trailing-twelve-months/, /guides/ecommerce-valuation/; this one is the long guide on the price effect and how to show a peak, and links to the glossary pages instead of repeating them)",
+     "images": "1 featured, 2 charts",
+     "keywords": ["seasonal business valuation", "seasonal ecommerce business value", "seasonality in business valuation"],
+     "note": "Cites Corporate Finance Institute (3 pages) and the SBA from sources.json only. Gift-store example is invented and labelled; price range uses the ecommerce default 2.0x to 3.5x from app/valuation.py. Releases 6:00 am Pakistan on 4 Nov."},
+    {"path": "/glossary/micro-saas/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/saas/, /guides/micro-saas-valuation/; this one defines the term)",
+     "images": "1 featured",
+     "keywords": ["micro-saas", "what is micro saas"],
+     "note": "Quotes Stripe's MRR definition from sources.json. Example uses the SaaS default 2.0x to 5.0x ARR. Releases 12:00 am Pakistan on 4 Nov."},
+    {"path": "/glossary/operating-expenses/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/cost-of-goods-sold/, /glossary/net-profit/, /glossary/add-backs/)",
+     "images": "1 featured",
+     "keywords": ["operating expenses", "opex"],
+     "note": "Invented store example, labelled. Quotes the BizBuySell add-back warning from sources.json. Releases 12:00 pm Pakistan on 4 Nov."},
+    {"path": "/glossary/return-on-investment/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/payback-period/, /glossary/profit-multiple/)",
+     "images": "1 featured",
+     "keywords": ["return on investment", "roi formula"],
+     "note": "Invented website example, labelled, no forecast. Releases 6:00 pm Pakistan on 4 Nov."},
+    {"path": "/guides/tax-when-you-sell-a-website/", "action": "skipped", "type": "Question answered",
+     "note": "Calendar topic is a tax question and is marked hold. No verified tax source in seo/sources.json (only the IRS fair market value quote), so it cannot be written properly. Skipped once; the next three reference pages were taken instead."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 123 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 0 opened (web access not used; sources from sources.json)"],
+  "notes": ["Web research was not used; all sources come from seo/sources.json. Rankings snapshot read from Render logs (new searches include 'inventory turnover', 'how do chargebacks work', 'what is a purchase agreement').", "The tax question page was skipped for lack of a verified source; if it is skipped again tomorrow it moves to the end of the calendar."]
+}
