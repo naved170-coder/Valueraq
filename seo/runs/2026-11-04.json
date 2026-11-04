@@ -1,0 +1,33 @@
+{
+  "summary": "Wrote 1 article (ROI when buying a website) and 3 reference pages (EBIT, capitalization rate, operating income); nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-calculate-roi-when-buying-a-website/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /glossary/return-on-investment/, /glossary/payback-period/, /guides/how-to-buy-a-website/; this one is the long guide with worked purchase arithmetic and a sensitivity table, and links to the glossary pages instead of repeating them)",
+     "images": "1 featured, 2 charts",
+     "keywords": ["roi of buying a website", "website investment return", "return on investment business"],
+     "note": "Cites the SBA, BizBuySell and Corporate Finance Institute from sources.json only. All dollar examples are invented and labelled; multiples are VALUERAQ's website default 2.5x to 4.0x from app/valuation.py. Releases 6:00 am Pakistan on 5 Nov."},
+    {"path": "/glossary/ebit/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/ebitda/, /glossary/net-profit/, /guides/sde-vs-ebitda/)",
+     "images": "1 featured",
+     "keywords": ["ebit", "ebit formula"],
+     "note": "Own arithmetic, invented store example, labelled. Releases 12:00 am Pakistan on 5 Nov."},
+    {"path": "/glossary/capitalization-rate/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/profit-multiple/, /glossary/return-on-investment/; this one defines the rate and links it to the multiple)",
+     "images": "1 featured",
+     "keywords": ["capitalization rate", "cap rate"],
+     "note": "Own arithmetic, invented website example, labelled. Releases 12:00 pm Pakistan on 5 Nov."},
+    {"path": "/glossary/operating-income/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/ebit/, /glossary/gross-profit/, /glossary/net-profit/)",
+     "images": "1 featured",
+     "keywords": ["operating income", "operating profit"],
+     "note": "Own arithmetic, invented newsletter example, labelled. Releases 6:00 pm Pakistan on 5 Nov."},
+    {"path": "/guides/tax-when-you-sell-a-website/", "action": "skipped", "type": "Question answered",
+     "note": "Held tax topic with no verified tax source in seo/sources.json. Skipped for the second run, so it was moved to the end of the calendar."},
+    {"path": "/guides/how-to-transfer-a-shopify-store/", "action": "skipped", "type": "Question answered",
+     "note": "No verified Shopify source in seo/sources.json and it overlaps /guides/how-to-sell-a-shopify-store/ and /guides/how-to-transfer-a-website-to-a-new-owner/. Skipped once; the next reference page was taken instead."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
+  "checks": ["Tests: 123 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 0 opened (web access not used; sources from sources.json)"],
+  "notes": ["Web research was not used; all sources come from seo/sources.json. Rankings snapshot read from Render logs (new searches include 'what is a purchase agreement', 'website valuation tools', 'saas company worth').", "The tax question page moved to the end of the calendar after two skips. The Shopify transfer question was skipped once and will move if skipped again."]
+}
