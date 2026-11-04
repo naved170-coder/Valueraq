@@ -98,6 +98,26 @@ List `content/guides/` and `content/glossary/`. If an existing page answers the 
 write the page. Record it in the report as `"action": "skipped"` with the overlapping path. Otherwise record
 `"duplicate": "pass (closest: /guides/x/, /glossary/y/)"`.
 
+## 3b. Before writing each page: compare the top results
+
+Every new page must be more useful than the pages already ranking for its main keyword.
+
+1. Look for `seo/serp/new-<slug>.json` (competitor research saved in a session with the owner for upcoming
+   calendar topics). If it is there, read `studied` and `gaps` and plan the page to cover everything the top pages
+   cover, plus at least two things they lack (a worked example with real arithmetic, a comparison table, a checklist,
+   a clearer direct answer, FAQs they skip).
+2. If there is no file (topics marked `collected` in `seo/serp/queue-new.json` have one) and WebSearch works in this run, search the main keyword, open the strongest 3 to 5 relevant
+   results (skip spam and thin calculator pages), save what they cover and the gaps in `seo/serp/new-<slug>.json`
+   in the same format, then plan the page as above.
+3. If neither is possible, write the page as usual, set `"serp": "missing"` for it in the report, and add its slug and
+   main keyword to `seo/serp/queue-new.json` so the owner's next session collects the research; the page is then
+   improved later through the daily improvement step (its file will be saved as `guides-<slug>.json` or
+   `glossary-<slug>.json`).
+4. Competitor pages are for finding gaps only: never use their figures (unless the source is in `seo/sources.json`),
+   never copy their wording and never name them on the page.
+5. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add
+   `serp_compare` to `tasks` when every new page has `used` or `searched`.
+
 ## 4. Research
 
 - Use WebSearch and WebFetch. Open every source you rely on. Cite it with a link in the page.

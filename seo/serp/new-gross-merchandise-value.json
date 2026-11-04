@@ -1,0 +1,36 @@
+{
+ "page": "gross-merchandise-value",
+ "query": "gross merchandise value",
+ "results": [
+  "shopify.com/blog/gross-merchandise-value",
+  "zipchat.ai",
+  "heatmap.com",
+  "getzowie.com",
+  "corporatefinanceinstitute.com gross merchandise value"
+ ],
+ "studied": [
+  {
+   "url": "shopify.com/blog/gross-merchandise-value",
+   "words": 2300,
+   "has": [
+    "definition",
+    "formula",
+    "worked example",
+    "GMV vs revenue table",
+    "why measure",
+    "what GMV doesn't tell you",
+    "related metrics",
+    "tips",
+    "FAQ"
+   ]
+  }
+ ],
+ "gaps": [
+  "Short glossary page: lead with definition + formula + example; add 'why buyers don't value a business on GMV' (marketplace vs store, take rate) which competitors skip",
+  "GMV vs revenue vs profit mini-table",
+  "2-3 FAQs"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

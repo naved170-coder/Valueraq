@@ -1,0 +1,33 @@
+{
+ "page": "what-is-a-good-profit-margin-for-an-online-business",
+ "query": "profit margin online business",
+ "results": [
+  "amasty.com good profit margin ecommerce",
+  "useamp.com",
+  "trueprofit.io margin vs profit",
+  "opensend.com",
+  "trueprofit.io profit margin by industries"
+ ],
+ "studied": [
+  {
+   "url": "amasty.com whats-a-good-profit-margin-for-e-commerce",
+   "words": 1200,
+   "has": [
+    "margin basics",
+    "benchmarks",
+    "retail averages",
+    "ways to raise margins",
+    "formula",
+    "worked pricing example"
+   ]
+  }
+ ],
+ "gaps": [
+  "Competitors cover only ecommerce: cover gross vs net margin across content sites, SaaS, ecommerce, newsletters, apps in one table (only sourced or clearly labelled as typical patterns)",
+  "Show how margin changes the sale value with a worked example (same revenue, different margins)",
+  "Add margin formulas box and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,31 @@
+{
+ "page": "bounce-rate",
+ "query": "what is bounce rate",
+ "results": [
+  "coursera.org what is bounce rate",
+  "zipchat.ai",
+  "goodmetrics.io",
+  "theedigital.com",
+  "business.adobe.com glossary bounce rate"
+ ],
+ "studied": [
+  {
+   "url": "coursera.org/articles/what-is-bounce-rate",
+   "words": 550,
+   "has": [
+    "key takeaways",
+    "formula",
+    "benchmark claim"
+   ],
+   "figures": "claims 40% or lower is good (unsourced)"
+  }
+ ],
+ "gaps": [
+  "Explain the GA4 change (bounce rate = share of sessions that were not engaged) vs the old Universal Analytics definition; cite Google's help page if added to sources.json",
+  "Explain why buyers of a website care (or don't) and why it's easily distorted",
+  "Formula, example, 2-3 FAQs; avoid unsourced 'good' benchmarks"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

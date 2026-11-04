@@ -275,6 +275,7 @@ IMPROVE_START = "2026-11-05"   # first day the daily run improves pages from seo
 TASKS = [
     # key, label, who records it ("run" = the daily run's report, "site" = worked out by the website)
     ("duplicate_check", "Duplicate check on every topic", "run"),
+    ("serp_compare", "Top results compared before writing", "run"),
     ("research", "Research with sources opened", "run"),
     ("article", "Long article written", "run"),
     ("reference_pages", "Reference pages written", "run"),
@@ -398,7 +399,7 @@ def task_grid(month):
                     st = "done"
                 elif key == "refresh" and d.day != 1:
                     st = ""
-                elif key == "improve" and iso < IMPROVE_START:
+                elif key in ("improve", "serp_compare") and iso < IMPROVE_START:
                     st = ""
                 else:
                     st = "missed" if planned else ""

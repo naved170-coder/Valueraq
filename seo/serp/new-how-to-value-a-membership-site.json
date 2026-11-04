@@ -1,0 +1,30 @@
+{
+ "page": "how-to-value-a-membership-site",
+ "query": "membership site valuation",
+ "results": [
+  "memberpress.com/value (an article on delivering member value, not valuation)",
+  "brilliantdirectories.com recurring revenue calculator",
+  "profilepress.com how to price a membership site",
+  "membermouse.com podcast",
+  "mightynetworks.com pricing"
+ ],
+ "studied": [
+  {
+   "url": "memberpress.com/value",
+   "words": 900,
+   "has": [
+    "self-check questions on member value"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Search results are about PRICING a membership, not VALUING one: big opening for a real valuation guide",
+  "Cover: recurring revenue, churn, cohort retention, profit multiple vs revenue multiple, platform dependence, owner-led content risk",
+  "Worked example with churn adjustment; value-by-monthly-profit table using our defaults",
+  "FAQ (6)"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

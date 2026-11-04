@@ -1,0 +1,46 @@
+{
+ "page": "how-to-transfer-a-shopify-store",
+ "query": "transfer shopify store ownership",
+ "results": [
+  "printify.com knowledge hub transfer shopify store ownership",
+  "tevello.com",
+  "ecomposer.io",
+  "support.flippa.com transfer guide",
+  "coursera.org transfer shopify store"
+ ],
+ "studied": [
+  {
+   "url": "printify.com how-to-transfer-shopify-store-ownership",
+   "words": 1600,
+   "has": [
+    "pre-transfer checklist",
+    "financial and payment gateway audit",
+    "re-linking connected apps",
+    "execute transfer steps",
+    "post-transfer check",
+    "troubleshooting",
+    "4 FAQs"
+   ]
+  },
+  {
+   "url": "coursera.org transfer-shopify-store-to-another-account",
+   "words": 900,
+   "has": [
+    "key takeaways",
+    "5-step process",
+    "can you copy a store",
+    "pre-transfer checklist (remove apps, payment info)"
+   ]
+  }
+ ],
+ "gaps": [
+  "Go beyond the Shopify admin steps: what transfers and what doesn't (apps, payment gateways, domain, email, subscriptions, supplier accounts, reviews) in a table",
+  "Buyer-and-seller order of operations alongside escrow release",
+  "Post-transfer checklist for the first 30 days",
+  "Troubleshooting and FAQ (6)",
+  "Link escrow and website-transfer guides"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

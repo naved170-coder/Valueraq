@@ -1,0 +1,20 @@
+{
+ "page": "net-income",
+ "query": "what is net income",
+ "results": [
+  "moomoo.com",
+  "bankrate.com (index page, no content)",
+  "ecommercedb.com glossary",
+  "shopify.com/in/blog/net-income",
+  "digits.com glossary"
+ ],
+ "studied": [],
+ "gaps": [
+  "Weak results: define net income, formula, worked example from a small online business P&L",
+  "Net income vs SDE vs EBITDA mini-table (why buyers adjust net income)",
+  "2-3 FAQs"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
