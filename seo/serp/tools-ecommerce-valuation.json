@@ -1,0 +1,43 @@
+{
+ "page": "tools/ecommerce-valuation",
+ "query": "ecommerce business valuation calculator",
+ "results": [
+  "themefullstack.com calculator",
+  "crazyegg.com/blog/how-to-value-an-ecommerce-business",
+  "shopthemedetector.com",
+  "latonas.com/tools/ecommerce-business-value-calculator",
+  "zoho.com free ecommerce store valuation calculator"
+ ],
+ "studied": [
+  {
+   "url": "crazyegg.com/blog/how-to-value-an-ecommerce-business",
+   "words": 1700,
+   "has": [
+    "records checklist",
+    "SDE vs EBITDA",
+    "worked example with range",
+    "advisor tips"
+   ],
+   "figures": "1x-6x industry multipliers"
+  },
+  {
+   "url": "zoho.com ecommerce valuation calculator",
+   "words": 70,
+   "has": [
+    "inputs: monthly revenue, net margin, growth, repeat customer rate, store age",
+    "outputs: value range, annual profit, multiple"
+   ],
+   "figures": "none shown"
+  }
+ ],
+ "gaps": [
+  "Competing calculators explain almost nothing: our method-shown approach is the edge; make the explanation scannable",
+  "Add value-by-monthly-profit table for stores",
+  "Add how stock (inventory) is handled on top of the multiple, with an example",
+  "Add Shopify vs Amazon FBA vs DTC differences",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

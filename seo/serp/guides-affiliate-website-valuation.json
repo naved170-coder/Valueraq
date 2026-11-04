@@ -1,0 +1,61 @@
+{
+ "page": "guides/affiliate-website-valuation",
+ "query": "affiliate website valuation",
+ "results": [
+  "feinternational.com/blog/affiliate-website-valuation",
+  "flippa.com/blog/affiliate-website-valuation-how-to-properly-determine-it",
+  "qualityunit.com betting affiliate",
+  "motioninvest.com",
+  "empireflippers.com sell your affiliate site"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/affiliate-website-valuation-whats-your-affiliate-site-worth",
+   "words": 3500,
+   "has": [
+    "content production",
+    "SEO/link profile",
+    "age",
+    "partners",
+    "owner involvement",
+    "risk factors",
+    "product category",
+    "seasonality with worked example",
+    "content quality",
+    "traffic health",
+    "due diligence",
+    "5 FAQs"
+   ],
+   "figures": "3.0x-6.0x annual (broker-sold); auctions 0.5x-1.5x"
+  },
+  {
+   "url": "flippa.com/blog/affiliate-website-valuation-how-to-properly-determine-it",
+   "words": 2000,
+   "has": [
+    "business models",
+    "methods",
+    "factors",
+    "revenue attribution",
+    "documentation",
+    "risk",
+    "owner involvement",
+    "comparables",
+    "mistakes",
+    "preparing for sale",
+    "negotiation",
+    "6 FAQs"
+   ],
+   "figures": "30-45x monthly net profit; 3-6x SDE"
+  }
+ ],
+ "gaps": [
+  "Add affiliate-program risk section (commission cuts, single program share, cookie length) with an example",
+  "Add seasonality worked example",
+  "Add product-category and content-quality factors",
+  "Add 'revenue attribution' checks for buyers",
+  "Expand FAQ to 6"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,34 @@
+{
+ "page": "calculators/saas-valuation-calculator",
+ "query": "arr multiple calculator saas",
+ "results": [
+  "payproglobal.com saas arr multiple calculator",
+  "lowcode.agency glossary arr multiple",
+  "zebracat.ai saas valuation",
+  "userjot.com saas valuation multiple estimator",
+  "klipfolio.com arr multiple"
+ ],
+ "studied": [
+  {
+   "url": "payproglobal.com saas arr multiple calculator",
+   "words": 800,
+   "has": [
+    "inputs: enterprise value and ARR",
+    "what is an ARR multiple",
+    "practical examples",
+    "ways to calculate",
+    "how to improve the multiple"
+   ],
+   "figures": "examples at 4x-7x ARR"
+  }
+ ],
+ "gaps": [
+  "Competing calculators compute multiple from price; ours goes the other way (metrics -> value). Explain both directions and add 'implied multiple from an asking price' tip linking business multiple calculator",
+  "Add 'how to improve your ARR multiple' section (growth, churn, NRR, margin, concentration)",
+  "Add value-by-ARR table",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

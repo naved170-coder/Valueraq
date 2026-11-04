@@ -204,6 +204,19 @@
     "The receiving account's registration transaction ID is needed; a new account costs a US$25 registration fee.",
     "Promotions, test groups and earnings reports do not transfer."
    ]
+  },
+  {
+   "id": "bizbuysell-websites-benchmark",
+   "title": "BizBuySell, Valuation benchmarks: Websites and ecommerce businesses",
+   "url": "https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/",
+   "verified": "2026-11-04",
+   "quotes": [
+    "Data on website and ecommerce business sales from 2021 to 2025, covering 1,661 sold listings.",
+    "Median sold earnings multiple: 3.28.",
+    "Median revenue multiple: 0.90.",
+    "Median sale price: $825,000; median asking price: $850,000; median 71 days on market."
+   ],
+   "notes": "BizBuySell listings skew to larger, broker-sold businesses; say so when quoting. Figures read via page summary on 2026-11-04; re-check on the page before quoting exact numbers."
   }
  ]
 }

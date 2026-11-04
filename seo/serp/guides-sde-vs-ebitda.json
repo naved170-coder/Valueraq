@@ -1,0 +1,34 @@
+{
+ "page": "guides/sde-vs-ebitda",
+ "query": "sde vs ebitda",
+ "results": [
+  "batonmarket.com sde vs ebitda",
+  "eqvista.com/sde-vs-ebitda",
+  "lanterncredit.com",
+  "score.org (could not open)",
+  "bizquest.com/learn/article/sde-vs-ebitda",
+  "flippa.com sde vs ebitda"
+ ],
+ "studied": [
+  {
+   "url": "bizquest.com/learn/article/sde-vs-ebitda",
+   "words": 1300,
+   "has": [
+    "SDE definition, uses, worked example",
+    "EBITDA definition, uses",
+    "comparison table SDE vs net income",
+    "Company A vs B worked valuations"
+   ],
+   "figures": "SDE for under ~$1M earnings; EBITDA above"
+  }
+ ],
+ "gaps": [
+  "Add side-by-side table: same P&L converted to SDE and to EBITDA",
+  "Add rule of thumb on when buyers switch from SDE to EBITDA (cite source)",
+  "Add how the multiple differs between them",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,31 @@
+{
+ "page": "guides/how-to-find-out-what-a-business-is-worth",
+ "query": "how to find out how much a business is worth",
+ "results": [
+  "tworld.com seller faq",
+  "entrepreneur.com 9 ways to calculate a business's worth",
+  "dojo.tech/blog/calculate-business-value",
+  "smallbusiness.chron.com",
+  "smergers.com"
+ ],
+ "studied": [
+  {
+   "url": "entrepreneur.com/article/66442",
+   "words": 1200,
+   "has": [
+    "9 methods each with formula",
+    "worked examples"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Add a 'which method fits your business' decision table",
+  "Add quick self-check list (records, profit, trend, risk)",
+  "Add when to get a professional appraisal",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,41 @@
+{
+ "page": "guides/red-flags-when-buying-a-website",
+ "query": "red flags when buying a website",
+ "results": [
+  "motioninvest.com",
+  "sloughobserver.co.uk 6 red flags",
+  "thewebsiteflip.com flippa scams",
+  "empireflippers.com/website-pre-checks",
+  "flippa.com/blog/12-red-flags-to-watch-out-for-when-buying-a-business",
+  "quietlight.com/red-flags-when-buying-a-business"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/website-pre-checks",
+   "words": 2000,
+   "has": [
+    "9 SEO pre-checks: referring domains, homepage backlinks, dofollow ratio, country-code TLD links, anchor text, keywords, 301 redirects, expired domains, traffic",
+    "Wayback Machine"
+   ],
+   "figures": "none"
+  },
+  {
+   "url": "flippa.com 12 red flags",
+   "words": 2000,
+   "has": [
+    "12 red flags: declining revenue, messy records, customer concentration, owner dependency, legal, overvalued assets, staff turnover, unrealistic projections, hidden liabilities, outdated tech, compliance, weakening market",
+    "FAQ"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Add SEO/backlink red flags section (anchor text, expired-domain/301 tricks, link spikes) with how to check",
+  "Add a red flag -> how to check -> what it means table",
+  "Add scam patterns (fake screenshots, rushed escrow outside platform)",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

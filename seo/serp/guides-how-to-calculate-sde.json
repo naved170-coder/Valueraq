@@ -1,0 +1,50 @@
+{
+ "page": "guides/how-to-calculate-sde",
+ "query": "how to calculate sde",
+ "results": [
+  "sourcetable.com",
+  "bizbuysell.com sellers discretionary earnings",
+  "offdeal.io",
+  "etonvs.com/valuation/sellers-discretionary-earnings",
+  "tools.finaloop.com SDE calculator"
+ ],
+ "studied": [
+  {
+   "url": "bizbuysell.com sellers-discretionary-earnings",
+   "words": 950,
+   "has": [
+    "definition",
+    "SDE and value",
+    "when EBITDA applies",
+    "calculating SDE",
+    "add-back disputes",
+    "add-back table",
+    "2 worked examples"
+   ],
+   "figures": "none"
+  },
+  {
+   "url": "etonvs.com/valuation/sellers-discretionary-earnings",
+   "words": 2000,
+   "has": [
+    "key takeaways table",
+    "formula",
+    "interactive SDE calculator",
+    "valuing with SDE",
+    "how to increase SDE",
+    "4 FAQs",
+    "restaurant worked example"
+   ],
+   "figures": "multiplier example"
+  }
+ ],
+ "gaps": [
+  "Add an SDE worksheet table (line-by-line from P&L to SDE)",
+  "Add 'add-backs buyers accept vs reject' table",
+  "Add 'how to increase SDE'",
+  "Add a simple SDE calculator or link to tool, plus FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

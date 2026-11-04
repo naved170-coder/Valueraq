@@ -1,0 +1,37 @@
+{
+ "page": "guides/saas-valuation-multiples",
+ "query": "saas valuation multiples",
+ "results": [
+  "ful.io saas valuation multiples 2025",
+  "cloudblue.com saas multiples",
+  "dodopayments.com saas valuation multiples",
+  "eqvista.com/saas-valuation-multiples",
+  "bigideasdb.com/saas-valuation-multiples-2026",
+  "aventis-advisors.com (could not open)"
+ ],
+ "studied": [
+  {
+   "url": "bigideasdb.com/saas-valuation-multiples-2026",
+   "words": 2800,
+   "has": [
+    "one-number summary",
+    "revenue vs profit multiple",
+    "multiples by category table",
+    "multiples by price band table",
+    "asking vs closing",
+    "FAQ"
+   ],
+   "figures": "615 listings: 2.6x TTM revenue, 10.7x TTM profit; 1.4x (<$50k) to 3.5x ($1M+) revenue; closing 10-30% below asking"
+  }
+ ],
+ "gaps": [
+  "Add multiples-by-size table (small SaaS rises with ARR) - only with a citable source; otherwise describe the pattern",
+  "Explain asking vs closing price gap",
+  "Explain public-company multiples vs small private SaaS",
+  "Add revenue vs profit multiple for SaaS",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

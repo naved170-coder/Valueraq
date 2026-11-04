@@ -1,0 +1,47 @@
+{
+ "page": "guides/how-to-value-a-business-with-ebitda",
+ "query": "how to value a business using ebitda",
+ "results": [
+  "nairametrics.com",
+  "accountingtools.com ebitda valuation concept",
+  "kmco.com",
+  "morganandwestfield.com EBITDA guide",
+  "iconic.co/blog/ebitda-multiple-business-valuation-calculation"
+ ],
+ "studied": [
+  {
+   "url": "iconic.co ebitda multiple business valuation calculation",
+   "words": 3800,
+   "has": [
+    "formula",
+    "free calculator",
+    "adjusted EBITDA",
+    "FAQ",
+    "multiples by size and industry tables",
+    "what moves your multiple"
+   ],
+   "figures": "their data: 2.86x SDE, 4.8x EBITDA"
+  },
+  {
+   "url": "accountingtools.com ebitda valuation concept",
+   "words": 550,
+   "has": [
+    "how to calculate EBITDA",
+    "example 5x on $2M",
+    "problems with method",
+    "exclusions",
+    "FAQ"
+   ],
+   "figures": "5x example"
+  }
+ ],
+ "gaps": [
+  "Add adjusted EBITDA section (normalising one-offs, owner salary at market rate)",
+  "Add enterprise value to equity value bridge (debt, cash)",
+  "Add limitations list",
+  "Add a small calculator or link and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

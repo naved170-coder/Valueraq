@@ -1,0 +1,43 @@
+{
+ "page": "guides/website-valuation",
+ "query": "how to value a website",
+ "results": [
+  "hostscore.net",
+  "ahrefs.com/blog/how-much-is-my-website-worth",
+  "eqvista.com/intangible-asset-valuation/website-valuation",
+  "flippa.com",
+  "ionos.com",
+  "elementor.com"
+ ],
+ "studied": [
+  {
+   "url": "eqvista.com website valuation",
+   "words": 1400,
+   "has": [
+    "methods",
+    "factors table",
+    "worked examples for 5 methods (traffic, DCF, earnings multiple, cost, asset)"
+   ],
+   "figures": "$1 per visitor per month rule of thumb"
+  },
+  {
+   "url": "ahrefs.com/blog/how-much-is-my-website-worth",
+   "words": 2500,
+   "has": [
+    "3 steps",
+    "5 ways to raise price",
+    "should you sell"
+   ],
+   "figures": "30-45x monthly net profit"
+  }
+ ],
+ "gaps": [
+  "Add a methods comparison table (earnings multiple, revenue, traffic, cost, asset) with when each works",
+  "Show the same site valued five ways in one worked example",
+  "Add 'what raises / lowers value' scannable table",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

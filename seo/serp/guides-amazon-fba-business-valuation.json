@@ -1,0 +1,54 @@
+{
+ "page": "guides/amazon-fba-business-valuation",
+ "query": "amazon fba business valuation",
+ "results": [
+  "empireflippers.com/value-amazon-fba-business",
+  "websiteclosers.com",
+  "empireflippers.com case study",
+  "flippa.com/blog/amazon-fba-business-valuation-how-much-is-your-business-worth",
+  "raincatcher.com"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/value-amazon-fba-business",
+   "words": 3500,
+   "has": [
+    "how valued",
+    "inventory impact",
+    "pricing windows (12/6/3 months)",
+    "multiple factors",
+    "sales data",
+    "calculators",
+    "myths",
+    "mistakes",
+    "when to sell",
+    "FAQ"
+   ],
+   "figures": "their 2025 data: 62 FBA sales, 2.1x average"
+  },
+  {
+   "url": "flippa.com amazon fba valuation",
+   "words": 3000,
+   "has": [
+    "key takeaways",
+    "SDE table",
+    "multiple table",
+    "7 factors",
+    "case study",
+    "FBA vs Shopify",
+    "90-day steps",
+    "6 FAQs"
+   ],
+   "figures": "1.55x average, 2.75x top quartile (their data)"
+  }
+ ],
+ "gaps": [
+  "Add pricing windows explanation (12/6/3-month averages and when each is used)",
+  "Add inventory worked example",
+  "Add FBA-specific risks (account health, IP complaints, supplier concentration, fees)",
+  "Add 90-day pre-sale steps and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

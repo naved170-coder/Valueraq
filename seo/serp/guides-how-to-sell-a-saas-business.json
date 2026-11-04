@@ -1,0 +1,42 @@
+{
+ "page": "guides/how-to-sell-a-saas-business",
+ "query": "how to sell a saas business",
+ "results": [
+  "feinternational.com/blog/how-to-sell-a-saas-business",
+  "entrepreneur.com 5 strategies",
+  "websiteclosers.com sell saas business",
+  "helloexit.com",
+  "alexanderisora.substack.com i sold my saas for 800k"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/how-to-sell-a-saas-business",
+   "words": 6000,
+   "has": [
+    "timing",
+    "valuation",
+    "multiple drivers",
+    "preparation checklist",
+    "8-step process",
+    "timelines chart",
+    "buyer types table",
+    "competitive process",
+    "deal structure/earnouts",
+    "legal, tax, data",
+    "advisors",
+    "5 FAQs"
+   ],
+   "figures": "2x-7x ARR range; Rule of 40 companies get higher multiples"
+  }
+ ],
+ "gaps": [
+  "Add buyer types table (individual, private equity/fund, strategic) and what each wants",
+  "Add timeline by stage",
+  "Add deal structure section (cash, earnout, holdback) linking deal-structures guide",
+  "Add data/customer-contract transfer and privacy points",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

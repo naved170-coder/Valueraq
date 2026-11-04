@@ -1,0 +1,53 @@
+{
+ "page": "guides/saas-valuation",
+ "query": "how to value a saas business",
+ "results": [
+  "websiteclosers.com/resources/how-to-value-a-saas-company",
+  "burklandassociates.com white paper",
+  "feinternational.com/blog/saas-metrics-value-saas-business",
+  "xeinadin.com",
+  "business-sale.com",
+  "flippa.com/blog/how-to-price-a-saas-business"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/saas-metrics-value-saas-business",
+   "words": 4500,
+   "has": [
+    "state of market",
+    "how SaaS gets valued",
+    "finding the multiple",
+    "metrics that impact valuation",
+    "which matter most",
+    "other factors",
+    "pre-sale improvements",
+    "salability",
+    "5 FAQs",
+    "Rule of 40 example"
+   ],
+   "figures": "5-7x (<$2M) and 7-10x (>$2M) annual profit/SDE; LTV/CAC 3; avg monthly churn 4.7%"
+  },
+  {
+   "url": "websiteclosers.com/resources/how-to-value-a-saas-company",
+   "words": 2000,
+   "has": [
+    "ARR multiples by segment table",
+    "key metrics",
+    "methods",
+    "process",
+    "comparables",
+    "FAQ (80/20 rule, rule of 40)"
+   ],
+   "figures": "micro 3-5x ARR, mid 5-8.5x, enterprise 7-12x+"
+  }
+ ],
+ "gaps": [
+  "Add SaaS metrics table with what good looks like (churn, NRR, LTV:CAC, gross margin, Rule of 40)",
+  "Explain SDE-multiple vs ARR-multiple methods for small SaaS and when buyers use each",
+  "Add pre-sale improvements",
+  "Add FAQ (6+)"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

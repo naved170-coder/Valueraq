@@ -1,0 +1,53 @@
+{
+ "page": "guides/newsletter-valuation",
+ "query": "how to value a newsletter (studied with 'newsletter valuation')",
+ "results": [
+  "flippa.com/blog/newsletter-valuation-multiples",
+  "get.pelcro.com newsletter valuation calculator",
+  "empireflippers.com/selling-your-newsletter",
+  "microns.io/blog/newsletter-valuation",
+  "create.beehiiv.com/p/newsletter-valuation"
+ ],
+ "studied": [
+  {
+   "url": "flippa.com/blog/newsletter-valuation-multiples",
+   "words": 1900,
+   "has": [
+    "fundamentals",
+    "methods and ranges",
+    "key metrics",
+    "monetization models",
+    "engagement vs subscriber count",
+    "platform",
+    "operational factors",
+    "risk adjustments",
+    "preparing for sale",
+    "mistakes",
+    "5 FAQs"
+   ],
+   "figures": "30-45x monthly profit; $1-$10 per subscriber; 20-40% open rates; 40% single-sponsor threshold"
+  },
+  {
+   "url": "empireflippers.com/selling-your-newsletter",
+   "words": 2000,
+   "has": [
+    "is there a market",
+    "why sell",
+    "how much is it worth (formula only)",
+    "where to find buyers",
+    "migrating assets"
+   ],
+   "figures": "no multiple given"
+  }
+ ],
+ "gaps": [
+  "Add per-subscriber value sense-check (and why profit comes first)",
+  "Explain engagement vs list size, and why open rates are inflated (Apple privacy)",
+  "Add monetization models table (sponsorship, paid subscriptions, affiliate) and how each affects value",
+  "Add sponsor-concentration risk section",
+  "Add worked example and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

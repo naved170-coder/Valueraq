@@ -1,0 +1,43 @@
+{
+ "page": "guides/app-valuation",
+ "query": "how to value a mobile app",
+ "results": [
+  "buildfire.com/mobile-app-value",
+  "newsletter.microns.io/p/how-to-value-a-mobile-app",
+  "eqvista.com/mobile-app-valuation",
+  "microns.io/blog/value-sell-mobile-app",
+  "flippa.com blog"
+ ],
+ "studied": [
+  {
+   "url": "eqvista.com/mobile-app-valuation",
+   "words": 3000,
+   "has": [
+    "5 methods with formulas",
+    "multiples table",
+    "case study"
+   ],
+   "figures": "average multiple 2.34x; per-user example"
+  },
+  {
+   "url": "microns.io/blog/value-sell-mobile-app",
+   "words": 1600,
+   "has": [
+    "factors",
+    "methods",
+    "preparing for sale",
+    "marketing for sale"
+   ],
+   "figures": "no specific multiples; ~30-day sales cycle"
+  }
+ ],
+ "gaps": [
+  "Add methods comparison table (profit multiple, revenue multiple, per-user, cost to rebuild) with when each fits",
+  "Add app-store-specific risks (policy, platform fees 15-30% only if sourced, reviews)",
+  "Add preparing-for-sale checklist and transfer link",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

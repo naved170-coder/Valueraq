@@ -1,0 +1,36 @@
+{
+ "page": "guides/micro-saas-valuation",
+ "query": "micro saas valuation",
+ "results": [
+  "blog.mean.ceo micro-saas valuation statistics",
+  "microns.io/blog/boost-micro-saas-valuation",
+  "microns.io/blog/micro-saas-valuations-key-metrics",
+  "livmo.com/blog/micro-saas-valuation",
+  "skalingventures.substack.com"
+ ],
+ "studied": [
+  {
+   "url": "microns.io/blog/micro-saas-valuations-key-metrics",
+   "words": 2800,
+   "has": [
+    "methods",
+    "multiples",
+    "key metrics with formulas (churn, CAC, LTV)",
+    "other factors",
+    "increasing the multiple",
+    "3 FAQs",
+    "stage-based ranges incl. pre-revenue"
+   ],
+   "figures": "3x-15x revenue, 3x-10x SDE (wide); pre-revenue $500-$1,500"
+  }
+ ],
+ "gaps": [
+  "Add stage-based value guide (pre-revenue, <$1k MRR, $1-5k MRR, $5k+ MRR) only with a citable source or our method",
+  "Add metric formulas box (churn, LTV, CAC)",
+  "Add 'increase your multiple' checklist",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

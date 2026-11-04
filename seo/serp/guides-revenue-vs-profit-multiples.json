@@ -1,0 +1,31 @@
+{
+ "page": "guides/revenue-vs-profit-multiples",
+ "query": "revenue multiple vs profit multiple",
+ "results": [
+  "shmoop.com",
+  "wealthmanagement.com",
+  "seekingalpha.com",
+  "joinleland.com EV/revenue multiple",
+  "blog.syftanalytics.com revenue profit and ebitda multiples"
+ ],
+ "studied": [
+  {
+   "url": "blog.syftanalytics.com revenue, profit and EBITDA multiples",
+   "words": 650,
+   "has": [
+    "how each multiple is calculated",
+    "worked example for each"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Weak competition: add a single table converting one business's price into revenue, profit, SDE and EBITDA multiples",
+  "Add 'when to use which' decision list",
+  "Add the BizBuySell benchmark (0.90x revenue vs 3.28x earnings for website/ecommerce sales) as an illustration",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

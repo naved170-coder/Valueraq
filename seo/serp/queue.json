@@ -1,0 +1,690 @@
+[
+{
+"page": "tools/ai-business-valuation",
+"query": "ai business valuation"
+},
+{
+"page": "tools/app-valuation",
+"query": "app valuation calculator"
+},
+{
+"page": "tools/ecommerce-valuation",
+"query": "ecommerce business valuation calculator"
+},
+{
+"page": "tools/newsletter-valuation",
+"query": "newsletter valuation"
+},
+{
+"page": "tools/saas-valuation",
+"query": "saas valuation calculator"
+},
+{
+"page": "tools/website-valuation",
+"query": "website valuation tool"
+},
+{
+"page": "calculators/business-multiple-calculator",
+"query": "business valuation multiple calculator"
+},
+{
+"page": "calculators/saas-valuation-calculator",
+"query": "arr multiple calculator"
+},
+{
+"page": "calculators/website-worth-calculator",
+"query": "website worth calculator"
+},
+{
+"page": "guides/adsense-website-valuation",
+"query": "adsense website valuation"
+},
+{
+"page": "guides/affiliate-website-valuation",
+"query": "affiliate website valuation"
+},
+{
+"page": "guides/ai-business-valuation-methods",
+"query": "ai business valuation methods"
+},
+{
+"page": "guides/ai-business-valuation",
+"query": "how to value an ai business"
+},
+{
+"page": "guides/amazon-fba-business-valuation",
+"query": "amazon fba business valuation"
+},
+{
+"page": "guides/app-valuation",
+"query": "how to value a mobile app"
+},
+{
+"page": "guides/business-valuation-formula",
+"query": "business valuation formula"
+},
+{
+"page": "guides/business-valuation",
+"query": "how digital businesses are valued"
+},
+{
+"page": "guides/buy-vs-build-saas",
+"query": "buy vs build a saas business"
+},
+{
+"page": "guides/buying-digital-businesses",
+"query": "how to buy an online business"
+},
+{
+"page": "guides/can-you-sell-a-website-with-no-revenue",
+"query": "sell website with no revenue"
+},
+{
+"page": "guides/data-room-checklist",
+"query": "due diligence data room checklist"
+},
+{
+"page": "guides/deal-structures-for-online-business-sales",
+"query": "how to structure a business sale"
+},
+{
+"page": "guides/digital-business-due-diligence",
+"query": "digital business due diligence checklist"
+},
+{
+"page": "guides/domain-appraisal-explained",
+"query": "domain appraisal"
+},
+{
+"page": "guides/ecommerce-valuation",
+"query": "how to value an ecommerce business"
+},
+{
+"page": "guides/financial-due-diligence-checklist",
+"query": "financial due diligence checklist"
+},
+{
+"page": "guides/how-escrow-works-for-website-sales",
+"query": "escrow for website sale"
+},
+{
+"page": "guides/how-long-to-sell-an-online-business",
+"query": "how long does it take to sell an online business"
+},
+{
+"page": "guides/how-many-months-of-data-do-buyers-want",
+"query": "how much history to sell a website"
+},
+{
+"page": "guides/how-to-buy-a-saas-business",
+"query": "how to buy a saas business"
+},
+{
+"page": "guides/how-to-buy-a-website",
+"query": "buy websites"
+},
+{
+"page": "guides/how-to-buy-an-ecommerce-business",
+"query": "buy ecommerce business"
+},
+{
+"page": "guides/how-to-calculate-roi-when-buying-a-website",
+"query": "roi of buying a website"
+},
+{
+"page": "guides/how-to-calculate-sde",
+"query": "how to calculate sde"
+},
+{
+"page": "guides/how-to-finance-buying-an-online-business",
+"query": "finance buying online business"
+},
+{
+"page": "guides/how-to-find-out-what-a-business-is-worth",
+"query": "how to find out how much a business is worth"
+},
+{
+"page": "guides/how-to-negotiate-buying-an-online-business",
+"query": "negotiate buying a business"
+},
+{
+"page": "guides/how-to-read-a-profit-and-loss-statement",
+"query": "read profit and loss statement"
+},
+{
+"page": "guides/how-to-sell-a-saas-business",
+"query": "sell saas business"
+},
+{
+"page": "guides/how-to-sell-a-shopify-store",
+"query": "sell shopify store"
+},
+{
+"page": "guides/how-to-sell-a-website",
+"query": "how to sell a website"
+},
+{
+"page": "guides/how-to-sell-an-app",
+"query": "sell app business"
+},
+{
+"page": "guides/how-to-spot-a-fake-website-listing",
+"query": "fake website listing"
+},
+{
+"page": "guides/how-to-transfer-a-website-to-a-new-owner",
+"query": "transfer website ownership"
+},
+{
+"page": "guides/how-to-transfer-an-app-to-a-new-owner",
+"query": "transfer app ownership"
+},
+{
+"page": "guides/how-to-value-a-blog",
+"query": "how to value a blog"
+},
+{
+"page": "guides/how-to-value-a-business-with-ebitda",
+"query": "how to value a business with ebitda"
+},
+{
+"page": "guides/how-to-value-a-business-with-no-profit",
+"query": "how to value a business with no profit"
+},
+{
+"page": "guides/how-to-value-a-website-with-falling-traffic",
+"query": "value website declining traffic"
+},
+{
+"page": "guides/how-to-value-an-email-list",
+"query": "how to value an email list"
+},
+{
+"page": "guides/how-to-verify-website-revenue",
+"query": "verify website revenue"
+},
+{
+"page": "guides/how-to-verify-website-traffic",
+"query": "verify website traffic"
+},
+{
+"page": "guides/how-to-write-a-business-for-sale-listing",
+"query": "business for sale listing"
+},
+{
+"page": "guides/increase-website-value-before-selling",
+"query": "increase website value"
+},
+{
+"page": "guides/micro-saas-valuation",
+"query": "micro saas valuation"
+},
+{
+"page": "guides/newsletter-valuation",
+"query": "how to value a newsletter"
+},
+{
+"page": "guides/red-flags-when-buying-a-website",
+"query": "buying a website red flags"
+},
+{
+"page": "guides/revenue-vs-profit-multiples",
+"query": "revenue vs profit multiples"
+},
+{
+"page": "guides/saas-metrics-buyers-check",
+"query": "saas metrics"
+},
+{
+"page": "guides/saas-valuation-methods",
+"query": "saas valuation methods"
+},
+{
+"page": "guides/saas-valuation-multiples",
+"query": "saas valuation multiples"
+},
+{
+"page": "guides/saas-valuation",
+"query": "how to value a saas business"
+},
+{
+"page": "guides/sde-vs-ebitda",
+"query": "sde vs ebitda"
+},
+{
+"page": "guides/seasonal-business-valuation",
+"query": "seasonal business valuation"
+},
+{
+"page": "guides/selling-digital-businesses",
+"query": "how to sell a digital business"
+},
+{
+"page": "guides/shopify-store-valuation",
+"query": "shopify store valuation"
+},
+{
+"page": "guides/should-i-sell-my-online-business",
+"query": "should i sell my online business"
+},
+{
+"page": "guides/valuation-mistakes",
+"query": "online business valuation"
+},
+{
+"page": "guides/valuing-a-business-on-revenue",
+"query": "business value based on revenue"
+},
+{
+"page": "guides/ways-to-sell-a-digital-business",
+"query": "broker vs marketplace vs selling directly"
+},
+{
+"page": "guides/website-valuation-for-a-new-site",
+"query": "value new website"
+},
+{
+"page": "guides/website-valuation-methods",
+"query": "website valuation methods"
+},
+{
+"page": "guides/website-valuation",
+"query": "how to value a website"
+},
+{
+"page": "guides/website-vs-saas-investment",
+"query": "website vs saas as an investment"
+},
+{
+"page": "guides/website-vs-saas-valuation",
+"query": "website vs saas valuation"
+},
+{
+"page": "guides/website-worth-examples",
+"query": "how much is my website worth"
+},
+{
+"page": "guides/what-documents-do-buyers-ask-for",
+"query": "documents for due diligence"
+},
+{
+"page": "guides/what-happens-after-you-sell-a-website",
+"query": "after selling a website"
+},
+{
+"page": "guides/what-is-a-fair-price-for-a-small-saas",
+"query": "saas business valuation"
+},
+{
+"page": "guides/what-is-included-when-you-buy-a-website",
+"query": "what is included when buying a website"
+},
+{
+"page": "guides/what-multiple-do-websites-sell-for",
+"query": "website valuation multiple"
+},
+{
+"page": "guides/when-to-sell-an-online-business",
+"query": "when to sell my online business"
+},
+{
+"page": "glossary/add-backs",
+"query": "add-backs"
+},
+{
+"page": "glossary/affiliate-marketing",
+"query": "affiliate marketing"
+},
+{
+"page": "glossary/arpu",
+"query": "average revenue per user"
+},
+{
+"page": "glossary/arr",
+"query": "what is arr"
+},
+{
+"page": "glossary/asking-price",
+"query": "asking price"
+},
+{
+"page": "glossary/asset-sale",
+"query": "what is asset sale"
+},
+{
+"page": "glossary/average-order-value",
+"query": "what is aov"
+},
+{
+"page": "glossary/backlink",
+"query": "backlink"
+},
+{
+"page": "glossary/book-value",
+"query": "book value"
+},
+{
+"page": "glossary/burn-rate",
+"query": "burn rate"
+},
+{
+"page": "glossary/business-broker",
+"query": "business broker"
+},
+{
+"page": "glossary/cac",
+"query": "what is cac"
+},
+{
+"page": "glossary/capitalization-rate",
+"query": "capitalization rate"
+},
+{
+"page": "glossary/cash-flow",
+"query": "cash flow"
+},
+{
+"page": "glossary/chargeback",
+"query": "chargeback"
+},
+{
+"page": "glossary/churn",
+"query": "what is churn"
+},
+{
+"page": "glossary/click-through-rate",
+"query": "click-through rate"
+},
+{
+"page": "glossary/cohort-analysis",
+"query": "cohort analysis"
+},
+{
+"page": "glossary/comparable-sales",
+"query": "comparable sales"
+},
+{
+"page": "glossary/contribution-margin",
+"query": "contribution margin"
+},
+{
+"page": "glossary/conversion-rate",
+"query": "what is conversion rate"
+},
+{
+"page": "glossary/cost-of-goods-sold",
+"query": "cost of goods sold"
+},
+{
+"page": "glossary/customer-concentration",
+"query": "what is customer concentration"
+},
+{
+"page": "glossary/data-room",
+"query": "data room"
+},
+{
+"page": "glossary/digital-business",
+"query": "what is digital business"
+},
+{
+"page": "glossary/discounted-cash-flow",
+"query": "discounted cash flow"
+},
+{
+"page": "glossary/display-advertising",
+"query": "display advertising"
+},
+{
+"page": "glossary/dropshipping",
+"query": "dropshipping"
+},
+{
+"page": "glossary/due-diligence",
+"query": "what is due diligence"
+},
+{
+"page": "glossary/earnings-per-click",
+"query": "earnings per click"
+},
+{
+"page": "glossary/earnout",
+"query": "what is earnout"
+},
+{
+"page": "glossary/ebit",
+"query": "ebit"
+},
+{
+"page": "glossary/ebitda",
+"query": "what is ebitda"
+},
+{
+"page": "glossary/enterprise-value",
+"query": "enterprise value"
+},
+{
+"page": "glossary/escrow",
+"query": "what is escrow"
+},
+{
+"page": "glossary/exclusivity-period",
+"query": "exclusivity period"
+},
+{
+"page": "glossary/expansion-revenue",
+"query": "expansion revenue"
+},
+{
+"page": "glossary/fair-market-value",
+"query": "fair market value"
+},
+{
+"page": "glossary/fulfillment-by-amazon",
+"query": "fulfillment by amazon"
+},
+{
+"page": "glossary/goodwill",
+"query": "goodwill"
+},
+{
+"page": "glossary/gross-margin",
+"query": "what is gross margin"
+},
+{
+"page": "glossary/gross-profit",
+"query": "gross profit"
+},
+{
+"page": "glossary/holdback",
+"query": "holdback"
+},
+{
+"page": "glossary/inventory-turnover",
+"query": "inventory turnover"
+},
+{
+"page": "glossary/key-person-risk",
+"query": "key person risk"
+},
+{
+"page": "glossary/letter-of-intent",
+"query": "what is loi"
+},
+{
+"page": "glossary/ltv",
+"query": "what is ltv"
+},
+{
+"page": "glossary/marketplace",
+"query": "what is marketplace"
+},
+{
+"page": "glossary/micro-saas",
+"query": "micro-saas"
+},
+{
+"page": "glossary/monthly-active-users",
+"query": "monthly active users"
+},
+{
+"page": "glossary/mrr",
+"query": "what is mrr"
+},
+{
+"page": "glossary/net-profit",
+"query": "net profit"
+},
+{
+"page": "glossary/net-revenue-retention",
+"query": "what is nrr"
+},
+{
+"page": "glossary/non-compete-agreement",
+"query": "non-compete agreement"
+},
+{
+"page": "glossary/non-disclosure-agreement",
+"query": "non-disclosure agreement"
+},
+{
+"page": "glossary/open-rate",
+"query": "what is open rate"
+},
+{
+"page": "glossary/operating-expenses",
+"query": "operating expenses"
+},
+{
+"page": "glossary/operating-income",
+"query": "operating income"
+},
+{
+"page": "glossary/organic-traffic",
+"query": "organic traffic"
+},
+{
+"page": "glossary/payback-period",
+"query": "payback period"
+},
+{
+"page": "glossary/platform-risk",
+"query": "platform risk"
+},
+{
+"page": "glossary/private-label",
+"query": "private label"
+},
+{
+"page": "glossary/profit-multiple",
+"query": "what is profit multiple"
+},
+{
+"page": "glossary/proof-of-funds",
+"query": "proof of funds"
+},
+{
+"page": "glossary/purchase-agreement",
+"query": "purchase agreement"
+},
+{
+"page": "glossary/recurring-revenue",
+"query": "recurring revenue"
+},
+{
+"page": "glossary/representations-and-warranties",
+"query": "representations and warranties"
+},
+{
+"page": "glossary/retention-rate",
+"query": "retention rate"
+},
+{
+"page": "glossary/return-on-ad-spend",
+"query": "return on ad spend"
+},
+{
+"page": "glossary/return-on-investment",
+"query": "return on investment"
+},
+{
+"page": "glossary/revenue-churn",
+"query": "revenue churn"
+},
+{
+"page": "glossary/revenue-multiple",
+"query": "what is revenue multiple"
+},
+{
+"page": "glossary/rpm",
+"query": "revenue per thousand visits"
+},
+{
+"page": "glossary/rule-of-40",
+"query": "rule of 40"
+},
+{
+"page": "glossary/run-rate",
+"query": "run rate"
+},
+{
+"page": "glossary/saas",
+"query": "what is saas"
+},
+{
+"page": "glossary/sde",
+"query": "what is sde"
+},
+{
+"page": "glossary/seasonality",
+"query": "seasonality"
+},
+{
+"page": "glossary/seller-financing",
+"query": "what is seller financing"
+},
+{
+"page": "glossary/sponsorship-revenue",
+"query": "sponsorship revenue"
+},
+{
+"page": "glossary/stock-sale",
+"query": "stock sale"
+},
+{
+"page": "glossary/success-fee",
+"query": "success fee"
+},
+{
+"page": "glossary/technical-debt",
+"query": "technical debt"
+},
+{
+"page": "glossary/traffic",
+"query": "what is traffic"
+},
+{
+"page": "glossary/trailing-twelve-months",
+"query": "trailing twelve months"
+},
+{
+"page": "glossary/transition-period",
+"query": "transition period"
+},
+{
+"page": "glossary/unit-economics",
+"query": "unit economics"
+},
+{
+"page": "glossary/valuation-multiple",
+"query": "valuation multiple"
+},
+{
+"page": "glossary/working-capital",
+"query": "working capital"
+},
+{
+"page": "glossary/year-over-year-growth",
+"query": "year-over-year growth"
+}
+]

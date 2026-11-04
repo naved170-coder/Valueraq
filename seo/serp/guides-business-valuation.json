@@ -1,0 +1,46 @@
+{
+ "page": "guides/business-valuation",
+ "query": "online business valuation",
+ "results": [
+  "foundr.com/articles/building-a-business/online-business-valuation",
+  "magazine.wharton.upenn.edu",
+  "nerdwallet.com/uk/business/how-do-i-value-my-online-business",
+  "websiteclosers.com",
+  "quietlight.com"
+ ],
+ "studied": [
+  {
+   "url": "foundr.com online-business-valuation",
+   "words": 3000,
+   "has": [
+    "methodology",
+    "ecommerce",
+    "apps",
+    "SaaS and affiliate sections",
+    "SDE vs EBITDA graphics"
+   ],
+   "figures": "SaaS 3-4.75x SDE (<$1M rev); ecommerce 2.5-4x; apps 3-5x SDE; affiliate 2.25-3.25x"
+  },
+  {
+   "url": "nerdwallet.com/uk how do i value my online business",
+   "words": 2300,
+   "has": [
+    "methods comparison table",
+    "SDE formula and discretionary list",
+    "factor-scored multiple example",
+    "DIY steps",
+    "expert quotes",
+    "checklists"
+   ],
+   "figures": "factor scores 1.5x on GBP200k SDE"
+  }
+ ],
+ "gaps": [
+  "Add a by-business-type table (website, SaaS, ecommerce, app, newsletter): usual earnings measure and starting range with our tool links",
+  "Add factor-scoring explanation",
+  "Add DIY step list and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

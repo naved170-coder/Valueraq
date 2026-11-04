@@ -1,0 +1,53 @@
+{
+ "page": "guides/buying-digital-businesses",
+ "query": "how to buy an online business",
+ "results": [
+  "shopify.com/blog/how-to-buy-business-shopify-exchange",
+  "feinternational.com guide to buying an online business",
+  "flippa.com/blog/how-to-buy-a-money-making-online-business",
+  "revisionlegal.com",
+  "uk.businessesforsale.com"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/guide-to-buying-an-online-business",
+   "words": 2800,
+   "has": [
+    "why buy",
+    "7-step process",
+    "what to look for",
+    "how much to pay",
+    "completing the acquisition",
+    "checklists: prospectus, offer terms, due diligence, asset transfer",
+    "timelines"
+   ],
+   "figures": "due diligence 1-10 business days; 4-week training; 60-day domain lock"
+  },
+  {
+   "url": "shopify.com/blog/how-to-buy-business-shopify-exchange",
+   "words": 2300,
+   "has": [
+    "9-step process",
+    "where to buy online",
+    "why buy",
+    "things to consider",
+    "financing options",
+    "LOI contents",
+    "documents to review",
+    "owner quotes",
+    "FAQ"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Add a timeline table (search, offer, due diligence, escrow, handover) with typical durations",
+  "Add financing options summary (link)",
+  "Add LOI contents checklist",
+  "Add 'where to find businesses' section (neutral, no competitor names unless held)",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

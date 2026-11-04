@@ -67,6 +67,24 @@ On the 1st (Pakistan date), write only the first two missing pages of the day (t
 4. If fewer than 30 unwritten days remain in `seo/calendar.json`, add new days in the same format. Run the duplicate check
    in section 3 on every new topic against existing pages and against the rest of the calendar before adding it.
 
+### Every day: improve two existing pages from saved competitor research
+
+`seo/serp/` holds one file per existing page (`<kind>-<slug>.json`), collected in sessions with the owner: the search,
+the strongest competing pages, what they cover (`studied`) and our gaps (`gaps`). After writing the day's new pages:
+
+1. Take the first two files whose `applied` is `null`, in this order: `tools-`, `calculators-`, `guides-`, `glossary-`.
+   Skip `queue.json`. Skip a page that names a competitor or its fees.
+2. Open our page and add what the `gaps` list asks for, so the page answers the search better than the pages studied:
+   tables, worked examples, checklists, FAQs, clearer first lines. Keep everything already true on the page.
+3. Figures: use only figures from `app/valuation.py`, the methodology page, the page itself, or a source in
+   `seo/sources.json` (quote it as written there and add it to the page's Sources). A figure that appears only in a
+   `studied` entry is a competitor's claim: do not use it. Never name the studied sites or copy their wording.
+4. Do not change the address, `publish_at` or the main keyword. Set `updated` to today. Run the editorial review
+   (section 6) on the changed page; it must still score 8.5 or more, or undo the change.
+5. In the file set `"applied": "<today>"` and `"applied_note": "<one line: what was added>"`. Record each page in the
+   report with `"action": "improve"` and add `improve` to `tasks`. If no unapplied files are left, say so in `notes`
+   and still add `improve` to `tasks`.
+
 ### Search figures
 
 Read the website's daily ranking summary with the Render tools: `list_logs` on service `srv-dav6fknpn0mc73aclre0`,

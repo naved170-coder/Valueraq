@@ -1,0 +1,32 @@
+{
+ "page": "calculators/business-multiple-calculator",
+ "query": "business valuation multiple calculator",
+ "results": [
+  "calculate.co.nz",
+  "naomisimson.com",
+  "iconic.co business valuation calculator",
+  "bizquest.com valuation calculator",
+  "baton.com/business-valuation-calculator"
+ ],
+ "studied": [
+  {
+   "url": "baton.com/business-valuation-calculator",
+   "words": 900,
+   "has": [
+    "inputs: industry, state, revenue, profit/SDE, growth",
+    "low/mid/high output",
+    "3-step explainer",
+    "FAQ incl. values at $500k/$1M/$2M sales"
+   ],
+   "figures": "2.8x-4.9x SDE, mostly 3-3.5x"
+  }
+ ],
+ "gaps": [
+  "Add a worked example: asking price -> implied multiples -> payback, with what is 'cheap' vs 'expensive' for websites, SaaS and stores",
+  "Add FAQ on SDE vs EBITDA multiples and revenue multiples",
+  "Add 'what to do if the multiple looks high' (negotiation, due diligence links)"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

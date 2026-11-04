@@ -1,0 +1,34 @@
+{
+ "page": "guides/saas-valuation-methods",
+ "query": "saas valuation methods",
+ "results": [
+  "websiteclosers.com how to value a saas company",
+  "techma.bakertilly.es",
+  "pipelineroad.com saas valuations guide",
+  "kalungi.com/blog/saas-valuations",
+  "crv.com/content/saas-valuation"
+ ],
+ "studied": [
+  {
+   "url": "crv.com/content/saas-valuation",
+   "words": 2300,
+   "has": [
+    "3 methods (revenue, EBITDA, SDE multiples)",
+    "key metrics",
+    "fundraising vs exit valuation",
+    "ways to raise value",
+    "4 FAQs"
+   ],
+   "figures": "$2M ARR at 4x = $8M; Rule of 40 companies trade higher"
+  }
+ ],
+ "gaps": [
+  "Add methods comparison table (ARR multiple, SDE/profit multiple, DCF, comparables) - best for, data needed, weakness",
+  "Add fundraising vs acquisition valuation difference",
+  "Add which method for which size",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

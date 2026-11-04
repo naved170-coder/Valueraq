@@ -1,0 +1,44 @@
+{
+ "page": "guides/digital-business-due-diligence",
+ "query": "online business due diligence checklist",
+ "results": [
+  "smash.vc 10 point checklist",
+  "empireflippers.com/due-diligence-checklist",
+  "investors.club/website-due-diligence-checklist",
+  "flippa.com/blog/buyer-due-diligence-checklist",
+  "feinternational.com due diligence of an online business"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/due-diligence-checklist",
+   "words": 4000,
+   "has": [
+    "pass/fail checklist across 18 sections",
+    "model-specific checks (ecommerce, SaaS)",
+    "downloadable checklist"
+   ],
+   "figures": "none"
+  },
+  {
+   "url": "investors.club/website-due-diligence-checklist",
+   "words": 3400,
+   "has": [
+    "100+ checks across 11 areas with red flags and verification tools",
+    "downloadable PDF/Excel",
+    "Pass/Concern/Fail tracking",
+    "3 tables",
+    "4 FAQs"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Strongest pages offer a downloadable checklist: add a free printable/CSV checklist",
+  "Add Pass/Concern/Fail format with red flag + how to verify for each item",
+  "Add model-specific sections (content site, ecommerce, SaaS, app, newsletter)",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

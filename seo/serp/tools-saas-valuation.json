@@ -1,0 +1,44 @@
+{
+ "page": "tools/saas-valuation",
+ "query": "saas valuation calculator",
+ "results": [
+  "tools.firstbase.io/saas-valuation-calculator",
+  "acquire.com/free-saas-valuation",
+  "payproglobal.com saas valuation calculator",
+  "shout.com",
+  "userjot.com saas valuation multiple estimator"
+ ],
+ "studied": [
+  {
+   "url": "acquire.com/free-saas-valuation",
+   "words": 600,
+   "has": [
+    "short questionnaire + contact details required",
+    "valuation range output",
+    "FAQ on methodology/accuracy"
+   ],
+   "figures": "no numeric multiples"
+  },
+  {
+   "url": "tools.firstbase.io/saas-valuation-calculator",
+   "words": 200,
+   "has": [
+    "ARR growth projection",
+    "NRR",
+    "public benchmark",
+    "monthly breakdown"
+   ],
+   "figures": "no numeric multiples shown"
+  }
+ ],
+ "gaps": [
+  "Our edge: no sign-up and every multiple shown; say so near the top",
+  "Add value-by-ARR table (e.g. $50k-$1M ARR at 2x/3.5x/5x)",
+  "Explain NRR and Rule of 40 briefly and how they move the multiple",
+  "Explain small-SaaS vs public-company multiples",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

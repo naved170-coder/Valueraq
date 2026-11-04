@@ -1,0 +1,49 @@
+{
+ "page": "calculators/website-worth-calculator",
+ "query": "website worth calculator",
+ "results": [
+  "rows.com website value calculator",
+  "toolszu.com",
+  "geekflare.com",
+  "managewp.com/website-worth",
+  "ahrefs.com/blog/how-much-is-my-website-worth",
+  "thewebsiteflip.com/guide/website-worth-calculator"
+ ],
+ "studied": [
+  {
+   "url": "ahrefs.com/blog/how-much-is-my-website-worth",
+   "words": 2500,
+   "has": [
+    "how online businesses are valued",
+    "3 steps to calculate",
+    "5 ways to increase sale price",
+    "should you sell",
+    "calculator vs reality comparison"
+   ],
+   "figures": "30-45x monthly net profit; $10k/month -> $300k-$450k; domain-only calculator valued a $500k site at $14k"
+  },
+  {
+   "url": "thewebsiteflip.com/guide/website-worth-calculator",
+   "words": 2000,
+   "has": [
+    "tested 3 calculators on a real site",
+    "why calculators fail",
+    "2 better ways",
+    "FAQ",
+    "pros/cons per tool",
+    "RPM x traffic formula"
+   ],
+   "figures": "35-42x multiple; calculators gave $1.5k-$18.7k for a ~$150k site"
+  }
+ ],
+ "gaps": [
+  "Strong angle used by top pages: show that domain-only calculators are wildly wrong; ours is profit-based. Add a short 'why most website worth calculators are wrong' box",
+  "Add 'how to get the inputs right' (profit, add-backs, 12-month average)",
+  "Add RPM x traffic sense-check for ad sites",
+  "Add 5 ways to increase value (link)",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

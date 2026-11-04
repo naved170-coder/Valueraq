@@ -1,0 +1,18 @@
+{
+ "page": "guides/website-worth-examples",
+ "query": "how much is my website worth",
+ "collected": "2026-11-04",
+ "results": [
+  "hostinger.com",
+  "kinsta.com",
+  "ionos.com",
+  "hostscore.net",
+  "webacquisition.com"
+ ],
+ "studied": [],
+ "gaps": [],
+ "applied": "2026-11-04",
+ "applied_note": "Quick-answer table of value by monthly profit; Why online rules of thumb disagree (monthly vs yearly, revenue vs profit); Why domain-only worth checkers mislead; What lowers a website's value (incl. Wayback Machine check); How to raise value before selling; FAQs: value of 10,000 visitors a month; the cost approach",
+ "position_before": 25.0,
+ "note": "Studied by hand in the 4 Nov session; see seo/serp_pilot.json."
+}

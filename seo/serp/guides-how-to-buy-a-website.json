@@ -1,0 +1,37 @@
+{
+ "page": "guides/how-to-buy-a-website",
+ "query": "how to buy a website",
+ "results": [
+  "blogtyrant.com/how-to-buy-a-website",
+  "webfx.com/blog/web-design/how-to-buy-a-website",
+  "travelpayouts.com/blog/how-to-buy-a-website",
+  "profitworks.ca",
+  "crazyegg.com"
+ ],
+ "studied": [
+  {
+   "url": "blogtyrant.com/how-to-buy-a-website",
+   "words": 3000,
+   "has": [
+    "key takeaways",
+    "should I buy an existing site",
+    "where to buy",
+    "5 factors",
+    "preparing to buy checklist",
+    "buying vs starting new",
+    "WHOIS and Wayback checks",
+    "pros/cons"
+   ],
+   "figures": "price tiers: under $100 new sites, $5k+ moderate, $1M top-tier"
+  }
+ ],
+ "gaps": [
+  "Add buy vs build comparison (cost, time, risk)",
+  "Add price tiers explanation (what $5k vs $50k vs $500k buys)",
+  "Add WHOIS/Wayback/backlink quick checks",
+  "Add key takeaways box and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,35 @@
+{
+ "page": "guides/how-to-sell-a-website",
+ "query": "how to sell a website",
+ "results": [
+  "hostinger.com/tutorials/how-to-sell-a-website (could not open)",
+  "blog.ishosting.com",
+  "wpshout.com",
+  "business.org",
+  "kinsta.com/blog/sell-website"
+ ],
+ "studied": [
+  {
+   "url": "kinsta.com/blog/sell-website",
+   "words": 4000,
+   "has": [
+    "how long it takes",
+    "7 steps",
+    "5 case studies of sites sold >$100k",
+    "checklists: automate operations, financial and traffic reports",
+    "marketplace fee comparison",
+    "average multiples chart"
+   ],
+   "figures": "case studies with prices"
+  }
+ ],
+ "gaps": [
+  "Add 'how long it takes' with stage timeline",
+  "Add pre-sale checklists (automation/SOPs, financial reports, traffic reports)",
+  "Add selling-channel comparison (broker vs marketplace vs direct, fees as ranges) - link ways-to-sell guide",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

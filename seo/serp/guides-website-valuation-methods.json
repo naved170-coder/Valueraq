@@ -1,0 +1,46 @@
+{
+ "page": "guides/website-valuation-methods",
+ "query": "website valuation methods",
+ "results": [
+  "eqvista.com website valuation",
+  "thenextweb.com art and science of valuing websites",
+  "feinternational.com how to value a website or internet business",
+  "hostscore.net",
+  "flippa.com/blog/website-valuation"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/how-to-value-a-website-or-internet-business-in-2025",
+   "words": 3000,
+   "has": [
+    "market conditions",
+    "valuation challenges",
+    "methods: DCF, precedent transactions, public comps, traffic valuation",
+    "critique of automated tools",
+    "multiples deep dive",
+    "business models",
+    "buyer profiles",
+    "due diligence",
+    "5 FAQs"
+   ],
+   "figures": "3x-10x range across deal sizes"
+  },
+  {
+   "url": "eqvista.com website valuation",
+   "words": 1400,
+   "has": [
+    "5 methods with worked $ examples"
+   ],
+   "figures": "$1 per visitor per month rule"
+  }
+ ],
+ "gaps": [
+  "Apply all six methods to one example site in a single comparison table",
+  "Add 'which buyers use which method' (individual vs fund)",
+  "Add critique of domain-only tools",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

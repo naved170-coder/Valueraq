@@ -1,0 +1,55 @@
+{
+ "page": "guides/ai-business-valuation-methods",
+ "query": "ai business valuation methods (studied with 'ai business valuation')",
+ "results": [
+  "feinternational.com/blog/ai-business-valuation-model-2026",
+  "flippa.com/blog/how-to-value-an-ai-company-7-key-metrics",
+  "tomtunguz.com/valuing-ai-non-ai",
+  "bvresources.com",
+  "mondaq.com"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/ai-business-valuation-model-2026",
+   "words": 3000,
+   "has": [
+    "what makes AI different",
+    "methods",
+    "AI-specific metrics",
+    "trends",
+    "risk factors",
+    "valuation steps",
+    "pitfalls",
+    "3 case studies",
+    "12-question FAQ",
+    "charts"
+   ],
+   "figures": "public AI 25-35x revenue; private deals 15-30x; DCF input example"
+  },
+  {
+   "url": "flippa.com/blog/how-to-value-an-ai-company-7-key-metrics",
+   "words": 2500,
+   "has": [
+    "key takeaways",
+    "why traditional methods fail",
+    "7 key metrics",
+    "methods",
+    "market benchmarks table",
+    "common mistakes",
+    "step-by-step",
+    "6 FAQs",
+    "worked examples"
+   ],
+   "figures": "AI 25-30x revenue vs ~6x SaaS (venture-scale companies)"
+  }
+ ],
+ "gaps": [
+  "Add a methods comparison table (risk-adjusted ARR, profit multiple, DCF, cost to rebuild, comparables) with when each fits",
+  "Explain why venture-scale AI multiples (15-35x revenue) don't apply to small AI tools",
+  "Apply all methods to one example",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

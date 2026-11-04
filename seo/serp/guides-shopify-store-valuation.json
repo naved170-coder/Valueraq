@@ -1,0 +1,49 @@
+{
+ "page": "guides/shopify-store-valuation",
+ "query": "shopify store valuation",
+ "results": [
+  "redstagfulfillment.com/shopify-valuation",
+  "shipaid.com",
+  "tevello.com",
+  "flippa.com/blog/shopify-store-valuation-what-your-business-is-worth-in-2026",
+  "apps.shopify.com/store-valuation"
+ ],
+ "studied": [
+  {
+   "url": "redstagfulfillment.com/shopify-valuation",
+   "words": 3000,
+   "has": [
+    "what goes into a multiple",
+    "sale preparation timeline",
+    "how to sell",
+    "pitfalls",
+    "SKU-count example"
+   ],
+   "figures": "20x-50x monthly; 3-8 products sweet spot (their claim)"
+  },
+  {
+   "url": "flippa.com shopify store valuation 2026",
+   "words": 2000,
+   "has": [
+    "key takeaways",
+    "benchmarks",
+    "Shopify-unique factors",
+    "Shopify vs Amazon FBA table",
+    "how to increase value",
+    "4 FAQs",
+    "case study"
+   ],
+   "figures": "SDE multiples 1.55x average vs 2.75x top quartile (their marketplace data)"
+  }
+ ],
+ "gaps": [
+  "Add Shopify-specific factors (apps cost, theme/customisation, returning-customer rate, email list size, ad dependence)",
+  "Add Shopify vs Amazon FBA table",
+  "Add sale-preparation timeline",
+  "Add worked example with stock added",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

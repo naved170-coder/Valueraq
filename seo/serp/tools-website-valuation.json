@@ -1,0 +1,43 @@
+{
+ "page": "tools/website-valuation",
+ "query": "website valuation tool",
+ "results": [
+  "producthunt website valuation tool",
+  "geekflare.com/guide/website-value-calculators",
+  "ionos.com website value",
+  "shoutmeloud.com how much is website worth",
+  "semrush.com/blog/website-value"
+ ],
+ "studied": [
+  {
+   "url": "geekflare.com/guide/website-value-calculators",
+   "words": 900,
+   "has": [
+    "profiles of 8 tools",
+    "worked revenue-multiple example"
+   ],
+   "figures": "24-36x monthly revenue"
+  },
+  {
+   "url": "semrush.com/blog/website-value",
+   "words": 2300,
+   "has": [
+    "what affects value",
+    "3 calculators and methods",
+    "how to increase value",
+    "tips for buying",
+    "case study"
+   ],
+   "figures": "24-36x monthly revenue; domain sale examples"
+  }
+ ],
+ "gaps": [
+  "Competitors quote 24-36x monthly revenue (not profit): explain the difference in a short box",
+  "Explain why domain-only checkers mislead (link to website-worth-examples)",
+  "Add value-by-monthly-profit table",
+  "Add 'what affects value' scannable list and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

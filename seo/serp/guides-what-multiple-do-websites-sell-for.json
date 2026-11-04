@@ -1,0 +1,50 @@
+{
+ "page": "guides/what-multiple-do-websites-sell-for",
+ "query": "what multiple do websites sell for",
+ "results": [
+  "domaininvesting.com",
+  "iconic.co/blog/how-to-value-a-website",
+  "flippa.com/blog/how-much-can-you-sell-your-website-for",
+  "fatstacksblog.com/websites-sell-for-so-little-money",
+  "bizbuysell.com valuation benchmarks websites-ecommerce"
+ ],
+ "studied": [
+  {
+   "url": "flippa.com/blog/how-much-can-you-sell-your-website-for",
+   "words": 2000,
+   "has": [
+    "key takeaways",
+    "basics",
+    "methods",
+    "value drivers",
+    "prices by business model table",
+    "size impact",
+    "market conditions",
+    "maximizing price",
+    "mistakes",
+    "selling process",
+    "6 FAQs"
+   ],
+   "figures": "35-45x monthly profit; SaaS 45-60x+ (their data)"
+  },
+  {
+   "url": "bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce",
+   "words": 600,
+   "has": [
+    "sold-listing data 2021-2025",
+    "yearly tables",
+    "quartile ranges"
+   ],
+   "figures": "1,661 sold listings; median earnings multiple 3.28; median revenue multiple 0.90; median sale price $825,000; 71 days on market. CITABLE third-party data (note: skews to larger businesses)"
+  }
+ ],
+ "gaps": [
+  "Cite BizBuySell's sold-listing benchmark (median 3.28x earnings, 0.90x revenue, 1,661 sales 2021-2025) next to our default range, noting it skews to larger businesses",
+  "Add multiples by business model table (content, affiliate, ecommerce, SaaS, newsletter) using our defaults",
+  "Add size effect (bigger sites tend to get higher multiples) with source",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

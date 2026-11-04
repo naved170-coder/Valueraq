@@ -271,6 +271,7 @@ def validate():
 
 
 # ---------------------------------------------------------------- task data (daily checklist by date)
+IMPROVE_START = "2026-11-05"   # first day the daily run improves pages from seo/serp/
 TASKS = [
     # key, label, who records it ("run" = the daily run's report, "site" = worked out by the website)
     ("duplicate_check", "Duplicate check on every topic", "run"),
@@ -287,6 +288,7 @@ TASKS = [
     ("published", "Pages published on the website", "site"),
     ("bing", "New pages announced to Bing", "site"),
     ("refresh", "Content refresh (1st of each month)", "run"),
+    ("improve", "2 pages improved from competitor research", "run"),
     ("selfcheck", "Morning self-check by Claude", "watch"),
     ("gsc", "Google Search Console figures saved", "gsc"),
     ("review", "Ranking review written (Mon and Thu)", "review"),
@@ -395,6 +397,8 @@ def task_grid(month):
                 if key == "report" or key in done:
                     st = "done"
                 elif key == "refresh" and d.day != 1:
+                    st = ""
+                elif key == "improve" and iso < IMPROVE_START:
                     st = ""
                 else:
                     st = "missed" if planned else ""

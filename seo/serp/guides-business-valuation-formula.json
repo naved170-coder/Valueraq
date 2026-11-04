@@ -1,0 +1,44 @@
+{
+ "page": "guides/business-valuation-formula",
+ "query": "business valuation formula",
+ "results": [
+  "grata.com/resources/business-valuation-formulas",
+  "accountingtools.com business valuation formula",
+  "superfastcpa.com",
+  "smartroom.com",
+  "simplybusiness.co.uk how to value a business"
+ ],
+ "studied": [
+  {
+   "url": "grata.com/resources/business-valuation-formulas",
+   "words": 1300,
+   "has": [
+    "income/market/asset formulas",
+    "worked $ examples",
+    "why valuation matters",
+    "limitations",
+    "FAQ"
+   ],
+   "figures": "none specific"
+  },
+  {
+   "url": "accountingtools.com business valuation formula",
+   "words": 1000,
+   "has": [
+    "4 methods: times revenue, earnings multiplier, DCF, book value",
+    "worked examples",
+    "1 FAQ"
+   ],
+   "figures": "0.5x sales, 5x earnings examples"
+  }
+ ],
+ "gaps": [
+  "Our page already has 4 methods with examples; add a single comparison table (formula, best for, data needed, weakness)",
+  "Add 'which formula for which online business' quick guide",
+  "Add FAQ (6)",
+  "Add a combined example applying all four to the same business"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

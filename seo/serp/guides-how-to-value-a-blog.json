@@ -1,0 +1,48 @@
+{
+ "page": "guides/how-to-value-a-blog",
+ "query": "how to value a blog",
+ "results": [
+  "quietlight.com/blog-valuation-for-business-owners",
+  "problogger.com/how-to-calculate-the-value-of-your-blog",
+  "diggitymarketing.com/how-much-is-your-blog-worth",
+  "bloggingguide.com/blog-valuation",
+  "flippa.com/blog/blog-valuation"
+ ],
+ "studied": [
+  {
+   "url": "quietlight.com/blog-valuation-for-business-owners",
+   "words": 1700,
+   "has": [
+    "why know your blog's worth",
+    "exit options",
+    "SDE",
+    "determining the multiple",
+    "factors",
+    "traffic concentration scenarios (90%/95% from one page)",
+    "pros/cons of automated tools",
+    "four pillars of value"
+   ],
+   "figures": "SDE $200k x 4 = $800k"
+  },
+  {
+   "url": "problogger.com how to calculate the value of your blog",
+   "words": 700,
+   "has": [
+    "cost of content",
+    "cost per visit",
+    "revenue per visit"
+   ],
+   "figures": "none"
+  }
+ ],
+ "gaps": [
+  "Add page-concentration risk (share of traffic on top pages) with example",
+  "Add value-by-monthly-profit table for blogs",
+  "Add exit options section",
+  "Add 'blogs with no income' (content/cost approach)",
+  "Add FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

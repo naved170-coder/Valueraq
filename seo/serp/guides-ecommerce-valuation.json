@@ -1,0 +1,50 @@
+{
+ "page": "guides/ecommerce-valuation",
+ "query": "how to value an ecommerce business",
+ "results": [
+  "benchmarkbusiness.com.au",
+  "nudgify.com/how-to-value-ecommerce-business",
+  "websitebuilderexpert.com ecommerce valuation",
+  "empireflippers.com/value-ecommerce-business",
+  "edesk.com/blog/value-ecommerce-business"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/value-ecommerce-business",
+   "words": 5000,
+   "has": [
+    "how valuations work",
+    "inventory",
+    "pricing windows",
+    "profit/traffic/channel quality",
+    "real listings table with asking prices and multiples",
+    "Shopify vs Amazon FBA",
+    "calculators",
+    "mistakes",
+    "exit planning",
+    "FAQ",
+    "factors up/down table"
+   ],
+   "figures": "typical 1.7x-5x+ annual; live listings 0.5x-4.0x"
+  },
+  {
+   "url": "nudgify.com/how-to-value-ecommerce-business",
+   "words": 850,
+   "has": [
+    "methods comparison table (SDE, EBITDA, DCF, market)",
+    "factors list"
+   ],
+   "figures": "4x-6x earnings; SDE under $10M"
+  }
+ ],
+ "gaps": [
+  "Add a factors that raise/lower the multiple table",
+  "Add inventory handling (added on top at cost) with worked example",
+  "Add Shopify vs Amazon FBA vs DTC comparison table",
+  "Add common mistakes and FAQ (8)",
+  "Add methods comparison table"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
