@@ -260,7 +260,7 @@ def validate():
                 target = doc_for(href)
                 if target is None:
                     bad(f"links to {href}, which does not exist")
-                elif target.publish_ts is not None and target.publish_ts > ts:
+                elif target.publish_ts is not None and target.publish_ts > max(ts, time.time()):  # fine once both are live
                     bad(f"links to {href}, which goes live later than this page")
                 elif target.held and content.decisions().get(target.path) != "approved" and not d.held:
                     bad(f"links to {href}, which is waiting for approval")

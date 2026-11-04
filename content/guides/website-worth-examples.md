@@ -10,7 +10,7 @@ page_type: article
 answer: A website that earns money is usually worth a multiple of its yearly profit. On VALUERAQ's default assumptions that is 2.5 to 4.0 times annual profit before adjustments, so a site that clears $2,400 a month starts at roughly $72,000 to $115,000. Age, growth, owner time and reliance on one traffic source then move the figure up or down.
 keywords: how much is my website worth, website worth calculator, value my website, website value estimator, website valuation
 published: 2026-10-06
-updated: 2026-10-06
+updated: 2026-11-04
 publish_at: 2026-10-06T01:00Z
 image: /static/img/articles/website-worth-examples.png
 image_alt: Featured image for the guide How Much Is My Website Worth, with seven worked examples
@@ -25,6 +25,22 @@ cta_text: Enter your own figures and get a low, midpoint and high value in under
 Two websites with the same profit can be worth very different amounts. In the examples below, the multiple applied to yearly profit runs from 2.40 for an affiliate site in decline to 3.92 for a mature site with several income sources. That gap is the difference between about 29 months of profit and about 47 months of profit for the same dollar earned.
 
 Every figure on this page comes from the [website valuation tool](/tools/website-valuation/) using {{BRAND}}'s published default assumptions. They are estimates, not appraisals and not records of real sales.
+
+## Quick answer: website value by monthly profit
+
+If you only want a ballpark, find your average monthly profit in the table. The figures use {{BRAND}}'s default range of 2.5 to 4.0 times yearly profit (30 to 48 times monthly profit), before any adjustment for age, growth, workload or traffic risk.
+
+| Monthly profit | Yearly profit | Low (2.5×) | Midpoint (3.2×) | High (4.0×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $15,000 | $19,200 | $24,000 |
+| $1,000 | $12,000 | $30,000 | $38,400 | $48,000 |
+| $2,500 | $30,000 | $75,000 | $96,000 | $120,000 |
+| $5,000 | $60,000 | $150,000 | $192,000 | $240,000 |
+| $10,000 | $120,000 | $300,000 | $384,000 | $480,000 |
+
+"Profit" means what is left after every business cost but before you pay yourself. A site with revenue but no profit is not on this table; see example 7 below.
+
+For a figure that reflects your own site, enter your numbers in the [website worth calculator](/calculators/website-worth-calculator/). It takes about a minute and needs no sign-up.
 
 ## The method in three lines
 
@@ -47,6 +63,16 @@ The tool adjusts the multiple with five rules for a website. Each rule adds or s
 | How the site earns | Affiliate: −3% | Own products or mixed income: +3% |
 
 These are {{BRAND}} editorial assumptions, published in the [methodology](/methodology/). They are not averages from a sales database.
+
+## Why the rules of thumb you read online disagree
+
+Search this question and you'll see "20 to 50 times monthly revenue", "24 to 36 times monthly", "2 to 3 times yearly income" and more, sometimes on the same page. Most of the gap comes from three mix-ups, not from real disagreement:
+
+- **Monthly or yearly.** 36 times monthly profit is the same as 3 times yearly profit. Divide a monthly multiple by 12 to compare.
+- **Revenue or profit.** A multiple of revenue looks lower for the same price, because revenue is bigger than profit. A site with $5,000 revenue and $2,000 profit priced at $72,000 is "14 times monthly revenue" and "36 times monthly profit" at once. Buyers of content and affiliate sites price on profit.
+- **Which site.** A range covers everything from a two-year-old single-source site to a nine-year-old brand. Your site sits somewhere inside it, and the adjustments above decide where.
+
+Once you convert every quote to "times yearly profit", most of them land between about 2 and 4.
 
 ## Seven worked examples
 
@@ -147,6 +173,32 @@ A multiple is quick, and that is also its weakness. The Corporate Finance Instit
 
 Treat the result as a starting range for a conversation, then check it against what buyers ask about in [due diligence](/guides/digital-business-due-diligence/).
 
+## Why free "website worth" checkers give strange numbers
+
+Tools that ask only for a domain name can't see your profit. They guess traffic from public signals and apply an assumed earning rate per visitor, so two sites with the same traffic get the same figure even if one earns ten times more. Treat their output as a curiosity, not a value. Any estimate a buyer would take seriously starts from profit you can prove.
+
+## What lowers a website's value
+
+Buyers look for these problems first, and each one pulls the multiple down or ends the deal:
+
+- **A troubled domain history.** Check old versions of the site on the Internet Archive's [Wayback Machine](https://web.archive.org/). A past life as a spam or adult site can carry over into search.
+- **Falling traffic or income.** A downward 12-month trend costs more than any other single factor in the examples above.
+- **One traffic source.** Above 80% from a single source, one search update or policy change can halve the income.
+- **Income that depends on you.** Guest-post sales, consulting or anything tied to your name may not transfer to a buyer.
+- **Records that can't be checked.** Profit without ad-network, affiliate or bank statements behind it is often discounted heavily or ignored.
+
+## How to raise the value before you sell
+
+The same factors work in reverse. In the order most owners can act on them:
+
+1. **Clean up the records.** Twelve months of profit you can prove from source statements.
+2. **Cut your own hours.** Write down how each task is done so a buyer, or a freelancer, can take over.
+3. **Add a second traffic source.** An email list or a social channel reduces the single-source discount.
+4. **Add a second income stream.** A site with mixed income gets a small bonus in the method above.
+5. **Fix technical problems.** Broken pages, slow loading and errors are cheap to fix and easy for buyers to spot.
+
+The guide to [increasing website value before selling](/guides/increase-website-value-before-selling/) covers each step in more depth.
+
 ## How to get your own number
 
 1. Add up net profit for the last 12 months and divide by 12. Leave your own pay out of the costs.
@@ -175,6 +227,14 @@ It is the same idea in different units. A multiple of 35 times monthly profit eq
 
 Not with an earnings multiple. A site with no profit is priced on its assets, such as the domain, content and audience, and that depends on what a particular buyer would do with them.
 
+### What is a website with 10,000 visitors a month worth?
+
+Visitors alone don't set the value; profit does. Two sites with 10,000 monthly visitors can be worth very different amounts if one earns from a few well-paid affiliate offers and the other from low-paying display ads. Work out what the traffic earns after costs, then use the table at the top of this page.
+
+### What is the cost approach, and when is it used?
+
+The cost approach values a site at what it would cost to build again: content, design, development and the time to reach its current traffic. Buyers use it mainly for sites with little or no profit, where an earnings multiple gives nothing to work with. It usually gives a lower figure than a profitable site would get from a multiple.
+
 ### How accurate is a website worth calculator?
 
 It is as accurate as the figures entered and no more. It applies fixed rules to your numbers and can't check your records, your traffic quality or the market on a given day. Use it to set expectations, not to set a final price.
@@ -184,3 +244,4 @@ It is as accurate as the figures entered and no more. It applies fixed rules to 
 - U.S. Small Business Administration, [Close or sell your business](https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business): the income, market and assets approaches to valuation.
 - Corporate Finance Institute, [Multiples analysis](https://corporatefinanceinstitute.com/resources/valuation/multiples-analysis): what multiples are and their limits.
 - {{BRAND}}, [Valuation methodology](/methodology/): the default multiples and every adjustment rule used in the examples.
+- Internet Archive, [Wayback Machine](https://web.archive.org/): past versions of a website, used to check a domain's history.
