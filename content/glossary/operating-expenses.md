@@ -2,7 +2,7 @@
 title: What Are Operating Expenses?
 term: Operating Expenses
 aliases: operating expenses, opex, operating costs, running costs
-meta_title: Operating Expenses (Opex): Definition and Example
+meta_title: What Are Operating Expenses (Opex)? Definition & Example
 meta_description: Operating expenses are the everyday costs of running a business, apart from direct costs. See examples, a worked profit example and why buyers check them.
 h1: Operating Expenses
 definition: Operating expenses, often shortened to opex, are the costs of running a business day to day, such as software, marketing, contractors and fees, apart from the direct cost of producing what it sells.

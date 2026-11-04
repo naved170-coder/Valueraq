@@ -2,7 +2,7 @@
 title: What Is Escrow?
 term: Escrow
 aliases: escrow, escrow service, escrow account
-meta_title: Escrow – Definition and Role in a Business Sale
+meta_title: What Is Escrow? Definition & Role in a Business Sale
 meta_description: Escrow is a neutral third party holding the buyer's payment until the sale terms are met. Learn how it works when buying or selling an online business.
 h1: Escrow
 definition: Escrow is an arrangement in which a neutral third party holds the buyer's payment and releases it to the seller only once the conditions agreed by both sides have been met.

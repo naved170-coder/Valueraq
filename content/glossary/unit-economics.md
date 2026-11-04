@@ -2,7 +2,7 @@
 title: What Is Unit Economics?
 term: Unit Economics
 aliases: unit economics, unit economic, per-unit economics
-meta_title: Unit Economics – Definition, Formula & Example
+meta_title: What Are Unit Economics? Definition, Formula & Example
 meta_description: Unit economics measures the profit or loss on one order, customer or subscription. See the formula, a worked example and why buyers check it before they pay.
 h1: Unit Economics
 definition: Unit economics is the revenue and cost of a single unit of a business, such as one order, one customer or one subscription, used to show whether each unit makes or loses money before overheads.

@@ -2,7 +2,7 @@
 title: What Is Burn Rate?
 term: Burn Rate
 aliases: burn rate, cash burn, net burn, gross burn, monthly burn
-meta_title: Burn Rate – Definition, Formula & Example
+meta_title: What Is Burn Rate? Definition, Formula & Example
 meta_description: Burn rate is how much cash a business spends each month beyond what it earns. See gross and net burn, the formula, a worked example and why it matters.
 h1: Burn Rate
 definition: Burn rate is the amount of cash a business uses up each month, shown either as total spending (gross burn) or as spending minus the money coming in (net burn).

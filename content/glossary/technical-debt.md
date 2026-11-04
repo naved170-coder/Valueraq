@@ -2,7 +2,7 @@
 title: What Is Technical Debt?
 term: Technical Debt
 aliases: technical debt, tech debt, code debt
-meta_title: Technical Debt – Definition, Example & Valuation Impact
+meta_title: What Is Technical Debt? Definition & Example
 meta_description: Technical debt is the future cost of shortcuts in software or site code. See how it works, a worked example and how buyers weigh it when pricing a business.
 h1: Technical Debt
 definition: Technical debt is the extra work a software product or website will need in future because of shortcuts, outdated components or poorly organized code that were accepted earlier to save time.

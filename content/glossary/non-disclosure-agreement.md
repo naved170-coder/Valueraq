@@ -2,7 +2,7 @@
 title: What Is a Non-Disclosure Agreement (NDA)?
 term: Non-Disclosure Agreement (NDA)
 aliases: nda, non-disclosure agreement, confidentiality agreement, non disclosure, ndas
-meta_title: Non-Disclosure Agreement (NDA) – Definition & Example
+meta_title: What Is an NDA (Non-Disclosure Agreement)? Meaning & Example
 meta_description: A non-disclosure agreement (NDA) is a contract to keep shared information secret. See how it works when selling a business, an example and what buyers see.
 h1: Non-Disclosure Agreement (NDA)
 definition: A non-disclosure agreement (NDA), also called a confidentiality agreement, is a contract in which one or both sides promise to keep shared information private and to use it only for an agreed purpose, such as judging a business purchase.

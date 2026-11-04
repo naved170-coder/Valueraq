@@ -2,7 +2,7 @@
 title: What Is Dropshipping?
 term: Dropshipping
 aliases: dropshipping, drop shipping, dropship, dropshipping business
-meta_title: Dropshipping – Definition, Example & Effect on Value
+meta_title: What Is Dropshipping? Definition, Example & Effect on Value
 meta_description: Dropshipping is selling products you never hold in stock; a supplier ships each order. See how it works, a profit example and how it affects a store's value.
 h1: Dropshipping
 definition: Dropshipping is a way of running an online store in which the seller holds no stock and a supplier ships each order directly to the customer, so the seller earns the gap between the sale price and the supplier's price.

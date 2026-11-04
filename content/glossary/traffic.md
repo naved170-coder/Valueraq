@@ -2,7 +2,7 @@
 title: What Is Website Traffic?
 term: Traffic
 aliases: website traffic, web traffic
-meta_title: Website Traffic – What It Means for Valuation
+meta_title: What Is Website Traffic? What It Means for Valuation
 meta_description: Website traffic is the number of visits a site receives. Learn the main traffic channels, which metrics buyers check, and how traffic affects a website's value.
 h1: Website Traffic
 definition: Website traffic is the number of visits, and the visitors behind them, that a website or online business receives over a period, usually broken down by the channel they came from.

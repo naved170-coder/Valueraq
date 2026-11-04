@@ -2,7 +2,7 @@
 title: What Is an Asset Sale?
 term: Asset sale
 aliases: asset sale, asset purchase, asset purchase agreement
-meta_title: Asset Sale – Definition and Asset Sale vs Share Sale
+meta_title: What Is an Asset Sale? Definition & Asset Sale vs Share Sale
 meta_description: In an asset sale the buyer purchases chosen assets of a business, not the company itself. Learn what transfers, how it differs from a share sale, and why.
 h1: Asset Sale
 definition: An asset sale is a sale in which the buyer purchases specified assets of a business, such as its domain, website, code, customer list and brand, instead of buying the company that owns them.

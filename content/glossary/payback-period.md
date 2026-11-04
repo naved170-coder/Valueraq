@@ -2,7 +2,7 @@
 title: What Is Payback Period?
 term: Payback Period
 aliases: payback period, payback time, simple payback, CAC payback period
-meta_title: Payback Period – Definition, Formula & Example
+meta_title: What Is Payback Period? Definition, Formula & Example
 meta_description: Payback period is the time it takes for an investment or a cost to be earned back in cash. Learn the formula, a worked example and its limits for buyers.
 h1: Payback Period
 definition: Payback period is the length of time it takes for the cash an investment earns to equal what was paid for it.

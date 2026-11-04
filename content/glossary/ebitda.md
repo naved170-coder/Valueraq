@@ -2,7 +2,7 @@
 title: What Is EBITDA?
 term: EBITDA
 aliases: earnings before interest, taxes, depreciation and amortization
-meta_title: EBITDA – Definition, Formula & How It Differs from SDE
+meta_title: What Is EBITDA? Definition & Example
 meta_description: EBITDA is earnings before interest, taxes, depreciation and amortization. Learn the formula, an example, and when buyers use EBITDA instead of SDE.
 h1: EBITDA
 definition: EBITDA (earnings before interest, taxes, depreciation and amortization) is a measure of a business's operating profit that excludes financing costs, taxes and non-cash charges for the wear or write-down of assets.

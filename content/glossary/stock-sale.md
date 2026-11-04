@@ -2,7 +2,7 @@
 title: What Is a Stock Sale?
 term: Stock Sale
 aliases: stock sale, share sale, sale of shares, stock purchase
-meta_title: Stock Sale – Definition, Example & Stock vs Asset Sale
+meta_title: What Is a Stock Sale? Definition & Example
 meta_description: In a stock sale the buyer purchases the owner's shares and so takes over the whole company. See how it works, an example, and how it differs from asset sales.
 h1: Stock Sale
 definition: A stock sale, also called a share sale, is a sale in which the buyer purchases the owner's shares in a company and so takes over the company itself, with its assets, contracts, accounts and liabilities.

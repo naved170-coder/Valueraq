@@ -2,7 +2,7 @@
 title: What Are Comparable Sales?
 term: Comparable Sales
 aliases: comparable sales, comparables, comps, comparable transactions
-meta_title: Comparable Sales (Comps) – Definition & Example
+meta_title: What Are Comparable Sales (Comps)? Definition & Example
 meta_description: Comparable sales value a business by looking at what similar businesses sold for. See how comps work, an example and why they are hard to use for small deals.
 h1: Comparable Sales
 definition: Comparable sales are recent sales of similar businesses, used to estimate what another business is worth by comparing their prices and figures.

@@ -2,7 +2,7 @@
 title: What Is Revenue per Thousand Visits (RPM)?
 term: Revenue per Thousand Visits (RPM)
 aliases: rpm, revenue per thousand visits, revenue per mille, page rpm, session rpm
-meta_title: RPM (Revenue per Thousand Visits): Definition & Example
+meta_title: What Is RPM (Revenue per 1,000 Visits)? Formula & Example
 meta_description: RPM is the revenue a website earns for every 1,000 visits. See the formula, a worked example and why buyers check RPM when valuing a content site.
 h1: Revenue per Thousand Visits (RPM)
 definition: RPM, short for revenue per mille, is the amount a website earns for every 1,000 visits, found by dividing total revenue by visits and multiplying by 1,000.

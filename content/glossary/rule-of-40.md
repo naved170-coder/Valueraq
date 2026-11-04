@@ -2,7 +2,7 @@
 title: What Is the Rule of 40?
 term: Rule of 40
 aliases: rule of 40, the rule of 40, SaaS rule of 40
-meta_title: Rule of 40: SaaS Formula, Example & Limits
+meta_title: What Is the Rule of 40? SaaS Formula, Example & Limits
 meta_description: The Rule of 40 adds a SaaS company's revenue growth rate to its profit margin and looks for 40% or more. See the formula, an example and its limits.
 h1: Rule of 40
 definition: The Rule of 40 is a rule of thumb for software businesses that adds the revenue growth rate to the profit margin, with a total of 40% or more treated as the target.

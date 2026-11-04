@@ -2,7 +2,7 @@
 title: What Is Micro-SaaS?
 term: Micro-SaaS
 aliases: micro-saas, micro saas, microsaas, micro-saas business
-meta_title: Micro-SaaS – Definition, Example & How It Is Valued
+meta_title: What Is Micro-SaaS? Definition, Example & How It Is Valued
 meta_description: A micro-SaaS is a small software-as-a-service business run by one person or a tiny team. See how it works, an example and why buyers price it differently.
 h1: Micro-SaaS
 definition: A micro-SaaS is a small subscription software business, usually built for a narrow group of customers and run by one person or a very small team.

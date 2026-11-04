@@ -2,7 +2,7 @@
 title: What Is Click-Through Rate?
 term: Click-Through Rate
 aliases: click-through rate, CTR, click rate, click through rate
-meta_title: Click-Through Rate (CTR): Definition & Example
+meta_title: What Is Click-Through Rate (CTR)? Definition & Example
 meta_description: Click-through rate is the share of people who click after seeing a link, ad or email. See the formula, a newsletter example and why buyers check click rates.
 h1: Click-Through Rate (CTR)
 definition: Click-through rate (CTR) is the number of clicks a link, ad or email receives divided by the number of times it was shown or delivered, written as a percentage.

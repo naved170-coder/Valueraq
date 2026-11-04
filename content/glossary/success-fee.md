@@ -2,7 +2,7 @@
 title: What Is a Success Fee?
 term: Success Fee
 aliases: success fee, success fees, commission, completion fee
-meta_title: Success Fee – Definition, Example & How It Is Charged
+meta_title: What Is a Success Fee? Definition & Example
 meta_description: A success fee is paid to a broker or adviser only if a deal closes, usually as a percentage of the price. See how it works, an example and what to check.
 h1: Success Fee
 definition: A success fee is a fee paid to a broker, adviser or marketplace only if a sale completes, normally calculated as a percentage of the sale price.

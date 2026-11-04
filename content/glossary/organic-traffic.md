@@ -2,7 +2,7 @@
 title: What Is Organic Traffic?
 term: Organic Traffic
 aliases: organic traffic, organic search traffic, seo traffic
-meta_title: Organic Traffic: Definition, Example & Value
+meta_title: What Is Organic Traffic? Definition, Example & Value
 meta_description: Organic traffic is the unpaid visits a site gets from search results. See how it is counted, an example and why buyers check how much you rely on it.
 h1: Organic Traffic
 definition: Organic traffic is the visits a website receives from unpaid results in search engines, as opposed to paid ads, direct visits, links on other sites, social media or email.

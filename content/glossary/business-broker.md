@@ -2,7 +2,7 @@
 title: What Is a Business Broker?
 term: Business Broker
 aliases: business broker, business brokers, broker, online business broker
-meta_title: Business Broker – Definition, What They Do & Example
+meta_title: What Does a Business Broker Do? Definition & Example
 meta_description: A business broker is an intermediary who helps owners sell and buyers find businesses. See what brokers do, an example, and when using one makes sense.
 h1: Business Broker
 definition: A business broker is an intermediary who helps the owner of a business sell it, by preparing the sale, finding and screening buyers and guiding the deal to closing, usually for a fee that is paid only if the sale completes.

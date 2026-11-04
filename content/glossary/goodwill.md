@@ -2,7 +2,7 @@
 title: What Is Goodwill?
 term: Goodwill
 aliases: goodwill, business goodwill
-meta_title: Goodwill – Definition, Formula & Example
+meta_title: What Is Goodwill? Definition, Formula & Example
 meta_description: Goodwill is the part of a sale price above a business's identifiable assets. See the formula, a worked example and how it applies to online businesses.
 h1: Goodwill
 definition: Goodwill is the amount a buyer pays for a business above the value of its separately identifiable assets, reflecting things such as reputation, customer relationships and the ability to keep earning.

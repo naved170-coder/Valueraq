@@ -2,7 +2,7 @@
 title: What Is Cohort Analysis?
 term: Cohort Analysis
 aliases: cohort analysis, cohort retention, customer cohorts
-meta_title: Cohort Analysis: Definition, Example & Why It Matters
+meta_title: What Is Cohort Analysis? Definition & Example
 meta_description: Cohort analysis tracks groups of customers who joined in the same period. See how it works, a worked example and why buyers use it to test retention.
 h1: Cohort Analysis
 definition: Cohort analysis groups customers by when they joined and follows each group over time to show how many stay, how much they spend and how that changes.

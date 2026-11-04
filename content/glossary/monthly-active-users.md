@@ -2,7 +2,7 @@
 title: What Is Monthly Active Users (MAU)?
 term: Monthly Active Users (MAU)
 aliases: monthly active users, mau, active users
-meta_title: Monthly Active Users (MAU): Definition & Example
+meta_title: What Are Monthly Active Users (MAU)? Definition & Example
 meta_description: Monthly active users (MAU) counts the people who use an app or product at least once in a month. See how it works, a worked example and what buyers check.
 h1: Monthly Active Users (MAU)
 definition: Monthly active users (MAU) is the number of distinct people who use an app, website or software product at least once during a calendar month, under a definition of "active" that the business sets.

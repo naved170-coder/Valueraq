@@ -2,7 +2,7 @@
 title: What Is SaaS (Software as a Service)?
 term: SaaS
 aliases: software as a service
-meta_title: SaaS (Software as a Service) – Definition & How SaaS Is Valued
+meta_title: What Is SaaS? Definition & How SaaS Is Valued
 meta_description: SaaS is software delivered online and paid for by subscription. Learn the business model, the metrics that define it, and how SaaS businesses are valued.
 h1: SaaS (Software as a Service)
 definition: Software as a service (SaaS) is software delivered over the internet and paid for by subscription, rather than installed and bought once.

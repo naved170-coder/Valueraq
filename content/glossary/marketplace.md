@@ -2,7 +2,7 @@
 title: What Is an Online Marketplace?
 term: Marketplace
 aliases: online marketplace, marketplaces
-meta_title: Online Marketplace – Definition, Types & Valuation Considerations
+meta_title: What Is an Online Marketplace? Definition & Example
 meta_description: An online marketplace connects buyers and sellers and earns fees or commissions. Learn the types, key metrics, and how relying on one affects value.
 h1: Online Marketplace
 definition: An online marketplace is a platform that connects buyers and sellers and typically earns revenue from commissions, listing fees or subscriptions rather than by selling its own inventory.

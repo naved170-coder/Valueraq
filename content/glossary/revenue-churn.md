@@ -2,7 +2,7 @@
 title: What Is Revenue Churn?
 term: Revenue Churn
 aliases: revenue churn, gross revenue churn, net revenue churn, MRR churn, dollar churn
-meta_title: Revenue Churn: Definition, Formula & Example
+meta_title: What Is Revenue Churn? Definition, Formula & Example
 meta_description: Revenue churn is the share of recurring revenue lost in a period. See gross vs net revenue churn, a worked example and why buyers of SaaS businesses check it.
 h1: Revenue Churn
 definition: Revenue churn is the share of a subscription business's recurring revenue that is lost in a period through cancellations and downgrades, usually measured monthly against the revenue at the start of that period.

@@ -2,7 +2,7 @@
 title: What Is Private Label?
 term: Private Label
 aliases: private label, private-label, private label products, private label business
-meta_title: Private Label – Definition, Example & Effect on Value
+meta_title: What Is Private Label? Definition, Example & Effect on Value
 meta_description: Private label means selling products made by another company under your own brand. See how it works, a margin example and the effect on store value.
 h1: Private Label
 definition: Private label is a way of selling products made by another company under your own brand name, so the seller owns the brand and the customer relationship while a manufacturer makes the goods.

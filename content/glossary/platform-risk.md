@@ -2,7 +2,7 @@
 title: What Is Platform Risk?
 term: Platform Risk
 aliases: platform risk, platform dependency, channel risk
-meta_title: Platform Risk – Definition, Example & Valuation Impact
+meta_title: What Is Platform Risk? Definition & Example
 meta_description: Platform risk is the danger of losing sales when a platform you depend on changes its rules, fees or rankings. See an example and how buyers price it.
 h1: Platform Risk
 definition: Platform risk is the danger that a business loses revenue because it depends on a platform it does not control, such as a search engine, a marketplace, an app store, an advertising network or a software provider, and that platform changes its rules, fees, rankings or access.

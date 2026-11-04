@@ -2,7 +2,7 @@
 title: What Is Return on Investment (ROI)?
 term: Return on Investment
 aliases: return on investment, ROI, roi formula, rate of return
-meta_title: Return on Investment (ROI): Formula and Example
+meta_title: What Is Return on Investment (ROI)? Formula & Example
 meta_description: ROI compares what you gain from an investment with what it cost. See the formula, a worked website example and how it differs from payback period.
 h1: Return on Investment (ROI)
 definition: Return on investment (ROI) is the gain from an investment divided by its cost, shown as a percentage, so that different purchases can be compared on one scale.

@@ -2,7 +2,7 @@
 title: What Is ARR (Annual Recurring Revenue)?
 term: ARR
 aliases: annual recurring revenue
-meta_title: ARR (Annual Recurring Revenue) – Definition, Formula & Example
+meta_title: What Is ARR (Annual Recurring Revenue)? Formula & Example
 meta_description: ARR is the yearly value of a business's active subscriptions. Learn the formula, what to include and exclude, and how ARR is used to value SaaS businesses.
 h1: ARR (Annual Recurring Revenue)
 definition: Annual recurring revenue (ARR) is the yearly value of a business's active subscription contracts, usually calculated as monthly recurring revenue (MRR) multiplied by 12.

@@ -2,7 +2,7 @@
 title: What Is Key Person Risk?
 term: Key Person Risk
 aliases: key person risk, key-person risk, founder dependence, owner dependence
-meta_title: Key Person Risk – Definition, Example & Valuation Impact
+meta_title: What Is Key Person Risk? Definition & Example
 meta_description: Key person risk is the danger that a business relies on one person. See how it works, a worked example and how owner hours change a business's value.
 h1: Key Person Risk
 definition: Key person risk is the chance that a business loses value if one person, usually the owner or founder, leaves or becomes unavailable, because that person holds the skills, relationships or knowledge the business depends on.

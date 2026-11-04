@@ -2,7 +2,7 @@
 title: What Is Proof of Funds?
 term: Proof of Funds
 aliases: proof of funds, pof, proof of funds letter, evidence of funds
-meta_title: Proof of Funds – Definition & Example for Buyers
+meta_title: What Is Proof of Funds? Definition & Example for Buyers
 meta_description: Proof of funds is a document showing a buyer has the money to complete a purchase. See what it can include, an example and why sellers ask for it.
 h1: Proof of Funds
 definition: Proof of funds is a document, such as a bank statement or a letter from a financial institution, that shows a buyer has enough money available to pay the price of a purchase.

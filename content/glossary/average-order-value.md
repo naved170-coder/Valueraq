@@ -2,7 +2,7 @@
 title: What Is AOV (Average Order Value)?
 term: AOV
 aliases: average order value, average order values
-meta_title: AOV (Average Order Value) – Definition, Formula & Example
+meta_title: What Is AOV (Average Order Value)? Formula & Example
 meta_description: Average order value (AOV) is the average amount customers spend per order. Learn the formula, an example and what AOV tells the buyer of an online store.
 h1: AOV (Average Order Value)
 definition: Average order value (AOV) is the average amount of revenue a business receives per order, calculated by dividing revenue by the number of orders in the same period.

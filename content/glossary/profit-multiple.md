@@ -2,7 +2,7 @@
 title: What Is a Profit Multiple?
 term: Profit multiple
 aliases: profit multiples, earnings multiple, SDE multiple
-meta_title: Profit Multiple – Definition, Formula & Examples
+meta_title: What Is a Profit Multiple? Definition, Formula & Examples
 meta_description: A profit multiple is a business's price divided by its annual profit. Learn the formula, monthly vs annual multiples, and what moves a profit multiple up or down.
 h1: Profit Multiple
 definition: A profit multiple is a business's price or value divided by its annual profit, usually seller's discretionary earnings (SDE) or EBITDA, showing how many years of current profit a buyer is paying for.

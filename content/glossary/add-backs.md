@@ -2,7 +2,7 @@
 title: What Are Add-Backs?
 term: Add-Backs
 aliases: add-backs, add-back, addbacks, add backs
-meta_title: Add-Backs – Definition, Examples & What Buyers Reject
+meta_title: What Are Add-Backs? Definition & Example
 meta_description: Add-backs are costs added back to profit to show what a new owner would really earn. See the common types, a worked example and the ones buyers refuse.
 h1: Add-Backs
 definition: Add-backs are expenses that are added back to a business's net profit when calculating SDE or EBITDA, because a new owner would not have to pay them.

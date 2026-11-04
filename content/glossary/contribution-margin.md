@@ -2,7 +2,7 @@
 title: What Is Contribution Margin?
 term: Contribution Margin
 aliases: contribution margin, contribution margin ratio, contribution per unit
-meta_title: Contribution Margin – Formula, Example & Break-Even
+meta_title: What Is Contribution Margin? Formula, Example & Break-Even
 meta_description: Contribution margin is what is left of a sale after variable costs. See the formula, a worked example with break-even units and the gross margin difference.
 h1: Contribution Margin
 definition: Contribution margin is the revenue from a sale minus the variable costs of making and delivering it, the amount each sale contributes toward paying fixed costs and then toward profit.

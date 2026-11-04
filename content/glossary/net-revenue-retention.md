@@ -2,7 +2,7 @@
 title: What Is NRR (Net Revenue Retention)?
 term: NRR
 aliases: net revenue retention, net dollar retention, NDR
-meta_title: NRR (Net Revenue Retention) – Definition, Formula & Example
+meta_title: What Is NRR (Net Revenue Retention)? Formula & Example
 meta_description: Net revenue retention (NRR) shows how recurring revenue from existing customers changes over a period. Learn the formula, an example and how buyers read it.
 h1: NRR (Net Revenue Retention)
 definition: Net revenue retention (NRR) is the percentage of recurring revenue from a group of existing customers that remains after a period, counting upgrades as well as downgrades and cancellations, and excluding new customers.

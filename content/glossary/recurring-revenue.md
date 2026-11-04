@@ -2,7 +2,7 @@
 title: What Is Recurring Revenue?
 term: Recurring Revenue
 aliases: recurring revenue, subscription revenue, recurring income
-meta_title: Recurring Revenue – Definition, Types & Example
+meta_title: What Is Recurring Revenue? Definition, Types & Example
 meta_description: Recurring revenue is income that repeats on a schedule, such as subscriptions. See how it works, a worked example and why buyers pay more for it.
 h1: Recurring Revenue
 definition: Recurring revenue is income a business can expect to receive again on a regular schedule from existing customers, such as monthly or yearly subscriptions.

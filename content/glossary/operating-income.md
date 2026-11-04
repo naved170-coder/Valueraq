@@ -2,7 +2,7 @@
 title: What Is Operating Income?
 term: Operating Income
 aliases: operating income, operating profit, income from operations, operating income formula
-meta_title: Operating Income: Definition, Formula and Example
+meta_title: What Is Operating Income? Definition, Formula & Example
 meta_description: Operating income is the profit a business makes from its core operations, before interest and tax. See the formula, a worked example and why buyers check it.
 h1: Operating Income
 definition: Operating income is the profit a business earns from its normal operations, found by taking its operating costs away from its gross profit, before interest and income taxes.

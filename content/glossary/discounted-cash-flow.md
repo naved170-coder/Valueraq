@@ -2,7 +2,7 @@
 title: What Is Discounted Cash Flow (DCF)?
 term: Discounted Cash Flow (DCF)
 aliases: discounted cash flow, DCF, discounted cash flow analysis
-meta_title: Discounted Cash Flow (DCF) – Definition & Example
+meta_title: What Is Discounted Cash Flow (DCF)? Definition & Example
 meta_description: Discounted cash flow values a business by adding up its future cash flows in today's money. See the formula, a worked example and its limits for small deals.
 h1: Discounted Cash Flow (DCF)
 definition: Discounted cash flow (DCF) is a way of valuing a business by estimating the cash it will produce in future years and converting each year's amount into what it is worth today.

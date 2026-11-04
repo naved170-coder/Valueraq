@@ -2,7 +2,7 @@
 title: What Is Open Rate?
 term: Open rate
 aliases: open rate, open rates, email open rate
-meta_title: Open Rate – Definition, Formula & Why It Is Inflated
+meta_title: What Is Open Rate? Definition, Formula & Why It Is Inflated
 meta_description: Open rate is the share of delivered emails recorded as opened. Learn the formula, why mail privacy features inflate it, and how newsletter buyers use it.
 h1: Open Rate
 definition: Open rate is the percentage of delivered emails that are recorded as opened by their recipients.

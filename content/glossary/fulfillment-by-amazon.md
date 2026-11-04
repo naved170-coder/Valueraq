@@ -2,7 +2,7 @@
 title: What Is Fulfillment by Amazon (FBA)?
 term: Fulfillment by Amazon (FBA)
 aliases: fulfillment by amazon, fba, amazon fba, fulfilled by amazon
-meta_title: Fulfillment by Amazon (FBA) – Meaning, Example & Value
+meta_title: What Is Amazon FBA? Meaning, Example & Value
 meta_description: Fulfillment by Amazon (FBA) means a seller sends stock to Amazon, which stores, packs and ships orders. See how it works, an example and why it affects value.
 h1: Fulfillment by Amazon (FBA)
 definition: Fulfillment by Amazon (FBA) is an arrangement in which a seller sends products to Amazon's warehouses and Amazon stores them, ships customer orders and handles customer service on those orders, in return for fees.

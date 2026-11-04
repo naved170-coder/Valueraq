@@ -2,7 +2,7 @@
 title: What Is a Data Room?
 term: Data Room
 aliases: data room, dataroom, virtual data room, deal room
-meta_title: Data Room – Definition, Contents & Example
+meta_title: What Is a Data Room? Definition, Contents & Example
 meta_description: A data room is a shared folder of records a seller opens to buyers during due diligence. See what goes in it, an example and why it speeds up a sale.
 h1: Data Room
 definition: A data room is a secure, organized collection of documents and records that a seller shares with a serious buyer during due diligence, so the buyer can check the business's figures, assets and contracts in one place.

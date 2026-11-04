@@ -2,7 +2,7 @@
 title: What Is Conversion Rate?
 term: Conversion rate
 aliases: conversion rates
-meta_title: Conversion Rate – Definition, Formula & Example
+meta_title: What Is Conversion Rate? Definition, Formula & Example
 meta_description: Conversion rate is the share of visitors who take a desired action, such as buying or subscribing. Learn the formula, an example and why buyers check it.
 h1: Conversion Rate
 definition: Conversion rate is the percentage of visitors or users who complete a desired action, such as making a purchase, starting a subscription or submitting a lead form.

@@ -2,7 +2,7 @@
 title: What Is MRR (Monthly Recurring Revenue)?
 term: MRR
 aliases: monthly recurring revenue
-meta_title: MRR (Monthly Recurring Revenue) – Definition, Formula & Example
+meta_title: What Is MRR (Monthly Recurring Revenue)? Formula & Example
 meta_description: MRR is the monthly value of active subscriptions. See how to calculate it, how to treat annual plans and discounts, and the MRR movements buyers ask for.
 h1: MRR (Monthly Recurring Revenue)
 definition: Monthly recurring revenue (MRR) is the predictable subscription revenue a business expects to receive each month from its active customers.

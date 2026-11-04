@@ -2,7 +2,7 @@
 title: What Is Year-over-Year Growth?
 term: Year-over-Year Growth
 aliases: year-over-year growth, year over year, YoY growth, yoy
-meta_title: Year-over-Year Growth – Definition, Formula & Example
+meta_title: What Is Year-over-Year Growth? Definition, Formula & Example
 meta_description: Year-over-year growth compares a result with the same period a year earlier. See the formula, a worked example and how buyers use it to judge a business.
 h1: Year-over-Year Growth
 definition: Year-over-year (YoY) growth is the percentage change in a result, such as revenue or profit, compared with the same period one year earlier.

@@ -2,7 +2,7 @@
 title: What Is Asking Price?
 term: Asking Price
 aliases: asking price, listing price, list price
-meta_title: Asking Price – Definition & Example
+meta_title: What Is an Asking Price? Definition & Example
 meta_description: The asking price is what a seller wants for a business before negotiation. See how it is set, a worked example and how it differs from the sale price.
 h1: Asking Price
 definition: The asking price is the amount a seller lists a business for before any negotiation, which may be above, at or below what the business finally sells for.

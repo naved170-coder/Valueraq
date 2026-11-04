@@ -2,7 +2,7 @@
 title: What Is a Valuation Multiple?
 term: Valuation Multiple
 aliases: valuation multiple, valuation multiples, earnings multiple
-meta_title: Valuation Multiple – Definition, Formula & Example
+meta_title: What Is a Valuation Multiple? Definition, Formula & Example
 meta_description: A valuation multiple is the number you multiply a business's profit or revenue by to estimate its value. See the formula, an example and its limits.
 h1: Valuation Multiple
 definition: A valuation multiple is a number that a business's yearly profit or revenue is multiplied by to estimate what the business is worth.

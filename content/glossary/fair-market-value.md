@@ -2,7 +2,7 @@
 title: What Is Fair Market Value?
 term: Fair Market Value
 aliases: fair market value, FMV
-meta_title: Fair Market Value (FMV) – Definition & Example
+meta_title: What Is Fair Market Value (FMV)? Definition & Example
 meta_description: Fair market value is what a business would sell for on the open market between informed parties. See an example and how it differs from price.
 h1: Fair Market Value
 definition: Fair market value is the price a business or asset would sell for on the open market, between a buyer and a seller who both know the relevant facts and neither of whom is forced to deal.

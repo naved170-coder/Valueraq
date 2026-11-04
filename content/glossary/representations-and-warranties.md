@@ -2,7 +2,7 @@
 title: What Is Representations and Warranties?
 term: Representations and Warranties
 aliases: representations and warranties, reps and warranties, warranties
-meta_title: Representations and Warranties – Definition & Example
+meta_title: Representations and Warranties: Meaning & Example
 meta_description: Representations and warranties are the written statements a seller makes about a business in a sale contract. See how they work, with an example.
 h1: Representations and Warranties
 definition: Representations and warranties are the statements of fact a seller makes in the purchase agreement about the business, such as who owns it, what it earns and what it owes, which the buyer relies on when agreeing the price.

@@ -2,7 +2,7 @@
 title: What Is a Capitalization Rate?
 term: Capitalization Rate
 aliases: capitalization rate, cap rate, capitalisation rate, cap rate formula
-meta_title: Capitalization Rate (Cap Rate): Formula and Example
+meta_title: What Is Capitalization Rate (Cap Rate)? Formula & Example
 meta_description: A capitalization rate is annual earnings divided by price, shown as a percentage. See the formula, a worked example and how it turns into a multiple.
 h1: Capitalization Rate
 definition: A capitalization rate (cap rate) is the yearly earnings of an asset divided by its price or value, shown as a percentage, and it is the same fact as a profit multiple turned upside down.

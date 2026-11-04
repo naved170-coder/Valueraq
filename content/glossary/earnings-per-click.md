@@ -2,7 +2,7 @@
 title: What Is Earnings per Click (EPC)?
 term: Earnings per Click (EPC)
 aliases: epc, earnings per click, earnings per 100 clicks
-meta_title: Earnings per Click (EPC): Definition & Example
+meta_title: What Is Earnings per Click (EPC)? Definition & Example
 meta_description: EPC is the average revenue an affiliate site earns for each click it sends to a merchant. See the formula, a worked example and how buyers use it.
 h1: Earnings per Click (EPC)
 definition: Earnings per click, or EPC, is the average amount a site earns each time a visitor clicks an affiliate or ad link, found by dividing total earnings by the number of clicks.

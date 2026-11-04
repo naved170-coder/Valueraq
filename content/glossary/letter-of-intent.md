@@ -2,7 +2,7 @@
 title: What Is a Letter of Intent (LOI)?
 term: LOI
 aliases: letter of intent, letters of intent, Letter of intent
-meta_title: LOI (Letter of Intent) – Definition and What It Covers
+meta_title: What Is an LOI (Letter of Intent)? Definition & Example
 meta_description: A letter of intent (LOI) sets out the main terms of a proposed business purchase before the final contract. Learn what it covers and which parts bind.
 h1: LOI (Letter of Intent)
 definition: A letter of intent (LOI) is a short document in which a buyer sets out the main terms on which they propose to buy a business, before detailed checks and the final sale contract.

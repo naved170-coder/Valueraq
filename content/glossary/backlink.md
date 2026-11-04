@@ -2,7 +2,7 @@
 title: What Is a Backlink?
 term: Backlink
 aliases: backlink, backlinks, inbound link, inbound links
-meta_title: Backlink: Definition, Example & Why Buyers Check
+meta_title: What Is a Backlink? Definition, Example & Why Buyers Check
 meta_description: A backlink is a link to your site from another website. See how backlinks work, a worked example and why buyers review a site's link profile before they pay.
 h1: Backlink
 definition: A backlink is a link from one website to another; for the site being linked to, it is an inbound link that can send visitors and that search engines may take into account.

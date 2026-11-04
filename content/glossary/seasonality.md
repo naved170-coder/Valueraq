@@ -2,7 +2,7 @@
 title: What Is Seasonality?
 term: Seasonality
 aliases: seasonality, seasonal business, seasonal revenue, seasonal demand
-meta_title: Seasonality – Definition, Example & Why It Matters to Buyers
+meta_title: What Is Seasonality? Definition & Example
 meta_description: Seasonality is a regular rise and fall in sales over the year. See how it works, an example and why buyers use twelve months of data to value a business.
 h1: Seasonality
 definition: Seasonality is a pattern in which a business's sales, traffic or profit rise and fall at predictable times of the year, such as around holidays, weather changes or the school calendar.

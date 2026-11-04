@@ -2,7 +2,7 @@
 title: What Is Average Revenue per User (ARPU)?
 term: Average Revenue per User (ARPU)
 aliases: ARPU, average revenue per user, revenue per user
-meta_title: ARPU – Definition, Formula & Example
+meta_title: What Is ARPU (Average Revenue per User)? Formula & Example
 meta_description: ARPU is average revenue per user: revenue in a period divided by the number of users. See the formula, a worked example and how buyers use it.
 h1: Average Revenue per User (ARPU)
 definition: Average revenue per user (ARPU) is the revenue a business earns in a period divided by the number of users or customers in that period.

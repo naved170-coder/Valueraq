@@ -2,7 +2,7 @@
 title: What Is Gross Margin?
 term: Gross margin
 aliases: gross margins
-meta_title: Gross Margin – Definition, Formula & Why It Matters for SaaS and AI
+meta_title: What Is Gross Margin? Definition & Example
 meta_description: Gross margin is revenue minus direct costs, as a share of revenue. Learn the formula, what counts as a direct cost for SaaS and AI products, and how margin affects value.
 h1: Gross Margin
 definition: Gross margin is the share of revenue a business keeps after paying the direct costs of delivering its product or service, before overheads such as marketing and administration.

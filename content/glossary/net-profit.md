@@ -2,7 +2,7 @@
 title: What Is Net Profit?
 term: Net Profit
 aliases: net profit, net income, bottom line, net earnings
-meta_title: Net Profit – Definition, Formula & Example
+meta_title: What Is Net Profit? Definition, Formula & Example
 meta_description: Net profit is what a business keeps after all its costs are paid. See the formula, a worked example and why buyers adjust it before applying a multiple.
 h1: Net Profit
 definition: Net profit is the money a business has left after subtracting all of its costs from its revenue, including the cost of goods, running costs, interest and taxes.

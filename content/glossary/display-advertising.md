@@ -2,7 +2,7 @@
 title: What Is Display Advertising?
 term: Display Advertising
 aliases: display ads, display advertising, banner ads, ad revenue, programmatic ads
-meta_title: Display Advertising: Definition, Example & Valuation
+meta_title: What Is Display Advertising? Definition, Example & Valuation
 meta_description: Display advertising is paid ad space on a website. See how CPM and per-click pay work, a worked example and how buyers check ad income when valuing a site.
 h1: Display Advertising
 definition: Display advertising is the sale of ad space, such as banners and in-content units, on a website, where the owner is paid per 1,000 ad views, per click or per agreed action.

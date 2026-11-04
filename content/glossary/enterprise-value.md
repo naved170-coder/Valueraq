@@ -2,7 +2,7 @@
 title: What Is Enterprise Value?
 term: Enterprise Value
 aliases: enterprise value, EV
-meta_title: Enterprise Value (EV) – Definition, Formula & Example
+meta_title: What Is Enterprise Value (EV)? Definition, Formula & Example
 meta_description: Enterprise value is the total value of a business, counting debt and subtracting cash. See the formula, a worked example and how it applies to small deals.
 h1: Enterprise Value
 definition: Enterprise value is the total value of a business to everyone with a claim on it, calculated as the value of its equity plus its debt, minus its cash.

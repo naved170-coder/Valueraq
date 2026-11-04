@@ -1,7 +1,7 @@
 ---
 title: What Is Due Diligence?
 term: Due diligence
-meta_title: Due Diligence – Definition & What It Covers for Online Businesses
+meta_title: What Is Due Diligence? Definition & Example
 meta_description: Due diligence is the investigation a buyer carries out before buying a business. Learn what it covers for online businesses and the documents buyers request.
 h1: Due Diligence
 definition: Due diligence is the investigation a buyer carries out before completing a purchase, to confirm that a business's figures, assets, legal position and risks are what the seller has described.

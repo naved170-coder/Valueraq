@@ -2,7 +2,7 @@
 title: What Is Working Capital?
 term: Working Capital
 aliases: working capital, net working capital, NWC
-meta_title: Working Capital – Definition, Formula & Example
+meta_title: What Is Working Capital? Definition, Formula & Example
 meta_description: Working capital is current assets minus current liabilities. See the formula, a worked example and why it matters when you buy or sell an online business.
 h1: Working Capital
 definition: Working capital is the money a business has available for day-to-day operations, found by subtracting what it owes in the short term from the short-term assets it holds, such as cash, inventory and money owed by customers.

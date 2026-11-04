@@ -2,7 +2,7 @@
 title: What Is Sponsorship Revenue?
 term: Sponsorship Revenue
 aliases: sponsorship revenue, sponsorship income, newsletter sponsorship, sponsor revenue
-meta_title: Sponsorship Revenue: Definition & Newsletter Example
+meta_title: What Is Sponsorship Revenue? Definition & Newsletter Example
 meta_description: Sponsorship revenue is money a sponsor pays to appear in your newsletter, site or podcast. See how it is priced, a worked example and how buyers judge it.
 h1: Sponsorship Revenue
 definition: Sponsorship revenue is the money a business earns when a sponsor pays to be featured in its content, such as a newsletter issue, a web page or a podcast episode, usually as a flat fee or a fee per placement.

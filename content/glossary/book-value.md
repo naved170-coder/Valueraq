@@ -2,7 +2,7 @@
 title: What Is Book Value?
 term: Book Value
 aliases: book value, net book value, net asset value
-meta_title: Book Value – Definition, Formula & Example
+meta_title: What Is Book Value? Definition, Formula & Example
 meta_description: Book value is a business's assets minus its liabilities in its accounts. See the formula, a worked example and why it often understates online businesses.
 h1: Book Value
 definition: Book value is the value of a business according to its accounting records, found by subtracting total liabilities from total assets.

@@ -2,7 +2,7 @@
 title: What Is Inventory Turnover?
 term: Inventory Turnover
 aliases: inventory turnover, stock turnover, inventory turns, inventory turnover ratio
-meta_title: Inventory Turnover – Definition, Formula & Example
+meta_title: What Is Inventory Turnover? Definition, Formula & Example
 meta_description: Inventory turnover shows how often a business sells and replaces its stock in a year. See the formula, a worked example and why buyers check it.
 h1: Inventory Turnover
 definition: Inventory turnover is the number of times a business sells and replaces its stock during a period, found by dividing cost of goods sold by the average value of inventory held.

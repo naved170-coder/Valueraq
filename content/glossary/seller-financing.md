@@ -2,7 +2,7 @@
 title: What Is Seller Financing?
 term: Seller financing
 aliases: seller financing, owner financing, seller note, vendor financing
-meta_title: Seller Financing – Definition, Example & Risks
+meta_title: What Is Seller Financing? Definition, Example & Risks
 meta_description: Seller financing means the seller lets the buyer pay part of the price over time. Learn how it works, a worked example and the risks for buyer and seller.
 h1: Seller Financing
 definition: Seller financing is an arrangement in which the seller of a business agrees to receive part of the purchase price in instalments after closing, in effect lending that part to the buyer.

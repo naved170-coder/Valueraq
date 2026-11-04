@@ -2,7 +2,7 @@
 title: What Is a Revenue Multiple?
 term: Revenue multiple
 aliases: revenue multiples, ARR multiple, ARR multiples
-meta_title: Revenue Multiple – Definition, Formula & When It's Used
+meta_title: What Is a Revenue Multiple? Definition & Example
 meta_description: A revenue multiple is a business's price divided by its annual revenue. See the formula, an example, when revenue multiples are used and why margin matters.
 h1: Revenue Multiple
 definition: A revenue multiple is a business's price or value divided by its annual revenue, showing how many years of revenue a buyer is paying for.

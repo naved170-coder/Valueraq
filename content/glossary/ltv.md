@@ -2,7 +2,7 @@
 title: What Is LTV (Customer Lifetime Value)?
 term: LTV
 aliases: lifetime value, customer lifetime value, CLV
-meta_title: LTV (Customer Lifetime Value) – Definition, Formula & Example
+meta_title: What Is LTV (Customer Lifetime Value)? Formula & Example
 meta_description: LTV estimates the gross profit a customer generates over their lifetime. Learn the simple formula, an example, the LTV:CAC ratio, and its limitations.
 h1: LTV (Customer Lifetime Value)
 definition: Customer lifetime value (LTV) is an estimate of the total gross profit a business earns from an average customer over the whole time they remain a customer.

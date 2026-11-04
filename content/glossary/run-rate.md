@@ -2,7 +2,7 @@
 title: What Is Run Rate?
 term: Run Rate
 aliases: run rate, run-rate, revenue run rate, annualized run rate
-meta_title: Run Rate – Definition, Formula, Example & Risks
+meta_title: What Is Run Rate? Definition, Formula, Example & Risks
 meta_description: Run rate turns a recent month or quarter of revenue into a yearly figure. See the formula, an example and why buyers treat run-rate numbers with caution.
 h1: Run Rate
 definition: Run rate is an estimate of a business's yearly revenue or profit made by taking a recent short period, such as one month, and scaling it up to 12 months.

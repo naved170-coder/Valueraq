@@ -2,7 +2,7 @@
 title: What Is SDE (Seller's Discretionary Earnings)?
 term: SDE
 aliases: seller's discretionary earnings, seller’s discretionary earnings, discretionary earnings
-meta_title: SDE (Seller's Discretionary Earnings) – Definition & Example
+meta_title: What Is SDE (Seller's Discretionary Earnings)? Example
 meta_description: SDE is a business's profit before the owner's pay and personal or one-off costs. Learn how to calculate it, which add-backs are acceptable, and how buyers use it.
 h1: SDE (Seller's Discretionary Earnings)
 definition: Seller's discretionary earnings (SDE) is a business's net profit before the owner's own pay and before personal or one-off expenses that a new owner wouldn't incur.

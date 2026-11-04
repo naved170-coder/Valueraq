@@ -2,7 +2,7 @@
 title: What Is Cost of Goods Sold (COGS)?
 term: Cost of Goods Sold (COGS)
 aliases: cost of goods sold, COGS, cost of sales, cost of revenue
-meta_title: Cost of Goods Sold (COGS) – Definition & Example
+meta_title: What Is Cost of Goods Sold (COGS)? Definition & Example
 meta_description: Cost of goods sold (COGS) is what a business spends to make or buy the products it sells. See the formula, a worked example and why buyers check it.
 h1: Cost of Goods Sold (COGS)
 definition: Cost of goods sold, or COGS, is the direct cost of the products a business sold in a period, including what it paid for them or to make them, but not overheads such as advertising or salaries.

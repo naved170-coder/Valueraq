@@ -2,7 +2,7 @@
 title: What Is a Non-Compete Agreement?
 term: Non-Compete Agreement
 aliases: non-compete, non compete, noncompete, non-compete clause, covenant not to compete
-meta_title: Non-Compete Agreement – Definition & Example
+meta_title: What Is a Non-Compete Agreement? Definition & Example
 meta_description: A non-compete agreement is a promise not to run a competing business for a set time. See how it works in a business sale, an example and what buyers ask for.
 h1: Non-Compete Agreement
 definition: A non-compete agreement is a contract term in which a person, such as the seller of a business, promises not to start or work for a competing business for an agreed time and within an agreed area or market.

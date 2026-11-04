@@ -2,7 +2,7 @@
 title: What Is a Digital Business?
 term: Digital business
 aliases: digital businesses, online business, online businesses
-meta_title: Digital Business – Definition, Types & How They're Valued
+meta_title: What Is a Digital Business? Definition & Example
 meta_description: A digital business earns most of its revenue online. Learn the main types (websites, SaaS, AI, apps, newsletters, ecommerce) and how each is typically valued.
 h1: Digital Business
 definition: A digital business is a business that creates and delivers most of its value, and earns most of its revenue, through the internet, such as a website, SaaS product, AI tool, app, newsletter or online store.

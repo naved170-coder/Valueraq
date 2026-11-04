@@ -2,7 +2,7 @@
 title: What Is Cash Flow?
 term: Cash Flow
 aliases: cash flow, cash flows, operating cash flow
-meta_title: Cash Flow – Definition, Formula & Example
+meta_title: What Is Cash Flow? Definition, Formula & Example
 meta_description: Cash flow is the money that actually moves in and out of a business over a period. See the formula, a worked example and why buyers check it against profit.
 h1: Cash Flow
 definition: Cash flow is the net amount of money that moves into and out of a business over a period, which can differ from profit because of timing, inventory, prepaid costs and money owed.

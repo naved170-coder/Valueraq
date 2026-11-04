@@ -2,7 +2,7 @@
 title: What Is Expansion Revenue?
 term: Expansion Revenue
 aliases: expansion revenue, expansion MRR, upsell revenue
-meta_title: Expansion Revenue: Definition, Formula & Example
+meta_title: What Is Expansion Revenue? Definition, Formula & Example
 meta_description: Expansion revenue is extra recurring revenue from existing customers through upgrades, add-ons or more seats. See an example and why buyers value it.
 h1: Expansion Revenue
 definition: Expansion revenue is the extra recurring revenue a subscription business earns from customers it already has, through upgrades, added seats or add-ons, rather than from new customers.

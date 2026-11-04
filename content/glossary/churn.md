@@ -2,7 +2,7 @@
 title: What Is Churn?
 term: Churn
 aliases: churn rate, customer churn, revenue churn
-meta_title: Churn Rate – Definition, Formula & Why It Compounds
+meta_title: What Is Churn Rate? Definition, Formula & Why It Compounds
 meta_description: Churn is the share of customers or revenue lost in a period. Learn customer vs revenue churn, how monthly churn compounds over a year, and how it affects value.
 h1: Churn Rate
 definition: Churn is the share of customers, or of recurring revenue, that a subscription business loses over a period, usually measured monthly.

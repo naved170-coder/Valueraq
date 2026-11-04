@@ -2,7 +2,7 @@
 title: What Is an Earnout?
 term: Earnout
 aliases: earnout, earn-out, earnouts
-meta_title: Earnout – Definition, How It Works & Example
+meta_title: What Is an Earnout? Definition, How It Works & Example
 meta_description: An earnout is part of a sale price paid later, only if the business hits agreed targets. Learn how earnouts work, an example and the risks for each side.
 h1: Earnout
 definition: An earnout is a part of a business's sale price that the buyer pays after closing, and only if the business meets targets agreed in the sale contract, such as a revenue or profit figure.

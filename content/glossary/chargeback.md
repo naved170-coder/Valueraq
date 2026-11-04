@@ -2,7 +2,7 @@
 title: What Is a Chargeback?
 term: Chargeback
 aliases: chargeback, chargebacks, card dispute, payment dispute, chargeback rate
-meta_title: Chargeback – Definition, How It Works & Example
+meta_title: What Is a Chargeback? Definition, How It Works & Example
 meta_description: A chargeback is a card payment reversed after the cardholder disputes it with their bank. See how it works, a worked example and why buyers check it.
 h1: Chargeback
 definition: A chargeback is a reversal of a card payment that happens when a customer disputes the charge with their bank, so the money is taken back from the seller, usually along with a dispute fee.

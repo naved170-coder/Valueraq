@@ -2,7 +2,7 @@
 title: What Is CAC (Customer Acquisition Cost)?
 term: CAC
 aliases: customer acquisition cost
-meta_title: CAC (Customer Acquisition Cost) – Definition, Formula & Example
+meta_title: What Is CAC (Customer Acquisition Cost)? Formula & Example
 meta_description: CAC is the average cost of winning one new customer. Learn the formula, which costs to include, and how buyers compare CAC with lifetime value.
 h1: CAC (Customer Acquisition Cost)
 definition: Customer acquisition cost (CAC) is the average amount a business spends on sales and marketing to win one new paying customer.

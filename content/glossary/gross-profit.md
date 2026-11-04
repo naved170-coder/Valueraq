@@ -2,7 +2,7 @@
 title: What Is Gross Profit?
 term: Gross Profit
 aliases: gross profit, gross income, gross earnings
-meta_title: Gross Profit – Definition, Formula & Example
+meta_title: What Is Gross Profit? Definition, Formula & Example
 meta_description: Gross profit is revenue minus the direct cost of what you sell. See the formula, a worked example and how it differs from gross margin and net profit.
 h1: Gross Profit
 definition: Gross profit is the money left from revenue after subtracting only the direct costs of making or delivering the product or service, before overheads such as advertising, salaries and taxes.

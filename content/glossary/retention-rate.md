@@ -2,7 +2,7 @@
 title: What Is Retention Rate?
 term: Retention Rate
 aliases: retention rate, customer retention rate, revenue retention
-meta_title: Retention Rate: Definition, Formula & Example
+meta_title: What Is Retention Rate? Definition, Formula & Example
 meta_description: Retention rate is the share of customers or revenue you keep over a period. See the formula, a worked example and why buyers check it before they pay.
 h1: Retention Rate
 definition: Retention rate is the share of customers, or of recurring revenue, that a business keeps from the start of a period to the end of it.

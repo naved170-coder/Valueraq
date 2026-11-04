@@ -2,7 +2,7 @@
 title: What Is a Holdback?
 term: Holdback
 aliases: holdback, hold-back, holdback amount, retention
-meta_title: Holdback – Definition, How It Works & Example
+meta_title: What Is a Holdback? Definition, How It Works & Example
 meta_description: A holdback is part of a sale price kept back for a set period after closing to cover claims. See how it works, an example and how it differs from an earnout.
 h1: Holdback
 definition: A holdback is a part of the purchase price that is kept back at closing and held for an agreed period, so the buyer has a source of recovery if something the seller stated turns out to be untrue.

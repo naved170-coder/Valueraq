@@ -2,7 +2,7 @@
 title: What Is a Transition Period?
 term: Transition Period
 aliases: transition period, handover period, transition support, seller training period
-meta_title: Transition Period – Definition, Contents & Example
+meta_title: What Is a Transition Period? Definition, Contents & Example
 meta_description: A transition period is the agreed time after a sale when the seller helps the buyer take over. See what it covers, an example and why it matters to value.
 h1: Transition Period
 definition: A transition period is an agreed stretch of time after closing during which the seller helps the buyer take over the business, by sharing knowledge, introducing contacts and answering questions.

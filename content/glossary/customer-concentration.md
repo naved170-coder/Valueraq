@@ -2,7 +2,7 @@
 title: What Is Customer Concentration?
 term: Customer concentration
 aliases: revenue concentration
-meta_title: Customer Concentration – Definition, Measurement & Risk
+meta_title: What Is Customer Concentration? Definition & Example
 meta_description: Customer concentration measures how much revenue depends on a few customers. Learn how to measure it, an example, and how it affects a business's value.
 h1: Customer Concentration
 definition: Customer concentration is the degree to which a business's revenue depends on a small number of customers, sponsors, partners or programmes.

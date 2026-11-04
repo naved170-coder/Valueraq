@@ -2,7 +2,7 @@
 title: What Is a Purchase Agreement?
 term: Purchase Agreement
 aliases: purchase agreement, sale agreement, sales agreement, sale and purchase agreement, asset purchase agreement
-meta_title: Purchase Agreement – Definition & Example for Buyers
+meta_title: What Is a Purchase Agreement? Definition & Example
 meta_description: A purchase agreement is the contract that records the price, assets and terms of a business sale. See what it covers, an example and why to get advice.
 h1: Purchase Agreement
 definition: A purchase agreement is the written contract between a buyer and a seller that sets out what is being sold, the price and how it is paid, and the promises each side makes before and after closing.

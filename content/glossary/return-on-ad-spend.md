@@ -2,7 +2,7 @@
 title: What Is Return on Ad Spend (ROAS)?
 term: Return on Ad Spend
 aliases: return on ad spend, ROAS, ad return, roas calculation
-meta_title: Return on Ad Spend (ROAS) – Formula & Example
+meta_title: What Is Return on Ad Spend (ROAS)? Formula & Example
 meta_description: Return on ad spend (ROAS) is revenue earned per dollar spent on ads. See the formula, a worked example and why it differs from profit for buyers.
 h1: Return on Ad Spend (ROAS)
 definition: Return on ad spend (ROAS) is the revenue a business earns for each dollar it spends on advertising, found by dividing revenue from the ads by the ad cost.

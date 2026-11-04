@@ -2,7 +2,7 @@
 title: What Is Exclusivity Period?
 term: Exclusivity Period
 aliases: exclusivity period, exclusivity clause, no-shop period, no-shop clause
-meta_title: Exclusivity Period – Definition & Example
+meta_title: What Is an Exclusivity Period? Definition & Example
 meta_description: An exclusivity period is a set time when a seller agrees to negotiate only with one buyer. Learn how it works, see an example and what it means for a sale.
 h1: Exclusivity Period
 definition: An exclusivity period is a fixed length of time, usually set in a letter of intent, during which a seller agrees not to negotiate with or accept offers from any other buyer.

@@ -1,7 +1,7 @@
 ---
 title: VALUERAQ vs Flippa
-meta_title: VALUERAQ vs Flippa – Fees, Escrow and Reach Compared
-meta_description: Flippa is a large, established marketplace with listing and success fees. VALUERAQ is new, free to list on and has few listings. A factual comparison.
+meta_title: Flippa Alternative? VALUERAQ vs Flippa Fees Compared
+meta_description: Selling a website? Compare Flippa and VALUERAQ side by side: listing and success fees, escrow, buyer reach and which suits which seller. Factual, sourced.
 h1: VALUERAQ vs Flippa
 section: Comparisons
 cluster: selling

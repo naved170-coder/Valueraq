@@ -2,7 +2,7 @@
 title: What Is EBIT?
 term: EBIT
 aliases: earnings before interest and taxes, EBIT, ebit meaning, ebit formula
-meta_title: EBIT: Definition, Formula and a Worked Example
+meta_title: What Is EBIT? Definition, Formula & Worked Example
 meta_description: EBIT is earnings before interest and taxes. See the formula, a worked example with the numbers, and how it differs from EBITDA and SDE in a valuation.
 h1: EBIT
 definition: EBIT (earnings before interest and taxes) is a business's profit after its operating costs, including the wear on its assets, but before interest on debt and income taxes.

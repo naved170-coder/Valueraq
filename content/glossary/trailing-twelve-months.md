@@ -2,7 +2,7 @@
 title: What Is Trailing Twelve Months (TTM)?
 term: Trailing Twelve Months (TTM)
 aliases: trailing twelve months, TTM, last twelve months, trailing 12 months
-meta_title: Trailing Twelve Months (TTM) – Definition & Example
+meta_title: What Is Trailing Twelve Months (TTM)? Definition & Example
 meta_description: Trailing twelve months (TTM) is a business's results for the most recent 12 months. See how to calculate it, an example and why valuations rely on it.
 h1: Trailing Twelve Months (TTM)
 definition: Trailing twelve months (TTM) is the total of a business's revenue or profit over the most recent 12 months, whatever month that period ends in.
