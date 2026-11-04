@@ -1,7 +1,7 @@
 ---
 title: How to Value a Website
-meta_title: How to Value a Website – Methods, Multiples and Examples
-meta_description: Learn how websites are valued: the profit-multiple method, what moves the multiple, a worked example, common mistakes and the limits of any estimate.
+meta_title: How to Value a Website: Formula, Multiples & Example
+meta_description: A common starting range for established websites is 2.5 to 4 times yearly profit. See the formula, what moves the multiple and a worked example.
 h1: How to Value a Website
 section: Valuation
 cluster: website

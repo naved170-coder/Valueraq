@@ -1,7 +1,7 @@
 ---
 title: How Many Months of Records Do Buyers Want to See?
-meta_title: How Many Months of Records Do Buyers Want to See?
-meta_description: Most buyers of a website or online business ask for at least 12 months of records, and many prefer 24. See what to include and why a full year matters.
+meta_title: How Many Months of Records Do Buyers Want?
+meta_description: Buyers usually want at least 12 months of profit and traffic records. See why, what they accept for younger businesses, and how to prepare.
 h1: How Many Months of Records Do Buyers Want to See?
 section: Quick answers
 cluster: selling

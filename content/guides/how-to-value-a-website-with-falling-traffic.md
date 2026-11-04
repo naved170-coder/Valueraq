@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Website Whose Traffic Is Falling?
 meta_title: How to Value a Website With Falling Traffic
-meta_description: To value a website with falling traffic, price its recent profit, not its best year, then use a lower multiple for the decline. Includes a worked example.
+meta_description: Traffic dropping? See how buyers value a declining website, how much the multiple falls and what you can do first, with a worked example.
 h1: How Do You Value a Website Whose Traffic Is Falling?
 section: Quick answers
 cluster: website

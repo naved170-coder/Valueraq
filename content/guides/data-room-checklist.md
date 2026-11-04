@@ -1,7 +1,7 @@
 ---
 title: Data Room Checklist for Selling an Online Business
 meta_title: Data Room Checklist for Selling an Online Business
-meta_description: Build a data room before you list: a 30-item folder-by-folder checklist, what to share at each stage, and how to keep sensitive records safe during a sale.
+meta_description: What to put in your data room before selling: financials, traffic, contracts and access details. A ready-to-use checklist for sellers.
 h1: Data Room Checklist for Selling an Online Business
 section: Selling
 cluster: selling

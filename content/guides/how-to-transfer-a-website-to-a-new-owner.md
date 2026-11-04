@@ -1,7 +1,7 @@
 ---
 title: How Do You Transfer a Website to a New Owner?
-meta_title: How to Transfer a Website to a New Owner
-meta_description: How to transfer a website to a new owner: list the assets, use escrow, move the domain, hosting, content and accounts in order, and confirm each step.
+meta_title: How to Transfer a Website to a New Owner (Checklist)
+meta_description: Transfer a website step by step: domain, hosting, content, accounts and email, in the right order so nothing breaks. Handover checklist.
 h1: How Do You Transfer a Website to a New Owner?
 section: Quick answers
 cluster: selling

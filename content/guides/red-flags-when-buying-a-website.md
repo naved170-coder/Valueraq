@@ -1,7 +1,7 @@
 ---
 title: Red Flags When Buying a Website: What to Check Before You Pay
 meta_title: Red Flags When Buying a Website: Check Before You Pay
-meta_description: Spot the red flags when buying a website: 14 warning signs in listings, figures, traffic and seller behavior, each with a simple way to check it.
+meta_description: The warning signs buyers miss: odd traffic, unverifiable income, rushed sellers and more. Check each one before you pay for a website.
 h1: Red Flags When Buying a Website: What to Check Before You Pay
 section: Buying
 cluster: buying

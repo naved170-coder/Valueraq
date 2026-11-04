@@ -1,7 +1,7 @@
 ---
 title: "How to Buy a Website: A First-Time Buyer's Guide"
-meta_title: How to Buy a Website: A First-Time Buyer's Guide
-meta_description: How to buy a website step by step: set a budget, find listings, check traffic and revenue, value the site, agree terms and take over safely.
+meta_title: How to Buy a Website: First-Time Buyer's Guide
+meta_description: Buying your first website? Steps from finding a site to checking traffic and revenue, paying safely and taking over. Avoid the common traps.
 h1: "How to Buy a Website: A First-Time Buyer's Guide"
 section: Buying
 cluster: website

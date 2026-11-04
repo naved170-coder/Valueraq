@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Business That Makes No Profit?
-meta_title: How to Value a Business That Makes No Profit
-meta_description: A business with no profit can't be valued on a profit multiple. Here is what to use instead: assets, revenue, audience and what it costs to rebuild.
+meta_title: How to Value a Business With No Profit
+meta_description: No profit yet? See how buyers value it instead: revenue, growth, assets and cost to rebuild, with a worked example for each method.
 h1: How Do You Value a Business That Makes No Profit?
 section: Quick answers
 cluster: analysis

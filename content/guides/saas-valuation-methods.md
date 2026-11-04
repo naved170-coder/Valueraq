@@ -1,7 +1,7 @@
 ---
 title: SaaS Valuation Methods
-meta_title: SaaS Valuation Methods – ARR, Profit, DCF and More
-meta_description: The main SaaS valuation methods compared: ARR or MRR multiples, profit multiples, discounted cash flow, growth-plus-margin screens and comparable sales.
+meta_title: SaaS Valuation Methods: ARR, Profit & DCF Compared
+meta_description: Four ways to value a SaaS business, when each one fits and where it misleads, with a worked example of each. Plain English, with a free calculator.
 h1: SaaS Valuation Methods
 section: Valuation
 cluster: saas

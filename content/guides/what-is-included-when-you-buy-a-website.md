@@ -1,7 +1,7 @@
 ---
 title: What Is Included When You Buy a Website?
-meta_title: What Is Included When You Buy a Website? A Checklist
-meta_description: A website sale normally includes the domain, content and site files, but not always email lists, social accounts or support. Use this checklist.
+meta_title: What's Included When You Buy a Website? Checklist
+meta_description: Domain, content, accounts, email list, social profiles and more: a checklist of what should transfer when you buy a website, and how to confirm it.
 h1: What Is Included When You Buy a Website?
 section: Quick answers
 cluster: buying

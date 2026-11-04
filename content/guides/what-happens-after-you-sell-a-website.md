@@ -1,7 +1,7 @@
 ---
 title: What Happens After You Sell Your Website?
 meta_title: What Happens After You Sell Your Website?
-meta_description: What happens after you sell a website: escrow release, handover of the domain and accounts, a support period and what to do about taxes and records.
+meta_description: After the sale: handover, support period, payment release, non-compete terms and taxes to plan for. What sellers should expect next.
 h1: What Happens After You Sell Your Website?
 section: Quick answers
 cluster: selling

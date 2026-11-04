@@ -1,7 +1,7 @@
 ---
 title: Digital Business Due Diligence Checklist
-meta_title: Digital Business Due Diligence Checklist – What to Verify
-meta_description: A practical due diligence checklist for buying a website, SaaS, AI tool, app, newsletter or online store: financials, traffic, operations, legal and technical checks.
+meta_title: Online Business Due Diligence Checklist (Free)
+meta_description: What to verify before buying an online business: revenue, traffic, accounts, legal and handover. A clear checklist so nothing is missed.
 h1: Digital Business Due Diligence Checklist
 section: Buying
 cluster: buying

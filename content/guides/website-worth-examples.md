@@ -1,7 +1,7 @@
 ---
 title: How Much Is My Website Worth? Seven Worked Examples
-meta_title: How Much Is My Website Worth? 7 Worked Examples
-meta_description: See how seven different websites are valued step by step, from a display-ad blog to a site under a year old, and what moves each number up or down.
+meta_title: How Much Is My Website Worth? 7 Real-World Examples
+meta_description: Seven worked examples show how profit, age and traffic set a website's value, from a small blog to an established site. Check yours free in a minute.
 h1: How Much Is My Website Worth? Seven Worked Examples
 section: Valuation
 cluster: website

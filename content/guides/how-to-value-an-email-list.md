@@ -1,7 +1,7 @@
 ---
 title: How Do You Value an Email List?
-meta_title: How to Value an Email List: Profit First, Then Quality
-meta_description: Value an email list by what it earns, not its size. See the profit-multiple method, a worked example and what makes a list worth more or less to a buyer.
+meta_title: How Much Is an Email List Worth? Valuation Guide
+meta_description: How email lists are valued: profit first, then list quality, open rate and engagement, with a worked example. Value it free in about a minute.
 h1: How Do You Value an Email List?
 section: Quick answers
 cluster: newsletter

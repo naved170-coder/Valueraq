@@ -1,7 +1,7 @@
 ---
 title: How Can You Finance Buying an Online Business?
-meta_title: How to Finance Buying an Online Business: 4 Ways
-meta_description: Most online businesses are bought with your own cash, seller financing, an earnout or a loan. See how each works, a worked example and what to ask first.
+meta_title: How to Finance Buying an Online Business: 4 Options
+meta_description: Four ways to pay for an online business: savings, seller financing, earn-outs and loans, with the pros, cons and a worked example of each.
 h1: How Can You Finance Buying an Online Business?
 section: Quick answers
 cluster: buying

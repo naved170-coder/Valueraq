@@ -1,7 +1,7 @@
 ---
 title: How Do You Negotiate the Price of an Online Business?
-meta_title: How to Negotiate the Price of an Online Business
-meta_description: How to negotiate the price of an online business: find the asking multiple, verify the profit, then offer with reasons. Includes a worked example.
+meta_title: How to Negotiate an Online Business Price
+meta_description: Negotiate a fairer price when buying an online business: what to ask for, where sellers have room and how to structure the offer. Examples included.
 h1: How Do You Negotiate the Price of an Online Business?
 section: Quick answers
 cluster: buying

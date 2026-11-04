@@ -1,7 +1,7 @@
 ---
 title: How Seasonality Affects the Value of an Online Business
-meta_title: Seasonal Business Valuation: How Seasonality Changes Price
-meta_description: Seasonal business valuation turns on a full 12 months of profit. See a worked example, how to show a peak honestly, and what buyers ask a seasonal seller.
+meta_title: Seasonal Business Valuation: How Seasonality Affects Price
+meta_description: How buyers value seasonal online businesses: which months they use, how they treat peaks and dips, and a worked example of the maths.
 h1: How Seasonality Affects the Value of an Online Business
 section: Valuation
 cluster: analysis

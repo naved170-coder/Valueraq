@@ -1,7 +1,7 @@
 ---
 title: How Digital Businesses Are Valued
-meta_title: How Digital Businesses Are Valued – SDE, Multiples and Methods
-meta_description: The main ways online businesses are valued, including profit and revenue multiples, SDE vs EBITDA, and how apps, newsletters and ecommerce stores differ.
+meta_title: How to Value an Online Business: SDE & Multiples
+meta_description: The simple way online businesses are valued: SDE or profit times a multiple, adjusted for risk. Clear steps, a worked example and free tools.
 h1: How Are Digital Businesses Valued?
 section: Valuation
 cluster: analysis

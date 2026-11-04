@@ -1,7 +1,7 @@
 ---
 title: How to Value a Mobile App
-meta_title: How to Value a Mobile App – Profit Multiples and Risks
-meta_description: How mobile apps are valued: the profit-multiple method, how revenue model, platforms and reliance on one channel move the multiple, plus a worked example.
+meta_title: How to Value a Mobile App: Multiples & Example
+meta_description: How iOS and Android apps are valued: profit times a multiple, adjusted for revenue model, platform and channel risk. Worked example and a free tool.
 h1: How to Value a Mobile App
 section: Valuation
 cluster: app

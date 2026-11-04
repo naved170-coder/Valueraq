@@ -1,7 +1,7 @@
 ---
 title: Should You Sell Your Online Business or Keep It?
 meta_title: Should I Sell My Online Business or Keep It?
-meta_description: Not sure whether to sell your online business or keep it? Compare your annual profit with a sale price, your hours and your risks in a simple worked example.
+meta_description: Sell or keep? Compare the sale price with what the business will earn you, plus the questions to ask yourself first. Check its value free.
 h1: Should You Sell Your Online Business or Keep It?
 section: Quick answers
 cluster: selling

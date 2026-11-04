@@ -1,7 +1,7 @@
 ---
 title: How to Increase the Value of a Website Before You Sell
-meta_title: Increase Website Value Before Selling: 5 Changes
-meta_description: Which changes raise a website's sale price in 3 to 12 months: spread traffic, cut owner hours, show steady growth and diversify income, with a worked example.
+meta_title: 5 Ways to Increase Your Website's Value Before Selling
+meta_description: Five changes that can raise your website's sale price: cleaner records, less owner time, more traffic sources and more. Check your value free.
 h1: How to Increase the Value of a Website Before You Sell
 section: Selling
 cluster: selling

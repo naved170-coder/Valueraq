@@ -1,7 +1,7 @@
 ---
 title: When Is the Right Time to Sell an Online Business?
-meta_title: When to Sell an Online Business: Signs and Timing
-meta_description: Sell an online business when profit is steady or growing, records are clean and you are not forced to. See the signs to act or wait, plus a worked example.
+meta_title: When to Sell an Online Business: Signs & Timing
+meta_description: The best time to sell is before you need to. Signs it's time, how timing affects price and how to prepare. Check what yours is worth free.
 h1: When Is the Right Time to Sell an Online Business?
 section: Quick answers
 cluster: selling

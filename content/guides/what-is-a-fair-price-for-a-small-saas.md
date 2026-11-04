@@ -1,7 +1,7 @@
 ---
 title: What Is a Fair Price for a Small SaaS Business?
-meta_title: Fair Price for a Small SaaS Business: ARR Multiples
-meta_description: A fair price for a small SaaS business starts with annual recurring revenue and a multiple, then moves with churn, margin and growth. See a worked example.
+meta_title: What Is a Fair Price for a Small SaaS? ARR Multiples
+meta_description: What a small SaaS is really worth: typical ARR multiples, what raises or lowers them, and a worked example so you know if a price is fair.
 h1: What Is a Fair Price for a Small SaaS Business?
 section: Quick answers
 cluster: saas

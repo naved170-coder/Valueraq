@@ -1,7 +1,7 @@
 ---
 title: How Do You Transfer an App to a New Owner?
-meta_title: How to Transfer an App to a New Owner
-meta_description: Transfer an app to a new owner through Apple's App Store Connect or Google Play Console, not by sharing a login. See the requirements and what does not move.
+meta_title: How to Transfer an App to a New Owner (iOS & Android)
+meta_description: Move an app to a new owner in the App Store and Google Play, step by step, plus code, accounts and data. What to check before you start.
 h1: How Do You Transfer an App to a New Owner?
 section: Quick answers
 cluster: app

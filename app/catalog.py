@@ -6,44 +6,38 @@ parts of the system (routing, linking, sitemaps, schema) need.
 
 TOOLS = [
     dict(key="website", slug="website-valuation", name="Website Valuation Tool",
-         meta_title="Website Valuation Tool – Estimate What Your Website Is Worth",
-         description="Estimate a content, affiliate or ad-supported website's value from its profit, age, growth "
-                     "and traffic risk. Free, with the full method shown.",
+         meta_title="Website Valuation Tool: What Is My Site Worth? (Free)",
+         description="Find out what your website is worth in about a minute. Enter profit, age and traffic; get a value range with every adjustment shown. Free, no sign-up.",
          short="Content, affiliate, ad and lead-gen sites",
          category="websites", guide="/guides/website-valuation/", calculator="/calculators/website-worth-calculator/",
          glossary=["sde", "profit-multiple", "traffic"]),
     dict(key="saas", slug="saas-valuation", name="SaaS Valuation Tool",
-         meta_title="SaaS Valuation Tool – Estimate SaaS Business Value from ARR",
-         description="Estimate a SaaS company's value from ARR, growth, churn, gross margin and customer "
-                     "concentration. Free, with every assumption shown.",
+         meta_title="SaaS Valuation Calculator: Value Your SaaS by ARR (Free)",
+         description="Value your SaaS in about a minute from ARR, growth, churn and margin. See the ARR multiple and a value range with every assumption shown. Free, no sign-up.",
          short="Subscription software businesses",
          category="saas", guide="/guides/saas-valuation/", calculator="/calculators/saas-valuation-calculator/",
          glossary=["arr", "mrr", "churn"]),
     dict(key="ai", slug="ai-business-valuation", name="AI Business Valuation Tool",
-         meta_title="AI Business Valuation Tool – Value an AI Tool or AI SaaS",
-         description="Estimate what an AI tool or AI SaaS business is worth, including the effect of gross margin "
-                     "and dependence on third-party model providers.",
+         meta_title="AI Business Valuation Tool: Value an AI SaaS (Free)",
+         description="What is your AI tool or AI SaaS worth? Enter ARR, growth, margin and model dependence to get a value range with the method shown. Free, no sign-up.",
          short="AI tools, AI SaaS and API products",
          category="ai-businesses", guide="/guides/ai-business-valuation/", calculator="/calculators/saas-valuation-calculator/",
          glossary=["arr", "gross-margin", "churn"]),
     dict(key="app", slug="app-valuation", name="App Valuation Tool",
-         meta_title="App Valuation Tool – Estimate Your Mobile App's Value",
-         description="Estimate a mobile app's value from profit, revenue model, platforms, growth and "
-                     "acquisition-channel risk. Free, with the method shown.",
+         meta_title="App Valuation Calculator: What Is My App Worth? (Free)",
+         description="Estimate your iOS or Android app's value from profit, revenue model, growth and channel risk. Get a value range in about a minute. Free, no sign-up.",
          short="iOS and Android apps",
          category="apps", guide="/guides/business-valuation/", calculator="/calculators/business-multiple-calculator/",
          glossary=["sde", "profit-multiple", "churn"]),
     dict(key="newsletter", slug="newsletter-valuation", name="Newsletter Valuation Tool",
-         meta_title="Newsletter Valuation Tool – Estimate What Your Newsletter Is Worth",
-         description="Estimate a newsletter business's value from profit, subscriber engagement, revenue model "
-                     "and sponsor concentration. Free, with the method shown.",
+         meta_title="Newsletter Valuation Tool: What Is My Newsletter Worth?",
+         description="Value your newsletter from profit, open rate, revenue model and sponsor mix. Get a value range with each adjustment explained. Free, no sign-up needed.",
          short="Sponsored and paid newsletters",
          category="newsletters", guide="/guides/business-valuation/", calculator="/calculators/business-multiple-calculator/",
          glossary=["sde", "customer-concentration", "profit-multiple"]),
     dict(key="ecommerce", slug="ecommerce-valuation", name="Ecommerce Valuation Tool",
-         meta_title="Ecommerce Valuation Tool – Estimate Your Online Store's Value",
-         description="Estimate an ecommerce store's value from profit, fulfillment model, channel risk and "
-                     "inventory. Free, with the method shown.",
+         meta_title="Ecommerce Valuation Tool: What Is My Store Worth? (Free)",
+         description="Value your Shopify, Amazon or DTC store from profit, fulfillment model, channels and stock. Get a value range in about a minute. Free, no sign-up.",
          short="Online stores, DTC and Amazon brands",
          category="ecommerce", guide="/guides/business-valuation/", calculator="/calculators/business-multiple-calculator/",
          glossary=["sde", "customer-concentration", "conversion-rate"]),
@@ -55,21 +49,18 @@ for t in TOOLS:
 
 CALCULATORS = [
     dict(key="website_worth", slug="website-worth-calculator", name="Website Worth Calculator",
-         meta_title="Website Worth Calculator – Monthly Profit × Multiple",
-         description="Work out what a website could be worth by multiplying monthly profit by a months-of-profit "
-                     "multiple, with a table of values at common multiples.",
+         meta_title="Website Worth Calculator: Profit × Multiple (Free)",
+         description="How much is my website worth? Enter monthly profit and see values at common multiples, plus the range most small sites sell for. Free and instant.",
          short="Monthly profit × months-of-profit multiple", cluster="website",
          tool="/tools/website-valuation/"),
     dict(key="saas_quick", slug="saas-valuation-calculator", name="SaaS Valuation Calculator",
-         meta_title="SaaS Valuation Calculator – Quick ARR Multiple Estimate",
-         description="A quick SaaS valuation from three numbers: MRR, growth and churn. Shows ARR, the adjusted ARR "
-                     "multiple and a value range.",
+         meta_title="ARR Multiple Calculator: Quick SaaS Value in 3 Inputs",
+         description="Enter MRR, growth and churn to see your ARR, the adjusted ARR multiple and a value range. A quick, free SaaS valuation with the maths shown.",
          short="MRR, growth and churn → ARR multiple", cluster="saas",
          tool="/tools/saas-valuation/"),
     dict(key="business_multiple", slug="business-multiple-calculator", name="Business Multiple Calculator",
-         meta_title="Business Multiple Calculator – Revenue & Profit Multiples",
-         description="Turn an asking price into revenue and profit multiples, months of profit and payback period, "
-                     "and compare it with VALUERAQ's default ranges.",
+         meta_title="Business Multiple Calculator: Is the Asking Price Fair?",
+         description="Enter an asking price and profit to see the revenue and profit multiples, months of profit and payback period, compared with typical ranges. Free.",
          short="Asking price → implied multiples and payback", cluster="buying",
          tool="/tools/website-valuation/"),
 ]
@@ -79,39 +70,33 @@ for c in CALCULATORS:
 
 CATEGORIES = [
     dict(slug="websites", plural="websites", tool="website", name="Websites for Sale", singular="website",
-         meta_title="Websites for Sale – Browse Online Businesses",
-         description="Browse content, affiliate, ad-supported and lead-generation websites for sale, with asking "
-                     "price, revenue, profit and age shown for every listing.",
+         meta_title="Websites for Sale: Buy an Established Website",
+         description="Browse content, affiliate, ad and lead-gen websites for sale. Every listing shows asking price, revenue, profit and age, plus a free value check.",
          definition="A website for sale is an online business, usually a content, affiliate, advertising or "
                     "lead-generation site, offered with its domain, content, traffic and revenue streams."),
     dict(slug="saas", plural="SaaS businesses", tool="saas", name="SaaS Businesses for Sale", singular="SaaS business",
-         meta_title="SaaS Businesses for Sale – Buy SaaS Companies",
-         description="Browse SaaS businesses for sale with MRR, profit, churn and age listed. Filter by price and "
-                     "revenue, and value any listing with the SaaS tool.",
+         meta_title="SaaS Businesses for Sale: Buy a SaaS Company",
+         description="Browse SaaS businesses for sale with MRR, profit, churn and age listed. Filter by price and check any listing's value with the free SaaS tool.",
          definition="A SaaS business for sale is a subscription software company offered with its code, customer "
                     "contracts and recurring revenue."),
     dict(slug="ai-businesses", plural="AI businesses", tool="ai", name="AI Businesses for Sale", singular="AI business",
-         meta_title="AI Businesses for Sale – AI Tools & AI SaaS",
-         description="Browse AI tools and AI SaaS businesses for sale. See revenue, profit, age and model-provider "
-                     "details, and check value with the AI valuation tool.",
+         meta_title="AI Businesses for Sale: Buy an AI Tool or AI SaaS",
+         description="Browse AI tools and AI SaaS businesses for sale with revenue, profit, age and model-provider details. Check any listing's value with the free tool.",
          definition="An AI business for sale is a product whose core function depends on machine-learning models, "
                     "such as an AI writing tool, an AI API product or an AI-powered SaaS."),
     dict(slug="apps", plural="apps", tool="app", name="Apps for Sale", singular="app",
-         meta_title="Apps for Sale – Buy iOS & Android Apps",
-         description="Browse iOS and Android apps for sale with revenue model, profit and active-user figures "
-                     "provided by sellers. Value any app with the free tool.",
+         meta_title="Apps for Sale: Buy an iOS or Android App",
+         description="Browse iOS and Android apps for sale with revenue model, profit and users listed by sellers. Check any app's value with the free valuation tool.",
          definition="An app for sale is a mobile application offered with its source code, store listings, user "
                     "base and revenue."),
     dict(slug="newsletters", plural="newsletters", tool="newsletter", name="Newsletters for Sale", singular="newsletter",
-         meta_title="Newsletters for Sale – Buy Email Newsletter Businesses",
-         description="Browse newsletters for sale with subscriber counts, open rates, sponsorship and paid-"
-                     "subscription revenue provided by sellers.",
+         meta_title="Newsletters for Sale: Buy an Email Newsletter Business",
+         description="Browse newsletters for sale with subscribers, open rates and sponsor or paid revenue listed. Check any newsletter's value with the free tool.",
          definition="A newsletter for sale is an email publication offered with its subscriber list, content "
                     "archive, brand and sponsor or subscription revenue."),
     dict(slug="ecommerce", plural="ecommerce businesses", tool="ecommerce", name="Ecommerce Businesses for Sale", singular="ecommerce business",
-         meta_title="Ecommerce Businesses for Sale – Buy Online Stores",
-         description="Browse ecommerce stores for sale, including DTC and marketplace brands, with revenue, "
-                     "profit, fulfillment and inventory details from sellers.",
+         meta_title="Ecommerce Businesses for Sale: Buy an Online Store",
+         description="Browse Shopify, Amazon FBA and DTC stores for sale with revenue, profit and stock details. Check any store's value with the free valuation tool.",
          definition="An ecommerce business for sale is an online store offered with its brand, product listings, "
                     "supplier relationships, customer data and usually its inventory."),
 ]

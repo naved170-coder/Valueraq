@@ -1,7 +1,7 @@
 ---
 title: How to Buy a SaaS Business
-meta_title: How to Buy a SaaS Business – From Criteria to First 90 Days
-meta_description: Step-by-step guide to buying a SaaS business: setting criteria, reading MRR, churn and margin, code review, contract transfer, financing, escrow and day one.
+meta_title: How to Buy a SaaS Business: Steps & Checklist
+meta_description: How to buy a SaaS business: set criteria, check MRR and churn, negotiate, close safely and plan your first 90 days. Includes a checklist.
 h1: How to Buy a SaaS Business
 section: Buying
 cluster: saas

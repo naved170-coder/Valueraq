@@ -1,7 +1,7 @@
 ---
 title: How to Value a Shopify Store
-meta_title: How to Value a Shopify Store: Profit, Stock & Multiples
-meta_description: How to value a Shopify store: start from yearly profit, apply a multiple, add stock at cost, and see how ad reliance and suppliers move the price.
+meta_title: How Much Is My Shopify Store Worth? Valuation Guide
+meta_description: How Shopify stores are valued: profit, multiple, stock and ad dependence, with a worked example. Check your store's value free in about a minute.
 h1: How to Value a Shopify Store
 section: Valuation
 cluster: ecommerce

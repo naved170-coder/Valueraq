@@ -1,7 +1,7 @@
 ---
 title: Micro-SaaS Valuation: Pricing a Small Software Business
-meta_title: Micro-SaaS Valuation: How a Small SaaS Is Priced
-meta_description: Micro-SaaS valuation compared on ARR and on profit. See why churn is noisy at small scale, how founder hours cut the price, and a worked example with numbers.
+meta_title: Micro-SaaS Valuation: What Is a Small SaaS Worth?
+meta_description: How micro-SaaS businesses are priced: ARR or profit multiple, churn, owner time and customer mix, with a worked example and a free calculator.
 h1: Micro-SaaS Valuation: Pricing a Small Software Business
 section: Valuation
 cluster: saas

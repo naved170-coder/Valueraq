@@ -39,7 +39,7 @@ def home():
 def tools_hub():
     meta = PageMeta(
         path="/tools/", title="Digital Business Valuation Tools",
-        meta_title="Digital Business Valuation Tools – Free Online Business Valuation",
+        meta_title="Free Business Valuation Tools: Website, SaaS, App & More",
         description="Six free valuation tools for websites, SaaS, AI businesses, apps, newsletters and ecommerce "
                     "stores. Each one shows its inputs, multiples, adjustments and limitations.",
         breadcrumbs=[("Valuation tools", "/tools/")], template="hub")

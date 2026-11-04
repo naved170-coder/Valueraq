@@ -1,7 +1,7 @@
 ---
 title: How to Value a Blog or Content Website
-meta_title: How to Value a Blog or Content Website: A Worked Guide
-meta_description: Value a blog from its yearly profit, then adjust for traffic sources, income mix and owner time. Includes two worked examples with the arithmetic shown.
+meta_title: How Much Is My Blog Worth? Blog Valuation Guide
+meta_description: How blogs and content sites are valued: yearly profit times a multiple, adjusted for traffic and age. Worked example, plus a free website value tool.
 h1: How to Value a Blog or Content Website
 section: Valuation
 cluster: website

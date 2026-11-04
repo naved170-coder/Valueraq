@@ -1,7 +1,7 @@
 ---
 title: How Long Does It Take to Sell an Online Business?
 meta_title: How Long Does It Take to Sell an Online Business?
-meta_description: How long it takes to sell an online business depends on six stages. See what slows each one down, a worked timeline in weeks, and what you can control.
+meta_description: Most online business sales take weeks to months. See each stage, how long it takes and what speeds a sale up or slows it down.
 h1: How Long Does It Take to Sell an Online Business?
 section: Selling
 cluster: selling

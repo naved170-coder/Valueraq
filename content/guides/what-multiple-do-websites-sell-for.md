@@ -1,7 +1,7 @@
 ---
 title: What Multiple Do Websites Sell For?
-meta_title: What Multiple Do Websites Sell For? A Straight Answer
-meta_description: Websites are usually priced at a multiple of yearly profit. See the default range we use, how monthly and yearly multiples convert, and what moves it.
+meta_title: What Multiple Do Websites Sell For? Straight Answer
+meta_description: A common range for established websites is 30 to 48 times monthly profit. See what pushes a site above or below it, with examples and a free calculator.
 h1: What Multiple Do Websites Sell For?
 section: Quick answers
 cluster: website

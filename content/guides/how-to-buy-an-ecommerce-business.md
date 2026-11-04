@@ -1,7 +1,7 @@
 ---
 title: How to Buy an Ecommerce Business
-meta_title: How to Buy an Ecommerce Business: A Buyer's Checklist
-meta_description: How to buy an ecommerce business step by step: screen listings, test profit, count the stock, check suppliers and ad accounts, then transfer safely.
+meta_title: How to Buy an Ecommerce Business: Buyer's Checklist
+meta_description: Buying an online store? Check profit, stock, suppliers, ad spend and accounts before you pay. A step-by-step checklist for first-time buyers.
 h1: How to Buy an Ecommerce Business
 section: Buying
 cluster: ecommerce

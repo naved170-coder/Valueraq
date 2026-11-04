@@ -1,7 +1,7 @@
 ---
 title: How to Buy an Online Business
-meta_title: How to Buy an Online Business – A Step-by-Step Guide
-meta_description: A step-by-step guide to buying a website, SaaS, app, newsletter or online store: setting criteria, checking the price, due diligence, deal terms and handover.
+meta_title: How to Buy an Online Business: Step-by-Step Guide
+meta_description: Buy an online business the safe way: set criteria, check the numbers, negotiate, use escrow and take over smoothly. Step by step, with free tools.
 h1: How to Buy an Online Business
 section: Buying
 cluster: buying

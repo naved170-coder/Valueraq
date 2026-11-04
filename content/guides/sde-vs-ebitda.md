@@ -1,7 +1,7 @@
 ---
 title: SDE vs EBITDA
-meta_title: SDE vs EBITDA – Which Earnings Figure to Use When Valuing a Business
-meta_description: SDE adds the owner's pay back to profit; EBITDA doesn't. Learn which one applies to your business, how to convert between them, and how each changes the multiple.
+meta_title: SDE vs EBITDA: Which Should You Use to Value a Business?
+meta_description: SDE suits owner-run businesses; EBITDA suits larger ones with managers. See the difference, when to use each and a worked example of both.
 h1: SDE vs EBITDA
 section: Comparisons
 cluster: analysis

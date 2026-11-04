@@ -1,7 +1,7 @@
 ---
 title: How Do You Spot a Fake or Misleading Website Listing?
-meta_title: How to Spot a Fake or Misleading Website Listing
-meta_description: Spot a fake or misleading website listing: check revenue and traffic at the source, confirm ownership, watch for pressure to pay outside escrow.
+meta_title: How to Spot a Fake Website Listing (Red Flags)
+meta_description: Warning signs of a fake or misleading website listing, how to check each claim, and how to pay safely so you don't lose your money.
 h1: How Do You Spot a Fake or Misleading Website Listing?
 section: Quick answers
 cluster: buying

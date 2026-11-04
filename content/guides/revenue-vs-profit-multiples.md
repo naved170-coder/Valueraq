@@ -1,7 +1,7 @@
 ---
 title: Revenue vs Profit Multiples
-meta_title: Revenue vs Profit Multiples – Which to Use When Valuing a Business
-meta_description: The difference between revenue and profit multiples, when each is used for websites, SaaS and online stores, how to convert between them, and common mistakes.
+meta_title: Revenue vs Profit Multiples: Which to Use?
+meta_description: When to value a business on revenue and when on profit, why the multiples differ so much, and worked examples of both. Plain English.
 h1: Revenue Multiples vs Profit Multiples
 section: Comparisons
 cluster: analysis

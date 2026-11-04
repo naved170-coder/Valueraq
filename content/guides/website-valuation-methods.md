@@ -1,7 +1,7 @@
 ---
 title: Website Valuation Methods
-meta_title: Website Valuation Methods – Six Approaches Compared
-meta_description: Six ways to value a website compared: profit multiple, revenue multiple, traffic value, replacement cost, discounted cash flow and comparable sales.
+meta_title: Website Valuation Methods: 6 Approaches Compared
+meta_description: Six ways to value a website, from profit multiple to traffic value and cost to rebuild, with when each works and where it misleads.
 h1: Website Valuation Methods
 section: Valuation
 cluster: website

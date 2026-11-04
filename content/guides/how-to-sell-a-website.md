@@ -1,7 +1,7 @@
 ---
 title: How to Sell a Website
-meta_title: How to Sell a Website – Steps From Records to Handover
-meta_description: A step-by-step guide to selling a content, affiliate or ad-funded website: records, clean-up, pricing, the listing, buyer questions, escrow and migration.
+meta_title: How to Sell a Website: From Valuation to Handover
+meta_description: Selling your website? Steps to prepare records, set a fair price, find buyers, use escrow and hand over. Check what your site is worth free.
 h1: How to Sell a Website
 section: Selling
 cluster: website

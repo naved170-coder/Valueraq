@@ -1,7 +1,7 @@
 ---
 title: How Does Escrow Work When You Buy or Sell a Website?
-meta_title: How Escrow Works When You Buy or Sell a Website
-meta_description: How escrow works in a website sale: the buyer pays an independent provider, the seller transfers the site, the buyer confirms, and the money is released.
+meta_title: How Escrow Works When Buying or Selling a Website
+meta_description: How escrow protects both sides in a website sale, step by step: funding, transfer, inspection and release, plus what it costs.
 h1: How Does Escrow Work When You Buy or Sell a Website?
 section: Quick answers
 cluster: buying

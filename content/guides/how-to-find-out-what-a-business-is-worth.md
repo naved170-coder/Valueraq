@@ -1,7 +1,7 @@
 ---
 title: How Do You Find Out What a Business Is Worth?
-meta_title: How to Find Out What a Business Is Worth
-meta_description: To find out what a business is worth, work out its yearly profit, apply a multiple that fits its type and risk, then check the result two other ways.
+meta_title: What Is My Business Worth? How to Find Out (Free)
+meta_description: Find out what a business is worth in three steps: work out the real profit, pick a fair multiple and adjust for risk. Worked example and free tools.
 h1: How Do You Find Out What a Business Is Worth?
 section: Quick answers
 cluster: analysis

@@ -1,7 +1,7 @@
 ---
 title: Financial Due Diligence Checklist for Buying an Online Business
-meta_title: Financial Due Diligence Checklist for Online Businesses
-meta_description: A financial due diligence checklist for buying an online business: prove the revenue, test costs and add-backs, match the bank and check tax.
+meta_title: Financial Due Diligence Checklist: Online Business
+meta_description: Check the money before you buy: P&L, bank statements, payment processors, refunds and add-backs. A step-by-step financial checklist.
 h1: Financial Due Diligence Checklist for Buying an Online Business
 section: Buying
 cluster: buying

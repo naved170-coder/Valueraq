@@ -1,7 +1,7 @@
 ---
 title: Website vs SaaS as an Investment
-meta_title: Website vs SaaS Investment – Which to Buy and Why
-meta_description: Which is the better buy, a content website or a SaaS product? How capital needed, skills, weekly hours, risk and resale differ between the two.
+meta_title: Website vs SaaS: Which Is the Better Investment?
+meta_description: Buying a website or a SaaS? Compare price, return, workload and risk side by side, with a worked example to help you decide which fits you.
 h1: Website vs SaaS as an Investment
 section: Comparisons
 cluster: analysis

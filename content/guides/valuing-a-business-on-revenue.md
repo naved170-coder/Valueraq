@@ -1,7 +1,7 @@
 ---
 title: Valuing a Business on Revenue: When It Works and When It Misleads
-meta_title: Valuing a Business on Revenue: When It Works and Fails
-meta_description: Revenue shows how big a business is, not what it is worth. See when a revenue multiple works, when profit decides, and three businesses with equal revenue.
+meta_title: Valuing a Business on Revenue: When It Works
+meta_description: Revenue multiples suit fast-growing or SaaS businesses, but mislead for others. See when to use them, typical ranges and a worked example.
 h1: Valuing a Business on Revenue: When It Works and When It Misleads
 section: Valuation
 cluster: analysis

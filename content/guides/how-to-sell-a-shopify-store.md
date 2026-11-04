@@ -1,7 +1,7 @@
 ---
 title: How to Sell a Shopify Store
-meta_title: How to Sell a Shopify Store: Records, Price & Handover
-meta_description: How to sell a Shopify store: prepare 12 months of records, price it on profit plus stock, write the listing, handle buyer checks and hand over every account.
+meta_title: How to Sell a Shopify Store: Price, Records & Handover
+meta_description: Sell your Shopify store step by step: prepare records, set a fair price, list it and transfer the store and stock. Check its value free.
 h1: How to Sell a Shopify Store
 section: Selling
 cluster: ecommerce

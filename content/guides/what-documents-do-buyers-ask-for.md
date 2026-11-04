@@ -1,7 +1,7 @@
 ---
 title: What Documents Do Buyers Ask For When You Sell an Online Business?
-meta_title: Documents Buyers Ask For When You Sell a Business
-meta_description: Buyers of online businesses usually ask for financial statements, tax returns, payout and traffic records, contracts and proof of ownership. Here is the list.
+meta_title: What Documents Do Buyers Ask For? Seller Checklist
+meta_description: The documents buyers request when you sell an online business: P&L, traffic, accounts, contracts and more. A checklist so you're ready.
 h1: What Documents Do Buyers Ask For When You Sell an Online Business?
 section: Quick answers
 cluster: selling

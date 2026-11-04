@@ -1,7 +1,7 @@
 ---
 title: How to Value an Ecommerce Business
-meta_title: How to Value an Ecommerce Business – Multiples & Stock
-meta_description: How online stores are valued: the profit-multiple method, how fulfillment and channel reliance move the multiple, how inventory is added, and an example.
+meta_title: How to Value an Ecommerce Business: Multiples & Stock
+meta_description: How online stores are valued: profit times a multiple, plus how stock, channels and fulfillment change the price. Worked example and a free tool.
 h1: How to Value an Ecommerce Business
 section: Valuation
 cluster: ecommerce

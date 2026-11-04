@@ -1,7 +1,7 @@
 ---
 title: Deal Structures for Small Online Business Sales
-meta_title: Deal Structures for Online Business Sales Explained
-meta_description: How to structure the sale of an online business: all cash, seller financing, earnout, holdback and escrow, with one $120,000 price paid four ways.
+meta_title: Online Business Deal Structures: Earn-Outs & More
+meta_description: Cash upfront, seller financing, earn-outs and holdbacks explained, with when each makes sense and a worked example for buyers and sellers.
 h1: Deal Structures for Small Online Business Sales
 section: Buying
 cluster: buying

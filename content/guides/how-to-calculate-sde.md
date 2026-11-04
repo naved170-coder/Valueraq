@@ -1,7 +1,7 @@
 ---
 title: How Do You Calculate SDE?
-meta_title: How to Calculate SDE: Formula, Add-Backs, Example
-meta_description: Calculate SDE by starting with net profit and adding back owner pay, interest, depreciation and one-off or personal costs. See the steps and a worked example.
+meta_title: How to Calculate SDE: Formula, Add-Backs & Example
+meta_description: SDE is profit plus the owner's pay and add-backs. See the formula, which add-backs buyers accept, and a worked example. Free calculator included.
 h1: How Do You Calculate SDE?
 section: Quick answers
 cluster: analysis

@@ -1,7 +1,7 @@
 ---
 title: How Do You Verify a Website's Revenue Before Buying?
-meta_title: How to Verify a Website's Revenue Before Buying
-meta_description: Check a website's revenue before you buy: get 12 months of records from the source, match payouts to the bank, and watch for gaps. A short step-by-step.
+meta_title: How to Verify Website Revenue Before You Buy
+meta_description: Don't take a seller's screenshots on trust. How to verify a website's revenue at the source, step by step, and the warning signs to watch for.
 h1: How Do You Verify a Website's Revenue Before Buying?
 section: Quick answers
 cluster: buying

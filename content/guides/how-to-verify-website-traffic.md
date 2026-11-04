@@ -1,7 +1,7 @@
 ---
 title: How Do You Verify a Website's Traffic Before Buying?
-meta_title: How to Verify a Website's Traffic Before Buying
-meta_description: Check a website's traffic before you buy: ask for read-only analytics access, compare sources, look at where visits come from and spot signs of fake traffic.
+meta_title: How to Verify Website Traffic Before You Buy
+meta_description: How to check a website's traffic is real before buying: what access to ask for, which numbers to compare and the red flags of faked traffic.
 h1: How Do You Verify a Website's Traffic Before Buying?
 section: Quick answers
 cluster: buying

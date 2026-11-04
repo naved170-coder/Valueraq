@@ -1,7 +1,7 @@
 ---
 title: How to Value an Affiliate Website
 meta_title: Affiliate Website Valuation: How Buyers Price Them
-meta_description: How to value an affiliate website: use yearly profit times a multiple, then adjust for program risk, traffic mix and trend. Worked example with five cases.
+meta_description: How affiliate sites are valued: profit times a multiple, adjusted for program risk, traffic sources and age. Worked example and a free value tool.
 h1: How to Value an Affiliate Website
 section: Valuation
 cluster: website

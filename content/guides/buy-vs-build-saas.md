@@ -1,7 +1,7 @@
 ---
 title: Buy vs Build a SaaS Business
-meta_title: Buy vs Build a SaaS Business – Cost, Time and Risk Compared
-meta_description: Buying a SaaS business costs capital and gives revenue on day one. Building costs time and usually gives none for a year or more. How to decide which fits you.
+meta_title: Buy vs Build a SaaS: Cost, Time & Risk Compared
+meta_description: Should you buy an existing SaaS or build your own? Compare cost, time to revenue and risk, with a worked example of both paths.
 h1: Buy vs Build a SaaS Business
 section: Buying
 cluster: saas

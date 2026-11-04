@@ -1,7 +1,7 @@
 ---
 title: AI Business Valuation Methods
-meta_title: AI Business Valuation Methods – Five Approaches Compared
-meta_description: Five ways to value an AI business compared: risk-adjusted ARR multiple, profit multiple, cost to rebuild, strategic value and discounted cash flow.
+meta_title: AI Business Valuation: 5 Methods Compared
+meta_description: Five ways to value an AI business, from risk-adjusted ARR to cost to rebuild, with when each fits and a worked example. Try the free AI valuation tool.
 h1: AI Business Valuation Methods
 section: Valuation
 cluster: ai

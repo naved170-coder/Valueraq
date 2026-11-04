@@ -1,7 +1,7 @@
 ---
 title: How to Value a Newsletter
-meta_title: How to Value a Newsletter – Profit Multiples and Open Rate
-meta_description: How email newsletters are valued: the profit-multiple method, how open rate, revenue model and sponsor concentration move it, and a worked example.
+meta_title: How to Value a Newsletter: Multiples & Open Rate
+meta_description: How newsletters are valued: profit times a multiple, adjusted for open rate, sponsor mix and growth. Worked example and a free newsletter tool.
 h1: How to Value a Newsletter
 section: Valuation
 cluster: newsletter

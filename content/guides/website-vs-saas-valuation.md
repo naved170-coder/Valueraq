@@ -1,7 +1,7 @@
 ---
 title: Website vs SaaS Valuation
-meta_title: Website vs SaaS Valuation – How the Methods Differ
-meta_description: How website and SaaS valuations differ: the base metric, the risks buyers price in, what evidence they ask for, and an example comparing the two.
+meta_title: Website vs SaaS Valuation: Why the Methods Differ
+meta_description: Websites are valued on profit and SaaS on ARR. See why, what that does to the price, and a side-by-side worked example of both.
 h1: Website vs SaaS Valuation
 section: Comparisons
 cluster: analysis

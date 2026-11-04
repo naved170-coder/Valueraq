@@ -1,7 +1,7 @@
 ---
 title: How to Sell a SaaS Business: Steps, Timeline and Documents
-meta_title: How to Sell a SaaS Business: Steps and Documents
-meta_description: How to sell a SaaS business: prepare your metrics, set a price from ARR, list it, answer buyer questions, agree terms and hand over code and customers safely.
+meta_title: How to Sell a SaaS Business: Steps & Documents
+meta_description: Sell your SaaS for a fair price: the documents buyers want, how to value it, where to list and how to hand over. Free SaaS valuation tool.
 h1: How to Sell a SaaS Business: Steps, Timeline and Documents
 section: Selling
 cluster: saas

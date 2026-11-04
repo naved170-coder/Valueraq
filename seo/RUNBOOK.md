@@ -152,6 +152,17 @@ python scripts/seo_image.py bar --slug <slug> --name <short-name> --title "<char
 
 Paste the lines each command prints. Never use an outside image, a stock photo or an AI image service.
 
+Google title and description (written to earn the click, never to mislead):
+
+- `meta_title` (60 characters or fewer): start with the exact search the page targets, then a reason to click:
+  a question the searcher is asking ("What Is My Site Worth?"), a number ("7 Real-World Examples", "4 Methods"),
+  or a bracket that states what they get ("(Free)", "(Worked Example)", "(Checklist)"). No brand name needed.
+- `meta_description` (120-160 characters): first sentence answers the search or states the key figure from the page;
+  second sentence says what they get (worked example, checklist, free tool, about a minute, no sign-up); use "you/your".
+- Every claim must be true of the page and the site: only figures the page itself states, presented as a "common
+  range" or "starting range", never as a promise. No "guaranteed", "best", "#1", fake urgency or clickbait.
+- Never give two pages the same main search in their titles; check `seo/keywords.json` and existing titles first.
+
 Banned: "in today's fast-paced world", "delve", "unlock", "game-changer", "ever-evolving", "look no further",
 and any sentence that says nothing. No year in the page address.
 

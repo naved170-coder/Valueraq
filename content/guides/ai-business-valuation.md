@@ -1,7 +1,7 @@
 ---
 title: How to Value an AI Business
-meta_title: How to Value an AI Business – AI SaaS, Tools and APIs
-meta_description: How AI tools and AI SaaS businesses are valued, why model dependence and inference costs matter, and which evidence buyers need before paying for AI revenue.
+meta_title: How to Value an AI Business: AI SaaS, Tools & APIs
+meta_description: How AI tools and AI SaaS are valued, why model dependence and inference costs cut the multiple, and what buyers check first. Includes a free tool.
 h1: How to Value an AI Business
 section: Valuation
 cluster: ai

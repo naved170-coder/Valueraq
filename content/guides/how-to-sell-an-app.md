@@ -1,7 +1,7 @@
 ---
 title: How to Sell a Mobile App
-meta_title: How to Sell a Mobile App: Price, List and Transfer It
-meta_description: How to sell a mobile app: price it from profit, gather records, list it, and move it through Apple's and Google's app transfer rules without losing reviews.
+meta_title: How to Sell a Mobile App: Price, List & Transfer
+meta_description: Sell your iOS or Android app: value it, prepare records, find buyers and transfer it in the app stores. Check your app's value free.
 h1: How to Sell a Mobile App
 section: Selling
 cluster: app

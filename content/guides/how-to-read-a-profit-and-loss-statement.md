@@ -1,7 +1,7 @@
 ---
 title: How Do You Read a Profit and Loss Statement When Buying a Business?
-meta_title: How to Read a Profit and Loss Statement When Buying
-meta_description: Read a profit and loss statement in five steps: revenue, direct costs, expenses, net profit and add-backs. See what to check before you trust the bottom line.
+meta_title: How to Read a P&L Statement Before Buying a Business
+meta_description: Read a profit and loss statement like a buyer: what each line means, what to question and a worked example of spotting inflated profit.
 h1: How Do You Read a Profit and Loss Statement When Buying a Business?
 section: Quick answers
 cluster: buying

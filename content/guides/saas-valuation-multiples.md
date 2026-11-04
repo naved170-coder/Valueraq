@@ -1,7 +1,7 @@
 ---
 title: SaaS Valuation Multiples: What They Are and How to Use Them
-meta_title: SaaS Valuation Multiples Explained, with Examples
-meta_description: What a SaaS valuation multiple is, why the same revenue can earn 1.75 or 4.9 times ARR, and how to check a multiple against profit before you rely on it.
+meta_title: SaaS Valuation Multiples: What ARR Multiple Is Fair?
+meta_description: What ARR multiple should a SaaS sell for? See the typical ranges, what pushes a multiple up or down, and worked examples. Free calculator included.
 h1: SaaS Valuation Multiples: What They Are and How to Use Them
 section: Valuation
 cluster: saas

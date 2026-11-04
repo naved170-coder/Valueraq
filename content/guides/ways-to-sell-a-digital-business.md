@@ -1,7 +1,7 @@
 ---
 title: Broker vs Marketplace vs Selling Directly
-meta_title: Broker vs Marketplace vs Direct Sale – Ways to Sell a Digital Business
-meta_description: Compare the three ways to sell a digital business: a broker, a marketplace listing or a direct sale. What each costs, how long it takes and who it suits.
+meta_title: Broker vs Marketplace vs Direct: How to Sell Online
+meta_description: Compare the three ways to sell a digital business: broker, marketplace or direct sale. Costs, speed and risk side by side to help you choose.
 h1: Broker vs Marketplace vs Selling Directly
 section: Comparisons
 cluster: selling

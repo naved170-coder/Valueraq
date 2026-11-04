@@ -1,7 +1,7 @@
 ---
 title: How to Value an Amazon FBA Business
-meta_title: How to Value an Amazon FBA Business: Multiples & Risks
-meta_description: How to value an Amazon FBA business: work out true profit, apply a profit multiple, add stock at cost, and weigh reliance on one marketplace.
+meta_title: Amazon FBA Business Valuation: Multiples & Risks
+meta_description: How Amazon FBA businesses are priced: profit multiple, account health, stock and supplier risk, with a worked example and a free valuation tool.
 h1: How to Value an Amazon FBA Business
 section: Valuation
 cluster: ecommerce

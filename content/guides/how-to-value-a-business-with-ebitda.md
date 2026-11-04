@@ -1,7 +1,7 @@
 ---
 title: How to Value a Business Using EBITDA
-meta_title: How to Value a Business Using EBITDA: Worked Example
-meta_description: Learn how to value a business with EBITDA: calculate adjusted EBITDA, choose a multiple, convert from SDE, and know when EBITDA is the wrong figure to use.
+meta_title: How to Value a Business Using EBITDA (Worked Example)
+meta_description: Value a business with EBITDA in three steps: work out EBITDA, choose a multiple, adjust for debt and cash. Clear worked example included.
 h1: How to Value a Business Using EBITDA
 section: Valuation
 cluster: analysis

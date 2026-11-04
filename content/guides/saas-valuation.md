@@ -1,7 +1,7 @@
 ---
 title: How to Value a SaaS Business
-meta_title: How to Value a SaaS Business – ARR Multiples, Churn and Growth
-meta_description: How small SaaS businesses are valued: ARR and profit multiples, the metrics that move them (growth, churn, margin, concentration) and a worked example.
+meta_title: How to Value a SaaS Company: ARR Multiples Explained
+meta_description: A common starting range for small SaaS is 2 to 5 times ARR. See how growth, churn and margin move the multiple, with a worked example and free calculator.
 h1: How to Value a SaaS Business
 section: Valuation
 cluster: saas

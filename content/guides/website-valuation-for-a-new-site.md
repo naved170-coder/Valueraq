@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Website Less Than a Year Old?
-meta_title: How to Value a Website Less Than a Year Old
-meta_description: A website under a year old is valued on its average monthly profit with a lower multiple. See the age adjustment, a worked example and what buyers want.
+meta_title: How to Value a New Website (Under 1 Year Old)
+meta_description: Is a new website worth anything? How buyers price sites under a year old, what they discount for, and a worked example. Free value tool.
 h1: How Do You Value a Website Less Than a Year Old?
 section: Quick answers
 cluster: website

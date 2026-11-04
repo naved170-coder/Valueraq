@@ -1,7 +1,7 @@
 ---
 title: How to Sell a Digital Business
-meta_title: How to Sell a Website or Online Business – Preparation and Process
-meta_description: How to prepare and sell a website, SaaS, app, newsletter or online store: valuing it, preparing records, reducing buyer risk, listing, negotiating and handing over.
+meta_title: How to Sell an Online Business: Step-by-Step
+meta_description: Sell your website or online business for a fair price: prepare records, value it, list it, negotiate and hand over. Free value check included.
 h1: How to Sell a Digital Business
 section: Selling
 cluster: selling
