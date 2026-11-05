@@ -1,0 +1,16 @@
+{
+ "page": "guides/website-vs-saas-investment",
+ "query": "website vs saas as an investment",
+ "results": [
+  "results mostly about building a website vs web app vs SaaS product (development), not investing; empireflippers how to invest in saas; empireflippers buying a saas business as a non-developer"
+ ],
+ "studied": [],
+ "gaps": [
+  "Make the investing intent clear in first line; side-by-side table (price multiple, payback, workload, skills, risks, growth levers) using our default multiples",
+  "Worked example: same $100k budget buys a content site vs a small SaaS - expected profit, payback",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

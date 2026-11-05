@@ -1,0 +1,28 @@
+{
+ "page": "guides/how-to-spot-a-fake-website-listing",
+ "query": "fake website listing",
+ "results": [
+  "thewebsiteflip.com flippa scams",
+  "investors.club how to spot a scam business listing",
+  "morganlinton.com",
+  "consumer scam pages (not about website sales)"
+ ],
+ "studied": [
+  {
+   "url": "thewebsiteflip.com/guide/buy-website/flippa-scams",
+   "words": 3000,
+   "has": [
+    "10 red flags: fake screenshots, mismatched P&Ls, fake traffic, missing analytics, too-low prices, overhyped descriptions, unresponsive sellers, duplicate content, revenue spikes, template sites",
+    "first-person experience"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add scam -> how it's done -> how to check table",
+  "Add 'verify at source' steps (live screen share, read-only analytics access, payout dashboards)",
+  "Fake escrow site warning and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

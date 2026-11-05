@@ -1,0 +1,20 @@
+{
+ "page": "guides/what-is-a-fair-price-for-a-small-saas",
+ "query": "saas business valuation",
+ "results": [
+  "baremetrics.com academy how to value a saas business",
+  "indiehackers.com how to value a small saas business",
+  "saastr.com what are SaaS companies worth",
+  "beancount.io bootstrapped saas multiples",
+  "founderpath.com saas multiples"
+ ],
+ "studied": [],
+ "gaps": [
+  "Fair-price checklist and worked example (MRR -> ARR -> adjusted multiple -> price range) using our defaults",
+  "Asking vs closing price gap (only if sourced)",
+  "What makes a small SaaS overpriced (founder-dependent, high churn, one big customer) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

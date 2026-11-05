@@ -1,0 +1,16 @@
+{
+ "page": "guides/how-many-months-of-data-do-buyers-want",
+ "query": "how much history to sell a website",
+ "results": [
+  "mostly forum threads and general selling guides (buildersociety, namepros, flippa blog, kinsta)"
+ ],
+ "studied": [],
+ "gaps": [
+  "Few direct answers rank: lead with the direct answer (at least 12 months, ideally 24) and a table of what records for what period (P&L, traffic, payouts, refunds)",
+  "Explain what buyers do with younger businesses (lower multiple, earn-outs)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

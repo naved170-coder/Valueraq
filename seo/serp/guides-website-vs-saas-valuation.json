@@ -1,0 +1,16 @@
+{
+ "page": "guides/website-vs-saas-valuation",
+ "query": "website vs saas valuation",
+ "results": [
+  "development-focused pages (website vs SaaS product) dominate; few valuation comparisons"
+ ],
+ "studied": [],
+ "gaps": [
+  "Side-by-side worked valuation: website (profit multiple) vs SaaS (ARR multiple) with same revenue",
+  "Why recurring revenue earns a higher multiple (churn, predictability)",
+  "Table of what each buyer checks; FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

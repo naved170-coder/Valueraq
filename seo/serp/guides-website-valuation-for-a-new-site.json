@@ -1,0 +1,16 @@
+{
+ "page": "guides/website-valuation-for-a-new-site",
+ "query": "value new website",
+ "results": [
+  "mostly forum threads (ukbusinessforums, sitepoint, namepros); eqvista website valuation; flippa valuation calculator page"
+ ],
+ "studied": [],
+ "gaps": [
+  "Few proper guides: worked example using our under-1-year rule (-20%) and cost-to-build approach for sites with little income",
+  "What buyers need to see from a young site (3-6 months of records, growth source)",
+  "Starter-site vs established-site price difference and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

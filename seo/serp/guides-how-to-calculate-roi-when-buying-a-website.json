@@ -1,0 +1,20 @@
+{
+ "page": "guides/how-to-calculate-roi-when-buying-a-website",
+ "query": "roi of buying a website",
+ "results": [
+  "flippa.com how to generate roi from buying a starter site",
+  "quietlight.com",
+  "nestify.io buying a website guide",
+  "empireflippers.com analyzing websites for beginners",
+  "getsiimple.com website roi calculator"
+ ],
+ "studied": [],
+ "gaps": [
+  "Competitors talk generally: add worked ROI and payback example (price from multiple, annual profit, costs of running, time value) and an ROI table at different multiples",
+  "Compare with other investments (no promised returns)",
+  "Calculator link and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

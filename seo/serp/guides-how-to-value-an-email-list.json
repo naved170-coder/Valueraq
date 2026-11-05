@@ -1,0 +1,31 @@
+{
+ "page": "guides/how-to-value-an-email-list",
+ "query": "how to value an email list",
+ "results": [
+  "beehiiv.com how much is an email list worth",
+  "emaillistvalidation.com",
+  "practicalecommerce.com",
+  "marketingmonk.so email list value calculator",
+  "mailify.com"
+ ],
+ "studied": [
+  {
+   "url": "beehiiv.com/blog/how-much-is-an-email-list-worth",
+   "words": 1200,
+   "has": [
+    "5 value factors: size, quality, open rate, purchase history, unsubscribe rate",
+    "4 monetization routes",
+    "hypothetical examples"
+   ],
+   "figures": "their claim: $100-$600 CPM sponsorship"
+  }
+ ],
+ "gaps": [
+  "Add profit-first worked example and per-subscriber sense-check derived from our own example numbers",
+  "Explain why open rates are inflated and use clicks/revenue instead",
+  "Legal/consent note (lists without consent can't be used) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

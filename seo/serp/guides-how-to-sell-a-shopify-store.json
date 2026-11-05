@@ -1,0 +1,37 @@
+{
+ "page": "guides/how-to-sell-a-shopify-store",
+ "query": "sell shopify store",
+ "results": [
+  "thoughtmetric.io",
+  "tevello.com guides",
+  "dodropshipping.com",
+  "stylefactoryproductions.com how to sell a shopify store",
+  "ecommerceceo.com"
+ ],
+ "studied": [
+  {
+   "url": "stylefactoryproductions.com/blog/how-to-sell-a-shopify-store",
+   "words": 3000,
+   "has": [
+    "why sell",
+    "assessing value",
+    "preparing",
+    "finding a buyer",
+    "negotiating",
+    "due diligence",
+    "completing the sale",
+    "after the sale",
+    "4 FAQs"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add Shopify transfer steps and what doesn't transfer (apps, payment gateway, Shopify Payments account)",
+  "Pre-sale checklist with records buyers ask for",
+  "Stock handling at sale with example",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

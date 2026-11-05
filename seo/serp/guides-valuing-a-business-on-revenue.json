@@ -1,0 +1,20 @@
+{
+ "page": "guides/valuing-a-business-on-revenue",
+ "query": "business value based on revenue",
+ "results": [
+  "websiteclosers.com valuing a business based on revenue",
+  "eqvista.com value business on revenue",
+  "bizbuysell.com value business based on revenue",
+  "valuadder.com",
+  "flippa.com how to value a business based on revenue"
+ ],
+ "studied": [],
+ "gaps": [
+  "Add the BizBuySell website/ecommerce benchmark (0.90x revenue median, from sources.json) as a real reference",
+  "Worked example showing two businesses with same revenue, different margins, very different value",
+  "When revenue multiples make sense (SaaS, high growth) table and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

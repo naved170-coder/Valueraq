@@ -1,0 +1,32 @@
+{
+ "page": "guides/how-to-negotiate-buying-an-online-business",
+ "query": "negotiate buying a business",
+ "results": [
+  "microns.io how to negotiate buying an online business",
+  "empireflippers.com effectively negotiate",
+  "websiteclosers.com buyer negotiation tips",
+  "flippa.com negotiating the sale price",
+  "empireflippers.com negotiating the deal"
+ ],
+ "studied": [
+  {
+   "url": "microns.io/blog/how-to-negotiate-buying-an-online-business",
+   "words": 1900,
+   "has": [
+    "negotiation tips",
+    "when to walk away",
+    "earn-out example (80/20)",
+    "criteria checklist"
+   ],
+   "figures": "3-5x annual profit (their claim)"
+  }
+ ],
+ "gaps": [
+  "Add an offer-building worked example (price, structure, conditions) and sample offer wording",
+  "Levers other than price table (handover length, holdback, non-compete, inventory)",
+  "Walk-away signals list and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

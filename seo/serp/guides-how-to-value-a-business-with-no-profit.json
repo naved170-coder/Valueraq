@@ -1,0 +1,32 @@
+{
+ "page": "guides/how-to-value-a-business-with-no-profit",
+ "query": "how to value a business with no profit",
+ "results": [
+  "zenbusiness.com how to value an unprofitable business",
+  "bizbuysell.com how to value a business losing money",
+  "valuadder.com valuing a business that loses money",
+  "vikingmergers.com"
+ ],
+ "studied": [
+  {
+   "url": "zenbusiness.com/blog/how-to-value-an-unprofitable-business",
+   "words": 700,
+   "has": [
+    "sales multiple",
+    "book value",
+    "liquidation value",
+    "DCF",
+    "worked publishing example",
+    "takeaways"
+   ]
+  }
+ ],
+ "gaps": [
+  "Online-business angle: revenue, traffic, assets, cost to rebuild, 'what profit after cutting owner-only costs' with worked examples",
+  "Methods comparison table",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

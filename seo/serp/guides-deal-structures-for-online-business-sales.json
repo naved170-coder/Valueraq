@@ -1,0 +1,33 @@
+{
+ "page": "guides/deal-structures-for-online-business-sales",
+ "query": "how to structure a business sale",
+ "results": [
+  "websiteclosers.com understanding earn outs",
+  "websiteclosers.com seller notes and earn outs",
+  "flippa.com earn-out arrangement",
+  "empireflippers.com deal structures",
+  "vikingmergers.com what is an earnout"
+ ],
+ "studied": [
+  {
+   "url": "websiteclosers.com/resources/seller-notes-and-earn-outs",
+   "words": 2000,
+   "has": [
+    "seller notes vs earn-outs comparison table",
+    "$1M seller note example",
+    "pros and cons",
+    "key takeaways",
+    "4 FAQs",
+    "subordination and acceleration clauses"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add comparison table for all structures (cash, seller note, earn-out, holdback, equity rollover) with risk for buyer and seller",
+  "Worked example: same price paid four ways, cash received by month",
+  "Clauses to watch (earn-out metric definitions, acceleration) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

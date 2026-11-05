@@ -1,0 +1,20 @@
+{
+ "page": "guides/how-to-verify-website-traffic",
+ "query": "verify website traffic",
+ "results": [
+  "motioninvest.com spot fake traffic",
+  "indiehackers.com 80% bot traffic",
+  "feinternational.com due diligence 6 things to vet",
+  "organicarbitrage due diligence checklist",
+  "investors.club how to weed out bad sites"
+ ],
+ "studied": [],
+ "gaps": [
+  "Checks table: analytics access, Search Console, third-party estimates, traffic sources, country mix, engagement, sudden spikes, bot signs",
+  "How to compare Search Console clicks vs analytics vs revenue",
+  "Red flags and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

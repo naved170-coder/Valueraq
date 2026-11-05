@@ -1,0 +1,16 @@
+{
+ "page": "guides/what-is-included-when-you-buy-a-website",
+ "query": "what is included when buying a website",
+ "results": [
+  "results are about website DESIGN packages (agencies), not buying an existing website"
+ ],
+ "studied": [],
+ "gaps": [
+  "Make the 'buying an existing website' intent clear in title and first line",
+  "Asset checklist table: included by default vs must be negotiated (domain, content, email list, social accounts, supplier contacts, ad accounts, trademarks, support time)",
+  "How to write it into the purchase agreement; FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

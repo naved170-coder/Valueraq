@@ -1,0 +1,36 @@
+{
+ "page": "guides/how-to-sell-an-app",
+ "query": "sell app business",
+ "results": [
+  "revenuecat.com how to sell an app",
+  "koombea.com",
+  "empireflippers.com how to sell an app",
+  "adapty.io how to sell a mobile app",
+  "flippa.com how to sell an app"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/how-to-sell-an-app",
+   "words": 4000,
+   "has": [
+    "what makes an app sellable",
+    "where to sell",
+    "valuations with pricing windows",
+    "due diligence records checklist",
+    "5-step sale and transfer",
+    "fees, timing, deal structures",
+    "negotiation",
+    "mistakes",
+    "FAQ"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add App Store and Google Play transfer requirements (from sources.json) as a checklist",
+  "Sellability checklist (subscriptions, churn, store rating, platform split)",
+  "Records buyers want table and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

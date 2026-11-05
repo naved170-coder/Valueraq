@@ -1,0 +1,37 @@
+{
+ "page": "guides/how-to-finance-buying-an-online-business",
+ "query": "finance buying online business",
+ "results": [
+  "empireflippers.com buy business with no money",
+  "feinternational.com funding options for buying an online business",
+  "feinternational.com how to buy a website with finance",
+  "quietlight.com how to finance a small business acquisition",
+  "empireflippers.com seller financing"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com funding-options-for-buying-an-online-business",
+   "words": 2200,
+   "has": [
+    "cash sources",
+    "SBA loans, working capital, microloans, credit lines",
+    "crowdfunding",
+    "seller financing",
+    "earn-outs",
+    "holdbacks",
+    "equity partners",
+    "$100,000 worked example with amortization table",
+    "charts"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add options comparison table (cost, speed, availability for buyers outside the US)",
+  "Worked example with seller financing and loan repayment vs business profit (debt coverage)",
+  "Note SBA is US-only; mention local bank/partner options generally",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,17 @@
+{
+ "page": "guides/how-to-transfer-an-app-to-a-new-owner",
+ "query": "transfer app ownership",
+ "results": [
+  "help pages from app builders (buildfire, stqry, goodbarber, appmysite) on Apple and Google transfers",
+  "adapty.io docs transfer apps"
+ ],
+ "studied": [],
+ "gaps": [
+  "Only builder help pages rank: add an authoritative step list for both stores using Apple and Google criteria from sources.json",
+  "What doesn't transfer (in-app purchase IDs conflicts, Apple Arcade, shared containers) and workarounds",
+  "Pre-transfer checklist (developer accounts, signing keys, backend, analytics, subscriptions) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,16 @@
+{
+ "page": "guides/how-to-transfer-a-website-to-a-new-owner",
+ "query": "transfer website ownership",
+ "results": [
+  "mostly platform help pages (Squarespace, WordPress.com, site builders); shoutmeloud.com how to transfer website ownership after selling; support.flippa.com"
+ ],
+ "studied": [],
+ "gaps": [
+  "Results are platform-specific help pages: offer a platform-neutral master checklist in the right order (escrow funded -> domain -> hosting -> content/CMS -> email -> analytics/Search Console -> ad/affiliate accounts -> social -> escrow release)",
+  "Add a platform table (WordPress self-hosted, Squarespace, Wix, Shopify) with where the transfer setting lives",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

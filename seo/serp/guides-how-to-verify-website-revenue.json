@@ -1,0 +1,20 @@
+{
+ "page": "guides/how-to-verify-website-revenue",
+ "query": "verify website revenue",
+ "results": [
+  "motioninvest.com",
+  "indiehackers.com what to check before buying",
+  "entrepreneur.com 5 areas to assess",
+  "flippa.com due diligence checklist",
+  "investors.club due diligence PDF"
+ ],
+ "studied": [],
+ "gaps": [
+  "Step-by-step source verification by revenue type (ad networks, affiliate programs, Stripe/PayPal, Shopify, app stores, sponsors) in a table",
+  "Live screen-share method and read-only access",
+  "Matching revenue to bank deposits; red flags and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

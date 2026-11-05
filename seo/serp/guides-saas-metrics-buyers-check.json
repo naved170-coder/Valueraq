@@ -1,0 +1,20 @@
+{
+ "page": "guides/saas-metrics-buyers-check",
+ "query": "saas metrics",
+ "results": [
+  "dev.to SaaS revenue metrics",
+  "websiteclosers.com key metrics buyers want before buying a saas",
+  "quietlight.com buying a saas business",
+  "acquiry.com SaaS M&A what buyers look for",
+  "goquantive.com saas metrics"
+ ],
+ "studied": [],
+ "gaps": [
+  "Metrics table: formula, where the number comes from (Stripe/billing export), what good looks like for small SaaS (describe as patterns unless sourced), why buyers care",
+  "Cohort retention example",
+  "Red flags (annual prepayments counted as MRR, discounts, one big customer) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
