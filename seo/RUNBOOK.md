@@ -104,7 +104,7 @@ write the page. Record it in the report as `"action": "skipped"` with the overla
 
 Every new page must be more useful than the pages already ranking for its main keyword.
 
-1. Look for `seo/serp/new-<slug>.json` (competitor research saved in a session with the owner for upcoming
+1. Run `ls seo/serp/ | grep '^new-'` and look for `new-<slug>.json` with the page's exact slug from the calendar (also check `seo/serp/queue-new.json`, where `collected` marks topics that have a file) (competitor research saved in a session with the owner for upcoming
    calendar topics). If it is there, read `studied` and `gaps` and plan the page to cover everything the top pages
    cover, plus at least two things they lack (a worked example with real arithmetic, a comparison table, a checklist,
    a clearer direct answer, FAQs they skip).
@@ -117,7 +117,7 @@ Every new page must be more useful than the pages already ranking for its main k
    `glossary-<slug>.json`).
 4. Competitor pages are for finding gaps only: never use their figures (unless the source is in `seo/sources.json`),
    never copy their wording and never name them on the page.
-5. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add
+5. Never mark a page `missing` without running that `ls` check first. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add
    `serp_compare` to `tasks` when every new page has `used` or `searched`.
 
 ## 4. Research

@@ -1,0 +1,32 @@
+{
+ "page": "glossary/subscription-business-model",
+ "query": "subscription business model",
+ "results": [
+  "en.wikipedia.org subscription business model",
+  "webtoffee.com",
+  "blog.hubspot.com subscription business model",
+  "chargebee.com",
+  "zuora.com glossary"
+ ],
+ "studied": [
+  {
+   "url": "blog.hubspot.com/service/subscription-business-model",
+   "words": 2500,
+   "has": [
+    "definition",
+    "how it works",
+    "7 model types",
+    "benefits",
+    "build steps",
+    "5 brand examples"
+   ]
+  }
+ ],
+ "gaps": [
+  "Glossary page: definition, the main types in a compact table, and the angle competitors skip: why subscription businesses sell for higher multiples and which metrics buyers check (MRR, churn, NRR)",
+  "Example and 2-3 FAQs"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped. Copied for the improvement step because the 5 Nov run missed the saved research when writing the page."
+}
