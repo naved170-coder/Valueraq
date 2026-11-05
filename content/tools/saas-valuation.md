@@ -2,7 +2,7 @@
 title: SaaS Valuation Tool
 h1: SaaS Valuation Tool
 answer: The SaaS Valuation Tool estimates a software-as-a-service business's value as a multiple of its annual recurring revenue (ARR), adjusted for growth, churn, gross margin, customer concentration, age and owner involvement. It also shows the multiple of profit that the result implies, so you can compare it with how profit-focused buyers think.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/saas-valuation/, /glossary/arr/, /glossary/mrr/, /glossary/churn/, /guides/website-vs-saas-valuation/
 ---
 
@@ -58,6 +58,28 @@ The form opens with a hypothetical SaaS business: $20,000 MRR, $9,000 monthly pr
 
 **Profitability.** Many buyers of small SaaS businesses care about profit as much as ARR. A business with strong ARR but no profit usually sells toward the low end of its range.
 
+## Quick value table
+
+Default ARR multiples before adjustments for growth, churn, margin and concentration. No sign-up is needed to run your own numbers above, and every multiple and adjustment is shown in the result.
+
+| ARR | MRR | Low (2.0×) | Midpoint (3.5×) | High (5.0×) |
+|---|---|---|---|---|
+| $60,000 | $5,000 | $120,000 | $210,000 | $300,000 |
+| $120,000 | $10,000 | $240,000 | $420,000 | $600,000 |
+| $250,000 | $20,833 | $500,000 | $875,000 | $1,250,000 |
+| $500,000 | $41,667 | $1,000,000 | $1,750,000 | $2,500,000 |
+| $1,000,000 | $83,333 | $2,000,000 | $3,500,000 | $5,000,000 |
+
+## Small SaaS vs public-company multiples
+
+Headlines often quote much higher revenue multiples for listed software companies. Those companies are large, diversified and liquid; a small SaaS business usually depends on its founder, a few channels and a short history, and buyers price that risk in. The default range here is a {{BRAND}} starting assumption for small, privately sold SaaS businesses, not a market average.
+
+## How retention moves the multiple
+
+- **Churn.** Monthly churn under 2% adds 10% to the multiple; 5% to 8% takes off 10%; above 8% takes off 20%.
+- **Net revenue retention (NRR).** If upgrades from existing customers outweigh cancellations and downgrades, revenue grows without new sales. The tool doesn't ask for NRR directly, but it shows up in your revenue trend, which moves the multiple by up to +20%.
+- **Rule of 40.** Growth rate plus profit margin. Buyers of small SaaS look at it less than at churn and profit, but a business well above 40 is easier to sell. See [Rule of 40](/glossary/rule-of-40/).
+
 ## Limitations
 
 - Venture-backed, high-growth SaaS companies are often valued on forward revenue and growth expectations that this tool does not model.
@@ -86,3 +108,11 @@ Enter the average share of paying customers who cancel in a month, over the last
 ### Is the tool suitable for AI SaaS?
 
 It works, but the [AI Business Valuation Tool](/tools/ai-business-valuation/) adds an adjustment for dependence on third-party model providers, which affects AI products' margins and risk.
+
+### Do I need to sign up to use the SaaS valuation tool?
+
+No. Enter your MRR and profit and the result appears straight away, with the ARR multiple and every adjustment explained. You only need a free account if you want to save the report.
+
+### Why is my multiple lower than the ones in the news?
+
+News figures usually come from large or venture-backed companies. Small SaaS businesses sell at lower multiples because more of their revenue depends on the founder and a few customers or channels.

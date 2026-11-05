@@ -2,7 +2,7 @@
 title: Website Valuation Tool
 h1: Website Valuation Tool
 answer: The Website Valuation Tool estimates what a content, affiliate, advertising or lead-generation website is worth by multiplying its annual net profit by a multiple, then adjusting that multiple for the site's age, growth, traffic concentration, monetization and the owner's workload. You enter the figures; the tool shows every step.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/website-valuation/, /guides/revenue-vs-profit-multiples/, /guides/selling-digital-businesses/
 ---
 
@@ -63,6 +63,36 @@ The form above opens with a hypothetical site: four years old, $6,000 monthly re
 
 **Transferability.** Documented processes, content you own outright, contractors willing to stay on, and clean analytics all make a sale easier and support a higher price. The tool doesn't score these directly; they're covered in the [due diligence guide](/guides/digital-business-due-diligence/).
 
+## Quick value table
+
+The default range before any adjustment, using the starting multiples above. Your own answers move a site up or down within (or beyond) these figures.
+
+| Monthly profit | Yearly profit | Low (2.5×) | Midpoint (3.2×) | High (4.0×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $15,000 | $19,200 | $24,000 |
+| $1,000 | $12,000 | $30,000 | $38,400 | $48,000 |
+| $2,500 | $30,000 | $75,000 | $96,000 | $120,000 |
+| $5,000 | $60,000 | $150,000 | $192,000 | $240,000 |
+| $10,000 | $120,000 | $300,000 | $384,000 | $480,000 |
+
+## "24 to 36 times monthly revenue" and other rules of thumb
+
+Many articles quote a website's value as 24 to 36 times *monthly revenue*. This tool uses *profit*, for a simple reason: two sites with the same revenue can keep very different amounts. A site earning $5,000 a month that keeps $4,000 and one that keeps $1,500 are not worth the same. Converted, 30 to 48 times monthly profit is the same as this tool's 2.5× to 4× yearly profit. The guide [How Much Is My Website Worth?](/guides/website-worth-examples/) explains how to compare the different rules of thumb.
+
+## Why domain-only "site worth" checkers give odd numbers
+
+Checkers that ask only for a web address can't see your profit. They estimate traffic from public signals and assume an earning rate per visitor, so a site that earns well and one that earns nothing can get the same figure. A buyer will ignore those numbers and start from profit you can prove, which is what this tool does.
+
+## Value drivers at a glance
+
+| Factor | Lowers the multiple | Raises the multiple |
+|---|---|---|
+| Age | Under 1 year (−20%), 1 to 2 years (−10%) | 4 years or more (+5%) |
+| Revenue trend | Falling more than 20% (−25%), falling 5% to 20% (−12%) | Growing 5% to 25% (+8%), 25% to 75% (+15%), above 75% (+20%) |
+| Largest traffic channel | Over 80% (−12%), 60% to 80% (−6%) | 60% or less is the baseline |
+| Owner hours a week | Over 40 (−10%), 20 to 40 (−5%) | Under 10 (+5%) |
+| Monetization | Affiliate (−3%) | Own products or mixed income (+3%) |
+
 ## Limitations
 
 - The estimate is only as accurate as the figures entered. The tool does not connect to your analytics or accounts.
@@ -92,3 +122,11 @@ Not with this tool. Pre-revenue sites are usually priced on the cost of rebuildi
 ### Is my data saved?
 
 No. Figures are used to calculate the result and are not stored unless you create a free account and save a report. Saved reports are private and are never shown to search engines.
+
+### Is "36 times monthly" the same as "3 times yearly"?
+
+Yes. Divide a monthly multiple by 12 to get the yearly one: 36 times monthly profit equals 3 times yearly profit. Check whether a quoted multiple uses revenue or profit before comparing it with this tool.
+
+### How long does the estimate take?
+
+About a minute. Only monthly revenue and monthly profit are required; the other answers sharpen the result. No sign-up is needed.

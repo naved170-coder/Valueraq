@@ -1,7 +1,7 @@
 ---
 title: Website Worth Calculator
 answer: A website's worth is commonly estimated as its average monthly net profit multiplied by a number of months, often somewhere between 24 and 48 months for small, established sites. This calculator does that multiplication and shows the value at several common multiples, so you can see how much the choice of multiple matters.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /tools/website-valuation/, /guides/website-valuation/, /glossary/profit-multiple/, /glossary/sde/
 ---
 
@@ -39,6 +39,21 @@ $4,500 × 36 = $162,000, which is 3× its annual profit of $54,000.
 
 At 30 months the same site would be $135,000; at 42 months, $189,000. The spread shows why the reasoning behind the multiple matters as much as the arithmetic.
 
+## Why most website worth calculators are wrong
+
+Many "website worth" calculators ask only for a web address. They guess traffic and apply a standard earning rate, so they can't tell a site that keeps $3,000 a month from one that keeps nothing. This calculator asks for your monthly profit, the number buyers actually pay for.
+
+## Getting the input right
+
+- **Use a 12-month average**, not your best month.
+- **Profit means after all business costs**, before paying yourself.
+- **Add back only what you can document**, such as a one-off redesign.
+- **Ad-funded sites:** sense-check profit against traffic. Revenue roughly equals monthly pageviews ÷ 1,000 × your RPM (revenue per thousand pageviews), minus costs.
+
+## Five ways to raise the number
+
+Clean records, fewer owner hours, a second traffic source, a second income stream and fixing technical problems. The guide on [increasing website value before selling](/guides/increase-website-value-before-selling/) explains each.
+
 ## Limitations
 
 The result is simple arithmetic on the numbers you enter. It doesn't check whether the multiple is realistic for your site, and it isn't an appraisal or financial advice. Sale prices also depend on deal terms, such as earn-outs or payment in instalments, which can make a higher headline price worth less in practice.
@@ -56,3 +71,7 @@ They describe the same valuation. Divide a monthly multiple by 12 to get the ann
 ### Should I use revenue or profit?
 
 Profit. Two sites with the same revenue can have very different costs. See [revenue vs profit multiples](/guides/revenue-vs-profit-multiples/) for when revenue multiples are used instead.
+
+### Why is this result different from other website worth calculators?
+
+Most of them estimate value from traffic alone. This one starts from profit, which is how buyers and brokers price websites. For a fuller estimate with age, growth and traffic risk, use the [Website Valuation Tool](/tools/website-valuation/).

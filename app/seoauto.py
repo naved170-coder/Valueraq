@@ -289,7 +289,7 @@ TASKS = [
     ("published", "Pages published on the website", "site"),
     ("bing", "New pages announced to Bing", "site"),
     ("refresh", "Content refresh (1st of each month)", "run"),
-    ("improve", "2 pages improved from competitor research", "run"),
+    ("improve", "4 pages improved from competitor research", "run"),
     ("selfcheck", "Morning self-check by Claude", "watch"),
     ("gsc", "Google Search Console figures saved", "gsc"),
     ("review", "Ranking review written (Mon and Thu)", "review"),

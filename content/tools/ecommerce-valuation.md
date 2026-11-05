@@ -2,7 +2,7 @@
 title: Ecommerce Valuation Tool
 h1: Ecommerce Valuation Tool
 answer: The Ecommerce Valuation Tool estimates what an online store is worth as a multiple of its annual net profit, adjusted for fulfillment model, sales-channel concentration, growth, age and owner workload, and then shows inventory at cost separately, because stock is usually paid for on top of the earnings-based price.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/business-valuation/, /glossary/sde/, /glossary/conversion-rate/, /glossary/customer-concentration/
 ---
 
@@ -56,6 +56,31 @@ The hypothetical store in the form turns over $40,000 a month and keeps $7,000 a
 
 **Inventory condition.** Buyers pay for sellable stock, not slow-moving or obsolete items. Expect a stock count before closing.
 
+## Quick value table
+
+Default range for profitable online stores, before stock. Stock is added on top at cost.
+
+| Monthly profit | Yearly profit | Low (2.0×) | Midpoint (2.7×) | High (3.5×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $12,000 | $16,200 | $21,000 |
+| $1,000 | $12,000 | $24,000 | $32,400 | $42,000 |
+| $2,500 | $30,000 | $60,000 | $81,000 | $105,000 |
+| $5,000 | $60,000 | $120,000 | $162,000 | $210,000 |
+| $10,000 | $120,000 | $240,000 | $324,000 | $420,000 |
+
+## How stock is handled
+
+A store's price normally has two parts: the business, valued on its profit, and the stock, paid for separately at cost after a count at closing. Example: a store with $5,000 monthly profit at the 2.7× midpoint is worth $162,000; with $30,000 of saleable stock, the buyer pays about $192,000 in total. Old or slow-moving stock is usually excluded or discounted.
+
+## Shopify, Amazon FBA and dropshipping compared
+
+| Model | What buyers like | What buyers worry about | Effect in this tool |
+|---|---|---|---|
+| Own store (Shopify or similar) | Owns customer data and email list | Paid-ad dependence | Channel concentration rule applies |
+| Amazon FBA | Built-in demand | Account health, Amazon fees and policy, stock held at Amazon | Channel concentration usually high (−6% to −12%) |
+| Dropshipping | Low capital needed | Supplier control, thin margins, ad dependence | −8% |
+| Outsourced fulfillment (3PL) | Easy to hand over | Contract terms | +3% |
+
 ## Limitations
 
 - Inventory is taken at the cost you enter. Obsolete stock, and working-capital needs such as supplier deposits, need separate negotiation.
@@ -79,3 +104,11 @@ Because the business depends on suppliers' stock, pricing and shipping times, wh
 ### Does selling on Amazon reduce value?
 
 Not in itself. Heavy reliance on any single channel adds risk, and Amazon accounts can be suspended or restricted, so buyers look closely at account health and at sales outside Amazon.
+
+### Should I include stock in my profit figures?
+
+No. Use profit after the cost of goods you sold. Enter the value of the stock you hold separately; the tool adds it on top of the business value at cost.
+
+### Do buyers pay more for stores with their own brand?
+
+Generally yes, because a brand they own can't be copied as easily as a reseller listing. The tool doesn't score branding directly; it shows through steadier growth and less channel dependence.

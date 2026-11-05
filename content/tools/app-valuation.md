@@ -2,7 +2,7 @@
 title: App Valuation Tool
 h1: App Valuation Tool
 answer: The App Valuation Tool estimates what an iOS or Android app is worth as a multiple of its annual net profit, adjusted for age, growth, revenue model, platforms, acquisition-channel concentration and owner workload. It suits profitable consumer and utility apps earning from subscriptions, in-app purchases, ads or paid downloads.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/business-valuation/, /glossary/sde/, /glossary/churn/, /glossary/profit-multiple/
 ---
 
@@ -55,6 +55,32 @@ The hypothetical app in the form earns $9,000 a month and keeps $5,500 as profit
 
 **Technical condition.** An outdated codebase, deprecated SDKs or a single developer who wrote everything add work for a buyer. Clear documentation and a current build pipeline reduce it.
 
+## Quick value table
+
+Default range for profitable apps before adjustments for age, growth, platforms, revenue model, channel and owner time.
+
+| Monthly profit | Yearly profit | Low (2.0×) | Midpoint (2.7×) | High (3.5×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $12,000 | $16,200 | $21,000 |
+| $1,000 | $12,000 | $24,000 | $32,400 | $42,000 |
+| $2,500 | $30,000 | $60,000 | $81,000 | $105,000 |
+| $5,000 | $60,000 | $120,000 | $162,000 | $210,000 |
+| $10,000 | $120,000 | $240,000 | $324,000 | $420,000 |
+
+## Why buyers rarely pay per user
+
+Large deals are sometimes reported as a price per user, but buyers of small apps pay for profit. A million downloads with no income is worth far less than ten thousand paying subscribers. Active users matter as evidence that revenue will continue, so the tool shows monthly active users in your report but values the profit.
+
+## App-specific value drivers
+
+| Factor | Effect in this tool |
+|---|---|
+| Revenue model | Subscriptions +5%; in-app purchases baseline; ads −5%; paid downloads −5% |
+| Platforms | On both iOS and Android +3%; one platform baseline |
+| Largest acquisition channel | Over 80% from one channel −12% (for example, paid installs from one ad network) |
+| Age | Under 1 year −20%; 4 years or more +5% |
+| Store rating and platform policy | Not scored; buyers check reviews and policy history in due diligence |
+
 ## Limitations
 
 - The tool doesn't value apps with no profit or apps whose value lies in their technology or user base rather than earnings.
@@ -78,3 +104,11 @@ Slightly, under this model: being on both platforms earns a small positive adjus
 ### What happens to my App Store account in a sale?
 
 Transferring apps between developer accounts is handled through each store's app transfer process, and each store sets its own requirements. Check the current rules for both stores early, because they affect how the sale is structured.
+
+### Is an app with high downloads but no revenue worth anything?
+
+It can sell, but not on an earnings multiple. Buyers price it on its users, code and what they could earn from it, which varies too much for a calculator. See [how to value a business with no profit](/guides/how-to-value-a-business-with-no-profit/).
+
+### Do I need to transfer my whole developer account to sell an app?
+
+Usually not. Both major stores let you transfer a single app to another developer account, with some exceptions. The guide to [transferring an app](/guides/how-to-transfer-an-app-to-a-new-owner/) covers the steps.

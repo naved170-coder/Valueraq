@@ -2,7 +2,7 @@
 title: AI Business Valuation Tool
 h1: AI Business Valuation Tool
 answer: The AI Business Valuation Tool estimates what an AI tool, AI SaaS product or AI API business is worth as a multiple of its annual recurring revenue. It adjusts for growth, churn, gross margin and how dependent the product is on third-party model providers, the risks buyers look at most closely in AI businesses.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/ai-business-valuation/, /guides/saas-valuation/, /glossary/gross-margin/, /glossary/churn/
 ---
 
@@ -57,6 +57,39 @@ Strong growth lifts the multiple, but short history, high churn, a below-softwar
 
 **Churn after the novelty fades.** Many AI tools attract sign-ups that don't last. Cohort retention after three and six months tells a buyer more than total sign-ups.
 
+## Quick value table
+
+Default ARR multiples for AI tools and AI SaaS before adjustments. They start lower than for other SaaS because of model costs and provider dependence.
+
+| ARR | MRR | Low (1.5×) | Midpoint (3.0×) | High (4.5×) |
+|---|---|---|---|---|
+| $60,000 | $5,000 | $90,000 | $180,000 | $270,000 |
+| $120,000 | $10,000 | $180,000 | $360,000 | $540,000 |
+| $250,000 | $20,833 | $375,000 | $750,000 | $1,125,000 |
+| $500,000 | $41,667 | $750,000 | $1,500,000 | $2,250,000 |
+| $1,000,000 | $83,333 | $1,500,000 | $3,000,000 | $4,500,000 |
+
+## Why small AI businesses don't get headline AI multiples
+
+Reports of AI companies valued at very high multiples of revenue refer to large, venture-funded businesses with their own research teams and models. A small AI tool built on another company's model is a different asset: its costs rise with usage, its features can be copied, and its supplier can change prices. Buyers of small AI businesses therefore price them more like risky SaaS than like the companies in the news.
+
+## The AI-specific checks
+
+| Check | Why it matters | How the tool treats it |
+|---|---|---|
+| Gross margin after model costs | Inference costs grow with every user | Under 50% −15%; 50% to 70% −7%; above 80% +5% |
+| Model provider dependence | One provider can change prices, terms or quality | Single provider −10%; can switch providers 0%; own or fine-tuned models +5% |
+| Churn | AI tools are often tried and dropped | Under 2% a month +10%; over 8% −20% |
+| Customer concentration | A few large clients can leave together | Over 30% from one customer −12% |
+| Proprietary data or workflow | Harder to copy | Not scored; note it for buyers in due diligence |
+
+## Common mistakes when valuing an AI business
+
+- Using revenue multiples from venture funding rounds as if they were sale prices.
+- Quoting gross margin before model and API costs.
+- Ignoring how much of the product a model provider could add to its own platform.
+- Counting free-trial or one-off credits as recurring revenue.
+
 ## Limitations
 
 - Venture-scale AI companies are valued on expectations this tool doesn't model.
@@ -81,3 +114,11 @@ Using a third-party model isn't a problem in itself. Relying on a single provide
 ### Can I value a pre-revenue AI startup?
 
 No. This tool needs recurring revenue. Pre-revenue startups are usually priced through negotiation with investors on team, technology and market size.
+
+### Does a buyer pay more if I use several model providers?
+
+Being able to switch providers removes the single-provider discount in this tool. Owning or fine-tuning your own models adds a small premium, because it reduces the risk that one supplier changes your costs or product.
+
+### Should I include API credits I resell in revenue?
+
+Include them in revenue, but make sure their cost appears in your gross margin. Buyers look at what is left after model and hosting costs.

@@ -2,7 +2,7 @@
 title: Newsletter Valuation Tool
 h1: Newsletter Valuation Tool
 answer: The Newsletter Valuation Tool estimates what an email newsletter business is worth as a multiple of its annual net profit, adjusted for audience engagement, revenue model, sponsor concentration, growth, age and the owner's workload. Subscriber counts are recorded but don't set the value on their own, because profit and engagement matter more to buyers.
-updated: 2026-09-30
+updated: 2026-11-05
 related: /guides/business-valuation/, /glossary/customer-concentration/, /glossary/sde/, /guides/selling-digital-businesses/
 ---
 
@@ -53,6 +53,36 @@ The hypothetical newsletter in the form has 45,000 subscribers, a 42% open rate,
 
 **Platform portability.** Subscriber lists can usually be exported, but paid subscriptions may need customers to re-authorise payment on a new platform. Check what your platform allows before you agree terms.
 
+## Quick value table
+
+Default range for profitable newsletters before adjustments for engagement, revenue model, growth and sponsor concentration.
+
+| Monthly profit | Yearly profit | Low (2.5×) | Midpoint (3.2×) | High (4.0×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $15,000 | $19,200 | $24,000 |
+| $1,000 | $12,000 | $30,000 | $38,400 | $48,000 |
+| $2,500 | $30,000 | $75,000 | $96,000 | $120,000 |
+| $5,000 | $60,000 | $150,000 | $192,000 | $240,000 |
+| $10,000 | $120,000 | $300,000 | $384,000 | $480,000 |
+
+## Price per subscriber: a sense-check, not a method
+
+Newsletter sales are sometimes described as a price per subscriber. It is a useful check, but profit comes first: a list that earns nothing has little value however large it is. Divide this tool's midpoint by your subscriber count to see the implied price per subscriber, and compare it with what similar lists earn per subscriber each year.
+
+## Engagement: why open rates mislead
+
+Since some email apps began loading images automatically to protect privacy, many opens are counted even when nobody read the email. Open rates above about 45% therefore get only a small bonus here, and buyers often look at clicks, replies and revenue per subscriber instead.
+
+## Revenue models compared
+
+| Model | Strength | Risk | Effect in this tool |
+|---|---|---|---|
+| Paid subscriptions | Recurring, direct relationship | Churn | +5% |
+| Sponsorship | Can scale with audience | A few sponsors can supply most income | Baseline; sponsor concentration rule applies |
+| Mixed | Diversified | More work to run | +3% |
+
+**Sponsor concentration.** If one sponsor supplies more than 30% of revenue the multiple drops 12%; 15% to 30% drops it 6%.
+
 ## Limitations
 
 - Pre-profit newsletters, and those sold for their audience to a strategic buyer, are outside this method.
@@ -72,3 +102,11 @@ Under this model, paid subscriptions add a small positive adjustment because the
 ### What if I write every issue myself?
 
 Record your weekly hours in the form. The tool can't measure how attached readers are to you personally, so if the newsletter depends on your voice, expect buyers to ask for a transition period or an earn-out.
+
+### How much is each subscriber worth?
+
+There is no fixed figure. Value the newsletter on profit first, then divide by subscribers as a sense-check. Engaged, paying or well-sponsored lists are worth much more per subscriber than large, quiet ones.
+
+### Should I report opens or clicks to a buyer?
+
+Report both, and explain any change in how opens are counted. Clicks and revenue per subscriber are harder to inflate, so serious buyers rely on them.
