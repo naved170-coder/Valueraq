@@ -8,7 +8,7 @@ cluster: saas
 order: 13
 answer: To buy a SaaS business, set criteria you can actually operate within, read each listing's MRR, churn, gross margin and customer concentration, ask the seller how those figures are produced, have the code and infrastructure reviewed, confirm that customer and supplier contracts can transfer, decide how the price will be paid, close through escrow, and spend the first 90 days keeping the product stable before you change it.
 published: 2026-10-04
-updated: 2026-10-04
+updated: 2026-11-05
 methodology_version: 1.0
 related: /tools/saas-valuation/, /guides/saas-valuation/, /guides/buying-digital-businesses/, /guides/digital-business-due-diligence/, /guides/buy-vs-build-saas/, /businesses-for-sale/saas/, /glossary/seller-financing/, /glossary/earnout/
 cta: /tools/saas-valuation/
@@ -110,6 +110,8 @@ Use an independent [escrow](/glossary/escrow/) service. You pay the escrow provi
 **Days 31 to 60: learn it.** Watch MRR, churn and support volume weekly and compare them with the seller's figures. Talk to the largest customers. Fix the faults the code review found.
 
 **Days 61 to 90: start improving.** Make one change at a time, such as pricing or onboarding, so you can tell what caused any movement in the numbers. Use the seller's support period before it runs out.
+
+To price the product before you offer, read [how to value a SaaS company](/guides/saas-valuation/) and run a quick SaaS business valuation with the [SaaS valuation tool](/tools/saas-valuation/).
 
 ## Frequently asked questions
 

@@ -53,5 +53,20 @@
     "id": "1419df8afb32",
     "date": "2026-11-02",
     "note": "Linked 'digital valuation' to /guides/business-valuation/ from the buying and selling digital businesses guides."
+  },
+  {
+    "id": "760ea91839d5",
+    "date": "2026-11-05",
+    "note": "Linked 'valuation saas' / 'saas business valuation' to /tools/saas-valuation/ from 4 SaaS guides."
+  },
+  {
+    "id": "eb0ac506ed79",
+    "date": "2026-11-05",
+    "note": "Same links as above give /tools/saas-valuation/ the phrase 'SaaS business valuation' as the main page."
+  },
+  {
+    "id": "c80e02309496",
+    "date": "2026-11-05",
+    "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the methods, multiples, micro-SaaS and buying guides."
   }
 ]

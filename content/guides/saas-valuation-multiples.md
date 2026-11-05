@@ -10,7 +10,7 @@ page_type: article
 answer: A SaaS valuation multiple is the number you multiply annual recurring revenue (ARR) by to estimate what a subscription software business is worth. VALUERAQ's default range for a small SaaS business is 2.0 to 5.0 times ARR, and growth, churn, gross margin, customer concentration, age and owner workload move a business up or down from there.
 keywords: saas valuation multiples, saas revenue multiples, saas company valuation multiples, saas ebitda multiples, saas valuation
 published: 2026-10-07
-updated: 2026-10-07
+updated: 2026-11-05
 publish_at: 2026-10-07T01:00Z
 image: /static/img/articles/saas-valuation-multiples.png
 image_alt: Featured image for the guide SaaS Valuation Multiples, What They Are and How to Use Them
@@ -124,6 +124,8 @@ Size, concentration and difficulty of selling all reduce what a buyer will pay. 
 3. **Run them through the tool** and read the adjustment list, not only the result.
 4. **Divide the midpoint by yearly profit** and ask whether growth and retention support the answer.
 5. **If you are buying,** work backwards from an asking price with the [SaaS valuation calculator](/calculators/saas-valuation-calculator/), then verify churn and MRR from the billing system. The guide to [buying a SaaS business](/guides/how-to-buy-a-saas-business/) covers the checks.
+
+Once you have a multiple, the [how to value a SaaS company guide](/guides/saas-valuation/) shows how to apply it, and the [valuation SaaS tool](/tools/saas-valuation/) runs a SaaS business valuation on your own ARR and churn.
 
 ## Frequently asked questions
 

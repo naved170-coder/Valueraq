@@ -10,7 +10,7 @@ page_type: article
 answer: A micro-SaaS is usually priced as a multiple of annual recurring revenue (ARR), then checked against annual profit, because buyers of very small software businesses often pay for the income they can take home. Churn, founder hours and one large customer move the price more at this size than they do for a bigger company.
 keywords: micro saas valuation, saas startup valuation, saas company valuation, saas for sale, small saas valuation
 published: 2026-11-01
-updated: 2026-11-01
+updated: 2026-11-05
 publish_at: 2026-11-02T01:00Z
 image: /static/img/articles/micro-saas-valuation.png
 image_alt: Featured image for the guide to micro-SaaS valuation, covering ARR, profit, churn and founder hours
@@ -183,6 +183,8 @@ The U.S. Small Business Administration advises "thorough, objective investigatio
 ## Limits of these numbers
 
 The multiples here are {{BRAND}}'s default assumptions. They are not an appraisal, and no market sales data sits behind them. A real price also reflects the buyer's alternatives, the quality of the code, any licences, and the terms of the deal. Treat the range as a starting point for a conversation, not a promise of what a buyer will pay.
+
+This page covers very small products. For the general method, see [how to value a SaaS company](/guides/saas-valuation/), and for a SaaS business valuation on your own figures use the [SaaS valuation tool](/tools/saas-valuation/).
 
 ## Frequently asked questions
 
