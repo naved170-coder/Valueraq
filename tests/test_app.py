@@ -1904,6 +1904,23 @@ class Rankings(Base):
             self.assertGreater(rankings.follow_up(today=dt.date(2031, 5, 13)), 0)
             self.assertIn("then", db.query("SELECT result FROM rank_actions WHERE id=?", (act["id"],), one=True)["result"])
 
+    def test_seo_check_rejects_missing_research_when_file_exists(self):
+        import json as _j, tempfile
+        from app import seoauto
+        with tempfile.TemporaryDirectory() as d:
+            runs, serp = os.path.join(d, "runs"), os.path.join(d, "serp")
+            os.makedirs(runs); os.makedirs(serp)
+            rep = {"items": [{"path": "/glossary/widget-rate/", "action": "new", "serp": "missing"},
+                             {"path": "/glossary/other-term/", "action": "new", "serp": "missing"}]}
+            _j.dump(rep, open(os.path.join(runs, "2031-01-02.json"), "w"))
+            open(os.path.join(serp, "new-widget-rate.json"), "w").write("{}")
+            with mock.patch.object(seoauto, "RUNS_DIR", runs), mock.patch.object(seoauto, "SERP_DIR", serp):
+                seoauto.run_dates.cache_clear(); seoauto._run_raw.cache_clear()
+                probs = seoauto.serp_report_problems()
+            seoauto.run_dates.cache_clear(); seoauto._run_raw.cache_clear()
+        self.assertEqual(len(probs), 1)
+        self.assertIn("widget-rate", probs[0])
+
     def test_dashboard_totals_use_google_daily_totals(self):
         from app import rankings
         with self.app.app_context():

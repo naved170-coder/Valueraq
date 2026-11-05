@@ -53,6 +53,10 @@ Never change `app/` code, `content/pages/`, prices, fees or tests.
 - **A broken internal link, a missing image file, a meta title or description out of range, a banned phrase, a wrong figure
   compared with `app/valuation.py`:** fix it in the page, set `updated` to today, re-run the gates.
 - **A report ticked a task that was not done:** correct the report's `tasks` list.
+- **`seo-check` says a report marked competitor research "missing" but the file exists:** open that
+  `seo/serp/new-<slug>.json`, improve the page with it as RUNBOOK section 3b describes (re-run the editorial review),
+  set the item's `"serp": "used"` in that report, add `serp_compare` to its `tasks` only if every new page now has
+  research, and record it under `fixed`.
 - **Fewer than 10 unwritten days left in the calendar:** add new days to `seo/calendar.json` in the same format, choosing
   topics from `seo/keywords.json` by search volume and low competition, and run the duplicate check from RUNBOOK section 3
   on every topic against existing pages and the rest of the calendar. Keep about 70% general/US topics and no more than one

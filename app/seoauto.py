@@ -267,7 +267,34 @@ def validate():
     for day, paths in per_day.items():
         if len(paths) > MAX_PER_DAY:
             problems.append(f"{day}: {len(paths)} pages scheduled; the daily cap is {MAX_PER_DAY}")
+    problems += serp_report_problems()
     return problems
+
+
+SERP_DIR = os.path.join(SEO_DIR, "serp")
+SERP_CHECK_START = "2026-11-06"   # reports from this date are held to the rule below
+
+
+def serp_report_problems():
+    """A run report may only say competitor research was 'missing' for a new page when no saved file exists for it.
+    seo-check fails otherwise, so the daily run has to use the research before it can push."""
+    out = []
+    have = set(os.listdir(SERP_DIR)) if os.path.isdir(SERP_DIR) else set()
+    for date in run_dates():
+        if date < SERP_CHECK_START:
+            break
+        rep = _run_raw(date) or {}
+        for item in rep.get("items") or rep.get("pages") or []:
+            if item.get("action") != "new":
+                continue
+            slug = (item.get("path") or "").strip("/").split("/")[-1]
+            if not slug:
+                continue
+            if item.get("serp") in (None, "", "missing") and f"new-{slug}.json" in have:
+                out.append(f"seo/runs/{date}.json: {item.get('path')} says competitor research is "
+                           f"'{item.get('serp') or 'not recorded'}', but seo/serp/new-{slug}.json exists. "
+                           "Rewrite the page using that file and set \"serp\": \"used\".")
+    return out
 
 
 # ---------------------------------------------------------------- task data (daily checklist by date)

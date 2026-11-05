@@ -117,7 +117,7 @@ Every new page must be more useful than the pages already ranking for its main k
    `glossary-<slug>.json`).
 4. Competitor pages are for finding gaps only: never use their figures (unless the source is in `seo/sources.json`),
    never copy their wording and never name them on the page.
-5. Never mark a page `missing` without running that `ls` check first. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add
+5. Never mark a page `missing` without running that `ls` check first; `seo-check` now fails if a report says `missing` while the file exists, and nothing can be pushed until the page is rewritten with it. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add
    `serp_compare` to `tasks` when every new page has `used` or `searched`.
 
 ## 4. Research
