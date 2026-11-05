@@ -10,7 +10,7 @@ cluster: website
 page_type: reference
 keywords: affiliate marketing, what is affiliate marketing, affiliate income, affiliate website, affiliate commission
 related: /glossary/earnings-per-click/, /glossary/conversion-rate/, /glossary/organic-traffic/, /glossary/rpm/, /guides/how-to-value-a-blog/, /guides/how-to-verify-website-revenue/, /tools/website-valuation/
-updated: 2026-10-20
+updated: 2026-11-05
 publish_at: 2026-10-21T01:00Z
 image: /static/img/articles/affiliate-marketing.png
 image_alt: Featured image for the glossary entry What Is Affiliate Marketing
@@ -43,6 +43,31 @@ Affiliate income is earned from a third party's program, so buyers look at how s
 - **Where do the visitors come from?** Income that depends on one search ranking is less steady. See [organic traffic](/glossary/organic-traffic/).
 
 VALUERAQ's [website valuation tool](/tools/website-valuation/) multiplies annual profit by a multiple (its default range is 2.5x to 4.0x, explained in the [methodology](/methodology/)). Disclosure rules for affiliate links differ by country, so check the rules where you operate.
+
+## A second example: one program cuts its rate
+
+An affiliate site earns $2,000 a month in commissions and spends $600 a month on tools and writers, so profit is $1,400 a month, or $16,800 a year. One merchant provides $1,500 of the $2,000. It cuts its commission rate from 6% to 4%, so that income becomes $1,500 × 4 ÷ 6 = $1,000. Monthly commissions fall to $1,500, and profit to $900 a month, or $10,800 a year, a fall of 36%. At 3.2 times profit, the value falls from $53,760 to $34,560. The figures are an illustration only.
+
+## Terms to check
+
+- **Commission rate:** the percentage or fixed amount per sale, and whether it can change with notice.
+- **Cookie window:** how long a click stays valid, so a later purchase still earns a commission.
+- **Attribution:** which clicks the program credits to the site.
+- **Account transfer:** whether the account can move to a new owner.
+
+## Frequently asked questions
+
+### Is affiliate income recurring revenue?
+
+Not in the usual sense. It repeats while readers keep visiting and the program keeps paying, but there is no contract with each customer. Buyers treat it as less secure than a subscription.
+
+### Can affiliate accounts be sold with a website?
+
+It depends on the program's rules. Some require approval to change owner, and some end the account. Read each program's terms before listing.
+
+### How do buyers check affiliate income?
+
+By matching payout reports to bank deposits, month by month.
 
 ## Related terms
 

@@ -198,5 +198,11 @@
 "query": "tax on selling a website",
 "day": 40,
 "collected": "2026-11-05"
+},
+{
+"slug": "subscription-business-model",
+"kind": "glossary",
+"query": "subscription business model",
+"day": 34
 }
 ]

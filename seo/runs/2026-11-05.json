@@ -1,5 +1,5 @@
 {
- "summary": "Wrote 1 article (good profit margin for an online business) and 3 reference pages (GMV, bounce rate, subscription business model); nothing held, nothing needs the owner.",
+ "summary": "Wrote 1 article (good profit margin for an online business) and 3 reference pages (GMV, bounce rate, subscription business model); nothing held, nothing needs the owner. Also improved 4 existing pages from saved research.",
  "model": "claude-sonnet-5-5",
  "items": [
   {
@@ -64,6 +64,34 @@
    "action": "skipped",
    "type": "Question answered",
    "note": "Skipped for the second run (no verified Shopify source; overlaps /guides/how-to-sell-a-shopify-store/ and /guides/how-to-transfer-a-website-to-a-new-owner/). Moved to the end of the calendar."
+  },
+  {
+   "path": "/guides/adsense-website-valuation/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.5,
+   "note": "Added network risk, direct deals, seasonality and RPM sense-check with arithmetic; 2 FAQs. Figures are own arithmetic or from valuation.py; no competitor figures used."
+  },
+  {
+   "path": "/guides/affiliate-website-valuation/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.5,
+   "note": "Added program-cut and seasonality examples, cookie window, category/content factors, attribution checks; 1 FAQ. Figures are own arithmetic or from valuation.py; no competitor figures used."
+  },
+  {
+   "path": "/glossary/add-backs/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.5,
+   "note": "Added online-business add-back table, rejection example, 3 FAQs. Figures are own arithmetic or from valuation.py; no competitor figures used."
+  },
+  {
+   "path": "/glossary/affiliate-marketing/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.5,
+   "note": "Added rate-cut example, terms checklist, 3 FAQs. Figures are own arithmetic or from valuation.py; no competitor figures used."
   }
  ],
  "tasks": [
@@ -76,7 +104,8 @@
   "gates",
   "scheduled",
   "link_check",
-  "report"
+  "report",
+  "improve"
  ],
  "checks": [
   "Tests: 123 passed",

@@ -29,6 +29,7 @@
   "FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-05",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added ad-network risk, direct vs network deals, seasonality and traffic x RPM sense-check examples, 2 FAQs"
 }

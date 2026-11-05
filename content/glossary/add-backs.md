@@ -10,7 +10,7 @@ cluster: analysis
 page_type: reference
 keywords: add-backs, sde add backs, what are add-backs, add backs business sale
 related: /glossary/sde/, /glossary/ebitda/, /guides/sde-vs-ebitda/, /guides/digital-business-due-diligence/, /calculators/business-multiple-calculator/
-updated: 2026-10-07
+updated: 2026-11-05
 publish_at: 2026-10-07T07:00Z
 image: /static/img/articles/add-backs.png
 image_alt: Featured image for the glossary entry What Are Add-Backs
@@ -55,6 +55,37 @@ Every dollar added back is multiplied. On the example above, a $1,000 add-back i
 - **The owner's unpaid work, counted twice.** SDE already leaves out the owner's pay. A buyer who must hire a manager will take that cost off again. See [SDE vs EBITDA](/guides/sde-vs-ebitda/).
 
 A short, well-documented list is more convincing than a long one. Checking it is a standard part of [due diligence](/guides/digital-business-due-diligence/).
+
+## Online-business add-backs: accepted, questioned or rejected
+
+Buyers treat common online-business items in different ways. These are typical reactions, not rules.
+
+| Item | Usually accepted? | Why |
+|---|---|---|
+| Owner's own pay in SDE | Yes | SDE is profit before the owner's pay |
+| Personal software or phone plan | Yes, if shown to be personal | Needs invoices that name the personal use |
+| One-off redesign or migration | Questioned | Accepted only if it will not repeat |
+| Owner's writing time counted as a cost | Rejected as an add-back | A buyer who must pay a writer will deduct it |
+| Regular advertising or freelancers | Rejected | The revenue depends on them |
+| Interest on the owner's loan | Yes | Does not pass to a buyer |
+
+### A buyer's version of the example
+
+Take the content site above, with SDE of $77,200. The buyer sees that the redesign happens every two years, so the $6,000 is a running cost, and strikes it. SDE becomes $77,200 − $6,000 = $71,200. At 3.2 times, the estimate falls from $247,040 to $71,200 × 3.2 = $227,840, a difference of $19,200. That is the one rejected add-back multiplied by 3.2.
+
+## Frequently asked questions
+
+### Are add-backs the same as adjustments?
+
+Add-backs are one kind of adjustment. Buyers also make adjustments that lower profit, such as a manager's pay.
+
+### How many add-backs are too many?
+
+There is no fixed number. A short list with a receipt for each is more convincing than a long one with gaps.
+
+### What proof do buyers want?
+
+Bank statements, invoices and the accounting records that show each cost and what it was for.
 
 ## Related terms
 

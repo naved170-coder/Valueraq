@@ -10,7 +10,7 @@ page_type: article
 answer: To value an affiliate website, take its yearly net profit and multiply it by a multiple. VALUERAQ's default range for websites is 2.5 to 4.0 times profit, and affiliate income takes 3% off the multiple because programs can cut commissions or close. Traffic concentration and the revenue trend then move the result more than the affiliate label does.
 keywords: affiliate website valuation, how to value an affiliate website, website valuation, website worth, affiliate site multiple
 published: 2026-10-24
-updated: 2026-10-24
+updated: 2026-11-05
 publish_at: 2026-10-24T01:00Z
 image: /static/img/articles/affiliate-website-valuation.png
 image_alt: Featured image for the guide How to Value an Affiliate Website
@@ -116,6 +116,33 @@ Expect these questions in [due diligence](/guides/how-to-verify-website-revenue/
 
 The U.S. Small Business Administration advises buyers of existing businesses to carry out a "thorough, objective investigation" and to consider hiring an attorney and an accountant ([SBA](https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise)). Sellers who prepare for that investigation tend to have smoother deals.
 
+## Program risk and seasons, with numbers
+
+**What happens when one program cuts its rate.** Suppose an affiliate site earns $60,000 a year in commissions, with $18,000 of costs, so profit is $42,000. One merchant provides 70% of the commissions: $42,000. The other merchants provide $18,000. If that merchant halves its commission rate, its income falls to $21,000. Total commissions become $21,000 + $18,000 = $39,000, and profit becomes $39,000 − $18,000 = $21,000. A cut that touched only one program halved the profit. At the 3.2x midpoint of the default range, before any adjustments, the value goes from $42,000 × 3.2 = $134,400 to $21,000 × 3.2 = $67,200. A site whose income is spread across several programs would lose far less.
+
+**Cookie windows.** A cookie window is how long a click stays valid for a sale. A shorter window means fewer visits that later buy are credited to the site. Buyers ask for the current terms of each program and for any notice that changes them.
+
+**Seasonal income.** Many affiliate sites earn more at certain times of year, for example when shoppers buy gifts. Say a site earns $2,000 a month for ten months and $6,000 a month for two. Its year is 10 × $2,000 + 2 × $6,000 = $32,000. Costs are $1,000 a month, or $12,000, so profit is $20,000 and the midpoint value is $20,000 × 3.2 = $64,000. If a seller annualizes the two strong months, $6,000 × 12 = $72,000, subtracts the same costs and arrives at $60,000 profit, the value would read $192,000, three times higher. Use the full 12 months.
+
+## Product category and content quality
+
+Two factors decide how durable the income is, and neither shows up in a revenue figure.
+
+- **Product category.** Some products are bought once, and some are bought repeatedly. A site recommending a one-off purchase must keep finding new readers, while a site for something people re-buy can earn from the same audience again. Buyers also ask whether the category is exposed to one merchant, a price war or sharp swings in demand.
+- **Content quality.** Buyers look at whether pages are accurate, up to date and written from real use, whether the best-earning pages still match what people are searching for, and whether the site depends on a few articles. Old pages with dead links, expired offers or product names that no longer exist are a warning sign.
+
+## Revenue attribution checks buyers run
+
+Attribution means showing which pages and which programs produced the income. Expect a buyer to ask for:
+
+1. Payout reports from each network or merchant for the last 12 months.
+2. Bank deposits that match those reports, month by month.
+3. A table of income by program, so concentration is visible.
+4. Income by page, matched to the traffic each page receives.
+5. Evidence that no income comes from methods the programs forbid.
+
+If you can supply these in one tidy file, due diligence is quicker and the buyer has less reason to lower the offer. See [how to verify website revenue](/guides/how-to-verify-website-revenue/).
+
 ## Ways to improve an affiliate site's value
 
 Most of these take months, so start well before you list.
@@ -161,6 +188,10 @@ Twelve months is the normal minimum. Include statements from every network and p
 ### Does the tool guarantee a sale price?
 
 No. It gives a low, midpoint and high estimate from the figures you enter. The price a buyer accepts depends on the buyer, the deal terms and the market.
+
+### What is a cookie window, and why do buyers ask about it?
+
+It is the period during which a click on an affiliate link can still earn a commission. A shorter window credits fewer sales. Buyers ask because the merchant can change it, and the terms affect how much of the visitors' buying the site is paid for.
 
 ## Sources
 

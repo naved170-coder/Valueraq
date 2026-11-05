@@ -10,7 +10,7 @@ page_type: article
 answer: A website that earns from display ads is usually valued as a multiple of its annual profit, not its ad revenue. Buyers then adjust the multiple for traffic stability, RPM, the share of visits from one source and how many years of records you can show.
 keywords: adsense website valuation, how to value a website with ads, value of a website with display ads, website value estimate, how to value website
 published: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-05
 publish_at: 2026-10-26T01:00Z
 image: /static/img/articles/adsense-website-valuation.png
 image_alt: How to Value a Website That Earns from Display Ads (VALUERAQ guide)
@@ -119,6 +119,20 @@ The last row deserves a closer look. If RPM falls by 20% on the same 200,000 vis
 
 ![If RPM falls 20%: change from base case: Revenue 20%, Profit 31%](/static/img/articles/adsense-website-valuation-rpm-falls-20-percent.svg){: width="720" height="180" loading="lazy" }
 
+## Ad network risk, direct deals and the seasons
+
+Three things about ad income are easy to miss when the revenue line looks healthy.
+
+**Network risk.** Most small sites are paid by one ad network. If that account is suspended or its rules change, income can stop until a replacement is in place, and the replacement may pay less. Take the example site above ($38,400 of annual profit, about $114,000 at the adjusted midpoint). If a new network pays 30% less, revenue falls from $5,000 to $3,500 a month. Costs stay at $1,800, so profit falls to $1,700 a month, or $20,400 a year. At the same 2.96x multiple that is $20,400 × 2.96 = $60,384, about $60,000. Buyers price this risk in, so showing a clean account history and a second network that has been tested helps.
+
+**Direct deals and network ads.** Income from a network is paid by the platform and follows its rules. Income from a direct deal, such as a sponsor paying a set fee, rests on an agreement between the owner and one advertiser. Buyers ask for the contract, its length, whether it passes to a new owner and how much of the income depends on one sponsor. Direct income that is documented and renewed can be steadier than network income. Direct income with no written terms is worth less than it looks.
+
+**Seasonal ad rates.** Many ad sites earn more in some months than others, because advertisers spend differently through the year. Suppose a site earns $4,000 a month for nine months and $7,000 a month for three strong months. Its real year is 9 × $4,000 + 3 × $7,000 = $57,000. A seller who annualizes the strong months claims $7,000 × 12 = $84,000, which is 47% too high. This is why the 12-month average is the figure to use. The pattern is an illustration, so check the months in your own records.
+
+### A traffic and RPM sense-check
+
+Before accepting a revenue claim, divide it by the visits. A seller says the site earned $8,000 last month on 150,000 visits. RPM = $8,000 ÷ 150,000 × 1,000 = $53.33. If the earlier months were near $25, ask what changed: a new ad layout, a one-off deal, a change in the visitors' countries, or a month of unusually high rates. A jump you cannot explain is a reason to look at the raw reports.
+
 ## What makes an ad site worth more
 
 You cannot change the ad rates, but you can change the things around them. Over a year or two, these steps tend to help a sale:
@@ -166,6 +180,14 @@ Profit sets the price, and traffic is the evidence that profit will continue. A 
 ### Can I sell a site that has lost traffic?
 
 Yes, but expect a lower multiple. Show the cause, the steps you have taken and the recent trend. See [how to value a website with falling traffic](/guides/how-to-value-a-website-with-falling-traffic/).
+
+### How do seasons affect a site's value?
+
+Ad rates and traffic often move through the year. Value the site on the average of 12 full months, not on the strongest quarter, or the price will be too high and the buyer will notice.
+
+### Are direct ad deals worth more than network ads?
+
+Not automatically. A direct deal can be steadier if it is in writing, renewed and spread across several advertisers. If one sponsor pays most of the income or there is no contract, the buyer will treat it as risky.
 
 ## Sources
 
