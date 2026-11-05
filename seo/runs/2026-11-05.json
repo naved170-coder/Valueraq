@@ -1,0 +1,93 @@
+{
+ "summary": "Wrote 1 article (good profit margin for an online business) and 3 reference pages (GMV, bounce rate, subscription business model); nothing held, nothing needs the owner.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/guides/what-is-a-good-profit-margin-for-an-online-business/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/gross-margin/, /glossary/net-profit/, /guides/revenue-vs-profit-multiples/; this is the long cross-model guide on all four margins with a margin-to-value table)",
+   "images": "1 featured, 2 charts",
+   "serp": "used",
+   "keywords": [
+    "profit margin online business",
+    "net profit margin",
+    "gross margin"
+   ],
+   "note": "No industry averages used. Examples are invented and labelled; multiples are VALUERAQ's website default 2.5x to 4.0x and its SaaS gross margin adjustments from app/valuation.py. Cites BizBuySell add-backs and CFI multiples from sources.json. Releases 6:00 am Pakistan on 6 Nov."
+  },
+  {
+   "path": "/glossary/gross-merchandise-value/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.5,
+   "duplicate": "pass (closest: /glossary/marketplace/, /glossary/revenue-multiple/, /glossary/average-order-value/)",
+   "images": "1 featured",
+   "serp": "used",
+   "keywords": [
+    "gross merchandise value",
+    "gmv"
+   ],
+   "note": "Own arithmetic, invented marketplace example. Releases 12:00 am Pakistan on 6 Nov."
+  },
+  {
+   "path": "/glossary/bounce-rate/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.5,
+   "duplicate": "pass (closest: /glossary/traffic/, /glossary/conversion-rate/, /glossary/organic-traffic/)",
+   "images": "1 featured",
+   "serp": "used",
+   "keywords": [
+    "bounce rate",
+    "ga4 bounce rate"
+   ],
+   "note": "GA4 definition described in general terms without a link, because Google's help page is not in sources.json and could not be opened. No 'good' benchmark given. Releases 12:00 pm Pakistan on 6 Nov."
+  },
+  {
+   "path": "/glossary/subscription-business-model/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.5,
+   "duplicate": "pass (closest: /glossary/recurring-revenue/, /glossary/mrr/, /glossary/saas/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "subscription business model",
+    "subscription model"
+   ],
+   "note": "Quotes Stripe's MRR and churn definitions from sources.json. Releases 6:00 pm Pakistan on 6 Nov."
+  },
+  {
+   "path": "/guides/how-to-transfer-a-shopify-store/",
+   "action": "skipped",
+   "type": "Question answered",
+   "note": "Skipped for the second run (no verified Shopify source; overlaps /guides/how-to-sell-a-shopify-store/ and /guides/how-to-transfer-a-website-to-a-new-owner/). Moved to the end of the calendar."
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 123 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "seo-check: 0 problems",
+  "Internal links: 0 broken",
+  "External links: 0 opened (web access not used; sources from sources.json)"
+ ],
+ "notes": [
+  "Web research was not used; sources come from seo/sources.json. Rankings snapshot read from Render logs; none of today's topics matched its new searches.",
+  "The Shopify transfer question moved to the end of the calendar after two skips.",
+  "Subscription business model had no saved competitor research file; it will be improved later from its own file once collected."
+ ]
+}
