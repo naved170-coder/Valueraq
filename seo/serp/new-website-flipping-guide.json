@@ -1,0 +1,35 @@
+{
+ "page": "website-flipping-guide",
+ "query": "website flipping",
+ "results": [
+  "nichepursuits.com/flipping-websites",
+  "profiletree.com",
+  "yaro.blog how to buy a website and flip it",
+  "quicksprout.com",
+  "entrepreneur.com website flipping side hustle"
+ ],
+ "studied": [
+  {
+   "url": "nichepursuits.com/flipping-websites",
+   "words": 3000,
+   "has": [
+    "what it is",
+    "opportunity",
+    "business model",
+    "flipping examples with profit",
+    "where to buy",
+    "5-step growth plan",
+    "where to sell",
+    "risks"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add a worked flip with real arithmetic: buy price from profit x multiple, improvements, new profit, resale value, costs and time, net return",
+  "Add a risks table (traffic drop, program changes, overpaying, time) and how to check each",
+  "Add 'buy, build or flip' comparison and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
