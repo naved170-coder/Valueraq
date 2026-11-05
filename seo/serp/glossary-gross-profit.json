@@ -1,0 +1,20 @@
+{
+ "page": "glossary/gross-profit",
+ "query": "gross profit",
+ "results": [
+  "americanexpress.com",
+  "sage.com",
+  "digits.com",
+  "robinhood.com",
+  "superfastcpa.com"
+ ],
+ "studied": [],
+ "gaps": [
+  "Ranking pages are general glossary or finance definitions (one search checked, pages not opened). Our edge is the online-business angle: gross profit vs net profit vs SDE on a small online business P&L, worked example",
+  "Keep the first sentence a plain definition with the formula (if any), then a worked example using small online-business numbers",
+  "Add 2-3 FAQs that the ranking pages skip, and link to the related VALUERAQ tool or guide"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

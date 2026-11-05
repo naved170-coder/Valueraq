@@ -1,0 +1,20 @@
+{
+ "page": "glossary/saas",
+ "query": "what is saas",
+ "results": [
+  "g2.com",
+  "ibm.com",
+  "sap.com",
+  "makeuseof.com",
+  "merriam-webster"
+ ],
+ "studied": [],
+ "gaps": [
+  "Ranking pages are general glossary or finance definitions (one search checked, pages not opened). Our edge is the online-business angle: results explain SaaS as software; add SaaS as a business you can buy/sell and how it is valued (ARR multiple, churn)",
+  "Keep the first sentence a plain definition with the formula (if any), then a worked example using small online-business numbers",
+  "Add 2-3 FAQs that the ranking pages skip, and link to the related VALUERAQ tool or guide"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

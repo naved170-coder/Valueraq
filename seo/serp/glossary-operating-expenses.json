@@ -1,0 +1,20 @@
+{
+ "page": "glossary/operating-expenses",
+ "query": "operating expenses",
+ "results": [
+  "chargebee.com",
+  "ramp.com",
+  "corporatefinanceinstitute.com",
+  "squareup.com",
+  "upwork.com"
+ ],
+ "studied": [],
+ "gaps": [
+  "Ranking pages are general glossary or finance definitions (one search checked, pages not opened). Our edge is the online-business angle: typical operating expenses of a website/SaaS (hosting, tools, writers, ads) and which become add-backs",
+  "Keep the first sentence a plain definition with the formula (if any), then a worked example using small online-business numbers",
+  "Add 2-3 FAQs that the ranking pages skip, and link to the related VALUERAQ tool or guide"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
