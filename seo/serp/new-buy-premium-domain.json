@@ -1,0 +1,30 @@
+{
+ "page": "buy-premium-domain",
+ "query": "buy premium domain",
+ "results": [
+  "domains.registry.godaddy buying a premium domain",
+  "atlantic.net top domain marketplaces",
+  "nicenic.com",
+  "godaddy.com should i buy a premium domain",
+  "dn.org how to buy a premium domain mega guide"
+ ],
+ "studied": [
+  {
+   "url": "domains.registry.godaddy buying-a-premium-domain",
+   "words": 500,
+   "has": [
+    "short overview"
+   ],
+   "figures": "does not cover registry premium vs aftermarket, renewal pricing or escrow"
+  }
+ ],
+ "gaps": [
+  "Explain the two kinds of 'premium': registry premium (higher renewal fee every year) vs aftermarket (one-off price, normal renewals) in a table",
+  "Escrow and safe transfer steps; how to check history (Wayback, trademark search)",
+  "How to judge a fair price (link domain appraisal guide)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

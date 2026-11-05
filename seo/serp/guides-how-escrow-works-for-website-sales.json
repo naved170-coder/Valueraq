@@ -1,0 +1,33 @@
+{
+ "page": "guides/how-escrow-works-for-website-sales",
+ "query": "escrow for website sale",
+ "results": [
+  "escrow.com website escrow",
+  "escrow.com domain name with content",
+  "snagged.com escrow for domain sales",
+  "investors.club what is escrow",
+  "netcetera.uk"
+ ],
+ "studied": [
+  {
+   "url": "escrow.com learn-more how-escrow-works website-escrow",
+   "words": 600,
+   "has": [
+    "steps: agree terms, buyer deposits, seller transfers, buyer approves, release",
+    "third-party trust account",
+    "disputes",
+    "FAQ incl. fake escrow sites"
+   ],
+   "figures": "fees via calculator only"
+  }
+ ],
+ "gaps": [
+  "Add a step timeline table with who does what and typical durations as patterns",
+  "Add 'fake escrow site' warning and how to verify a real escrow company",
+  "Inspection period checklist (what the buyer checks before approving)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

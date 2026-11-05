@@ -1,0 +1,31 @@
+{
+ "page": "guides/domain-appraisal-explained",
+ "query": "domain appraisal",
+ "results": [
+  "blog.sav.com how to appraise domain names",
+  "godaddy.com domain value appraisal (tool)",
+  "bluehost.com domain valuation guide",
+  "instantdomainsearch.com free domain appraisal",
+  "review42.com"
+ ],
+ "studied": [
+  {
+   "url": "blog.sav.com/how-to-appraise-domain-names",
+   "words": 300,
+   "has": [
+    "factors: extension, length, spelling, keywords, traffic",
+    "automated tools",
+    "record sale example"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add factor scoring table (extension, length, brandability, keyword demand, type-in traffic, trademark risk)",
+  "Explain why automated appraisals disagree and how to use comparable sales",
+  "End-user vs investor price difference with an illustrative example",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,30 @@
+{
+ "page": "how-to-determine-enterprise-value",
+ "query": "how to determine enterprise value",
+ "results": [
+  "mostly spam copies; bdc.ca glossary enterprise value; superfastcpa.com; stockanalysis.com"
+ ],
+ "studied": [
+  {
+   "url": "bdc.ca glossary enterprise value",
+   "words": 1200,
+   "has": [
+    "what it is",
+    "how to calculate",
+    "negative EV",
+    "importance",
+    "how to improve"
+   ],
+   "figures": "formula only; no numerical example"
+  }
+ ],
+ "gaps": [
+  "Worked numerical example for a small private online business (equity price + debt - cash = EV) - nobody gives one",
+  "EV vs equity value vs asking price table; why buyers quote EV/EBITDA",
+  "How cash and debt are handled in a small website sale (usually cash-free, debt-free asset sales)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

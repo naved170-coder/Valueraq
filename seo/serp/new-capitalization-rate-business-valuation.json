@@ -1,0 +1,34 @@
+{
+ "page": "capitalization-rate-business-valuation",
+ "query": "capitalization rate business valuation",
+ "results": [
+  "divestopedia.com cap rate",
+  "valuadder.com glossary",
+  "etonvs.com capitalization rates in business valuation",
+  "iconic.co capitalized earnings method",
+  "strategiccfo.com"
+ ],
+ "studied": [
+  {
+   "url": "etonvs.com/valuation/capitalization-rates-in-business-valuation",
+   "words": 1500,
+   "has": [
+    "definition",
+    "discount rate",
+    "cap vs discount rate",
+    "best practices",
+    "common errors"
+   ],
+   "figures": "none; no worked example"
+  }
+ ],
+ "gaps": [
+  "No competitor shows a worked example: add earnings / cap rate = value with numbers",
+  "Show cap rate as the inverse of a multiple (20% cap rate = 5x) in a small table",
+  "Explain cap rate = discount rate minus long-term growth",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

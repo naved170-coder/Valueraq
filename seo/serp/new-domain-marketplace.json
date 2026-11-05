@@ -1,0 +1,33 @@
+{
+ "page": "domain-marketplace",
+ "query": "domain marketplace",
+ "results": [
+  "dynadot.com market",
+  "afternic.com",
+  "namesilo.com what is a domain marketplace",
+  "namegulf.com guide",
+  "mediaoptions.com what is a domain marketplace"
+ ],
+ "studied": [
+  {
+   "url": "namesilo.com what-is-a-domain-marketplace",
+   "words": 950,
+   "has": [
+    "marketplaces 101",
+    "features",
+    "benefits",
+    "risks"
+   ],
+   "figures": "no fees, types or escrow"
+  }
+ ],
+ "gaps": [
+  "Explain the types (registrar marketplaces, aftermarket networks, auctions, broker-led) in a table",
+  "Escrow, transfer locks (e.g. 60-day lock after registrar transfer, cite ICANN if added to sources), fees as typical patterns",
+  "Buyer and seller checklists; FAQ",
+  "Glossary-length if a reference page"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

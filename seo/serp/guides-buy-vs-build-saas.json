@@ -1,0 +1,21 @@
+{
+ "page": "guides/buy-vs-build-saas",
+ "query": "buy vs build saas",
+ "results": [
+  "zylo.com build vs buy (software procurement)",
+  "staxbill.com",
+  "useparagon.com",
+  "dev.co custom software vs saas",
+  "luzmo.com"
+ ],
+ "studied": [],
+ "gaps": [
+  "Results are about buying SaaS TOOLS vs building software in-house, not about acquiring a SaaS business: say clearly what our page covers in the first line",
+  "Add a decision table: buy an existing SaaS business vs build one (cost, time to revenue, risk, skills)",
+  "Worked example: price of a $5k MRR SaaS from our method vs months and cost to build to $5k MRR",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

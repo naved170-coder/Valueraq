@@ -1,0 +1,31 @@
+{
+ "page": "guides/data-room-checklist",
+ "query": "data room checklist selling a business",
+ "results": [
+  "sprintlaw.com.au data room checklist",
+  "vikingmergers.com",
+  "smallbiztrends.com selling a business checklist",
+  "orrick.com UK tech exit series preparing a data room",
+  "lexisnexis.co.uk virtual data room checklist"
+ ],
+ "studied": [
+  {
+   "url": "orrick.com Tech-Exit-Series-Preparing-a-Data-Room",
+   "words": 1500,
+   "has": [
+    "7 steps: setup, structure, data protection, accuracy, clean rooms, security, follow-ups",
+    "7 document categories",
+    "folder naming and numbering",
+    "tips (flatten signed PDFs)"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add a ready folder structure for a small online business (01 Financials, 02 Traffic, 03 Accounts and access, 04 Contracts, 05 Operations/SOPs, 06 Legal/IP) as a table",
+  "Add 'share read-only, redact personal data' privacy points",
+  "Add downloadable/printable checklist and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

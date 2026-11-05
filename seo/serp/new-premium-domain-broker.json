@@ -1,0 +1,33 @@
+{
+ "page": "premium-domain-broker",
+ "query": "premium domain broker",
+ "results": [
+  "nameexperts.com/blog/premium-domain-brokers",
+  "domainmarket.com faqs",
+  "bluehost.com domain brokers",
+  "vpn.com domain broker",
+  "mediaoptions.com how to choose a domain broker"
+ ],
+ "studied": [
+  {
+   "url": "nameexperts.com/blog/premium-domain-brokers",
+   "words": 1000,
+   "has": [
+    "key insights",
+    "reactive vs proactive brokerage",
+    "buy-side vs sell-side",
+    "5 FAQs"
+   ],
+   "figures": "10-20% commission (their claim)"
+  }
+ ],
+ "gaps": [
+  "Neutral guide (no broker names unless held): when a broker is worth it vs buying directly, buy-side anonymity, how commission is charged, escrow",
+  "Questions to ask a broker checklist",
+  "Worked cost example (illustrative commission range labelled as typical, not sourced numbers unless in sources.json)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

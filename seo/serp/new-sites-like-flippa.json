@@ -1,0 +1,31 @@
+{
+ "page": "sites-like-flippa",
+ "query": "sites like flippa",
+ "results": [
+  "sitemile.com 5 sites like flippa",
+  "ahrefs/semrush competitor lists",
+  "alternativeto.net",
+  "bloggingwizard.com how to buy and sell websites",
+  "thedigitalmerchant.com flippa alternatives"
+ ],
+ "studied": [
+  {
+   "url": "bloggingwizard.com/how-to-buy-and-sell-websites",
+   "words": 2000,
+   "has": [
+    "10 marketplaces with fees and scope",
+    "tips for buyers and sellers"
+   ],
+   "figures": "no comparison table"
+  }
+ ],
+ "gaps": [
+  "Names competitors and fees: HOLD for owner approval",
+  "Add a comparison table (size of business, who it suits, fee model, escrow, vetting) with each fee checked on the platform's own pricing page and dated",
+  "Explain how to choose by deal size",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

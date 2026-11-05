@@ -1,0 +1,32 @@
+{
+ "page": "customer-retention-cost",
+ "query": "customer retention cost",
+ "results": [
+  "paylode.com",
+  "leat.com",
+  "kustomer.com glossary",
+  "cloudzero.com/blog/customer-retention-cost",
+  "mosaic.tech"
+ ],
+ "studied": [
+  {
+   "url": "cloudzero.com/blog/customer-retention-cost",
+   "words": 2000,
+   "has": [
+    "what CRC includes (support, success, account management, loyalty)",
+    "why measure",
+    "CRC vs CAC",
+    "formulas: average CRC per customer and lifetime CRC",
+    "8 FAQs"
+   ]
+  }
+ ],
+ "gaps": [
+  "Short glossary: formula + worked example + CRC vs CAC mini-table",
+  "Angle competitors miss: how retention cost and churn affect a buyer's valuation of a subscription business",
+  "2-3 FAQs"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,34 @@
+{
+ "page": "guides/adsense-website-valuation",
+ "query": "adsense website valuation",
+ "results": [
+  "feinternational.com how much is my display advertising business worth",
+  "webmasterworld.com forums",
+  "ezoic.com",
+  "thewebsiteflip.com"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com how-much-is-my-display-advertising-business-worth",
+   "words": 3000,
+   "has": [
+    "valuation matrix",
+    "CPMs",
+    "organic search reliance",
+    "ad networks",
+    "content quality",
+    "due diligence"
+   ],
+   "figures": "3.0x-5.0x SDE (their claim); $50 vs $5 CPM example"
+  }
+ ],
+ "gaps": [
+  "Add RPM explanation and a traffic x RPM sense-check worked example",
+  "Ad network risk (account bans, network switch effects) and seasonality of ad rates (Q4 high, Q1 low) as patterns",
+  "Direct vs programmatic ad revenue and how buyers treat each",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,34 @@
+{
+ "page": "cost-to-sell-an-online-business",
+ "query": "cost to sell online business",
+ "results": [
+  "helloexit.com",
+  "flippa.com how much do brokers typically charge",
+  "exitbid.io broker fees compared",
+  "batonmarket.com",
+  "investors.club sell your website"
+ ],
+ "studied": [
+  {
+   "url": "flippa.com how-much-do-brokers-typically-charge-to-sell-a-business",
+   "words": 1750,
+   "has": [
+    "broker fee types",
+    "commission structures",
+    "tiered example",
+    "alternatives",
+    "FAQ"
+   ],
+   "figures": "no fee table; ignores escrow and tax"
+  }
+ ],
+ "gaps": [
+  "Full cost picture competitors skip: broker/marketplace commission, listing fees, escrow fee, legal, accountant, tax, migration/handover time, earn-out risk, in one table with ranges (only sourced figures; otherwise describe)",
+  "Worked example of net proceeds from a sale price",
+  "Hold rule: if naming platforms or their fees, page needs owner approval",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

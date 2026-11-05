@@ -1,0 +1,37 @@
+{
+ "page": "tax-on-selling-a-website",
+ "query": "tax on selling a website",
+ "results": [
+  "taxtim.com (South Africa)",
+  "taxationweb.co.uk forum",
+  "ttlc.intuit.com forum",
+  "helloexit.com how are web businesses taxed when sold",
+  "fraimcpa.com selling an online business CPA guide"
+ ],
+ "studied": [
+  {
+   "url": "helloexit.com how-are-web-businesses-taxed-when-sold",
+   "words": 1300,
+   "has": [
+    "deal structure",
+    "asset mix",
+    "capital gains vs ordinary income",
+    "goodwill",
+    "IRS Form 8594",
+    "seller financing",
+    "earnouts",
+    "SaaS"
+   ],
+   "figures": "US-only; no worked numbers"
+  }
+ ],
+ "gaps": [
+  "States tax rules: HOLD for owner approval and cite official sources only (IRS for US, gov.uk for UK)",
+  "Country-by-country orientation table (US, UK, others: what to ask your accountant) without rates unless sourced",
+  "Explain asset allocation and why it changes tax, with an illustrative split (no rates)",
+  "Strong 'speak to a tax adviser' framing and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

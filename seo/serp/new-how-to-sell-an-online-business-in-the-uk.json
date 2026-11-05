@@ -1,0 +1,35 @@
+{
+ "page": "how-to-sell-an-online-business-in-the-uk",
+ "query": "sell online business uk",
+ "results": [
+  "legalvision.co.uk selling business online uk",
+  "sprintlaw.co.uk online business sales UK seller guide",
+  "prowess.org.uk how to sell your website business",
+  "vocal.media"
+ ],
+ "studied": [
+  {
+   "url": "sprintlaw.co.uk online-business-sales-a-stepbystep-uk-seller-guide",
+   "words": 2000,
+   "has": [
+    "why sell online",
+    "prep checklist",
+    "where to list",
+    "7-step process",
+    "documents",
+    "legal and tax: share vs asset sale, TUPE, UK GDPR, VAT, Capital Gains Tax",
+    "5 FAQs",
+    "key takeaways"
+   ]
+  }
+ ],
+ "gaps": [
+  "Page states UK tax/legal rules: must be held for owner approval (RUNBOOK hold rule) and cite gov.uk sources only",
+  "Add UK-specific checklist (Companies House, VAT registration transfer, data protection, TUPE if staff)",
+  "Add worked net-proceeds example without stating tax rates unless sourced from gov.uk",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

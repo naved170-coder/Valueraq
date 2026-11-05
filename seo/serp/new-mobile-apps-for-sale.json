@@ -1,0 +1,35 @@
+{
+ "page": "mobile-apps-for-sale",
+ "query": "mobile apps for sale",
+ "results": [
+  "microns.io/categories/mobile-app (listings)",
+  "adapty.io how to sell a mobile app",
+  "smergers.com mobile apps for sale",
+  "revenuecat.com how to sell an app",
+  "singular.net sell your app"
+ ],
+ "studied": [
+  {
+   "url": "revenuecat.com/blog/growth/how-to-sell-an-app",
+   "words": 1300,
+   "has": [
+    "can I sell my app",
+    "how much is it worth",
+    "why sell",
+    "finding a buyer",
+    "negotiating",
+    "Apple transfer exceptions"
+   ],
+   "figures": "12x-36x monthly profit (their claim)"
+  }
+ ],
+ "gaps": [
+  "Mixed intent (listings + guide): link our apps category and add a buyer's guide",
+  "App-store transfer checks (Apple app transfer criteria from sources.json, Google Play transfer)",
+  "What to check before buying an app table (revenue source, store rating, subscription churn, platform split)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

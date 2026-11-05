@@ -1,0 +1,31 @@
+{
+ "page": "guides/how-to-buy-a-saas-business",
+ "query": "how to buy a saas business",
+ "results": [
+  "helloexit.com buy saas business",
+  "quietlight.com how to buy a saas business",
+  "feinternational.com process of buying a saas business",
+  "medium.com digital investor",
+  "dev.to guides"
+ ],
+ "studied": [
+  {
+   "url": "quietlight.com how-to-buy-a-saas-business-practical-guide",
+   "words": 1500,
+   "has": [
+    "metrics (churn, CAC, MRR, ARPU, LTV; LTV >= 3x CAC)",
+    "codebase health, support, technical dependence",
+    "transition 30-90 days, consulting, holdbacks",
+    "FAQ"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add technical due diligence checklist (code ownership, hosting, third-party APIs, security, documentation) for non-technical buyers",
+  "Add metrics table with what to ask for and where it comes from (Stripe, billing exports)",
+  "Add transition plan (30/60/90 days) and FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

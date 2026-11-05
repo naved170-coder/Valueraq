@@ -1,0 +1,40 @@
+{
+ "page": "guides/how-to-buy-an-ecommerce-business",
+ "query": "buy ecommerce business",
+ "results": [
+  "feinternational.com how to buy ecommerce business",
+  "bigcommerce.com",
+  "empireflippers.com buying an ecommerce business",
+  "crazyegg.com",
+  "abetterlemonadestand.com"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/how-to-buy-ecommerce-business",
+   "words": 4500,
+   "has": [
+    "why buy",
+    "market",
+    "business types",
+    "sourcing",
+    "evaluation",
+    "valuation",
+    "6-workstream diligence checklist",
+    "inventory pricing",
+    "supplier verification",
+    "earnouts",
+    "first 100 days",
+    "FAQ"
+   ]
+  }
+ ],
+ "gaps": [
+  "Add inventory section (count, valuation at cost, ageing) with example",
+  "Supplier and fulfilment checks table",
+  "First 100 days plan",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

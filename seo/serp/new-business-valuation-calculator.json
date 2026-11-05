@@ -1,0 +1,31 @@
+{
+ "page": "business-valuation-calculator",
+ "query": "business valuation calculator",
+ "results": [
+  "housecallpro.com business valuation calculator",
+  "elementor.com tools",
+  "omnicalculator.com/finance/business-valuation",
+  "axial.net",
+  "bizquest.com valuation calculator"
+ ],
+ "studied": [
+  {
+   "url": "omnicalculator.com/finance/business-valuation",
+   "words": 1200,
+   "has": [
+    "4 methods: DCF, asset-based, market cap, market multiple",
+    "inputs per method",
+    "worked examples",
+    "FAQs"
+   ]
+  }
+ ],
+ "gaps": [
+  "Duplicate check first: our /calculators/ and /tools/ pages may already cover this search; prefer improving them over a new page",
+  "If written: explain which calculator suits which business (online vs offline), what each input means, and why results differ between calculators",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

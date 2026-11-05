@@ -1,0 +1,27 @@
+{
+ "page": "owner-operator-business",
+ "query": "owner-operator business",
+ "results": [
+  "mostly trucking pages: matrackinc.com, qualitycarriers.com, wikipedia owner-operator, logrock.com"
+ ],
+ "studied": [
+  {
+   "url": "logrock.com owner-operator meaning",
+   "words": 2700,
+   "has": [
+    "trucking focus",
+    "business-not-job framing"
+   ],
+   "figures": "none on valuation"
+  }
+ ],
+ "gaps": [
+  "Search is dominated by trucking: make the page clearly about owner-run online businesses and say so in the first line",
+  "Explain why buyers discount owner-dependent businesses (key person risk) and how to reduce it (SOPs, staff, systems)",
+  "Worked example: owner hours and multiple adjustment from our method",
+  "Use a title that separates it from trucking"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

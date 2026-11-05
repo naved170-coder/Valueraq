@@ -1,0 +1,33 @@
+{
+ "page": "how-to-find-the-book-value-of-a-company",
+ "query": "how to find the book value of a company",
+ "results": [
+  "accountingtools.com how to find the book value of a company",
+  "encyclopedia.com",
+  "fidelity.co.uk book value",
+  "iris.co.uk glossary",
+  "wallstreetmojo.com"
+ ],
+ "studied": [
+  {
+   "url": "accountingtools.com how-to-find-the-book-value-of-a-company",
+   "words": 400,
+   "has": [
+    "definition",
+    "formula assets - liabilities",
+    "why book and market value differ",
+    "1 FAQ"
+   ],
+   "figures": "no example"
+  }
+ ],
+ "gaps": [
+  "Worked example from a small balance sheet",
+  "Explain why book value is usually far below sale value for online businesses (goodwill, intangibles not on the balance sheet)",
+  "Book vs market vs fair market value table",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

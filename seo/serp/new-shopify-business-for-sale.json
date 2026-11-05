@@ -1,0 +1,34 @@
+{
+ "page": "shopify-business-for-sale",
+ "query": "shopify business for sale",
+ "results": [
+  "acquire.com shopify stores for sale (listings)",
+  "tevello.com guides",
+  "empireflippers.com/buy-a-shopify-store",
+  "gempages.net"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/buy-a-shopify-store",
+   "words": 2000,
+   "has": [
+    "what is Shopify",
+    "benefits",
+    "downsides",
+    "who should buy",
+    "how to buy",
+    "things to consider"
+   ],
+   "figures": "no price ranges or tables"
+  }
+ ],
+ "gaps": [
+  "Intent is part listings, part guide: link our ecommerce category and add buyer guide",
+  "Add price-range examples using our default multiple (profit x 2.0-3.5) and stock on top",
+  "Shopify-specific checks table (apps cost, theme, payment processor history, returning customers, ad dependence, supplier contracts)",
+  "FAQ"
+ ],
+ "collected": "2026-11-04",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
