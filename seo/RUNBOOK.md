@@ -81,7 +81,10 @@ the strongest competing pages, what they cover (`studied`) and our gaps (`gaps`)
 3. Figures: use only figures from `app/valuation.py`, the methodology page, the page itself, or a source in
    `seo/sources.json` (quote it as written there and add it to the page's Sources). A figure that appears only in a
    `studied` entry is a competitor's claim: do not use it. Never name the studied sites or copy their wording.
-4. Do not change the address, `publish_at` or the main keyword. Set `updated` to today. Run the editorial review
+4. Rewrite `meta_title` and `meta_description` to win the click (the goal is a higher click rate): advertise what the
+   page now has that the competing pages lack (for example "Value Table", "Worked Example", "Free Checklist",
+   "No Sign-Up"), follow the title rules in section 6, and make them clearly different from the competitor titles in
+   the file (`titles`, when present). Do not change the address, `publish_at` or the main keyword. Set `updated` to today. Run the editorial review
    (section 6) on the changed page; it must still score 8.5 or more, or undo the change.
 5. In the file set `"applied": "<today>"` and `"applied_note": "<one line: what was added>"`. Record each page in the
    report with `"action": "improve"` and add `improve` to `tasks`. If no unapplied files are left, say so in `notes`
@@ -105,7 +108,7 @@ write the page. Record it in the report as `"action": "skipped"` with the overla
 Every new page must be more useful than the pages already ranking for its main keyword.
 
 1. Run `ls seo/serp/ | grep '^new-'` and look for `new-<slug>.json` with the page's exact slug from the calendar (also check `seo/serp/queue-new.json`, where `collected` marks topics that have a file) (competitor research saved in a session with the owner for upcoming
-   calendar topics). If it is there, read `studied` and `gaps` and plan the page to cover everything the top pages
+   calendar topics). If it is there, read `studied`, `gaps` and `titles` (competitor titles, when present) and plan the page, including a `meta_title` and `meta_description` that promise what the competitors' titles don't, to cover everything the top pages
    cover, plus at least two things they lack (a worked example with real arithmetic, a comparison table, a checklist,
    a clearer direct answer, FAQs they skip).
 2. If there is no file (topics marked `collected` in `seo/serp/queue-new.json` have one) and WebSearch works in this run, search the main keyword, open the strongest 3 to 5 relevant

@@ -1,7 +1,7 @@
 ---
 title: How Much Is My Website Worth? Seven Worked Examples
-meta_title: How Much Is My Website Worth? 7 Real-World Examples
-meta_description: Seven worked examples show how profit, age and traffic set a website's value, from a small blog to an established site. Check yours free in a minute.
+meta_title: How Much Is My Website Worth? Value Table + 7 Examples
+meta_description: See what a website is worth at $500 to $10,000 monthly profit, why online rules of thumb disagree, and seven worked examples. Check yours free in a minute.
 h1: How Much Is My Website Worth? Seven Worked Examples
 section: Valuation
 cluster: website

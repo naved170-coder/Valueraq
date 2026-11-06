@@ -2,8 +2,8 @@
 title: What Is Affiliate Marketing?
 term: Affiliate Marketing
 aliases: affiliate marketing, affiliate program, affiliate commission, affiliate income, affiliate links
-meta_title: What Is Affiliate Marketing? Definition, Example & Valuation
-meta_description: Affiliate marketing pays a website a commission when visitors buy through its links. See how it works, a worked example and how buyers judge the income.
+meta_title: What Is Affiliate Marketing? How Buyers Value the Income
+meta_description: Affiliate marketing pays a site a commission when visitors buy through its links. See how it works and how buyers value it when one program cuts its rate.
 h1: Affiliate Marketing
 definition: Affiliate marketing is an arrangement in which a business pays a website owner a commission when a visitor follows the owner's tracked link and completes a purchase or other agreed action.
 cluster: website

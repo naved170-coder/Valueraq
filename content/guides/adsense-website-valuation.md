@@ -1,7 +1,7 @@
 ---
 title: How to Value a Website That Earns from Display Ads
-meta_title: How to Value an Ad-Supported Website (Display Ads)
-meta_description: How websites earning from display ads are valued: profit, RPM, traffic stability and a fair multiple, with a worked example and a free tool.
+meta_title: Ad Website Valuation: RPM, Multiple + $5k/Month Example
+meta_description: How buyers value a website earning from display ads: profit, RPM and traffic checks, network risk and seasons, with a $5,000-a-month worked example. Free tool.
 h1: How to Value a Website That Earns from Display Ads
 section: Valuation
 cluster: website
