@@ -2,15 +2,15 @@
 title: What Is a Subscription Business Model?
 term: Subscription Business Model
 aliases: subscription business model, subscription model, subscription business, subscription revenue model
-meta_title: Subscription Business Model: Definition & Example
-meta_description: A subscription business model charges customers repeatedly for ongoing access. See how it works, an MRR example and why buyers pay attention to churn.
+meta_title: Subscription Business Model: Types, Example & Value
+meta_description: Subscription business model explained: main types in one table, a worked MRR and churn example, and the metrics buyers check before they pay for it.
 h1: Subscription Business Model
 definition: A subscription business model charges customers a repeating fee, such as monthly or yearly, for continued access to a product or service instead of a single payment for each purchase.
 cluster: analysis
 page_type: reference
 keywords: subscription business model, subscription model, subscription revenue, recurring revenue business
 related: /glossary/recurring-revenue/, /glossary/mrr/, /glossary/churn/, /glossary/saas/, /glossary/arr/, /guides/saas-metrics-buyers-check/
-updated: 2026-11-05
+updated: 2026-11-06
 publish_at: 2026-11-06T13:00Z
 image: /static/img/articles/subscription-business-model.png
 image_alt: What Is a Subscription Business Model? (VALUERAQ glossary)
@@ -24,6 +24,18 @@ Customers pay on a schedule, usually every month or every year, and keep access 
 The model changes what a business needs to watch. A one-off seller must find a new buyer for each sale. A subscription business earns from the same customer again and again, so it watches two things above all: how many new subscribers join, and how many leave.
 
 Stripe's guide to SaaS metrics defines two of these. Monthly recurring revenue (MRR) is "the total amount of money a company can expect to receive from its existing customers each month", and churn is "the percentage of total customers who discontinue using a product or service during a given period".
+
+## Common types
+
+| Type | What the customer pays for | Typical examples |
+| --- | --- | --- |
+| Software access | Use of an app or tool | SaaS tools, AI tools |
+| Membership | Access to a community or perks | Paid communities, clubs |
+| Content | Ongoing articles, video or courses | Paid newsletters, learning libraries |
+| Replenishment | Regular delivery of items | Subscription boxes, refills |
+| Usage tiers | A plan sized by usage or seats | Plans priced per user or per volume |
+
+The types differ in cost to serve. Software and content cost little to deliver once built, while physical boxes carry stock and shipping costs that cut into profit.
 
 ## Example
 
@@ -47,6 +59,7 @@ When checking a subscription business, buyers look at:
 
 - **Churn and retention:** how many customers stay, month by month. See [churn](/glossary/churn/).
 - **MRR trend:** whether recurring revenue is growing, flat or shrinking. See [MRR](/glossary/mrr/).
+- **Net revenue retention:** whether existing customers pay more or less over time, including upgrades and cancellations. See [net revenue retention](/glossary/net-revenue-retention/).
 - **Plan mix:** whether revenue is monthly (easier to cancel) or annual.
 - **Customer concentration:** whether a few customers pay most of the revenue.
 
@@ -61,6 +74,10 @@ Close, but not identical. Subscription revenue is a common source of recurring r
 ### Why do buyers prefer subscription businesses?
 
 Repeating payments make future income easier to predict. The advantage holds only while customers keep paying, so buyers look at churn closely.
+
+### What is a good churn rate for a subscription business?
+
+There is no single answer, because it depends on price, customer size and plan length. Lower is better, and what matters to a buyer is whether churn is stable or rising. See [retention rate](/glossary/retention-rate/) for how to measure it.
 
 ## Related terms
 

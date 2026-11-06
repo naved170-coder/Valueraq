@@ -52,7 +52,7 @@
    "score": 8.5,
    "duplicate": "pass (closest: /glossary/recurring-revenue/, /glossary/mrr/, /glossary/saas/)",
    "images": "1 featured",
-   "serp": "missing",
+   "serp": "used",
    "keywords": [
     "subscription business model",
     "subscription model"
@@ -105,7 +105,8 @@
   "scheduled",
   "link_check",
   "report",
-  "improve"
+  "improve",
+  "serp_compare"
  ],
  "checks": [
   "Tests: 123 passed",
