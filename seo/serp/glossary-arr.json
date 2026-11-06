@@ -15,6 +15,7 @@
   "Add 2-3 FAQs that the ranking pages skip, and link to the related VALUERAQ tool or guide"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-06",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added what-counts table, discount and setup-fee example, ARR vs run rate (CFI quote) and ARR multiple link, 4 FAQs and Sources; new title and description."
 }

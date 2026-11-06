@@ -1,14 +1,14 @@
 ---
 title: AI Business Valuation Methods
-meta_title: AI Business Valuation: 5 Methods Compared
-meta_description: Five ways to value an AI business, from risk-adjusted ARR to cost to rebuild, with when each fits and a worked example. Try the free AI valuation tool.
+meta_title: AI Business Valuation: 5 Methods + Worked Example
+meta_description: Compare five ways to value an AI business, see one example valued three ways, and learn why big-company AI multiples do not fit small tools. Free tool, no sign-up.
 h1: AI Business Valuation Methods
 section: Valuation
 cluster: ai
 order: 10
 answer: AI businesses are valued in five main ways: an ARR multiple discounted for gross margin and model-provider dependence, a profit multiple, the cost to rebuild the product, strategic or acquihire value to a specific buyer, and discounted cash flow. Small AI businesses with subscription revenue are usually priced on a discounted ARR multiple and checked against profit and rebuild cost.
 published: 2026-10-04
-updated: 2026-10-04
+updated: 2026-11-06
 methodology_version: 1.0
 related: /tools/ai-business-valuation/, /guides/ai-business-valuation/, /guides/saas-valuation-methods/, /guides/saas-valuation/, /guides/revenue-vs-profit-multiples/, /businesses-for-sale/ai-businesses/, /glossary/gross-margin/, /glossary/arr/
 cta: /tools/ai-business-valuation/
@@ -116,6 +116,31 @@ A hypothetical AI document-summary tool, two years old, with $8,000 MRR and $2,0
 
 Three methods give roughly $45,000, $72,000 to $120,000, and $121,000 to $362,000. The gap between rebuild cost and the other two is the value of customers who already pay. The gap between the profit and ARR figures is the value of growth that, at 5% a year, hasn't shown up yet. A careful buyer would expect to pay near the bottom of the ARR range, where it meets the top of the profit range.
 
+## Why big-company AI multiples do not apply to a small AI tool
+
+Headlines about AI company valuations usually describe venture-funded companies with very large revenue, large teams and investors pricing in years of expected growth. A small AI tool with a few thousand dollars of monthly revenue, one owner and one model provider is a different kind of asset. It is usually bought by an individual or a small company for the income it produces, so the price follows earnings and risk, not a funding-round narrative.
+
+That is why {{BRAND}}'s default range for AI businesses is 1.5x to 4.5x ARR, not a venture-scale figure. Treat any multiple quoted for a large AI company as a statement about that company. It is not a ceiling or a target for yours.
+
+## Which method to start with
+
+| Your situation | Start with | Then check with |
+|---|---|---|
+| Subscription revenue, at least a year of history | Risk-adjusted ARR multiple | Profit multiple and rebuild cost |
+| Profitable, steady costs, little growth | Profit multiple | ARR multiple |
+| Little or no revenue, mostly an interface on a model | Cost to rebuild | Ask what customers would pay for |
+| Unique data, team or users, and a likely corporate buyer | Strategic value (get expert advice) | Rebuild cost as a floor |
+| Larger business with several years of data | Discounted cash flow | ARR multiple |
+
+## Common mistakes
+
+1. **Using one method only.** Run at least two and explain the gap.
+2. **Ignoring model costs.** Revenue that looks healthy can leave little after inference and hosting.
+3. **Counting one-off revenue as recurring.** Setup fees and credit top-ups are not ARR.
+4. **Copying a headline multiple.** See the section above.
+5. **Hiding provider dependence.** Buyers find it in the first hour of review. Say it first and show the fallback.
+6. **Treating a range as a price.** A range starts a conversation; the buyer's checks finish it.
+
 ## Frequently asked questions
 
 ### Which method is best for a small AI business?
@@ -129,3 +154,15 @@ In {{BRAND}}'s tool the default range starts lower, as an editorial assumption, 
 ### Can an AI business with no revenue be valued?
 
 Not with an earnings-based method. It would be priced on rebuild cost or on strategic value to a particular buyer, and {{BRAND}}'s tool doesn't estimate either.
+
+### How do I check whether my AI business is priced fairly?
+
+Run the ARR method and the profit method, work out the rebuild cost, and compare. If the asking price sits well above all three, be ready to explain what a buyer gets that the numbers do not show, such as proprietary data or contracts. Then enter your figures in the [AI Business Valuation Tool](/tools/ai-business-valuation/).
+
+### Should I value the AI business on revenue or profit?
+
+Both. Revenue (ARR) shows the size of the customer base. Profit shows what is left after model and hosting costs. A gap between the two is information, so show it. See [revenue vs profit multiples](/guides/revenue-vs-profit-multiples/).
+
+### Does the choice of model provider change the value?
+
+It can. In {{BRAND}}'s tool, relying on one provider lowers the range by 10%, being able to switch between several leaves it unchanged, and running your own models raises it by 5%. These are default adjustments from the [methodology](/methodology/), not market data.

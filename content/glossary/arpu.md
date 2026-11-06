@@ -2,15 +2,15 @@
 title: What Is Average Revenue per User (ARPU)?
 term: Average Revenue per User (ARPU)
 aliases: ARPU, average revenue per user, revenue per user
-meta_title: What Is ARPU (Average Revenue per User)? Formula & Example
-meta_description: ARPU is average revenue per user: revenue in a period divided by the number of users. See the formula, a worked example and how buyers use it.
+meta_title: ARPU: Formula, ARPU vs ARPPU & Worked Example
+meta_description: ARPU is revenue divided by users. See the formula, ARPU vs ARPPU, a worked example with churn and what buyers check when they ask for it.
 h1: Average Revenue per User (ARPU)
 definition: Average revenue per user (ARPU) is the revenue a business earns in a period divided by the number of users or customers in that period.
 cluster: saas
 page_type: reference
 keywords: average revenue per user, arpu, arpu formula, what is arpu
 related: /glossary/mrr/, /glossary/churn/, /glossary/ltv/, /glossary/cac/, /glossary/saas/
-updated: 2026-10-14
+updated: 2026-11-06
 publish_at: 2026-10-15T01:00Z
 image: /static/img/articles/arpu.png
 image_alt: What Is Average Revenue per User (ARPU)? (VALUERAQ glossary)
@@ -46,6 +46,46 @@ ARPU is an average, so a few large accounts can hide many small ones. Ask for th
 ARPU is not the same as profit per user: it ignores what it costs to serve each customer.
 
 Whatever the method, use revenue after refunds and discounts, so the figure reflects what the business actually kept.
+
+## ARPU vs ARPPU
+
+ARPPU is average revenue per paying user. It leaves free users out. The two answer different questions.
+
+| Measure | Divides revenue by | Use it to see |
+|---|---|---|
+| ARPU | All users, free and paid | How well the whole audience earns |
+| ARPPU | Paying users only | What a paying customer is worth |
+
+For the app above, ARPU is $9 and ARPPU is $30. Always state which one a listing shows.
+
+## From ARPU to a customer lifetime estimate
+
+Buyers combine ARPU with [churn](/glossary/churn/). Suppose paying customers pay $30 a month and 4% leave each month.
+
+- Average lifetime ≈ 1 ÷ 4% = 25 months.
+- Revenue per customer over that time ≈ $30 × 25 = $750.
+
+Multiply by the gross margin to see what is kept: at 80%, about $600. This is a rough guide, since real customers do not leave at an even pace. Compare it with the cost of winning a customer ([CAC](/glossary/cac/)).
+
+## What buyers ask about ARPU
+
+- Does it include free users, trials or refunds?
+- Is it rising because of price changes or plan upgrades?
+- How does it differ by plan and by sign-up month?
+
+## Frequently asked questions
+
+### What is a good ARPU?
+
+There is no single figure. It depends on the product, the plan mix and the market, so compare with your own history and with similar businesses whose records you can see.
+
+### Is ARPU the same as MRR?
+
+No. [MRR](/glossary/mrr/) is total monthly recurring revenue. ARPU divides revenue by users, so MRR ÷ customers gives ARPU for paying customers.
+
+### Can ARPU go down while revenue goes up?
+
+Yes. If many new customers join on a cheaper plan, revenue rises while the average per user falls.
 
 ## Related terms
 
