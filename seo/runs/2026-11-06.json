@@ -1,0 +1,26 @@
+{
+  "summary": "Wrote 1 article (how to value a membership site) and 3 reference pages (revenue per visitor, net income, owner-operator); nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/glossary/revenue-per-visitor/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/rpm/, /glossary/conversion-rate/, /glossary/average-order-value/)",
+     "images": "1 featured", "serp": "used", "keywords": ["revenue per visitor", "rpv", "rpv vs rpm"],
+     "note": "Own arithmetic, invented shop example. Adds RPV vs RPM and how buyers sense-check income, as the saved gaps asked. Releases 12:00 am Pakistan on 7 Nov."},
+    {"path": "/guides/how-to-value-a-membership-site/", "action": "new", "type": "Article", "score": 8.6,
+     "duplicate": "pass (closest: /guides/saas-valuation/, /guides/how-to-value-an-email-list/, /glossary/subscription-business-model/; this guide is membership-specific with churn and two-method examples)",
+     "images": "1 featured, 2 charts", "serp": "used",
+     "keywords": ["membership site valuation", "subscription business valuation", "membership website worth"],
+     "note": "All figures come from app/valuation.py (newsletter and SaaS tools run on an invented $10,000 MRR site) or own arithmetic; Stripe, CFI, BizBuySell and SBA quotes from sources.json. No churn benchmark given. Releases 6:00 am Pakistan on 7 Nov."},
+    {"path": "/glossary/net-income/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/net-profit/, which lists net income as an alias; this page targets the 'net income' search and adds the net income vs SDE vs EBITDA table)",
+     "images": "1 featured", "serp": "used", "keywords": ["net income", "net income formula", "net income vs sde"],
+     "note": "Own arithmetic from an invented small-business P&L. Releases 12:00 pm Pakistan on 7 Nov."},
+    {"path": "/glossary/owner-operator/", "action": "new", "type": "Glossary term", "score": 8.5,
+     "duplicate": "pass (closest: /glossary/key-person-risk/, /glossary/sde/, /glossary/transition-period/)",
+     "images": "1 featured", "serp": "used", "keywords": ["owner-operator business", "owner operator meaning", "owner hours"],
+     "note": "First line says it is about online businesses, not trucking. Owner-hours adjustments (+5% and -10%) are VALUERAQ defaults from valuation.py. Releases 6:00 pm Pakistan on 7 Nov."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report", "serp_compare"],
+  "checks": ["Tests: 124 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: 0 broken", "External links: 0 opened (web access not used; sources from sources.json)"],
+  "notes": ["Web research was not used; sources come from seo/sources.json. The Render rankings snapshot was not read this run, so secondary keywords come from the calendar and saved research."]
+}
