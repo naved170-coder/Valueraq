@@ -23,6 +23,18 @@
         </tbody></table></div>
         <p class="hint mt">Figures are provided by the seller{% if l.verification == 'unverified' %} and have not been verified by {{ BRAND }}{% else %}; see <a href="/verification/">what "{{ l.verification|replace('_',' ') }}" means</a>{% endif %}. Always complete your own <a href="/guides/digital-business-due-diligence/">due diligence</a>.</p>
       </section>
+      {% if breakdown.segments or breakdown.costs %}
+      <section aria-labelledby="pl-h">
+        <h2 id="pl-h" class="section-title">Monthly figures</h2>
+        <p class="hint">Monthly averages for the last 12 months, as given by the seller.</p>
+        <div class="table-wrap"><table class="facts-table"><tbody>
+          {% for s in breakdown.segments %}<tr><th scope="row">{{ s.name }}</th><td class="num">{{ s.amount|money(l.currency) }}</td></tr>{% endfor %}
+          {% if breakdown.segments %}<tr><th scope="row"><b>Total revenue</b></th><td class="num"><b>{{ l.monthly_revenue|money(l.currency) }}</b></td></tr>{% endif %}
+          {% for label, amt in breakdown.costs if amt %}<tr><th scope="row">{{ label }}</th><td class="num">−{{ amt|money(l.currency) }}</td></tr>{% endfor %}
+          {% if breakdown.costs %}<tr><th scope="row"><b>Monthly profit</b></th><td class="num"><b>{{ l.monthly_profit|money(l.currency) }}</b></td></tr>{% endif %}
+        </tbody></table></div>
+      </section>
+      {% endif %}
       {% if dd %}
       <section aria-labelledby="dd-h" class="dd">
         <h2 id="dd-h" class="section-title">Automatic checks</h2>

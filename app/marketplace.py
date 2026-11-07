@@ -228,7 +228,20 @@ def facts(l):
         "Monthly traffic": (num(l["monthly_traffic"]) + " visits") if l["monthly_traffic"] else "—",
         "Seller location": l["country"] or "—",
         "Verification": (l["verification"] or "unverified").replace("_", " ").capitalize(),
-    }
+    } | _extra_facts(l)
+
+
+def _extra_facts(l):
+    from . import listing_info
+    keys = l.keys() if hasattr(l, "keys") else []
+    out = {}
+    if "presence" in keys and l["presence"]:
+        out["Online or physical"] = listing_info.PRESENCE.get(l["presence"], l["presence"])
+    if "owner_hours" in keys and l["owner_hours"] is not None:
+        out["Owner's hours a week"] = str(l["owner_hours"])
+    if "roas" in keys and l["roas"] is not None:
+        out["Return on ad spend"] = f"{l['roas']:g}×"
+    return out
 
 
 def implied_multiples(l):

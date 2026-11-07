@@ -52,6 +52,8 @@ def create_app(config_object=Config, **overrides):
     seoauto.start_scheduler(app)
     from . import gsc
     gsc.start_scheduler(app)
+    from . import listing_info
+    listing_info.start_scheduler(app)
 
     from . import filters
     filters.register(app)

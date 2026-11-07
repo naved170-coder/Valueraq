@@ -1,38 +1,84 @@
 {% macro ferr(k) %}{% if errors.get(k) %}<p class="err">{{ errors[k] }}</p>{% endif %}{% endmacro %}
-<form method="post" class="stack">
+{% macro numval(v) %}{{ '' if v is none else (v|int if v == v|int else v) }}{% endmacro %}
+<form method="post" class="stack" data-listing-form>
   <input type="hidden" name="csrf" value="{{ csrf_token() }}">
   <input type="hidden" name="t0" value="{{ form_t0 }}">
   <div class="hp" aria-hidden="true"><label for="vq_hp">Leave empty</label><input id="vq_hp" name="vq_hp" tabindex="-1" autocomplete="off"></div>
-  {% if errors %}<p class="alert bad" role="alert">Please fix the highlighted fields.</p>{% endif %}
-  <fieldset class="group"><legend>1. The basics</legend>
+  {% if errors._gaps %}
+  <div class="alert bad" role="alert"><p><b>Almost there.</b> To send the listing for review, please add:</p>
+    <ul>{% for gap in errors._gaps %}<li>{{ gap }}</li>{% endfor %}</ul>
+    <p>Or use <b>Save as draft</b> and finish it later. We'll email you a reminder.</p></div>
+  {% elif errors %}<p class="alert bad" role="alert">Please fix the highlighted fields.</p>{% endif %}
+  <p class="hint">Takes about 10 minutes. Use monthly averages for the last 12 months. Fields marked <b>private</b> are seen only by the {{ BRAND }} review team, never by buyers.</p>
+
+  <fieldset class="group"><legend>1. The business</legend>
   <div class="form-grid">
     <div class="field{% if errors.category %} error{% endif %}"><label for="l-cat">Category</label>
       <select id="l-cat" name="category" required><option value="">Choose…</option>{% for c in cats %}<option value="{{ c.slug }}" {% if data.get('category') == c.slug %}selected{% endif %}>{{ c.name|replace(' for Sale','') }}</option>{% endfor %}</select>{{ ferr('category') }}</div>
     <div class="field"><label for="l-model">Business model</label>
       <select id="l-model" name="business_model"><option value="">Choose…</option>{% for slug, ms in models.items() %}<optgroup label="{{ slug }}">{% for m in ms %}<option {% if data.get('business_model') == m %}selected{% endif %}>{{ m }}</option>{% endfor %}</optgroup>{% endfor %}</select></div>
   </div>
+  <div class="field"><span class="label" id="l-pres-label">Is the business online, physical or both?</span>
+    <div class="row" role="radiogroup" aria-labelledby="l-pres-label">{% for k, label in presences.items() %}
+      <label class="checkbox"><input type="radio" name="presence" value="{{ k }}" {% if data.get('presence') == k %}checked{% endif %}> {{ label }}</label>{% endfor %}</div>
+    <p class="hint">Online: website, app, SaaS or online store. Physical: shop, office or warehouse. Both: for example a shop that also sells online.</p></div>
   <div class="field{% if errors.title %} error{% endif %}"><label for="l-title">Listing title</label><input id="l-title" name="title" value="{{ data.get('title') or '' }}" maxlength="90" required><p class="hint">Describe the business, not the domain. For example: "Profitable B2B scheduling SaaS for dental clinics".</p>{{ ferr('title') }}</div>
   <div class="field{% if errors.headline %} error{% endif %}"><label for="l-head">One-line summary</label><input id="l-head" name="headline" value="{{ data.get('headline') or '' }}" maxlength="160">{{ ferr('headline') }}</div>
   </fieldset>
-  <fieldset class="group"><legend>2. The numbers</legend>
-  <p class="hint">Use averages for the last 12 months. Buyers compare these with our valuation tools.</p>
+
+  <fieldset class="group"><legend>2. Your contact details (private)</legend>
   <div class="form-grid">
-    {% for k, label in [('asking_price','Asking price ($)'),('monthly_revenue','Average monthly revenue ($)'),('monthly_profit','Average monthly profit ($)'),('age_years','Business age (years)'),('monthly_traffic','Monthly visits (optional)')] %}
-    <div class="field{% if errors.get(k) %} error{% endif %}"><label for="l-{{ k }}">{{ label }}</label><input id="l-{{ k }}" name="{{ k }}" inputmode="decimal" value="{{ '' if data.get(k) is none else data.get(k) }}">{{ ferr(k) }}</div>
+    <div class="field"><label for="l-email">Email</label><input id="l-email" name="contact_email" type="email" value="{{ data.get('contact_email') or (g.user.email if g.user else '') }}" autocomplete="email"></div>
+    <div class="field{% if errors.contact_phone %} error{% endif %}"><label for="l-phone">Phone (with country code)</label><input id="l-phone" name="contact_phone" type="tel" value="{{ data.get('contact_phone') or '' }}" placeholder="+1 555 123 4567" autocomplete="tel">{{ ferr('contact_phone') }}</div>
+  </div>
+  <p class="hint">Only our reviewers use these, to confirm details with you. Buyers contact you through {{ BRAND }} messages.</p>
+  </fieldset>
+
+  <fieldset class="group"><legend>3. Monthly revenue by source</legend>
+  <p class="hint">List each source of income separately, as a monthly average over the last 12 months. For example: "Shopify store sales", "Amazon sales", "Display ads", "Affiliate commissions", "Subscriptions", "In-store sales".</p>
+  {% for i in range(max_segments) %}{% set s = segs[i] if i < segs|length else {} %}
+  <div class="form-grid seg-row">
+    <div class="field"><label for="l-segn{{ i }}">Source {{ i + 1 }}</label><input id="l-segn{{ i }}" name="seg_name_{{ i }}" value="{{ s.get('name', '') }}" maxlength="60"></div>
+    <div class="field{% if errors.get('seg_amount_' ~ i) %} error{% endif %}"><label for="l-sega{{ i }}">Monthly amount ($)</label><input id="l-sega{{ i }}" name="seg_amount_{{ i }}" inputmode="decimal" data-sum="revenue" value="{{ numval(s.get('amount')) }}">{{ ferr('seg_amount_' ~ i) }}</div>
+  </div>{% endfor %}
+  <p class="total">Total monthly revenue: <b data-total="revenue">—</b></p>
+  </fieldset>
+
+  <fieldset class="group"><legend>4. Monthly costs</legend>
+  <p class="hint">Monthly averages over the last 12 months. Enter 0 for costs you don't have. Don't include your own pay: buyers add it back when they value the business.</p>
+  <div class="form-grid">
+  {% for k, label, hint, shown in expense_lines %}
+    <div class="field{% if errors.get('exp_' ~ k) %} error{% endif %}"{% if shown == 'online' %} data-online{% endif %}><label for="l-exp-{{ k }}">{{ label }} ($)</label><input id="l-exp-{{ k }}" name="exp_{{ k }}" inputmode="decimal" data-sum="costs" value="{{ numval(exp.get(k)) }}"><p class="hint">{{ hint }}</p>{{ ferr('exp_' ~ k) }}</div>
+  {% endfor %}
+    <div class="field{% if errors.roas %} error{% endif %}" data-online><label for="l-roas">Return on ad spend (ROAS)</label><input id="l-roas" name="roas" inputmode="decimal" value="{{ numval(data.get('roas')) }}" placeholder="for example 3.5"><p class="hint">Revenue from ads ÷ ad spend. Needed if you spend on ads.</p>{{ ferr('roas') }}</div>
+  </div>
+  <p class="total">Total monthly costs: <b data-total="costs">—</b> · Monthly profit: <b data-total="profit">—</b></p>
+  <p class="hint">Profit is worked out for you: revenue minus costs.</p>
+  </fieldset>
+
+  <fieldset class="group"><legend>5. Price and key figures</legend>
+  <div class="form-grid">
+    {% for k, label, hint, online in [('asking_price','Asking price ($)','Exclude stock; it is usually paid for separately at cost.', false),('age_years','Business age (years)','Since it first earned revenue.', false),('monthly_traffic','Monthly visits','Website or app visits, monthly average.', true),('owner_hours','Your hours a week','Time you spend running it.', false)] %}
+    <div class="field{% if errors.get(k) %} error{% endif %}"{% if online %} data-online{% endif %}><label for="l-{{ k }}">{{ label }}</label><input id="l-{{ k }}" name="{{ k }}" inputmode="decimal" value="{{ numval(data.get(k)) }}"><p class="hint">{{ hint }}</p>{{ ferr(k) }}</div>
     {% endfor %}
     <div class="field"><label for="l-ind">Industry / niche</label><input id="l-ind" name="industry" value="{{ data.get('industry') or '' }}"></div>
     <div class="field"><label for="l-country">Where the seller is based</label><input id="l-country" name="country" value="{{ data.get('country') or '' }}"><p class="hint">Shown as seller location only.</p></div>
   </div>
   </fieldset>
-  <fieldset class="group"><legend>3. The story</legend>
-  <div class="field{% if errors.description %} error{% endif %}"><label for="l-desc">Description</label><textarea id="l-desc" name="description" rows="10" required data-wordcount="l-desc-count" data-wordgoal="120">{{ data.get('description') or '' }}</textarea><p class="hint">Plain text. Cover what the business does, how it earns, who runs it and what the buyer gets. 120+ words is needed for the listing to appear in search engines. Links and contact details are removed from the public page.</p><p class="hint" id="l-desc-count" aria-live="polite"></p>{{ ferr('description') }}</div>
+
+  <fieldset class="group"><legend>6. The story</legend>
+  <div class="field{% if errors.description %} error{% endif %}"><label for="l-desc">Description</label><textarea id="l-desc" name="description" rows="10" data-wordcount="l-desc-count" data-wordgoal="120">{{ data.get('description') or '' }}</textarea><p class="hint">Plain text. A good order: what the business does, how it earns, who the customers are, how it runs day to day, what the buyer gets, and growth opportunities. 120+ words is needed for the listing to appear in search engines. Links and contact details are removed from the public page.</p><p class="hint" id="l-desc-count" aria-live="polite"></p>{{ ferr('description') }}</div>
   <div class="field"><label for="l-growth">Growth and trends</label><textarea id="l-growth" name="growth_note" rows="3">{{ data.get('growth_note') or '' }}</textarea></div>
-  <div class="field"><label for="l-assets">What's included in the sale</label><textarea id="l-assets" name="assets_included" rows="3">{{ data.get('assets_included') or '' }}</textarea></div>
+  <div class="field"><label for="l-assets">What's included in the sale</label><textarea id="l-assets" name="assets_included" rows="3" placeholder="Domain, website, social accounts, email list, stock, supplier contacts…">{{ data.get('assets_included') or '' }}</textarea></div>
   <div class="field"><label for="l-reason">Reason for selling</label><input id="l-reason" name="reason_for_sale" value="{{ data.get('reason_for_sale') or '' }}"></div>
   </fieldset>
-  <fieldset class="group"><legend>4. Private details</legend>
-  <div class="field{% if errors.website_url %} error{% endif %}"><label for="l-url">Website URL (private)</label><input id="l-url" name="website_url" type="url" value="{{ data.get('website_url') or '' }}"><p class="hint">Only shared with our reviewers, never shown publicly. Adding it lets you earn the free "Website ownership confirmed" badge.</p>{{ ferr('website_url') }}</div>
+
+  <fieldset class="group"><legend>7. Website (private)</legend>
+  <div class="field{% if errors.website_url %} error{% endif %}"><label for="l-url">Website URL</label><input id="l-url" name="website_url" type="url" value="{{ data.get('website_url') or '' }}"><p class="hint">Only shared with our reviewers, never shown publicly. Adding it lets you earn the free "Website ownership confirmed" badge.</p>{{ ferr('website_url') }}</div>
   </fieldset>
+
   <label class="checkbox"><input type="checkbox" name="confirm" required> I own this business, and the figures above are accurate to the best of my knowledge.</label>
-  <div class="row"><button class="btn" type="submit">{{ 'Save changes' if editing else 'Submit for review' }}</button><a href="/marketplace-rules/">Marketplace rules</a></div>
+  <div class="row"><button class="btn" type="submit" name="intent" value="submit">{{ 'Save and submit for review' if editing else 'Submit for review' }}</button>
+    <button class="btn ghost" type="submit" name="intent" value="draft" formnovalidate>Save as draft</button>
+    <a href="/marketplace-rules/">Marketplace rules</a></div>
 </form>

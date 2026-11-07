@@ -302,6 +302,14 @@ def listing_action(lid):
     note = request.form.get("note") or None
     activity.record("admin_listing_" + str(action)[:20], target=f"listing #{lid}",
                     detail=request.form.get("verification") if action == "verify" else note)
+    if action == "published":
+        from .. import listing_info
+        cur = db.query("SELECT * FROM listings WHERE id=?", (lid,), one=True)
+        gaps = listing_info.missing(cur) if cur and not cur["is_test"] else []
+        if gaps:
+            flash("Can't publish yet. The listing is missing: " + "; ".join(gaps)
+                  + ". The seller is emailed automatically about missing details.", "bad")
+            return redirect(request.referrer or url_for("admin.listings"))
     if action in ("published", "rejected", "suspended", "removed", "pending"):
         rep = request.form.get("replacement_id")
         before = db.query("SELECT status, published_at FROM listings WHERE id=?", (lid,), one=True)

@@ -96,6 +96,8 @@ p, ul, ol, dl, table { margin: 0; }
 .btn[disabled] { opacity: .55; cursor: not-allowed; }
 label { display: block; font-weight: 500; font-size: .92rem; margin-bottom: .3rem; }
 .hint { color: var(--muted); font-size: var(--s-1); margin-top: .25rem; }
+[data-listing-form] .total { font-variant-numeric: tabular-nums; margin-top: .5rem; }
+[data-listing-form] .seg-row + .seg-row { margin-top: -.25rem; }
 input[type=text], input[type=email], input[type=password], input[type=number], input[type=url], input[type=search], select, textarea {
   width: 100%; min-height: 44px; padding: .55rem .7rem; font: 400 1rem/1.4 var(--f-body); color: var(--ink);
   background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); }

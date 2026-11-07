@@ -509,6 +509,17 @@ MIGRATIONS = [
     ("listings", "ownership_method", "TEXT"),
     ("listings", "ownership_host", "TEXT"),
     ("users", "twofa_enabled", "INTEGER NOT NULL DEFAULT 0"),
+    # Fuller seller form (Nov 2026): who runs it, contact, revenue by segment, monthly cost breakdown.
+    ("listings", "presence", "TEXT"),            # online | physical | both
+    ("listings", "contact_email", "TEXT"),       # private: VALUERAQ only, never shown on the listing
+    ("listings", "contact_phone", "TEXT"),       # private
+    ("listings", "revenue_segments", "TEXT"),    # JSON [{"name": str, "amount": int}]
+    ("listings", "expenses", "TEXT"),            # JSON {key: int} monthly averages
+    ("listings", "roas", "REAL"),
+    ("listings", "owner_hours", "INTEGER"),      # hours a week the owner works on it
+    ("listings", "info_missing_since", "INTEGER"),
+    ("listings", "info_reminders", "INTEGER NOT NULL DEFAULT 0"),
+    ("listings", "info_reminded_at", "INTEGER"),
 ]
 
 

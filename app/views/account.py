@@ -4,8 +4,8 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import activity, analytics, auth, billing, catalog, db, insights, mailer, marketplace as M, ownership, valuation as V
-from ..views.marketplace import LISTING_FIELDS, _read_listing_form
+from .. import activity, listing_info, analytics, auth, billing, catalog, db, insights, mailer, marketplace as M, ownership, valuation as V
+from ..views.marketplace import ALL_FIELDS, LISTING_FIELDS, _completeness_errors, _read_listing_form, form_context
 
 bp = Blueprint("account", __name__)
 
@@ -385,15 +385,27 @@ def listing_edit(lid):
     errors = {}
     data = dict(l)
     if request.method == "POST":
-        data, errors = _read_listing_form()
+        draft = request.form.get("intent") == "draft"
+        data, errors = _read_listing_form(draft=draft)
+        if data.get("monthly_profit") is None and not data.get("expenses") and l["monthly_profit"] is not None:
+            data["monthly_profit"] = l["monthly_profit"]   # older listing without a cost breakdown yet
+        gaps = [] if draft else _completeness_errors(data)
+        if gaps and not errors:
+            errors["_gaps"] = gaps
         if not errors:
             if data["title"] != l["title"]:
                 M.change_slug(lid, data["title"], by=f"user:{g.user['id']}")
-            sets = ", ".join(f"{f}=?" for f in LISTING_FIELDS)
-            # Material edits to a live listing go back through moderation.
-            new_status = "pending" if l["status"] in ("published", "rejected") else l["status"]
+            sets = ", ".join(f"{f}=?" for f in ALL_FIELDS)
+            # Material edits to a live listing go back through moderation; a complete draft is sent for review.
+            if draft:
+                new_status = "draft" if l["status"] in ("draft", "rejected") else l["status"]
+            else:
+                new_status = "pending" if l["status"] in ("published", "rejected", "draft") else l["status"]
             db.execute(f"UPDATE listings SET {sets}, status=?, updated_at=? WHERE id=?",
-                       (*[data[f] for f in LISTING_FIELDS], new_status, db.now(), lid))
+                       (*[data.get(f) for f in ALL_FIELDS], new_status, db.now(), lid))
+            listing_info.mark(lid)
+            if new_status == "pending" and l["status"] == "draft":
+                mailer.admin_new_listing(data["title"], data["category"], g.user["email"])
             if l["ownership_verified_at"] and ownership.host_of(data["website_url"]) != l["ownership_host"]:
                 # The check was for a different website: the badge can't carry over.
                 db.execute("UPDATE listings SET ownership_verified_at=NULL, ownership_method=NULL, ownership_host=NULL "
@@ -402,7 +414,7 @@ def listing_edit(lid):
             flash("Changes saved. Edited listings are re-checked before they go live again.", "ok")
             return redirect(url_for("account.listings"))
     return _r("sell_form_page.html", data=data, errors=errors, cats=catalog.CATEGORIES,
-              models=catalog.BUSINESS_MODELS, editing=l)
+              models=catalog.BUSINESS_MODELS, editing=l, **form_context(data))
 
 
 @bp.post("/account/listings/<int:lid>/status/")
@@ -422,6 +434,9 @@ def listing_status(lid):
     elif action == "withdraw":
         M.set_status(lid, "removed", by=f"user:{g.user['id']}", note="withdrawn by seller")
         flash("Listing withdrawn.", "ok")
+    elif action == "submit" and l["status"] == "draft" and listing_info.missing(l):
+        flash("Add the missing details first: " + "; ".join(listing_info.missing(l)) + ".", "bad")
+        return redirect(url_for("account.listing_edit", lid=lid))
     elif action == "submit" and l["status"] == "draft":
         M.set_status(lid, "pending", by=f"user:{g.user['id']}")
         mailer.admin_new_listing(l["title"], l["category"], g.user["email"])

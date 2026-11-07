@@ -32,6 +32,11 @@ LONG_DESC = (
     "accounts, documentation and a thirty day handover period with the founder."
 )
 
+COMPLETE_FORM = dict(presence="online", contact_phone="+92 300 1234567", seg_name_0="Subscriptions",
+                     seg_amount_0="20000", exp_product_cost="0", exp_salaries="4000", exp_marketing="1500",
+                     exp_software="1000", exp_platform_fees="500", exp_rent="0", exp_utilities="0",
+                     exp_interest="0", exp_other="1000", roas="3", monthly_traffic="9000", owner_hours="10")
+
 
 def meta(html, name):
     m = re.search(r'<meta name="%s" content="([^"]*)"' % name, html)
@@ -427,14 +432,65 @@ class AccountsAndReports(Base):
         self.signup()
         data = dict(csrf=self.csrf(), category="saas", title="Scheduling SaaS for dental clinics",
                     headline="Steady B2B SaaS", description=LONG_DESC, business_model="B2B SaaS",
-                    asking_price="480000", monthly_revenue="20000", monthly_profit="12000", age_years="4",
-                    confirm="1")
+                    asking_price="480000", age_years="4", confirm="1", **COMPLETE_FORM)
         r = self.client.post("/sell/", data=data)
         self.assertEqual(r.status_code, 302)
         with self.app.app_context():
             l = db.query("SELECT * FROM listings", one=True)
             self.assertEqual(l["status"], "pending")
             self.assertEqual(l["indexable"], 0)
+            self.assertEqual((l["monthly_revenue"], l["monthly_profit"]), (20000, 12000))   # worked out from the form
+            self.assertEqual(l["contact_phone"], "+92 300 1234567")
+        out = self.app.extensions.get("outbox", [])
+        self.assertTrue(any("Welcome on board" in m["subject"] for m in out))
+
+    def test_incomplete_listing_cannot_be_submitted_but_can_be_drafted(self):
+        self.signup()
+        base = dict(csrf=self.csrf(), category="ecommerce", title="Shopify novelty brand with refills",
+                    description=LONG_DESC, business_model="Dropshipping", asking_price="10000", age_years="2.4",
+                    confirm="1")
+        r = self.client.post("/sell/", data=base)
+        self.assertEqual(r.status_code, 200)
+        page = r.get_data(as_text=True)
+        self.assertIn("To send the listing for review, please add", page)
+        self.assertIn("monthly revenue by source", page)
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM listings", one=True)["n"], 0)
+        r = self.client.post("/sell/", data=dict(base, csrf=self.csrf(), intent="draft"))
+        self.assertEqual(r.status_code, 302)
+        with self.app.app_context():
+            l = db.query("SELECT * FROM listings", one=True)
+            self.assertEqual(l["status"], "draft")
+            self.assertIsNotNone(l["info_missing_since"])
+            from app import listing_info
+            # reminders: none before 24 hours, one at 24 hours, a last one two days later, then none
+            self.assertEqual(listing_info.send_reminders(now=l["info_missing_since"] + 3600), 0)
+            self.assertEqual(listing_info.send_reminders(now=l["info_missing_since"] + 86400), 1)
+            self.assertEqual(listing_info.send_reminders(now=db.now() + 3600), 0)
+            self.assertEqual(listing_info.send_reminders(now=db.now() + 49 * 3600), 1)
+            self.assertEqual(listing_info.send_reminders(now=db.now() + 30 * 86400), 0)
+            # a draft with gaps can't be sent for review from the listings page either
+        self.client.post(f"/account/listings/{l['id']}/status/", data=dict(csrf=self.csrf(), action="submit"))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT status FROM listings", one=True)["status"], "draft")
+        subjects = [m["subject"] for m in self.app.extensions.get("outbox", [])]
+        self.assertTrue(any("needs a few details" in x for x in subjects))
+        self.assertTrue(any("Last reminder" in x for x in subjects))
+
+    def test_admin_cannot_publish_incomplete_listing_and_legacy_fix(self):
+        l = self.make_listing()
+        with self.app.app_context():
+            db.execute("UPDATE listings SET is_test=0, monthly_revenue=NULL, monthly_profit=NULL WHERE id=?", (l["id"],))
+            from app import listing_info
+            self.assertEqual(listing_info.fix_legacy(), 1)
+            self.assertEqual(listing_info.fix_legacy(), 0)          # runs once only
+            row = db.query("SELECT * FROM listings WHERE id=?", (l["id"],), one=True)
+            self.assertEqual(row["status"], "draft")
+            self.assertEqual(listing_info.send_reminders(), 1)       # emailed straight away
+        self.signup("admin@example.com")
+        self.client.post(f"/admin/listings/{l['id']}/", data=dict(csrf=self.csrf(), action="published"))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT status FROM listings WHERE id=?", (l["id"],), one=True)["status"], "draft")
 
     def test_inquiry(self):
         l = self.make_listing()
@@ -1118,7 +1174,7 @@ class Phase2Insights(Base):
             form = {f: ("" if row[f] is None else row[f]) for f in
                     ("category", "title", "headline", "description", "business_model", "asking_price",
                      "monthly_revenue", "monthly_profit", "age_years")}
-        form.update(csrf=self.csrf(), website_url="https://another-site.com", confirm="1")
+        form.update(csrf=self.csrf(), website_url="https://another-site.com", confirm="1", **COMPLETE_FORM)
         self.assertEqual(self.client.post(f"/account/listings/{l['id']}/edit/", data=form).status_code, 302)
         with self.app.app_context():
             self.assertIsNone(db.query("SELECT ownership_verified_at v FROM listings", one=True)["v"])
@@ -1249,7 +1305,7 @@ class Phase2Insights(Base):
         self.assertIn("0 of 3 done", acct)
         self.client.post("/account/searches/save/", data=dict(csrf=self.csrf(), category="saas"))
         self.assertIn("1 of 3 done", self.client.get("/account/").get_data(as_text=True))
-        self.assertIn("1. The basics", self.client.get("/sell/").get_data(as_text=True))
+        self.assertIn("1. The business", self.client.get("/sell/").get_data(as_text=True))
         for path in ("/guides/newsletter-valuation/", "/guides/app-valuation/", "/guides/ecommerce-valuation/",
                      "/glossary/earnout/", "/glossary/escrow/", "/glossary/asset-sale/", "/glossary/letter-of-intent/",
                      "/glossary/seller-financing/", "/glossary/net-revenue-retention/", "/glossary/average-order-value/",

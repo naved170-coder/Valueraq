@@ -153,6 +153,47 @@ def admin_new_listing(listing_title, category, seller_email):
     return send(_admins(), f"New listing to review: {listing_title[:60]}", text, html)
 
 
+def seller_welcome(to, listing_title, edit_url, gaps):
+    """Sent once, when someone submits or saves their first listing."""
+    c = current_app.config
+    site = c["SITE_URL"]
+    todo = ("\n\nTo send it for review, please add:\n" + "\n".join(f"- {g}" for g in gaps)) if gaps else ""
+    text = (f"Welcome on board, and thank you for listing \"{listing_title}\" on {c['BRAND']}.\n\n"
+            "What happens next:\n"
+            "1. Our team reviews every listing, usually within two business days.\n"
+            "2. Once it is live, buyers can message you from the listing page. You'll get an email for each inquiry.\n"
+            "3. Verified figures sell faster: you can ask us to check your revenue and traffic from your account."
+            f"{todo}\n\nYour listing: {edit_url}\n\nWhile you wait, see what your business is worth: {site}/tools/")
+    html = (f"<p>Welcome on board, and thank you for listing <b>{_html.escape(listing_title)}</b> on {c['BRAND']}.</p>"
+            "<p><b>What happens next</b></p><ol>"
+            "<li>Our team reviews every listing, usually within two business days.</li>"
+            "<li>Once it is live, buyers can message you from the listing page. You'll get an email for each inquiry.</li>"
+            "<li>Verified figures sell faster: you can ask us to check your revenue and traffic from your account.</li></ol>"
+            + ("<p><b>To send it for review, please add:</b></p><ul>" + "".join(f"<li>{_html.escape(g)}</li>" for g in gaps)
+               + "</ul>" if gaps else "")
+            + _btn(edit_url, "Complete your listing" if gaps else "View your listing")
+            + f'<p>While you wait, <a href="{site}/tools/" style="color:#0d6a54">see what your business is worth</a>.</p>')
+    return send(to, f"Welcome on board: your {c['BRAND']} listing", text, html)
+
+
+def listing_missing_info(to, listing_title, gaps, n, edit_url, is_live=False):
+    """Reminder 1 (after 24 hours) and 2 (day 3) for a listing that is missing details."""
+    c = current_app.config
+    lead = ("Buyers skip listings without figures, so" if is_live else "Your listing can't be reviewed yet:")
+    subject = (f"Your listing needs a few details: {listing_title[:50]}" if n == 1
+               else f"Last reminder: complete your listing \"{listing_title[:45]}\"")
+    text = (f"{lead} \"{listing_title}\" is missing:\n" + "\n".join(f"- {g}" for g in gaps)
+            + f"\n\nIt takes about five minutes. Complete it here: {edit_url}\n\n"
+              "Your phone number and email stay private: only our reviewers see them."
+            + ("\n\nThis is the last reminder we'll send." if n >= 2 else ""))
+    html = (f"<p>{_html.escape(lead)} <b>{_html.escape(listing_title)}</b> is missing:</p><ul>"
+            + "".join(f"<li>{_html.escape(g)}</li>" for g in gaps) + "</ul>"
+            + "<p>It takes about five minutes.</p>" + _btn(edit_url, "Complete your listing")
+            + "<p style=\"color:#5b6b66\">Your phone number and email stay private: only our reviewers see them.</p>"
+            + ("<p>This is the last reminder we'll send.</p>" if n >= 2 else ""))
+    return send(to, subject, text, html)
+
+
 def admin_contact_message(name, email, topic, message):
     c = current_app.config
     url = c["SITE_URL"] + "/admin/messages/"

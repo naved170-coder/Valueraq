@@ -4,7 +4,7 @@ import math
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import analytics, auth, catalog, content, db, insights, linkgraph, mailer, marketplace as M, schema
+from .. import listing_info, analytics, auth, catalog, content, db, insights, linkgraph, mailer, marketplace as M, schema
 from ..seo import PageMeta, abs_url, iso
 from . import render_page
 
@@ -234,6 +234,7 @@ def listing(cat, slug_id):
     resp = current_app.make_response(render_page(
         "listing.html", meta, l=l, c=c, facts=facts, desc=desc_public, tool=tool, related=rel,
         similar=similar, is_owner=is_owner, mult=M.implied_multiples(l), saved=_is_saved(u, l["id"]),
+        breakdown={"segments": listing_info.segments(l), "costs": listing_info.expense_rows(l)},
         dd=insights.due_diligence(l, bool(l["ownership_verified_at"])) if l["status"] == "published" else None))
     resp.headers["Cache-Control"] = "no-cache"  # every view reaches the app: accurate view counts, instant updates
     return resp
@@ -292,9 +293,11 @@ LISTING_FIELDS = ["category", "title", "headline", "description", "business_mode
                   "asking_price", "monthly_revenue", "monthly_profit", "age_years", "monthly_traffic",
                   "growth_note", "assets_included", "reason_for_sale", "website_url"]
 NUMERIC = {"asking_price", "monthly_revenue", "monthly_profit", "monthly_traffic"}
+EXTRA_FIELDS = ["presence", "contact_email", "contact_phone", "revenue_segments", "expenses", "roas", "owner_hours"]
+ALL_FIELDS = LISTING_FIELDS + EXTRA_FIELDS
 
 
-def _read_listing_form():
+def _read_listing_form(draft=False):
     data, errors = {}, {}
     for f in LISTING_FIELDS:
         v = (request.form.get(f) or "").strip()
@@ -317,14 +320,32 @@ def _read_listing_form():
         errors["title"] = "Use a descriptive title of at least 12 characters (no URLs)."
     elif M.URL_RE.search(data["title"]):
         errors["title"] = "Titles can't contain links."
-    if not data["description"] or len(M.words(data["description"])) < 40:
+    if not draft and (not data["description"] or len(M.words(data["description"])) < 40):
         errors["description"] = "Describe the business in at least 40 words. Listings need 120+ words to appear in search engines."
+    if not data["description"]:
+        data["description"] = ""
     if data["website_url"] and not data["website_url"].startswith(("http://", "https://")):
         errors["website_url"] = "Start the URL with https://"
     for f in ("headline",):
         if data[f] and len(data[f]) > 160:
             errors[f] = "Keep this under 160 characters."
+    extra = listing_info.read_form(request.form, errors)
+    data.update(extra)
+    if not data.get("contact_email") and g.get("user"):
+        data["contact_email"] = g.user["email"]
     return data, errors
+
+
+def _completeness_errors(data):
+    """Field-level messages for the gaps that stop a listing being sent for review."""
+    gaps = listing_info.missing(_Row(data))
+    return gaps
+
+
+class _Row(dict):
+    """dict that returns None for absent keys, so a form dict can be checked like a database row."""
+    def __getitem__(self, k):
+        return self.get(k)
 
 
 @bp.route("/sell/", methods=["GET", "POST"])
@@ -338,35 +359,52 @@ def sell():
     if request.method == "POST":
         if auth.honeypot_tripped() or auth.rate_limited("listing", 10, 86400):
             abort(429)
-        data, errors = _read_listing_form()
+        draft = request.form.get("intent") == "draft"
+        data, errors = _read_listing_form(draft=draft)
+        gaps = [] if draft else _completeness_errors(data)
+        if gaps and not errors:
+            errors["_gaps"] = gaps
         recent = db.query("SELECT COUNT(*) n FROM listings WHERE seller_id=? AND created_at>?",
                           (g.user["id"], db.now() - 86400), one=True)["n"]
         if recent >= 5:
             errors["title"] = "You've created five listings today. Contact us if you need to list more."
         if not errors:
             t = db.now()
+            cols = ["seller_id", "slug"] + ALL_FIELDS + ["status", "created_at", "updated_at"]
             lid = db.execute(
-                "INSERT INTO listings(seller_id, category, slug, title, headline, description, business_model, industry, "
-                "country, asking_price, monthly_revenue, monthly_profit, age_years, monthly_traffic, growth_note, "
-                "assets_included, reason_for_sale, website_url, status, created_at, updated_at) "
-                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                (g.user["id"], data["category"], M.slugify(data["title"]), data["title"], data["headline"],
-                 data["description"], data["business_model"], data["industry"], data["country"], data["asking_price"],
-                 data["monthly_revenue"], data["monthly_profit"], data["age_years"], data["monthly_traffic"],
-                 data["growth_note"], data["assets_included"], data["reason_for_sale"], data["website_url"],
-                 "pending", t, t))
+                f"INSERT INTO listings({', '.join(cols)}) VALUES ({','.join('?' * len(cols))})",
+                (g.user["id"], M.slugify(data["title"]), *[data.get(f) for f in ALL_FIELDS],
+                 "draft" if draft else "pending", t, t))
             if not g.user["is_seller"]:
                 db.execute("UPDATE users SET is_seller=1 WHERE id=?", (g.user["id"],))
                 analytics.server_event("seller_registration")
             analytics.server_event("listing_created", {"listing": lid, "category": data["category"]})
             l = M.refresh(lid)
-            mailer.admin_new_listing(data["title"], data["category"], g.user["email"])
+            gaps_left = listing_info.mark(lid)
+            if not draft:
+                mailer.admin_new_listing(data["title"], data["category"], g.user["email"])
+            first = db.query("SELECT COUNT(*) n FROM listings WHERE seller_id=?", (g.user["id"],), one=True)["n"] == 1
+            if first:
+                mailer.seller_welcome(data.get("contact_email") or g.user["email"], data["title"],
+                                      current_app.config["SITE_URL"] + f"/account/listings/{lid}/edit/", gaps_left)
             from .. import activity
             activity.record("listing_created", target=f"listing #{lid}", detail=data["title"])
-            flash("Listing submitted for review. We check every listing before it goes live, usually within two "
-                  "business days.", "ok")
+            if draft:
+                flash("Draft saved. Complete the missing details and submit it for review from your listings.", "ok")
+            else:
+                flash("Listing submitted for review. We check every listing before it goes live, usually within two "
+                      "business days.", "ok")
             if l["quality_flags"]:
                 flash("Fix the items flagged on your listing to help it pass review and appear in search engines.", "ok")
             return redirect(url_for("account.listings"))
     return render_page("sell.html", meta, data=data, errors=errors, cats=catalog.CATEGORIES,
-                       models=catalog.BUSINESS_MODELS, editing=None)
+                       models=catalog.BUSINESS_MODELS, editing=None, **form_context(data))
+
+
+def form_context(data):
+    row = _Row(data)
+    segs = listing_info.segments(row)
+    if not segs and data.get("monthly_revenue") is not None:
+        segs = [{"name": "All revenue", "amount": data["monthly_revenue"]}]
+    return dict(presences=listing_info.PRESENCE, expense_lines=listing_info.EXPENSES, segs=segs,
+                exp=listing_info.expenses(row), max_segments=listing_info.MAX_SEGMENTS)

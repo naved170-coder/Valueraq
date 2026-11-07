@@ -80,3 +80,29 @@ document.addEventListener("click", function (e) {
     t.addEventListener("input", function () { update(t); });
   });
 })();
+/* Seller form: live revenue, cost and profit totals; hide online-only fields for physical businesses. */
+(function () {
+  var f = document.querySelector("form[data-listing-form]");
+  if (!f) return;
+  function n(v) { v = (v || "").replace(/[$,\s]/g, ""); var x = parseFloat(v); return isNaN(x) ? null : x; }
+  function money(x) { return (x < 0 ? "−$" : "$") + Math.abs(Math.round(x)).toLocaleString("en-US"); }
+  function online() { var r = f.querySelector("input[name=presence]:checked"); return !r || r.value !== "physical"; }
+  function sum(kind) {
+    var t = 0, any = false;
+    Array.prototype.forEach.call(f.querySelectorAll("input[data-sum='" + kind + "']"), function (i) {
+      if (i.closest("[data-online]") && !online()) return;
+      var v = n(i.value); if (v !== null) { t += v; any = true; }
+    });
+    return any ? t : null;
+  }
+  function update() {
+    Array.prototype.forEach.call(f.querySelectorAll("[data-online]"), function (el) { el.hidden = !online(); });
+    var r = sum("revenue"), c = sum("costs");
+    f.querySelector("[data-total=revenue]").textContent = r === null ? "—" : money(r);
+    f.querySelector("[data-total=costs]").textContent = c === null ? "—" : money(c);
+    f.querySelector("[data-total=profit]").textContent = (r === null || c === null) ? "—" : money(r - c);
+  }
+  f.addEventListener("input", update);
+  f.addEventListener("change", update);
+  update();
+})();
