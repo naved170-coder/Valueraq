@@ -1,0 +1,90 @@
+{
+  "summary": "Wrote 1 article (valuing a business with a capitalization rate) and 3 reference pages (customer retention cost, calculator accuracy, website flipping); nothing held, nothing needs the owner. The four-page improvement step follows in an update to this report.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/how-to-value-a-business-using-a-capitalization-rate/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/capitalization-rate/, /guides/business-valuation-formula/; this is the how-to with rate-to-multiple table, rate build-up and sensitivity)",
+      "images": "1 featured, 2 charts",
+      "serp": "used",
+      "keywords": [
+        "capitalization rate business valuation",
+        "cap rate valuation",
+        "income approach valuation"
+      ],
+      "note": "All figures are own arithmetic on an invented $66,000 SDE site plus VALUERAQ default 2.5x/3.2x/4.0x. SBA, CFI and BizBuySell quotes from sources.json. No market cap rate quoted. Releases 12:00 am Pakistan on 8 Nov."
+    },
+    {
+      "path": "/glossary/customer-retention-cost/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/cac/, /glossary/churn/, /glossary/retention-rate/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "customer retention cost",
+        "crc",
+        "crc vs cac"
+      ],
+      "note": "Invented subscription-site example, own arithmetic. Adds valuation angle the saved gaps asked for. Releases 6:00 am Pakistan on 8 Nov."
+    },
+    {
+      "path": "/guides/how-accurate-is-a-business-valuation-calculator/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/valuation-mistakes/, /guides/business-valuation/, /methodology/; this page is specifically about calculator accuracy and input error)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "business valuation calculator",
+        "how accurate is a business valuation calculator"
+      ],
+      "note": "Limits taken from methodology page; worked input-error example is own arithmetic. Releases 12:00 pm Pakistan on 8 Nov."
+    },
+    {
+      "path": "/glossary/website-flipping/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/how-to-buy-a-website/, /guides/increase-website-value-before-selling/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "website flipping",
+        "flipping websites"
+      ],
+      "note": "Invented flip example with own arithmetic and an assumed 10% selling cost; risks table. Releases 6:00 pm Pakistan on 8 Nov."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "serp_compare",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: all point to existing pages",
+    "External links: sources taken from seo/sources.json (web fetch unavailable this run)"
+  ],
+  "notes": [
+    "Web search and fetch were not used; research came from seo/serp/ and seo/sources.json.",
+    "Skipped how-much-does-it-cost-to-sell-an-online-business (calendar hold, needs sourced fee figures); left for a later run (skipped once).",
+    "reduce_after date (2026-11-07) was reached but the scheduled task asks for 1 article + 3 reference pages, so four pages were written.",
+    "Rankings snapshot read from Render logs: no cap-rate, retention-cost or flipping queries yet; keywords chosen from calendar."
+  ]
+}
