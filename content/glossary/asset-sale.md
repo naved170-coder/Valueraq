@@ -2,13 +2,13 @@
 title: What Is an Asset Sale?
 term: Asset sale
 aliases: asset sale, asset purchase, asset purchase agreement
-meta_title: What Is an Asset Sale? Definition & Asset Sale vs Share Sale
-meta_description: In an asset sale the buyer purchases chosen assets of a business, not the company itself. Learn what transfers, how it differs from a share sale, and why.
+meta_title: What Is an Asset Sale? Definition, Example & Asset List
+meta_description: In an asset sale the buyer purchases listed assets, not the company. See what transfers, a sample asset schedule, asset vs share sale and common questions.
 h1: Asset Sale
 definition: An asset sale is a sale in which the buyer purchases specified assets of a business, such as its domain, website, code, customer list and brand, instead of buying the company that owns them.
 cluster: buying
 related: /glossary/escrow/, /glossary/letter-of-intent/, /glossary/due-diligence/, /guides/ways-to-sell-a-digital-business/, /guides/buying-digital-businesses/
-updated: 2026-10-02
+updated: 2026-11-07
 ---
 
 ## How it works
@@ -23,6 +23,21 @@ The sale contract, often called an asset purchase agreement, lists what is being
 - Inventory, for an ecommerce business.
 
 Anything not listed stays with the seller. That normally includes the seller's company, its bank accounts, its cash and its debts.
+
+## What the agreement lists, with an example
+
+For a hypothetical $80,000 sale of a small website business, the schedule of assets might read:
+
+| Asset | Included | Notes to settle |
+|---|---|---|
+| Domain and website files | Yes | Registrar transfer, hosting access |
+| Content and brand name | Yes | Proof the seller owns it |
+| Email list | Yes, if the privacy policy allows | Check consent and local law |
+| Social accounts | Yes | Platform rules on transfers |
+| Seller's company and bank account | No | Stays with the seller |
+| Past debts and tax bills | No | Stay with the seller, unless the contract says otherwise |
+
+The price is $80,000 in total. How it is split between the assets can affect each side's tax, so ask an accountant before you agree the split. The figures are invented.
 
 ## Asset sale vs share sale
 
@@ -47,6 +62,20 @@ A seller owns a company that runs two online stores and sells one of them. The b
 - **[Due diligence](/glossary/due-diligence/)** should confirm that the seller really owns each asset on the list and has the right to transfer it.
 
 Most listings of small websites, apps, newsletters and stores are sold as asset sales, with payment handled through [escrow](/glossary/escrow/).
+
+## Frequently asked questions
+
+### Why are most small website sales asset sales?
+
+The seller often owns the site personally or through a company they want to keep, and the buyer prefers to take only the listed assets and not any hidden past liabilities.
+
+### Does the buyer take on the seller's debts?
+
+Generally not, unless the contract says so. Check the contract wording and local law.
+
+### What has to be transferred one by one?
+
+Each domain, account, licence and contract, because they do not move automatically. See [how to transfer a website to a new owner](/guides/how-to-transfer-a-website-to-a-new-owner/).
 
 ## Take advice
 

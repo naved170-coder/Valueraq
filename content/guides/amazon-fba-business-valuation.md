@@ -1,7 +1,7 @@
 ---
 title: How to Value an Amazon FBA Business
-meta_title: Amazon FBA Business Valuation: Multiples & Risks
-meta_description: How Amazon FBA businesses are priced: profit multiple, account health, stock and supplier risk, with a worked example and a free valuation tool.
+meta_title: Amazon FBA Business Valuation: Example & 90-Day Plan
+meta_description: Value an Amazon FBA business: profit multiple, 12/6/3-month profit windows, stock example and account risks. Includes a 90-day plan. Free calculator included.
 h1: How to Value an Amazon FBA Business
 section: Valuation
 cluster: ecommerce
@@ -10,7 +10,7 @@ page_type: article
 answer: An Amazon FBA business is usually valued as a multiple of yearly net profit, with sellable stock added at cost. VALUERAQ's default range for an ecommerce business is 2.0 to 3.5 times yearly profit, and because most FBA sellers earn nearly all their sales on one marketplace, reliance on a single channel is often the biggest adjustment.
 keywords: amazon fba business valuation, value an amazon fba business, sell amazon fba business, fba business multiple, amazon seller business worth
 published: 2026-10-14
-updated: 2026-10-14
+updated: 2026-11-07
 publish_at: 2026-10-13T19:00Z
 image: /static/img/articles/amazon-fba-business-valuation.png
 image_alt: How to Value an Amazon FBA Business - profit, stock and channel risk (VALUERAQ guide)
@@ -55,6 +55,18 @@ An FBA business earns $10,000 a month in profit after all costs, before the owne
 - **At 3.5 times:** $120,000 × 3.5 = $420,000.
 
 That is the range before adjustments and stock.
+
+### Which stretch of profit to use
+
+Buyers rarely use one number. They look at profit averaged over different windows: the last 12 months, the last 6 and the last 3. The 12-month figure is the usual base, in the same way as [trailing twelve months](/glossary/trailing-twelve-months/). The shorter windows show the direction. Here is the same business in two situations, valued at the 2.7 midpoint before other adjustments.
+
+| Window | Falling profit: monthly average | Yearly | Value at 2.7x | Rising profit: monthly average | Yearly | Value at 2.7x |
+|---|---|---|---|---|---|---|
+| Last 12 months | $10,000 | $120,000 | $324,000 | $10,000 | $120,000 | $324,000 |
+| Last 6 months | $9,000 | $108,000 | $291,600 | $11,000 | $132,000 | $356,400 |
+| Last 3 months | $8,000 | $96,000 | $259,200 | $12,000 | $144,000 | $388,800 |
+
+A seller with falling profit should expect the buyer to lean on the shorter windows, and a seller with rising profit should show them. Neither window decides the price on its own, and a recent jump needs an explanation, such as a stock-up sale, a one-off promotion or cut ad spend.
 
 ## Step 3: Weigh channel reliance, the main FBA risk
 
@@ -127,6 +139,16 @@ A seller who can show clean figures and explain the bad months is more believabl
 | Cut the owner's weekly hours | A low workload supports a higher multiple |
 | Stay steady in the months before the sale | A falling trend pulls the multiple down |
 
+## A 90-day plan before you list
+
+| Days | What to do |
+|---|---|
+| 1 to 30 | Close the books for each month, split profit by product and channel, and reconcile marketplace payouts to bank deposits |
+| 31 to 60 | Clear aged stock, resolve open account warnings or listing complaints, and write down the supplier and prep process |
+| 61 to 90 | Hold ad spend and pricing steady, gather the inventory report with stock ages, and prepare read-only report access for buyers |
+
+Do not make changes in the last 90 days that flatter profit without lasting, such as cutting ads for a quarter. Buyers check the trend and will ask why.
+
 ## Frequently asked questions
 
 ### How much is an Amazon FBA business worth?
@@ -144,6 +166,14 @@ Usually not within the multiple. Sellable stock is normally added at cost after 
 ### Can an Amazon seller account be sold?
 
 That depends on the marketplace's own rules and on how the deal is structured. Do not assume it can be transferred. Read the marketplace's current seller terms and ask a lawyer before you agree a price.
+
+### Which months of profit do buyers look at?
+
+Most start with the last 12 months, then compare the last 6 and last 3 to see the direction. Profit that is falling in the shorter windows usually leads to a lower offer than the 12-month figure suggests.
+
+### What should I fix first before selling?
+
+Start with proof: monthly accounts that match payout reports and bank deposits. Then deal with account warnings and aged stock, because both lead to price disputes.
 
 ### Does selling on only one marketplace lower the value?
 

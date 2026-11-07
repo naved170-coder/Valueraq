@@ -1,14 +1,14 @@
 ---
 title: How to Value a Mobile App
-meta_title: How to Value a Mobile App: Multiples & Example
-meta_description: How iOS and Android apps are valued: profit times a multiple, adjusted for revenue model, platform and channel risk. Worked example and a free tool.
+meta_title: How to Value a Mobile App: Methods Table & Example
+meta_description: Value a mobile app from profit, revenue model, platforms and store risks. Methods table, worked example and a sale-prep checklist. Free calculator included.
 h1: How to Value a Mobile App
 section: Valuation
 cluster: app
 order: 6
 answer: Most small mobile apps are valued as a multiple of annual net profit. The multiple is higher for subscription revenue, availability on both major app stores, steady growth and a low owner workload, and lower for ad-funded or paid-download apps, heavy reliance on one acquisition channel, a short history and declining revenue. Download counts alone do not set the price.
 published: 2026-10-02
-updated: 2026-11-02
+updated: 2026-11-07
 methodology_version: 1.0
 related: /tools/app-valuation/, /businesses-for-sale/apps/, /glossary/sde/, /glossary/churn/, /glossary/cac/, /guides/business-valuation/
 cta: /tools/app-valuation/
@@ -46,6 +46,19 @@ For subscription apps, [churn](/glossary/churn/) shows how long subscribers stay
 ### Technical condition and owner workload
 
 Both stores change their operating systems and policies every year, and an app that is not kept up to date can break or be removed. A buyer will check the code, third-party libraries and how much weekly work the app needs.
+
+## Which valuation method fits?
+
+Profit is the usual base, but buyers sometimes cross-check with other methods.
+
+| Method | Formula | Fits best when |
+|---|---|---|
+| Profit multiple | Annual net profit × multiple | The app earns steady profit (most small apps) |
+| Revenue multiple | Annual revenue × multiple | Margins are high or unclear, such as a subscription app that reinvests in growth |
+| Value per active user | Value ÷ monthly active users, or the reverse | A sense-check only, because users differ widely in what they pay |
+| Cost to rebuild | Time and money to build the same app again | The app has little profit but real code and an audience |
+
+Take the example below, where the midpoint is about $181,000 and the app has 40,000 monthly active users. That is about $181,000 ÷ 40,000 = $4.53 of value per active user. On its own the figure means little, but if another app with similar profit sits at $1 or $20 per user, ask why.
 
 ## How the valuation is calculated
 
@@ -96,6 +109,13 @@ These numbers are illustrative, not market data.
 - **Ignoring maintenance.** An app that has not been updated for a long time carries a repair bill the buyer will deduct.
 - **Assuming the app can simply be handed over.** Store transfers have conditions, and third-party accounts, keys and licences have to move too.
 
+## App store risks to check
+
+- **Store rules and transfer limits.** Apple says "the app must have at least one version that was released to the App Store" to be transferred, and that the app cannot be on pre-order or in review at the time. Google says "both Google Play developer accounts need to be registered and active". Read the current criteria before you agree a price.
+- **What moves and what does not.** Apple says reviews and ratings stay with an app after transfer, but an Apple Pay merchant ID is not transferred. Google says orders created before a transfer stay in the original account, and earnings reports and promotions do not move.
+- **Policy changes.** A store can change its rules, fees or review process. Check how the app would cope.
+- **Reviews and ratings.** Look at the rating trend and recent reviews, not just the average.
+
 ## What buyers will ask for
 
 - Store payout reports and, for subscription apps, active subscriptions and cancellations by month.
@@ -105,6 +125,17 @@ These numbers are illustrative, not market data.
 - A list of third-party services, licences and accounts the app depends on.
 
 The [due diligence guide](/guides/digital-business-due-diligence/) covers the wider checklist.
+
+## Preparing an app for sale
+
+- [ ] Twelve months of payout reports from each store, matched to bank deposits
+- [ ] Active users, retention and (for subscriptions) cancellations by month
+- [ ] A list of third-party services, keys and licences, and who owns each account
+- [ ] The source code in a repository you can hand over, with notes on how to build it
+- [ ] Both store accounts in good standing, with no open policy warnings
+- [ ] A plan for the handover period
+
+When you are ready, see [how to sell an app](/guides/how-to-sell-an-app/) and [how to transfer an app to a new owner](/guides/how-to-transfer-an-app-to-a-new-owner/).
 
 ## Frequently asked questions
 
@@ -116,6 +147,16 @@ On profit. Downloads and active users help explain the profit and show how the a
 
 For the same profit, usually yes, because subscription revenue is more predictable. {{BRAND}}'s default adds 5% to the multiple for subscriptions and takes off 5% for advertising.
 
+### Which valuation method is best for an app?
+
+For an app that earns steady profit, a multiple of annual net profit. Use revenue multiples, value per user or cost to rebuild only as cross-checks, or when there is little profit to measure.
+
 ### Can I value an app that isn't profitable yet?
 
 Not with an earnings method. An app with users but no profit is usually priced on its code, audience or strategic fit for a specific buyer, which the tool does not estimate.
+
+## Sources
+
+- Apple, [App Store Connect Help: App transfer criteria](https://developer.apple.com/help/app-store-connect/transfer-an-app/app-transfer-criteria/) and [Overview of app transfer](https://developer.apple.com/help/app-store-connect/transfer-an-app/overview-of-app-transfer/).
+- Google, [Play Console Help: Transfer apps to a different developer account](https://support.google.com/googleplay/android-developer/answer/6230247?hl=en).
+- {{BRAND}}, [Valuation methodology](/methodology/): the default multiple range and adjustments used in the example.

@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (valuing a business with a capitalization rate) and 3 reference pages (customer retention cost, calculator accuracy, website flipping); nothing held, nothing needs the owner. The four-page improvement step follows in an update to this report.",
+  "summary": "Wrote 1 article (valuing a business with a capitalization rate) and 3 reference pages (customer retention cost, calculator accuracy, website flipping); nothing held, nothing needs the owner. Also improved 4 existing pages (Amazon FBA valuation, app valuation, asking price, asset sale).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -59,6 +59,34 @@
         "flipping websites"
       ],
       "note": "Invented flip example with own arithmetic and an assumed 10% selling cost; risks table. Releases 6:00 pm Pakistan on 8 Nov."
+    },
+    {
+      "path": "/guides/amazon-fba-business-valuation/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added profit-window table, 90-day plan, 2 FAQs; new meta."
+    },
+    {
+      "path": "/guides/app-valuation/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added methods table, store-transfer risks, checklist, FAQ, Sources; new meta."
+    },
+    {
+      "path": "/glossary/asking-price/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added implied-multiple table and 3 FAQs; new meta."
+    },
+    {
+      "path": "/glossary/asset-sale/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "note": "Added asset schedule example and 3 FAQs; new meta."
     }
   ],
   "tasks": [
@@ -72,6 +100,7 @@
     "scheduled",
     "link_check",
     "serp_compare",
+    "improve",
     "report"
   ],
   "checks": [
