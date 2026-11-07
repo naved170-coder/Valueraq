@@ -1,7 +1,7 @@
 ---
 title: Buy vs Build a SaaS Business
 meta_title: Buy vs Build a SaaS: Cost, Time & Risk Compared
-meta_description: Should you buy an existing SaaS or build your own? Compare cost, time to revenue and risk, with a worked example of both paths.
+meta_description: Should you buy an existing SaaS or build your own? Compare cost, time to revenue and risk, with a worked example of both paths. Free calculator included.
 h1: Buy vs Build a SaaS Business
 section: Buying
 cluster: saas

@@ -1,7 +1,7 @@
 ---
 title: The SaaS Metrics Buyers Check Before Making an Offer
 meta_title: SaaS Metrics Buyers Check Before Making an Offer
-meta_description: The SaaS numbers buyers check first: MRR, churn, net revenue retention, CAC and more, with what good looks like for a small SaaS.
+meta_description: The SaaS numbers buyers check first: MRR, churn, net revenue retention, CAC and more, with what good looks like for a small SaaS. Free calculator included.
 h1: The SaaS Metrics Buyers Check Before Making an Offer
 section: Valuation
 cluster: saas

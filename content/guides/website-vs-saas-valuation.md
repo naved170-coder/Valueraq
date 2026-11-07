@@ -1,7 +1,7 @@
 ---
 title: Website vs SaaS Valuation
 meta_title: Website vs SaaS Valuation: Why the Methods Differ
-meta_description: Websites are valued on profit and SaaS on ARR. See why, what that does to the price, and a side-by-side worked example of both.
+meta_description: Websites are valued on profit and SaaS on ARR. See why, what that does to the price, and a side-by-side worked example of both. Free calculator included.
 h1: Website vs SaaS Valuation
 section: Comparisons
 cluster: analysis

@@ -91,9 +91,8 @@ def hub():
                       key=lambda c: -counts[c["slug"]])[:3]
     doc = content.load("hubs", "businesses-for-sale")
     meta = PageMeta(path="/businesses-for-sale/", title="Digital Businesses for Sale",
-                    meta_title="Digital Businesses for Sale – Websites, SaaS, Apps & More",
-                    description="Browse websites, SaaS, AI businesses, apps, newsletters and ecommerce stores for sale. "
-                                "Every listing shows asking price, revenue, profit and age.",
+                    meta_title="Digital Businesses for Sale – Free Listing, No Commission",
+                    description="Browse websites, SaaS, AI businesses, apps, newsletters and stores for sale. Free to list, free to contact sellers, no commission when a business sells.",
                     breadcrumbs=[("Businesses for sale", "/businesses-for-sale/")], template="hub")
     meta.schema.append(schema.collection_page(meta.path, meta.title, meta.description,
                                               [(c["name"], c["path"]) for c in catalog.CATEGORIES]))

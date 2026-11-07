@@ -24,9 +24,9 @@ def home():
     meta = PageMeta(
         path="/",
         title="Digital Business Valuation & Marketplace",
-        meta_title="VALUERAQ – Value, Buy and Sell Digital Businesses",
-        description="All valuation features, at much lower fees than the leading marketplaces. Free tools for "
-                    "websites, SaaS, AI, apps, newsletters and ecommerce.",
+        meta_title="Free Business Valuation Tools & Marketplace | VALUERAQ",
+        description="All valuation features, at much lower fees than the leading marketplaces. "
+                    "Free valuation tools and free listings for websites, SaaS, apps and stores.",
         h1="What is your digital business worth?",
         template="home",
     )
@@ -141,9 +141,8 @@ def tool_result_get(key):
 @bp.get("/calculators/")
 def calcs_hub():
     meta = PageMeta(path="/calculators/", title="Business Valuation Calculators",
-                    meta_title="Business Valuation Calculators – Website, SaaS & Multiples",
-                    description="Quick calculators for website worth, SaaS value from ARR, and the revenue and profit "
-                                "multiples implied by any asking price.",
+                    meta_title="Free Valuation Calculators: Website Worth, SaaS & Multiples",
+                    description="Free calculators for website worth, SaaS value from ARR, and the revenue and profit multiples implied by any asking price. No sign-up needed.",
                     breadcrumbs=[("Calculators", "/calculators/")], template="hub")
     meta.schema.append(schema.collection_page("/calculators/", meta.title, meta.description,
                                               [(c["name"], c["path"]) for c in catalog.CALCULATORS]))

@@ -1,7 +1,7 @@
 ---
 title: How to Calculate ROI When Buying a Website
 meta_title: Website ROI: How to Calculate Return Before You Buy
-meta_description: Work out the return and payback period on a website before buying: the formula, a worked example and the costs buyers often forget.
+meta_description: Work out the return and payback period on a website before buying: the formula, a worked example and the costs buyers often forget. Free calculator included.
 h1: How to Calculate ROI When Buying a Website
 section: Buying
 cluster: buying

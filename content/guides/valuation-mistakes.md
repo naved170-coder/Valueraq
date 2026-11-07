@@ -1,7 +1,7 @@
 ---
 title: Nine Mistakes People Make When Valuing an Online Business
 meta_title: 9 Online Business Valuation Mistakes (and Fixes)
-meta_description: Nine common mistakes that make online business valuations wrong, from unverified profit to the wrong multiple, and how to avoid each one.
+meta_description: Nine common mistakes that make online business valuations wrong, from unverified profit to the wrong multiple, and how to avoid each. Free tools included.
 h1: Nine Mistakes People Make When Valuing an Online Business
 section: Valuation
 cluster: analysis

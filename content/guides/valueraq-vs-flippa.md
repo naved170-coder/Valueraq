@@ -1,7 +1,7 @@
 ---
 title: VALUERAQ vs Flippa
 meta_title: Flippa Alternative? VALUERAQ vs Flippa Fees Compared
-meta_description: Selling a website? Compare Flippa and VALUERAQ side by side: listing and success fees, escrow, buyer reach and which suits which seller. Factual, sourced.
+meta_description: Selling a website? Compare Flippa and VALUERAQ side by side: listing and success fees, escrow and buyer reach. VALUERAQ listings are free, no commission.
 h1: VALUERAQ vs Flippa
 section: Comparisons
 cluster: selling

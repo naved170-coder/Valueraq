@@ -1,7 +1,7 @@
 ---
 title: Can You Sell a Website That Has No Revenue?
 meta_title: Can You Sell a Website With No Revenue?
-meta_description: Yes, sometimes. See what buyers pay for in a site with no income: domain, content, traffic and links, and how they price it.
+meta_description: Yes, sometimes. See what buyers pay for in a site with no income: domain, content, traffic and links, and how they price it. Free calculator included.
 h1: Can You Sell a Website That Has No Revenue?
 section: Quick answers
 cluster: website

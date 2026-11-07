@@ -1,7 +1,7 @@
 ---
 title: Revenue vs Profit Multiples
 meta_title: Revenue vs Profit Multiples: Which to Use?
-meta_description: When to value a business on revenue and when on profit, why the multiples differ so much, and worked examples of both. Plain English.
+meta_description: When to value a business on revenue and when on profit, why the multiples differ so much, and worked examples of both. Free calculator included.
 h1: Revenue Multiples vs Profit Multiples
 section: Comparisons
 cluster: analysis

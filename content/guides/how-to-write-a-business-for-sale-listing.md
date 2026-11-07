@@ -1,7 +1,7 @@
 ---
 title: How Do You Write a Good Business-for-Sale Listing?
 meta_title: How to Write a Business-for-Sale Listing That Sells
-meta_description: Write a listing that gets serious buyers: the facts to include, how to present the numbers honestly, and an example listing structure.
+meta_description: Write a listing that gets serious buyers: the facts to include, how to present the numbers honestly and an example structure. List free, no commission.
 h1: How Do You Write a Good Business-for-Sale Listing?
 section: Quick answers
 cluster: selling

@@ -1,7 +1,7 @@
 ---
 title: What Is a Good Profit Margin for an Online Business?
 meta_title: Profit Margin for an Online Business: What's Good?
-meta_description: A good margin depends on the model and the margin type. See gross, operating and net margin formulas, a worked example and how margin moves value.
+meta_description: A good margin depends on the model and margin type. See gross, operating and net margin formulas, an example and how margin moves value. Free calculators.
 h1: What Is a Good Profit Margin for an Online Business?
 section: Valuation
 cluster: valuation

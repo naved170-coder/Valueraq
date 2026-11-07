@@ -1,7 +1,7 @@
 ---
 title: Financial Due Diligence Checklist for Buying an Online Business
 meta_title: Financial Due Diligence Checklist: Online Business
-meta_description: Check the money before you buy: P&L, bank statements, payment processors, refunds and add-backs. A step-by-step financial checklist.
+meta_description: Check the money before you buy: P&L, bank statements, payment processors, refunds and add-backs. A step-by-step financial checklist. Free calculator included.
 h1: Financial Due Diligence Checklist for Buying an Online Business
 section: Buying
 cluster: buying

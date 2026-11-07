@@ -1,7 +1,7 @@
 ---
 title: Business Valuation Formulas: Four Ways to Put a Number on a Business
 meta_title: Business Valuation Formula: 4 Methods + Examples
-meta_description: Four business valuation formulas in plain English: profit multiple, revenue multiple, EBITDA and DCF. Each with a worked example and when to use it.
+meta_description: Four business valuation formulas in plain English: profit multiple, revenue multiple, EBITDA and DCF, each with an example. Free calculator included.
 h1: Business Valuation Formulas: Four Ways to Put a Number on a Business
 section: Valuation
 cluster: analysis

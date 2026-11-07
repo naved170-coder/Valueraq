@@ -1,7 +1,7 @@
 ---
 title: VALUERAQ vs Acquire.com
 meta_title: Acquire.com Alternative? VALUERAQ vs Acquire Compared
-meta_description: Selling a startup or SaaS? Compare Acquire.com and VALUERAQ side by side: seller fees, buyer plans, escrow and reach, and which suits which seller.
+meta_description: Selling a startup or SaaS? Compare Acquire.com and VALUERAQ side by side: seller fees, buyer plans, escrow and reach. VALUERAQ listings are free.
 h1: VALUERAQ vs Acquire.com
 section: Comparisons
 cluster: selling

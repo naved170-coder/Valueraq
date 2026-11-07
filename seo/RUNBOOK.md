@@ -205,6 +205,16 @@ Google title and description (written to earn the click, never to mislead):
 - Every claim must be true of the page and the site: only figures the page itself states, presented as a "common
   range" or "starting range", never as a promise. No "guaranteed", "best", "#1", fake urgency or clickbait.
 - Never give two pages the same main search in their titles; check `seo/keywords.json` and existing titles first.
+- The word "Free" (we run no paid ads, so the search result must say it): only where something on the page is
+  really free and is what the searcher wants.
+  - Calculator or tool pages: title starts with "Free" ("Free Website Valuation Tool: ...") and the description
+    starts with "Free:".
+  - Marketplace and selling pages: "Free Listing, No Commission" early in the title; "Free to list, free to
+    contact sellers, no commission" in the description.
+  - Guides: no "Free" in the title. If the page links to a free tool or calculator, end the description with
+    "Free calculator included." (or "List free, no commission." for selling guides) when it fits in 158 characters.
+  - Glossary pages: no "Free" in title or description.
+  - Write "Free", never "FREE".
 
 Banned: "in today's fast-paced world", "delve", "unlock", "game-changer", "ever-evolving", "look no further",
 and any sentence that says nothing. No year in the page address.

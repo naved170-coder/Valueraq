@@ -1,7 +1,7 @@
 ---
 title: How to Value an Affiliate Website
 meta_title: Affiliate Website Valuation: Worked Example + Risk Checks
-meta_description: How buyers price affiliate sites: profit times a multiple, adjusted for program risk, seasons and traffic, with a worked example and the checks buyers run.
+meta_description: How buyers price affiliate sites: profit times a multiple, adjusted for program risk, seasons and traffic, with a worked example. Free calculator included.
 h1: How to Value an Affiliate Website
 section: Valuation
 cluster: website

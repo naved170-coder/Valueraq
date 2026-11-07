@@ -1,7 +1,7 @@
 ---
 title: SDE vs EBITDA
 meta_title: SDE vs EBITDA: Which Should You Use to Value a Business?
-meta_description: SDE suits owner-run businesses; EBITDA suits larger ones with managers. See the difference, when to use each and a worked example of both.
+meta_description: SDE suits owner-run businesses; EBITDA suits larger ones with managers. See the difference, when to use each and a worked example. Free calculator included.
 h1: SDE vs EBITDA
 section: Comparisons
 cluster: analysis

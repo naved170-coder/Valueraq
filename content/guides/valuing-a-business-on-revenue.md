@@ -1,7 +1,7 @@
 ---
 title: Valuing a Business on Revenue: When It Works and When It Misleads
 meta_title: Valuing a Business on Revenue: When It Works
-meta_description: Revenue multiples suit fast-growing or SaaS businesses, but mislead for others. See when to use them, typical ranges and a worked example.
+meta_description: Revenue multiples suit fast-growing or SaaS businesses but mislead for others. See when to use them, typical ranges and an example. Free calculator included.
 h1: Valuing a Business on Revenue: When It Works and When It Misleads
 section: Valuation
 cluster: analysis

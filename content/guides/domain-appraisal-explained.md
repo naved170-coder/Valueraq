@@ -1,7 +1,7 @@
 ---
 title: Domain Appraisal: What a Domain Name Is Worth and Why
 meta_title: Domain Appraisal: What Is My Domain Name Worth?
-meta_description: What makes a domain name valuable, why automated appraisals vary so much, and how to judge a fair price before you buy or sell one.
+meta_description: What makes a domain name valuable, why automated appraisals vary so much, and how to judge a fair price before you buy or sell one. Free calculator included.
 h1: Domain Appraisal: What a Domain Name Is Worth and Why
 section: Valuation
 cluster: website

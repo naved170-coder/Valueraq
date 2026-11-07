@@ -1,7 +1,7 @@
 ---
 title: How to Value a Website
 meta_title: How to Value a Website: Formula, Multiples & Example
-meta_description: A common starting range for established websites is 2.5 to 4 times yearly profit. See the formula, what moves the multiple and a worked example.
+meta_description: Established websites often sell for 2.5 to 4 times yearly profit. See the formula, what moves the multiple and a worked example. Free calculator included.
 h1: How to Value a Website
 section: Valuation
 cluster: website

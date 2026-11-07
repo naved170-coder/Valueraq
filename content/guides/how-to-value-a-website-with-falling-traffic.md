@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Website Whose Traffic Is Falling?
 meta_title: How to Value a Website With Falling Traffic
-meta_description: Traffic dropping? See how buyers value a declining website, how much the multiple falls and what you can do first, with a worked example.
+meta_description: Traffic dropping? See how buyers value a declining website, how much the multiple falls and what to do first, with an example. Free calculator included.
 h1: How Do You Value a Website Whose Traffic Is Falling?
 section: Quick answers
 cluster: website
