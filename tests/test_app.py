@@ -2035,6 +2035,87 @@ class Rankings(Base):
         self.assertEqual(self.client.get("/admin/rankings/export.xlsx").status_code, 200)
 
 
+class BotProtection(Base):
+    def outbox(self):
+        return self.app.extensions.setdefault("outbox", [])
+
+    def test_disposable_email_blocked(self):
+        tok = self.csrf()
+        r = self.client.post("/signup/", data=dict(email="bot@mailinator.com", password="correct-horse-1", agree="1", csrf=tok))
+        self.assertEqual(r.status_code, 200)
+        self.assertIn("Temporary inboxes", r.get_data(as_text=True))
+
+    def test_signup_and_login_limits(self):
+        self.app.config["TEST_RATE_LIMITS"] = True
+        for i in range(5):
+            self.signup(f"u{i}@example.com")
+            self.logout()
+        tok = self.csrf()
+        r = self.client.post("/signup/", data=dict(email="u9@example.com", password="correct-horse-1", agree="1", csrf=tok))
+        self.assertEqual(r.status_code, 429)
+        self.app.config["TEST_RATE_LIMITS"] = False
+        for _ in range(10):
+            self.client.post("/login/", data=dict(csrf=self.csrf(), email="u1@example.com", password="wrong-password-x"))
+        r = self.client.post("/login/", data=dict(csrf=self.csrf(), email="u1@example.com", password="correct-horse-1"))
+        self.assertEqual(r.status_code, 429)          # locked even with the right password, for 15 minutes
+        r = self.client.post("/login/", data=dict(csrf=self.csrf(), email="u2@example.com", password="correct-horse-1"))
+        self.assertEqual(r.status_code, 302)          # other accounts unaffected
+
+    def test_email_confirmation_gate(self):
+        self.app.config["REQUIRE_EMAIL_VERIFICATION"] = True
+        l = self.make_listing()
+        self.signup("buyer@example.com")
+        welcome = self.outbox()[-1]
+        self.assertIn("confirm", welcome["subject"])
+        link = re.search(r"(/verify-email/[^/\s]+/)", welcome["text"]).group(1)
+        self.assertIn("Please confirm your email", self.client.get("/account/").get_data(as_text=True))
+        self.client.post(M.listing_path(l) + "inquire/",
+                         data=dict(csrf=self.csrf(), message="I'd like to see the MRR history and churn by month."))
+        r = self.client.post("/sell/", data=dict(COMPLETE_FORM, csrf=self.csrf(), intent="submit", category="saas",
+                             title="Scheduling SaaS for dental clinics", headline="Steady B2B SaaS",
+                             description=LONG_DESC, business_model="B2B SaaS", asking_price="480000",
+                             age_years="4", confirm="1"))
+        self.assertEqual(r.status_code, 302)
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM inquiries", one=True)["n"], 0)
+            self.assertEqual(db.query("SELECT status FROM listings WHERE seller_id!=? ORDER BY id DESC",
+                                      (l["seller_id"],), one=True)["status"], "draft")   # kept as a draft
+        self.assertEqual(self.client.get("/verify-email/not-a-token/").status_code, 302)
+        self.client.get(link)
+        self.assertNotIn("Please confirm your email", self.client.get("/account/").get_data(as_text=True))
+        self.client.post(M.listing_path(l) + "inquire/",
+                         data=dict(csrf=self.csrf(), message="I'd like to see the MRR history and churn by month."))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM inquiries", one=True)["n"], 1)
+
+    def test_spam_messages_blocked(self):
+        l = self.make_listing()
+        self.signup("buyer@example.com")
+        self.client.post(M.listing_path(l) + "inquire/", data=dict(csrf=self.csrf(),
+                         message="Great deals http://a.xyz http://b.xyz http://c.xyz visit now"))
+        with self.app.app_context():
+            self.assertEqual(db.query("SELECT COUNT(*) n FROM inquiries", one=True)["n"], 0)
+            from app import guard
+            self.assertTrue(guard.disposable("x@sub.yopmail.com"))
+            self.assertFalse(guard.disposable("x@gmail.com"))
+
+    def test_block_spike_emails_admin_once(self):
+        with self.app.test_request_context():
+            from app import guard
+            guard.SPIKE_BLOCKS_PER_HOUR, old = 3, guard.SPIKE_BLOCKS_PER_HOUR
+            try:
+                for _ in range(6):
+                    guard.note_block("login")
+            finally:
+                guard.SPIKE_BLOCKS_PER_HOUR = old
+        alerts = [m for m in self.outbox() if "bot activity" in m["subject"]]
+        self.assertEqual(len(alerts), 1)
+
+    def test_existing_accounts_count_as_confirmed(self):
+        from app.db import BACKFILL
+        self.assertIn(("users", "email_verified_at"), BACKFILL)
+
+
 class StaticAssets(Base):
     def test_referenced_assets_exist(self):
         for p in ("/static/css/site.css", "/static/js/v.js", "/static/js/calc.js", "/static/brand/favicon.svg",

@@ -4,7 +4,7 @@ import math
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, url_for
 
-from .. import listing_info, analytics, auth, catalog, content, db, insights, linkgraph, mailer, marketplace as M, schema
+from .. import guard, listing_info, analytics, auth, catalog, content, db, insights, linkgraph, mailer, marketplace as M, schema
 from ..seo import PageMeta, abs_url, iso
 from . import render_page
 
@@ -273,8 +273,16 @@ def inquire(cat, slug_id):
     if auth.honeypot_tripped() or auth.rate_limited("inquiry", 10, 3600):
         abort(429)
     msg = (request.form.get("message") or "").strip()
-    if l["seller_id"] == g.user["id"]:
+    if guard.needs_verification(g.user):
+        flash("Confirm your email address first (we sent you a link), then send your inquiry.", "error")
+    elif l["seller_id"] == g.user["id"]:
         flash("You can't send an inquiry about your own listing.", "error")
+    elif guard.too_many_links(msg):
+        flash("Please remove the links from your message. You can share them once the seller replies.", "error")
+    elif guard.repeated_message(g.user["id"], msg):
+        guard.note_block("inquiry-repeat")
+        flash("You've sent this same message to several sellers in the last hour. Please write to each seller "
+              "about their business.", "error")
     elif len(msg) < 20:
         flash("Write at least a couple of sentences so the seller knows what you'd like to learn.", "error")
     else:
@@ -361,6 +369,9 @@ def sell():
             abort(429)
         draft = request.form.get("intent") == "draft"
         data, errors = _read_listing_form(draft=draft)
+        verify_hold = not draft and guard.needs_verification(g.user)
+        if verify_hold:
+            draft = True   # keep their work: saved as a draft until the email is confirmed
         gaps = [] if draft else _completeness_errors(data)
         if gaps and not errors:
             errors["_gaps"] = gaps
@@ -389,7 +400,10 @@ def sell():
                                       current_app.config["SITE_URL"] + f"/account/listings/{lid}/edit/", gaps_left)
             from .. import activity
             activity.record("listing_created", target=f"listing #{lid}", detail=data["title"])
-            if draft:
+            if verify_hold:
+                flash("Saved as a draft. Confirm your email address (we sent you a link), then submit it for review "
+                      "from your listings.", "ok")
+            elif draft:
                 flash("Draft saved. Complete the missing details and submit it for review from your listings.", "ok")
             else:
                 flash("Listing submitted for review. We check every listing before it goes live, usually within two "

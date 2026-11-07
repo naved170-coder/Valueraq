@@ -83,16 +83,42 @@ def _admins():
 
 
 # ---------------------------------------------------------------- the six messages
-def welcome(user):
+def welcome(user, verify_url=None):
     c = current_app.config
     site = c["SITE_URL"]
-    text = (f"Welcome to {c['BRAND']}.\n\nYour account is ready. You can value a website, SaaS, AI business, app, "
-            f"newsletter or ecommerce store, save detailed reports, and browse or list businesses for sale.\n\n"
+    confirm_t = (f"First, please confirm your email address (the link works for 7 days):\n{verify_url}\n\n"
+                 if verify_url else "")
+    text = (f"Welcome to {c['BRAND']}.\n\n{confirm_t}Your account is ready. You can value a website, SaaS, AI business, "
+            f"app, newsletter or ecommerce store, save detailed reports, and browse or list businesses for sale.\n\n"
             f"Start a valuation: {site}/tools/\n\nYour account: {site}/account/")
-    html = (f"<p>Welcome to {c['BRAND']}.</p><p>Your account is ready. You can value a website, SaaS, AI business, "
+    html = (f"<p>Welcome to {c['BRAND']}.</p>"
+            + ("<p>First, please confirm your email address. You need this to list a business or message sellers.</p>"
+               + _btn(verify_url, "Confirm my email") + "<p>The link works for 7 days.</p>" if verify_url else "")
+            + "<p>Your account is ready. You can value a website, SaaS, AI business, "
             "app, newsletter or ecommerce store, save detailed reports, and browse or list businesses for sale.</p>"
             + _btn(site + "/tools/", "Start a valuation"))
-    return send(user["email"], f"Welcome to {c['BRAND']}", text, html)
+    return send(user["email"], f"Welcome to {c['BRAND']}" + (": please confirm your email" if verify_url else ""),
+                text, html)
+
+
+def verify_email(user, verify_url):
+    c = current_app.config
+    text = (f"Please confirm your email address for {c['BRAND']} (the link works for 7 days):\n{verify_url}\n\n"
+            "If you didn't create an account, you can ignore this email.")
+    html = (f"<p>Please confirm your email address for {c['BRAND']}.</p>" + _btn(verify_url, "Confirm my email")
+            + "<p>The link works for 7 days. If you didn't create an account, you can ignore this email.</p>")
+    return send(user["email"], f"Confirm your email for {c['BRAND']}", text, html)
+
+
+def admin_bot_alert(what):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/activity/"
+    text = (f"Possible bot activity on {c['BRAND']}.\n\n{what}\n\nThe site is already blocking the extra requests. "
+            f"Check the activity log: {url}\n\nYou'll get at most one of these emails an hour.")
+    html = (f"<p>Possible bot activity on {c['BRAND']}.</p><p><b>{_html.escape(what)}</b></p>"
+            "<p>The site is already blocking the extra requests.</p>" + _btn(url, "Open the activity log")
+            + "<p>You'll get at most one of these emails an hour.</p>")
+    return send(_admins(), f"{c['BRAND']}: possible bot activity", text, html)
 
 
 def password_reset(user, token):

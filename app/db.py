@@ -309,6 +309,13 @@ CREATE TABLE IF NOT EXISTS content_approvals (   -- admin decision on a held pag
     decided_by TEXT
 );
 
+CREATE TABLE IF NOT EXISTS rate_hits (           -- shared by all server workers: rate limits and lockouts
+    bucket TEXT NOT NULL,
+    k TEXT NOT NULL,
+    ts INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS rate_hits_lookup ON rate_hits(bucket, k, ts);
+
 CREATE TABLE IF NOT EXISTS seo_alerts (          -- one "daily SEO run missed" email per day
     day TEXT PRIMARY KEY,
     sent_at INTEGER NOT NULL
@@ -520,7 +527,10 @@ MIGRATIONS = [
     ("listings", "info_missing_since", "INTEGER"),
     ("listings", "info_reminders", "INTEGER NOT NULL DEFAULT 0"),
     ("listings", "info_reminded_at", "INTEGER"),
+    # Accounts must confirm their email before listing or messaging; accounts that existed before count as confirmed.
+    ("users", "email_verified_at", "INTEGER"),
 ]
+BACKFILL = {("users", "email_verified_at"): "UPDATE users SET email_verified_at=created_at"}
 
 
 def _migrate(db):
@@ -528,6 +538,8 @@ def _migrate(db):
         have = {r[1] for r in db.execute(f"PRAGMA table_info({table})").fetchall()}
         if col not in have:
             db.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
+            if (table, col) in BACKFILL:
+                db.execute(BACKFILL[(table, col)])
 
 
 def query(sql, args=(), one=False):

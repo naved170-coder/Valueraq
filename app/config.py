@@ -96,6 +96,11 @@ class Config:
     ADMIN_2FA = _bool("ADMIN_2FA", True)      # emergency switch: ADMIN_2FA=0 turns two-step login off
     LOGIN_CODE_MINUTES = 10
     TESTING = False
+    # Bot checks. New accounts confirm their email before listing or messaging.
+    REQUIRE_EMAIL_VERIFICATION = os.environ.get("REQUIRE_EMAIL_VERIFICATION", "1") != "0"
+    # Optional Cloudflare Turnstile challenge on sign-up and contact forms: on when both keys are set in Render.
+    TURNSTILE_SITE_KEY = os.environ.get("TURNSTILE_SITE_KEY", "")
+    TURNSTILE_SECRET = os.environ.get("TURNSTILE_SECRET", "")
 
     # --- Plans & billing (placeholders — set real prices before launch) ----
     TRIAL_DAYS = 14
@@ -148,7 +153,7 @@ class Config:
     # --- Performance ---------------------------------------------------------
     PUBLIC_CACHE_SECONDS = 300
     CDN_CACHE_SECONDS = 300        # short, so edits and deploys show within minutes
-    STATIC_VERSION = os.environ.get("STATIC_VERSION", "20")
+    STATIC_VERSION = os.environ.get("STATIC_VERSION", "21")
 
 
 class TestConfig(Config):
@@ -161,3 +166,6 @@ class TestConfig(Config):
     INDEXNOW = False
     GSC_SERVICE_ACCOUNT_JSON = ""
     SEO_FEED_TOKEN = ""
+    REQUIRE_EMAIL_VERIFICATION = False
+    TURNSTILE_SITE_KEY = ""
+    TURNSTILE_SECRET = ""

@@ -3,7 +3,6 @@ import hashlib
 import hmac
 import secrets
 import time
-from collections import defaultdict, deque
 from functools import wraps
 
 from flask import abort, current_app, g, redirect, request, session, url_for
@@ -73,8 +72,10 @@ def login_user(u):
 
 def change_password(u, new_password):
     """Store the new password and sign out every other session; this one stays signed in."""
-    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1 WHERE id=?",
-               (generate_password_hash(new_password), u["id"]))
+    # Using a link from the inbox also proves the email address is theirs.
+    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1, "
+               "email_verified_at=COALESCE(email_verified_at, ?) WHERE id=?",
+               (generate_password_hash(new_password), db.now(), u["id"]))
     session["sv"] = (u["session_version"] or 0) + 1
     session["csrf"] = secrets.token_urlsafe(24)
 
@@ -110,8 +111,10 @@ def reset_password(token, new_password):
     u = reset_token_user(token)
     if not u:
         return False
-    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1 WHERE id=?",
-               (generate_password_hash(new_password), u["id"]))
+    # Using a link from the inbox also proves the email address is theirs.
+    db.execute("UPDATE users SET password_hash=?, session_version=COALESCE(session_version, 0) + 1, "
+               "email_verified_at=COALESCE(email_verified_at, ?) WHERE id=?",
+               (generate_password_hash(new_password), db.now(), u["id"]))
     db.execute("UPDATE password_resets SET used_at=? WHERE user_id=? AND used_at IS NULL", (db.now(), u["id"]))
     return True
 
@@ -167,23 +170,37 @@ def check_csrf():
 
 
 # ---------------------------------------------------------------- rate limiting
-_hits = defaultdict(deque)
+def client_ip():
+    ip = request.headers.get("CF-Connecting-IP") or request.headers.get("X-Forwarded-For", request.remote_addr or "")
+    return ip.split(",")[0].strip()
 
 
-def rate_limited(bucket, limit, window_seconds):
+def rate_limited(bucket, limit, window_seconds, key=None):
+    """True once `limit` hits from this connection (or `key`) fall inside the window. Stored in the database so
+    every server worker counts the same hits."""
     if current_app.config.get("TESTING") and not current_app.config.get("TEST_RATE_LIMITS"):
         return False
-    ip = request.headers.get("CF-Connecting-IP") or request.headers.get("X-Forwarded-For", request.remote_addr or "")
-    ip = ip.split(",")[0].strip()
-    key = (bucket, ip)
-    q = _hits[key]
-    t = time.time()
-    while q and q[0] < t - window_seconds:
-        q.popleft()
-    if len(q) >= limit:
+    k = key or client_ip()
+    now = int(time.time())
+    n = db.query("SELECT COUNT(*) n FROM rate_hits WHERE bucket=? AND k=? AND ts>?",
+                 (bucket, k, now - window_seconds), one=True)["n"]
+    if n >= limit:
+        from . import guard
+        guard.note_block(bucket)
         return True
-    q.append(t)
+    db.execute("INSERT INTO rate_hits(bucket, k, ts) VALUES (?,?,?)", (bucket, k, now))
+    if now % 50 == 0:   # occasional clean-up of old hits
+        db.execute("DELETE FROM rate_hits WHERE ts < ?", (now - 2 * 86400,))
     return False
+
+
+def count_hits(bucket, key, window_seconds):
+    return db.query("SELECT COUNT(*) n FROM rate_hits WHERE bucket=? AND k=? AND ts>?",
+                    (bucket, key, int(time.time()) - window_seconds), one=True)["n"]
+
+
+def add_hit(bucket, key):
+    db.execute("INSERT INTO rate_hits(bucket, k, ts) VALUES (?,?,?)", (bucket, key, int(time.time())))
 
 
 def honeypot_tripped():

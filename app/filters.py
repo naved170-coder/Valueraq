@@ -94,6 +94,8 @@ def register(app):
             user=g.get("user"),
             premium=auth.is_premium(),
             csrf_token=auth.csrf_token,
+            needs_verify=__import__('app.guard', fromlist=['x']).needs_verification(g.get('user')),
+            turnstile_key=cfg.get('TURNSTILE_SITE_KEY') or '',
             static=static,
             nav_tools=catalog.TOOLS,
             nav_calcs=catalog.CALCULATORS,

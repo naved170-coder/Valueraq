@@ -4,7 +4,7 @@ import secrets
 
 from flask import Blueprint, abort, current_app, flash, g, redirect, render_template, request, session, url_for
 
-from .. import activity, listing_info, analytics, auth, billing, catalog, db, insights, mailer, marketplace as M, ownership, valuation as V
+from .. import activity, guard, listing_info, analytics, auth, billing, catalog, db, insights, mailer, marketplace as M, ownership, valuation as V
 from ..views.marketplace import ALL_FIELDS, LISTING_FIELDS, _completeness_errors, _read_listing_form, form_context
 
 bp = Blueprint("account", __name__)
@@ -29,7 +29,7 @@ def signup():
     error = None
     if request.method == "POST":
         # No hidden trap field here, so browser autofill works normally.
-        if auth.rate_limited("signup", 20, 3600):
+        if auth.rate_limited("signup", 5, 3600):
             current_app.logger.warning("signup blocked: rate limit")
             return _r("account/signup.html", next=_safe_next(""),
                       error="Too many attempts from this connection. Wait a few minutes and try again."), 429
@@ -39,6 +39,10 @@ def signup():
             error = "Enter a valid email address."
         elif len(pw) < 10:
             error = "Use a password of at least 10 characters."
+        elif guard.disposable(email):
+            error = "Please use your regular email address. Temporary inboxes can't be used for accounts."
+        elif not guard.turnstile_ok():
+            error = "Please complete the quick check that you're not a robot, then try again."
         elif not request.form.get("agree"):
             error = "Accept the terms and privacy policy to create an account."
         elif db.query("SELECT 1 FROM users WHERE email=?", (email,), one=True):
@@ -50,7 +54,8 @@ def signup():
             g.user = u
             analytics.server_event("signup")
             activity.record("signup", user=u)
-            mailer.welcome(u)
+            mailer.welcome(u, guard.verify_url(u) if guard.needs_verification(u) else None)
+            guard.check_signup_spike()
             return redirect(_safe_next())
     return _r("account/signup.html", error=error, next=_safe_next(""))
 
@@ -63,7 +68,15 @@ def login():
             current_app.logger.warning("login blocked: rate limit")
             return _r("account/login.html", next=_safe_next(""),
                       error="Too many attempts from this connection. Wait a few minutes and try again."), 429
+        email_key = (request.form.get("email") or "").strip().lower()[:200]
+        if email_key and auth.count_hits("loginfail", email_key, 900) >= 10:
+            guard.note_block("loginfail")
+            activity.record("login_failed", email=email_key)
+            return _r("account/login.html", next=_safe_next(""),
+                      error="Too many wrong passwords for this account. Wait 15 minutes, or reset your password."), 429
         u = auth.verify(request.form.get("email") or "", request.form.get("password") or "")
+        if not u and email_key:
+            auth.add_hit("loginfail", email_key)
         if u and auth.twofa_active(u):
             code = auth.issue_code(u, "login")
             if code:
@@ -82,6 +95,32 @@ def login():
         activity.record("login_failed", email=(request.form.get("email") or "").strip().lower())
         error = "That email and password don't match an account."
     return _r("account/login.html", error=error, next=_safe_next(""))
+
+
+@bp.route("/verify-email/<token>/")
+def verify_email(token):
+    uid = guard.check_token(token)
+    if not uid:
+        flash("That confirmation link is broken or has expired. Log in and send a new one.", "error")
+        return redirect(url_for("account.home") if g.get("user") else url_for("account.login"))
+    db.execute("UPDATE users SET email_verified_at=COALESCE(email_verified_at, ?) WHERE id=?", (db.now(), uid))
+    u = db.query("SELECT * FROM users WHERE id=?", (uid,), one=True)
+    activity.record("email_verified", user=u)
+    flash("Thanks, your email address is confirmed.", "ok")
+    return redirect(url_for("account.home") if g.get("user") else url_for("account.login"))
+
+
+@bp.post("/verify-email/resend/")
+@auth.login_required
+def verify_resend():
+    if not guard.needs_verification(g.user):
+        flash("Your email address is already confirmed.", "ok")
+    elif auth.rate_limited(f"verify:{g.user['id']}", 3, 3600):
+        flash("We've sent a few links already. Check your spam folder, or try again in an hour.", "error")
+    else:
+        mailer.verify_email(g.user, guard.verify_url(g.user))
+        flash(f"We sent a new confirmation link to {g.user['email']}.", "ok")
+    return redirect("/account/")
 
 
 def _pending_user():
@@ -386,6 +425,9 @@ def listing_edit(lid):
     data = dict(l)
     if request.method == "POST":
         draft = request.form.get("intent") == "draft"
+        if not draft and l["status"] in ("draft", "rejected") and guard.needs_verification(g.user):
+            draft = True
+            flash("Confirm your email address first (we sent you a link). Your changes are saved as a draft.", "bad")
         data, errors = _read_listing_form(draft=draft)
         if data.get("monthly_profit") is None and not data.get("expenses") and l["monthly_profit"] is not None:
             data["monthly_profit"] = l["monthly_profit"]   # older listing without a cost breakdown yet
@@ -434,6 +476,8 @@ def listing_status(lid):
     elif action == "withdraw":
         M.set_status(lid, "removed", by=f"user:{g.user['id']}", note="withdrawn by seller")
         flash("Listing withdrawn.", "ok")
+    elif action == "submit" and l["status"] == "draft" and guard.needs_verification(g.user):
+        flash("Confirm your email address first. We sent you a link; you can send it again from the banner above.", "bad")
     elif action == "submit" and l["status"] == "draft" and listing_info.missing(l):
         flash("Add the missing details first: " + "; ".join(listing_info.missing(l)) + ".", "bad")
         return redirect(url_for("account.listing_edit", lid=lid))

@@ -18,6 +18,7 @@
   <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
   <div class="field"><label for="c-topic">Topic</label><select id="c-topic" name="topic"><option>General question</option><option>Valuation methodology</option><option>A listing</option><option>Billing</option><option>Report a problem</option><option>Press</option></select></div>
   <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+  {% include "partials/turnstile.html" %}
   <button class="btn" type="submit">Send message</button>
 </form>
 {% endif %}

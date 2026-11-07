@@ -13,6 +13,7 @@
     <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" required autocomplete="email"></div>
     <div class="field"><label for="s-pw">Password</label><div class="pw-wrap"><input id="s-pw" name="password" type="password" required minlength="10" autocomplete="new-password"><button type="button" class="pw-toggle" data-pw-toggle="s-pw" aria-label="Show password" aria-pressed="false"></button></div><p class="hint">At least 10 characters.</p></div>
     <label class="checkbox"><input type="checkbox" name="agree" value="1" required> I agree to the <a href="/terms/">terms</a> and <a href="/privacy/">privacy policy</a>.</label>
+    {% include "partials/turnstile.html" %}
     <button class="btn" type="submit">Create account</button>
   </form>
   <p>Already have an account? <a href="/login/{% if next %}?next={{ next|urlencode }}{% endif %}">Log in</a></p>

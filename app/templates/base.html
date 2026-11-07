@@ -84,6 +84,8 @@
 {% if messages %}<div class="wrap">{% for cat, msg in messages %}<p class="flash {{ cat }}" role="status">{{ msg }}</p>{% endfor %}</div>{% endif %}
 {% endwith %}
 
+{% if needs_verify and not current_path.startswith('/verify-email') %}<div class="wrap"><p class="flash" role="status">Please confirm your email address. We sent you a link. You need it to list a business or message sellers.
+  <form method="post" action="/verify-email/resend/" class="inline"><input type="hidden" name="csrf" value="{{ csrf_token() }}"><button class="linkish" type="submit">Send the link again</button></form></p></div>{% endif %}
 <main id="main">
 {% block main %}{% endblock %}
 </main>

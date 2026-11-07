@@ -6,7 +6,7 @@ import secrets
 from flask import Blueprint, Response, abort, current_app, flash, g, redirect, render_template, request, url_for
 from werkzeug.utils import secure_filename
 
-from .. import activity, analytics, auth, backup, catalog, db, mailer, marketplace as M, ownership
+from .. import guard, activity, analytics, auth, backup, catalog, db, mailer, marketplace as M, ownership
 from ..storage import StorageError
 
 bp = Blueprint("market_account", __name__)
@@ -329,6 +329,14 @@ def thread(iid):
         if auth.rate_limited(f"message:{uid}", 30, 3600):
             abort(429)
         body = (request.form.get("message") or "").strip()
+        stop = None
+        if guard.needs_verification(g.user):
+            stop = "Confirm your email address first (we sent you a link), then send your message."
+        elif guard.too_many_links(body):
+            stop = "Please keep links to two or fewer per message."
+        if stop:
+            flash(stop, "error")
+            return redirect(url_for("market_account.thread", iid=iid))
         fs = request.files.get("file")
         name = data = err = None
         store = _file_store()
