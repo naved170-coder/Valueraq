@@ -1,0 +1,89 @@
+{
+  "summary": "Wrote 1 article (website flipping guide) and 3 reference pages (premium domain, how to determine enterprise value, domain broker); nothing held, nothing needs the owner.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/website-flipping-guide/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/website-flipping/, /guides/how-to-buy-a-website/; this is the long guide with a three-outcome flip, break-even price and risk table)",
+      "images": "1 featured, 2 charts",
+      "serp": "used",
+      "keywords": [
+        "website flipping",
+        "flipping websites",
+        "website flipping risks"
+      ],
+      "note": "Invented $45,000 flip, own arithmetic; SBA, BizBuySell and CFI quotes from sources.json. Releases 9 Nov 6:00 am Pakistan."
+    },
+    {
+      "path": "/glossary/premium-domain/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/domain-appraisal-explained/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "buy premium domain",
+        "registry premium vs aftermarket"
+      ],
+      "note": "No external figures; invented five-year cost example. Releases 9 Nov 12:00 am Pakistan."
+    },
+    {
+      "path": "/guides/how-to-determine-enterprise-value/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/enterprise-value/; this is the how-to with a worked example and small-business angle)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "how to determine enterprise value",
+        "enterprise value vs equity value"
+      ],
+      "note": "CFI definition from sources.json; invented example. Releases 9 Nov 12:00 pm Pakistan."
+    },
+    {
+      "path": "/glossary/domain-broker/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/business-broker/, /glossary/premium-domain/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "premium domain broker",
+        "domain broker questions"
+      ],
+      "note": "10% fee is labelled as an invented assumption, not a market rate. Releases 9 Nov 6:00 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "serp_compare",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: not opened (web fetch unavailable); only sources.json links used"
+  ],
+  "notes": [
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
+    "Skipped for now: how-much-does-it-cost-to-sell-an-online-business (fees, held, no verified source), UK/Gulf/Flippa pages (country rules or competitor), tax-when-you-sell-a-website (tax rules). earn-out, customer-acquisition-cost and lifetime-value duplicate existing earnout, cac and ltv pages; remove or replace them in the calendar.",
+    "Render ranking logs not read this run.",
+    "Web research was not used; saved research in seo/serp/ and seo/sources.json were used."
+  ]
+}
