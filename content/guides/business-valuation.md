@@ -1,14 +1,14 @@
 ---
 title: How Digital Businesses Are Valued
-meta_title: How to Value an Online Business: SDE & Multiples
-meta_description: The simple way online businesses are valued: SDE or profit times a multiple, adjusted for risk. Clear steps, a worked example and free tools.
+meta_title: How to Value an Online Business: 6 Types, Steps, Example
+meta_description: Online businesses are valued as profit or ARR times a multiple. See starting ranges for six types and 5 steps to value yours. Free tools included.
 h1: How Are Digital Businesses Valued?
 section: Valuation
 cluster: analysis
 order: 4
 answer: Most small digital businesses are valued with the market-multiple method, where a financial metric (usually annual profit, sometimes annual recurring revenue) is multiplied by a figure reflecting the business's risk and growth. Other methods, such as discounted cash flow or asset-based valuation, are used less often for small online businesses but help in specific cases.
 published: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-08
 methodology_version: 1.0
 related: /tools/, /calculators/, /glossary/sde/, /glossary/ebitda/, /guides/revenue-vs-profit-multiples/, /tools/app-valuation/, /tools/newsletter-valuation/, /tools/ecommerce-valuation/
 cta: /tools/
@@ -80,6 +80,33 @@ Imagine three businesses each earning $60,000 a year in SDE:
 
 The newsletter's long history and low workload support a higher multiple. The app's short history and channel dependence push its multiple down. The store sits between them on earnings, but the buyer also pays for inventory at cost. Same profit, three different prices, which is why the multiple matters as much as the earnings figure.
 
+## Starting ranges by business type
+
+These are {{BRAND}}'s default multiples, which are its own editorial assumptions and not market data. See the [methodology](/methodology/).
+
+| Type | Base figure | Default range | Tool |
+|---|---|---|---|
+| Website | Annual profit (SDE) | 2.5x to 4.0x | [Website valuation tool](/tools/website-valuation/) |
+| Ecommerce store | Annual profit (SDE), plus stock at cost | 2.0x to 3.5x | [Ecommerce valuation tool](/tools/ecommerce-valuation/) |
+| Newsletter | Annual profit (SDE) | 2.5x to 4.0x | [Newsletter valuation tool](/tools/newsletter-valuation/) |
+| Mobile app | Annual profit (SDE) | 2.0x to 3.5x | [App valuation tool](/tools/app-valuation/) |
+| SaaS | Annual recurring revenue | 2.0x to 5.0x | [SaaS valuation tool](/tools/saas-valuation/) |
+| AI business | Annual recurring revenue | 1.5x to 4.5x | [AI business valuation tool](/tools/ai-business-valuation/) |
+
+## How adjustments work
+
+The multiple moves up or down with the questions in the table above. In {{BRAND}}'s method, each answer has a fixed percentage effect and the effects multiply. For example, +8% and −6% combine to ×1.08 × 0.94 = ×1.015. The combined factor is held between ×0.5 and ×1.4, so no set of answers can push the multiple beyond those limits.
+
+Worked example, with invented figures: a website earns $60,000 a year in SDE. The default midpoint is 3.2x and the combined adjustment is ×1.015, so the multiple is 3.2 × 1.015 = 3.248 and the value is $60,000 × 3.248 = $194,880. {{BRAND}} rounds results, so a tool would show a rounded figure.
+
+## How to value your own business: 5 steps
+
+1. **Pick the right base.** Annual profit (SDE) for most sites, apps, newsletters and stores. Annual recurring revenue for SaaS and AI.
+2. **Get clean figures.** Use the last 12 months, and match them to bank or payment records.
+3. **Choose a starting range.** Use the table above, or the multiples you see in similar listings.
+4. **Adjust for risk.** Move toward the low end for a young business, falling profit, one dominant channel, or heavy owner work. Move toward the high end for the reverse.
+5. **Check the result.** Run a second method, such as asset value as a floor, and test the price at cautious figures. Then use the result to prepare for [due diligence](/guides/digital-business-due-diligence/).
+
 ## Limitations of any valuation method
 
 Every method depends on accurate figures and reasonable judgement about the future. Real sale prices also depend on deal structure (earn-outs, seller financing, transition support), buyer type (individual, portfolio operator or strategic acquirer) and market conditions. An estimate is a starting point for negotiation and [due diligence](/guides/digital-business-due-diligence/), not a promise of a price.
@@ -97,3 +124,11 @@ Because multiples price risk and growth. Age, trend, concentration, workload and
 ### Should I get a professional valuation?
 
 For large transactions, disputes, tax planning or financing, a professional valuation from a qualified adviser is worth the cost. Online tools like {{BRAND}}'s help you prepare and set expectations.
+
+### How much is my online business worth?
+
+Multiply your annual profit by a multiple in the range for your type of business, then adjust for risk. For a website the default range is 2.5x to 4.0x, so $60,000 of profit gives $150,000 to $240,000 before adjustments. That is a starting range, not a price.
+
+### Which valuation tool should I use?
+
+Use the one that matches your business type in the table above. Each applies the published method to your own figures.

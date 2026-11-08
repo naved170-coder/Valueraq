@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (website flipping guide) and 3 reference pages (premium domain, how to determine enterprise value, domain broker); nothing held, nothing needs the owner.",
+  "summary": "Wrote 1 article (website flipping guide) and 3 reference pages (premium domain, how to determine enterprise value, domain broker); nothing held, nothing needs the owner. Also improved 4 existing pages (business valuation formula, business valuation, average order value, backlink).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -58,6 +58,30 @@
         "domain broker questions"
       ],
       "note": "10% fee is labelled as an invented assumption, not a market rate. Releases 9 Nov 6:00 pm Pakistan."
+    },
+    {
+      "path": "/guides/business-valuation-formula/",
+      "action": "improve",
+      "type": "Existing page",
+      "note": "Added data-needed column, which-formula lookup table for online businesses and a 6th FAQ; new title/description."
+    },
+    {
+      "path": "/guides/business-valuation/",
+      "action": "improve",
+      "type": "Existing page",
+      "note": "Added default-range table by type, adjustment worked example, 5-step DIY list, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/glossary/average-order-value/",
+      "action": "improve",
+      "type": "Existing page",
+      "note": "Added worked AOV-to-profit-to-value example (default 2.7x) and 3 FAQs; new title/description."
+    },
+    {
+      "path": "/glossary/backlink/",
+      "action": "improve",
+      "type": "Existing page",
+      "note": "Added buyer check table, second link-concentration example and 3 FAQs; new title/description."
     }
   ],
   "tasks": [
@@ -71,7 +95,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

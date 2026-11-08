@@ -2,15 +2,15 @@
 title: What Is a Backlink?
 term: Backlink
 aliases: backlink, backlinks, inbound link, inbound links
-meta_title: What Is a Backlink? Definition, Example & Why Buyers Check
-meta_description: A backlink is a link to your site from another website. See how backlinks work, a worked example and why buyers review a site's link profile before they pay.
+meta_title: Backlink: Meaning, Example & What Buyers Check
+meta_description: A backlink is a link to your site from another website. See a worked link-profile example, a buyer checklist and why one source can put traffic at risk.
 h1: Backlink
 definition: A backlink is a link from one website to another; for the site being linked to, it is an inbound link that can send visitors and that search engines may take into account.
 cluster: website
 page_type: reference
 keywords: backlink, what is a backlink, backlinks meaning, inbound link
 related: /glossary/organic-traffic/, /glossary/traffic/, /glossary/digital-business/, /guides/how-to-verify-website-traffic/, /guides/website-valuation/, /tools/website-valuation/
-updated: 2026-10-19
+updated: 2026-11-08
 publish_at: 2026-10-19T07:00Z
 image: /static/img/articles/backlink.png
 image_alt: Featured image for the glossary entry What Is a Backlink
@@ -47,6 +47,33 @@ Buyers usually ask:
 - Has the owner received any notice from a search engine about unnatural links?
 
 VALUERAQ's [Website Valuation Tool](/tools/website-valuation/) does not take a backlink count as an input. It looks at profit, trend, age, traffic concentration and owner time, as set out on the [methodology](/methodology/) page. Backlinks are part of a buyer's own review and of [how to verify website traffic](/guides/how-to-verify-website-traffic/).
+
+## What a buyer checks, and what it shows
+
+| Check | Why it matters |
+|---|---|
+| Number of different sites linking, not total links | 150 links from 40 sites is stronger than 150 links from 2 |
+| Share from the biggest source | A high share means one change could remove most links |
+| Links to the pages that earn the most | These links support the traffic behind the profit |
+| Paid or traded links | They can bring ranking trouble after a sale |
+| An expired or previously used domain | Links may belong to an earlier site, not this one's content |
+| Spam or unrelated links | They add risk and little value |
+
+A second example, with invented figures: a site has 60 linking sites. Of these, 45 link to a page that brings in 70% of the site's search visits. If 30 of those 45 are one blog network, the share is 30 ÷ 45 = 67% of the links that support the main page. A buyer would test the price at lower traffic.
+
+## Frequently asked questions
+
+### Does a bigger backlink count always raise a site's value?
+
+No. A buyer values profit, and links matter only as support for the traffic behind it. Quality, spread and source matter more than count.
+
+### Should I buy backlinks before selling a website?
+
+It is a risk. Links bought or traded to influence rankings can lead to a page ranking lower, and a buyer's review may find them. Earned links are safer.
+
+### How can I see a site's backlinks before buying?
+
+Ask the seller for a backlink report from their own tools and compare it with the traffic data. See [how to verify website traffic](/guides/how-to-verify-website-traffic/).
 
 ## Related terms
 

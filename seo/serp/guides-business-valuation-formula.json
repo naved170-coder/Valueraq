@@ -39,6 +39,7 @@
   "Add a combined example applying all four to the same business"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-08",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added data-needed column, which-formula lookup table for online businesses and a 6th FAQ; new title/description."
 }

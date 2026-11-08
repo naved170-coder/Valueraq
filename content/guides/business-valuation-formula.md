@@ -1,7 +1,7 @@
 ---
 title: Business Valuation Formulas: Four Ways to Put a Number on a Business
-meta_title: Business Valuation Formula: 4 Methods + Examples
-meta_description: Four business valuation formulas in plain English: profit multiple, revenue multiple, EBITDA and DCF, each with an example. Free calculator included.
+meta_title: Business Valuation Formula: 4 Methods, One Worked Example
+meta_description: Four business valuation formulas on one business: $72,000 to $216,000. See a comparison table and which formula fits yours. Free calculator included.
 h1: Business Valuation Formulas: Four Ways to Put a Number on a Business
 section: Valuation
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: The most widely used business valuation formula for a small business is value = yearly profit × a multiple. Three others are used alongside it: yearly revenue × a multiple, assets minus liabilities, and discounted cash flow, which adds up future cash in today's money. Using two of them together gives a more reliable range than any one alone.
 keywords: business valuation formula, company valuation formula, formula to value a business, how to determine the value of a business, business worth formula
 published: 2026-10-08
-updated: 2026-10-08
+updated: 2026-11-08
 publish_at: 2026-10-08T13:00Z
 image: /static/img/articles/business-valuation-formula.png
 image_alt: Featured image for the guide Business Valuation Formulas, four ways to put a number on a business
@@ -28,12 +28,12 @@ This guide gives each formula with the arithmetic shown. For the wider picture o
 
 ## The four formulas at a glance
 
-| Formula | Calculation | Best for | Main weakness |
-|---|---|---|---|
-| Earnings multiple | Yearly profit × multiple | Profitable small businesses | Depends on a clean profit figure |
-| Revenue multiple | Yearly revenue × multiple | Subscription software, fast growth | Ignores costs |
-| Asset value | Assets − liabilities | Loss-making or asset-heavy businesses | Ignores earning power |
-| Discounted cash flow | Sum of future cash flows in today's money | Large, predictable businesses | Relies on a forecast |
+| Formula | Calculation | Best for | Data needed | Main weakness |
+|---|---|---|---|---|
+| Earnings multiple | Yearly profit × multiple | Profitable small businesses | A year of profit records | Depends on a clean profit figure |
+| Revenue multiple | Yearly revenue × multiple | Subscription software, fast growth | Revenue, ideally recurring | Ignores costs |
+| Asset value | Assets − liabilities | Loss-making or asset-heavy businesses | A list of assets and debts | Ignores earning power |
+| Discounted cash flow | Sum of future cash flows in today's money | Large, predictable businesses | A multi-year forecast and a required return | Relies on a forecast |
 
 The U.S. Small Business Administration groups these into three approaches. The market approach "compares your business to other similar businesses that have recently sold," which is what both multiples do. The income approach "looks at projected revenue and accounts for potential risks," which is discounted cash flow. The assets approach "subtracts total business liabilities from the total value of all assets."
 
@@ -136,6 +136,18 @@ Working backwards is often more useful than working forwards. It turns "is this 
 
 ## Which formula to use
 
+Quick lookup for online businesses:
+
+| Your business | Start with | Check against |
+|---|---|---|
+| Content site, affiliate or ad-funded site | Earnings multiple | Asset value, as a floor |
+| Ecommerce store | Earnings multiple, plus stock at cost | Revenue multiple, with care |
+| Newsletter or app | Earnings multiple | Asset value |
+| SaaS or AI product | Revenue multiple on recurring revenue | Earnings multiple, if profitable |
+| Loss-making or brand-new business | Asset value | Judgement about what a buyer could do with it |
+
+The longer version follows.
+
 - **A profitable store, content site, app or newsletter:** the earnings multiple, checked against asset value as a floor.
 - **Subscription software:** the revenue multiple on recurring revenue, checked against the earnings multiple. See [SaaS valuation multiples](/guides/saas-valuation-multiples/).
 - **A business with losses:** asset value, plus a judgement about what a particular buyer could do with the audience or technology.
@@ -173,6 +185,10 @@ That depends on the purpose and the country, and it is set by the appraiser or t
 ### Why do two calculators give different answers?
 
 They use different formulas, different default multiples or different definitions of profit. Check which profit figure each one asks for and whether stock is included.
+
+### Which formula is best for a small online business?
+
+The earnings multiple, because most small online businesses are bought for the profit they produce. Use asset value as a floor and a second formula as a check.
 
 ## Sources
 
