@@ -8,11 +8,15 @@ cluster: buying
 order: 10
 answer: To buy an online business, decide what you want to own and can run, shortlist listings whose figures match, check each asking price against its earnings, verify every important figure through due diligence, agree terms in a written purchase agreement, pay through escrow, and follow a planned handover of every asset and account.
 published: 2026-09-30
-updated: 2026-11-02
+updated: 2026-11-09
 related: /businesses-for-sale/, /guides/digital-business-due-diligence/, /calculators/business-multiple-calculator/, /glossary/due-diligence/
 cta: /businesses-for-sale/
 cta_text: Browse digital businesses for sale, with implied multiples calculated on every listing.
 ---
+
+## Buying a business online: the short answer
+
+Buying a business online means purchasing an existing website, app, SaaS product, newsletter or online store instead of building one. The usual path is seven steps: set a budget and criteria, shortlist listings, contact the seller, verify the figures through due diligence, agree terms in writing, pay through escrow, and take over every account. Most small online businesses change hands at a multiple of yearly profit, so compare any asking price with the profit it claims before you spend time on a deal.
 
 ## Key takeaway
 

@@ -2426,6 +2426,179 @@
      "images": "1 featured image"
     }
    ]
+  },
+  {
+   "day": 45,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "acquiring-a-business-checklist",
+     "title": "Acquiring a Business Checklist: From First Look to Day 100",
+     "primary_keyword": "acquiring a business checklist",
+     "secondary_keywords": [
+      "company acquisition checklist",
+      "pre acquisition due diligence checklist"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1200-2000",
+     "tool_link": "/calculators/business-multiple-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "purchase-price-allocation",
+     "title": "What Is Purchase Price Allocation?",
+     "term": "Purchase Price Allocation",
+     "primary_keyword": "purchase price allocation",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 46,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-marketing-agency",
+     "title": "How to Value a Marketing Agency",
+     "primary_keyword": "marketing agency valuation calculator",
+     "secondary_keywords": [
+      "how to value a service business"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1200-2000",
+     "tool_link": "/calculators/sde-valuation-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "normalized-earnings",
+     "title": "What Is Normalized Earnings?",
+     "term": "Normalized Earnings",
+     "primary_keyword": "normalized earnings",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 47,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "mobile-app-valuation-guide",
+     "title": "Mobile App Valuation: What Buyers Pay and Why",
+     "primary_keyword": "mobile app valuation",
+     "secondary_keywords": [
+      "free app valuation",
+      "company valuation app"
+     ],
+     "cluster": "apps",
+     "section": "Apps",
+     "words": "1200-2000",
+     "tool_link": "/tools/app-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "app-store-optimization",
+     "title": "What Is App Store Optimization?",
+     "term": "App Store Optimization",
+     "primary_keyword": "app store optimization",
+     "cluster": "apps",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 48,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-sell-your-online-business-without-a-broker",
+     "title": "How to Sell an Online Business Without a Broker",
+     "primary_keyword": "sell my company online",
+     "secondary_keywords": [
+      "i want to sell my online business",
+      "best place to sell a small business"
+     ],
+     "cluster": "selling",
+     "section": "Selling",
+     "words": "1200-2000",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "run-rate-revenue",
+     "title": "What Is Run-Rate Revenue?",
+     "term": "Run-Rate Revenue",
+     "primary_keyword": "run-rate revenue",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 49,
+   "pages": [
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "how-to-value-a-tech-company",
+     "title": "How to Value a Tech Company, Step by Step",
+     "primary_keyword": "tech company valuation calculator",
+     "secondary_keywords": [
+      "service company valuation calculator"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1200-2000",
+     "tool_link": "/calculators/saas-valuation-calculator/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "recurring-revenue-multiple",
+     "title": "What Is Recurring Revenue Multiple?",
+     "term": "Recurring Revenue Multiple",
+     "primary_keyword": "recurring revenue valuation multiples",
+     "cluster": "saas",
+     "words": "300-600",
+     "hold": false,
+     "images": "1 featured image"
+    }
+   ]
   }
  ]
 }

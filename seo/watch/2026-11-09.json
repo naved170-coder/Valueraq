@@ -1,1 +1,38 @@
-{"status":"ok","summary":"Morning check started; stop checks passed.","checks":["started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; I carried out one ranking action and added five days of topics to the calendar. Nothing needs the owner.",
+  "checks": [
+    "Last night's run: done (8 Nov), 1 article + 3 reference pages, 4 improved pages",
+    "Queue: pages and images for today's slots (website flipping guide, premium domain, enterprise value how-to, domain broker) exist; later slots are written by tonight's run",
+    "Tests: 132 passed; seo-check: 0 problems; audit: 222 URLs, 218 indexable, 0 critical, 0 warnings",
+    "Deploy: previous deploy live, no error-level log lines since 8 Nov 00:00Z; newest deploy was this check's own trace commit and was still building when checked",
+    "Pages live check: skipped",
+    "Task data honesty: last night's report items match the pages and images in the repository",
+    "Calendar supply: 9 unwritten days before top-up, now 14",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 8 Nov, data to 7 Nov). Positions are Search Console averages, not live ranks. Last 7 days: 11 clicks, 4,197 impressions",
+    "Article written: yes (website flipping guide)",
+    "Ranking review (Monday): open actions are mostly saas cannibal items already worked on 5 Nov; carried out the one 'striking' action",
+    "pip could not install gunicorn in this environment only; the gates ran fine without it"
+  ],
+  "fixed": [
+    "Ranking action d9fe1799d534: 'buying a business online' now has a short-answer section at the top of the buying guide, linked from two related guides",
+    "Calendar had 9 unwritten days (under 10); added 5 duplicate-checked days (10 topics) at the end"
+  ],
+  "needs_owner": [],
+  "weekly": {
+    "summary": "A steady week: 26 pages released, no missed runs, no held pages, and Google impressions are flat at about 4,200 a week with clicks rising from 3 to 11.",
+    "lines": [
+      "Pages published 2 to 8 Nov: 26 (9 long guides, 17 reference pages).",
+      "Pages held and still waiting: 0.",
+      "Days with a missed run: 0 (every day from 31 Oct to 8 Nov has a report).",
+      "Repairs this week: 1 ranking action, 1 calendar top-up; no broken links found (audit: 0 critical, 0 warnings).",
+      "Unwritten days left in the calendar: 14 after the top-up.",
+      "Coming next: how much it costs to sell an online business, selling an online business from the UK, buying an online business from the Gulf.",
+      "Search Console, last 7 days against the 7 before: 11 clicks against 3, 4,197 impressions against 3,877, average position 43.6 against 51.4 (averages, not live ranks).",
+      "Last 28 days: 37 clicks, 15,761 impressions, 123 pages appeared in Google, 1,424 searches.",
+      "Searches by position: 11 in positions 1 to 3, 47 in 4 to 10, 54 in 11 to 20.",
+      "The snapshot does not list the top five searches by impressions, the 8 to 20 position searches or low click-rate pages, and has no figures for the 28 days before, so I did not reorder the calendar this week."
+    ]
+  }
+}

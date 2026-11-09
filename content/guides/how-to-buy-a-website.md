@@ -10,7 +10,7 @@ page_type: article
 answer: To buy a website, set a budget and decide what kind of site you can run, find listings, ask for proof of traffic and revenue, value the site on its profit, agree the terms in writing, pay through escrow and take over the domain, hosting and accounts in an agreed order.
 keywords: buy websites, websites for sale, website business for sale, buy and sell websites, buying a website
 published: 2026-10-12
-updated: 2026-10-12
+updated: 2026-11-09
 publish_at: 2026-10-12T13:00Z
 image: /static/img/articles/how-to-buy-a-website.png
 image_alt: How to Buy a Website - a first-time buyer's guide (VALUERAQ guide)
@@ -22,7 +22,7 @@ cta_text: Browse websites for sale on the marketplace, or message a seller direc
 
 ## Key takeaway
 
-Buying a website is buying a small business that happens to live online. The price is mostly a multiple of the profit it earns, so the work is in proving that the profit is real, understanding where the visitors come from, and making sure the site can keep earning once the seller leaves. This guide walks a first-time buyer through each step in order. For the wider picture across site types, see [buying digital businesses](/guides/buying-digital-businesses/).
+Buying a website is buying a small business that happens to live online. The price is mostly a multiple of the profit it earns, so the work is in proving that the profit is real, understanding where the visitors come from, and making sure the site can keep earning once the seller leaves. This guide walks a first-time buyer through each step in order. For the wider picture across site types, see our guide to [buying a business online](/guides/buying-digital-businesses/).
 
 Figures here are examples built from {{BRAND}}'s published default assumptions. They are estimates, not records of real sales.
 

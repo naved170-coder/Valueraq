@@ -10,7 +10,7 @@ page_type: article
 answer: To buy an ecommerce business, screen listings by profit and sales channel, rebuild the profit figure from source reports, count the stock before you pay for it, check the supplier and ad account history, agree terms in writing and pay through escrow. The stock is normally paid for on top of the earnings-based price.
 keywords: buy ecommerce business, buying a business online, ecommerce business for sale, ecommerce stores for sale, online stores for sale
 published: 2026-11-01
-updated: 2026-11-01
+updated: 2026-11-09
 publish_at: 2026-11-01T01:00Z
 image: /static/img/articles/how-to-buy-an-ecommerce-business.png
 image_alt: Featured image for the guide on how to buy an ecommerce business, covering stock, suppliers and transfer
@@ -23,6 +23,8 @@ cta_text: Browse ecommerce stores for sale on VALUERAQ, read each seller's figur
 ## Key takeaway
 
 Buying an ecommerce business is different from buying a content site because you are also buying stock, suppliers and a way of getting customers that you do not control. The safest route is to treat the seller's profit figure as a claim to be tested: rebuild it from payment and sales reports, count the stock yourself, ask what happens if the main sales channel or the main supplier disappears, and pay through escrow only when the handover is agreed in writing.
+
+For the full process across every kind of online business, see our guide to [buying a business online](/guides/buying-digital-businesses/).
 
 The figures below are examples built from {{BRAND}}'s published default assumptions. They are estimates, not records of real sales.
 
