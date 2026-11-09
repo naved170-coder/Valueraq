@@ -16,6 +16,7 @@
   "FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-09",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Scope line, $5,000 MRR buy-vs-build worked example with price table, extra FAQ; new title and description."
 }

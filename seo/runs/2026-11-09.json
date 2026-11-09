@@ -1,30 +1,114 @@
 {
-  "summary": "Wrote 1 article (how to buy a Shopify store) and 3 reference pages (book value of a company, buy a domain name, transfer a Shopify store); nothing held, nothing needs the owner.",
+  "summary": "Wrote 1 article (how to buy a Shopify store) and 3 reference pages (book value of a company, buy a domain name, transfer a Shopify store); nothing held, nothing needs the owner. Also improved 4 existing pages (buy vs build SaaS, buying digital businesses, book value, burn rate).",
   "model": "claude-sonnet-5-5",
   "items": [
-    {"path": "/guides/how-to-buy-a-shopify-store/", "action": "new", "type": "Article", "score": 8.6,
-     "duplicate": "pass (closest: /guides/how-to-buy-an-ecommerce-business/, /guides/shopify-store-valuation/; this is the Shopify-specific buyer guide with a 10-point check table and priced example)",
-     "images": "1 featured, 2 charts", "serp": "used",
-     "keywords": ["shopify business for sale", "how to buy a shopify store", "shopify store price"],
-     "note": "Invented $48,000-profit store, own arithmetic; SBA and BizBuySell quotes from sources.json. Releases 10 Nov 6:00 am Pakistan."},
-    {"path": "/guides/how-to-find-the-book-value-of-a-company/", "action": "new", "type": "Question answered", "score": 8.5,
-     "duplicate": "pass (closest: /glossary/book-value/; this is the how-to with steps, a comparison table and the online-business angle)",
-     "images": "1 featured", "serp": "used",
-     "keywords": ["how to find the book value of a company", "book value vs market value"],
-     "note": "SBA and IRS quotes from sources.json; invented example. Releases 10 Nov 12:00 am Pakistan."},
-    {"path": "/guides/how-to-buy-a-domain-name/", "action": "new", "type": "Question answered", "score": 8.5,
-     "duplicate": "pass (closest: /glossary/premium-domain/, /guides/domain-appraisal-explained/, /glossary/domain-broker/)",
-     "images": "1 featured", "serp": "used",
-     "keywords": ["how to buy a domain name", "domain marketplace"],
-     "note": "No external figures; transfer waiting periods described only as 'ask the registrar'. Releases 10 Nov 12:00 pm Pakistan."},
-    {"path": "/guides/how-to-transfer-a-shopify-store/", "action": "new", "type": "Question answered", "score": 8.5,
-     "duplicate": "pass (closest: /guides/how-to-transfer-a-website-to-a-new-owner/, /guides/how-to-sell-a-shopify-store/)",
-     "images": "1 featured", "serp": "used",
-     "keywords": ["transfer shopify store ownership", "shopify store handover checklist"],
-     "note": "Shopify's exact transfer steps could not be opened, so the page tells readers to follow Shopify's current help pages. Releases 10 Nov 6:00 pm Pakistan."}
+    {
+      "path": "/guides/how-to-buy-a-shopify-store/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/how-to-buy-an-ecommerce-business/, /guides/shopify-store-valuation/; this is the Shopify-specific buyer guide with a 10-point check table and priced example)",
+      "images": "1 featured, 2 charts",
+      "serp": "used",
+      "keywords": [
+        "shopify business for sale",
+        "how to buy a shopify store",
+        "shopify store price"
+      ],
+      "note": "Invented $48,000-profit store, own arithmetic; SBA and BizBuySell quotes from sources.json. Releases 10 Nov 6:00 am Pakistan."
+    },
+    {
+      "path": "/guides/how-to-find-the-book-value-of-a-company/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/book-value/; this is the how-to with steps, a comparison table and the online-business angle)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "how to find the book value of a company",
+        "book value vs market value"
+      ],
+      "note": "SBA and IRS quotes from sources.json; invented example. Releases 10 Nov 12:00 am Pakistan."
+    },
+    {
+      "path": "/guides/how-to-buy-a-domain-name/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/premium-domain/, /guides/domain-appraisal-explained/, /glossary/domain-broker/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "how to buy a domain name",
+        "domain marketplace"
+      ],
+      "note": "No external figures; transfer waiting periods described only as 'ask the registrar'. Releases 10 Nov 12:00 pm Pakistan."
+    },
+    {
+      "path": "/guides/how-to-transfer-a-shopify-store/",
+      "action": "new",
+      "type": "Question answered",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/how-to-transfer-a-website-to-a-new-owner/, /guides/how-to-sell-a-shopify-store/)",
+      "images": "1 featured",
+      "serp": "used",
+      "keywords": [
+        "transfer shopify store ownership",
+        "shopify store handover checklist"
+      ],
+      "note": "Shopify's exact transfer steps could not be opened, so the page tells readers to follow Shopify's current help pages. Releases 10 Nov 6:00 pm Pakistan."
+    },
+    {
+      "path": "/guides/buy-vs-build-saas/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "note": "Scope line, $5,000 MRR buy-vs-build worked example with price table, extra FAQ; new title and description."
+    },
+    {
+      "path": "/guides/buying-digital-businesses/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "note": "Stage timeline table, where-to-find section, offer checklist, financing link, two FAQs; new title and description."
+    },
+    {
+      "path": "/glossary/book-value/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "note": "Book vs market vs fair market value table, near-zero-assets newsletter example, FAQ; new title and description."
+    },
+    {
+      "path": "/glossary/burn-rate/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "note": "Runway sensitivity table, buyer and seller section for loss-making SaaS, FAQ; new title and description."
+    }
   ],
-  "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "serp_compare", "gates", "scheduled", "link_check", "report"],
-  "checks": ["Tests: 132 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: checked by seo-check, 0 broken", "External links: not opened (web fetch unavailable); only sources.json links used"],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "serp_compare",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report",
+    "improve"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: not opened (web fetch unavailable); only sources.json links used"
+  ],
   "notes": [
     "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
     "Page publish times: book value 12 am, article 6 am, domain 12 pm, transfer 6 pm (10 Nov Pakistan).",

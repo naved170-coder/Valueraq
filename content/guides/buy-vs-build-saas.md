@@ -1,20 +1,22 @@
 ---
 title: Buy vs Build a SaaS Business
-meta_title: Buy vs Build a SaaS: Cost, Time & Risk Compared
-meta_description: Should you buy an existing SaaS or build your own? Compare cost, time to revenue and risk, with a worked example of both paths. Free calculator included.
+meta_title: Buy vs Build a SaaS Business: Cost Example & Table
+meta_description: Buy an existing SaaS business or build your own? See a $5,000 MRR cost example, a decision table and when each path wins. Free calculator included.
 h1: Buy vs Build a SaaS Business
 section: Buying
 cluster: saas
 order: 12
 answer: Buying a SaaS business trades capital for certainty: you pay a multiple of existing revenue and own customers from day one. Building trades time for capital: it costs little to start but most of the work happens before any revenue arrives, and the product may never find customers. Buy if you have capital and want to skip the search for product-market fit. Build if you have time, a specific unmet need you understand, and can survive a year without income from it.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-09
 related: /tools/saas-valuation/, /guides/saas-valuation/, /guides/digital-business-due-diligence/, /businesses-for-sale/saas/, /glossary/arr/
 cta: /tools/saas-valuation/
 cta_text: Price a SaaS business before you make an offer.
 ---
 
 ## Key takeaway
+
+This page is about buying an existing SaaS **business**, with customers and revenue, or building a new one from scratch. It is not about choosing software tools for your own company.
 
 The two routes fail in different places. A build fails when nobody wants the product. A purchase fails when you paid for revenue that does not survive the handover. Buying moves the risk from *will anyone want this* to *is what I am being shown real*, and the second question is the easier one to answer with evidence.
 
@@ -31,6 +33,28 @@ The two routes fail in different places. A build fails when nobody wants the pro
 | Hardest part | Due diligence | Distribution |
 
 The multiple range is a published platform assumption, not a measured market statistic. See the [methodology](/methodology/).
+
+## Worked example: a $5,000 MRR product
+
+All figures below are invented to show the arithmetic. The multiple range is {{BRAND}}'s default for SaaS, which is **2.0 to 5.0 times ARR** with 3.5 as the midpoint (see the [methodology](/methodology/)).
+
+**Buying.** A product with $5,000 in [monthly recurring revenue](/glossary/mrr/) has an [ARR](/glossary/arr/) of $5,000 × 12 = $60,000.
+
+| Multiple | Calculation | Price |
+|---|---|---|
+| 2.0 (low) | $60,000 × 2.0 | $120,000 |
+| 3.5 (midpoint) | $60,000 × 3.5 | $210,000 |
+| 5.0 (high) | $60,000 × 5.0 | $300,000 |
+
+**Building.** Suppose you need 12 months to reach $5,000 MRR and your living costs are $3,000 a month, with $300 a month for hosting and tools. Cash cost: 12 × ($3,000 + $300) = $39,600. That is far below the purchase price, but it assumes the product reaches $5,000 MRR in 12 months, which is the uncertain part. If it takes 24 months, the same arithmetic gives $79,200. If it never gets there, you have spent the money and own no revenue.
+
+| | Buy (midpoint) | Build |
+|---|---|---|
+| Cash out | $210,000 | $39,600 if 12 months, $79,200 if 24 |
+| Revenue on day one | $5,000 a month | $0 |
+| Outcome known before you spend | Mostly | No |
+
+The comparison does not decide the question. It shows that building trades a lower cash cost for a longer wait and a risk of no revenue.
 
 ## What buying actually costs
 
@@ -84,6 +108,10 @@ Under {{BRAND}}'s default assumptions, 2× to 5× ARR before adjustments for gro
 ### Can I buy a SaaS business with no technical skills?
 
 You can, but you need a technical person you trust — for the code review before the purchase and for maintenance afterwards. Budget for them as a running cost, not a one-off.
+
+### Is a $5,000 MRR SaaS business worth $210,000?
+
+Not necessarily. That figure is the midpoint of a published default range applied to an invented product. Churn, growth, margin, concentration and owner workload move the range. Enter real figures into the [SaaS Valuation Tool](/tools/saas-valuation/).
 
 ### How long does buying take?
 

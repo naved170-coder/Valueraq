@@ -1,7 +1,7 @@
 ---
 title: How to Buy an Online Business
-meta_title: How to Buy an Online Business: Step-by-Step Guide
-meta_description: Buy an online business the safe way: set criteria, check the numbers, negotiate, use escrow and take over smoothly. Step by step, with free tools.
+meta_title: How to Buy an Online Business: 7 Steps & Checklists
+meta_description: Buy an online business in 7 steps, with a stage timeline table, an offer checklist and where to find businesses. Free calculator included.
 h1: How to Buy an Online Business
 section: Buying
 cluster: buying
@@ -21,6 +21,24 @@ Buying a business online means purchasing an existing website, app, SaaS product
 ## Key takeaway
 
 Buying an online business trades build time for purchase price. You get existing revenue, customers and systems immediately, but you also take on the risk that earnings fall after the sale. A careful process, focused on verifying figures and understanding why the business earns what it does, reduces that risk.
+
+## The process at a glance
+
+| Stage | What you do | What you should have at the end |
+|---|---|---|
+| 1. Criteria | Set budget, model, hours and risk | A one-page buying brief |
+| 2. Shortlist | Compare listings and implied multiples | Three to five candidates |
+| 3. Contact | Ask focused questions, sign an NDA | A reason for sale and a list of included assets |
+| 4. Offer | Send a letter of intent | Agreed price and main terms |
+| 5. Due diligence | Verify revenue, traffic and ownership | Evidence for every important figure |
+| 6. Escrow | Sign the agreement, fund escrow | Money held by an independent service |
+| 7. Handover | Move every asset and account | A checked asset list, then escrow release |
+
+Small deals can close in a few weeks and larger ones often take a few months. Due diligence and the transfer take most of that time, not the negotiation.
+
+## Where to find businesses for sale
+
+Browse reviewed listings on {{BRAND}}'s [businesses for sale](/businesses-for-sale/) pages and filter by category, price, profit and age. You can also contact the owner of a business directly, ask a business broker, or watch for listings in communities you already know. Whichever route you use, apply the same checks.
 
 ## Step 1: Define what you're looking for
 
@@ -64,6 +82,16 @@ Price is one part of the deal. Terms can matter as much:
 - **Non-compete.** An agreement that the seller won't start a competing business for a period.
 - **Inventory**, for ecommerce, usually paid at cost after a stock count.
 
+A short offer is easier to compare when it uses a checklist. A [letter of intent](/glossary/letter-of-intent/) usually covers:
+
+- [ ] The price and how it will be paid
+- [ ] What is included: domain, code, accounts, lists, files, stock
+- [ ] How working capital and stock are handled
+- [ ] The due diligence period and what you may see
+- [ ] Transition support from the seller
+- [ ] A [non-compete](/glossary/non-compete-agreement/) and confidentiality terms
+- [ ] An exclusivity period, so the seller does not negotiate with others meanwhile
+
 ## Step 6: Close through escrow
 
 Use a reputable escrow service: the buyer's money is held until the assets have transferred, then released to the seller. Get a written purchase agreement listing every asset, account, liability and condition. {{BRAND}} doesn't hold funds or act as escrow.
@@ -74,7 +102,7 @@ Plan the handover asset by asset: domain, hosting, code repositories, payment ac
 
 ## Financing a purchase
 
-Many small online acquisitions are paid in cash. Some buyers use seller financing, and in the US some use loans backed by the Small Business Administration; each lender sets its own criteria, and not every online business qualifies. Discuss options with a lender early.
+Read [how to finance buying an online business](/guides/how-to-finance-buying-an-online-business/) for the options in more detail. Many small online acquisitions are paid in cash. Some buyers use seller financing, and in the US some use loans backed by the Small Business Administration; each lender sets its own criteria, and not every online business qualifies. Discuss options with a lender early.
 
 ## Common mistakes buyers make
 
@@ -97,6 +125,14 @@ Buying gives you proven revenue but no guarantee it continues. Building costs le
 ### How long does buying an online business take?
 
 Small deals can close in a few weeks; larger ones with thorough due diligence often take a few months.
+
+### Do I need a lawyer to buy an online business?
+
+For anything beyond a very small deal, yes. The U.S. Small Business Administration suggests that you consider hiring an attorney and an accountant when you buy a business.
+
+### Can I buy a business with no experience?
+
+Yes, but pick a model you understand, run proper due diligence and plan the first months with the seller's help.
 
 ### What should I do if the seller won't give analytics or payment access?
 
