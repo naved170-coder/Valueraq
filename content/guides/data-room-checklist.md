@@ -1,7 +1,7 @@
 ---
 title: Data Room Checklist for Selling an Online Business
-meta_title: Data Room Checklist for Selling an Online Business
-meta_description: What to put in your data room before selling: financials, traffic, contracts and access details. A ready-to-use checklist for sellers.
+meta_title: Data Room Checklist: 30 Items + Folder Tree
+meta_description: Build your data room before you list: 30 items in 5 folders, a ready-made folder tree, staged sharing and a printable checklist. Use it before buyers ask.
 h1: Data Room Checklist for Selling an Online Business
 section: Selling
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: A data room for an online business is one organized, access-controlled folder holding financials, traffic and sales records, account and asset proof, contracts and operating notes. Build it before you list, name every file clearly, and open folders to a buyer in stages after a signed confidentiality agreement.
 keywords: due diligence data room checklist, documents for due diligence, due diligence list, data room folders, seller data room
 published: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-10
 publish_at: 2026-10-30T01:00Z
 image: /static/img/articles/data-room-checklist.png
 image_alt: Featured image for the data room checklist guide for selling an online business
@@ -100,6 +100,22 @@ Do not put passwords in this folder. Say which accounts exist and who controls t
 3. A list of tools and what each is used for.
 4. A short handover plan: how many weeks you can help after closing. See the [transition period](/glossary/transition-period/).
 
+## A ready-made folder tree
+
+Copy this structure into your cloud drive. The numbers keep the folders in order.
+
+| Folder name | Put inside |
+|---|---|
+| 00_Index | The one-page list of every file and what it shows |
+| 01_Financials | Profit and loss statements, trailing twelve months summary, bank statements, payout reports, add-back schedule, tax returns |
+| 02_Traffic_and_Sales | Analytics exports, search reports, revenue by source, orders or subscribers |
+| 03_Accounts_and_Access | Account list with owners, domain and hosting details, code repository details |
+| 04_Contracts | Supplier, sponsor, affiliate, contractor and software agreements |
+| 05_Operations_and_SOPs | Weekly task list, step-by-step notes, tools list, handover plan |
+| 06_Legal_and_IP | Trademarks, logos, privacy policy, terms of service, image and font licenses |
+
+Notes on privacy and access: share read-only, never share passwords in a document, and replace customer names and emails with totals unless a lawyer has said the buyer may see them. Turn access off for any buyer who walks away, and keep a note of who saw which folder and when.
+
 ## Share in stages, not all at once
 
 You do not need to give everything to everyone. A staged release keeps sensitive information with fewer people until a sale is likely.
@@ -161,6 +177,10 @@ A reasonable order of work is financials first, then assets and accounts, then c
 - [ ] Access is set to named people and read-only.
 - [ ] A lawyer and an accountant have seen the room if the sale is large. The SBA suggests buyers consider "hiring an attorney and an accountant" and sellers have the same reasons to.
 
+## Printable one-page version
+
+Tick each line when it is in the room: 01 financials (8 items) · 02 traffic and sales (5) · 03 accounts and access (7) · 04 contracts (6) · 05 operations (4) · 06 legal and IP (trademarks, policies, licenses) · 00 index written · access set to named people, read-only · personal data removed · a note written for every gap.
+
 ## Frequently asked questions
 
 ### Do I need special data room software?
@@ -174,6 +194,14 @@ After the buyer has signed a confidentiality agreement, and in stages. Give summ
 ### What if my records are messy?
 
 Fix what you can and explain the rest. A short written note about a gap is better than silence. Rebuilding a clean monthly profit and loss statement from bank and payout records is the single most useful job, because it is what most buyers read first.
+
+### Who should see the data room first?
+
+Only buyers who have signed a confidentiality agreement and shown they can fund the purchase. See [proof of funds](/glossary/proof-of-funds/). Start with the summaries in folders 01 and 02.
+
+### Should I put customer data in the data room?
+
+Usually only totals. Individual customer details raise privacy questions, so remove them and offer more later if the buyer needs it and your lawyer agrees.
 
 ### How much history should I include?
 

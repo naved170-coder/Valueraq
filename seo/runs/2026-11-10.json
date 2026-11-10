@@ -1,5 +1,5 @@
 {
- "summary": "Wrote 1 article (how to buy an app) and 3 glossary pages (LTV to CAC ratio, break-even point, balance sheet); nothing held. Also fixed a broken tool link on the domain guide.",
+ "summary": "Wrote 1 article (how to buy an app) and 3 glossary pages (LTV to CAC ratio, break-even point, balance sheet); nothing held. Also fixed a broken tool link on the domain guide. Improved 4 existing pages (no-revenue guide, data room checklist, business broker, CAC).",
  "model": "claude-sonnet-5-5",
  "items": [
   {
@@ -70,6 +70,34 @@
    "action": "fix",
    "type": "Question answered",
    "note": "Removed a link to /tools/domain-valuation/, a tool that does not exist (audit critical)."
+  },
+  {
+   "path": "/guides/can-you-sell-a-website-with-no-revenue/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.6,
+   "note": "Added price-pattern table, rebuild-cost note, pre-listing checklist, no-promises warning; new meta."
+  },
+  {
+   "path": "/guides/data-room-checklist/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.6,
+   "note": "Added folder tree, privacy notes, printable list, FAQs; new meta."
+  },
+  {
+   "path": "/glossary/business-broker/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.6,
+   "note": "Added broker vs marketplace vs direct table and FAQs; new meta."
+  },
+  {
+   "path": "/glossary/cac/",
+   "action": "improve",
+   "type": "Existing page",
+   "score": 8.6,
+   "note": "Added store worked example, buyer view, FAQs; new meta."
   }
  ],
  "tasks": [
@@ -82,7 +110,8 @@
   "gates",
   "scheduled",
   "link_check",
-  "report"
+  "report",
+  "improve"
  ],
  "checks": [
   "Tests: 132 passed",

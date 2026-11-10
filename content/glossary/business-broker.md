@@ -2,15 +2,15 @@
 title: What Is a Business Broker?
 term: Business Broker
 aliases: business broker, business brokers, broker, online business broker
-meta_title: What Does a Business Broker Do? Definition & Example
-meta_description: A business broker is an intermediary who helps owners sell and buyers find businesses. See what brokers do, an example, and when using one makes sense.
+meta_title: Business Broker: What They Do, Fees & When to Use One
+meta_description: A business broker helps owners sell and buyers find businesses. See what they do, how they are paid, a fee example and broker vs marketplace.
 h1: Business Broker
 definition: A business broker is an intermediary who helps the owner of a business sell it, by preparing the sale, finding and screening buyers and guiding the deal to closing, usually for a fee that is paid only if the sale completes.
 cluster: selling
 page_type: reference
 keywords: business broker, what does a business broker do, online business broker, do i need a business broker
 related: /glossary/marketplace/, /glossary/letter-of-intent/, /glossary/due-diligence/, /glossary/asking-price/, /glossary/data-room/, /guides/ways-to-sell-a-digital-business/, /guides/selling-digital-businesses/
-updated: 2026-10-28
+updated: 2026-11-10
 publish_at: 2026-10-29T07:00Z
 image: /static/img/articles/business-broker.png
 image_alt: What Is a Business Broker? (VALUERAQ glossary)
@@ -34,7 +34,7 @@ An owner sells a content website for $300,000. The broker's agreement states a f
 
 **Fee = $300,000 × 10% = $30,000, so the owner receives $270,000 before other costs.**
 
-The 10% is an invented figure used only to show the arithmetic. Real fees vary by broker and by deal size, and some brokers also charge an upfront fee. Always read the agreement for the rate, what it is applied to and how long it lasts after the contract ends.
+The 10% is an invented figure used only to show the arithmetic. Real fees vary, and some brokers also charge an upfront fee. Read the agreement for the rate and what it applies to.
 
 ## Why it matters when buying or selling
 
@@ -42,7 +42,41 @@ A broker can save an owner time and bring buyers the owner could not reach alone
 
 A broker does not change what the business is worth. Price still follows earnings, trend and risk, and a broker can only help the owner reach buyers and negotiate. A free estimate from a [valuation tool](/tools/) can help you judge whether an asking price suggested by anyone is reasonable.
 
-Brokers are one route among several. Compare them with listing on a [marketplace](/glossary/marketplace/) or selling directly to a buyer you already know in [ways to sell a digital business](/guides/ways-to-sell-a-digital-business/).
+See [ways to sell a digital business](/guides/ways-to-sell-a-digital-business/) for the routes compared.
+
+## Broker, marketplace or direct sale
+
+For a small website, app or store, there are three common routes. The right one depends on size, time and how much help you want.
+
+| | Business broker | Marketplace | Selling directly |
+|---|---|---|---|
+| Who finds buyers | The broker | The marketplace brings buyers; you screen them | You |
+| How you pay | Usually a success fee at closing, sometimes an upfront fee | Depends on the site; check its fees page | Nothing, except advisers |
+| Your time | Lower | Medium | Highest |
+| Control over who sees the business | Less | More | Most |
+| Best when | The business is larger or you have no time | The business is small and you want many buyers | You already know a buyer |
+
+See [fees](/fees/) for VALUERAQ's fees as a marketplace.
+
+### When a small online owner needs a broker
+
+A broker helps when the price is large next to the fee, or you cannot spare weeks answering buyers. A solo owner of a small site with clean records can often sell without one. Many brokers have minimum deal sizes, so ask first.
+
+Before signing, ask what the fee applies to, whether there is an upfront fee, and whether the fee still applies after the agreement ends.
+
+## Frequently asked questions
+
+### Does a business broker work for the buyer or the seller?
+
+In most arrangements, the seller. Read the agreement to see who the broker represents.
+
+### How much does a business broker cost?
+
+It depends on the broker and the deal. A common structure is a percentage of the sale price paid at closing, and some also charge an upfront fee. Ask for the rate in writing.
+
+### Do I need a broker to sell a website?
+
+No. Many small sites sell through marketplaces or directly. Estimate the value first with the free [website valuation tool](/tools/website-valuation/).
 
 ## Related terms
 

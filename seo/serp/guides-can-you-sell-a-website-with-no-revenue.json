@@ -35,6 +35,7 @@
   "Expand FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-10",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added price-pattern table, two rebuild-cost examples, pre-listing checklist, no-promises warning and FAQs"
 }

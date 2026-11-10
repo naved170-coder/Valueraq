@@ -1,7 +1,7 @@
 ---
 title: Can You Sell a Website That Has No Revenue?
-meta_title: Can You Sell a Website With No Revenue?
-meta_description: Yes, sometimes. See what buyers pay for in a site with no income: domain, content, traffic and links, and how they price it. Free calculator included.
+meta_title: Sell a Website With No Revenue? Price Table & Steps
+meta_description: Yes, you can. See what buyers pay for, a price-by-asset table, two worked rebuild-cost examples and a pre-listing checklist. Free calculator included.
 h1: Can You Sell a Website That Has No Revenue?
 section: Quick answers
 cluster: website
@@ -10,7 +10,7 @@ page_type: reference
 answer: Yes. A website with no revenue can be sold, but it is priced on what a buyer gets rather than on what it earns. That means the domain, the content, the traffic and any audience or email list, usually at a lower price than an earning site and with more questions from buyers.
 keywords: sell website with no revenue, can you sell a website with no revenue, sell a website that makes no money, how much is a website worth with no revenue
 published: 2026-10-17
-updated: 2026-10-17
+updated: 2026-11-10
 publish_at: 2026-10-16T19:00Z
 image: /static/img/articles/can-you-sell-a-website-with-no-revenue.png
 image_alt: Featured image for the quick answer Can You Sell a Website That Has No Revenue
@@ -45,18 +45,29 @@ A site has 40 original articles. A buyer estimates 6 hours to research and write
 
 That number ignores traffic and the domain's age, which a buyer cannot recreate quickly. It is a starting point for a conversation, not a price. Buyers also weigh the [fair market value](/glossary/fair-market-value/) idea: what a willing buyer would actually pay on the open market.
 
+## What the price depends on: a pattern table
+
+These are patterns, not prices.
+
+| What you are selling | What the buyer is really paying for | What pushes the price up | What pushes it down |
+|---|---|---|---|
+| Domain only | The name and its age | Short, clear name, clean history, topic with demand | Past spam use, trademark conflict |
+| Content plus search traffic | Time saved and a head start | Steady traffic you can prove, original articles | Traffic from a few pages, copied text |
+| Audience (email list, followers) | A ready group of people | Real subscribers, good open rates | Bought or inactive lists |
+
+## Fix these before you list
+
+- [ ] Check the site against search engine warnings and fix what you find.
+- [ ] Confirm you have the rights to every image and piece of text.
+- [ ] Collect 12 months of traffic reports.
+
+## Do not promise revenue
+
+Never present an unsupported earnings forecast as likely. Describe what exists and let the buyer decide.
+
 ## How to give the sale its best chance
 
-1. **Show the traffic.** Screenshots of analytics and search reports from the last 12 months carry more weight than a description.
-2. **List what is included.** Domain, content, social accounts, email list, design files and logins.
-3. **Be honest about the revenue.** Say plainly that it earns nothing. A buyer who finds out later will walk away.
-4. **Price on parts, then be ready to negotiate.** Expect the buyer to compare your ask with their own rebuild cost.
-
-## When it will be hard to sell
-
-A site with no revenue, no traffic and little content has little for a buyer to value. Sites with a Google penalty, copied content or unclear rights to images and text are harder still. Fix or disclose these before you list.
-
-If the site earns even a small profit, price it with the tool and read [how to sell a website](/guides/how-to-sell-a-website/) for the full process.
+Show 12 months of traffic reports, list what is included (domain, content, accounts, email list), say plainly that the site earns nothing, and expect the buyer to compare your ask with their own rebuild cost. Fix or disclose copied content and search penalties first.
 
 ## Frequently asked questions
 
@@ -64,13 +75,9 @@ If the site earns even a small profit, price it with the tool and read [how to s
 
 Some do, when the domain, content or audience would save them time and money. The price is lower than for an earning site and the buyer's questions are tougher.
 
-### How is a no-revenue website priced?
-
-On its assets and what it would cost to rebuild, not on a profit multiple. See [how to value a business with no profit](/guides/how-to-value-a-business-with-no-profit/).
-
 ### Should I wait until the site earns something?
 
-Even a small, steady profit lets a buyer use a multiple and gives you a clearer story. If you can earn a few months of real revenue before listing, it usually helps.
+Even a small, steady profit lets a buyer use a multiple. A few months of real revenue before listing usually helps. If the site does earn a profit, see [how to sell a website](/guides/how-to-sell-a-website/).
 
 ## Sources
 
