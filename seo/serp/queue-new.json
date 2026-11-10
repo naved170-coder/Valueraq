@@ -204,5 +204,23 @@
 "kind": "glossary",
 "query": "subscription business model",
 "day": 34
+},
+{
+"slug": "ltv-to-cac-ratio",
+"kind": "glossary",
+"query": "ltv to cac ratio",
+"day": 41
+},
+{
+"slug": "break-even-point",
+"kind": "glossary",
+"query": "break even point",
+"day": 43
+},
+{
+"slug": "balance-sheet",
+"kind": "glossary",
+"query": "balance sheet",
+"day": 44
 }
 ]

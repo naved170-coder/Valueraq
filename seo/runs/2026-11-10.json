@@ -1,0 +1,101 @@
+{
+ "summary": "Wrote 1 article (how to buy an app) and 3 glossary pages (LTV to CAC ratio, break-even point, balance sheet); nothing held. Also fixed a broken tool link on the domain guide.",
+ "model": "claude-sonnet-5-5",
+ "items": [
+  {
+   "path": "/glossary/ltv-to-cac-ratio/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/ltv/, /glossary/cac/; this is the ratio with a worked example and payback table)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "ltv to cac ratio",
+    "ltv:cac"
+   ],
+   "note": "Releases 11 Nov 12:00 am Pakistan."
+  },
+  {
+   "path": "/guides/how-to-buy-an-app/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.7,
+   "duplicate": "pass (closest: /guides/how-to-sell-an-app/, /guides/app-valuation/; buyer-side checklist)",
+   "images": "1 featured, 2 charts",
+   "serp": "used",
+   "keywords": [
+    "how to buy an app",
+    "mobile apps for sale"
+   ],
+   "note": "Apple, Google and SBA quotes from sources.json; invented $120,000 example with own arithmetic. Releases 11 Nov 6:00 am Pakistan."
+  },
+  {
+   "path": "/glossary/break-even-point/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/contribution-margin/, /glossary/burn-rate/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "break-even point",
+    "break even point formula"
+   ],
+   "note": "Releases 11 Nov 12:00 pm Pakistan."
+  },
+  {
+   "path": "/glossary/balance-sheet/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/book-value/, /glossary/working-capital/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "balance sheet",
+    "assets liabilities equity"
+   ],
+   "note": "Releases 11 Nov 6:00 pm Pakistan."
+  },
+  {
+   "path": "/glossary/gross-churn/",
+   "action": "skipped",
+   "type": "Glossary term",
+   "duplicate": "overlaps /glossary/revenue-churn/ and /glossary/churn/",
+   "note": "Gross churn is already covered; remove it from the calendar."
+  },
+  {
+   "path": "/guides/how-to-buy-a-domain-name/",
+   "action": "fix",
+   "type": "Question answered",
+   "note": "Removed a link to /tools/domain-valuation/, a tool that does not exist (audit critical)."
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 132 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "seo-check: 0 problems",
+  "Internal links: checked by audit, 0 broken",
+  "External links: not opened (web access not used); sources taken from seo/sources.json"
+ ],
+ "notes": [
+  "Web research was not used; saved research in seo/serp/ and seo/sources.json were used. The three glossary pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+  "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
+  "Calendar: earn-out, customer-acquisition-cost and lifetime-value duplicate existing earnout, cac and ltv pages, and gross-churn duplicates revenue-churn; remove or replace them.",
+  "Still skipped: held topics (fees, UK/Gulf, Flippa, tax).",
+  "Render ranking logs not read this run."
+ ]
+}

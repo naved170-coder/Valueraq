@@ -16,8 +16,8 @@ image: /static/img/articles/how-to-buy-a-domain-name.png
 image_alt: How Do You Buy a Domain Name? (VALUERAQ quick answer)
 score: 8.5
 related: /glossary/premium-domain/, /glossary/domain-broker/, /glossary/escrow/, /guides/domain-appraisal-explained/, /guides/how-escrow-works-for-website-sales/
-cta: /tools/domain-valuation/
-cta_text: Before you make an offer, enter the name into the free Domain Valuation Tool to see a range you can use in negotiation.
+cta: /tools/website-valuation/
+cta_text: If the domain has a live site, enter its profit into the free Website Valuation Tool to see a range for negotiation.
 ---
 
 ## Short answer
@@ -39,7 +39,7 @@ A [premium domain](/glossary/premium-domain/) is one the registry or a seller pr
 
 1. **Search the exact name.** If it shows as available at the normal fee, register it. Check spelling, hyphens and the ending (.com, .net and others).
 2. **Find the owner or the listing.** A "for sale" notice, a marketplace listing or a broker are the usual routes.
-3. **Value the name.** Use a [domain appraisal](/guides/domain-appraisal-explained/) and the [Domain Valuation Tool](/tools/domain-valuation/) to set your limit before you offer.
+3. **Value the name.** Use a [domain appraisal](/guides/domain-appraisal-explained/) and what the site earns, if it is a live site, to set your limit before you offer.
 4. **Check the history.** Ask whether the name was used for spam, has a penalty from a search engine or carries a trademark dispute. A lawyer can advise on trademarks.
 5. **Agree in writing.** Record the price, the payment method and who pays any transfer fees.
 6. **Pay through escrow.** An independent [escrow](/glossary/escrow/) service holds your money until the name is in your account. See [how escrow works](/guides/how-escrow-works-for-website-sales/).
