@@ -222,5 +222,29 @@
 "kind": "glossary",
 "query": "balance sheet",
 "day": 44
+},
+{
+"slug": "how-to-sell-an-ecommerce-business",
+"kind": "guides",
+"query": "sell ecommerce business",
+"day": 41
+},
+{
+"slug": "normalized-earnings",
+"kind": "glossary",
+"query": "normalized earnings",
+"day": 46
+},
+{
+"slug": "recurring-revenue-multiple",
+"kind": "glossary",
+"query": "recurring revenue multiple",
+"day": 49
+},
+{
+"slug": "purchase-price-allocation",
+"kind": "glossary",
+"query": "purchase price allocation",
+"day": 45
 }
 ]
