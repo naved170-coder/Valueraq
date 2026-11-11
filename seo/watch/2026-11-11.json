@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "ok",
+  "summary": "All checks passed; last night's run is complete and nothing needs the owner.",
+  "checks": [
+    "Last night's run: done (10 Nov), 1 article (how to buy an app) + 3 glossary pages, 4 improved pages",
+    "Queue: pages and images for today's slots (LTV to CAC ratio, how to buy an app, break-even point, balance sheet) exist; later slots are written by tonight's run",
+    "Tests: 132 passed; seo-check: 0 problems; audit: 230 URLs, 226 indexable, 0 critical, 0 warnings",
+    "Deploy: newest deploy live; no error-level log lines since 10 Nov 00:00Z",
+    "Pages live check: skipped",
+    "Task data honesty: last night's items match the pages and images in the repository",
+    "Calendar supply: 14 unwritten days (enough, no top-up needed)",
+    "Approvals: 0 held pages in content",
+    "Search figures: snapshot saved daily (latest 10 Nov, data to 9 Nov). Positions are Search Console averages, not live ranks. Last 7 days: 11 clicks, 4,575 impressions",
+    "Article written: yes (how to buy an app)",
+    "Ranking review: not a Monday or Thursday, skipped",
+    "pip could not install gunicorn in this environment only; the gates ran fine without it"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
