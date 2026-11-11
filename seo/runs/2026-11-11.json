@@ -1,14 +1,109 @@
 {
- "summary": "Wrote 1 article (how to sell an ecommerce business) and 3 glossary pages (normalized earnings, recurring revenue multiple, purchase price allocation); the purchase price allocation page is held because it touches on tax, so it needs your approval.",
+ "summary": "Wrote 1 article (how to sell an ecommerce business) and 3 glossary pages (normalized earnings, recurring revenue multiple, purchase price allocation); the purchase price allocation page is held because it touches on tax, so it needs your approval. Also improved 4 existing pages (deal structures, due diligence checklist, capitalization rate, cash flow).",
  "model": "claude-sonnet-5-5",
  "items": [
-  {"path": "/glossary/normalized-earnings/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/add-backs/, /glossary/sde/)", "images": "1 featured", "serp": "missing", "keywords": ["normalized earnings", "adjusted earnings"], "note": "Releases 12 Nov 12:00 am Pakistan."},
-  {"path": "/guides/how-to-sell-an-ecommerce-business/", "action": "new", "type": "Article", "score": 8.7, "duplicate": "pass (closest: /guides/how-to-sell-a-shopify-store/, /guides/ways-to-sell-a-digital-business/; covers any platform, stock treatment and channel mix)", "images": "1 featured, 2 charts", "serp": "missing", "keywords": ["sell ecommerce business", "ecommerce business for sale", "ecommerce sites for sale"], "note": "SBA and BizBuySell quotes from sources.json; invented $84,000 profit example with own arithmetic. Releases 12 Nov 6:00 am Pakistan."},
-  {"path": "/glossary/recurring-revenue-multiple/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/arr/, /glossary/revenue-multiple/)", "images": "1 featured", "serp": "missing", "keywords": ["recurring revenue multiple", "arr multiple"], "note": "Uses VALUERAQ default SaaS range 2.0/3.5/5.0. Releases 12 Nov 12:00 pm Pakistan."},
-  {"path": "/glossary/purchase-price-allocation/", "action": "new", "type": "Glossary term", "score": 8.6, "duplicate": "pass (closest: /glossary/asset-sale/, /glossary/goodwill/)", "images": "1 featured", "serp": "missing", "hold": true, "keywords": ["purchase price allocation"], "note": "Held: mentions tax effects. Would release 12 Nov 6:00 pm Pakistan once approved."}
+  {
+   "path": "/glossary/normalized-earnings/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/add-backs/, /glossary/sde/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "normalized earnings",
+    "adjusted earnings"
+   ],
+   "note": "Releases 12 Nov 12:00 am Pakistan."
+  },
+  {
+   "path": "/guides/how-to-sell-an-ecommerce-business/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.7,
+   "duplicate": "pass (closest: /guides/how-to-sell-a-shopify-store/, /guides/ways-to-sell-a-digital-business/; covers any platform, stock treatment and channel mix)",
+   "images": "1 featured, 2 charts",
+   "serp": "missing",
+   "keywords": [
+    "sell ecommerce business",
+    "ecommerce business for sale",
+    "ecommerce sites for sale"
+   ],
+   "note": "SBA and BizBuySell quotes from sources.json; invented $84,000 profit example with own arithmetic. Releases 12 Nov 6:00 am Pakistan."
+  },
+  {
+   "path": "/glossary/recurring-revenue-multiple/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/arr/, /glossary/revenue-multiple/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "keywords": [
+    "recurring revenue multiple",
+    "arr multiple"
+   ],
+   "note": "Uses VALUERAQ default SaaS range 2.0/3.5/5.0. Releases 12 Nov 12:00 pm Pakistan."
+  },
+  {
+   "path": "/glossary/purchase-price-allocation/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/asset-sale/, /glossary/goodwill/)",
+   "images": "1 featured",
+   "serp": "missing",
+   "hold": true,
+   "keywords": [
+    "purchase price allocation"
+   ],
+   "note": "Held: mentions tax effects. Would release 12 Nov 6:00 pm Pakistan once approved."
+  },
+  {
+   "path": "/guides/deal-structures-for-online-business-sales/",
+   "action": "improve",
+   "type": "Existing page",
+   "note": "Added risk table, cash-by-month table, clause checklist, 2 FAQs; new title and description."
+  },
+  {
+   "path": "/guides/digital-business-due-diligence/",
+   "action": "improve",
+   "type": "Existing page",
+   "note": "Added Pass/Concern/Fail table, checks by business type, 2 FAQs; new title and description."
+  },
+  {
+   "path": "/glossary/capitalization-rate/",
+   "action": "improve",
+   "type": "Existing page",
+   "note": "Added online-business angle, multiple-to-rate table, FAQs; new title and description."
+  },
+  {
+   "path": "/glossary/cash-flow/",
+   "action": "improve",
+   "type": "Existing page",
+   "note": "Added cash flow vs profit vs SDE table, bank statement section, FAQs; new title and description."
+  }
  ],
- "tasks": ["duplicate_check", "research", "article", "reference_pages", "images", "editorial_review", "gates", "scheduled", "link_check", "report"],
- "checks": ["Tests: 132 passed", "SEO audit: 0 critical, 0 warnings", "SEO check: 0 problems", "Internal links: 0 broken", "External links: not opened (web access unavailable); only quotes from seo/sources.json used"],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report",
+  "improve"
+ ],
+ "checks": [
+  "Tests: 132 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "SEO check: 0 problems",
+  "Internal links: 0 broken",
+  "External links: not opened (web access unavailable); only quotes from seo/sources.json used"
+ ],
  "notes": [
   "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
   "Web research was not used; sources come from seo/sources.json. No saved competitor research existed for the four new pages, so they were added to seo/serp/queue-new.json.",

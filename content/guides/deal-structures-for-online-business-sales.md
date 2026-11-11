@@ -1,7 +1,7 @@
 ---
 title: Deal Structures for Small Online Business Sales
-meta_title: Online Business Deal Structures: Earn-Outs & More
-meta_description: Cash upfront, seller financing, earn-outs and holdbacks explained, with when each makes sense and a worked example for buyers and sellers.
+meta_title: Business Deal Structures: Risk Table & $120K Example
+meta_description: Compare cash, seller financing, earn-outs and holdbacks by risk for buyer and seller, with one $120,000 price paid four ways and a clause checklist.
 h1: Deal Structures for Small Online Business Sales
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: A deal structure is the plan for how and when the price is paid. Small online businesses are usually sold all cash through escrow, with part of the price deferred as seller financing, tied to results as an earnout, or held back for a few months. The headline price can be identical while the money that is certain on closing day is very different.
 keywords: how to structure a business sale, seller financing, earnout, escrow, holdback, deal structure online business
 published: 2026-10-27
-updated: 2026-10-27
+updated: 2026-11-11
 publish_at: 2026-10-27T01:00Z
 image: /static/img/articles/deal-structures-for-online-business-sales.png
 image_alt: Deal Structures for Small Online Business Sales (VALUERAQ guide)
@@ -88,6 +88,15 @@ A small share of the price stays with a neutral party for an agreed period after
 | Earnout | Base price | Extra amount | A target such as revenue | Seller (the target) and buyer (the overpayment) |
 | Holdback | Most of the price | Held-back share | No claim being made in the agreed period | Buyer, until the period ends |
 
+### Risk for each side, at a glance
+
+| Structure | Main risk for the buyer | Main risk for the seller | Clause that matters most |
+|---|---|---|---|
+| All cash | Pays in full before knowing how the business performs | Few, beyond the price being lower | Warranties about the figures in the listing |
+| Seller financing | Instalments stay due if profit falls | Buyer stops paying; the business is already handed over | What happens on a missed payment |
+| Earnout | Overpaying if targets are set too low | Buyer's choices after closing change the result | Exactly how the target is measured |
+| Holdback | Money tied up until the period ends | Claims delay or reduce the release | What counts as a valid claim, and by when |
+
 ## Worked example: one $120,000 price, four ways
 
 This is a made-up website used to show the arithmetic. It is an illustration, not a market figure.
@@ -134,6 +143,20 @@ The buyer pays 90% at closing and 10% stays in escrow for 90 days.
 
 ![Not paid at closing, by structure ($000): Seller financing 36k, Earnout 24k, Holdback 12k, All cash 0k](/static/img/articles/deal-structures-for-online-business-sales-paid-later.svg){: width="720" height="272" loading="lazy" }
 
+### Cumulative cash the seller has received over time
+
+Using the same four options, and assuming the earnout target is met and paid after month 12 and the holdback is released at day 90 (about month 3):
+
+| Time | A: all cash | B: seller financing | C: earnout | D: holdback |
+|---|---|---|---|---|
+| At closing | $120,000 | $84,000 | $96,000 | $108,000 |
+| Month 3 | $120,000 | $90,000 | $96,000 | $120,000 |
+| Month 6 | $120,000 | $96,000 | $96,000 | $120,000 |
+| Month 12 | $120,000 | $108,000 | $96,000 | $120,000 |
+| Month 18 | $120,000 | $120,000 | $120,000 | $120,000 |
+
+Seller financing builds by $2,000 a month from $84,000 (month 3: $84,000 + 3 × $2,000 = $90,000), before any interest. If the earnout target is missed, row C stays at $96,000.
+
 ### What the example shows
 
 The headline price is $120,000 in every case, but a seller who needs cash today would rank them A, D, C, B. A buyer who is worried about the profit figure would rank them in nearly the opposite order. Seller financing leaves the most unpaid, but it is a debt that is owed regardless of results. The earnout leaves less unpaid but it is only owed if the target is met, so a seller should value it below its face amount. When comparing offers, compare the amount that is certain, not the headline price.
@@ -169,6 +192,17 @@ For price tactics see [how to negotiate buying an online business](/guides/how-t
 3. **Protect an earnout.** Ask for a revenue measure rather than profit, a clear list of what counts, and limits on changes that would hurt the result.
 4. **Keep exclusivity short.** If the letter of intent includes exclusivity, give it only as long as the checks reasonably need.
 
+## Clauses to check in any deferred payment
+
+Whichever structure you choose, the written terms decide whether it works. Check each of these before signing:
+
+- **The measure.** Revenue, profit or another number, defined line by line, including how refunds and discounts are treated.
+- **The records.** Which accounts the figure comes from, and who can see them.
+- **The period.** Start and end dates, and what happens if the buyer changes the business.
+- **Missed payments.** The notice period, any interest, and whether the whole balance becomes due at once (sometimes called acceleration).
+- **Claims.** For a holdback, what can be claimed against it and the deadline for making a claim.
+- **Disputes.** Who decides if the two sides disagree.
+
 ## Common mistakes
 
 - **Treating the headline price as the deal.** The structure decides what is certain.
@@ -194,6 +228,14 @@ There is no set figure. In the example above, 10% for 90 days is used purely to 
 ### Can I combine structures?
 
 Yes. A deal might pay 70% in cash, 20% as an earnout and hold back 10%. Each part adds a term to the agreement, so keep the structure as simple as the risk allows.
+
+### Which structure is best for the seller?
+
+All cash is the most certain, and a holdback of a small share is close behind. Seller financing and earnouts can lift the headline price but leave part of it dependent on the buyer, so a seller should value the deferred part below its face amount.
+
+### What is acceleration in a seller note?
+
+It is a clause that makes the whole unpaid balance due at once if a trigger happens, such as a missed instalment. Without it, the seller may have to wait for each instalment to fall due.
 
 ### Do I need a lawyer?
 

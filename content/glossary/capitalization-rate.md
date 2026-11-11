@@ -2,15 +2,15 @@
 title: What Is a Capitalization Rate?
 term: Capitalization Rate
 aliases: capitalization rate, cap rate, capitalisation rate, cap rate formula
-meta_title: What Is Capitalization Rate (Cap Rate)? Formula & Example
-meta_description: A capitalization rate is annual earnings divided by price, shown as a percentage. See the formula, a worked example and how it turns into a multiple.
+meta_title: Cap Rate for Online Businesses: Formula & Multiple Table
+meta_description: Cap rate is yearly earnings divided by price. See how it applies to an online business, a multiple-to-rate table and a worked example. No sign-up needed.
 h1: Capitalization Rate
 definition: A capitalization rate (cap rate) is the yearly earnings of an asset divided by its price or value, shown as a percentage, and it is the same fact as a profit multiple turned upside down.
 cluster: analysis
 page_type: reference
 keywords: capitalization rate, cap rate, cap rate formula, what is a cap rate
 related: /glossary/profit-multiple/, /glossary/valuation-multiple/, /glossary/return-on-investment/, /glossary/payback-period/, /glossary/sde/, /glossary/ebit/
-updated: 2026-11-04
+updated: 2026-11-11
 publish_at: 2026-11-05T07:00Z
 image: /static/img/articles/capitalization-rate.png
 image_alt: What Is a Capitalization Rate? (VALUERAQ glossary)
@@ -51,6 +51,31 @@ Some points to keep in mind.
 - **It is a close cousin of ROI.** For a purchase with no extra costs, the rate and the first-year [return on investment](/glossary/return-on-investment/) are the same number.
 
 VALUERAQ's default website range is 2.5x to 4.0x annual profit, which works out to rates of 40% down to 25%. These are VALUERAQ's own assumptions, explained in the [methodology](/methodology/), not market data.
+
+## Cap rate for an online business vs real estate
+
+Most search results for "cap rate" are about property. The arithmetic is the same, but the earnings differ. For a rental property, earnings are rent less running costs. For an online business, use [SDE](/glossary/sde/) or net profit, and remember that an online business can change faster than a building. Do not compare a property's cap rate with a business's rate without allowing for that extra risk.
+
+## Multiple to cap rate table
+
+Because rate = 1 ÷ multiple, you can convert any profit multiple:
+
+| Profit multiple | Capitalization rate |
+|---|---|
+| 2.0x | 50.0% |
+| 2.5x | 40.0% |
+| 3.0x | 33.3% |
+| 3.5x | 28.6% |
+| 4.0x | 25.0% |
+| 5.0x | 20.0% |
+
+## Common questions
+
+**Is a higher cap rate better?** For a buyer, a higher rate means more yearly earnings for each dollar paid, but it usually reflects higher risk. For a seller, a higher rate means a lower price.
+
+**Is a capitalization rate the same as ROI?** For the first year with no extra costs, yes. Return on investment can also include later years and costs.
+
+**Which earnings should I use?** The profit a new owner would actually earn. Tested add-backs are fine; wishful ones are not.
 
 ## Related terms
 

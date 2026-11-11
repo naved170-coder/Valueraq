@@ -28,6 +28,7 @@
   "Clauses to watch (earn-out metric definitions, acceleration) and FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-11",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added buyer/seller risk table, cumulative cash-by-month table, clause checklist and 2 FAQs"
 }
