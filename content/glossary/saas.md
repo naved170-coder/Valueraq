@@ -8,7 +8,7 @@ h1: SaaS (Software as a Service)
 definition: Software as a service (SaaS) is software delivered over the internet and paid for by subscription, rather than installed and bought once.
 cluster: saas
 related: /glossary/arr/, /glossary/mrr/, /glossary/churn/, /tools/saas-valuation/, /businesses-for-sale/saas/
-updated: 2026-09-30
+updated: 2026-11-12
 ---
 
 ## How the SaaS business model works
@@ -38,3 +38,5 @@ Small SaaS businesses are usually valued as a multiple of ARR or annual profit, 
 ## SaaS vs other online businesses
 
 SaaS differs from content websites and online stores mainly in the predictability of its revenue and in what a buyer takes on: code, infrastructure and ongoing support obligations. See [website vs SaaS valuation](/guides/website-vs-saas-valuation/).
+
+If you want to sell my SaaS company, see [how to sell a SaaS business](/guides/how-to-sell-a-saas-business/) for the steps, buyer types and where to list.

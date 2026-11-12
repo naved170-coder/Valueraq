@@ -10,7 +10,7 @@ page_type: reference
 answer: A fair price for a small SaaS business is a multiple of its annual recurring revenue (ARR), adjusted for churn, gross margin, growth and how much depends on the owner or one customer. VALUERAQ's default range is 2.0x to 5.0x ARR, with 3.5x as the midpoint, before adjustments.
 keywords: saas business valuation, saas company valuation, saas worth, fair price for a saas business
 published: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-12
 publish_at: 2026-10-30T19:00Z
 image: /static/img/articles/what-is-a-fair-price-for-a-small-saas.png
 image_alt: Featured image for the quick answer on what a fair price is for a small SaaS business
@@ -66,3 +66,5 @@ Not on its own. A high multiple on a business with rising churn or one dominant 
 ### Can I rely on this range as an appraisal?
 
 No. It is an estimate from default assumptions, not an appraisal or advice. Treat it as a starting point for a conversation.
+
+Once you know the range and want to sell my SaaS company, [how to sell a SaaS business](/guides/how-to-sell-a-saas-business/) covers preparing the figures and finding buyers.

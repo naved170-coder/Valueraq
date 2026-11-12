@@ -8,7 +8,7 @@ cluster: saas
 order: 2
 answer: Small SaaS businesses are usually valued as a multiple of annual recurring revenue (ARR) or of annual profit. The multiple rises with growth, low churn, high gross margin and a broad customer base, and falls with decline, high churn, thin margins and dependence on a few customers or on the founder.
 published: 2026-09-30
-updated: 2026-10-29
+updated: 2026-11-12
 methodology_version: 1.0
 related: /tools/saas-valuation/, /calculators/saas-valuation-calculator/, /businesses-for-sale/saas/, /glossary/arr/, /glossary/churn/, /guides/website-vs-saas-valuation/
 cta: /tools/saas-valuation/
@@ -23,7 +23,7 @@ SaaS valuation is the process of estimating what a subscription software busines
 
 Subscription revenue repeats. A customer paying $50 a month today will probably pay next month too, which makes SaaS revenue more predictable than one-off sales or ad income. That predictability is why SaaS is often valued on revenue, while content sites and stores are usually valued on profit.
 
-For small, owner-run SaaS businesses, many buyers look at both. An ARR multiple captures growth potential; a profit multiple shows what the business earns today. {{BRAND}}'s tool calculates the ARR-based value and shows the profit multiple it implies.
+For small, owner-run SaaS businesses, many buyers look at both. An [ARR multiple](/guides/saas-valuation-multiples/) captures growth potential; a profit multiple shows what the business earns today. {{BRAND}}'s tool calculates the ARR-based value and shows the profit multiple it implies.
 
 ## The metrics that set the multiple
 

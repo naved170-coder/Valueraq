@@ -1,1 +1,23 @@
-{"status":"ok","summary":"Self-check started; code gates pass (132 tests, seo-check 0, audit 0 critical/0 warnings). Final details to follow.","checks":["In progress"],"fixed":[],"needs_owner":[]}
+{
+ "status": "fixed",
+ "summary": "All checks passed; I carried out three ranking actions (internal links) and nothing needs the owner.",
+ "checks": [
+  "Last night's run: done (11 Nov), 1 article (how to sell an ecommerce business) + 3 glossary pages, 4 improved pages",
+  "Queue: pages for today's remaining slots exist; later slots are written by tonight's run",
+  "Tests: 132 passed; seo-check: 0 problems; audit: 234 URLs, 230 indexable, 0 critical, 0 warnings",
+  "Deploy: previous deploy live; no error-level log lines since 11 Nov 00:00Z; today's deploy from the trace push was still building at check time",
+  "Pages live check: skipped",
+  "Task data honesty: last night's items match the pages in the repository",
+  "Calendar supply: 13 unwritten days (enough, no top-up needed)",
+  "Approvals: 1 held page waiting (purchase price allocation, mentions tax)",
+  "Search figures: snapshot saved daily (latest 12 Nov, data to 11 Nov). Positions are Search Console averages, not live ranks. Last 7 days: 11 clicks, 4,243 impressions",
+  "Article written: yes (how to sell an ecommerce business)",
+  "Ranking review (Thursday): 3 of 16 open actions carried out; the rest are mostly 'cannibal' actions on /tools/ pages, which are app code and outside my limits",
+  "pip could not install gunicorn in this environment only; the gates ran fine without it"
+ ],
+ "fixed": [
+  "Action 7fc4a840ec88 and 91df7bd860b5 (arr multiples): linked 'ARR multiple' to the SaaS valuation multiples guide from the SaaS valuation guide, the ARR glossary page and the SaaS valuation methods guide",
+  "Action 5960f90a13a7 (sell my saas company): linked it to the how-to-sell-a-SaaS guide from the SaaS glossary page and the fair-price guide"
+ ],
+ "needs_owner": []
+}

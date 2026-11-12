@@ -1,77 +1,92 @@
 [
-  {
-    "id": "182e31974ac8",
-    "date": "2026-10-22",
-    "note": "Linked 'how to value a website' to /guides/website-valuation/ from the falling-traffic guide."
-  },
-  {
-    "id": "219905d0b3bc",
-    "date": "2026-10-22",
-    "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the buying-a-SaaS guide."
-  },
-  {
-    "id": "73b92c5e69a4",
-    "date": "2026-10-22",
-    "note": "Linked 'AI business value' to /guides/ai-business-valuation/ from the business valuation and SaaS multiples guides."
-  },
-  {
-    "id": "88ccb2a1c8c9",
-    "date": "2026-10-26",
-    "note": "Linked 'saas company valuation calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation guide."
-  },
-  {
-    "id": "eb03047d87ce",
-    "date": "2026-10-26",
-    "note": "Linked 'ARR valuation calculator' to /calculators/saas-valuation-calculator/ from the ARR glossary page."
-  },
-  {
-    "id": "b6f8b2874df5",
-    "date": "2026-10-26",
-    "note": "Linked 'SaaS calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation methods guide."
-  },
-  {
-    "id": "bdea347d6495",
-    "date": "2026-10-29",
-    "note": "Linked 'how to value a website' to /tools/website-valuation/ from the website valuation methods guide."
-  },
-  {
-    "id": "ff50cdf98310",
-    "date": "2026-10-29",
-    "note": "Linked the AI business valuation tool from the website-vs-SaaS investment guide."
-  },
-  {
-    "id": "0ccd2beb8792",
-    "date": "2026-10-29",
-    "note": "Linked 'where to sell a SaaS company' to /guides/how-to-sell-a-saas-business/ from the SaaS valuation guide."
-  },
-  {
-    "id": "6cf6ac20c960",
-    "date": "2026-11-02",
-    "note": "Linked 'mobile app estimation' to /tools/app-valuation/ from the app valuation and how-to-sell-an-app guides."
-  },
-  {
-    "id": "1419df8afb32",
-    "date": "2026-11-02",
-    "note": "Linked 'digital valuation' to /guides/business-valuation/ from the buying and selling digital businesses guides."
-  },
-  {
-    "id": "760ea91839d5",
-    "date": "2026-11-05",
-    "note": "Linked 'valuation saas' / 'saas business valuation' to /tools/saas-valuation/ from 4 SaaS guides."
-  },
-  {
-    "id": "eb0ac506ed79",
-    "date": "2026-11-05",
-    "note": "Same links as above give /tools/saas-valuation/ the phrase 'SaaS business valuation' as the main page."
-  },
-  {
-    "id": "c80e02309496",
-    "date": "2026-11-05",
-    "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the methods, multiples, micro-SaaS and buying guides."
-  },
-  {
-    "id": "d9fe1799d534",
-    "date": "2026-11-09",
-    "note": "Added a 'Buying a business online: the short answer' section to the top of /guides/buying-digital-businesses/ and linked it with that phrase from /guides/how-to-buy-a-website/ and /guides/how-to-buy-an-ecommerce-business/."
-  }
+ {
+  "id": "182e31974ac8",
+  "date": "2026-10-22",
+  "note": "Linked 'how to value a website' to /guides/website-valuation/ from the falling-traffic guide."
+ },
+ {
+  "id": "219905d0b3bc",
+  "date": "2026-10-22",
+  "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the buying-a-SaaS guide."
+ },
+ {
+  "id": "73b92c5e69a4",
+  "date": "2026-10-22",
+  "note": "Linked 'AI business value' to /guides/ai-business-valuation/ from the business valuation and SaaS multiples guides."
+ },
+ {
+  "id": "88ccb2a1c8c9",
+  "date": "2026-10-26",
+  "note": "Linked 'saas company valuation calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation guide."
+ },
+ {
+  "id": "eb03047d87ce",
+  "date": "2026-10-26",
+  "note": "Linked 'ARR valuation calculator' to /calculators/saas-valuation-calculator/ from the ARR glossary page."
+ },
+ {
+  "id": "b6f8b2874df5",
+  "date": "2026-10-26",
+  "note": "Linked 'SaaS calculator' to /calculators/saas-valuation-calculator/ from the SaaS valuation methods guide."
+ },
+ {
+  "id": "bdea347d6495",
+  "date": "2026-10-29",
+  "note": "Linked 'how to value a website' to /tools/website-valuation/ from the website valuation methods guide."
+ },
+ {
+  "id": "ff50cdf98310",
+  "date": "2026-10-29",
+  "note": "Linked the AI business valuation tool from the website-vs-SaaS investment guide."
+ },
+ {
+  "id": "0ccd2beb8792",
+  "date": "2026-10-29",
+  "note": "Linked 'where to sell a SaaS company' to /guides/how-to-sell-a-saas-business/ from the SaaS valuation guide."
+ },
+ {
+  "id": "6cf6ac20c960",
+  "date": "2026-11-02",
+  "note": "Linked 'mobile app estimation' to /tools/app-valuation/ from the app valuation and how-to-sell-an-app guides."
+ },
+ {
+  "id": "1419df8afb32",
+  "date": "2026-11-02",
+  "note": "Linked 'digital valuation' to /guides/business-valuation/ from the buying and selling digital businesses guides."
+ },
+ {
+  "id": "760ea91839d5",
+  "date": "2026-11-05",
+  "note": "Linked 'valuation saas' / 'saas business valuation' to /tools/saas-valuation/ from 4 SaaS guides."
+ },
+ {
+  "id": "eb0ac506ed79",
+  "date": "2026-11-05",
+  "note": "Same links as above give /tools/saas-valuation/ the phrase 'SaaS business valuation' as the main page."
+ },
+ {
+  "id": "c80e02309496",
+  "date": "2026-11-05",
+  "note": "Linked 'how to value a SaaS company' to /guides/saas-valuation/ from the methods, multiples, micro-SaaS and buying guides."
+ },
+ {
+  "id": "d9fe1799d534",
+  "date": "2026-11-09",
+  "note": "Added a 'Buying a business online: the short answer' section to the top of /guides/buying-digital-businesses/ and linked it with that phrase from /guides/how-to-buy-a-website/ and /guides/how-to-buy-an-ecommerce-business/."
+ },
+ {
+  "id": "7fc4a840ec88",
+  "date": "2026-11-12",
+  "note": "Linked 'ARR multiple' to /guides/saas-valuation-multiples/ from saas-valuation, arr and saas-valuation-methods pages."
+ },
+ {
+  "id": "91df7bd860b5",
+  "date": "2026-11-12",
+  "note": "Same ARR multiple links added; the multiples guide is the main page for this phrase."
+ },
+ {
+  "id": "5960f90a13a7",
+  "date": "2026-11-12",
+  "note": "Linked 'sell my SaaS company' to /guides/how-to-sell-a-saas-business/ from saas glossary and fair-price guide."
+ }
 ]
