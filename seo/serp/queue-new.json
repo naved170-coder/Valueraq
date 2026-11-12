@@ -246,5 +246,27 @@
 "kind": "glossary",
 "query": "purchase price allocation",
 "day": 45
+},
+{
+"slug": "how-to-prove-your-revenue-to-a-buyer",
+"kind": "guides",
+"query": "proof of revenue website",
+"day": 42
+},
+{
+"slug": "app-store-optimization",
+"kind": "glossary",
+"query": "app store optimization",
+"day": 47
+},
+{
+"slug": "ev-to-ebitda-multiple",
+"kind": "glossary",
+"query": "enterprise value to ebitda multiple"
+},
+{
+"slug": "ebitda-margin",
+"kind": "glossary",
+"query": "ebitda margin"
 }
 ]

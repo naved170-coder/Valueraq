@@ -1,0 +1,96 @@
+{
+ "summary": "Wrote 1 article (how to prove your revenue to a buyer) and 3 glossary pages (app store optimization, EV to EBITDA multiple, EBITDA margin); nothing held, nothing needs the owner.",
+ "model": "claude-sonnet-5-5",
+ "status": "ok",
+ "items": [
+  {
+   "path": "/glossary/app-store-optimization/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/app-valuation/)",
+   "images": "1 featured",
+   "keywords": [
+    "app store optimization",
+    "aso"
+   ],
+   "serp": "missing",
+   "note": ""
+  },
+  {
+   "path": "/guides/how-to-prove-your-revenue-to-a-buyer/",
+   "action": "new",
+   "type": "Article",
+   "score": 8.6,
+   "duplicate": "pass (closest: /guides/how-to-verify-website-revenue/, /guides/data-room-checklist/; this one is seller-side)",
+   "images": "1 featured, 2 charts",
+   "keywords": [
+    "proof of revenue website",
+    "prove revenue to a buyer"
+   ],
+   "serp": "missing",
+   "note": ""
+  },
+  {
+   "path": "/glossary/ev-to-ebitda-multiple/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/ebitda/, /glossary/enterprise-value/)",
+   "images": "1 featured",
+   "keywords": [
+    "ev to ebitda multiple",
+    "ebitda multiple"
+   ],
+   "serp": "missing",
+   "note": "Replacement for a duplicate calendar topic."
+  },
+  {
+   "path": "/glossary/ebitda-margin/",
+   "action": "new",
+   "type": "Glossary term",
+   "score": 8.6,
+   "duplicate": "pass (closest: /glossary/ebitda/, /glossary/gross-margin/)",
+   "images": "1 featured",
+   "keywords": [
+    "ebitda margin",
+    "ebitda margin formula"
+   ],
+   "serp": "missing",
+   "note": "Replacement for a duplicate calendar topic."
+  },
+  {
+   "path": "/glossary/run-rate-revenue/",
+   "action": "skipped",
+   "type": "Glossary term",
+   "duplicate": "overlaps /glossary/run-rate/",
+   "note": "Remove from calendar."
+  }
+ ],
+ "tasks": [
+  "duplicate_check",
+  "research",
+  "article",
+  "reference_pages",
+  "images",
+  "editorial_review",
+  "gates",
+  "scheduled",
+  "link_check",
+  "report"
+ ],
+ "checks": [
+  "Tests: 132 passed",
+  "SEO audit: 0 critical, 0 warnings",
+  "seo-check: 0 problems",
+  "Internal links: checked by seo-check",
+  "External links: not opened (web fetch unavailable)"
+ ],
+ "notes": [
+  "Web research was not used; saved sources in seo/sources.json were used. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+  "Release times (Pakistan, 13 Nov): 12 am app store optimization, 6 am article, 12 pm EV to EBITDA multiple, 6 pm EBITDA margin.",
+  "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
+  "Calendar: run-rate-revenue, earn-out, customer-acquisition-cost, lifetime-value and gross-churn duplicate existing pages; remove or replace them. The calendar has no more unwritten reference pages apart from these and held topics, so two reference topics were replaced from keywords (EV to EBITDA multiple, EBITDA margin).",
+  "Render ranking logs not read this run."
+ ]
+}
