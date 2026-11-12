@@ -1,5 +1,5 @@
 {
- "summary": "Wrote 1 article (how to prove your revenue to a buyer) and 3 glossary pages (app store optimization, EV to EBITDA multiple, EBITDA margin); nothing held, nothing needs the owner.",
+ "summary": "Wrote 1 article (how to prove your revenue to a buyer) and 3 glossary pages (app store optimization, EV to EBITDA multiple, EBITDA margin); nothing held, nothing needs the owner. Also improved 4 existing pages (domain appraisal, ecommerce valuation, churn, chargeback).",
  "model": "claude-sonnet-5-5",
  "status": "ok",
  "items": [
@@ -65,6 +65,30 @@
    "type": "Glossary term",
    "duplicate": "overlaps /glossary/run-rate/",
    "note": "Remove from calendar."
+  },
+  {
+   "path": "/guides/domain-appraisal-explained/",
+   "action": "improve",
+   "type": "Article",
+   "note": "Added six-factor scorecard, why tools disagree, end-user vs investor example, checklist and FAQ."
+  },
+  {
+   "path": "/guides/ecommerce-valuation/",
+   "action": "improve",
+   "type": "Article",
+   "note": "Added factor table, channel comparison, methods table, stock worked example, more FAQs and sources."
+  },
+  {
+   "path": "/glossary/chargeback/",
+   "action": "improve",
+   "type": "Glossary term",
+   "note": "Added rate formula, chargeback vs refund table, buyer checks, tips and FAQs."
+  },
+  {
+   "path": "/glossary/churn/",
+   "action": "improve",
+   "type": "Glossary term",
+   "note": "Added customer vs revenue churn table, price impact example, lifetime and FAQs."
   }
  ],
  "tasks": [
@@ -77,7 +101,8 @@
   "gates",
   "scheduled",
   "link_check",
-  "report"
+  "report",
+  "improve"
  ],
  "checks": [
   "Tests: 132 passed",

@@ -1,7 +1,7 @@
 ---
 title: Domain Appraisal: What a Domain Name Is Worth and Why
-meta_title: Domain Appraisal: What Is My Domain Name Worth?
-meta_description: What makes a domain name valuable, why automated appraisals vary so much, and how to judge a fair price before you buy or sell one. Free calculator included.
+meta_title: Domain Appraisal: Value Scorecard & Price Examples
+meta_description: Domain appraisal estimates what a name might sell for. Get a 6-factor scorecard and a worked example of why tools disagree. Free calculator included.
 h1: Domain Appraisal: What a Domain Name Is Worth and Why
 section: Valuation
 cluster: website
@@ -10,7 +10,7 @@ page_type: article
 answer: A domain appraisal is an estimate of what a name might sell for, produced from features of the name such as length, extension and keywords. It is a guess at a price, not a record of one. A website that earns money is valued differently: on its yearly profit times a multiple, which for VALUERAQ's default range is 2.5 to 4.0 times.
 keywords: domain appraisal, domain appraisal free, check domain price value, how to value a domain name
 published: 2026-10-15
-updated: 2026-10-14
+updated: 2026-11-12
 publish_at: 2026-10-14T19:00Z
 image: /static/img/articles/domain-appraisal-explained.png
 image_alt: Domain Appraisal: What a Domain Name Is Worth and Why (VALUERAQ guide)
@@ -39,6 +39,29 @@ A domain appraisal is an estimated price for a domain name. Free appraisal tools
 - **Search interest.** Whether people search for the words in the name.
 
 An automated tool turns those features into a number. A human appraiser may add comparisons with past sales of similar names. In both cases the output is an opinion about price.
+
+## A six-factor scorecard
+
+Score each factor from 1 (weak) to 5 (strong) and add them up. The scores are a way to organize your thinking, not a price formula, and no dollar value comes from them.
+
+| Factor | 1 (weak) | 5 (strong) |
+|---|---|---|
+| Extension | Rare or unfamiliar | Widely used and trusted |
+| Length | Long, many syllables | Short and easy to type |
+| Brandability | Hard to say or spell | Easy to say, spell and remember |
+| Keyword demand | Nobody searches for the words | Clear, steady interest in the words |
+| Type-in traffic | None | People already type the name in |
+| Trademark risk | A known brand is close | No obvious conflicts |
+
+A name that scores 24 or more out of 30 is a stronger candidate than one that scores 12, but only a buyer can turn that into a price. Trademark risk is the one factor that can sink a name outright, so check it first. This is general information, not legal advice.
+
+## Why two tools give two different answers
+
+Imagine one name run through three tools. Tool A weights length heavily, tool B weights keyword demand, and tool C uses past sales of names it considers similar. They might return $800, $2,500 and $1,200. All three can be reasonable on their own terms, because each is measuring a different thing. The useful reading is the spread: a wide one means no tool has strong evidence. Where a tool lists named, dated sales of comparable names, that is better evidence than a number with no source. See [comparable sales](/glossary/comparable-sales/).
+
+## End-user price versus investor price
+
+The same name can have two prices. An investor who hopes to resell asks what a future buyer might pay and leaves room for profit. A business that needs the name asks what it is worth to the brand. As an illustration with made-up numbers: if a company expects the name to save it $3,000 a year in advertising, it may pay more than an investor who sees a likely resale of $1,500. Neither number is wrong. They answer different questions, and the bigger gap is usually found when the buyer has a specific need.
 
 ## What the number means, and what it does not
 
@@ -122,6 +145,14 @@ When you sell the whole business, the domain is transferred as part of it. Befor
 | Ignoring renewal and transfer details | Check registrar status before you list |
 | Expecting a multiple to work on zero profit | Use an asset or audience approach instead |
 
+## A quick checklist before you rely on an appraisal
+
+- Run the name through at least two tools and note the range.
+- Look for named, dated sales of similar names.
+- Check for trademark conflicts.
+- Decide your walk-away price in advance.
+- Confirm you can transfer the name, as covered in the handover section above.
+
 ## Frequently asked questions
 
 ### Is a free domain appraisal accurate?
@@ -143,6 +174,10 @@ Then a profit multiple gives a small number. Buyers may value the content, audie
 ### Do I need a professional appraiser?
 
 Not to set expectations or check an asking price. For tax, lending or legal use, yes.
+
+### Is a short .com always worth more?
+
+Usually a short, common-extension name is easier to resell, but demand still decides. A short name nobody needs may sit unsold.
 
 ## Sources
 

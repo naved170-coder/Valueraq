@@ -1,14 +1,14 @@
 ---
 title: How to Value an Ecommerce Business
-meta_title: How to Value an Ecommerce Business: Multiples & Stock
-meta_description: How online stores are valued: profit times a multiple, plus how stock, channels and fulfillment change the price. Worked example and a free tool.
+meta_title: How to Value an Ecommerce Business: Stock Worked Example
+meta_description: Value an online store as yearly profit times a multiple plus stock at cost. See factor tables and a worked stock example. Free calculator included.
 h1: How to Value an Ecommerce Business
 section: Valuation
 cluster: ecommerce
 order: 7
 answer: Most small ecommerce businesses are valued as a multiple of annual net profit, with sellable inventory added on top at cost. The multiple moves with the revenue trend, the store's age, how it fulfills orders, how much depends on one sales channel and how many hours the owner works. Revenue matters less than profit, because product, shipping and advertising costs take most of each sale.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-12
 methodology_version: 1.0
 related: /tools/ecommerce-valuation/, /businesses-for-sale/ecommerce/, /glossary/average-order-value/, /glossary/gross-margin/, /glossary/conversion-rate/, /guides/business-valuation/
 cta: /tools/ecommerce-valuation/
@@ -44,6 +44,37 @@ Customers who come back cost nothing to acquire the second time. Buyers look at 
 ### Revenue trend, age and owner hours
 
 Growth, a longer history and a low owner workload support a higher multiple, as with any digital business. Check the trend against the same months a year earlier, because many stores are seasonal.
+
+## What pushes the multiple up or down
+
+| Factor | Tends to raise the multiple | Tends to lower it |
+|---|---|---|
+| Profit trend | Steady or rising over 12 months | Falling, or one-off spikes |
+| Sales channels | Spread across several | Over 60% from one channel |
+| Fulfillment | Third-party logistics, documented | Dropshipping, or an undocumented process |
+| Repeat customers | Many reorders and email subscribers | Almost all first-time buyers |
+| Owner hours | Few, with written processes | Owner runs everything daily |
+| Records | 12 months matched to bank deposits | Gaps or screenshots only |
+
+## Shopify, Amazon FBA and direct-to-consumer compared
+
+| | Own store (for example on Shopify) | Amazon FBA | Direct-to-consumer brand |
+|---|---|---|---|
+| Who owns the customer | You | Mostly the marketplace | You |
+| Main risk | Ad costs and traffic | Account rules and fees | Ad costs and supply |
+| Transfer | Store and domain move with accounts | Account and listing rules apply | Store, brand and supplier terms |
+| Read next | [Shopify store valuation](/guides/shopify-store-valuation/) | [Amazon FBA valuation](/guides/amazon-fba-business-valuation/) | This guide |
+
+## Valuation methods compared
+
+| Method | How it works | Fit for small stores |
+|---|---|---|
+| SDE multiple | Profit before owner pay × multiple | Most common for owner-run stores |
+| EBITDA multiple | Profit after a manager's pay × multiple | Larger stores with staff |
+| Discounted cash flow | Future cash flows brought to today | Rare, needs reliable forecasts |
+| Comparable sales | Prices of similar stores that sold | Useful as a cross-check |
+
+See [SDE vs EBITDA](/guides/sde-vs-ebitda/) for the difference.
 
 ## How the valuation is calculated
 
@@ -85,6 +116,16 @@ Adding $35,000 of inventory gives about $221,000 to $361,000, with a midpoint ne
 
 These numbers are illustrative, not market data.
 
+## Worked example: handling stock
+
+A store earns $60,000 a year and the stock on the shelf cost $20,000. Of that, $4,000 is damaged or slow-moving and is counted at zero.
+
+- **Earnings value at the 2.7 midpoint:** $60,000 × 2.7 = $162,000.
+- **Sellable stock at cost:** $20,000 − $4,000 = $16,000.
+- **Total:** $162,000 + $16,000 = $178,000.
+
+Stock is added once and is not multiplied. These figures are an illustration.
+
 ## Common mistakes
 
 - **Applying the multiple to revenue.** Profit is the base. A high-revenue, low-margin store is not worth a multiple of its sales.
@@ -117,3 +158,28 @@ It depends on margins, trend, channel risk and the owner's workload, and prices 
 ### Are dropshipping stores worth less?
 
 For the same profit, {{BRAND}}'s default takes 8% off the multiple for dropshipping, because the business depends on suppliers the buyer does not control. A dropshipping store with long, stable supplier relationships may deserve a smaller discount.
+
+### How do I value stock that is slow to sell?
+
+Count only what you expect to sell, at what it cost, and set aside damaged or expired items. Agree the count and the rule in the contract.
+
+### Do I value the store on revenue or profit?
+
+Profit. Revenue says little about what the owner keeps. See [revenue vs profit multiples](/guides/revenue-vs-profit-multiples/).
+
+### Does a Shopify store sell for more than an Amazon seller account?
+
+Not automatically. Owning the customer relationship helps, but profit and risk decide.
+
+### How many months of records do buyers want?
+
+At least 12. See [how many months of data buyers want](/guides/how-many-months-of-data-do-buyers-want/).
+
+### Can I sell a store that makes a loss?
+
+Yes, but a profit multiple does not apply. Value usually rests on stock, the brand and the audience.
+
+## Sources
+
+- U.S. Small Business Administration, [Close or sell your business](https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business): valuation approaches and intangible assets.
+- {{BRAND}}, [Valuation methodology](/methodology/): default ranges and adjustments.
