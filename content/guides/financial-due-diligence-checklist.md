@@ -1,7 +1,7 @@
 ---
 title: Financial Due Diligence Checklist for Buying an Online Business
-meta_title: Financial Due Diligence Checklist: Online Business
-meta_description: Check the money before you buy: P&L, bank statements, payment processors, refunds and add-backs. A step-by-step financial checklist. Free calculator included.
+meta_title: Financial Due Diligence Checklist: Red Flags Table
+meta_description: Verify an online business before you pay: a checklist, a red-flags table with how to check each, and what to do with findings. Free calculator included.
 h1: Financial Due Diligence Checklist for Buying an Online Business
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: Financial due diligence is checking that the money a seller says the business makes is real, repeatable and yours to keep after the sale. For a small online business that means proving 12 or more months of revenue from the source systems, testing every cost and add-back, matching both to the bank, and confirming nothing is owed that will follow the business to you.
 keywords: financial due diligence checklist, due diligence checklist for buying a business, acquisition due diligence checklist, documents for due diligence, due diligence list
 published: 2026-10-09
-updated: 2026-10-09
+updated: 2026-11-13
 publish_at: 2026-10-09T07:00Z
 image: /static/img/articles/financial-due-diligence-checklist.png
 image_alt: Featured image for the guide Financial Due Diligence Checklist for Buying an Online Business
@@ -129,6 +129,34 @@ A worked example: a seller lists a site at $180,000 on stated SDE of $60,000, a 
 - Verified SDE: $60,000 − $6,000 − $4,000 = $50,000.
 - At the same multiple of 3.0, the price becomes $150,000. The $30,000 difference is the value of the checks.
 
+## Red flags and how to check each
+
+| Red flag | How to check it | What it may mean |
+|---|---|---|
+| Screenshots instead of exports | Ask for read-only access or a screen-shared export of the same period | The figures may have been edited |
+| Payouts that do not appear in the bank | Match each payout to a deposit by date and amount | Revenue may be overstated or paid elsewhere |
+| Revenue jumps just before listing | Compare the last three months with the same months a year earlier | A short-term push to lift the price |
+| Refunds or chargebacks far above normal | Read the refund and dispute reports for each month | Product, quality or fraud problems |
+| One source brings most of the income | Split revenue by source and customer | Losing it could remove most of the profit |
+| Costs that look too low | List every tool, contractor and ad account and compare with the P&L | Costs left out or paid personally |
+| Add-backs that repeat every year | Check whether the same item appears in prior years | Not one-off, so profit is overstated |
+| Account owned by a third party | Check the name on the payment and bank accounts | The accounts may not transfer |
+
+Record each finding with the evidence you saw. A short log is easier to negotiate from than memory.
+
+## What to do with your findings
+
+| Finding | Reasonable response |
+|---|---|
+| A small gap with a clear explanation | Note it and continue |
+| Profit lower than stated after your own SDE recalculation | Re-price using your verified figure (see the worked example above) |
+| Income you cannot verify | Treat it as zero, or ask for it to be paid later if it appears |
+| Prepaid customers or open disputes | Agree in writing how they are handled in the price |
+| A risk that could repeat, such as one dominant source | Ask for part of the price to be held back or paid later |
+| A gap the seller cannot explain, or refusal to show records | Walk away |
+
+A written offer that quotes your verified figures is hard to argue with, and a seller who answers calmly is usually a seller worth buying from.
+
 ## How long it takes
 
 For a small online business with organised records, the financial checks can be done in one to two weeks of part-time work. Disorganised records take longer and are themselves information about how the business is run. Agree an exclusivity period with the seller so you aren't racing another buyer while you check.
@@ -154,6 +182,10 @@ Overstated profit, usually from costs left out or add-backs that recur. That is 
 ### Should I walk away if I find a problem?
 
 Not always. Many problems become a lower price or better terms. Walk away when the seller can't explain a gap between the bank and the reported revenue, or refuses to let you check.
+
+### Which findings are deal-breakers?
+
+Unexplained differences between the bank and the reported revenue, accounts that are not in the seller's name, and a refusal to let you check records. Most other findings can be handled through price or terms.
 
 ## Sources
 

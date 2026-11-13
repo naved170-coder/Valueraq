@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (how to document your business before selling) and 3 glossary pages (net revenue, deferred revenue, operating margin); nothing held. Improvements to 4 existing pages follow in a second push.",
+  "summary": "Wrote 1 article (how to document your business before selling) and 3 glossary pages (net revenue, deferred revenue, operating margin) and improved 4 existing pages (financial due diligence checklist, escrow, click-through rate, cohort analysis); nothing held.",
   "model": "claude-sonnet-5-5",
   "status": "ok",
   "items": [
@@ -86,6 +86,30 @@
       "type": "Glossary term",
       "duplicate": "overlaps existing page",
       "note": "Removed from calendar."
+    },
+    {
+      "path": "/guides/financial-due-diligence-checklist/",
+      "action": "improve",
+      "type": "Article",
+      "note": "Added red-flags table with checks, findings-to-response table and a deal-breaker FAQ."
+    },
+    {
+      "path": "/guides/how-escrow-works-for-website-sales/",
+      "action": "improve",
+      "type": "Quick answer",
+      "note": "Added who-does-what table, inspection checklist, fake-escrow checks and a FAQ."
+    },
+    {
+      "path": "/glossary/click-through-rate/",
+      "action": "improve",
+      "type": "Glossary term",
+      "note": "Added buyer-view pattern table and three FAQs."
+    },
+    {
+      "path": "/glossary/cohort-analysis/",
+      "action": "improve",
+      "type": "Glossary term",
+      "note": "Added retention table walkthrough and three FAQs."
     }
   ],
   "tasks": [
@@ -98,7 +122,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

@@ -2,15 +2,15 @@
 title: What Is Click-Through Rate?
 term: Click-Through Rate
 aliases: click-through rate, CTR, click rate, click through rate
-meta_title: What Is Click-Through Rate (CTR)? Definition & Example
-meta_description: Click-through rate is the share of people who click after seeing a link, ad or email. See the formula, a newsletter example and why buyers check click rates.
+meta_title: Click-Through Rate (CTR): Formula, Example & Buyer View
+meta_description: Click-through rate is clicks divided by impressions. See the formula, a newsletter example and what high and low CTR tell someone buying a site.
 h1: Click-Through Rate (CTR)
 definition: Click-through rate (CTR) is the number of clicks a link, ad or email receives divided by the number of times it was shown or delivered, written as a percentage.
 cluster: newsletter
 page_type: reference
 keywords: click-through rate, ctr, what is click through rate, email click rate, newsletter click rate
 related: /glossary/open-rate/, /glossary/conversion-rate/, /glossary/earnings-per-click/, /guides/newsletter-valuation/, /guides/how-to-value-an-email-list/, /tools/newsletter-valuation/
-updated: 2026-10-20
+updated: 2026-11-13
 publish_at: 2026-10-21T13:00Z
 image: /static/img/articles/click-through-rate.png
 image_alt: Featured image for the glossary entry What Is Click-Through Rate
@@ -40,6 +40,34 @@ Buyers of newsletters and content sites want proof that the audience pays attent
 Sponsors may be paid per click, so CTR also ties directly to income. Combined with the [conversion rate](/glossary/conversion-rate/) of the page that follows, it shows how a click becomes revenue.
 
 VALUERAQ's [newsletter valuation tool](/tools/newsletter-valuation/) multiplies annual profit by a multiple (its default range is 2.5x to 4.0x, explained in the [methodology](/methodology/)). Click rate is a supporting check on whether that profit will last. See also [how to value an email list](/guides/how-to-value-an-email-list/).
+
+## What a high or low CTR tells a buyer
+
+If you are buying a site, you can often see CTR for its search results in Google Search Console, and for emails in the newsletter tool. Read the trend, not one number.
+
+| Pattern | What it may mean |
+|---|---|
+| Steady CTR over many months | Titles and content still match what people want |
+| CTR falling while impressions rise | The site shows for more searches, but many are a poor match, or competitors rank above it |
+| CTR rising after a title change | The seller improved how pages look in results |
+| Very high CTR on few impressions | A small sample, so do not rely on it |
+| Email click rate dropping while the list grows | New subscribers may be less engaged |
+
+Always compare like with like: the same pages, the same period and the same way of dividing (impressions or emails delivered).
+
+## Frequently asked questions
+
+### Is there a good CTR?
+
+It depends on the channel, the position and the audience, so a single target number is not reliable. Compare a site with its own history first, then with similar sites.
+
+### Is CTR the same as conversion rate?
+
+No. CTR counts clicks as a share of views. [Conversion rate](/glossary/conversion-rate/) counts the share of visitors who then buy or sign up.
+
+### Can a buyer check CTR for themselves?
+
+Yes. Ask the seller for read-only access to Search Console or the email tool and read the numbers directly rather than relying on screenshots.
 
 ## Related terms
 

@@ -1,33 +1,34 @@
 {
- "page": "guides/financial-due-diligence-checklist",
- "query": "financial due diligence checklist",
- "results": [
-  "nasdaq.com due diligence checklist",
-  "smartasset.com",
-  "findlaw.com",
-  "bizbuysell.com due diligence checklist",
-  "thp.co.uk financial due diligence checklist"
- ],
- "studied": [
-  {
-   "url": "thp.co.uk/financial-due-diligence-checklist",
-   "words": 1500,
-   "has": [
-    "not an audit",
-    "10-section checklist: information, revenue, sustainable profit, cash, working capital, debt, tax, forecasts, controls, actions",
-    "document request list",
-    "red flags: customer concentration, year-end invoice spikes, window dressing, recurring one-offs",
-    "outcomes: renegotiate, restructure payment, walk away"
-   ]
-  }
- ],
- "gaps": [
-  "Online-business version: proof from source (payment processors, ad networks, affiliate dashboards, bank), refunds and chargebacks, add-backs, platform fees",
-  "Red flags table with how to check each",
-  "What to do with findings (renegotiate, holdback, walk away)",
-  "FAQ"
- ],
- "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+  "page": "guides/financial-due-diligence-checklist",
+  "query": "financial due diligence checklist",
+  "results": [
+    "nasdaq.com due diligence checklist",
+    "smartasset.com",
+    "findlaw.com",
+    "bizbuysell.com due diligence checklist",
+    "thp.co.uk financial due diligence checklist"
+  ],
+  "studied": [
+    {
+      "url": "thp.co.uk/financial-due-diligence-checklist",
+      "words": 1500,
+      "has": [
+        "not an audit",
+        "10-section checklist: information, revenue, sustainable profit, cash, working capital, debt, tax, forecasts, controls, actions",
+        "document request list",
+        "red flags: customer concentration, year-end invoice spikes, window dressing, recurring one-offs",
+        "outcomes: renegotiate, restructure payment, walk away"
+      ]
+    }
+  ],
+  "gaps": [
+    "Online-business version: proof from source (payment processors, ad networks, affiliate dashboards, bank), refunds and chargebacks, add-backs, platform fees",
+    "Red flags table with how to check each",
+    "What to do with findings (renegotiate, holdback, walk away)",
+    "FAQ"
+  ],
+  "collected": "2026-11-04",
+  "applied": "2026-11-13",
+  "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+  "applied_note": "Added red-flags table with checks, findings-to-response table and a deal-breaker FAQ."
 }
