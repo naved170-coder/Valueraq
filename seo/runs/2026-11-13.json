@@ -1,0 +1,115 @@
+{
+  "summary": "Wrote 1 article (how to document your business before selling) and 3 glossary pages (net revenue, deferred revenue, operating margin); nothing held. Improvements to 4 existing pages follow in a second push.",
+  "model": "claude-sonnet-5-5",
+  "status": "ok",
+  "items": [
+    {
+      "path": "/glossary/net-revenue/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/gross-profit/, /glossary/net-profit/)",
+      "images": "1 featured",
+      "keywords": [
+        "net revenue",
+        "gross revenue vs net revenue"
+      ],
+      "serp": "missing",
+      "note": "Replacement for duplicate calendar topic."
+    },
+    {
+      "path": "/guides/how-to-document-your-business-before-selling/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/data-room-checklist/, /guides/what-documents-do-buyers-ask-for/; this one covers know-how and handover, not financial papers)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "document business processes before sale",
+        "business handover documentation"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/deferred-revenue/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/mrr/, /glossary/recurring-revenue/)",
+      "images": "1 featured",
+      "keywords": [
+        "deferred revenue",
+        "unearned revenue"
+      ],
+      "serp": "missing",
+      "note": "Replacement for duplicate calendar topic."
+    },
+    {
+      "path": "/glossary/operating-margin/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/operating-income/, /glossary/ebitda-margin/)",
+      "images": "1 featured",
+      "keywords": [
+        "operating margin",
+        "operating profit margin"
+      ],
+      "serp": "missing",
+      "note": "Replacement for duplicate calendar topic."
+    },
+    {
+      "path": "/glossary/earn-out/",
+      "action": "skipped",
+      "type": "Glossary term",
+      "duplicate": "overlaps existing page",
+      "note": "Removed from calendar."
+    },
+    {
+      "path": "/glossary/customer-acquisition-cost/",
+      "action": "skipped",
+      "type": "Glossary term",
+      "duplicate": "overlaps existing page",
+      "note": "Removed from calendar."
+    },
+    {
+      "path": "/glossary/lifetime-value/",
+      "action": "skipped",
+      "type": "Glossary term",
+      "duplicate": "overlaps existing page",
+      "note": "Removed from calendar."
+    },
+    {
+      "path": "/glossary/gross-churn/",
+      "action": "skipped",
+      "type": "Glossary term",
+      "duplicate": "overlaps existing page",
+      "note": "Removed from calendar."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken"
+  ],
+  "notes": [
+    "Web research and Render logs were not used (WebSearch/Render unavailable); sources came from seo/sources.json and the methodology. The new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Calendar: earn-out, customer-acquisition-cost, lifetime-value, gross-churn and run-rate-revenue duplicate existing pages and were removed; net revenue, deferred revenue and operating margin replace them.",
+    "Release times (Pakistan, 14 Nov): 12 am net revenue, 6 am article, 12 pm deferred revenue, 6 pm operating margin.",
+    "Still skipped: cost-to-sell (fees, held), UK/Gulf/Flippa pages and tax page (country rules/competitor/no verified source)."
+  ]
+}
