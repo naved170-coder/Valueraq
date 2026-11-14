@@ -2539,6 +2539,128 @@
      "images": "1 featured image"
     }
    ]
+  },
+  {
+   "day": 50,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "free-cash-flow-to-firm",
+     "title": "What Is Free Cash Flow to Firm (FCFF)?",
+     "term": "Free Cash Flow to Firm",
+     "primary_keyword": "cash flow to firm formula",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "discounted-cash-flow-for-small-online-businesses",
+     "title": "Discounted Cash Flow for a Small Online Business: Worked Example",
+     "primary_keyword": "business valuation discounted cash flow calculator",
+     "secondary_keywords": [
+      "dcf valuation small business"
+     ],
+     "cluster": "valuation",
+     "section": "Valuation",
+     "words": "1200-2000",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "discount-rate",
+     "title": "What Is a Discount Rate in Valuation?",
+     "term": "Discount Rate",
+     "primary_keyword": "business valuation discounted cash flow calculator",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "asset-based-valuation",
+     "title": "What Is Asset-Based Valuation?",
+     "term": "Asset-Based Valuation",
+     "primary_keyword": "asset based valuation calculator",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
+  },
+  {
+   "day": 51,
+   "pages": [
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "net-present-value",
+     "title": "What Is Net Present Value (NPV)?",
+     "term": "Net Present Value",
+     "primary_keyword": "business valuation discounted cash flow calculator",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "guides",
+     "type": "Article",
+     "slug": "asset-acquisition-checklist",
+     "title": "Asset Acquisition Checklist for Buying an Online Business",
+     "primary_keyword": "asset acquisition checklist",
+     "secondary_keywords": [
+      "asset purchase checklist"
+     ],
+     "cluster": "buying",
+     "section": "Buying",
+     "words": "1200-2000",
+     "tool_link": "/tools/website-valuation/",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image, 2 charts"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "terminal-value",
+     "title": "What Is Terminal Value?",
+     "term": "Terminal Value",
+     "primary_keyword": "business valuation discounted cash flow calculator",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    },
+    {
+     "kind": "glossary",
+     "type": "Glossary term",
+     "slug": "weighted-average-cost-of-capital",
+     "title": "What Is WACC (Weighted Average Cost of Capital)?",
+     "term": "WACC",
+     "primary_keyword": "cash flow to firm formula",
+     "cluster": "analysis",
+     "words": "300-600",
+     "hold": false,
+     "hold_reason": null,
+     "images": "1 featured image"
+    }
+   ]
   }
  ]
 }
