@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (how to explain a revenue drop to a buyer) and 3 glossary pages (free cash flow to firm, discount rate, asset-based valuation); nothing held.",
+  "summary": "Wrote 1 article (how to explain a revenue drop to a buyer) and 3 glossary pages (free cash flow to firm, discount rate, asset-based valuation) and improved 4 existing pages; nothing held.",
   "model": "claude-sonnet-5-5",
   "status": "ok",
   "items": [
@@ -58,6 +58,30 @@
       ],
       "serp": "missing",
       "note": ""
+    },
+    {
+      "path": "/guides/how-long-to-sell-an-online-business/",
+      "action": "improve",
+      "type": "Article",
+      "note": "Added route table, post-closing handover/earnout section, speed-up checklist and 2 FAQs."
+    },
+    {
+      "path": "/guides/how-many-months-of-data-do-buyers-want/",
+      "action": "improve",
+      "type": "Quick answer",
+      "note": "Added records-by-period table, young-business section and an FAQ."
+    },
+    {
+      "path": "/glossary/comparable-sales/",
+      "action": "improve",
+      "type": "Glossary term",
+      "note": "Added comps-sources table, adjust-before-comparing example and FAQs."
+    },
+    {
+      "path": "/glossary/contribution-margin/",
+      "action": "improve",
+      "type": "Glossary term",
+      "note": "Added after-ad-spend per-order table, margin comparison and FAQs."
     }
   ],
   "tasks": [
@@ -70,13 +94,15 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",
     "SEO audit: 0 critical, 0 warnings",
     "seo-check: 0 problems",
-    "Internal links: 0 broken"
+    "Internal links: 0 broken",
+    "Improve step: 4 pages, seo-check 0 problems, 132 tests passed, audit 0 critical 0 warnings"
   ],
   "notes": [
     "WebSearch/WebFetch were not used; sources came from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",

@@ -1,7 +1,7 @@
 ---
 title: How Many Months of Records Do Buyers Want to See?
-meta_title: How Many Months of Records Do Buyers Want?
-meta_description: Buyers usually want at least 12 months of profit and traffic records. See why, what they accept for younger businesses, and how to prepare.
+meta_title: Months of Records Buyers Want: 12 vs 24 (Table)
+meta_description: Buyers want 12 months of records at least, and 24 is better. See what to show per period, what a young business can do, a checklist. List free, no commission.
 h1: How Many Months of Records Do Buyers Want to See?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: Expect buyers to ask for at least 12 months of revenue, cost and traffic records, and to be happier with 24 months. Twelve months shows every season once, and 24 lets a buyer compare the same months across two years.
 keywords: how much history to sell a website, months of records to sell a website, how many months of data to sell a business, trailing twelve months
 published: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-15
 publish_at: 2026-10-25T19:00Z
 image: /static/img/articles/how-many-months-of-data-do-buyers-want.png
 image_alt: How Many Months of Records Do Buyers Want to See? (VALUERAQ quick answer)
@@ -34,7 +34,7 @@ This is a general guide, not a rule. A buyer may ask for more, and a very young 
 
 ## When 24 months helps
 
-Two years let a buyer compare each month with the same month a year earlier. That protects a seller whose latest quarter was quiet, and it protects a buyer from a one-off spike. If the business has changed a lot, such as a price rise, a new product or a drop in search traffic, the longer record shows the before and after.
+Two years let a buyer compare each month with the same month a year earlier. That protects a seller whose latest quarter was quiet and a buyer from a one-off spike.
 
 ## What to include for each month
 
@@ -44,9 +44,25 @@ Two years let a buyer compare each month with the same month a year earlier. Tha
 4. Traffic or customer counts from the same months.
 5. Payment processor and bank records that match the figures. See [how to verify website revenue](/guides/how-to-verify-website-revenue/).
 
+## Which record for which period
+
+| Record | Minimum period | Better | Source to match it against |
+|---|---|---|---|
+| Revenue by month | 12 months | 24 months | Payment processor or ad network statements |
+| Costs by month | 12 months | 24 months | Bank statements and invoices |
+| Net profit | 12 months | 24 months | Your profit and loss statement |
+| Traffic or customer counts | 12 months | 24 months | Analytics export |
+| Refunds and chargebacks | 12 months | 24 months | Payment processor reports |
+
+Records for the same months should agree across sources. Where they do not, write down why before a buyer asks. The [data room checklist](/guides/data-room-checklist/) shows how to organize them.
+
 ## What if you have less than 12 months?
 
 Share what you have, say plainly that the history is short, and expect a lower price. In {{BRAND}}'s default rules, a business under one year old has 20% taken off its multiple, because a short record gives a buyer little evidence that earnings will last.
+
+## What a young business can do
+
+Offer every month you have, and add what shows momentum, such as a monthly growth line, a customer list or signed contracts. Buyers may ask for a lower price or an [earnout](/glossary/earnout/), where part of the price depends on later results. See [deal structures](/guides/deal-structures-for-online-business-sales/).
 
 ## Frequently asked questions
 
@@ -61,3 +77,8 @@ Yes. A buyer will find it in the records anyway, and a clear explanation builds 
 ### Do I need tax returns as well?
 
 Buyers often ask for them as a second check on profit. See [what documents buyers ask for](/guides/what-documents-do-buyers-ask-for/) for the full list.
+
+### Do buyers look at my best 12 months or my latest 12?
+
+Usually the latest 12 months, because they show where the business is now. If earnings have fallen, expect the recent months to carry the most weight. Explain the cause with proof.
+

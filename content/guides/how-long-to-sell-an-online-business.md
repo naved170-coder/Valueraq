@@ -1,7 +1,7 @@
 ---
 title: How Long Does It Take to Sell an Online Business?
-meta_title: How Long Does It Take to Sell an Online Business?
-meta_description: Most online business sales take weeks to months. See each stage, how long it takes and what speeds a sale up or slows it down. List free, no commission.
+meta_title: How Long to Sell an Online Business? Stage-by-Stage Timeline
+meta_description: A sale has six stages. See a stage-by-stage timeline table, a 15 vs 25-week worked example and a speed-up checklist. List free, no commission.
 h1: How Long Does It Take to Sell an Online Business?
 section: Selling
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: Selling an online business takes as long as its six stages add up to: preparing, finding a buyer, agreeing a letter of intent, due diligence, the contract and escrow, and handover. No single number fits every sale, because records, price and buyer funding change each stage. A seller with clean records and a price that matches the figures controls most of the delay.
 keywords: how long does it take to sell an online business, sell my online business, selling online business
 published: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-15
 publish_at: 2026-11-03T01:00Z
 image: /static/img/articles/how-long-to-sell-an-online-business.png
 image_alt: Featured image for the guide on how long it takes to sell an online business, showing the six stages of a sale
@@ -127,6 +127,43 @@ These are {{BRAND}}'s own default assumptions, not market data. The multiples ar
 
 The extra 10 weeks between Plan A and Plan C came from two things the seller could have settled before listing. Nothing here predicts how long your sale will take, but the pattern is the useful part: early gaps are passed down the line.
 
+## How the route you choose changes the timeline
+
+These are patterns, not numbers. How long each route takes depends on the business, the price and the buyer.
+
+| Route | Where time is usually spent | Where it can save time |
+|---|---|---|
+| Marketplace listing | Waiting for the right buyer to find the listing; listing review | Buyers can message you directly; you set your own pace |
+| Broker | Preparing a detailed sale pack and screening buyers | The broker handles enquiries and chases the paperwork |
+| Direct sale to someone you know | Agreeing a price without outside evidence | No search stage at all |
+
+The stages after the letter of intent (due diligence, contract, escrow, handover) look much the same on every route. The route mainly changes stage 2.
+
+## After closing: handover and earnout time
+
+A sale is not over when the money is released. Check what the contract says about two things:
+
+- **Transition period.** The days or weeks you agree to answer questions and teach the buyer. A [transition period](/glossary/transition-period/) in writing stops it from stretching without limit.
+- **Earnout or holdback.** If part of the price is paid later, your involvement can last for months or longer. An [earnout](/glossary/earnout/) ties a payment to results after closing, and a [holdback](/glossary/holdback/) keeps part of the price back until conditions are met. Add the length of these to your own plan for when you will be fully finished.
+
+## Checklist: what speeds a sale up and what slows it down
+
+Speeds it up:
+
+1. A price you can explain with figures from a valuation tool and the [methodology](/methodology/).
+2. 12 to 24 months of records, ready before you list.
+3. Domain, app store account, hosting and payment accounts all in your own name.
+4. Proof of funds requested from the buyer early.
+5. Answers to buyer questions within a day or two.
+
+Slows it down:
+
+1. Changing the asking price after buyers have seen it.
+2. Figures that differ between the listing, the payment processor and the tax return.
+3. Add-backs with nothing behind them.
+4. Booking a lawyer or accountant only after due diligence ends.
+5. A long exclusivity period with a buyer who is slow to move.
+
 ## What you control and what you do not
 
 | You control | You partly control | You do not control |
@@ -154,6 +191,14 @@ Yes. A broker, a marketplace listing and a direct sale reach buyers differently 
 ### What is the best way to avoid delays?
 
 Value the business first, collect your records into a data room, put accounts in your own name and answer buyers quickly. These steps cost little and remove the most common causes of delay.
+
+### Does selling an online business take longer than selling a local shop?
+
+There is no reliable single comparison, and this guide does not quote one. The stages are the same for both. Online sales add account and domain transfers, which are quick when everything is already in your name and slow when it is not.
+
+### How long should I leave the listing up before changing the price?
+
+Decide the review point before you list, not after the first quiet week. Look at how many buyers wrote, how many asked for records and how many made offers. Many enquiries but no offers points to the price. Few enquiries points to the listing or the route. Changing the price more than once can make buyers doubt the figures.
 
 ## Sources
 
