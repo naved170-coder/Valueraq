@@ -1,0 +1,87 @@
+{
+  "summary": "Wrote 1 article (how to explain a revenue drop to a buyer) and 3 glossary pages (free cash flow to firm, discount rate, asset-based valuation); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "status": "ok",
+  "items": [
+    {
+      "path": "/guides/how-to-explain-a-revenue-drop-to-a-buyer/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/how-to-value-a-website-with-falling-traffic/, /guides/how-to-prove-your-revenue-to-a-buyer/; this one covers how to communicate a dip, not how to value it)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "how to explain a revenue drop to a buyer",
+        "selling a business with declining revenue"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/free-cash-flow-to-firm/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/cash-flow/, /glossary/discounted-cash-flow/)",
+      "images": "1 featured",
+      "keywords": [
+        "free cash flow to firm",
+        "fcff"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/discount-rate/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/discounted-cash-flow/, /glossary/capitalization-rate/)",
+      "images": "1 featured",
+      "keywords": [
+        "discount rate",
+        "discount rate in valuation"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/asset-based-valuation/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/book-value/, /glossary/asset-sale/)",
+      "images": "1 featured",
+      "keywords": [
+        "asset-based valuation",
+        "assets approach"
+      ],
+      "serp": "missing",
+      "note": ""
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken"
+  ],
+  "notes": [
+    "WebSearch/WebFetch were not used; sources came from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs were read; new searches did not match the day's topics, so keywords come from the calendar.",
+    "Skipped again (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page. Article taken from calendar day 44 instead.",
+    "Release times (Pakistan): FCFF 14 Nov 12 am, article 15 Nov 6 am, discount rate 15 Nov 12 pm, asset-based valuation 15 Nov 6 pm."
+  ]
+}

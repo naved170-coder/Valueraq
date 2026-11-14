@@ -292,5 +292,29 @@
   "kind": "glossary",
   "query": "operating margin",
   "day": 0
+ },
+ {
+  "slug": "how-to-explain-a-revenue-drop-to-a-buyer",
+  "kind": "guides",
+  "query": "explain revenue drop to buyer",
+  "day": 44
+ },
+ {
+  "slug": "free-cash-flow-to-firm",
+  "kind": "glossary",
+  "query": "free cash flow to firm",
+  "day": 50
+ },
+ {
+  "slug": "discount-rate",
+  "kind": "glossary",
+  "query": "discount rate",
+  "day": 50
+ },
+ {
+  "slug": "asset-based-valuation",
+  "kind": "glossary",
+  "query": "asset based valuation",
+  "day": 50
  }
 ]
