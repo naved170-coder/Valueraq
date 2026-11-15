@@ -316,5 +316,29 @@
   "kind": "glossary",
   "query": "asset based valuation",
   "day": 50
+ },
+ {
+  "slug": "acquiring-a-business-checklist",
+  "kind": "guides",
+  "query": "acquiring a business checklist",
+  "day": 51
+ },
+ {
+  "slug": "net-present-value",
+  "kind": "glossary",
+  "query": "net present value",
+  "day": 51
+ },
+ {
+  "slug": "terminal-value",
+  "kind": "glossary",
+  "query": "terminal value",
+  "day": 51
+ },
+ {
+  "slug": "weighted-average-cost-of-capital",
+  "kind": "glossary",
+  "query": "weighted average cost of capital",
+  "day": 52
  }
 ]

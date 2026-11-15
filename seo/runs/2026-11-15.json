@@ -1,0 +1,89 @@
+{
+  "summary": "Wrote 1 article (acquiring a business checklist) and 3 glossary pages (net present value, terminal value, WACC); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "status": "ok",
+  "items": [
+    {
+      "path": "/guides/acquiring-a-business-checklist/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/how-to-buy-a-website/, /guides/digital-business-due-diligence/; this one is a staged checklist from first look to day 100)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "acquiring a business checklist",
+        "pre acquisition due diligence checklist"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/net-present-value/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/discounted-cash-flow/, /glossary/discount-rate/)",
+      "images": "1 featured",
+      "keywords": [
+        "net present value",
+        "npv formula"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/terminal-value/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/discounted-cash-flow/, /glossary/capitalization-rate/)",
+      "images": "1 featured",
+      "keywords": [
+        "terminal value",
+        "terminal value in dcf"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/weighted-average-cost-of-capital/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/discount-rate/, /glossary/enterprise-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "wacc",
+        "weighted average cost of capital"
+      ],
+      "serp": "missing",
+      "note": ""
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: not opened (web access unavailable); only sources in seo/sources.json cited"
+  ],
+  "notes": [
+    "Web research was not used; sources came from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs were read; new searches (operating income, net income, bounce rate) are already covered, so keywords come from the calendar.",
+    "Release times (Pakistan): NPV 16 Nov 12 am, article 16 Nov 6 am, terminal value 16 Nov 12 pm, WACC 16 Nov 6 pm.",
+    "WACC was not in the calendar; it replaces the held reference topics. Still skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page; they should move to the end of the calendar.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages."
+  ]
+}
