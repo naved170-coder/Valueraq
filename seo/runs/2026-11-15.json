@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (acquiring a business checklist) and 3 glossary pages (net present value, terminal value, WACC); nothing held.",
+  "summary": "Wrote 1 article (acquiring a business checklist) and 3 glossary pages (net present value, terminal value, WACC); nothing held. Also improved 4 existing pages (buy a SaaS business, buy a website, conversion rate, COGS).",
   "model": "claude-sonnet-5-5",
   "status": "ok",
   "items": [
@@ -58,6 +58,34 @@
       ],
       "serp": "missing",
       "note": ""
+    },
+    {
+      "path": "/guides/how-to-buy-a-saas-business/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added metrics-source table, technical checklist for non-technical buyers, 30/60/90 table and 2 FAQs"
+    },
+    {
+      "path": "/guides/how-to-buy-a-website/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.7,
+      "note": "Added buy-vs-build table, budget-to-profit table, quick WHOIS/Wayback/backlink checks and 2 FAQs"
+    },
+    {
+      "path": "/glossary/conversion-rate/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added quick answer, base comparison table, revenue sense-check, buyer checklist and 3 FAQs"
+    },
+    {
+      "path": "/glossary/cost-of-goods-sold/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.7,
+      "note": "Added store vs SaaS cost table, margin recompute example and 3 FAQs"
     }
   ],
   "tasks": [
@@ -70,7 +98,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

@@ -32,6 +32,7 @@
   "Add key takeaways box and FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-15",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added buy-vs-build table, budget-to-profit table, quick WHOIS/Wayback/backlink checks and 2 FAQs"
 }

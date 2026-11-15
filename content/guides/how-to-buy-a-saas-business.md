@@ -1,14 +1,14 @@
 ---
 title: How to Buy a SaaS Business
-meta_title: How to Buy a SaaS Business: Steps & Checklist
-meta_description: How to buy a SaaS business: set criteria, check MRR and churn, negotiate, close safely and plan your first 90 days. Checklist and free calculator included.
+meta_title: How to Buy a SaaS Business: Checklist & Metrics
+meta_description: How to buy a SaaS business: a metrics table with where each figure comes from, a technical checklist and a 90-day plan. Free calculator included.
 h1: How to Buy a SaaS Business
 section: Buying
 cluster: saas
 order: 13
 answer: To buy a SaaS business, set criteria you can actually operate within, read each listing's MRR, churn, gross margin and customer concentration, ask the seller how those figures are produced, have the code and infrastructure reviewed, confirm that customer and supplier contracts can transfer, decide how the price will be paid, close through escrow, and spend the first 90 days keeping the product stable before you change it.
 published: 2026-10-04
-updated: 2026-11-05
+updated: 2026-11-16
 methodology_version: 1.0
 related: /tools/saas-valuation/, /guides/saas-valuation/, /guides/buying-digital-businesses/, /guides/digital-business-due-diligence/, /guides/buy-vs-build-saas/, /businesses-for-sale/saas/, /glossary/seller-financing/, /glossary/earnout/
 cta: /tools/saas-valuation/
@@ -43,6 +43,16 @@ Four figures tell you most of what a SaaS listing is worth.
 
 **Concentration.** The largest customer's share of revenue. If one account pays a third of MRR, you are buying that relationship as much as the product.
 
+**Where each figure comes from.** Do not accept a number you cannot trace to a system.
+
+| Figure | Ask for | Where it comes from | What to check |
+|---|---|---|---|
+| MRR | Monthly recurring revenue by month | Payment processor or billing export | Only active subscriptions, no one-off fees |
+| Churn | Cancellations by month, customers and revenue | Billing system subscription list | Same period, same definition as the listing |
+| Gross margin | Hosting, API and payment fees by month | Cloud, API and processor invoices | Costs match the bank statements |
+| Concentration | Revenue by customer | Billing export sorted by customer | Share held by the largest accounts |
+| Support load | Tickets per week and common causes | Helpdesk or support inbox | Whether the load can be handled by you |
+
 On {{BRAND}}, each listing shows automatic checks calculated from the seller's own figures, and you can save listings and searches to compare them later. Those checks describe what the seller entered. They don't confirm it.
 
 To see how these numbers affect price, enter them in the [SaaS Valuation Tool](/tools/saas-valuation/). {{BRAND}}'s default assumption for SaaS is 2.0× to 5.0× ARR, adjusted for growth, churn, margin, concentration, age and owner hours, with combined adjustments capped at −50% and +40%. It's a published assumption, not market data; [how to value a SaaS business](/guides/saas-valuation/) explains it. For the method behind those numbers, read [how to value a SaaS company](/guides/saas-valuation/).
@@ -71,6 +81,21 @@ Unless you are a developer, pay one for a few hours of review before you commit.
 - **Deployment.** Whether there is a documented, repeatable way to release a change, and whether backups exist and have been tested.
 - **Hosting costs.** Actual invoices, and how costs change as customers are added.
 - **Ownership.** That the seller owns all the code, including anything written by contractors.
+
+### Technical checklist for non-technical buyers
+
+If you cannot read code, ask your reviewer to answer each of these in writing:
+
+| Area | Question to answer | Evidence |
+|---|---|---|
+| Code ownership | Does the seller own all of it, including contractor work? | Written assignments or contractor agreements |
+| Hosting | Who controls the cloud account, and what does it cost now? | Account access list and last three invoices |
+| Third-party services | Which paid APIs and tools does the product depend on? | A list with costs and the account owner |
+| Security | How are passwords and customer data stored? Who has admin access? | Reviewer's notes, access list |
+| Backups | Do backups exist, and has a restore been tested? | A dated restore test |
+| Documentation | Could a new developer start within days? | README, setup notes, deployment steps |
+
+A "no" or "I do not know" is not a deal-breaker, but each one needs a fix and a cost in your offer.
 
 Sellers are often reluctant to share a full repository before a deal is agreed. A screen-share walkthrough first, and full access after a signed [letter of intent](/glossary/letter-of-intent/) and a non-disclosure agreement, is a common compromise. The technical section of the [due diligence checklist](/guides/digital-business-due-diligence/) lists the rest.
 
@@ -105,6 +130,12 @@ Use an independent [escrow](/glossary/escrow/) service. You pay the escrow provi
 
 ## Step 8: The first 90 days
 
+| Period | Goal | Checklist |
+|---|---|---|
+| Days 1 to 30 | Keep it stable | Change passwords and keys, confirm backups, answer support yourself, change nothing visible |
+| Days 31 to 60 | Learn it | Track MRR, churn and support weekly, talk to the largest customers, fix review findings |
+| Days 61 to 90 | Improve one thing | One change at a time, measured against the months before, use the seller's support period |
+
 **Days 1 to 30: keep it stable.** Change every password and access key. Confirm backups work. Answer support yourself so you hear what customers actually ask. Change nothing customers can see.
 
 **Days 31 to 60: learn it.** Watch MRR, churn and support volume weekly and compare them with the seller's figures. Talk to the largest customers. Fix the faults the code review found.
@@ -122,6 +153,14 @@ No, but someone has to maintain the code. If that isn't you, budget for a develo
 ### What churn rate is too high?
 
 There's no single line. {{BRAND}}'s tool treats 2% to 5% monthly churn as its baseline and lowers the multiple above 5%. What matters more is whether the seller can explain why customers leave.
+
+### How do I check the MRR on a listing?
+
+Ask for monthly recurring revenue by month, taken from the payment processor or billing system, and match it to the bank deposits. Check that it counts only active subscriptions and leaves out one-off fees. The table in step 2 shows where each figure should come from.
+
+### How long should the seller help after the sale?
+
+Many small deals include a support period, often counted in weeks or a few months, in which the seller answers questions and helps with handover. Put the length and the hours in the purchase agreement, and use it before it runs out.
 
 ### Can I see the code before making an offer?
 

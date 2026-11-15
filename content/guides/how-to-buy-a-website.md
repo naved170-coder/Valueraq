@@ -1,7 +1,7 @@
 ---
 title: "How to Buy a Website: A First-Time Buyer's Guide"
-meta_title: How to Buy a Website: First-Time Buyer's Guide
-meta_description: Buying your first website? Steps from finding a site to checking traffic and revenue, paying safely and taking over. Avoid the common traps.
+meta_title: How to Buy a Website: Budget Table & 10 Steps
+meta_description: Buying a website? See what a budget buys at the 3.2x default, a buy-or-build table and 10 steps to check traffic, revenue and escrow. Free tool included.
 h1: "How to Buy a Website: A First-Time Buyer's Guide"
 section: Buying
 cluster: website
@@ -10,7 +10,7 @@ page_type: article
 answer: To buy a website, set a budget and decide what kind of site you can run, find listings, ask for proof of traffic and revenue, value the site on its profit, agree the terms in writing, pay through escrow and take over the domain, hosting and accounts in an agreed order.
 keywords: buy websites, websites for sale, website business for sale, buy and sell websites, buying a website
 published: 2026-10-12
-updated: 2026-11-09
+updated: 2026-11-16
 publish_at: 2026-10-12T13:00Z
 image: /static/img/articles/how-to-buy-a-website.png
 image_alt: How to Buy a Website - a first-time buyer's guide (VALUERAQ guide)
@@ -25,6 +25,20 @@ cta_text: Browse websites for sale on the marketplace, or message a seller direc
 Buying a website is buying a small business that happens to live online. The price is mostly a multiple of the profit it earns, so the work is in proving that the profit is real, understanding where the visitors come from, and making sure the site can keep earning once the seller leaves. This guide walks a first-time buyer through each step in order. For the wider picture across site types, see our guide to [buying a business online](/guides/buying-digital-businesses/).
 
 Figures here are examples built from {{BRAND}}'s published default assumptions. They are estimates, not records of real sales.
+
+## Buy or build: which fits you?
+
+Many first-time buyers ask whether to buy a site or start one. Neither is cheaper in every case. The table compares what you give up in each.
+
+| | Buy an existing website | Build a new one |
+|---|---|---|
+| Money | Paid up front, priced on profit | Mostly your time, plus tools and content |
+| Time to first income | Starts on day one if the income is real | Often months or longer before income, and it may never come |
+| Main risk | Overpaying, or income that is not what it seemed | Spending months on a site that earns little |
+| What you learn | A working example to study and improve | Everything from scratch |
+| Best for | Buyers with capital who can check numbers | Buyers with more time than money |
+
+Buying is the better fit when you would rather pay to skip the early months and can prove what you are paying for. See also [buy vs build a SaaS business](/guides/buy-vs-build-saas/) for the software version of the question.
 
 ## Step 1: Set your budget and your limits
 
@@ -90,6 +104,18 @@ Which end applies depends on the site. Steady traffic from several sources and a
 
 Multiples have limits. Corporate Finance Institute notes that a multiples approach "only considers the company's position for a certain time period," so one figure is a starting point. Compare it with the asking price and with what the profit really is after your own corrections.
 
+### What a budget buys
+
+Turn a budget into the profit you need to see. This uses {{BRAND}}'s default midpoint of 3.2 times yearly profit, so it shows the idea, not a market price.
+
+| Budget | Yearly profit it points to (budget ÷ 3.2) | Per month |
+|---|---|---|
+| $5,000 | $1,563 | about $130 |
+| $50,000 | $15,625 | about $1,302 |
+| $500,000 | $156,250 | about $13,021 |
+
+A $5,000 budget points to a site earning about $130 a month, which usually means a very small or very young site. A $500,000 budget points to a site earning about $13,000 a month, which usually needs a team or a long record. Use the table in reverse: if a seller asks $50,000 for a site earning $500 a month, the price is far above the default range and you need a strong reason to pay it.
+
 ## Step 6: Check the numbers at the source
 
 This is the step that protects your money. Do not rely on screenshots, which can be edited.
@@ -99,6 +125,15 @@ This is the step that protects your money. Do not rely on screenshots, which can
 - **Costs.** Ask for the hosting, software, writer and tool bills, and check for costs the seller has left out.
 - **Add-backs.** BizBuySell warns that "some add-backs can unrealistically overvalue the company." Ask for evidence for every cost the seller wants to remove.
 - **Ownership.** Confirm the seller owns the domain, the content and the images, and has the right to transfer the revenue accounts. Some ad and affiliate programs do not allow accounts to pass to a new owner, so find out before you pay.
+
+### Quick background checks before you go deeper
+
+These take minutes and filter out weak listings. They do not replace the checks above.
+
+- **Who owns the domain.** Look the domain up in a WHOIS tool. The registrant, or the registrar account the seller shows you, should match the person selling. Many owners hide their name, so the seller can also prove control by changing a setting you can see.
+- **How old the site really is.** The Internet Archive's Wayback Machine shows earlier versions of a page. Check that the site looked the same a year ago as the seller says, and that it was not a different site on the same domain.
+- **Backlinks.** Ask the seller for a backlink report from a tool they pay for, or run a free one. Look for many links from the same few places, or from sites that look made for linking.
+- **Search visibility.** Search the site's name and a few of its main topics. Is it there?
 
 The full list of questions is in the [due diligence checklist](/guides/digital-business-due-diligence/). The U.S. Small Business Administration advises a "thorough, objective investigation" before buying a business, and the same applies when the business is a website.
 
@@ -179,6 +214,14 @@ Twelve months or more of revenue and cost records, bank statements that match th
 ### Do I need a lawyer?
 
 A purchase agreement sets out what you are buying and what happens if something is wrong. The structure also affects tax and liability, so take professional advice before you sign.
+
+### Should I buy a website or build one?
+
+Buy if you have the money and can check the numbers, and want to skip the early months. Build if you have more time than money and are happy to wait. The buy-or-build table near the top of this guide compares the two.
+
+### What is the first thing to check on a website for sale?
+
+Check that the revenue is real: ask for read-only access to the payout dashboards and match the totals to the seller's bank deposits. Everything else, including the multiple, depends on those numbers being true.
 
 ### Can I run a website I bought part time?
 
