@@ -10,7 +10,7 @@ page_type: reference
 answer: Use each store's own transfer process. On Apple, the sending account's Account Holder starts the transfer and the receiving Account Holder accepts it. On Google Play, both developer accounts must be registered and active. Reviews and ratings move with the app on both, but some items, such as Apple Pay merchant IDs, do not.
 keywords: transfer app ownership, transfer app to new owner, app store connect transfer app, google play transfer app
 published: 2026-10-28
-updated: 2026-10-28
+updated: 2026-11-16
 publish_at: 2026-10-28T07:00Z
 image: /static/img/articles/how-to-transfer-an-app-to-a-new-owner.png
 image_alt: How Do You Transfer an App to a New Owner? (VALUERAQ quick answer)
@@ -44,6 +44,8 @@ Google says "both Google Play developer accounts need to be registered and activ
 Not everything moves. Promotions, test groups and earnings reports do not transfer, and orders created before the transfer remain in the original account. A buyer who has no developer account must open one first, and Google lists a one-time US$25 registration fee. Agree who pays it.
 
 ## What to settle before you start
+
+Agree the price first. If you are unsure what the app is worth, check the [app value](/tools/app-valuation/) with the free tool before you fix the figure in writing.
 
 | Item | Apple | Google Play |
 |---|---|---|

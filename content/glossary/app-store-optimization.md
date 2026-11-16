@@ -14,7 +14,7 @@ image: /static/img/articles/app-store-optimization.png
 image_alt: Featured image for the glossary entry What Is App Store Optimization
 score: 8.6
 related: /glossary/organic-traffic/, /glossary/conversion-rate/, /glossary/monthly-active-users/, /glossary/platform-risk/, /guides/app-valuation/, /guides/how-to-sell-an-app/
-updated: 2026-11-12
+updated: 2026-11-16
 ---
 
 ## How it works
@@ -41,7 +41,7 @@ Buyers of apps ask where users come from. An app that gets most of its installs 
 
 The same facts show a risk. Store ranking depends on the store's own rules, and a change there can move installs overnight, which is a form of [platform risk](/glossary/platform-risk/). A buyer will ask for the store's search and install reports for at least 12 months, alongside [monthly active users](/glossary/monthly-active-users/) and revenue records.
 
-If you are selling, keep a record of what you changed in the listing and when, and the effect it had. Read [how to sell an app](/guides/how-to-sell-an-app/) and the [app valuation guide](/guides/app-valuation/) for how these numbers feed the price.
+If you are selling, keep a record of what you changed in the listing and when, and the effect it had. Read [how to sell an app](/guides/how-to-sell-an-app/) and the [app valuation guide](/guides/app-valuation/) for how these numbers feed the price. To see what listing and install numbers do to an app's value, try the free [mobile apps for valuations tool](/tools/app-valuation/).
 
 ## Related terms
 

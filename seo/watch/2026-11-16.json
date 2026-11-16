@@ -1,1 +1,39 @@
-{"status":"ok","summary":"Morning check started; stop checks passed, details to follow.","checks":["Started"],"fixed":[],"needs_owner":[]}
+{
+ "status": "fixed",
+ "summary": "All checks passed; I added links for 3 ranking actions and topped up the calendar; nothing needs the owner.",
+ "checks": [
+  "Last night's run (15 Nov): done, 1 article, 3 glossary pages, 4 improved pages",
+  "Queue: later slots are written by tonight's run (normal)",
+  "Tests: 132 passed; seo-check: 0 problems; audit: 249 URLs, 245 indexable, 0 critical, 0 warnings",
+  "Deploy: newest deploy live; no error-level log lines since 15 Nov 00:00Z",
+  "Pages live check: skipped",
+  "Task data honesty: last night's report matches the repository",
+  "Calendar supply: was 9 unwritten days, 3 added, now 12",
+  "Approvals: 1 held page waiting",
+  "Search figures: snapshot saved daily (latest 15 Nov, data to 14 Nov). Positions are Search Console averages, not live ranks",
+  "Article written: yes",
+  "Ranking review: 3 open actions carried out",
+  "pip could not install gunicorn in this environment only; the gates ran fine without it"
+ ],
+ "fixed": [
+  "Ranking action fca42732fa81: linked 'app value' to the App Valuation tool from the app transfer guide",
+  "Ranking actions 2bed21a7cc5f and a070672935ae: linked 'mobile apps for valuations' to the App Valuation tool from the app store optimization page",
+  "Calendar: added days 52 to 54 (depreciation, amortization, customer lifetime value, accounts receivable, online store conversion rate, goodwill impairment, newsletter valuation)"
+ ],
+ "needs_owner": [],
+ "weekly": {
+  "summary": "28 pages published in the last 7 days, no missed runs, search impressions up about 28% on the week before.",
+  "lines": [
+   "Pages published 9 to 15 Nov: 28 new (7 articles, 3 question-answer guides, 18 glossary terms), plus improvements to existing pages.",
+   "Pages held and still waiting: 1.",
+   "Days with a missed run: 0.",
+   "Repairs made this week: 3 ranking actions carried out and 3 calendar days added; no broken links found.",
+   "Unwritten days left in the calendar: 12.",
+   "Coming next: What Is Net Income?, How to Value a Business Using a Capitalization Rate, What Is an Owner-Operator Business?.",
+   "Last 7 days to 14 Nov: 17 clicks and 5,366 impressions against 11 clicks and 4,197 impressions the week before; last 28 days: 46 clicks and 17,863 impressions.",
+   "Google shows 91 pages for the last 7 days (77 the week before); 17 searches average position 1 to 3 and 66 position 4 to 10, with 52 at 11 to 20.",
+   "Targets at positions 8 to 20 with real impressions: the snapshot lists them as the 'mobile apps for valuations' and 'app value' app tool searches; those pages got extra links today.",
+   "Pages with many impressions but a click rate under 1%: overall click rate is 0.32%, so titles on the valuation tool pages need work (a rankings action will cover them)."
+  ]
+ }
+}
