@@ -1,7 +1,7 @@
 ---
 title: How to Buy an Ecommerce Business
-meta_title: How to Buy an Ecommerce Business: Buyer's Checklist
-meta_description: Buying an online store? Check profit, stock, suppliers, ad spend and accounts before you pay. A step-by-step checklist for first-time buyers.
+meta_title: Buy an Ecommerce Business: Stock Count & 100-Day Plan
+meta_description: Buying an online store? Get a stock-count example, a supplier check table and a 100-day plan, plus profit and escrow steps. Free calculator included.
 h1: How to Buy an Ecommerce Business
 section: Buying
 cluster: ecommerce
@@ -10,7 +10,7 @@ page_type: article
 answer: To buy an ecommerce business, screen listings by profit and sales channel, rebuild the profit figure from source reports, count the stock before you pay for it, check the supplier and ad account history, agree terms in writing and pay through escrow. The stock is normally paid for on top of the earnings-based price.
 keywords: buy ecommerce business, buying a business online, ecommerce business for sale, ecommerce stores for sale, online stores for sale
 published: 2026-11-01
-updated: 2026-11-09
+updated: 2026-11-16
 publish_at: 2026-11-01T01:00Z
 image: /static/img/articles/how-to-buy-an-ecommerce-business.png
 image_alt: Featured image for the guide on how to buy an ecommerce business, covering stock, suppliers and transfer
@@ -104,6 +104,19 @@ Stock is often the biggest check in the deal after the price, and the easiest to
 
 Agree in writing how the count will work and what happens to the price if the count differs from the list.
 
+### Example: pricing stock by how fast it sells
+
+Sort the counted stock by age and agree a rate for each band before closing. These figures are made up, and the rates are an example of a negotiated split, not a standard.
+
+| Stock band | Cost at the count | Rate agreed | Buyer pays |
+|---|---|---|---|
+| Sold within about 3 months | $12,000 | 100% | $12,000 |
+| Sells slowly (3 to 12 months) | $6,000 | 50% | $3,000 |
+| Older than 12 months or damaged | $2,000 | 0% | $0 |
+| **Total** | **$20,000** | | **$15,000** |
+
+Check: 12,000 + 3,000 + 0 = 15,000, so the buyer pays $5,000 less than the list. The point is to pay full price only for goods you expect to sell.
+
 ## Step 6: Check suppliers, channels and accounts
 
 This is where stores differ most from other online businesses.
@@ -115,6 +128,17 @@ This is where stores differ most from other online businesses.
 **Advertising accounts.** Ask for the spend and the return by month for the last twelve months. A store whose profit depends on advertising at a loss-free break-even point is fragile. See [return on ad spend](/glossary/return-on-ad-spend/).
 
 **Customers.** Ask for repeat purchase rates and [average order value](/glossary/average-order-value/). A store living on one-time buyers must keep paying to find new ones.
+
+### Supplier and fulfillment checks at a glance
+
+| What to check | What to ask for | Warning sign |
+|---|---|---|
+| Supplier terms | Written prices, minimum orders and lead times | Terms agreed only by chat message |
+| Supplier continuity | A statement that the supplier will serve the new owner | The seller is the only contact |
+| Backup supplier | A second quote or a past order | One factory for every product |
+| Fulfillment | The provider's contract and its own stock report | Stock figures only from the seller |
+| Returns and defects | Return rate by month and the reasons | Rising returns after a supplier change |
+| Shipping costs | Cost per order for the last twelve months | Margin that depends on a carrier discount that ends |
 
 ## A worked example
 
@@ -170,6 +194,19 @@ Then work through the handover in order:
 
 The [website transfer guide](/guides/how-to-transfer-a-website-to-a-new-owner/) has a fuller checklist.
 
+## Your first 100 days after closing
+
+A store keeps selling while you learn it, so change little at first and measure everything. This plan is a starting point, not a rule.
+
+| Days | Focus | What to do |
+|---|---|---|
+| 1 to 14 | Keep it running | Process orders with the seller on hand, check every payout lands in your account, and answer customers the same way as before |
+| 15 to 45 | Learn the numbers | Rebuild monthly profit from your own reports, track returns, and compare the stock list with the shelf |
+| 46 to 75 | Secure the supply | Place an order with each supplier on the agreed terms and get a second quote for the top products |
+| 76 to 100 | Make one change | Pick a single improvement, such as a product page or a shipping option, and test it against the earlier months |
+
+Write down what you changed and when, so a drop in sales can be traced to its cause.
+
 ## Common mistakes
 
 - **Paying a multiple on revenue.** Profit is the base, not sales.
@@ -195,6 +232,14 @@ It can be, with checks. Verify the sales and payouts at the source, count the st
 ### Should I buy a dropshipping store?
 
 It depends on the supplier. {{BRAND}}'s default takes 8% off the multiple for dropshipping, because the supplier controls fulfillment. A store with stable, written supplier terms is safer than one with an informal arrangement.
+
+### How do I value the inventory when I buy a store?
+
+Count it, value it at cost, and pay full cost only for stock you expect to sell. Slow or damaged goods are usually paid at a lower rate or left out, as the stock table above shows.
+
+### What should I do first after buying an ecommerce store?
+
+Keep the store running as it was, confirm that payouts reach you and learn the true monthly profit before changing prices or products. The 100-day plan above sets out the order.
 
 ### How long does it take to buy an ecommerce business?
 

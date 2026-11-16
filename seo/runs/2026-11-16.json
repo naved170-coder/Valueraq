@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (how to value a marketing agency) and 3 glossary pages (depreciation, amortization, accounts receivable); nothing held.",
+  "summary": "Wrote 1 article (how to value a marketing agency) and 3 glossary pages (depreciation, amortization, accounts receivable); nothing held. Also improved 4 existing pages (buy an ecommerce business, ROI when buying a website, customer concentration, data room).",
   "model": "claude-sonnet-5-5",
   "status": "ok",
   "items": [
@@ -58,6 +58,38 @@
       ],
       "serp": "missing",
       "note": ""
+    },
+    {
+      "path": "/guides/how-to-buy-an-ecommerce-business/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "images": "unchanged",
+      "note": "Stock table, supplier table, 100-day plan, FAQs."
+    },
+    {
+      "path": "/guides/how-to-calculate-roi-when-buying-a-website/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "images": "unchanged",
+      "note": "Comparison table, calculator link, FAQ."
+    },
+    {
+      "path": "/glossary/customer-concentration/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "images": "unchanged",
+      "note": "Risk table, worked price example, FAQs."
+    },
+    {
+      "path": "/glossary/data-room/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.5,
+      "images": "unchanged",
+      "note": "Folder checklist, folder vs paid room, FAQs."
     }
   ],
   "tasks": [
@@ -70,7 +102,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

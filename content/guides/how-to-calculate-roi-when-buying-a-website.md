@@ -1,7 +1,7 @@
 ---
 title: How to Calculate ROI When Buying a Website
-meta_title: Website ROI: How to Calculate Return Before You Buy
-meta_description: Work out the return and payback period on a website before buying: the formula, a worked example and the costs buyers often forget. Free calculator included.
+meta_title: ROI of Buying a Website: Worked Example & Payback
+meta_description: Work out ROI and payback before you buy a website: worked example, profit-drop table and a comparison with other uses of money. Free calculator included.
 h1: How to Calculate ROI When Buying a Website
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: The ROI of buying a website is a year of net profit divided by the total cost of buying it, shown as a percentage. A site that earns $30,000 of profit a year and costs $90,000 returns 33.3% a year and pays itself back in 36 months, if profit holds steady. Use the profit you will really keep after paying for any help you must hire.
 keywords: roi of buying a website, website investment return, return on investment business, website payback period, how to calculate roi on a website
 published: 2026-11-04
-updated: 2026-11-04
+updated: 2026-11-16
 publish_at: 2026-11-05T01:00Z
 image: /static/img/articles/how-to-calculate-roi-when-buying-a-website.png
 image_alt: How to Calculate ROI When Buying a Website (VALUERAQ guide)
@@ -137,6 +137,20 @@ A 30% fall in profit adds 15.4 months to payback (51.4 − 36). The table does n
 
 What could cause a fall? [Red flags when buying a website](/guides/red-flags-when-buying-a-website/) lists common warning signs, and [how to verify website traffic](/guides/how-to-verify-website-traffic/) and [how to verify website revenue](/guides/how-to-verify-website-revenue/) show how to check the figures behind the profit.
 
+## Comparing ROI with another use of the money
+
+ROI means more next to a real alternative. Take the same $96,000 total cost and compare it with putting that money somewhere else. The 4% rate below is made up to show the arithmetic. It is not a current rate and not a forecast.
+
+| Choice | Yearly return on $96,000 | How the figure is reached |
+|---|---|---|
+| Website (profit holds) | $25,200 | From the worked example above |
+| Website (profit falls 30%) | $17,640 | $25,200 × 0.70 |
+| Made-up 4% alternative | $3,840 | $96,000 × 0.04 |
+
+The website's figure carries risk and needs your time, and the alternative may not. So compare the extra return with the extra risk and hours, not just the two percentages. No return is promised by either choice, and a site's profit can fall or stop.
+
+Once you have your own numbers, the [business multiple calculator](/calculators/business-multiple-calculator/) turns a price and a profit into a multiple, so you can see where the listing sits against the ranges above.
+
 ## ROI is not the whole decision
 
 ROI is a good first filter and a poor final answer. Keep these limits in mind.
@@ -174,6 +188,10 @@ No, but they are linked. ROI is a yearly percentage, and payback is the time to 
 ### Should I use revenue or profit to calculate ROI?
 
 Use profit. Revenue is money before costs, and a site with high revenue can still earn little. The return on a purchase comes from what is left after costs, so profit is the right figure. Use the version that is after paying for any work you will not do yourself.
+
+### How do I calculate ROI on a website quickly?
+
+Divide the yearly profit you expect to keep by the total you pay, then multiply by 100. For example, $25,200 ÷ $96,000 × 100 = 26.25%. Then test it with lower profit.
 
 ### Does a loan change the calculation?
 
