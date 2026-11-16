@@ -1,0 +1,89 @@
+{
+  "summary": "Wrote 1 article (how to value a marketing agency) and 3 glossary pages (depreciation, amortization, accounts receivable); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "status": "ok",
+  "items": [
+    {
+      "path": "/guides/how-to-value-a-marketing-agency/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/how-to-calculate-sde/, /guides/sde-vs-ebitda/; this one is about valuing an agency specifically)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "marketing agency valuation calculator",
+        "how to value a service business"
+      ],
+      "serp": "missing",
+      "note": "Calendar tool link /calculators/sde-valuation-calculator/ does not exist; CTA points to /calculators/business-multiple-calculator/ instead."
+    },
+    {
+      "path": "/glossary/depreciation/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/book-value/, /glossary/ebitda/)",
+      "images": "1 featured",
+      "keywords": [
+        "depreciation meaning",
+        "straight-line depreciation"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/amortization/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/goodwill/, /glossary/ebitda/)",
+      "images": "1 featured",
+      "keywords": [
+        "amortization meaning",
+        "amortization vs depreciation"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/accounts-receivable/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/working-capital/, /glossary/deferred-revenue/)",
+      "images": "1 featured",
+      "keywords": [
+        "accounts receivable meaning",
+        "days sales outstanding"
+      ],
+      "serp": "missing",
+      "note": ""
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: 3 used, all taken from seo/sources.json (web fetch not available this run)"
+  ],
+  "notes": [
+    "WebSearch/WebFetch were not used; sources came from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs were read; the day's new searches did not match these topics, so keywords come from the calendar.",
+    "Marketing agency article uses what-if multiples (2.0x to 3.5x) for arithmetic only, since VALUERAQ has no agency default range; they are labeled as not market data.",
+    "Release times (Pakistan): depreciation 17 Nov 12 am, article 17 Nov 6 am, amortization 17 Nov 12 pm, accounts receivable 17 Nov 6 pm.",
+    "Skipped again (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page."
+  ]
+}
