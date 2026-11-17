@@ -364,5 +364,29 @@
   "kind": "glossary",
   "query": "accounts receivable meaning",
   "day": 53
+ },
+ {
+  "slug": "discounted-cash-flow-for-small-online-businesses",
+  "kind": "guides",
+  "query": "business valuation discounted cash flow calculator",
+  "day": null
+ },
+ {
+  "slug": "goodwill-impairment",
+  "kind": "glossary",
+  "query": "goodwill impairment",
+  "day": null
+ },
+ {
+  "slug": "accounts-payable",
+  "kind": "glossary",
+  "query": "accounts payable",
+  "day": null
+ },
+ {
+  "slug": "cash-flow-statement",
+  "kind": "glossary",
+  "query": "cash flow statement",
+  "day": null
  }
 ]

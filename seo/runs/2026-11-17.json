@@ -1,0 +1,95 @@
+{
+  "summary": "Wrote 1 article (discounted cash flow for a small online business) and 3 glossary pages (goodwill impairment, accounts payable, cash flow statement); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "status": "ok",
+  "items": [
+    {
+      "path": "/glossary/goodwill-impairment/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/goodwill/, /glossary/book-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "goodwill impairment",
+        "goodwill write-down"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/guides/discounted-cash-flow-for-small-online-businesses/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/discounted-cash-flow/, /guides/website-valuation-methods/; this one is a full worked example)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "business valuation discounted cash flow calculator",
+        "dcf valuation small business"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/accounts-payable/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/accounts-receivable/, /glossary/working-capital/)",
+      "images": "1 featured",
+      "keywords": [
+        "accounts payable",
+        "accounts payable meaning"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/glossary/cash-flow-statement/",
+      "action": "new",
+      "type": "Glossary term",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/cash-flow/, /guides/how-to-read-a-profit-and-loss-statement/)",
+      "images": "1 featured",
+      "keywords": [
+        "cash flow statement",
+        "statement of cash flows"
+      ],
+      "serp": "missing",
+      "note": ""
+    },
+    {
+      "path": "/guides/mobile-app-valuation-guide/",
+      "action": "skipped",
+      "type": "Article",
+      "note": "Duplicates /guides/app-valuation/; removed from the calendar."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: not opened (web access unavailable); only sources in seo/sources.json used"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs read; new searches (customer retention cost, website flipping, operating income, balance sheet example) are already covered, so keywords come from the calendar.",
+    "Release times (Pakistan): goodwill impairment 18 Nov 12 am, article 18 Nov 6 am, accounts payable 18 Nov 12 pm, cash flow statement 18 Nov 6 pm.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages.",
+    "Accounts payable and cash flow statement were not in the calendar; they replace the held reference topics. Still skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page."
+  ]
+}
