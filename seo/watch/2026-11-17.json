@@ -1,1 +1,18 @@
-{"status":"ok","summary":"Morning check started; stop checks passed, checks in progress.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "ok",
+  "summary": "All checks passed: last night's run is complete, today's pages are queued, tests and audit are clean, and the website is live.",
+  "checks": [
+    "Last night's run: done, 4 new pages (1 article, 3 glossary) plus 4 improved pages",
+    "Queue: 3 of 3 remaining slots for today filled (01:00Z, 07:00Z, 13:00Z); depreciation went live at 19:00Z last night",
+    "seo-check: 0 problems; tests: 132 passed; audit: 253 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy is live; the only error-level lines since last check were 2 lines at 2026-11-16 14:57:59Z (a vitals request failed with 'database disk image is malformed') during the deploy switch-over; none since, so it looks transient",
+    "Task data honesty: pages and images in last night's report all exist in the repository; release times are set",
+    "Calendar supply: 11 unwritten days left (enough)",
+    "Approvals: 1 page held (purchase-price-allocation)",
+    "Search figures: snapshot saved daily, latest 2026-11-16 (Search Console data through 2026-11-15; positions are Search Console averages, not live ranks)",
+    "Article written last night: yes (how to value a marketing agency)",
+    "Ranking review: not a Monday or Thursday, so skipped. Weekly report: not a Monday, skipped"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
