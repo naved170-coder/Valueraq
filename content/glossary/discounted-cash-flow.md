@@ -2,15 +2,15 @@
 title: What Is Discounted Cash Flow (DCF)?
 term: Discounted Cash Flow (DCF)
 aliases: discounted cash flow, DCF, discounted cash flow analysis
-meta_title: What Is Discounted Cash Flow (DCF)? Definition & Example
-meta_description: Discounted cash flow values a business by adding up its future cash flows in today's money. See the formula, a worked example and its limits for small deals.
+meta_title: DCF Meaning: Formula, Worked Example & Small-Site Limits
+meta_description: DCF adds up future cash in today's money. See the formula, a 3-year example and why buyers of small sites use multiples.
 h1: Discounted Cash Flow (DCF)
 definition: Discounted cash flow (DCF) is a way of valuing a business by estimating the cash it will produce in future years and converting each year's amount into what it is worth today.
 cluster: analysis
 page_type: reference
 keywords: discounted cash flow, dcf, dcf formula, what is discounted cash flow
-related: /glossary/valuation-multiple/, /guides/business-valuation/, /guides/saas-valuation-methods/, /guides/website-valuation-methods/
-updated: 2026-10-08
+related: /glossary/valuation-multiple/, /glossary/terminal-value/, /glossary/discount-rate/, /guides/business-valuation/, /guides/saas-valuation-methods/, /guides/website-valuation-methods/
+updated: 2026-11-17
 publish_at: 2026-10-08T01:00Z
 image: /static/img/articles/discounted-cash-flow.png
 image_alt: Featured image for the glossary entry What Is Discounted Cash Flow
@@ -51,6 +51,16 @@ DCF is the main form of what the U.S. Small Business Administration calls the in
 - **It looks precise when it isn't.** The output has decimals, but the inputs are opinions.
 
 This is why small digital businesses are usually priced with a [valuation multiple](/glossary/valuation-multiple/). A multiple is a shortcut for the same idea: paying 3 times yearly profit means the buyer expects to earn the price back in about three years if profit holds. {{BRAND}}'s tools use multiples for that reason, as the [methodology](/methodology/) explains.
+
+## Questions
+
+### What is a good discount rate for a small online business?
+
+There is no official figure. Buyers choose a return that matches the risk, so riskier businesses get higher rates. Test two or three rates, as in the example.
+
+### Where can I see a full example?
+
+Our guide to [website valuation methods](/guides/website-valuation-methods/) shows how DCF compares with the multiple method.
 
 ## Related terms
 

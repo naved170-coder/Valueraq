@@ -1,7 +1,7 @@
 ---
 title: How Do You Calculate SDE?
-meta_title: How to Calculate SDE: Formula, Add-Backs & Example
-meta_description: SDE is profit plus the owner's pay and add-backs. See the formula, which add-backs buyers accept, and a worked example. Free calculator included.
+meta_title: How to Calculate SDE: Worksheet, Add-Back Table, Example
+meta_description: Calculate SDE line by line from your profit and loss. Worksheet, add-backs buyers accept or reject, and 4 ways to raise it. Free calculator included.
 h1: How Do You Calculate SDE?
 section: Quick answers
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: reference
 answer: SDE (seller's discretionary earnings) is net profit plus the owner's pay and benefits, interest, taxes, depreciation and amortization, and any personal or one-off costs the business paid. It shows the total pre-tax income one working owner can take from the business.
 keywords: how to calculate sde, sde formula, seller's discretionary earnings, sde add-backs, calculate sde
 published: 2026-10-18
-updated: 2026-10-18
+updated: 2026-11-17
 publish_at: 2026-10-18T01:00Z
 image: /static/img/articles/how-to-calculate-sde.png
 image_alt: Featured image for the quick answer How Do You Calculate SDE
@@ -24,49 +24,70 @@ cta_text: Once you have your SDE, turn an asking price into a multiple of it.
 
 **SDE = net profit + owner's pay and benefits + interest + taxes + depreciation and amortization + personal and one-off expenses**
 
-Start at the bottom of the profit and loss statement, then add back each cost that a new owner would not have to pay, or that is not part of running the business. What is left is the income one owner-operator could take home before tax.
+Start at the bottom of the profit and loss, then add back each cost a new owner would not have to pay. What is left is the income one owner-operator could take home before tax.
 
-## The steps
+## Steps
 
-1. **Use a full twelve months.** Take the last twelve months, or the last full financial year, and use the same period for every line.
-2. **Start with net profit** from the profit and loss statement.
-3. **Add back the owner's salary and benefits.** Draws, payroll taxes and health cover the business paid for the owner.
-4. **Add back interest, taxes, depreciation and amortization.** These depend on how the business is financed and taxed, not on how it operates.
-5. **Add back personal and discretionary costs.** For example a personal phone, a vehicle, or a trip run through the business.
-6. **Add back one-off costs.** A legal bill for a dispute that has ended, or a one-time platform migration, will not repeat.
-7. **Deduct one-off gains.** A single large refund or a non-recurring windfall should not be counted as normal income.
-8. **Keep records for each add-back.** Invoices and bank statements are what a buyer will ask to see.
+1. Use the last twelve months for every line.
+2. Start with net profit.
+3. Add back the owner's pay and benefits, then interest, taxes, depreciation and amortization.
+4. Add back personal costs and genuine one-off costs. Deduct one-off gains.
+5. Keep an invoice or bank record for each add-back.
 
-BizBuySell defines add-backs as "expenses added back to a company's bottom-line profits when determining Seller's Discretionary Earnings (SDE) or EBITDA." It also warns that "some add-backs can unrealistically overvalue the company" ([BizBuySell](https://www.bizbuysell.com/learning-center/article/add-backs-sde/)). Only add back what you can document.
+BizBuySell warns that "some add-backs can unrealistically overvalue the company" ([BizBuySell](https://www.bizbuysell.com/learning-center/article/add-backs-sde/)). Only add back what you can document.
 
-## A worked example
+## Worksheet: from profit and loss to SDE
 
-A website earns $150,000 in revenue over twelve months. After all its costs, including the owner's pay, net profit is $38,000.
+A website earns $150,000 in revenue. Here is every cost and whether it is added back:
 
-| Line | Amount |
+| Profit and loss line | Amount | Add back? |
+|---|---|---|
+| Revenue | $150,000 | n/a |
+| Owner's pay and benefits | −$30,000 | Yes |
+| Contractors, writers and software that run the site | −$62,000 | No |
+| Hosting and platform fees | −$10,000 | No |
+| Advertising | −$6,000 | No |
+| Owner's personal phone and car | −$2,500 | Yes, with receipts |
+| One-off legal fee | −$4,000 | Yes |
+| Depreciation | −$800 | Yes |
+| Loan interest | −$1,200 | Yes |
+| Other costs | −$7,500 | No |
+| **Net profit** | **$26,000** | |
+
+Check: 150,000 − 30,000 − 62,000 − 10,000 − 6,000 − 2,500 − 4,000 − 800 − 1,200 − 7,500 = 26,000.
+
+**SDE** = 26,000 + 30,000 + 2,500 + 4,000 + 800 + 1,200 = **$64,500**.
+
+At {{BRAND}}'s default 2.5× to 4× range for websites, 3× this SDE is $193,500. The range is a platform assumption on the [methodology](/methodology/) page, not market data. Use the earnings figure the multiple was built for; see [SDE vs EBITDA](/guides/sde-vs-ebitda/).
+
+## Add-backs buyers accept and reject
+
+| Usually accepted, with proof | Usually challenged |
 |---|---|
-| Net profit | $38,000 |
-| Owner's pay and benefits paid by the business | $30,000 |
-| Interest on a business loan | $1,200 |
-| Depreciation of equipment | $800 |
-| Owner's personal phone and car run through the business | $2,500 |
-| One-off legal fee for a closed dispute | $4,000 |
-| **SDE** | **$76,500** |
+| Owner's salary, payroll tax, health cover | "Miscellaneous" costs with no invoices |
+| Interest, depreciation, amortization | Recurring costs labeled one-off |
+| Personal costs paid by the business | Wages for staff who do real work |
+| A genuine one-off legal or migration cost | Marketing that produces the revenue |
 
-Check: 38,000 + 30,000 + 1,200 + 800 + 2,500 + 4,000 = 76,500.
+See [add-backs](/glossary/add-backs/) for more.
 
-At VALUERAQ's default 2.5× to 4× range for websites, a buyer paying 3× this SDE would pay $229,500. The multiple depends on age, trend and risk, and the range is a platform assumption described on the [methodology](/methodology/) page, not market data. Use the same earnings figure the multiple was built for; see [SDE vs EBITDA](/guides/sde-vs-ebitda/).
+## How to increase SDE before a sale
+
+1. Document every add-back so it keeps its full value.
+2. Stop mixing personal and business costs a year before you sell.
+3. Cut costs that earn nothing. Each $1,000 saved adds $1,000 to SDE.
+4. Grow revenue faster than costs. At a 3× multiple, $1,000 more yearly SDE adds $3,000 to the price, as an example, not a promise.
 
 ## Frequently asked questions
 
 ### Is SDE the same as net profit?
 
-No. Net profit is after the owner's pay and after personal costs. SDE adds those back, so it is higher for any owner-run business.
+No. Net profit is after the owner's pay and personal costs. SDE adds them back.
 
-### Can I add back my own salary if I take no salary?
+### Is SDE the same as EBITDA?
 
-There is nothing to add back in that case, since no pay was deducted. Some buyers still want to see what the work would cost to replace, which is where [SDE vs EBITDA](/guides/sde-vs-ebitda/) matters.
+No. SDE adds back one owner's full pay. See [SDE vs EBITDA](/guides/sde-vs-ebitda/).
 
-### Which add-backs do buyers challenge most?
+### Is there a free SDE calculator?
 
-Vague "miscellaneous" costs and recurring items described as one-offs. Each add-back should have a document behind it.
+The worksheet works in any spreadsheet. To turn a price into a multiple of your SDE, use the [business multiple calculator](/calculators/business-multiple-calculator/).

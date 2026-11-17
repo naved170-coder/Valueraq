@@ -45,6 +45,7 @@
   "Add a simple SDE calculator or link to tool, plus FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-17",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added SDE worksheet, accepted/rejected add-back table, how to raise SDE, FAQs"
 }

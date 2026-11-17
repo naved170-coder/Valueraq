@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (discounted cash flow for a small online business) and 3 glossary pages (goodwill impairment, accounts payable, cash flow statement); nothing held.",
+  "summary": "Wrote 1 article (discounted cash flow for a small online business) and 3 glossary pages (goodwill impairment, accounts payable, cash flow statement); nothing held. Also improved 4 existing pages (how to calculate SDE, financing a purchase, digital business, discounted cash flow).",
   "model": "claude-sonnet-5-5",
   "status": "ok",
   "items": [
@@ -64,6 +64,34 @@
       "action": "skipped",
       "type": "Article",
       "note": "Duplicates /guides/app-valuation/; removed from the calendar."
+    },
+    {
+      "path": "/guides/how-to-calculate-sde/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.7,
+      "note": "Improved from saved competitor research in seo/serp/."
+    },
+    {
+      "path": "/guides/how-to-finance-buying-an-online-business/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Improved from saved competitor research in seo/serp/."
+    },
+    {
+      "path": "/glossary/digital-business/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Improved from saved competitor research in seo/serp/."
+    },
+    {
+      "path": "/glossary/discounted-cash-flow/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.7,
+      "note": "Improved from saved competitor research in seo/serp/."
     }
   ],
   "tasks": [
@@ -76,7 +104,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",
