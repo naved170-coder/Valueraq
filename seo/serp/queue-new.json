@@ -388,5 +388,29 @@
   "kind": "glossary",
   "query": "cash flow statement",
   "day": null
+ },
+ {
+  "slug": "how-to-sell-your-online-business-without-a-broker",
+  "kind": "guides",
+  "query": "sell my company online",
+  "day": 48
+ },
+ {
+  "slug": "accrual-basis-accounting",
+  "kind": "glossary",
+  "query": "accrual basis accounting",
+  "day": 55
+ },
+ {
+  "slug": "cash-basis-accounting",
+  "kind": "glossary",
+  "query": "cash basis accounting",
+  "day": 56
+ },
+ {
+  "slug": "current-ratio",
+  "kind": "glossary",
+  "query": "current ratio",
+  "day": 56
  }
 ]

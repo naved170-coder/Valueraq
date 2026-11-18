@@ -1,0 +1,84 @@
+{
+  "summary": "Wrote 1 article (selling an online business without a broker) and 3 glossary pages (cash basis accounting, accrual basis accounting, current ratio); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/how-to-sell-your-online-business-without-a-broker/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/ways-to-sell-a-digital-business/, /guides/how-to-sell-a-website/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "sell my company online",
+        "i want to sell my online business",
+        "best place to sell a small business"
+      ],
+      "serp": "missing",
+      "note": "Release 19 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/glossary/cash-basis-accounting/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/accounts-payable/)",
+      "images": "1 featured",
+      "keywords": [
+        "cash basis accounting"
+      ],
+      "serp": "missing",
+      "note": "Release 18 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/glossary/accrual-basis-accounting/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/deferred-revenue/)",
+      "images": "1 featured",
+      "keywords": [
+        "accrual basis accounting"
+      ],
+      "serp": "missing",
+      "note": "Release 19 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/glossary/current-ratio/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/working-capital/)",
+      "images": "1 featured",
+      "keywords": [
+        "current ratio"
+      ],
+      "serp": "missing",
+      "note": "Release 19 Nov 6 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json (SBA) and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs read; no searches relate to today's topics, so keywords come from the calendar.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages. Current ratio is calendar day 56; the article's 10% commission and the $1,500 costs are labeled assumptions, not market data.",
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page."
+  ]
+}
