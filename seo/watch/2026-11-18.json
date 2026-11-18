@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Morning check started; stop checks passed.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; the calendar was running low, so 9 new days of topics were added.",
+  "checks": [
+    "Last night's run (17 Nov): done, 1 article and 3 glossary pages plus 4 improved pages",
+    "Queue: today's pages (18 Nov) exist; evening slots are written by tonight's run",
+    "Tests: 132 passed; audit: 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy (this check's first push) building, previous deploy live; no error log lines since 17 Nov",
+    "Live-site page check: skipped (not needed, no snapshot read)",
+    "Task data honesty: pages, images and release times in last night's report match the repository",
+    "Calendar supply: 9 unwritten days left before top-up, 18 after (3 of the 18 hold held topics)",
+    "Held files (hold: yes): 1",
+    "Search figures: snapshot readable (last 17 Nov); last 7 days 13 clicks and 4,945 impressions, average position 49.8 (Search Console averages, not live ranks)",
+    "Ranking review: not a Monday or Thursday, so skipped"
+  ],
+  "fixed": [
+    "Added 9 new days (days 55 to 63) to the content calendar: reference terms and one marketplace guide and one bookkeeping guide, none duplicating existing pages"
+  ],
+  "needs_owner": []
+}
