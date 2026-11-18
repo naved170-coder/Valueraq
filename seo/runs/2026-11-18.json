@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (selling an online business without a broker) and 3 glossary pages (cash basis accounting, accrual basis accounting, current ratio); nothing held.",
+  "summary": "Wrote 1 article (selling an online business without a broker) and 3 glossary pages (cash basis accounting, accrual basis accounting, current ratio); nothing held. Also improved 4 existing pages (display advertising, dropshipping, what a business is worth, negotiating a purchase).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -55,6 +55,34 @@
       ],
       "serp": "missing",
       "note": "Release 19 Nov 6 pm Pakistan."
+    },
+    {
+      "path": "/glossary/display-advertising/",
+      "action": "improve",
+      "type": "Improvement",
+      "score": 8.6,
+      "note": "Added ad-funded site value example with default multiples, FAQs, new title and description."
+    },
+    {
+      "path": "/glossary/dropshipping/",
+      "action": "improve",
+      "type": "Improvement",
+      "score": 8.6,
+      "note": "Added per-order profit example, comparison table, supplier risk checklist, FAQs."
+    },
+    {
+      "path": "/guides/how-to-find-out-what-a-business-is-worth/",
+      "action": "improve",
+      "type": "Improvement",
+      "score": 8.6,
+      "note": "Added method decision table and self-check list; new title and description."
+    },
+    {
+      "path": "/guides/how-to-negotiate-buying-an-online-business/",
+      "action": "improve",
+      "type": "Improvement",
+      "score": 8.6,
+      "note": "Added offer-building example with sample wording, levers table, walk-away signs."
     }
   ],
   "tasks": [
@@ -67,7 +95,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

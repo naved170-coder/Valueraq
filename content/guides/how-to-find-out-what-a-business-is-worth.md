@@ -1,7 +1,7 @@
 ---
 title: How Do You Find Out What a Business Is Worth?
-meta_title: What Is My Business Worth? How to Find Out (Free)
-meta_description: Find out what a business is worth in three steps: work out the real profit, pick a fair multiple and adjust for risk. Worked example and free tools.
+meta_title: What Is My Business Worth? Method Table & Checklist
+meta_description: Find out what a business is worth in three steps, with a table to pick the right method, a self-check list and a worked example. Free calculator included.
 h1: How Do You Find Out What a Business Is Worth?
 section: Quick answers
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: reference
 answer: Work out the business's yearly profit before the owner's pay, multiply it by a multiple that fits the type of business and its risk, and check the answer against what the assets are worth and what a buyer could earn elsewhere. For a small online business this takes three figures and a few minutes.
 keywords: how to find out how much a business is worth, how to determine the value of a business, how do i know how much my business is worth, what is my business worth
 published: 2026-10-07
-updated: 2026-10-07
+updated: 2026-11-18
 publish_at: 2026-10-06T19:00Z
 image: /static/img/articles/how-to-find-out-what-a-business-is-worth.png
 image_alt: Featured image for the quick answer How Do You Find Out What a Business Is Worth
@@ -50,6 +50,26 @@ An online store keeps $5,000 a month after all costs, before the owner's pay.
 
 Stock is normally paid for on top, at what it cost. These multiples are {{BRAND}}'s published assumptions, set out in the [methodology](/methodology/). They are not records of real sales.
 
+## Which method fits your business
+
+| Your situation | Method to lead with | Why |
+|---|---|---|
+| Steady profit for 12 months or more | Profit multiple (market approach) | Quick and based on numbers you have |
+| Subscription revenue, little profit | Revenue multiple | Profit does not yet show the value. See [revenue and profit multiples](/guides/revenue-vs-profit-multiples/) |
+| Predictable or growing income | Income approach | Values future earnings, allowing for risk. See [discounted cash flow](/guides/discounted-cash-flow-for-small-online-businesses/) |
+| No profit and no steady revenue | Assets | Values what a buyer could use |
+
+## Quick self-check before you calculate
+
+- [ ] I have 12 months of revenue and costs, month by month.
+- [ ] I know my profit before my own pay.
+- [ ] I know whether revenue is rising, flat or falling.
+- [ ] I know the hours I work each week.
+- [ ] I know where most customers or traffic come from.
+- [ ] I can prove each figure with a statement.
+
+Each blank box is a place where a buyer will ask questions.
+
 ## What moves the answer
 
 - **Age.** A longer record gives a buyer more to rely on.
@@ -58,6 +78,8 @@ Stock is normally paid for on top, at what it cost. These multiples are {{BRAND}
 - **Reliance on one source.** One customer, one supplier or one traffic channel is a risk.
 
 ## When to pay for a formal valuation
+
+
 
 A calculator is enough to set expectations or to judge an asking price. Pay a qualified appraiser when the figure will be used in court, for tax, for a loan or in a dispute between partners. The SBA also suggests having an attorney review the sale agreement.
 

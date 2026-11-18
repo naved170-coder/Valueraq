@@ -1,7 +1,7 @@
 ---
 title: How Do You Negotiate the Price of an Online Business?
-meta_title: How to Negotiate an Online Business Price
-meta_description: Negotiate a fairer price when buying an online business: what to ask for, where sellers have room and how to structure the offer. Free calculator included.
+meta_title: Negotiate an Online Business Price (Sample Offer)
+meta_description: Negotiate buying an online business with a worked offer, sample wording, a table of levers besides price and signs to walk away. Free calculator included.
 h1: How Do You Negotiate the Price of an Online Business?
 section: Quick answers
 cluster: buying
@@ -10,7 +10,7 @@ page_type: reference
 answer: Negotiate on facts, not on feelings. Work out the asking price as a multiple of verified yearly profit, compare it with a reasoned range, and make an offer that names the specific risks or figures behind it. Price is only one lever; payment terms, handover help and a price adjustment clause can matter as much.
 keywords: negotiate buying a business, how to negotiate the price of an online business, negotiate website price, offer on a website
 published: 2026-10-24
-updated: 2026-10-24
+updated: 2026-11-18
 publish_at: 2026-10-23T19:00Z
 image: /static/img/articles/how-to-negotiate-buying-an-online-business.png
 image_alt: Featured image for the quick answer How Do You Negotiate the Price of an Online Business
@@ -22,9 +22,9 @@ cta_text: Paste the asking price and the profit into the business multiple calcu
 
 ## The short answer
 
-Start by turning the asking price into a multiple: the price divided by yearly profit. That number tells you what the seller is really asking for, and it lets you compare the listing with a range you can defend. Then check the profit. Most price talks end up being about whether the profit figure holds up.
+Start by turning the asking price into a multiple: the price divided by yearly profit. Compare it with a range you can defend, then check the profit. Most price talks come down to whether the profit figure holds up.
 
-Make your offer with reasons attached. "I will pay $128,000 because verified profit is $40,000 and traffic comes mostly from one source" is much easier for a seller to answer than "Can you do better?"
+Attach reasons to your offer; a seller can answer reasons more easily than "Can you do better?"
 
 ## A worked example
 
@@ -36,28 +36,47 @@ A website is listed at $150,000. The seller says it earns $40,000 a year.
 4. **Check the profit.** Suppose the statements show $36,000, not $40,000. At the same 3.75 multiple, that alone is $36,000 × 3.75 = $135,000.
 5. **Make the offer.** At the default midpoint of 3.2 on $36,000, the figure is $115,200.
 
-You now have a reasoned offer, a documented gap and a clear reason for each step. The seller may agree, counter or walk away. Either way, the talk is about numbers both sides can check.
+## Build the offer: price, structure and conditions
+
+Using the price above, $115,200, here is one illustrative way to split payment:
+
+| Part | Share | Amount | When |
+|---|---|---|---|
+| Paid at closing | 70% | $80,640 | Through escrow, on transfer |
+| Paid over time | 20% | $23,040 | 12 monthly payments of $1,920 |
+| Held back | 10% | $11,520 | Released after 90 days if the figures hold |
+
+Check: $80,640 + $23,040 + $11,520 = $115,200, and $23,040 ÷ 12 = $1,920.
+
+The third part is conditions. Sample wording: "I offer $115,200 based on verified profit of $36,000. $80,640 is paid at closing through escrow, $23,040 over 12 monthly payments and $11,520 held back for 90 days. The offer depends on due diligence and on four weeks of handover help." A [holdback](/glossary/holdback/) and [seller financing](/glossary/seller-financing/) tie part of the price to the business doing what the seller said.
 
 ## What else can you negotiate besides price?
 
-- **How you pay.** Part of the price paid later, as [seller financing](/glossary/seller-financing/), or tied to performance after the sale, lowers your risk.
-- **A price adjustment clause.** The U.S. Small Business Administration lists a purchase price adjustment among the documents professionals can help with ([SBA](https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise)). If the final figures differ from what you were shown, the price moves with them.
-- **Handover help.** A set number of weeks of the seller's time after closing.
-- **What is included.** Domain, content, accounts, email list and tools. See [what is included when you buy a website](/guides/what-is-included-when-you-buy-a-website/).
+| Lever | What to ask for | Why it helps you |
+|---|---|---|
+| Payment timing | Part of the price paid later | Lowers the money at risk on day one |
+| Holdback | A share held for a set period | Covers surprises in the first months |
+| Handover length | A set number of weeks of the seller's time | Passes on know-how |
+| Non-compete | The seller does not start a rival | Protects what you bought. See [non-compete agreement](/glossary/non-compete-agreement/) |
+| Inclusions | Domain, accounts, email list, tools | Avoids paying extra for them later |
+| Price adjustment | Price changes if final figures differ | Protects against wrong numbers |
+
+## Signs it is time to walk away
+
+- The seller will not share bank or payment statements that match the figures.
+- The seller refuses escrow or a written agreement.
+- Pressure to decide fast, with no time for checks.
+- Big risks are disclosed late, such as one traffic source.
 
 ## When to make an offer
 
-Make it in a [letter of intent](/glossary/letter-of-intent/), and say that it depends on [due diligence](/guides/digital-business-due-diligence/). That way you can adjust the price if checks find something. The SBA advises a "thorough, objective investigation" and suggests that you "consider hiring an attorney and an accountant."
+Make it in a [letter of intent](/glossary/letter-of-intent/), and say that it depends on [due diligence](/guides/digital-business-due-diligence/). The SBA advises a "thorough, objective investigation" and suggests that you "consider hiring an attorney and an accountant."
 
 ## Frequently asked questions
 
 ### Should I offer much less than the asking price?
 
 Only if you can explain the gap. A low offer with no reason often ends the talk. An offer based on verified profit and named risks is harder to dismiss.
-
-### What if the seller will not move on price?
-
-Ask for other terms instead: payment over time, a price adjustment clause or more handover help. Or walk away if the figures do not support the price.
 
 ### Can I lower the price after the offer is accepted?
 
