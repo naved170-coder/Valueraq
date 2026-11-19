@@ -1,1 +1,20 @@
-{"status":"ok","summary":"Morning check started; stop checks passed, full check in progress.","checks":["Started 19 Nov"],"fixed":[],"needs_owner":[]}
+{
+  "status": "fixed",
+  "summary": "All checks passed; three ranking-review actions were carried out on existing guides.",
+  "checks": [
+    "Last night's run (18 Nov): done, 1 article and 3 glossary pages plus 4 improved pages",
+    "Queue: today's pages exist; evening slots are written by tonight's run",
+    "Tests: 132 passed; audit: 0 critical, 0 warnings; seo-check: 0 problems",
+    "Deploy: newest deploy live; no error log lines since 18 Nov",
+    "Live-site page check: skipped (no snapshot of it read)",
+    "Task data honesty: tasks in last night's report match the repository (article present)",
+    "Calendar supply: 16 unwritten days left (enough)",
+    "Held files (hold: yes): 1",
+    "Search figures: snapshot readable (data to 17 Nov); last 7 days 14 clicks and 5,268 impressions, average position 49.6 (Search Console averages, not live ranks)",
+    "Ranking review (Thursday): all 15 open actions are cannibalisation; carried out the first three"
+  ],
+  "fixed": [
+    "Ranking review: added phrase links to the Website Valuation Tool for 'how much is that website worth', 'worth of web' and 'website net worth' from three related guides (actions be0ffd10b7f3, e55bf99ed507, b2fa79a005f9)"
+  ],
+  "needs_owner": []
+}

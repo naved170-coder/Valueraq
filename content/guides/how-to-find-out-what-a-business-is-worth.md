@@ -10,7 +10,7 @@ page_type: reference
 answer: Work out the business's yearly profit before the owner's pay, multiply it by a multiple that fits the type of business and its risk, and check the answer against what the assets are worth and what a buyer could earn elsewhere. For a small online business this takes three figures and a few minutes.
 keywords: how to find out how much a business is worth, how to determine the value of a business, how do i know how much my business is worth, what is my business worth
 published: 2026-10-07
-updated: 2026-11-18
+updated: 2026-11-19
 publish_at: 2026-10-06T19:00Z
 image: /static/img/articles/how-to-find-out-what-a-business-is-worth.png
 image_alt: Featured image for the quick answer How Do You Find Out What a Business Is Worth
@@ -82,6 +82,8 @@ Each blank box is a place where a buyer will ask questions.
 
 
 A calculator is enough to set expectations or to judge an asking price. Pay a qualified appraiser when the figure will be used in court, for tax, for a loan or in a dispute between partners. The SBA also suggests having an attorney review the sale agreement.
+
+Owners often search for their website net worth; the [Website Valuation Tool](/tools/website-valuation/) gives a free estimate from a site's profit, age and traffic.
 
 ## Frequently asked questions
 

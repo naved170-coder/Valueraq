@@ -103,5 +103,20 @@
     "id": "a070672935ae",
     "date": "2026-11-16",
     "note": "Same phrase linked to /tools/app-valuation/ from the app store optimization page; the tool is the main page for it."
+  },
+  {
+    "id": "be0ffd10b7f3",
+    "date": "2026-11-19",
+    "note": "Added a sentence linking \"how much is that website worth\" to /tools/website-valuation/ from a related guide"
+  },
+  {
+    "id": "e55bf99ed507",
+    "date": "2026-11-19",
+    "note": "Added a sentence linking \"worth of web\" to /tools/website-valuation/ from a related guide"
+  },
+  {
+    "id": "b2fa79a005f9",
+    "date": "2026-11-19",
+    "note": "Added a sentence linking \"website net worth\" to /tools/website-valuation/ from a related guide"
   }
 ]
