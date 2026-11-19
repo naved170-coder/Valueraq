@@ -1,7 +1,7 @@
 ---
 title: How to Sell a SaaS Business: Steps, Timeline and Documents
-meta_title: How to Sell a SaaS Business: Steps & Documents
-meta_description: Sell your SaaS for a fair price: the documents buyers want, how to value it, where to list and how to hand over. Free SaaS valuation tool.
+meta_title: Sell a SaaS Business: Buyers, Timeline & Documents
+meta_description: Sell your SaaS for a fair price: buyer types, an example timeline, deal structures, customer data handover and the documents buyers want. Free SaaS tool.
 h1: How to Sell a SaaS Business: Steps, Timeline and Documents
 section: Selling
 cluster: saas
@@ -10,7 +10,7 @@ page_type: article
 answer: To sell a SaaS business, gather clean records of recurring revenue, churn and costs, set a price from annual recurring revenue (ARR), write a factual listing, answer buyer questions with read-only access to your data, agree terms in a letter of intent and a purchase agreement, then close through escrow while you transfer the code, hosting, domain, payment accounts and customers in an agreed order.
 keywords: sell saas business, sell your saas, saas business for sale, sell saas company, how to sell a saas
 published: 2026-10-11
-updated: 2026-10-11
+updated: 2026-11-19
 publish_at: 2026-10-11T01:00Z
 image: /static/img/articles/how-to-sell-a-saas-business.png
 image_alt: How to Sell a SaaS Business (VALUERAQ guide)
@@ -86,6 +86,16 @@ Which end applies depends on the business. Low churn and steady growth point to 
 
 A revenue multiple has a known weakness: Corporate Finance Institute notes it "ignores profitability and cash flow generation." If your business earns a healthy profit, say so in the listing, because buyers will check the price against profit as well.
 
+## Who buys a SaaS business
+
+Different buyers want different things, and knowing which one you are talking to helps you answer well. The table describes the usual motives. It is not a count of how often each type buys.
+
+| Buyer type | What they usually want | What to prepare |
+|---|---|---|
+| Individual or owner-operator | A product they can run themselves and a clear handover | Documentation, a support period, simple accounts |
+| Investor or fund | Steady, well-documented earnings and low dependence on the owner | Clean financials, churn history, systems that run without you |
+| Another software company | Customers, technology or a product that fits their own | A clear customer list, how the code is built, how it connects to other tools |
+
 ## Step 5: Write the listing
 
 A good SaaS listing lets a buyer decide in two minutes whether to ask for more. State:
@@ -121,6 +131,26 @@ When a buyer is serious, the main terms go into a [letter of intent](/glossary/l
 
 Part of the price is sometimes paid later, through [seller financing](/glossary/seller-financing/) or an [earnout](/glossary/earnout/) tied to results. For example, a $420,000 deal could pay $336,000 at closing and $84,000 over the following six months once the buyer confirms the customers have moved across. That is $336,000 + $84,000 = $420,000, with 20% held back. The U.S. Small Business Administration recommends that an attorney review the sales agreement, and an accountant can explain the tax effect before you sign.
 
+### Cash, earnout or holdback: how the payment can be split
+
+| Structure | How it works | Example on a $420,000 deal |
+|---|---|---|
+| All cash at closing | The full price is paid through escrow at once | $420,000 at closing |
+| [Holdback](/glossary/holdback/) | Part of the price is kept back for a set period and released if no problems appear | $378,000 at closing, $42,000 held back (10%) |
+| [Earnout](/glossary/earnout/) | Part of the price depends on results after the sale, such as customers kept | $336,000 at closing, $84,000 if retention targets are met (20%) |
+
+Each row adds back to $420,000. The [deal structures guide](/guides/deal-structures-for-online-business-sales/) explains the trade-offs for sellers and buyers.
+
+### Transferring customer data and contracts
+
+Customer data is part of what the buyer is acquiring, and it brings duties with it. Before closing:
+
+- Check your privacy policy and terms to see what they say about passing data to a new owner, and whether customers must be told.
+- Ask a lawyer about the rules that apply to you and your customers, including customers in other countries.
+- Share customer data with the buyer only when the agreement and the law allow it. Before that, use summaries and anonymous figures.
+- List customers on annual plans or special terms, so the buyer knows what they are taking on.
+- Agree who answers customers' questions in the first weeks after the handover.
+
 ## Step 8: Close through escrow and hand over
 
 Use an independent [escrow](/glossary/escrow/) service. The buyer pays the escrow provider, you transfer the assets, the buyer confirms they have them, and the provider releases the money to you. {{BRAND}} is not a broker or an escrow service and does not handle the purchase price.
@@ -149,6 +179,18 @@ Every sale moves at its own pace, and no timeline here is an average. This outli
 | Closing and handover | Escrow, transfer, support period (step 8) |
 
 Preparation is the stage you control, and it is the one that most often shortens the rest.
+
+### An example plan by stage
+
+This plan is an example for you to adapt. It is not an average. Set your own dates and write the due diligence period into the letter of intent.
+
+| Stage | Example allowance | What should be done at the end |
+|---|---|---|
+| Preparation | 4 to 6 weeks | Metrics, clean accounts, documents and price ready |
+| Listing and first messages | 2 to 4 weeks | Listing live, serious buyers identified |
+| Due diligence | 2 to 4 weeks | Buyer has checked figures and product |
+| Terms and agreement | 1 to 3 weeks | Letter of intent and purchase agreement signed |
+| Closing and handover | 1 to 2 weeks plus support period | Assets moved, money released, buyer running the product |
 
 ## Frequently asked questions
 

@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (how to value a tech company) and 3 glossary pages (quick ratio, debt-to-equity ratio, equity value); nothing held.",
+  "summary": "Wrote 1 article (how to value a tech company) and 3 glossary pages (quick ratio, debt-to-equity ratio, equity value); nothing held. Also improved 4 existing pages (P&L statement, selling a SaaS business, due diligence, earnings per click).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -55,6 +55,34 @@
       ],
       "serp": "missing",
       "note": "Release 20 Nov 6 pm Pakistan."
+    },
+    {
+      "path": "/guides/how-to-read-a-profit-and-loss-statement/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added sample P&L with buyer questions, profit-to-SDE bridge and red-flag table; new meta"
+    },
+    {
+      "path": "/guides/how-to-sell-a-saas-business/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added buyer types, payment structure table, customer data handover, example stage plan; new meta"
+    },
+    {
+      "path": "/glossary/due-diligence/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added five-step process and FAQs; new meta"
+    },
+    {
+      "path": "/glossary/earnings-per-click/",
+      "action": "improve",
+      "type": "Existing page",
+      "score": 8.6,
+      "note": "Added EPC claim checks and FAQs; new meta"
     }
   ],
   "tasks": [
@@ -67,7 +95,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",
