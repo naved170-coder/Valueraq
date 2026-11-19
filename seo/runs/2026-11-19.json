@@ -1,0 +1,86 @@
+{
+  "summary": "Wrote 1 article (how to value a tech company) and 3 glossary pages (quick ratio, debt-to-equity ratio, equity value); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/how-to-value-a-tech-company/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/saas-valuation/, /guides/how-to-value-a-marketing-agency/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "tech company valuation calculator",
+        "service company valuation calculator",
+        "how to value a tech company"
+      ],
+      "serp": "missing",
+      "note": "Release 20 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/glossary/quick-ratio/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/current-ratio/)",
+      "images": "1 featured",
+      "keywords": [
+        "quick ratio"
+      ],
+      "serp": "missing",
+      "note": "Release 20 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/glossary/debt-to-equity-ratio/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/balance-sheet/)",
+      "images": "1 featured",
+      "keywords": [
+        "debt-to-equity ratio"
+      ],
+      "serp": "missing",
+      "note": "Release 20 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/glossary/equity-value/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/enterprise-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "equity value"
+      ],
+      "serp": "missing",
+      "note": "Release 20 Nov 6 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: 0 broken",
+    "External links: from seo/sources.json, not re-opened"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs read; new searches (website flipping, balance sheet example, operating income, net revenue) are already covered, so keywords come from the calendar.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages. Quick ratio, debt-to-equity ratio and equity value are calendar days 57-58.",
+    "Services-firm multiples (2.0x to 3.0x) in the tech company article are labeled what-if figures, not market data.",
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page."
+  ]
+}

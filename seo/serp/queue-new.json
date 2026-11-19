@@ -412,5 +412,25 @@
   "kind": "glossary",
   "query": "current ratio",
   "day": 56
+ },
+ {
+  "slug": "how-to-value-a-tech-company",
+  "kind": "guides",
+  "query": "tech company valuation calculator"
+ },
+ {
+  "slug": "quick-ratio",
+  "kind": "glossary",
+  "query": "quick ratio"
+ },
+ {
+  "slug": "debt-to-equity-ratio",
+  "kind": "glossary",
+  "query": "debt to equity ratio"
+ },
+ {
+  "slug": "equity-value",
+  "kind": "glossary",
+  "query": "equity value"
  }
 ]
