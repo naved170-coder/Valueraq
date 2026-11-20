@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "summary": "All checks passed: last night's run is done (1 article, 3 glossary pages, 4 improvements), the site is live, and no repairs were needed.",
+  "checks": [
+    "Last night's run (19 Nov): done, 4 new pages and 4 improved pages, 1 article included",
+    "Queue: 4 of 4 slots for 20 Nov (00:00, 06:00, 12:00, 18:00 Pakistan time) filled; files and images present",
+    "seo-check: 0 problems; tests: 132 passed; audit: 0 critical, 0 warnings",
+    "Deploy: newest deploy is live; no error-level log lines since the last check",
+    "Search figures: snapshot read from Render logs (latest 19 Nov, ready); last 28 days 44 clicks, 17976 impressions (Search Console averages, not live ranks)",
+    "Calendar: 14 of 63 days not yet written (more than 10 left, no extension needed)",
+    "Approvals: 1 page held (glossary/purchase-price-allocation)",
+    "Task data honesty: the report's page files and images match the repository",
+    "Friday: no ranking review or weekly report today"
+  ],
+  "fixed": [],
+  "needs_owner": []
+}
