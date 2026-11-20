@@ -1,14 +1,14 @@
 ---
 title: How to Sell a Website
-meta_title: How to Sell a Website: From Valuation to Handover
-meta_description: Selling your website? Steps to prepare records, set a fair price, find buyers, use escrow and hand over. Check what your site is worth free.
+meta_title: How to Sell a Website: 8 Steps + Worked Example
+meta_description: Sell your website in 8 steps: a records checklist, a worked pricing example, a stage timeline and a comparison of selling routes. Free valuation tool.
 h1: How to Sell a Website
 section: Selling
 cluster: website
 order: 21
 answer: To sell a content, affiliate or ad-funded website, gather 12 months of revenue, cost and traffic records, tidy the site and its accounts, price it from its average monthly profit, write a factual listing, answer buyer questions with read-only access to your data, agree terms in a letter of intent and a purchase agreement, and close through escrow while you transfer the domain, hosting, content and accounts in an agreed order.
 published: 2026-10-04
-updated: 2026-10-04
+updated: 2026-11-20
 methodology_version: 1.0
 related: /tools/website-valuation/, /guides/website-valuation/, /guides/selling-digital-businesses/, /guides/ways-to-sell-a-digital-business/, /businesses-for-sale/websites/, /sell/, /glossary/escrow/, /glossary/letter-of-intent/
 cta: /tools/website-valuation/
@@ -18,6 +18,29 @@ cta_text: Price your site before you list it. The free Website Valuation Tool sh
 ## Key takeaway
 
 Selling a website is mostly a matter of proof and handover. A buyer of a content, affiliate or ad-funded site wants to see where every dollar and every visit comes from, and wants to know the site will still work the day after it changes hands. This guide covers the steps that are specific to websites. For the general process that applies to any online business, see [how to sell a digital business](/guides/selling-digital-businesses/).
+
+## How the sale unfolds, stage by stage
+
+Each stage ends when a specific thing is true. The time each takes depends on your records, the buyer and the platforms involved, so plan around the stages and not a calendar. Our guide on [how long it takes to sell an online business](/guides/how-long-to-sell-an-online-business/) goes into the drivers.
+
+| Stage | Done when | What you control |
+|---|---|---|
+| Prepare | Records, accounts and site are tidy | Almost everything |
+| List | Listing is live and reviewed | Accuracy and detail |
+| Talk to buyers | You have a written offer | Speed and openness of your answers |
+| Agree terms | Letter of intent signed | Willingness to negotiate |
+| Check (due diligence) | Buyer confirms the figures | Having proof ready |
+| Close | Money in escrow, assets moved | Transfer list and support |
+
+## Pre-sale checklist
+
+- [ ] 12 months of revenue by source, matched to deposits
+- [ ] Monthly profit and loss with costs listed
+- [ ] Analytics and search-console history by month and channel
+- [ ] Domain, hosting and logins in accounts you can hand over
+- [ ] Contractor agreements and image licenses in one folder
+- [ ] Short written instructions for the recurring work
+- [ ] A list of affiliate and ad programs, with their transfer rules
 
 ## Step 1: Pull together 12 months of records
 
@@ -46,6 +69,17 @@ Avoid big changes just before you list. A redesign or a new monetization method 
 ## Step 3: Price it with the tool
 
 Enter your average monthly revenue and profit in the [Website Valuation Tool](/tools/website-valuation/). {{BRAND}}'s default assumption for a website is 2.5× to 4.0× annual net profit, then adjusted for age, revenue trend, how much traffic comes from one channel, monetization type and your weekly hours. The adjustments multiply together and are capped at −50% and +40%. The range is a published platform assumption, not a measured market average; the reasoning is in the [methodology](/methodology/) and the [how-to guide on website valuation](/guides/website-valuation/).
+
+### A worked pricing example
+
+A content site earns $2,000 a month in net profit before the owner is paid, after adjusting for one-off costs. This example uses made-up figures.
+
+- **Yearly profit:** $2,000 × 12 = $24,000.
+- **At 2.5x:** $24,000 × 2.5 = $60,000.
+- **At 3.2x (midpoint):** $24,000 × 3.2 = $76,800.
+- **At 4.0x:** $24,000 × 4.0 = $96,000.
+
+If the tool's adjustments lower the multiple, for example because most visits come from one search engine, the range moves down. If they raise it, the range moves up. The result is an estimate to help you set an asking price, not a promise of what a buyer will pay.
 
 Look at which adjustments pull your multiple down. If 85% of your visits come from one search engine, or the site needs 30 hours of your week, a buyer will raise it. Decide whether to fix it before listing or to price it in.
 
@@ -105,6 +139,16 @@ Agree a written order of transfer. A common one:
 
 Affiliate and ad accounts cause most delays. Encourage the buyer to apply to each programme early, during the inspection period if possible, and check each programme's terms. After the transfer, stay available for the support period you agreed, and remove your own access once the buyer confirms everything works.
 
+## Ways to sell: marketplace, broker or direct
+
+| Route | How it works | Good fit | Trade-off |
+|---|---|---|---|
+| Marketplace listing | You list the site and speak to buyers yourself | Sellers who want control and can answer questions | You run the process |
+| Broker | A professional finds buyers and manages the process | Larger or complex sites | Brokers charge for the service, so compare terms |
+| Direct sale | You approach buyers you know | Sellers with a likely buyer already | A narrow pool of buyers |
+
+Fees differ by provider, so compare each provider's current published terms before you choose. Our guide on [ways to sell a digital business](/guides/ways-to-sell-a-digital-business/) compares the routes in more depth, and [selling without a broker](/guides/how-to-sell-your-online-business-without-a-broker/) shows the direct path.
+
 ## Frequently asked questions
 
 ### How much is my website worth?
@@ -118,3 +162,15 @@ Yes, but expect a small price. A buyer of a site with little profit is paying fo
 ### Do my affiliate and ad accounts transfer to the buyer?
 
 Often they don't. Many programmes tie the account to the person or company that applied, so the buyer opens their own accounts and replaces the links and ad code. Check each programme's terms before you promise anything in the listing.
+
+### How long does it take to sell a website?
+
+It depends on your records, the price and how fast buyer and seller respond. The stage table above shows what has to be true at each stage, and the preparation stage is the one you control.
+
+### What records do I need before selling a website?
+
+Twelve months of revenue by source matched to deposits, a monthly profit and loss, analytics history, ownership proof for the domain and content, and a list of affiliate and ad programs. The checklist above has the full list.
+
+### Should I use a broker or sell it myself?
+
+A broker takes on the process for a fee. Selling yourself costs time instead. The right route depends on your site's size, how much time you have and how many buyers you can reach.

@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (asset acquisition checklist) and 3 glossary pages (liquidation value, intangible assets, capital expenditure); nothing held.",
+  "summary": "Wrote 1 article (asset acquisition checklist) and 3 glossary pages (liquidation value, intangible assets, capital expenditure); nothing held. Also improved 4 existing pages (sell a Shopify store, sell a website, earnout, EBIT).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -55,6 +55,38 @@
       ],
       "serp": "missing",
       "note": "Release 21 Nov 6 pm Pakistan."
+    },
+    {
+      "path": "/guides/how-to-sell-a-shopify-store/",
+      "action": "improve",
+      "type": "Improve",
+      "score": 8.6,
+      "images": "none",
+      "note": "Pre-sale checklist, stock example, transfer table, FAQs."
+    },
+    {
+      "path": "/guides/how-to-sell-a-website/",
+      "action": "improve",
+      "type": "Improve",
+      "score": 8.6,
+      "images": "none",
+      "note": "Stage table, checklist, pricing example, route comparison, FAQs."
+    },
+    {
+      "path": "/glossary/earnout/",
+      "action": "improve",
+      "type": "Improve",
+      "score": 8.6,
+      "images": "none",
+      "note": "Sliding-scale example, contract checklist, FAQs."
+    },
+    {
+      "path": "/glossary/ebit/",
+      "action": "improve",
+      "type": "Improve",
+      "score": 8.6,
+      "images": "none",
+      "note": "One P&L as EBIT, EBITDA and SDE, FAQs."
     }
   ],
   "tasks": [
@@ -67,7 +99,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",
