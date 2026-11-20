@@ -1,0 +1,84 @@
+{
+  "summary": "Wrote 1 article (asset acquisition checklist) and 3 glossary pages (liquidation value, intangible assets, capital expenditure); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/glossary/liquidation-value/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/asset-based-valuation/, /glossary/fair-market-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "liquidation value"
+      ],
+      "serp": "missing",
+      "note": "Release 21 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/guides/asset-acquisition-checklist/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/acquiring-a-business-checklist/, /guides/what-is-included-when-you-buy-a-website/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "asset acquisition checklist",
+        "asset purchase checklist"
+      ],
+      "serp": "missing",
+      "note": "Release 21 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/glossary/intangible-assets/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/goodwill/)",
+      "images": "1 featured",
+      "keywords": [
+        "intangible assets"
+      ],
+      "serp": "missing",
+      "note": "Release 21 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/glossary/capital-expenditure/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/depreciation/, /glossary/operating-expenses/)",
+      "images": "1 featured",
+      "keywords": [
+        "capital expenditure",
+        "capex"
+      ],
+      "serp": "missing",
+      "note": "Release 21 Nov 6 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "SEO check: 0 problems",
+    "Internal links: 0 broken"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json (SBA) and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs read; new searches (balance sheet example, net revenue, net profit) are already covered, so keywords come from the calendar.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages. Liquidation value, intangible assets and capital expenditure are calendar days 59-60.",
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page. I linked no held page (purchase-price-allocation is awaiting approval)."
+  ]
+}

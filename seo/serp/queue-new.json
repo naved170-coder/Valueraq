@@ -432,5 +432,29 @@
   "slug": "equity-value",
   "kind": "glossary",
   "query": "equity value"
+ },
+ {
+  "slug": "asset-acquisition-checklist",
+  "kind": "guides",
+  "query": "asset acquisition checklist",
+  "day": 0
+ },
+ {
+  "slug": "liquidation-value",
+  "kind": "glossary",
+  "query": "liquidation value",
+  "day": 0
+ },
+ {
+  "slug": "intangible-assets",
+  "kind": "glossary",
+  "query": "intangible assets",
+  "day": 0
+ },
+ {
+  "slug": "capital-expenditure",
+  "kind": "glossary",
+  "query": "capital expenditure",
+  "day": 0
  }
 ]
