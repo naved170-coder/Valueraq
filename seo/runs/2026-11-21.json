@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (customer lifetime value) and 3 glossary pages (accrued expenses, return on equity, P/E ratio); nothing held.",
+  "summary": "Wrote 1 article (customer lifetime value) and 3 glossary pages (accrued expenses, return on equity, P/E ratio); nothing held. Also improved 4 existing pages (sell an app, fake website listing, EBITDA, enterprise value).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -54,6 +54,30 @@
       ],
       "serp": "missing",
       "note": "Release 22 Nov 6 pm Pakistan."
+    },
+    {
+      "path": "/guides/how-to-sell-an-app/",
+      "action": "improve",
+      "type": "Article",
+      "note": "Added records table, readiness checklist, Apple/Google transfer requirements table, 2 FAQs; new title and description."
+    },
+    {
+      "path": "/guides/how-to-spot-a-fake-website-listing/",
+      "action": "improve",
+      "type": "Quick answer",
+      "note": "Added scam-to-check table, verify-at-source steps, fake escrow warning, FAQ; new title and description."
+    },
+    {
+      "path": "/glossary/ebitda/",
+      "action": "improve",
+      "type": "Glossary",
+      "note": "Added adjusted EBITDA example, EBITDA vs SDE section, 3 FAQs; new title and description."
+    },
+    {
+      "path": "/glossary/enterprise-value/",
+      "action": "improve",
+      "type": "Glossary",
+      "note": "Added cash-free debt-free example, 3 FAQs; new title and description."
     }
   ],
   "tasks": [
@@ -66,7 +90,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",

@@ -2,15 +2,15 @@
 title: What Is Enterprise Value?
 term: Enterprise Value
 aliases: enterprise value, EV
-meta_title: What Is Enterprise Value (EV)? Definition, Formula & Example
-meta_description: Enterprise value is the total value of a business, counting debt and subtracting cash. See the formula, a worked example and how it applies to small deals.
+meta_title: Enterprise Value: Formula + Small-Business Example
+meta_description: Enterprise value is equity value plus debt minus cash. See the formula, a cash-free debt-free example for an online business and 3 FAQs.
 h1: Enterprise Value
 definition: Enterprise value is the total value of a business to everyone with a claim on it, calculated as the value of its equity plus its debt, minus its cash.
 cluster: analysis
 page_type: reference
 keywords: enterprise value, enterprise value formula, how to determine enterprise value, what is enterprise value
 related: /glossary/valuation-multiple/, /glossary/ebitda/, /glossary/revenue-multiple/, /glossary/asset-sale/, /guides/business-valuation/
-updated: 2026-10-06
+updated: 2026-11-21
 publish_at: 2026-10-06T13:00Z
 image: /static/img/articles/enterprise-value.png
 image_alt: Featured image for the glossary entry What Is Enterprise Value
@@ -51,6 +51,33 @@ Most small websites, apps and stores change hands as an [asset sale](/glossary/a
 The difference starts to matter when a buyer purchases the company itself, or when the deal includes stock, customer deposits or loans. Then both sides need to agree what is included before they compare the price with a multiple.
 
 {{BRAND}}'s tools estimate the value of the business on that debt-free, cash-free basis. Stock held for sale is entered separately in the [ecommerce valuation tool](/tools/ecommerce-valuation/).
+
+## Worked example: a cash-free, debt-free sale
+
+A seller agrees to sell an online store with a headline price of $300,000 on a cash-free, debt-free basis. That means the seller keeps the cash and pays off the debt, and the buyer gets the business with neither.
+
+The seller's books at closing show $40,000 in cash and a $25,000 loan.
+
+- Enterprise value agreed: $300,000
+- Seller keeps the $40,000 of cash
+- Seller repays the $25,000 loan from the proceeds
+- **Seller receives $300,000 − $25,000 = $275,000 at closing, plus keeps the $40,000 of cash**
+
+The buyer pays $300,000 for the business itself. The cash and the loan are the seller's matters, not part of the price.
+
+## Frequently asked questions
+
+### Is enterprise value the same as the sale price?
+
+Only on a cash-free, debt-free basis. If the buyer takes on debt or receives cash, the price paid for the shares differs from enterprise value.
+
+### Why is cash subtracted?
+
+A buyer who receives the cash gets it back immediately, so it reduces the real price of the business.
+
+### Which multiple uses enterprise value?
+
+Multiples of EBITDA or revenue are normally applied to enterprise value, not to the price of the shares. See [valuation multiple](/glossary/valuation-multiple/).
 
 ## Related terms
 

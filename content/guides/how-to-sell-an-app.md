@@ -1,7 +1,7 @@
 ---
 title: How to Sell a Mobile App
-meta_title: How to Sell a Mobile App: Price, List & Transfer
-meta_description: Sell your iOS or Android app: value it, prepare records, find buyers and transfer it in the app stores. Check your app's value free.
+meta_title: How to Sell an App: Value Table + Transfer Checklist
+meta_description: Sell your iOS or Android app: see a value example, a records table and Apple and Google transfer checklists. Free calculator included.
 h1: How to Sell a Mobile App
 section: Selling
 cluster: app
@@ -10,7 +10,7 @@ page_type: article
 answer: To sell a mobile app, work out its annual net profit, price it with a profit multiple, gather 12 months of store payouts and user data, list it with honest figures, agree terms in writing, and then transfer it through Apple's or Google's own app transfer process so reviews, ratings and users move with it.
 keywords: sell app business, apps for sale, mobile apps for sale, sell your app online
 published: 2026-10-22
-updated: 2026-11-02
+updated: 2026-11-21
 publish_at: 2026-10-22T01:00Z
 image: /static/img/articles/how-to-sell-an-app.png
 image_alt: Featured image for the guide How to Sell a Mobile App
@@ -98,6 +98,28 @@ The SBA's guidance for buyers says to carry out a "thorough, objective investiga
 
 For how buyers verify what you send, see the [due diligence checklist](/guides/digital-business-due-diligence/) and the guide on [what documents buyers ask for](/guides/what-documents-do-buyers-ask-for/).
 
+### Records buyers want, and what each proves
+
+| Record | What the buyer is checking |
+|---|---|
+| 12 months of store payout statements | That revenue is real and reaches your bank |
+| Subscriber counts, churn and refunds | Whether income repeats or fades |
+| Install sources by month | How dependent the app is on one channel |
+| Cost records and invoices | That profit is calculated honestly |
+| List of SDKs and third-party services | What breaks, or costs more, after the handover |
+| Who holds the source code and developer accounts | That you can actually hand the app over |
+
+### Is your app ready to sell?
+
+Tick these before you list. Each "no" is a reason a buyer may offer less or walk away.
+
+- [ ] I can show 12 months of payouts that match the profit I am claiming.
+- [ ] I know my subscriber churn, or I can explain why the app has none.
+- [ ] No single install source brings most of my users.
+- [ ] The app has no unresolved store warnings or known crashes.
+- [ ] I hold the developer accounts, source code, domain and support email myself.
+- [ ] I have a plan for subscribers' billing after the transfer.
+
 ## Step 4: Reduce the risks you can fix
 
 You can change some of the factors in the table above before you list.
@@ -152,6 +174,17 @@ Google's documentation says that "both Google Play developer accounts need to be
 - You need the receiving account's registration transaction ID. A buyer without a Google Play developer account has to open one first, which costs a one-time US$25 registration fee, so agree who pays.
 - Promotions, test groups and earnings reports do not transfer.
 
+### Before you start the transfer: store requirements
+
+The stores check these first. Fixing them early avoids a stalled handover. Confirm each against the store's own pages, which are the authority.
+
+| Check | Apple App Store | Google Play |
+|---|---|---|
+| Accounts | Both must have accepted the latest agreements and not be in a pending state | Both developer accounts must be registered and active |
+| App status | At least one version released to the store; not on pre-order or in review | Receiving account's registration transaction ID needed |
+| Purchases | In-App Purchase product IDs must not clash with products in the buyer's account | Paid apps or apps with in-app products need an active payments profile on the receiving account |
+| What does not move | Apple Pay merchant ID; Game Center groups | Promotions, test groups and earnings reports |
+
 ### Plan the order of the handover
 
 A sensible order is: back up everything, agree a date, start the store transfers, move the source code and third-party service accounts, switch over analytics and support, and then release a first update from the buyer's account. Do not hand over the final payment details until the buyer confirms the app appears in their account and builds correctly. A checklist for the non-store parts is in [how to transfer a website to a new owner](/guides/how-to-transfer-a-website-to-a-new-owner/), and most of it applies to an app too.
@@ -185,6 +218,14 @@ Apple says an app retains its reviews and ratings during and after a transfer, a
 ### Should I sell on my own or use a broker?
 
 Both are used. Selling yourself costs less but takes more of your time. Our guide to [ways to sell a digital business](/guides/ways-to-sell-a-digital-business/) compares the options.
+
+### What records should I give a buyer?
+
+Store payout statements for 12 months, subscription and churn data, install sources, cost records, the list of third-party services, and proof you hold the accounts and code. The table in Step 3 shows what each one proves.
+
+### Does a buyer need their own developer account?
+
+Yes. Apple's documentation describes a transfer between two accounts, and Google says both developer accounts need to be registered and active. A buyer without one has to open one first.
 
 ## Sources
 

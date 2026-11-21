@@ -1,7 +1,7 @@
 ---
 title: How Do You Spot a Fake or Misleading Website Listing?
-meta_title: How to Spot a Fake Website Listing (Red Flags)
-meta_description: Warning signs of a fake or misleading website listing, how to check each claim, and how to pay safely so you don't lose your money.
+meta_title: Fake Website Listing? 7 Checks + Scam Table
+meta_description: Spot a fake website listing: a scam table, 7 checks and 'verify at the source' steps, plus how to pay safely. Free calculator included.
 h1: How Do You Spot a Fake or Misleading Website Listing?
 section: Quick answers
 cluster: buying
@@ -10,7 +10,7 @@ page_type: reference
 answer: A fake or misleading website listing usually shows figures the seller cannot prove, cannot show ownership of the site, pushes for payment outside escrow, or uses a best month as if it were an average. Check revenue and traffic at the source, confirm control of the domain, and walk away if the seller resists.
 keywords: fake website listing, how to spot a fake listing, website listing scam, check a website for sale
 published: 2026-10-23
-updated: 2026-10-22
+updated: 2026-11-21
 publish_at: 2026-10-23T13:00Z
 image: /static/img/articles/how-to-spot-a-fake-website-listing.png
 image_alt: Featured image for the quick answer How Do You Spot a Fake or Misleading Website Listing
@@ -34,11 +34,26 @@ A listing is suspect when its numbers cannot be checked, when the seller cannot 
 6. **Test the price against the profit.** An unusually low price for the profit claimed, with no clear reason for selling, deserves questions before excitement.
 7. **Watch how the seller handles the money.** Be wary of requests to pay directly by bank transfer, cryptocurrency, gift cards or a payment app, or to move the conversation away from the platform. Use a recognized [escrow](/glossary/escrow/) service.
 
+## Common tricks and how to check each one
+
+| What the seller does | How it is done | How you check it |
+|---|---|---|
+| Shows edited revenue | Screenshot or spreadsheet changed to look better | Ask for read-only access to the payment dashboard, or original statements |
+| Inflates traffic | Shows a peak month or paid visits as normal | Read-only analytics access; compare all twelve months |
+| Does not own the site | Sells a site they only manage or copied | Ask them to add a line of text you choose, and confirm domain control |
+| Pushes to pay outside the platform | Offers a discount for a quick bank transfer or crypto | Pay only through a recognized escrow service |
+
+## Verify at the source
+
+Ask the seller to screen-share the payment dashboard on a date range you choose, give you read-only analytics access, and show payouts reaching their bank, not only sales.
+
+## Beware fake escrow sites
+
+If the seller sends you a link to an escrow site you have not heard of, do not use it. Look it up yourself and see our guide on [how escrow works for website sales](/guides/how-escrow-works-for-website-sales/).
+
 ## What to do if something is wrong
 
 Stop, keep the messages, and do not pay. On VALUERAQ you can [report a listing](/report-a-listing/) with the listing number and a note on what is wrong. If you have already sent money, contact your bank or payment provider and consider legal advice.
-
-A verification status helps but is not a guarantee: it covers the specific evidence checked, for the period checked. It does not replace your own [due diligence](/guides/digital-business-due-diligence/).
 
 ## Frequently asked questions
 

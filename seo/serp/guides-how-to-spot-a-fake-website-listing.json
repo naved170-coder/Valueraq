@@ -23,6 +23,7 @@
   "Fake escrow site warning and FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-21",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added scam-to-check table, verify-at-source steps, fake escrow warning and FAQ"
 }
