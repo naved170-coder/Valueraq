@@ -1,0 +1,85 @@
+{
+  "summary": "Wrote 1 article (customer lifetime value) and 3 glossary pages (accrued expenses, return on equity, P/E ratio); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/glossary/accrued-expenses/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/accounts-payable/, /glossary/accrual-basis-accounting/)",
+      "images": "1 featured",
+      "keywords": [
+        "accrued expenses"
+      ],
+      "serp": "missing",
+      "note": "Release 22 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/guides/how-to-calculate-customer-lifetime-value/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/ltv/, /glossary/ltv-to-cac-ratio/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "how to calculate customer lifetime value",
+        "customer lifetime value formula"
+      ],
+      "serp": "missing",
+      "note": "Release 22 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/glossary/return-on-equity/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/return-on-investment/, /glossary/equity-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "return on equity"
+      ],
+      "serp": "missing",
+      "note": "Release 22 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/glossary/price-to-earnings-ratio/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/valuation-multiple/, /glossary/profit-multiple/)",
+      "images": "1 featured",
+      "keywords": [
+        "price to earnings ratio"
+      ],
+      "serp": "missing",
+      "note": "Release 22 Nov 6 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: all point to existing pages",
+    "External links: 1 source reused from seo/sources.json, not re-opened"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json (Stripe) and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs were not read this run; keywords come from the calendar.",
+    "Wrote four pages although reduce_after has passed, because the scheduled prompt asked for one article and three reference pages. Customer lifetime value is calendar day 52; accrued expenses, return on equity and P/E ratio are days 60-61.",
+    "All figures in the LTV article and glossary examples are made-up worked arithmetic. The P/E page quotes VALUERAQ's default website range (2.5x to 4.0x, midpoint 3.2x).",
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page."
+  ]
+}

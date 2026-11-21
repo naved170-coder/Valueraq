@@ -456,5 +456,29 @@
   "kind": "glossary",
   "query": "capital expenditure",
   "day": 0
+ },
+ {
+  "slug": "how-to-calculate-customer-lifetime-value",
+  "kind": "guides",
+  "query": "how to calculate customer lifetime value",
+  "day": 52
+ },
+ {
+  "slug": "accrued-expenses",
+  "kind": "glossary",
+  "query": "accrued expenses",
+  "day": 60
+ },
+ {
+  "slug": "return-on-equity",
+  "kind": "glossary",
+  "query": "return on equity",
+  "day": 61
+ },
+ {
+  "slug": "price-to-earnings-ratio",
+  "kind": "glossary",
+  "query": "price to earnings ratio",
+  "day": 61
  }
 ]
