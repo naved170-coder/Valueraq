@@ -1,0 +1,26 @@
+{
+ "page": "glossary/accrued-expenses",
+ "query": "accrued expenses",
+ "results": [
+  "bdc.ca",
+  "square.com",
+  "accountingtools.com",
+  "freshbooks.com",
+  "corporatefinanceinstitute.com"
+ ],
+ "studied": [],
+ "gaps": [
+  "Our edge is the online-business angle: Accrued expenses in online businesses (unbilled freelancer work, ad spend billed next month) and why missing accruals inflate profit before a sale",
+  "Keep the first sentence a plain definition with the formula (if any), then a worked example using small online-business numbers",
+  "Add 2-3 FAQs the ranking pages skip, and link to the related VALUERAQ tool or guide",
+  "Rewrite meta_title and meta_description to beat the competitor titles listed (exact term first, then what the page gives that theirs don't)"
+ ],
+ "titles": [
+  "Accrued expenses definition",
+  "What Are Accrued Expenses?",
+  "A Primer on Accrued Expenses"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; one search checked per term, pages not opened. Ranking pages are general finance/accounting glossaries."
+}

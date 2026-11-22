@@ -365,7 +365,8 @@
   "slug": "accounts-receivable",
   "kind": "glossary",
   "query": "accounts receivable meaning",
-  "day": 53
+  "day": 53,
+  "collected": "2026-11-23"
  },
  {
   "slug": "discounted-cash-flow-for-small-online-businesses",
@@ -378,19 +379,22 @@
   "slug": "goodwill-impairment",
   "kind": "glossary",
   "query": "goodwill impairment",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "accounts-payable",
   "kind": "glossary",
   "query": "accounts payable",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "cash-flow-statement",
   "kind": "glossary",
   "query": "cash flow statement",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-sell-your-online-business-without-a-broker",
@@ -403,19 +407,22 @@
   "slug": "accrual-basis-accounting",
   "kind": "glossary",
   "query": "accrual basis accounting",
-  "day": 55
+  "day": 55,
+  "collected": "2026-11-23"
  },
  {
   "slug": "cash-basis-accounting",
   "kind": "glossary",
   "query": "cash basis accounting",
-  "day": 56
+  "day": 56,
+  "collected": "2026-11-23"
  },
  {
   "slug": "current-ratio",
   "kind": "glossary",
   "query": "current ratio",
-  "day": 56
+  "day": 56,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-value-a-tech-company",
@@ -426,17 +433,20 @@
  {
   "slug": "quick-ratio",
   "kind": "glossary",
-  "query": "quick ratio"
+  "query": "quick ratio",
+  "collected": "2026-11-23"
  },
  {
   "slug": "debt-to-equity-ratio",
   "kind": "glossary",
-  "query": "debt to equity ratio"
+  "query": "debt to equity ratio",
+  "collected": "2026-11-23"
  },
  {
   "slug": "equity-value",
   "kind": "glossary",
-  "query": "equity value"
+  "query": "equity value",
+  "collected": "2026-11-23"
  },
  {
   "slug": "asset-acquisition-checklist",
@@ -449,19 +459,22 @@
   "slug": "liquidation-value",
   "kind": "glossary",
   "query": "liquidation value",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "intangible-assets",
   "kind": "glossary",
   "query": "intangible assets",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "capital-expenditure",
   "kind": "glossary",
   "query": "capital expenditure",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-calculate-customer-lifetime-value",
@@ -474,19 +487,22 @@
   "slug": "accrued-expenses",
   "kind": "glossary",
   "query": "accrued expenses",
-  "day": 60
+  "day": 60,
+  "collected": "2026-11-23"
  },
  {
   "slug": "return-on-equity",
   "kind": "glossary",
   "query": "return on equity",
-  "day": 61
+  "day": 61,
+  "collected": "2026-11-23"
  },
  {
   "slug": "price-to-earnings-ratio",
   "kind": "glossary",
   "query": "price to earnings ratio",
-  "day": 61
+  "day": 61,
+  "collected": "2026-11-23"
  },
  {
   "slug": "what-is-a-good-conversion-rate-for-an-online-store",
@@ -499,19 +515,22 @@
   "slug": "gross-margin-vs-net-margin",
   "kind": "glossary",
   "query": "gross margin vs net margin",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "operating-leverage",
   "kind": "glossary",
   "query": "operating leverage",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "minority-interest",
   "kind": "glossary",
   "query": "minority interest",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-much-is-my-startup-worth",
