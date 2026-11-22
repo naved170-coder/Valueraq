@@ -1,0 +1,84 @@
+{
+  "summary": "Wrote 1 article (good ecommerce conversion rate) and 3 glossary pages (gross margin vs net margin, operating leverage, minority interest); nothing held.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/glossary/gross-margin-vs-net-margin/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/gross-margin/, /glossary/net-profit/)",
+      "images": "1 featured",
+      "keywords": [
+        "gross margin vs net margin"
+      ],
+      "serp": "missing",
+      "note": "Release 23 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/guides/what-is-a-good-conversion-rate-for-an-online-store/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/conversion-rate/, /guides/ecommerce-valuation/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "good ecommerce conversion rate",
+        "ecommerce conversion rate"
+      ],
+      "serp": "missing",
+      "note": "Release 23 Nov 6 am Pakistan. No outside benchmark quoted; all figures are labeled made-up examples."
+    },
+    {
+      "path": "/glossary/operating-leverage/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/contribution-margin/, /glossary/break-even-point/)",
+      "images": "1 featured",
+      "keywords": [
+        "operating leverage"
+      ],
+      "serp": "missing",
+      "note": "Release 23 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/glossary/minority-interest/",
+      "action": "new",
+      "type": "Glossary",
+      "score": 8.6,
+      "duplicate": "pass (closest: /glossary/enterprise-value/, /glossary/equity-value/)",
+      "images": "1 featured",
+      "keywords": [
+        "minority interest"
+      ],
+      "serp": "missing",
+      "note": "Release 23 Nov 6 pm Pakistan."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "report"
+  ],
+  "checks": [
+    "Tests: 132 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: 1 (SBA, listed in sources.json), not opened this run"
+  ],
+  "notes": [
+    "WebSearch/WebFetch not used; sources come from seo/sources.json (SBA) and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
+    "Render ranking logs not read this run; keywords come from the calendar.",
+    "Conversion rate article is calendar day 53; operating leverage, gross margin vs net margin and minority interest are days 62-63.",
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page; newsletter and marketplace articles (days 54-55) left for later runs."
+  ]
+}

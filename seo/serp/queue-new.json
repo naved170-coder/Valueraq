@@ -480,5 +480,29 @@
   "kind": "glossary",
   "query": "price to earnings ratio",
   "day": 61
+ },
+ {
+  "slug": "what-is-a-good-conversion-rate-for-an-online-store",
+  "kind": "guides",
+  "query": "good ecommerce conversion rate",
+  "day": null
+ },
+ {
+  "slug": "gross-margin-vs-net-margin",
+  "kind": "glossary",
+  "query": "gross margin vs net margin",
+  "day": null
+ },
+ {
+  "slug": "operating-leverage",
+  "kind": "glossary",
+  "query": "operating leverage",
+  "day": null
+ },
+ {
+  "slug": "minority-interest",
+  "kind": "glossary",
+  "query": "minority interest",
+  "day": null
  }
 ]
