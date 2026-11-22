@@ -3043,6 +3043,99 @@
           "images": "1 featured image"
         }
       ]
+    },
+    {
+      "day": 64,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "earnings-per-share",
+          "title": "What Is Earnings Per Share?",
+          "term": "Earnings Per Share",
+          "primary_keyword": "earnings per share",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "price-to-book-ratio",
+          "title": "What Is Price-to-Book Ratio?",
+          "term": "Price-to-Book Ratio",
+          "primary_keyword": "price-to-book ratio",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
+    },
+    {
+      "day": 65,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "dividend-yield",
+          "title": "What Is Dividend Yield?",
+          "term": "Dividend Yield",
+          "primary_keyword": "dividend yield",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "retained-earnings",
+          "title": "What Is Retained Earnings?",
+          "term": "Retained Earnings",
+          "primary_keyword": "retained earnings",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
+    },
+    {
+      "day": 66,
+      "pages": [
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "operating-leverage",
+          "title": "What Is Operating Leverage?",
+          "term": "Operating Leverage",
+          "primary_keyword": "operating leverage",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        },
+        {
+          "kind": "glossary",
+          "type": "Glossary term",
+          "slug": "price-to-sales-ratio",
+          "title": "What Is Price-to-Sales Ratio?",
+          "term": "Price-to-Sales Ratio",
+          "primary_keyword": "price-to-sales ratio",
+          "cluster": "analysis",
+          "words": "300-600",
+          "hold": false,
+          "hold_reason": null,
+          "images": "1 featured image"
+        }
+      ]
     }
   ]
 }

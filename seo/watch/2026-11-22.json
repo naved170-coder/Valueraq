@@ -1,1 +1,23 @@
-{"status":"ok","summary":"Self-check started; stop checks passed, details to follow.","checks":["Started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "needs_owner",
+  "summary": "The website's database reports 'database disk image is malformed', so nightly backups have failed since at least 00:58 UTC today and some visitor-statistics saves fail; the SEO pipeline itself is healthy.",
+  "checks": [
+    "Last night's run: done, 8 pages (1 article, 3 glossary, 4 improved)",
+    "Queue: today's release slots filled, pages and images present",
+    "Tests: 132 passed; seo-check 0 problems; audit 273 URLs, 0 critical, 0 warnings",
+    "Deploy: previous deploy live; today's trace-file deploy was still building at check time (content-only change)",
+    "Render logs: errors since last check are all 'database disk image is malformed' (POST /api/vitals/ at 19:36 UTC on 21 Nov, and hourly backup failures 00:58-03:28 UTC on 22 Nov)",
+    "Search figures: snapshot readable (last data 2026-11-20): 28 days 39 clicks, 18049 impressions, average position 47.8 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: was 9 unwritten days, now 12 after adding 3 days",
+    "Held pages: 1 file with hold: yes",
+    "Article written: yes (customer lifetime value)",
+    "Ranking review: not a Monday or Thursday, skipped"
+  ],
+  "fixed": [
+    "Calendar was below 10 unwritten days; added days 64-66 (earnings per share, price-to-book, dividend yield, retained earnings, operating leverage, price-to-sales), duplicate-checked against existing pages and the calendar"
+  ],
+  "needs_owner": [
+    "The live website's database file appears corrupted ('database disk image is malformed'): backups are failing every half hour and some saves fail. Suggest checking the Render disk and restoring the most recent good backup or rebuilding the database; I cannot change app code or data."
+  ]
+}
