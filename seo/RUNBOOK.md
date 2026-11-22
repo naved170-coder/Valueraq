@@ -41,6 +41,9 @@ first and pick only calendar topics that have `seo/serp/new-<slug>.json`. Topics
 the owner's next research session). If no topic has research, write no new page tonight: do the daily improvement
 step (below), file the report with `"notes": "no researched topics left"`, and stop. Choose them like this:
 
+Writing fewer than four pages because only some topics have research is correct, not a failure: quality and
+research come before volume. Valuable buyer/seller topics (calendar entries marked `"priority"`) go first.
+
 1. **The article:** the first article in calendar order that is not yet written and that you can write properly.
    If an article topic is blocked (needs a source you cannot open, or duplicates an existing page), skip it, note why,
    and take the next article further down the calendar. Never fill the article's place with a reference page.

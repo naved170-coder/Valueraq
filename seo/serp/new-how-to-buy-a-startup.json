@@ -1,0 +1,53 @@
+{
+ "page": "how-to-buy-a-startup",
+ "query": "how to buy a startup",
+ "results": [
+  "help.acquire.com how to buy a startup",
+  "eqvista.com acquire startup",
+  "upcounsel acquisition process",
+  "gusto buying a business",
+  "hubspot startup acquisition"
+ ],
+ "studied": [
+  {
+   "url": "help.acquire.com/how-to-buy-a-startup-on-acquire.com",
+   "words": 2500,
+   "has": [
+    "find, LOI, negotiate, diligence areas, APA, escrow steps",
+    "deal structures listed"
+   ],
+   "missing": "no valuation numbers, fees or timelines; platform-specific"
+  },
+  {
+   "url": "eqvista.com/business-structure/acquire-startup/",
+   "words": 2000,
+   "has": [
+    "timing, plan, diligence, deal structure",
+    "7 FAQs",
+    "build vs buy table"
+   ],
+   "missing": "written for companies buying startups, not individuals buying a profitable small SaaS; no profit-based pricing; no financing"
+  }
+ ],
+ "gaps": [
+  "Written for individual buyers of small revenue-stage startups",
+  "Worked deal: price from ARR or profit, down payment, seller note, payback",
+  "Checks for software: code ownership, payment processor data, churn by cohort, hosting costs",
+  "Timeline table from first call to handover",
+  "FAQs"
+ ],
+ "titles": [
+  "How to buy a startup on Acquire.com",
+  "How to Acquire a Startup: Timing, Planning, and Key Strategies",
+  "How to Buy a Business: Your Comprehensive Guide"
+ ],
+ "keywords": [
+  "how to buy a startup",
+  "buy a startup",
+  "acquire a startup",
+  "buying a small saas"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

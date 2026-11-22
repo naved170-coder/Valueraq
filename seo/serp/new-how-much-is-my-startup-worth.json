@@ -1,0 +1,53 @@
+{
+ "page": "how-much-is-my-startup-worth",
+ "query": "how much is my startup worth",
+ "results": [
+  "brex.com startup valuation 8 methods",
+  "shopify.com startup valuation 6 methods",
+  "hubspot.com 10 methods",
+  "svb.com seed valuation",
+  "toptal.com startup valuation primer"
+ ],
+ "studied": [
+  {
+   "url": "brex.com/journal/startup-valuation",
+   "words": 1600,
+   "has": [
+    "8 methods: Berkus, comparables, scorecard, cost-to-duplicate, risk factor, DCF, VC method, book value",
+    "partial comparables example"
+   ],
+   "missing": "fundraising framing only; no SDE/EBITDA or ARR multiples; no churn/NRR; no deal structure; no FAQ"
+  },
+  {
+   "url": "shopify.com/blog/startup-valuation",
+   "words": 1400,
+   "has": [
+    "6 methods",
+    "scorecard worked example",
+    "3 FAQs"
+   ],
+   "missing": "pre-revenue focus; one 4x sales example; no profit multiples; no small-business discounts"
+  }
+ ],
+ "gaps": [
+  "Split clearly: pre-revenue (fundraising methods) vs revenue-stage (what a buyer pays: ARR multiple for SaaS, profit multiple for others)",
+  "Worked example with real arithmetic: $15k MRR SaaS, churn and growth adjustments, value range",
+  "Table: which method fits which stage",
+  "Explain why VC 'valuations' differ from sale prices (preferred stock, dilution vs cash buyer)",
+  "Link to the free SaaS and website valuation tools; FAQs competitors skip (no revenue, owner-dependent, one big customer)"
+ ],
+ "titles": [
+  "How to do a startup valuation: 8 different methods",
+  "Startup Valuation: Definition and 6 Methods",
+  "10 Methods To Calculate Your Startup's Valuation"
+ ],
+ "keywords": [
+  "how much is my startup worth",
+  "startup valuation",
+  "startup valuation calculator",
+  "value my startup"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

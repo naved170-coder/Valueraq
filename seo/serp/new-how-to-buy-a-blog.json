@@ -1,0 +1,55 @@
+{
+ "page": "how-to-buy-a-blog",
+ "query": "how to buy a blog",
+ "results": [
+  "empireflippers.com how to buy a blog",
+  "quietlight.com how to buy a blog",
+  "hostadvice.com how to buy a blog",
+  "nichepursuits.com 9 steps",
+  "ryrob.com"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/how-to-buy-a-blog/",
+   "words": 3000,
+   "has": [
+    "8 steps",
+    "1.7x-5x+ profit multiple",
+    "$30k profit x3 = $90k example",
+    "red flags list",
+    "11 FAQs"
+   ],
+   "missing": "ongoing costs, affiliate/ad-network transfer rules, algorithm-recovery assessment, financing beyond earnouts, independent verification"
+  },
+  {
+   "url": "quietlight.com/how-to-buy-a-blog-your-complete-guide-to-acquisition-success/",
+   "words": 2000,
+   "has": [
+    "9 stages",
+    "financing options incl. SBA"
+   ],
+   "missing": "no multiples or worked numbers, no checklist, no FAQ, no risks"
+  }
+ ],
+ "gaps": [
+  "Worked purchase: price, ongoing costs (writers, hosting, tools), net return and payback",
+  "Checklist to verify traffic and income yourself (analytics access, affiliate dashboards, ad network, Search Console)",
+  "How to judge Google-update risk and recovery",
+  "What transfers and what doesn't (affiliate accounts, ad accounts, email list)",
+  "First 90 days plan; FAQs"
+ ],
+ "titles": [
+  "Blogs for Sale: How to Buy an Established Blog",
+  "How to Buy a Blog: Your Complete Guide to Acquisition Success",
+  "How to Buy a Blog Website (tips + costs)"
+ ],
+ "keywords": [
+  "how to buy a blog",
+  "blogs for sale",
+  "buy an existing blog",
+  "buying a blog checklist"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,52 @@
+{
+ "page": "business-valuation-checklist",
+ "query": "business valuation checklist",
+ "results": [
+  "completecontroller.com valuation preparation",
+  "fhsu.edu valuation datasheet",
+  "rsm.global preparing valuation",
+  "checklist.com pdf",
+  "accaglobal.com checklist"
+ ],
+ "studied": [
+  {
+   "url": "completecontroller.com/business-valuation-preparation-tips/",
+   "words": 3200,
+   "has": [
+    "3-5 years records",
+    "financial and operational document lists",
+    "5 FAQs",
+    "restaurant case study"
+   ],
+   "missing": "nothing for online businesses: traffic, payment processors, ad accounts, platform risk, SaaS metrics, digital assets"
+  },
+  {
+   "url": "checklist.com business valuation checklist",
+   "words": 400,
+   "has": [
+    "generic document list"
+   ],
+   "missing": "no explanation of why each item matters"
+  }
+ ],
+ "gaps": [
+  "Online-specific checklist: P&L by month, Stripe/PayPal/Shopify payout exports, analytics and Search Console access, ad account history, subscription metrics, supplier and platform accounts, domain and IP",
+  "Mark what buyers need vs nice-to-have, and how many months",
+  "Table grouped by category",
+  "Common gaps that lower the multiple",
+  "FAQs"
+ ],
+ "titles": [
+  "Business Valuation Preparation Tips",
+  "Checklist: valuing your business",
+  "What Documents Do I Need for a Business Valuation?"
+ ],
+ "keywords": [
+  "business valuation checklist",
+  "documents needed for business valuation",
+  "valuation preparation checklist"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

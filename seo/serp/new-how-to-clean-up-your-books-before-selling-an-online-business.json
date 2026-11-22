@@ -1,0 +1,50 @@
+{
+ "page": "how-to-clean-up-your-books-before-selling-an-online-business",
+ "query": "clean up books before selling a business",
+ "results": [
+  "score.org clean up financials",
+  "bizbuysell clean up financial statements",
+  "doeren.com 6 ways",
+  "inc.com financial mistakes",
+  "theygotacquired.com clean records"
+ ],
+ "studied": [
+  {
+   "url": "bizbuysell.com/learning-center/article/clean-up-financial-statements-for-valuation/",
+   "words": 900,
+   "has": [
+    "recasting steps: non-recurring, owner pay, revenue timing, non-operating income, discretionary",
+    "start 2-3 years before"
+   ],
+   "missing": "nothing online-specific: processor and platform fees, ad spend, refunds/chargebacks, subscriptions"
+  },
+  {
+   "url": "doeren.com 6 ways to clean up your financials",
+   "words": 900,
+   "has": [
+    "general clean-up tips"
+   ],
+   "missing": "no worked example, no online business detail"
+  }
+ ],
+ "gaps": [
+  "Online-specific steps: reconcile Stripe/PayPal/Shopify payouts to the bank, separate personal spending, book refunds and chargebacks, platform and processor fees, ad spend by channel",
+  "Worked recast: messy P&L to clean monthly P&L with add-backs, and what it does to the price at a profit multiple",
+  "12-month month-by-month P&L template table",
+  "Timeline: what to fix 12, 6 and 1 month before listing",
+  "FAQs"
+ ],
+ "titles": [
+  "Cleaning Up Financial Statements for Accurate Business Valuation",
+  "6 ways to clean up your financials before considering a business sale"
+ ],
+ "keywords": [
+  "clean up books before selling a business",
+  "prepare financials to sell a business",
+  "recast financial statements",
+  "bookkeeping before selling a business"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

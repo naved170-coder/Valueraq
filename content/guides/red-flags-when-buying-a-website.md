@@ -8,7 +8,7 @@ cluster: buying
 order: 60
 page_type: article
 answer: The main red flags when buying a website are figures you cannot check at the source, a best month presented as an average, no proof the seller owns the site, traffic that does not match revenue, and pressure to pay outside escrow. Each can be tested before you pay.
-keywords: buying a website red flags, website for sale scam, how to buy an online business
+keywords: buying a website red flags, website for sale scam
 published: 2026-10-31
 updated: 2026-10-31
 publish_at: 2026-10-31T01:00Z

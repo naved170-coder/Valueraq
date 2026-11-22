@@ -8,7 +8,7 @@ cluster: selling
 order: 60
 page_type: article
 answer: Selling an online business takes as long as its six stages add up to: preparing, finding a buyer, agreeing a letter of intent, due diligence, the contract and escrow, and handover. No single number fits every sale, because records, price and buyer funding change each stage. A seller with clean records and a price that matches the figures controls most of the delay.
-keywords: how long does it take to sell an online business, sell my online business, selling online business
+keywords: how long does it take to sell an online business, selling online business
 published: 2026-11-03
 updated: 2026-11-15
 publish_at: 2026-11-03T01:00Z

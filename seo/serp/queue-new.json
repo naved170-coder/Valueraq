@@ -112,13 +112,6 @@
   "collected": "2026-11-05"
  },
  {
-  "slug": "website-flipping",
-  "kind": "glossary",
-  "query": "website flipping",
-  "day": 37,
-  "collected": "2026-11-05"
- },
- {
   "slug": "website-flipping-guide",
   "kind": "guides",
   "query": "website flipping",
@@ -504,5 +497,47 @@
   "kind": "glossary",
   "query": "minority interest",
   "day": null
+ },
+ {
+  "slug": "how-much-is-my-startup-worth",
+  "kind": "guides",
+  "query": "how much is my startup worth",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "how-to-buy-a-blog",
+  "kind": "guides",
+  "query": "how to buy a blog",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "business-valuation-checklist",
+  "kind": "guides",
+  "query": "business valuation checklist",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "turnkey-online-business",
+  "kind": "guides",
+  "query": "turnkey online business for sale",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "how-to-buy-a-startup",
+  "kind": "guides",
+  "query": "how to buy a startup",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "how-to-choose-a-business-marketplace",
+  "kind": "guides",
+  "query": "best place to sell an online business",
+  "collected": "2026-11-23"
+ },
+ {
+  "slug": "how-to-clean-up-your-books-before-selling-an-online-business",
+  "kind": "guides",
+  "query": "clean up books before selling a business",
+  "collected": "2026-11-23"
  }
 ]

@@ -1,5 +1,6 @@
 ---
 title: How to Buy an Online Business
+keywords: how to buy an online business, buying an online business, how to buy a small online business
 meta_title: How to Buy an Online Business: 7 Steps & Checklists
 meta_description: Buy an online business in 7 steps, with a stage timeline table, an offer checklist and where to find businesses. Free calculator included.
 h1: How to Buy an Online Business

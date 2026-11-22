@@ -1,0 +1,53 @@
+{
+ "page": "how-to-choose-a-business-marketplace",
+ "query": "best place to sell an online business",
+ "results": [
+  "exitbid.io best places to sell",
+  "geekflare marketplaces",
+  "softwaretestinghelp 12 best",
+  "flippa vs empire flippers",
+  "exitbid comparison 2026"
+ ],
+ "studied": [
+  {
+   "url": "exitbid.io/blog/best-places-to-sell-online-business",
+   "words": 2500,
+   "has": [
+    "7 platforms",
+    "comparison table: deal size, seller fee, listing fee, model",
+    "6 FAQs"
+   ],
+   "missing": "author's own platform listed first; no worked net-proceeds maths; thin choice framework"
+  },
+  {
+   "url": "geekflare.com/guide/marketplaces-to-buy-sell-online-business/",
+   "words": 4500,
+   "has": [
+    "14 platforms",
+    "table: pricing, commission, vetting"
+   ],
+   "missing": "fees contradict between table and text; affiliate bias; no framework by business size"
+  }
+ ],
+ "gaps": [
+  "Decision framework by deal size, business type and how much help you want (marketplace vs broker vs direct)",
+  "Worked net-proceeds comparison on a $100k sale under different fee models (use only fees from sources.json; otherwise describe models without numbers)",
+  "Questions to ask any marketplace",
+  "Honest note on our own marketplace without overclaiming",
+  "FAQs"
+ ],
+ "titles": [
+  "7 Best Places to Sell an Online Business, by Deal Size",
+  "Best Marketplace to Buy or Sell Online Business",
+  "Flippa vs Empire Flippers"
+ ],
+ "keywords": [
+  "how to choose a business marketplace",
+  "best place to sell an online business",
+  "where to sell an online business",
+  "online business marketplace comparison"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

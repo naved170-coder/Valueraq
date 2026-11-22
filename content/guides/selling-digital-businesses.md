@@ -1,5 +1,6 @@
 ---
 title: How to Sell a Digital Business
+keywords: how to sell an online business, how to sell a business, how to sell a digital business, sell my online business
 meta_title: How to Sell an Online Business: Step-by-Step
 meta_description: Sell your website or online business for a fair price: prepare records, value it, list it, negotiate and hand over. Free value check included.
 h1: How to Sell a Digital Business
