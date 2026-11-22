@@ -149,7 +149,7 @@ def _merge_backup(work, backup_db, report):
     dst.execute("PRAGMA foreign_keys = OFF")
     b = sqlite3.connect(backup_db)
     for t, info in report.items():
-        if not info["damaged"] or t not in RESTORE_FROM_BACKUP:
+        if t not in RESTORE_FROM_BACKUP:   # a damaged page can also drop rows silently, so check all of these
             continue
         try:
             bcols = [r[1] for r in b.execute(f'PRAGMA table_info("{t}")').fetchall()]
@@ -198,7 +198,7 @@ def repair_if_needed(path, build_schema, fetch_backup=None):
                         os.remove(work + ext)
                 report = _salvage(path, work, build_schema)
                 backup_db = None
-                if fetch_backup and any(i["damaged"] for i in report.values()):
+                if fetch_backup:
                     try:
                         backup_db = fetch_backup()
                     except Exception as e:

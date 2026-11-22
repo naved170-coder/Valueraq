@@ -1,0 +1,145 @@
+{
+ "note": "Keywords tracked daily in Admin -> Rankings -> Tracked keywords. 'page' is our page for it ('' = not written yet). Monthly searches come from seo/keywords.json, or 'searches' here when added.",
+ "keywords": [
+  {
+   "kw": "business valuation calculator",
+   "page": "/calculators/business-multiple-calculator/"
+  },
+  {
+   "kw": "how much is my website worth",
+   "page": "/guides/website-worth-examples/"
+  },
+  {
+   "kw": "website valuation",
+   "page": "/tools/website-valuation/"
+  },
+  {
+   "kw": "how to value a website",
+   "page": "/guides/website-valuation/"
+  },
+  {
+   "kw": "website worth calculator",
+   "page": "/calculators/website-worth-calculator/"
+  },
+  {
+   "kw": "buy websites",
+   "page": "/guides/how-to-buy-a-website/"
+  },
+  {
+   "kw": "domain appraisal",
+   "page": ""
+  },
+  {
+   "kw": "how to determine enterprise value",
+   "page": "/guides/how-to-determine-enterprise-value/"
+  },
+  {
+   "kw": "online business valuation",
+   "page": ""
+  },
+  {
+   "kw": "saas valuation",
+   "page": "/tools/saas-valuation/"
+  },
+  {
+   "kw": "saas valuation multiples",
+   "page": "/guides/saas-valuation-multiples/"
+  },
+  {
+   "kw": "how to value an ecommerce business",
+   "page": "/tools/ecommerce-valuation/"
+  },
+  {
+   "kw": "how much is my shopify store worth",
+   "page": "/guides/shopify-store-valuation/"
+  },
+  {
+   "kw": "app valuation calculator",
+   "page": "/tools/app-valuation/"
+  },
+  {
+   "kw": "newsletter valuation",
+   "page": "/tools/newsletter-valuation/"
+  },
+  {
+   "kw": "ai business valuation",
+   "page": "/tools/ai-business-valuation/"
+  },
+  {
+   "kw": "how to sell a business",
+   "page": ""
+  },
+  {
+   "kw": "how to sell a website",
+   "page": "/guides/how-to-sell-a-website/"
+  },
+  {
+   "kw": "how to sell an ecommerce business",
+   "page": "/guides/how-to-sell-an-ecommerce-business/"
+  },
+  {
+   "kw": "how to sell a saas business",
+   "page": "/guides/how-to-sell-a-saas-business/"
+  },
+  {
+   "kw": "business valuation checklist",
+   "page": ""
+  },
+  {
+   "kw": "seller financing calculator",
+   "page": ""
+  },
+  {
+   "kw": "buying an online business",
+   "page": "/guides/buying-digital-businesses/"
+  },
+  {
+   "kw": "how to buy a small business",
+   "page": ""
+  },
+  {
+   "kw": "website flipping",
+   "page": "/guides/website-flipping-guide/"
+  },
+  {
+   "kw": "blogs for sale",
+   "page": ""
+  },
+  {
+   "kw": "passive income online business",
+   "page": ""
+  },
+  {
+   "kw": "turnkey business for sale",
+   "page": ""
+  },
+  {
+   "kw": "tax when selling an online business",
+   "page": ""
+  },
+  {
+   "kw": "startup valuation",
+   "page": ""
+  },
+  {
+   "kw": "how much is my startup worth",
+   "page": ""
+  },
+  {
+   "kw": "buy a startup",
+   "page": ""
+  },
+  {
+   "kw": "shopify business for sale",
+   "page": "/guides/how-to-buy-a-shopify-store/"
+  },
+  {
+   "kw": "websites for sale",
+   "page": "/businesses-for-sale/websites/"
+  },
+  {
+   "kw": "saas for sale",
+   "page": "/businesses-for-sale/saas/"
+  }
+ ]
+}

@@ -3,7 +3,7 @@
 {% block admin %}
 <div class="row"><h1>Rankings</h1><a class="btn quiet" href="/admin/rankings/export.xlsx">Download spreadsheet (opens in Google Sheets)</a></div>
 <p class="lede">How VALUERAQ appears in Google, built from Search Console. Positions are Google's <strong>averages</strong>, weighted by how often each result was shown, not live ranks. Google's figures run two to three days behind.</p>
-<p class="meta-line"><a href="#reviews">Reviews</a><a href="#dash">Dashboard</a><a href="#map">Keyword map</a><a href="#movers">Gains and losses</a><a href="#opps">Opportunities</a><a href="#actions">Action plan</a><a href="#wins">Achievements</a></p>
+<p class="meta-line"><a href="#reviews">Reviews</a><a href="#dash">Dashboard</a><a href="#tracked">Tracked keywords</a><a href="#map">Keyword map</a><a href="#movers">Gains and losses</a><a href="#opps">Opportunities</a><a href="#actions">Action plan</a><a href="#wins">Achievements</a></p>
 {% if not g_on %}<p class="alert mt">Search Console is not connected, so there is nothing to show. Set it up under <a href="/admin/seo/search-performance/">Search performance</a>.</p>
 {% elif not a.ready %}<p class="alert mt">Connected{% if g_status and not g_status.ok %}, but the last fetch failed: {{ g_status.error }}{% endif %}. Google has not reported any searches for the site yet; this page fills in by itself as it does.</p>
 {% else %}
@@ -25,6 +25,12 @@
 <h3 class="mt">Searches by average position (last 28 days, {{ a.tracked }} searches)</h3>
 <div class="table-wrap"><table><thead><tr>{% for g in a.groups %}<th class="r">{{ g }}</th>{% endfor %}</tr></thead><tbody><tr>{% for g, n in a.groups.items() %}<td class="r">{{ n }}</td>{% endfor %}</tr></tbody></table></div>
 {% if a.devices %}<p class="hint">Devices: {% for d in a.devices %}{{ d.key|lower }} {{ d.impressions }} impressions{{ ', ' if not loop.last }}{% endfor %}. Top countries: {% for c in a.countries[:5] %}{{ c.key }} {{ c.impressions }}{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
+
+<h2 id="tracked" class="mt">Tracked keywords</h2>
+<p class="hint">The keywords that matter most for buyers and sellers. Position is Google's average over the last 7 days (data up to {{ a.last|human_date }}); the arrow compares it with the 7 days before. "—" means Google has not shown us for that search in the period. Updated every day.</p>
+<div class="table-wrap"><table><thead><tr><th>Keyword</th><th class="r">Monthly searches</th><th class="r">Our position</th><th class="r">Change</th><th>Our page</th></tr></thead><tbody>
+{% for k in a.tracked_kw %}<tr><td>{{ k.keyword }}</td><td class="r">{{ k.searches or 'to check' }}</td><td class="r">{{ pos(k.position) }}{% if k.today %}<br><span class="muted">latest day {{ k.today }}</span>{% endif %}</td><td class="r">{% if k.change is none %}—{% elif k.change > 0 %}<span class="tick done">▲ {{ k.change }}</span>{% elif k.change < 0 %}<span class="tick missed">▼ {{ -k.change }}</span>{% else %}={% endif %}</td><td>{% if k.page %}<a href="{{ k.page }}" target="_blank" rel="noopener">{{ k.page }}</a>{% else %}<span class="muted">not written yet</span>{% endif %}</td></tr>{% else %}<tr><td colspan="5">No tracked keywords yet.</td></tr>{% endfor %}
+</tbody></table></div>
 
 <h2 id="map" class="mt">Keyword map</h2>
 <p class="hint">Each page's main keyword and what Google does with it over the last 28 days. Monthly searches are Google Keyword Planner ranges (United States); "Pages" is how many of our pages list the keyword.</p>

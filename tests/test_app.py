@@ -2043,7 +2043,7 @@ class Rankings(Base):
         self.assertEqual(x.status_code, 200)
         from openpyxl import load_workbook
         wb = load_workbook(io.BytesIO(x.data))
-        self.assertEqual(wb.sheetnames, ["SEO Dashboard", "Keyword Map", "Movers", "Opportunities", "Cannibalisation",
+        self.assertEqual(wb.sheetnames, ["SEO Dashboard", "Tracked Keywords", "Keyword Map", "Movers", "Opportunities", "Cannibalisation",
                                          "Action Plan", "Achievements", "GSC Performance", "Change Log"])
         self.assertEqual(wb["GSC Performance"].max_row, 57)
 

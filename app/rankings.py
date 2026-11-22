@@ -151,6 +151,43 @@ def keyword_map(cur=None):
     return out
 
 
+def tracked_keywords(last=None):
+    """The owner's watch list (seo/tracked.json): monthly searches, Google position over the last 7 days with the
+    change against the 7 days before, the latest day's position, and our page (the one Google shows, else ours)."""
+    try:
+        with open(os.path.join(os.path.dirname(current_app.root_path), "seo", "tracked.json")) as fh:
+            items = json.load(fh).get("keywords", [])
+    except (OSError, ValueError):
+        return []
+    vols = search_volumes()
+    last = last or latest_date()
+    w7, p7 = window(7, last), window(7, last, back=1)
+    day = (last.isoformat(), last.isoformat()) if last else None
+    q7, qp7, qd = agg(w7), agg(w7, "query_page"), agg(day)
+    prev = agg(p7)
+    shown = {}
+    for k, v in qp7.items():
+        q, pg = k.split("\t", 1)
+        if v["impressions"] > shown.get(q.lower(), ("", -1))[1]:
+            shown[q.lower()] = (pg, v["impressions"])
+    by_lower = lambda d: {k.lower(): v for k, v in d.items()}
+    q7, prev, qd = by_lower(q7), by_lower(prev), by_lower(qd)
+    out = []
+    for it in items:
+        kw = it.get("kw", "").strip()
+        low = kw.lower()
+        now, before = q7.get(low, {}), prev.get(low, {})
+        pos, was = now.get("position"), before.get("position")
+        page = shown.get(low, ("",))[0] or it.get("page", "")
+        page = page.replace(current_app.config.get("SITE_URL", ""), "") if page else ""
+        out.append(dict(keyword=kw, searches=it.get("searches") or vols.get(low, ""), position=pos,
+                        change=round(was - pos, 1) if pos is not None and was is not None else None,
+                        today=qd.get(low, {}).get("position"), impressions=now.get("impressions", 0),
+                        clicks=now.get("clicks", 0), page=page, written=bool(it.get("page"))))
+    out.sort(key=lambda r: (r["position"] is None, r["position"] or 0))
+    return out
+
+
 def mapped_keywords():
     kws = set()
     for kind in ("guides", "glossary"):
@@ -200,6 +237,7 @@ def analysis():
     qp28 = agg(w28, "query_page")
     cannibal = cannibalisation(qp28)
     kmap = keyword_map(qp28)
+    tracked_kw = tracked_keywords(last)
     mapped = mapped_keywords()
     unmapped = sorted(({**v, "query": q} for q, v in q28.items() if q.lower() not in mapped and v["impressions"] >= 20),
                       key=lambda r: -r["impressions"])
@@ -217,7 +255,7 @@ def analysis():
                                                                                   key=lambda m: m["change"])[:15],
                 new=new[:20], lost=lost[:20], pages_up=[p for p in pages if p["change"] > 0][:10],
                 pages_down=sorted([p for p in pages if p["change"] < 0], key=lambda p: p["change"])[:10],
-                low_ctr=low_ctr[:20], near=near[:30], cannibal=cannibal[:20], kmap=kmap, unmapped=unmapped[:30],
+                low_ctr=low_ctr[:20], near=near[:30], cannibal=cannibal[:20], kmap=kmap, tracked_kw=tracked_kw, unmapped=unmapped[:30],
                 countries=countries, devices=devices,
                 daily=daily_rows)
 
@@ -531,6 +569,11 @@ def export_xlsx():
         for g, n in a["groups"].items():
             dash.append((f"Searches at average position {g}", n))
         sheet("SEO Dashboard", ["Measure", "Value"], dash, first=True)
+        sheet("Tracked Keywords", ["Keyword", "Monthly searches (Google Keyword Planner, US)", "Avg Google position (7d)",
+                                   "Change vs previous 7 days (+ = better)", "Position on latest day", "Impressions (7d)",
+                                   "Clicks (7d)", "Our page"],
+              [(k["keyword"], k["searches"] or "to check", k["position"], k["change"], k["today"], k["impressions"],
+                k["clicks"], k["page"] or "not written yet") for k in a.get("tracked_kw", [])])
         sheet("Keyword Map", ["Keyword", "Monthly searches (Google Keyword Planner, US)", "Avg Google position (28d)",
                               "Pages targeting it", "Target page", "Status", "Group", "Impressions (28d)",
                               "Page Google shows", "Secondary keywords"],
