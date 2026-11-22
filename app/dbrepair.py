@@ -94,11 +94,13 @@ def _rows(src, table, cols):
         hi = 5_000_000
     step = 500
     lo = 0
-    while lo <= hi:
+    bad_blocks = 0
+    while lo <= hi and bad_blocks < 400:       # give up on a table that is unreadable throughout
         try:
             out += src.execute(f'SELECT {sel} FROM "{table}" WHERE rowid BETWEEN ? AND ?',
                                (lo, lo + step - 1)).fetchall()
         except sqlite3.DatabaseError:
+            bad_blocks += 1
             for rid in range(lo, lo + step):   # narrow down inside the bad block
                 try:
                     out += src.execute(f'SELECT {sel} FROM "{table}" WHERE rowid=?', (rid,)).fetchall()

@@ -506,7 +506,8 @@ def build_schema(path):
     conn.close()
 
 
-def init_db(app):
+def repair(app):
+    """Check the database file and repair it if damaged (see dbrepair.py)."""
     from . import dbrepair
     path = app.config["DATABASE_PATH"]
 
@@ -528,9 +529,16 @@ def init_db(app):
                     return tmp
             return None
 
-    result = dbrepair.repair_if_needed(path, build_schema, last_backup)
-    if result:
-        app.config["DB_REPAIR_RESULT"] = result
+    return dbrepair.repair_if_needed(path, build_schema, last_backup)
+
+
+def init_db(app):
+    # In production the check runs once in the gunicorn master before workers start (gunicorn.conf.py),
+    # because a worker that is busy for more than 60 seconds while loading gets restarted.
+    if not os.environ.get("VQ_DB_CHECKED"):
+        result = repair(app)
+        if result:
+            app.config["DB_REPAIR_RESULT"] = result
     with app.app_context():
         db = get_db()
         db.executescript(SCHEMA)
