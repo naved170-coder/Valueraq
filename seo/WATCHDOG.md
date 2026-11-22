@@ -62,9 +62,16 @@ Never change `app/` code, `content/pages/`, prices, fees or tests.
   set the item's `"serp": "used"` in that report, add `serp_compare` to its `tasks` only if every new page now has
   research, and record it under `fixed`.
 - **Fewer than 10 unwritten days left in the calendar:** add new days to `seo/calendar.json` in the same format, choosing
-  topics from `seo/keywords.json` by search volume and low competition, and run the duplicate check from RUNBOOK section 3
+  topics with buyer or seller intent (buying, selling or valuing an online business; no general accounting terms)
+  from `seo/keywords.json` by search volume and low competition, and add each one to `seo/serp/queue-new.json` without
+  `collected` (it is written only after the owner's research session), and run the duplicate check from RUNBOOK section 3
   on every topic against existing pages and the rest of the calendar. Keep about 70% general/US topics and no more than one
   held (competitor, country, fee or tax) topic in any three days.
+
+- **Every morning: improve five more existing pages** (the evening run does ten; together 15 a day). Follow RUNBOOK
+  "Every day: improve ... existing pages" exactly, with five files whose `applied` is `null`, guides first. Run the gates,
+  record them in today's file under `fixed` as "Improved 5 pages from competitor research: <paths>", and push. If no
+  unapplied files are left, say so in `checks`.
 
 Anything else is for the owner: a failed deploy, failing tests you did not cause, server errors, a refused push,
 a page that will not load after its release time, something that looks wrong in the Admin screens.

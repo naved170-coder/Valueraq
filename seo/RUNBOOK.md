@@ -73,14 +73,17 @@ On the 1st (Pakistan date), write only the first two missing pages of the day (t
 4. If fewer than 30 unwritten days remain in `seo/calendar.json`, add new days in the same format. Run the duplicate check
    in section 3 on every new topic against existing pages and against the rest of the calendar before adding it.
 
-### Every day: improve four existing pages from saved competitor research
+### Every day: improve ten existing pages from saved competitor research (the morning self-check does five more: 15 a day)
 
 `seo/serp/` holds one file per existing page (`<kind>-<slug>.json`), collected in sessions with the owner: the search,
 the strongest competing pages, what they cover (`studied`) and our gaps (`gaps`). After writing the day's new pages:
 
-1. Take FOUR files whose `applied` is `null`: the first two `guides-` files and the first two `glossary-` files
-   (after those run out, take four from whichever remain; `tools-` and `calculators-` first if any are unapplied).
+1. Take TEN files whose `applied` is `null`: `tools-` and `calculators-` first if any are unapplied, then guides before
+   glossary (they bring buyers and sellers), oldest `collected` first.
    Write and push the day's report file before starting this step, so a long run never loses the record.
+   Work in batches of five: after every five pages, run the gates, update the report (`"improved": <count so far>`)
+   and push. If the run is running out of time or allowance, stop after the last pushed batch and say how many were
+   done in `notes`; the morning self-check continues the work.
    Skip `queue.json`. Skip a page that names a competitor or its fees.
 2. Open our page and add what the `gaps` list asks for, so the page answers the search better than the pages studied:
    tables, worked examples, checklists, FAQs, clearer first lines. Keep everything already true on the page.
