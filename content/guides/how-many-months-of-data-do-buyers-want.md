@@ -8,7 +8,7 @@ cluster: selling
 order: 70
 page_type: reference
 answer: Expect buyers to ask for at least 12 months of revenue, cost and traffic records, and to be happier with 24 months. Twelve months shows every season once, and 24 lets a buyer compare the same months across two years.
-keywords: how much history to sell a website, months of records to sell a website, how many months of data to sell a business, trailing twelve months
+keywords: how much history to sell a website, months of records to sell a website, how many months of data to sell a business
 published: 2026-10-26
 updated: 2026-11-15
 publish_at: 2026-10-25T19:00Z

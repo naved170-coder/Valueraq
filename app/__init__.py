@@ -1,5 +1,6 @@
 """VALUERAQ application factory."""
 import gzip
+import os
 import time
 from urllib.parse import urlsplit
 
@@ -20,10 +21,23 @@ def _load_redirects(app):
     t = time.time()
     if app.config.get("TESTING") or t - _redirect_cache["at"] > 60:
         rows = db.query("SELECT from_path, to_path, status FROM redirects")
-        _redirect_cache["map"] = {r["from_path"]: (r["to_path"], r["status"]) for r in rows}
+        merged = {k: (v, 301) for k, v in _file_redirects().items()}   # pages merged into another (seo/redirects.json)
+        merged.update({r["from_path"]: (r["to_path"], r["status"]) for r in rows})
+        _redirect_cache["map"] = merged
         _redirect_cache["gone"] = {r["path"] for r in db.query("SELECT path FROM gone_urls")}
         _redirect_cache["at"] = t
     return _redirect_cache
+
+
+def _file_redirects():
+    """Permanent redirects kept in the repository, so a merged page's old address keeps working."""
+    import json
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "seo", "redirects.json")
+    try:
+        with open(path) as fh:
+            return {k: v for k, v in json.load(fh).get("redirects", {}).items() if k.startswith("/") and v.startswith("/")}
+    except (OSError, ValueError):
+        return {}
 
 
 def invalidate_redirect_cache():

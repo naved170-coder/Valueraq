@@ -8,7 +8,7 @@ cluster: app
 order: 60
 page_type: article
 answer: To sell a mobile app, work out its annual net profit, price it with a profit multiple, gather 12 months of store payouts and user data, list it with honest figures, agree terms in writing, and then transfer it through Apple's or Google's own app transfer process so reviews, ratings and users move with it.
-keywords: sell app business, apps for sale, mobile apps for sale, sell your app online
+keywords: sell app business, apps for sale, sell your app online
 published: 2026-10-22
 updated: 2026-11-21
 publish_at: 2026-10-22T01:00Z

@@ -8,7 +8,7 @@ cluster: analysis
 order: 60
 page_type: reference
 answer: To determine enterprise value, add the business's debt to its equity value and subtract its cash. Equity of $200,000, debt of $30,000 and cash of $10,000 gives an enterprise value of $220,000. Most small online businesses are sold cash-free and debt-free, so their enterprise value is often the same as the price.
-keywords: how to determine enterprise value, enterprise value formula, enterprise value example, enterprise value vs equity value
+keywords: how to determine enterprise value, enterprise value formula, enterprise value example
 published: 2026-11-09
 updated: 2026-11-09
 publish_at: 2026-11-09T07:00Z

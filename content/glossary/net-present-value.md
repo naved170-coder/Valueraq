@@ -8,7 +8,7 @@ h1: Net Present Value (NPV)
 definition: Net present value (NPV) is the value today of all the cash an investment is expected to produce, minus the amount paid for it.
 cluster: analysis
 page_type: reference
-keywords: net present value, npv, npv formula, what is net present value, business valuation discounted cash flow calculator
+keywords: net present value, npv, npv formula, what is net present value
 publish_at: 2026-11-15T19:00Z
 image: /static/img/articles/net-present-value.png
 image_alt: Featured image for the glossary entry What Is Net Present Value

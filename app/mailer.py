@@ -356,6 +356,22 @@ def seo_needs_owner(w):
     return send(_admins(), f"VALUERAQ SEO: {len(items)} item(s) need you", text, html)
 
 
+def seo_research_low(s):
+    c = current_app.config
+    url = c["SITE_URL"] + "/admin/seo-reports/"
+    n = len(s["ready"])
+    what = (f"Competitor research is saved for only {n} upcoming page{'s' if n != 1 else ''} "
+            f"(about {s['days']} day{'s' if s['days'] != 1 else ''} of writing; runs out around {s['runs_out']}). "
+            f"{len(s['waiting'])} planned pages are waiting for research.")
+    text = (f"{what}\n\nNew pages are only written once their top Google results have been compared, so the daily run "
+            f"will slow down or stop when it runs out.\n\nWhat to do: open a chat with Claude and ask it to "
+            f"\"collect the next pages\".\n\n{url}")
+    html = (f"<p>{_html.escape(what)}</p><p>New pages are only written once their top Google results have been compared, "
+            "so the daily run will slow down or stop when it runs out.</p><p><b>What to do:</b> open a chat with Claude and "
+            "ask it to \"collect the next pages\".</p>" + _btn(url, "Open SEO reports"))
+    return send(_admins(), f"VALUERAQ SEO: competitor research runs out around {s['runs_out']}", text, html)
+
+
 def login_code(to, code, purpose="login"):
     minutes = current_app.config["LOGIN_CODE_MINUTES"]
     what = "finish logging in" if purpose == "login" else "turn on two-step login"

@@ -19,9 +19,9 @@ def _seo_banner():
     """Every admin page shows a banner when a daily SEO run was missed, and a count of pages awaiting approval."""
     try:
         return dict(seo_alert=seoauto.alert(), seo_pending=len(seoauto.pending()), seo_tz=seoauto.config()["tz_name"],
-                    seo_owner=seoauto.owner_items(), gsc_problem=_gsc_problem())
+                    seo_owner=seoauto.owner_items(), gsc_problem=_gsc_problem(), research_low=seoauto.research_low())
     except Exception:
-        return dict(seo_alert=None, seo_pending=0, seo_tz="", seo_owner=None, gsc_problem=None)
+        return dict(seo_alert=None, seo_pending=0, seo_tz="", seo_owner=None, gsc_problem=None, research_low=None)
 
 
 def _gsc_problem():

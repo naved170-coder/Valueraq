@@ -8,7 +8,7 @@ h1: Terminal Value
 definition: Terminal value is the estimated value today of all the cash a business is expected to produce after the last year of a forecast.
 cluster: analysis
 page_type: reference
-keywords: terminal value, terminal value formula, terminal value in dcf, what is terminal value, business valuation discounted cash flow calculator
+keywords: terminal value, terminal value formula, terminal value in dcf, what is terminal value
 publish_at: 2026-11-16T07:00Z
 image: /static/img/articles/terminal-value.png
 image_alt: Featured image for the glossary entry What Is Terminal Value

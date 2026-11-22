@@ -5,6 +5,7 @@ meta_description: Established websites often sell for 2.5 to 4 times yearly prof
 h1: How to Value a Website
 section: Valuation
 cluster: website
+keywords: how to value a website, website valuation, website valuation formula, value of a website
 order: 1
 answer: Most small websites are valued by multiplying their annual net profit by a multiple, typically a few times annual profit, and then moving that multiple up or down for the site's age, growth, traffic sources, monetization and the owner's workload. Traffic and revenue matter because they drive profit and signal risk, but profit is the number buyers pay for.
 published: 2026-09-30

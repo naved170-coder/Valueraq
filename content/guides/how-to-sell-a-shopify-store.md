@@ -8,7 +8,7 @@ cluster: ecommerce
 order: 60
 page_type: article
 answer: To sell a Shopify store, gather 12 months of sales, cost and ad records, clean up the stock and supplier accounts, price the store as yearly profit times a multiple plus sellable stock at cost, write a factual listing, answer buyer checks with evidence, agree terms in writing and close through escrow before handing over every account in an agreed order.
-keywords: sell shopify store, shopify business for sale, ecommerce business for sale, online stores for sale, how to sell an online store
+keywords: sell shopify store
 published: 2026-10-16
 updated: 2026-11-20
 publish_at: 2026-10-16T07:00Z

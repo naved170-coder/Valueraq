@@ -8,7 +8,7 @@ h1: Net Profit
 definition: Net profit is the money a business has left after subtracting all of its costs from its revenue, including the cost of goods, running costs, interest and taxes.
 cluster: analysis
 page_type: reference
-keywords: net profit, net profit formula, what is net profit, net income
+keywords: net profit, net profit formula, what is net profit
 related: /glossary/sde/, /glossary/ebitda/, /glossary/add-backs/, /glossary/gross-margin/, /glossary/profit-multiple/
 updated: 2026-10-10
 publish_at: 2026-10-10T07:00Z

@@ -8,7 +8,7 @@ cluster: analysis
 order: 60
 page_type: article
 answer: Most bad valuations come from the same few errors: using revenue instead of profit, ignoring owner time, annualizing one strong month, applying a multiple to the wrong measure, accepting inflated add-backs, overlooking dependence on one channel, treating a default multiple as market data, ignoring age and trend, and quoting a single number instead of a range. Each one can move the result by tens of thousands of dollars.
-keywords: online business valuation, how much is my business worth, business valuation mistakes, valuation multiple, add-backs, run rate
+keywords: online business valuation, how much is my business worth, business valuation mistakes
 published: 2026-10-28
 updated: 2026-10-28
 publish_at: 2026-10-28T01:00Z

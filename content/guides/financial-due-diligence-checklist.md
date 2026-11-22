@@ -8,7 +8,7 @@ cluster: buying
 order: 60
 page_type: article
 answer: Financial due diligence is checking that the money a seller says the business makes is real, repeatable and yours to keep after the sale. For a small online business that means proving 12 or more months of revenue from the source systems, testing every cost and add-back, matching both to the bank, and confirming nothing is owed that will follow the business to you.
-keywords: financial due diligence checklist, due diligence checklist for buying a business, acquisition due diligence checklist, documents for due diligence, due diligence list
+keywords: financial due diligence checklist, due diligence checklist for buying a business, acquisition due diligence checklist, due diligence list
 published: 2026-10-09
 updated: 2026-11-13
 publish_at: 2026-10-09T07:00Z

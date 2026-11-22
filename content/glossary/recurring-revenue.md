@@ -8,7 +8,7 @@ h1: Recurring Revenue
 definition: Recurring revenue is income a business can expect to receive again on a regular schedule from existing customers, such as monthly or yearly subscriptions.
 cluster: saas
 page_type: reference
-keywords: recurring revenue, what is recurring revenue, recurring revenue definition, subscription revenue
+keywords: recurring revenue, what is recurring revenue, recurring revenue definition
 related: /glossary/mrr/, /glossary/arr/, /glossary/churn/, /glossary/net-revenue-retention/, /glossary/saas/
 updated: 2026-10-14
 publish_at: 2026-10-14T13:00Z

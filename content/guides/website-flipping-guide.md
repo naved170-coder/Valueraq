@@ -8,14 +8,14 @@ cluster: website
 order: 60
 page_type: article
 answer: Website flipping is buying an existing website, improving its profit or reducing its risk, and selling it for more than you paid. In the worked example below, a $45,000 purchase returns about 51% in the good case, roughly breaks even in the flat case and loses about 32% if traffic drops. The gain depends on the price you pay, not the work you do.
-keywords: website flipping, flipping websites, website flipping sites, how to flip a website, buy and sell websites, website flipping risks
+keywords: website flipping, flipping websites, website flipping sites, how to flip a website, website flipping risks
 published: 2026-11-09
 updated: 2026-11-09
 publish_at: 2026-11-09T01:00Z
 image: /static/img/articles/website-flipping-guide.png
 image_alt: Website Flipping: How It Works and What to Check (VALUERAQ guide)
 score: 8.6
-related: /glossary/website-flipping/, /guides/how-to-buy-a-website/, /guides/red-flags-when-buying-a-website/, /guides/how-to-calculate-roi-when-buying-a-website/, /guides/increase-website-value-before-selling/, /guides/digital-business-due-diligence/
+related: /guides/how-to-buy-a-website/, /guides/red-flags-when-buying-a-website/, /guides/how-to-calculate-roi-when-buying-a-website/, /guides/increase-website-value-before-selling/, /guides/digital-business-due-diligence/
 cta: /tools/website-valuation/
 cta_text: Before you pay for a site, check what it could be worth with the free website valuation tool. It takes about a minute and needs no sign-up.
 ---
@@ -30,7 +30,7 @@ This guide explains how a flip works, shows one flip with the arithmetic in thre
 
 ## What website flipping is
 
-A flipper buys an existing website, usually a small content, affiliate, ad-funded or ecommerce site, spends a few months improving it, and lists it for sale. The glossary entry on [website flipping](/glossary/website-flipping/) gives the short definition. This page is the longer, practical version.
+A flipper buys an existing website, usually a small content, affiliate, ad-funded or ecommerce site, spends a few months improving it, and lists it for sale.
 
 It differs from related ideas in one important way:
 

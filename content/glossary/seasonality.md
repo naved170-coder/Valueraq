@@ -8,7 +8,7 @@ h1: Seasonality
 definition: Seasonality is a pattern in which a business's sales, traffic or profit rise and fall at predictable times of the year, such as around holidays, weather changes or the school calendar.
 cluster: analysis
 page_type: reference
-keywords: seasonality, seasonal business, seasonality in business valuation, seasonal revenue
+keywords: seasonality, seasonal business, seasonal revenue
 related: /glossary/trailing-twelve-months/, /glossary/run-rate/, /glossary/inventory-turnover/, /glossary/cash-flow/, /guides/how-to-buy-an-ecommerce-business/, /guides/valuation-mistakes/
 updated: 2026-10-31
 publish_at: 2026-11-01T07:00Z

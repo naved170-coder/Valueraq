@@ -1968,14 +1968,32 @@ class Rankings(Base):
             os.makedirs(runs); os.makedirs(serp)
             rep = {"items": [{"path": "/glossary/widget-rate/", "action": "new", "serp": "missing"},
                              {"path": "/glossary/other-term/", "action": "new", "serp": "missing"}]}
-            _j.dump(rep, open(os.path.join(runs, "2031-01-02.json"), "w"))
+            _j.dump(rep, open(os.path.join(runs, "2026-11-10.json"), "w"))
             open(os.path.join(serp, "new-widget-rate.json"), "w").write("{}")
             with mock.patch.object(seoauto, "RUNS_DIR", runs), mock.patch.object(seoauto, "SERP_DIR", serp):
                 seoauto.run_dates.cache_clear(); seoauto._run_raw.cache_clear()
                 probs = seoauto.serp_report_problems()
+                # From 24 Nov 2026 no new page may go out without research at all.
+                _j.dump(rep, open(os.path.join(runs, "2031-01-02.json"), "w"))
+                seoauto.run_dates.cache_clear(); seoauto._run_raw.cache_clear()
+                later = [p for p in seoauto.serp_report_problems() if "2031" in p]
             seoauto.run_dates.cache_clear(); seoauto._run_raw.cache_clear()
         self.assertEqual(len(probs), 1)
         self.assertIn("widget-rate", probs[0])
+        self.assertEqual(len(later), 2)
+
+    def test_keyword_on_two_pages_and_research_supply(self):
+        from app import seoauto, content
+        with self.app.app_context():
+            self.assertEqual(seoauto.keyword_overlap_problems(), [])
+            s = seoauto.research_supply()
+            self.assertEqual(set(s), {"ready", "waiting", "days", "runs_out"})
+        A = type("D", (), {"keywords": ["widget rate", "widgets"], "path": "/glossary/a/"})
+        B = type("D", (), {"keywords": ["Widget Rate"], "path": "/glossary/b/"})
+        with mock.patch.object(content, "all_docs", lambda kind: [A, B] if kind == "glossary" else []):
+            probs = seoauto.keyword_overlap_problems()
+        self.assertEqual(len(probs), 1)
+        self.assertIn("widget rate", probs[0])
 
     def test_dashboard_totals_use_google_daily_totals(self):
         from app import rankings

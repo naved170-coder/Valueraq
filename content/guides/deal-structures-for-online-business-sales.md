@@ -8,7 +8,7 @@ cluster: buying
 order: 60
 page_type: article
 answer: A deal structure is the plan for how and when the price is paid. Small online businesses are usually sold all cash through escrow, with part of the price deferred as seller financing, tied to results as an earnout, or held back for a few months. The headline price can be identical while the money that is certain on closing day is very different.
-keywords: how to structure a business sale, seller financing, earnout, escrow, holdback, deal structure online business
+keywords: how to structure a business sale, seller financing, earnout, escrow, deal structure online business
 published: 2026-10-27
 updated: 2026-11-11
 publish_at: 2026-10-27T01:00Z

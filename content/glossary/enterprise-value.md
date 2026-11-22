@@ -8,7 +8,7 @@ h1: Enterprise Value
 definition: Enterprise value is the total value of a business to everyone with a claim on it, calculated as the value of its equity plus its debt, minus its cash.
 cluster: analysis
 page_type: reference
-keywords: enterprise value, enterprise value formula, how to determine enterprise value, what is enterprise value
+keywords: enterprise value, what is enterprise value
 related: /glossary/valuation-multiple/, /glossary/ebitda/, /glossary/revenue-multiple/, /glossary/asset-sale/, /guides/business-valuation/
 updated: 2026-11-21
 publish_at: 2026-10-06T13:00Z

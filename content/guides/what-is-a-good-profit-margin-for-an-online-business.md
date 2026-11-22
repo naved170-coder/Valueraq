@@ -8,7 +8,7 @@ cluster: valuation
 order: 60
 page_type: article
 answer: A good profit margin for an online business is one that is stable or rising and high enough to leave real profit after every cost. There is no single number, because gross, operating and net margin measure different things, and a content site, a software product and a store carry very different costs. Compare a business with its own history and with similar models, not with one average.
-keywords: profit margin online business, net profit margin, gross margin, operating margin, good profit margin for ecommerce
+keywords: profit margin online business, net profit margin, good profit margin for ecommerce
 published: 2026-11-05
 updated: 2026-11-05
 publish_at: 2026-11-06T01:00Z

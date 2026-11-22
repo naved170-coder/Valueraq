@@ -35,8 +35,11 @@ today's run is done (this is the guard against publishing twice).
 
 ## 2. Pick the work
 
-Open `seo/calendar.json`. Every run writes **one long article and three reference pages** (glossary terms or
-question pages). Choose them like this:
+Open `seo/calendar.json`. Every run writes **up to one long article and three reference pages** (glossary terms or
+question pages). **Only topics whose competitor research is saved may be written:** run `ls seo/serp/ | grep '^new-'`
+first and pick only calendar topics that have `seo/serp/new-<slug>.json`. Topics without it are skipped (they wait for
+the owner's next research session). If no topic has research, write no new page tonight: do the daily improvement
+step (below), file the report with `"notes": "no researched topics left"`, and stop. Choose them like this:
 
 1. **The article:** the first article in calendar order that is not yet written and that you can write properly.
    If an article topic is blocked (needs a source you cannot open, or duplicates an existing page), skip it, note why,
@@ -97,11 +100,21 @@ workspace `tea-d8cutaurnols739us400`, text `rankings-snapshot`, last 2 days; par
 Use its `new` searches and the queries in `actions` to choose secondary keywords for today's pages: prefer real
 searches the site already appears for. Do not use WebFetch for the website's own data. If it cannot be read, carry on.
 
-## 3. Before writing each page: duplicate check
+## 3. Before writing each page: duplicate and keyword-overlap check
 
-List `content/guides/` and `content/glossary/`. If an existing page answers the same search question, do not
-write the page. Record it in the report as `"action": "skipped"` with the overlapping path. Otherwise record
-`"duplicate": "pass (closest: /guides/x/, /glossary/y/)"`.
+Two of our pages must never compete for the same Google search. Before writing:
+
+1. List `content/guides/` and `content/glossary/`. If an existing page answers the same search question, do not
+   write the page.
+2. Check the planned keywords against every existing page: `grep -il "^keywords:.*<keyword>" content/guides/*.md
+   content/glossary/*.md` for the main keyword and each secondary keyword. If another page already lists the main
+   keyword, do not write the page: improve that existing page instead (it counts as one of the day's improvements)
+   and record the planned page as `"action": "skipped"` with the overlapping path. If only a secondary keyword
+   overlaps, leave that keyword out of the new page.
+3. Never put a keyword in `keywords:` that another page already lists. `seo-check` fails if two pages list the same
+   keyword, so nothing can be pushed until it is fixed.
+
+Record `"duplicate": "pass (closest: /guides/x/, /glossary/y/)"` for pages that pass.
 
 ## 3b. Before writing each page: compare the top results
 
@@ -114,10 +127,10 @@ Every new page must be more useful than the pages already ranking for its main k
 2. If there is no file (topics marked `collected` in `seo/serp/queue-new.json` have one) and WebSearch works in this run, search the main keyword, open the strongest 3 to 5 relevant
    results (skip spam and thin calculator pages), save what they cover and the gaps in `seo/serp/new-<slug>.json`
    in the same format, then plan the page as above.
-3. If neither is possible, write the page as usual, set `"serp": "missing"` for it in the report, and add its slug and
-   main keyword to `seo/serp/queue-new.json` so the owner's next session collects the research; the page is then
-   improved later through the daily improvement step (its file will be saved as `guides-<slug>.json` or
-   `glossary-<slug>.json`).
+3. If neither is possible, **do not write the page**. Record it as `"action": "skipped"` with
+   `"note": "no competitor research"`, make sure its slug and main keyword are in `seo/serp/queue-new.json` (so the
+   owner's next session collects it), and take the next calendar topic that has research. From 24 November 2026
+   `seo-check` fails if a new page is reported without `"serp": "used"` or `"serp": "searched"`.
 4. Competitor pages are for finding gaps only: never use their figures (unless the source is in `seo/sources.json`),
    never copy their wording and never name them on the page.
 5. Never mark a page `missing` without running that `ls` check first; `seo-check` now fails if a report says `missing` while the file exists, and nothing can be pushed until the page is rewritten with it. In the report, record for each new page `"serp": "used"`, `"serp": "searched"` or `"serp": "missing"`, and add

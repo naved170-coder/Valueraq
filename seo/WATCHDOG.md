@@ -36,6 +36,10 @@ If `seo/watch/<today>.json` exists, stop: today's check is done.
 7. **Calendar supply.** Count the days in `seo/calendar.json` whose pages are not all written.
 8. **Approvals.** Count pages with `hold: yes` (you cannot see whether the owner has decided them; just report the count of held files).
 
+8b. **Competitor research supply.** Count unwritten, not-held calendar topics in `seo/calendar.json` that have
+   `seo/serp/new-<slug>.json`. Divide by 4 for days of writing left. If fewer than 7 days are left, put
+   "Competitor research runs out in N days (around DATE): ask Claude to collect the next pages" in `needs_owner`.
+   (The website also shows this in Admin and emails it once a day.)
 9. **Search figures.** Read the website's daily `rankings-snapshot` from the Render logs, as described in section 4.
    Do not use WebFetch for the website's own data. If `ready` is false, Google has not reported figures yet.
    If the snapshot is missing for two days, put "Search Console figures are not being saved" in `needs_owner`.

@@ -268,11 +268,67 @@ def validate():
         if len(paths) > MAX_PER_DAY:
             problems.append(f"{day}: {len(paths)} pages scheduled; the daily cap is {MAX_PER_DAY}")
     problems += serp_report_problems()
+    problems += keyword_overlap_problems()
     return problems
+
+
+def keyword_overlap_problems():
+    """Each keyword may be listed on one page only. When two pages target the same search, Google can't tell which
+    to rank and both rank worse. Fix by improving the existing page instead of writing a new one, or by removing
+    the keyword from one of them."""
+    owner, out = {}, []
+    for kind in ("guides", "glossary"):
+        for d in content.all_docs(kind):
+            for kw in {k.strip().lower() for k in (d.keywords or []) if k.strip()}:
+                if kw in owner and owner[kw] != d.path:
+                    out.append(f"{d.path}: keyword \"{kw}\" is already targeted by {owner[kw]}. Improve that page "
+                               "instead, or remove the keyword from one of them.")
+                else:
+                    owner[kw] = d.path
+    return out
+
+
+# ---------------------------------------------------------------- competitor research supply
+RESEARCH_MIN_DAYS = 7
+
+
+def research_supply():
+    """Unwritten calendar topics, split by whether their competitor research (seo/serp/new-<slug>.json) is saved."""
+    have = set(os.listdir(SERP_DIR)) if os.path.isdir(SERP_DIR) else set()
+    ready, waiting = [], []
+    for day in calendar().get("days", []):
+        for pg in day.get("pages", []):
+            if pg.get("written") or pg.get("hold"):
+                continue
+            (ready if f"new-{pg.get('slug')}.json" in have else waiting).append(pg.get("slug"))
+    per_day = MAX_PER_DAY
+    return dict(ready=ready, waiting=waiting, days=len(ready) // per_day,
+                runs_out=(local_now().date() + datetime.timedelta(days=len(ready) // per_day)).isoformat())
+
+
+def research_low():
+    s = research_supply()
+    return s if s["days"] < RESEARCH_MIN_DAYS else None
+
+
+def send_research_low_once():
+    s = research_low()
+    if not s:
+        return False
+    conn = db.get_db()
+    cur = conn.execute("INSERT OR IGNORE INTO seo_alerts(day, sent_at) VALUES (?,?)",
+                       ("research-low:" + local_now().date().isoformat(), db.now()))
+    conn.commit()
+    if not cur.rowcount:
+        return False
+    from . import mailer
+    mailer.seo_research_low(s)
+    return True
 
 
 SERP_DIR = os.path.join(SEO_DIR, "serp")
 SERP_CHECK_START = "2026-11-06"   # reports from this date are held to the rule below
+SERP_REQUIRED_START = "2026-11-24"   # from this run on, no new page may be written without competitor research
 
 
 def serp_report_problems():
@@ -289,6 +345,11 @@ def serp_report_problems():
                 continue
             slug = (item.get("path") or "").strip("/").split("/")[-1]
             if not slug:
+                continue
+            if date >= SERP_REQUIRED_START and item.get("serp") not in ("used", "searched"):
+                out.append(f"seo/runs/{date}.json: {item.get('path')} was written without comparing the top results "
+                           f"(serp: '{item.get('serp') or 'not recorded'}'). New pages need saved research first: "
+                           "remove the page and take a topic that has seo/serp/new-<slug>.json.")
                 continue
             if item.get("serp") in (None, "", "missing") and f"new-{slug}.json" in have:
                 out.append(f"seo/runs/{date}.json: {item.get('path')} says competitor research is "
@@ -624,6 +685,7 @@ def start_scheduler(app):
                 with app.app_context():
                     send_alert_once()
                     send_owner_items_once()
+                    send_research_low_once()
                     # Only one worker should announce: claim the ten-minute slot through the database.
                     slot = "indexnow:" + time.strftime("%Y%m%d%H") + str(int(time.strftime("%M")) // 10)
                     conn = db.get_db()

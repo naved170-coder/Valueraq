@@ -8,7 +8,7 @@ cluster: analysis
 order: 60
 page_type: article
 answer: The most widely used business valuation formula for a small business is value = yearly profit × a multiple. Three others are used alongside it: yearly revenue × a multiple, assets minus liabilities, and discounted cash flow, which adds up future cash in today's money. Using two of them together gives a more reliable range than any one alone.
-keywords: business valuation formula, company valuation formula, formula to value a business, how to determine the value of a business, business worth formula
+keywords: business valuation formula, company valuation formula, formula to value a business, business worth formula
 published: 2026-10-08
 updated: 2026-11-08
 publish_at: 2026-10-08T13:00Z

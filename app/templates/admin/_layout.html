@@ -24,6 +24,11 @@
     <ul>{% for i in seo_owner.needs_owner %}<li>{{ i }}</li>{% endfor %}</ul>
   </div>
   {% endif %}
+  {% if research_low %}
+  <p class="alert bad mt" role="alert"><strong>Competitor research runs out around {{ research_low.runs_out|human_date }}.</strong>
+    It is saved for only {{ research_low.ready|length }} upcoming page{{ '' if research_low.ready|length == 1 else 's' }}; {{ research_low.waiting|length }} planned pages are waiting.
+    New pages are only written after their top Google results are compared. Ask Claude to "collect the next pages".</p>
+  {% endif %}
   {% if seo_pending and section != 'approvals' %}
   <p class="alert mt"><strong>{{ seo_pending }} page{{ '' if seo_pending == 1 else 's' }} waiting for your approval.</strong> <a href="/admin/approvals/">Review now</a></p>
   {% endif %}

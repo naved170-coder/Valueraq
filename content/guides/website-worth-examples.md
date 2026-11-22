@@ -8,7 +8,7 @@ cluster: website
 order: 60
 page_type: article
 answer: A website that earns money is usually worth a multiple of its yearly profit. On VALUERAQ's default assumptions that is 2.5 to 4.0 times annual profit before adjustments, so a site that clears $2,400 a month starts at roughly $72,000 to $115,000. Age, growth, owner time and reliance on one traffic source then move the figure up or down.
-keywords: how much is my website worth, website worth calculator, value my website, website value estimator, website valuation
+keywords: how much is my website worth, website worth calculator, value my website, website value estimator
 published: 2026-10-06
 updated: 2026-11-19
 publish_at: 2026-10-06T01:00Z

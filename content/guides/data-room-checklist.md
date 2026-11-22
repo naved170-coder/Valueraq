@@ -8,7 +8,7 @@ cluster: selling
 order: 60
 page_type: article
 answer: A data room for an online business is one organized, access-controlled folder holding financials, traffic and sales records, account and asset proof, contracts and operating notes. Build it before you list, name every file clearly, and open folders to a buyer in stages after a signed confidentiality agreement.
-keywords: due diligence data room checklist, documents for due diligence, due diligence list, data room folders, seller data room
+keywords: due diligence data room checklist, data room folders, seller data room
 published: 2026-10-30
 updated: 2026-11-10
 publish_at: 2026-10-30T01:00Z

@@ -8,7 +8,7 @@ h1: Book Value
 definition: Book value is the value of a business according to its accounting records, found by subtracting total liabilities from total assets.
 cluster: analysis
 page_type: reference
-keywords: book value, what is book value, book value formula, net book value, book value of a business
+keywords: book value, what is book value, net book value, book value of a business
 related: /glossary/goodwill/, /glossary/fair-market-value/, /glossary/working-capital/, /glossary/net-profit/, /glossary/asset-sale/
 updated: 2026-11-09
 publish_at: 2026-10-14T01:00Z

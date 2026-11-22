@@ -8,7 +8,7 @@ cluster: website
 order: 70
 page_type: reference
 answer: Earning websites are usually priced as a multiple of yearly profit. VALUERAQ's default range is 2.5 to 4.0 times yearly profit, which is the same as 30 to 48 times monthly profit, and its adjustment rules can move a site as low as 1.25 or as high as 5.6. No complete public record of private website sales exists, so any single "average multiple" should be treated with caution.
-keywords: website valuation multiple, what multiple do websites sell for, website profit multiple, website valuation, website worth
+keywords: website valuation multiple, what multiple do websites sell for, website profit multiple
 published: 2026-10-08
 updated: 2026-10-08
 publish_at: 2026-10-07T19:00Z

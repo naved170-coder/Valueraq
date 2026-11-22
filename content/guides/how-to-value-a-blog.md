@@ -8,7 +8,7 @@ cluster: website
 order: 60
 page_type: article
 answer: Value a blog by taking its average yearly profit after real costs, multiplying it by a range of multiples, and adjusting for age, trend, traffic sources, income mix and how much time the owner spends. Traffic and post count matter only through the profit they produce and the risk they carry.
-keywords: how to value a blog, website valuation, site valuation, blog for sale, content website value
+keywords: how to value a blog, site valuation, blog for sale, content website value
 published: 2026-10-18
 updated: 2026-10-18
 publish_at: 2026-10-18T13:00Z

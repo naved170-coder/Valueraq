@@ -8,7 +8,7 @@ h1: EV to EBITDA Multiple
 definition: The EV to EBITDA multiple is a company's enterprise value divided by its EBITDA, and it shows how many years of EBITDA a buyer is paying for the whole business.
 cluster: analysis
 page_type: reference
-keywords: ev to ebitda multiple, ev/ebitda, enterprise value to ebitda multiple, ebitda multiple
+keywords: ev to ebitda multiple, ev/ebitda, enterprise value to ebitda multiple
 publish_at: 2026-11-13T07:00Z
 image: /static/img/articles/ev-to-ebitda-multiple.png
 image_alt: Featured image for the glossary entry What Is the EV to EBITDA Multiple

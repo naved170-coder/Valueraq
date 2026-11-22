@@ -8,7 +8,7 @@ cluster: ecommerce
 order: 60
 page_type: article
 answer: To sell an ecommerce business, prove 12 months of profit across every sales channel, count and value the stock, price the business as yearly profit times a multiple plus sellable stock at cost, list it with factual figures, answer buyer checks with records, agree terms in writing and close through escrow before handing over each account, supplier and domain in a set order.
-keywords: sell ecommerce business, ecommerce business for sale, ecommerce sites for sale, ecommerce website for sale, how to sell an online store
+keywords: sell ecommerce business, ecommerce sites for sale, ecommerce website for sale, how to sell an online store
 published: 2026-11-12
 updated: 2026-11-12
 publish_at: 2026-11-12T01:00Z

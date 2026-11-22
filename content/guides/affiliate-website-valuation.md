@@ -8,7 +8,7 @@ cluster: website
 order: 60
 page_type: article
 answer: To value an affiliate website, take its yearly net profit and multiply it by a multiple. VALUERAQ's default range for websites is 2.5 to 4.0 times profit, and affiliate income takes 3% off the multiple because programs can cut commissions or close. Traffic concentration and the revenue trend then move the result more than the affiliate label does.
-keywords: affiliate website valuation, how to value an affiliate website, website valuation, website worth, affiliate site multiple
+keywords: affiliate website valuation, how to value an affiliate website, affiliate site multiple
 published: 2026-10-24
 updated: 2026-11-05
 publish_at: 2026-10-24T01:00Z
