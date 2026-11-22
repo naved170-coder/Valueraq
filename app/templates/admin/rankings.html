@@ -27,9 +27,9 @@
 {% if a.devices %}<p class="hint">Devices: {% for d in a.devices %}{{ d.key|lower }} {{ d.impressions }} impressions{{ ', ' if not loop.last }}{% endfor %}. Top countries: {% for c in a.countries[:5] %}{{ c.key }} {{ c.impressions }}{{ ', ' if not loop.last }}{% endfor %}.</p>{% endif %}
 
 <h2 id="map" class="mt">Keyword map</h2>
-<p class="hint">Each page's main keyword and what Google does with it over the last 28 days.</p>
-<div class="table-wrap"><table><thead><tr><th>Keyword</th><th>Target page</th><th>Status</th><th class="r">Avg position</th><th class="r">Impressions</th></tr></thead><tbody>
-{% for k in a.kmap %}<tr><td>{{ k.keyword }}</td><td><a href="{{ k.target }}" target="_blank" rel="noopener">{{ k.target }}</a></td><td>{{ k.status }}{% if k.status == 'another page ranks for it' %}<br><span class="muted">{{ k.ranking_page }}</span>{% endif %}</td><td class="r">{{ pos(k.position) }}</td><td class="r">{{ k.impressions }}</td></tr>{% endfor %}
+<p class="hint">Each page's main keyword and what Google does with it over the last 28 days. Monthly searches are Google Keyword Planner ranges (United States); "Pages" is how many of our pages list the keyword.</p>
+<div class="table-wrap"><table><thead><tr><th>Keyword</th><th class="r">Monthly searches</th><th class="r">Avg position</th><th class="r">Pages</th><th>Target page</th><th>Status</th><th class="r">Impressions</th></tr></thead><tbody>
+{% for k in a.kmap %}<tr><td>{{ k.keyword }}</td><td class="r">{{ k.searches or '—' }}</td><td class="r">{{ pos(k.position) }}</td><td class="r">{{ k.pages }}</td><td><a href="{{ k.target }}" target="_blank" rel="noopener">{{ k.target }}</a></td><td>{{ k.status }}{% if k.status == 'another page ranks for it' %}<br><span class="muted">{{ k.ranking_page }}</span>{% endif %}</td><td class="r">{{ k.impressions }}</td></tr>{% endfor %}
 </tbody></table></div>
 
 <h2 id="movers" class="mt">Gains and losses (last 7 days against the 7 before)</h2>

@@ -97,6 +97,25 @@ def bucket(pos):
 
 
 # ---------------------------------------------------------------- keyword map
+_VOLUMES = None
+
+
+def search_volumes():
+    """Monthly searches from the Google Keyword Planner export in seo/keywords.json (Google gives ranges)."""
+    global _VOLUMES
+    if _VOLUMES is None:
+        _VOLUMES = {}
+        try:
+            path = os.path.join(os.path.dirname(current_app.root_path), "seo", "keywords.json")
+            with open(path) as fh:
+                for c in json.load(fh).get("clusters", []):
+                    for k in c.get("keywords", []):
+                        _VOLUMES[k["kw"].lower()] = k.get("searches") or ""
+        except (OSError, ValueError, KeyError):
+            pass
+    return _VOLUMES
+
+
 def keyword_map(cur=None):
     """Each published page's main keyword (first in its `keywords`) against Search Console's view of it."""
     cur = cur if cur is not None else agg(window(28), "query_page")
@@ -105,6 +124,12 @@ def keyword_map(cur=None):
         q, p = k.split("\t", 1)
         by_query.setdefault(q.lower(), []).append((p, v))
     out = []
+    vols = search_volumes()
+    docs = [d for kind in ("guides", "glossary") for d in content.list_docs(kind)]
+    pages_for = {}
+    for d in docs:
+        for k in {k.lower() for k in (d.keywords or [])}:
+            pages_for[k] = pages_for.get(k, 0) + 1
     for kind in ("guides", "glossary"):
         for doc in content.list_docs(kind):
             kws = doc.keywords or []
@@ -119,7 +144,8 @@ def keyword_map(cur=None):
                 imp = sum(r[1]["impressions"] for r in rows)
                 pos = v["position"]
                 status = "ranking on the target page" if ranking == doc.path else "another page ranks for it"
-            out.append(dict(keyword=kws[0], target=doc.path, title=doc.title, status=status, position=pos,
+            out.append(dict(keyword=kws[0], searches=vols.get(kw, ""), pages=pages_for.get(kw, 1),
+                            target=doc.path, title=doc.title, status=status, position=pos,
                             group=bucket(pos), impressions=imp, ranking_page=ranking, secondary=", ".join(kws[1:4])))
     out.sort(key=lambda r: (r["position"] is None, r["position"] or 0))
     return out
@@ -505,10 +531,11 @@ def export_xlsx():
         for g, n in a["groups"].items():
             dash.append((f"Searches at average position {g}", n))
         sheet("SEO Dashboard", ["Measure", "Value"], dash, first=True)
-        sheet("Keyword Map", ["Keyword", "Target page", "Status", "Avg position (28d)", "Group", "Impressions (28d)",
+        sheet("Keyword Map", ["Keyword", "Monthly searches (Google Keyword Planner, US)", "Avg Google position (28d)",
+                              "Pages targeting it", "Target page", "Status", "Group", "Impressions (28d)",
                               "Page Google shows", "Secondary keywords"],
-              [(k["keyword"], k["target"], k["status"], k["position"], k["group"], k["impressions"], k["ranking_page"],
-                k["secondary"]) for k in a["kmap"]])
+              [(k["keyword"], k["searches"] or "not in Planner export", k["position"], k["pages"], k["target"],
+                k["status"], k["group"], k["impressions"], k["ranking_page"], k["secondary"]) for k in a["kmap"]])
         sheet("Movers", ["Search", "Avg position before (7d)", "Avg position now (7d)", "Change", "Impressions (7d)"],
               [(m["query"], m["before"], m["after"], m["change"], m["impressions"]) for m in a["gains"] + a["losses"]])
         sheet("Opportunities", ["Type", "Search", "Impressions (28d)", "Clicks", "CTR %", "Avg position"],
