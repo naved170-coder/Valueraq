@@ -1,0 +1,36 @@
+{
+ "page": "guides/asset-acquisition-checklist",
+ "query": "asset acquisition checklist",
+ "results": [
+  "thomsonreuters asset acquisition checklist",
+  "lexisnexis APA checklist",
+  "dealroom.net asset purchase checklist",
+  "process.st template",
+  "sprintlaw.co.uk"
+ ],
+ "studied": [
+  {
+   "url": "dealroom.net/resources/templates/asset-purchase-due-diligence-checklist",
+   "words": 250,
+   "has": [
+    "asset-level review",
+    "liability segmentation"
+   ],
+   "missing": "checklist behind a download form; no digital assets (domains, code, accounts, data)"
+  }
+ ],
+ "gaps": [
+  "Full visible checklist grouped by asset type, including digital assets: domain, website code, content, social and ad accounts, email list (with consent), supplier accounts, trademarks",
+  "What stays with the seller in an asset sale (liabilities, debts)",
+  "Transfer order and escrow steps",
+  "FAQs; not legal advice note"
+ ],
+ "titles": [
+  "Asset Acquisition Checklist",
+  "Asset Purchase Due Diligence Checklist",
+  "Asset Purchase Agreement Checklist"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,39 @@
+{
+ "page": "guides/how-to-document-your-business-before-selling",
+ "query": "document business processes before sale",
+ "results": [
+  "bizbuysell.com SOPs in business sales",
+  "bizbuysell.com operations manual",
+  "exit-planning-institute.org SOPs",
+  "vikingmergers.com documenting SOPs",
+  "quietlight.com"
+ ],
+ "studied": [
+  {
+   "url": "bizbuysell.com/learning-center/article/sop-in-business-sales/",
+   "words": 1000,
+   "has": [
+    "why SOPs matter",
+    "areas to document",
+    "format tips (plain language, screen recordings)",
+    "FAQs"
+   ],
+   "missing": "no templates or worked example; nothing online-specific (accounts list, tool stack, content calendar, ad accounts, supplier logins)"
+  }
+ ],
+ "gaps": [
+  "Online-business SOP list: publishing workflow, customer support macros, ad management, order fulfilment, refunds, monthly bookkeeping",
+  "A one-page SOP template example",
+  "Accounts and tools register (what, who owns it, how it transfers; never passwords in the doc)",
+  "How documentation lowers owner-dependence and affects the multiple",
+  "FAQs"
+ ],
+ "titles": [
+  "The Power of Standard Operating Procedures",
+  "SOPs: the backbone of a sellable business",
+  "Documenting SOPs for a business sale"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

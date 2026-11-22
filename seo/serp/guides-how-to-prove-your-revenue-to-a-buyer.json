@@ -1,0 +1,40 @@
+{
+ "page": "guides/how-to-prove-your-revenue-to-a-buyer",
+ "query": "proof of revenue website",
+ "results": [
+  "feinternational.com tracking finances",
+  "feinternational.com preparing site for sale",
+  "flippa.com due diligence checklist",
+  "flippa.com how to sell a website",
+  "bluehost.com sell your website"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/tracking-finances-and-preparing-online-business-accounts",
+   "words": 1300,
+   "has": [
+    "12 months P&L by month",
+    "bank, merchant, affiliate statements, invoices",
+    "accrual vs cash by model table",
+    "SDE add-back table",
+    "FAQs"
+   ],
+   "missing": "no step-by-step on giving read-only access, no screen-share verification, no matching revenue to bank deposits example"
+  }
+ ],
+ "gaps": [
+  "Proof by revenue type table: Stripe/PayPal, Shopify, Amazon, AdSense/ad networks, affiliate dashboards, app stores",
+  "How to give buyers read-only or view access safely (and what never to share: passwords)",
+  "Worked reconciliation: dashboard revenue vs bank deposits vs P&L, with fees and refunds",
+  "Why screenshots are not enough; live screen-share",
+  "FAQs"
+ ],
+ "titles": [
+  "Tracking Finances and Preparing Online Business Accounts",
+  "Preparing Your Site for Sale",
+  "Due Diligence Checklist"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

@@ -1,0 +1,40 @@
+{
+ "page": "guides/how-to-value-a-marketing-agency",
+ "query": "marketing agency valuation calculator",
+ "results": [
+  "parakeeto.com calculator",
+  "feinternational.com agency multiples",
+  "productive.io agency valuation",
+  "empireflippers.com value a marketing agency",
+  "axial.net multiples"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/agency-valuation-multiples-in-2026-marketing-creative-and-dev-shop-benchmarks",
+   "words": 2500,
+   "has": [
+    "EBITDA x multiple; SDE under ~$500k",
+    "size-band table",
+    "value-driver table (retainers >60%, client <15%)",
+    "worked example $875k adj. EBITDA x 3.75",
+    "earn-out structures",
+    "FAQs"
+   ],
+   "missing": "aimed at larger agencies; little for a 2-10 person agency; numbers not reusable unless added to sources.json"
+  }
+ ],
+ "gaps": [
+  "Small-agency focus (owner-run, under $500k profit): SDE method worked example",
+  "Value-driver checklist table with how each moves the value (only figures from sources.json; otherwise describe direction)",
+  "Retainer vs project revenue: how to show it",
+  "Link to the business multiple calculator; FAQs"
+ ],
+ "titles": [
+  "Agency Valuation Multiples: Marketing, Creative and Dev Shop Benchmarks",
+  "Marketing Agency Valuation Calculator",
+  "How to Value a Marketing Agency"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

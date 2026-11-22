@@ -1,0 +1,36 @@
+{
+ "page": "guides/acquiring-a-business-checklist",
+ "query": "acquiring a business checklist",
+ "results": [
+  "startupnation.com checklist",
+  "xero.com buying a business",
+  "okstate.edu questions",
+  "findlaw.com",
+  "bdc.ca steps"
+ ],
+ "studied": [
+  {
+   "url": "startupnation.com essential checklist for acquiring a new business",
+   "words": 900,
+   "has": [
+    "6 steps: assessment, financial, legal, competitors, fit, decision"
+   ],
+   "missing": "physical-business focus; nothing for online businesses; no document list, no table, no timeline"
+  }
+ ],
+ "gaps": [
+  "Phase-by-phase checklist table (before offer, after LOI, before closing, after closing)",
+  "Online-specific checks: traffic sources, platform accounts, payment processor data, domain and code ownership",
+  "Red flags with what to ask for",
+  "Timeline and who does what (buyer, seller, escrow)",
+  "FAQs"
+ ],
+ "titles": [
+  "Essential Checklist for Acquiring a New Business",
+  "Buying a Business: A Due Diligence Checklist",
+  "What are the steps to buying a business?"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

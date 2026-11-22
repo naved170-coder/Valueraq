@@ -1,0 +1,38 @@
+{
+ "page": "guides/how-to-calculate-customer-lifetime-value",
+ "query": "how to calculate customer lifetime value",
+ "results": [
+  "hubspot.com CLV",
+  "zendesk.co.uk",
+  "wikipedia",
+  "qualtrics.com",
+  "shopify.com"
+ ],
+ "studied": [
+  {
+   "url": "blog.hubspot.com/service/how-to-calculate-customer-lifetime-value",
+   "words": 4500,
+   "has": [
+    "formulas",
+    "coffee shop worked example $4,214.70",
+    "tips to increase CLV"
+   ],
+   "missing": "no ecommerce vs subscription split, no margin-based CLV, no FAQ, no link to valuation"
+  }
+ ],
+ "gaps": [
+  "Two formulas side by side: ecommerce (order value x orders x margin) and subscription (ARPU x margin / churn)",
+  "Worked examples for a store and a SaaS",
+  "Why buyers use margin-based LTV and LTV:CAC when valuing",
+  "Common mistakes (revenue not profit, ignoring churn)",
+  "FAQs"
+ ],
+ "titles": [
+  "How to calculate customer lifetime value (CLV)",
+  "How to calculate customer lifetime value",
+  "Customer lifetime value"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

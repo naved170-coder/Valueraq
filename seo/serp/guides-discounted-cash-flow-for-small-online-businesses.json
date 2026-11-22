@@ -1,0 +1,37 @@
+{
+ "page": "guides/discounted-cash-flow-for-small-online-businesses",
+ "query": "business valuation discounted cash flow calculator",
+ "results": [
+  "chase.com DCF",
+  "businessinitiative.org DCF calculator",
+  "projectionhub.com",
+  "bizbuysell.com what is DCF",
+  "omnicalculator.com dcf"
+ ],
+ "studied": [
+  {
+   "url": "bizbuysell.com/learning-center/article/what-is-dcf/",
+   "words": 950,
+   "has": [
+    "3-year worked example at 10%",
+    "terminal value with 2% growth"
+   ],
+   "missing": "adds terminal value without discounting it (overstates value); no small-business discount-rate guidance; no FAQ; no calculator"
+  }
+ ],
+ "gaps": [
+  "Worked DCF done correctly (discount the terminal value) with a table, using small online-business numbers",
+  "Discount-rate guidance by risk (describe ranges only from sources.json or as assumptions clearly labelled)",
+  "Sensitivity table: value at different discount and growth rates",
+  "Why buyers of small sites usually use multiples, and how DCF cross-checks them",
+  "FAQs"
+ ],
+ "titles": [
+  "What Is Discounted Cash Flow?",
+  "DCF Calculator",
+  "Discounted Cash Flow Valuation"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

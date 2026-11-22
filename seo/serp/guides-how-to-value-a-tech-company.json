@@ -1,0 +1,38 @@
+{
+ "page": "guides/how-to-value-a-tech-company",
+ "query": "tech company valuation calculator",
+ "results": [
+  "hubspot.com startup valuation",
+  "svb.com",
+  "solganick.com software valuation calculator",
+  "etonvs.com how to value a tech company",
+  "eqvista.com calculator"
+ ],
+ "studied": [
+  {
+   "url": "etonvs.com/valuation/how-to-value-a-tech-company/",
+   "words": 2800,
+   "has": [
+    "GPC, transactions, DCF, VC methods",
+    "worked $10M revenue examples",
+    "factors list",
+    "3 FAQs"
+   ],
+   "missing": "mid-size/VC framing; nothing for small software or IT businesses sold to individuals; no profit-multiple path"
+  }
+ ],
+ "gaps": [
+  "Split by type: SaaS (ARR multiple), IT services/agency (profit multiple), product/app (profit multiple)",
+  "Worked small example with real arithmetic for each",
+  "What lowers the multiple: owner-dependence, one big client, tech debt",
+  "Links to SaaS and business multiple tools; FAQs"
+ ],
+ "titles": [
+  "Tech Company Valuation: How to Value a Technology Company",
+  "What is my software or IT services company worth?",
+  "10 Methods To Calculate Your Startup's Valuation"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

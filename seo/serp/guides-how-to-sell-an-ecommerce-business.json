@@ -1,0 +1,39 @@
+{
+ "page": "guides/how-to-sell-an-ecommerce-business",
+ "query": "sell ecommerce business",
+ "results": [
+  "feinternational.com",
+  "businessesforsale.com",
+  "quicksprout.com",
+  "flippa.com",
+  "quietlight.com"
+ ],
+ "studied": [
+  {
+   "url": "feinternational.com/blog/how-to-sell-ecommerce-business",
+   "words": 3000,
+   "has": [
+    "selling options and financing options",
+    "advisor fee up to 15%, marketplace success fees 10-15%",
+    "earn-outs ~12 months",
+    "FAQs"
+   ],
+   "missing": "no multiples, no worked net-proceeds example, no stock/inventory handling, no table"
+  }
+ ],
+ "gaps": [
+  "Worked net proceeds: price at a profit multiple, minus fee models, plus stock paid at cost",
+  "Inventory and supplier transfer steps (stock count, purchase orders in transit)",
+  "Channel-risk table (Amazon vs Shopify vs wholesale) and how buyers price it",
+  "Timeline table from prep to handover",
+  "FAQs on earn-outs and seller financing"
+ ],
+ "titles": [
+  "How to Sell an E-commerce Business",
+  "How to Sell an Ecommerce Business: The Real Playbook",
+  "The Ultimate Guide on How to Sell Your Ecommerce Business"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

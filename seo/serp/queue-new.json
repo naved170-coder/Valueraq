@@ -147,12 +147,6 @@
   "collected": "2026-11-05"
  },
  {
-  "slug": "earn-out",
-  "kind": "glossary",
-  "query": "earn out",
-  "day": 38
- },
- {
   "slug": "how-to-find-the-book-value-of-a-company",
   "kind": "guides",
   "query": "how to find the book value of a company",
@@ -160,23 +154,11 @@
   "collected": "2026-11-05"
  },
  {
-  "slug": "customer-acquisition-cost",
-  "kind": "glossary",
-  "query": "customer acquisition cost",
-  "day": 39
- },
- {
   "slug": "how-to-buy-an-app",
   "kind": "guides",
   "query": "mobile apps for sale",
   "day": 39,
   "collected": "2026-11-05"
- },
- {
-  "slug": "lifetime-value",
-  "kind": "glossary",
-  "query": "customer lifetime value",
-  "day": 39
  },
  {
   "slug": "how-to-buy-a-domain-name",
@@ -196,7 +178,8 @@
   "slug": "subscription-business-model",
   "kind": "glossary",
   "query": "subscription business model",
-  "day": 34
+  "day": 34,
+  "collected": "2026-11-23"
  },
  {
   "slug": "ltv-to-cac-ratio",
@@ -220,7 +203,8 @@
   "slug": "how-to-sell-an-ecommerce-business",
   "kind": "guides",
   "query": "sell ecommerce business",
-  "day": 41
+  "day": 41,
+  "collected": "2026-11-23"
  },
  {
   "slug": "normalized-earnings",
@@ -244,7 +228,8 @@
   "slug": "how-to-prove-your-revenue-to-a-buyer",
   "kind": "guides",
   "query": "proof of revenue website",
-  "day": 42
+  "day": 42,
+  "collected": "2026-11-23"
  },
  {
   "slug": "app-store-optimization",
@@ -266,7 +251,8 @@
   "slug": "how-to-document-your-business-before-selling",
   "kind": "guides",
   "query": "document business processes before sale",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "net-revenue",
@@ -290,7 +276,8 @@
   "slug": "how-to-explain-a-revenue-drop-to-a-buyer",
   "kind": "guides",
   "query": "explain revenue drop to buyer",
-  "day": 44
+  "day": 44,
+  "collected": "2026-11-23"
  },
  {
   "slug": "free-cash-flow-to-firm",
@@ -314,7 +301,8 @@
   "slug": "acquiring-a-business-checklist",
   "kind": "guides",
   "query": "acquiring a business checklist",
-  "day": 51
+  "day": 51,
+  "collected": "2026-11-23"
  },
  {
   "slug": "net-present-value",
@@ -338,7 +326,8 @@
   "slug": "how-to-value-a-marketing-agency",
   "kind": "guides",
   "query": "marketing agency valuation calculator",
-  "day": 46
+  "day": 46,
+  "collected": "2026-11-23"
  },
  {
   "slug": "depreciation",
@@ -362,7 +351,8 @@
   "slug": "discounted-cash-flow-for-small-online-businesses",
   "kind": "guides",
   "query": "business valuation discounted cash flow calculator",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "goodwill-impairment",
@@ -386,7 +376,8 @@
   "slug": "how-to-sell-your-online-business-without-a-broker",
   "kind": "guides",
   "query": "sell my company online",
-  "day": 48
+  "day": 48,
+  "collected": "2026-11-23"
  },
  {
   "slug": "accrual-basis-accounting",
@@ -409,7 +400,8 @@
  {
   "slug": "how-to-value-a-tech-company",
   "kind": "guides",
-  "query": "tech company valuation calculator"
+  "query": "tech company valuation calculator",
+  "collected": "2026-11-23"
  },
  {
   "slug": "quick-ratio",
@@ -430,7 +422,8 @@
   "slug": "asset-acquisition-checklist",
   "kind": "guides",
   "query": "asset acquisition checklist",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "liquidation-value",
@@ -454,7 +447,8 @@
   "slug": "how-to-calculate-customer-lifetime-value",
   "kind": "guides",
   "query": "how to calculate customer lifetime value",
-  "day": 52
+  "day": 52,
+  "collected": "2026-11-23"
  },
  {
   "slug": "accrued-expenses",
@@ -478,7 +472,8 @@
   "slug": "what-is-a-good-conversion-rate-for-an-online-store",
   "kind": "guides",
   "query": "good ecommerce conversion rate",
-  "day": null
+  "day": null,
+  "collected": "2026-11-23"
  },
  {
   "slug": "gross-margin-vs-net-margin",

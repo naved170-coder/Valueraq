@@ -1,0 +1,41 @@
+{
+ "page": "guides/how-to-sell-your-online-business-without-a-broker",
+ "query": "sell my company online",
+ "results": [
+  "flippa.com sell without a broker",
+  "empireflippers.com sell without broker",
+  "tiny.com direct sale",
+  "bizbuysell.com",
+  "exitbid.io"
+ ],
+ "studied": [
+  {
+   "url": "empireflippers.com/sell-online-business-without-broker/",
+   "words": 3800,
+   "has": [
+    "8 steps",
+    "where to list",
+    "risks: payment fraud, copycats, leaks",
+    "fee bands",
+    "130-day average",
+    "10 FAQs"
+   ],
+   "missing": "broker-written; no worked comparison of net proceeds direct vs broker; light on escrow mechanics"
+  }
+ ],
+ "gaps": [
+  "Worked net-proceeds comparison: direct sale vs marketplace vs broker on the same price",
+  "Scam and payment-fraud checklist with escrow steps",
+  "NDA and confidentiality steps",
+  "When a broker is worth it (decision table)",
+  "FAQs"
+ ],
+ "titles": [
+  "How to Sell a Business Online Without a Broker",
+  "How to Sell a Small Business Without a Broker",
+  "Direct sale guide"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

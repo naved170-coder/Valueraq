@@ -1,0 +1,39 @@
+{
+ "page": "guides/how-to-explain-a-revenue-drop-to-a-buyer",
+ "query": "explain revenue drop to buyer",
+ "results": [
+  "certifiedbb.com declining revenue",
+  "bizbuysell.com difficult to sell",
+  "quietlight.com selling a declining business",
+  "practicalecommerce.com",
+  "ctacquisitions.com"
+ ],
+ "studied": [
+  {
+   "url": "quietlight.com/how-to-sell-a-declining-business-6-tips-for-business-owners/",
+   "words": 2200,
+   "has": [
+    "SDE x multiple",
+    "explain cause upfront with a fix plan",
+    "wait 12-24 months example ($75k to $450k)",
+    "seller financing / earn-out note"
+   ],
+   "missing": "no script for explaining specific causes (Google update, ad costs, stock-outs, seasonality); no worked effect on price; no data to show"
+  }
+ ],
+ "gaps": [
+  "Cause-by-cause table: Google update, ad cost rise, stock-out, lost big customer, seasonality, owner time: what evidence to show and how buyers price it",
+  "Worked example: how a 20% drop changes trailing-12-month profit and price, and how an earn-out bridges the gap",
+  "Short written explanation template for the listing",
+  "Mistakes that kill trust",
+  "FAQs"
+ ],
+ "titles": [
+  "How to Sell a Declining Business: 6 Tips",
+  "Overcoming Declining Revenue Trends When Selling a Business",
+  "How to Value a Business With Declining Revenue"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}

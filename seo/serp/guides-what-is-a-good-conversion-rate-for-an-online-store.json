@@ -1,0 +1,38 @@
+{
+ "page": "guides/what-is-a-good-conversion-rate-for-an-online-store",
+ "query": "good ecommerce conversion rate",
+ "results": [
+  "shopify.com calculate conversion rate",
+  "oberlo.com average conversion rate",
+  "practicalecommerce.com",
+  "shopify.com ecommerce conversion rate",
+  "triplewhale.com"
+ ],
+ "studied": [
+  {
+   "url": "shopify.com/blog/ecommerce-conversion-rate",
+   "words": 3000,
+   "has": [
+    "benchmarks with sources (Statista, Dynamic Yield, Contentsquare, Baymard)",
+    "industry and device tables",
+    "5 FAQs"
+   ],
+   "missing": "FAQ figures contradict its table; nothing on how conversion rate affects a store's sale price"
+  }
+ ],
+ "gaps": [
+  "Explain how buyers read conversion rate when valuing a store (trend, by channel, vs ad spend)",
+  "Worked example: conversion change -> revenue -> profit -> value at a multiple",
+  "Benchmarks only from sources.json (or quote Shopify's with attribution if added)",
+  "How to calculate it correctly (orders / sessions)",
+  "FAQs"
+ ],
+ "titles": [
+  "Ecommerce Conversion Rate: Benchmarks & Tips",
+  "What's a Good Conversion Rate for Ecommerce?",
+  "Average Ecommerce Conversion Rate"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+}
