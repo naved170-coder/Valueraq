@@ -1,7 +1,7 @@
 ---
 title: How Do You Transfer a Website to a New Owner?
-meta_title: How to Transfer a Website to a New Owner (Checklist)
-meta_description: Transfer a website step by step: domain, hosting, content, accounts and email, in the right order so nothing breaks. Handover checklist.
+meta_title: Transfer a Website to a New Owner: Checklist & Table
+meta_description: Transfer a website step by step: domain, hosting, accounts, email, in the right order. Includes a handover checklist and a table by site type.
 h1: How Do You Transfer a Website to a New Owner?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: To transfer a website to a new owner, list every asset in the agreement, pay through escrow, then move the assets in a set order: add the buyer to the hosting and code or content accounts, transfer the domain, hand over analytics, email and revenue accounts, share documentation, and release the money only after the buyer confirms each item works.
 keywords: transfer website ownership, how to transfer a website, website transfer checklist, transfer a domain to a new owner
 published: 2026-10-11
-updated: 2026-10-11
+updated: 2026-11-22
 publish_at: 2026-10-11T13:00Z
 image: /static/img/articles/how-to-transfer-a-website-to-a-new-owner.png
 image_alt: How Do You Transfer a Website to a New Owner? (VALUERAQ quick answer)
@@ -54,6 +54,18 @@ Check each platform's rules. Some ad and affiliate programs do not allow account
 
 A worked check: if the agreed price is $60,000 and the buyer has paid it into escrow, the seller should not transfer the domain until the provider confirms the full $60,000 is held. {{BRAND}} is not a broker or an escrow service and does not handle the purchase price.
 
+## What moves on common setups
+
+Menu names change, so check the platform's current help page before you start.
+
+| Site built with | What moves | Ask the seller |
+|---|---|---|
+| Self-hosted WordPress or custom code | Files and database, restored on the buyer's hosting | A full backup and who holds each plugin licence |
+| Hosted builder (such as Squarespace or Wix) | The account, through the platform's own process | Whether plan and extras are tied to the seller's login |
+| Hosted store (such as Shopify) | The store and its apps | Which apps are paid for, and whether billing moves |
+
+The domain is a separate asset held at a registrar. Confirm who has that login first.
+
 ## Frequently asked questions
 
 ### Should I transfer the domain first?
@@ -67,6 +79,10 @@ Copy the site to its new hosting and test it before changing the domain's settin
 ### Do I need a lawyer?
 
 A written purchase agreement should list every asset, and structure affects tax and liability. Take professional advice before you sign.
+
+### How long does a website transfer take?
+
+The files and accounts can often move within a day or two. The domain is usually the slowest step, so start it early.
 
 ### Where do I list a website for sale?
 

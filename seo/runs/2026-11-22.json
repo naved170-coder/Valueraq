@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (good ecommerce conversion rate) and 3 glossary pages (gross margin vs net margin, operating leverage, minority interest); nothing held.",
+  "summary": "Wrote 1 article (good ecommerce conversion rate) and 3 glossary pages (gross margin vs net margin, operating leverage, minority interest); nothing held. Also improved 4 existing pages (website transfer, app transfer, escrow, exclusivity period).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -54,6 +54,38 @@
       ],
       "serp": "missing",
       "note": "Release 23 Nov 6 pm Pakistan."
+    },
+    {
+      "path": "/guides/how-to-transfer-a-website-to-a-new-owner/",
+      "action": "improve",
+      "type": "Guide",
+      "score": 8.6,
+      "keywords": [],
+      "note": "Added a table by site type (self-hosted, builder, hosted store) and a clearer meta title and description; new FAQ on transfer time."
+    },
+    {
+      "path": "/guides/how-to-transfer-an-app-to-a-new-owner/",
+      "action": "improve",
+      "type": "Guide",
+      "score": 8.6,
+      "keywords": [],
+      "note": "Added a pre-transfer checklist and a what-does-not-transfer table from Apple and Google sources; new meta title."
+    },
+    {
+      "path": "/glossary/escrow/",
+      "action": "improve",
+      "type": "Glossary",
+      "score": 8.6,
+      "keywords": [],
+      "note": "Added online-business escrow section, fake-escrow warning and 3 FAQs; new meta title."
+    },
+    {
+      "path": "/glossary/exclusivity-period/",
+      "action": "improve",
+      "type": "Glossary",
+      "score": 8.6,
+      "keywords": [],
+      "note": "Added a 30-day timeline table and 3 FAQs; new meta title."
     }
   ],
   "tasks": [
@@ -66,7 +98,8 @@
     "gates",
     "scheduled",
     "link_check",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 132 passed",
@@ -79,6 +112,7 @@
     "WebSearch/WebFetch not used; sources come from seo/sources.json (SBA) and the methodology. The four new pages have no saved competitor research and were added to seo/serp/queue-new.json.",
     "Render ranking logs not read this run; keywords come from the calendar.",
     "Conversion rate article is calendar day 53; operating leverage, gross margin vs net margin and minority interest are days 62-63.",
-    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page; newsletter and marketplace articles (days 54-55) left for later runs."
+    "Skipped (held or no verified source): cost-to-sell (fees), UK/Gulf/Flippa pages and the tax page; newsletter and marketplace articles (days 54-55) left for later runs.",
+    "Improve step used saved research in seo/serp/; no competitor figures or names were used. Apple/Google facts come from seo/sources.json."
   ]
 }

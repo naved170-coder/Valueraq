@@ -12,6 +12,7 @@
   "Pre-transfer checklist (developer accounts, signing keys, backend, analytics, subscriptions) and FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-22",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added a pre-transfer checklist and a what-does-not-transfer table from Apple and Google sources; new meta title."
 }

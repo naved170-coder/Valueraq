@@ -2,13 +2,13 @@
 title: What Is Escrow?
 term: Escrow
 aliases: escrow, escrow service, escrow account
-meta_title: What Is Escrow? Definition & Role in a Business Sale
-meta_description: Escrow is a neutral third party holding the buyer's payment until the sale terms are met. Learn how it works when buying or selling an online business.
+meta_title: What Is Escrow? Online Business Example & Scam Warning
+meta_description: Escrow is a neutral third party holding the buyer's payment until the sale terms are met. See a $80,000 website example, steps and a fake-escrow warning.
 h1: Escrow
 definition: Escrow is an arrangement in which a neutral third party holds the buyer's payment and releases it to the seller only once the conditions agreed by both sides have been met.
 cluster: buying
 related: /glossary/asset-sale/, /glossary/due-diligence/, /glossary/letter-of-intent/, /guides/buying-digital-businesses/, /verification/
-updated: 2026-10-02
+updated: 2026-11-22
 ---
 
 ## How it works
@@ -33,6 +33,19 @@ A buyer agrees to pay $80,000 for a content website, with a seven-day inspection
 
 Sometimes part of the price stays in escrow for longer, for example for a few months after closing. This is called a holdback. It gives the buyer a source of recovery if a statement the seller made turns out to be untrue. It differs from an [earnout](/glossary/earnout/), which depends on future performance.
 
+## Escrow for websites, apps and domains
+
+Searching "escrow" often returns mortgage and home-purchase results. Those deals work on the same idea but are run by different providers under different rules. For an online business, the escrow provider holds the purchase price while the seller moves the domain, hosting, code and accounts. Large payments are often sent by wire transfer, so confirm with the provider how and when funds are shown as held.
+
+### Fake escrow warning
+
+A common scam is a fake escrow site. A buyer is told to pay into it, the site disappears, and the seller never existed or never receives anything. Protect yourself:
+
+- Choose the provider yourself. Do not use a site the other party insists on.
+- Find the provider's contact details independently, not from a link the other party sends.
+- Do not pay until the provider confirms in writing that the account is open and the terms match your agreement.
+- Be wary of pressure to hurry or to pay outside the escrow account.
+
 ## Why escrow matters when buying or selling
 
 - It protects both sides from the most common fraud in online sales: paying and receiving nothing, or transferring and not being paid.
@@ -40,6 +53,20 @@ Sometimes part of the price stays in escrow for longer, for example for a few mo
 - It does not replace [due diligence](/glossary/due-diligence/). Escrow confirms that assets were delivered, not that the revenue claims were true.
 
 Check who the provider is, whether it is licensed where it operates, what it charges and who pays. Beware of escrow sites suggested by a counterparty that you cannot verify independently.
+
+## Frequently asked questions
+
+### Who pays the escrow fee?
+
+The two sides agree this in the deal, and the provider's terms set the amount. Settle it in writing before any money moves.
+
+### How long do funds stay in escrow?
+
+Until the inspection period ends and the buyer accepts, or until a dispute is resolved. Many small deals use a few days to a couple of weeks; the length is whatever the sale agreement says.
+
+### Does escrow check that the revenue is real?
+
+No. Escrow confirms delivery of the assets under the agreement. Check revenue and traffic yourself through [due diligence](/glossary/due-diligence/).
 
 ## Take advice
 
