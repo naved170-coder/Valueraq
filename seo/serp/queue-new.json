@@ -185,19 +185,22 @@
   "slug": "ltv-to-cac-ratio",
   "kind": "glossary",
   "query": "ltv to cac ratio",
-  "day": 41
+  "day": 41,
+  "collected": "2026-11-23"
  },
  {
   "slug": "break-even-point",
   "kind": "glossary",
   "query": "break even point",
-  "day": 43
+  "day": 43,
+  "collected": "2026-11-23"
  },
  {
   "slug": "balance-sheet",
   "kind": "glossary",
   "query": "balance sheet",
-  "day": 44
+  "day": 44,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-sell-an-ecommerce-business",
@@ -210,19 +213,22 @@
   "slug": "normalized-earnings",
   "kind": "glossary",
   "query": "normalized earnings",
-  "day": 46
+  "day": 46,
+  "collected": "2026-11-23"
  },
  {
   "slug": "recurring-revenue-multiple",
   "kind": "glossary",
   "query": "recurring revenue multiple",
-  "day": 49
+  "day": 49,
+  "collected": "2026-11-23"
  },
  {
   "slug": "purchase-price-allocation",
   "kind": "glossary",
   "query": "purchase price allocation",
-  "day": 45
+  "day": 45,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-prove-your-revenue-to-a-buyer",
@@ -235,17 +241,20 @@
   "slug": "app-store-optimization",
   "kind": "glossary",
   "query": "app store optimization",
-  "day": 47
+  "day": 47,
+  "collected": "2026-11-23"
  },
  {
   "slug": "ev-to-ebitda-multiple",
   "kind": "glossary",
-  "query": "enterprise value to ebitda multiple"
+  "query": "enterprise value to ebitda multiple",
+  "collected": "2026-11-23"
  },
  {
   "slug": "ebitda-margin",
   "kind": "glossary",
-  "query": "ebitda margin"
+  "query": "ebitda margin",
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-document-your-business-before-selling",
@@ -258,19 +267,22 @@
   "slug": "net-revenue",
   "kind": "glossary",
   "query": "net revenue",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "deferred-revenue",
   "kind": "glossary",
   "query": "deferred revenue",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "operating-margin",
   "kind": "glossary",
   "query": "operating margin",
-  "day": 0
+  "day": 0,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-explain-a-revenue-drop-to-a-buyer",
@@ -283,19 +295,22 @@
   "slug": "free-cash-flow-to-firm",
   "kind": "glossary",
   "query": "free cash flow to firm",
-  "day": 50
+  "day": 50,
+  "collected": "2026-11-23"
  },
  {
   "slug": "discount-rate",
   "kind": "glossary",
   "query": "discount rate",
-  "day": 50
+  "day": 50,
+  "collected": "2026-11-23"
  },
  {
   "slug": "asset-based-valuation",
   "kind": "glossary",
   "query": "asset based valuation",
-  "day": 50
+  "day": 50,
+  "collected": "2026-11-23"
  },
  {
   "slug": "acquiring-a-business-checklist",
@@ -308,19 +323,22 @@
   "slug": "net-present-value",
   "kind": "glossary",
   "query": "net present value",
-  "day": 51
+  "day": 51,
+  "collected": "2026-11-23"
  },
  {
   "slug": "terminal-value",
   "kind": "glossary",
   "query": "terminal value",
-  "day": 51
+  "day": 51,
+  "collected": "2026-11-23"
  },
  {
   "slug": "weighted-average-cost-of-capital",
   "kind": "glossary",
   "query": "weighted average cost of capital",
-  "day": 52
+  "day": 52,
+  "collected": "2026-11-23"
  },
  {
   "slug": "how-to-value-a-marketing-agency",
@@ -333,13 +351,15 @@
   "slug": "depreciation",
   "kind": "glossary",
   "query": "depreciation meaning",
-  "day": 52
+  "day": 52,
+  "collected": "2026-11-23"
  },
  {
   "slug": "amortization",
   "kind": "glossary",
   "query": "amortization meaning",
-  "day": 52
+  "day": 52,
+  "collected": "2026-11-23"
  },
  {
   "slug": "accounts-receivable",
