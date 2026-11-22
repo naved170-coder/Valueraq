@@ -497,7 +497,40 @@ def close_db(_exc=None):
         conn.close()
 
 
+def build_schema(path):
+    """An empty database with the current tables (used by the self-repair)."""
+    conn = sqlite3.connect(path)
+    conn.executescript(SCHEMA)
+    _migrate(conn)
+    conn.commit()
+    conn.close()
+
+
 def init_db(app):
+    from . import dbrepair
+    path = app.config["DATABASE_PATH"]
+
+    def last_backup():
+        with app.app_context():
+            from . import backup
+            if not backup.configured():
+                return None
+            store = backup.client()
+            keys = sorted(k for k, _, _ in store.list(backup.PREFIX) if k.endswith(".db.gz"))
+            for key in reversed(keys):          # newest first; skip any that don't pass
+                tmp = path + ".lastbackup"
+                with open(tmp, "wb") as fh:
+                    fh.write(backup.fetch(key, store))
+                c = sqlite3.connect(tmp)
+                ok = c.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+                c.close()
+                if ok:
+                    return tmp
+            return None
+
+    result = dbrepair.repair_if_needed(path, build_schema, last_backup)
+    if result:
+        app.config["DB_REPAIR_RESULT"] = result
     with app.app_context():
         db = get_db()
         db.executescript(SCHEMA)

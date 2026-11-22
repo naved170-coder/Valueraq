@@ -2116,6 +2116,33 @@ class BotProtection(Base):
         self.assertIn(("users", "email_verified_at"), BACKFILL)
 
 
+class DatabaseSelfRepair(unittest.TestCase):
+    def test_damaged_file_is_rebuilt_and_lost_rows_come_back_from_backup(self):
+        import sqlite3, tempfile
+        from app import db as appdb, dbrepair
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "live.db")
+        appdb.build_schema(path)
+        c = sqlite3.connect(path)
+        for i in range(3000):
+            c.execute("INSERT INTO users(email,password_hash,role,created_at) VALUES (?,?,?,?)",
+                      (f"u{i}@x.com", "h" * 80, "user", i))
+        c.commit()
+        c.execute(f"VACUUM INTO '{d}/backup.db'")
+        c.close()
+        self.assertIsNone(dbrepair.repair_if_needed(path, appdb.build_schema, None))   # healthy: untouched
+        size = os.path.getsize(path)
+        with open(path, "r+b") as f:
+            f.seek(size // 2 - (size // 2) % 4096 + 20)
+            f.write(b"\xff" * 3000)
+        r = dbrepair.repair_if_needed(path, appdb.build_schema, lambda: d + "/backup.db")
+        self.assertTrue(r["swapped"])
+        self.assertTrue(os.path.exists(os.path.join(r["kept_copy"], "live.db")))
+        c = sqlite3.connect(path)
+        self.assertEqual(c.execute("PRAGMA integrity_check").fetchone()[0], "ok")
+        self.assertEqual(c.execute("SELECT COUNT(*) FROM users").fetchone()[0], 3000)
+
+
 class StaticAssets(Base):
     def test_referenced_assets_exist(self):
         for p in ("/static/css/site.css", "/static/js/v.js", "/static/js/calc.js", "/static/brand/favicon.svg",
