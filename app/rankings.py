@@ -242,6 +242,7 @@ def analysis():
     unmapped = sorted(({**v, "query": q} for q, v in q28.items() if q.lower() not in mapped and v["impressions"] >= 20),
                       key=lambda r: -r["impressions"])
     countries = _by(w28, "country")[:10]
+    markets = target_markets(w28, p28)
     devices = _by(w28, "device")
     since = (last - datetime.timedelta(days=6)).isoformat()
     ev7 = {k: db.query("SELECT COUNT(*) n FROM rank_events WHERE kind=? AND period >= ?", (k, since), one=True)["n"]
@@ -255,7 +256,8 @@ def analysis():
                                                                                   key=lambda m: m["change"])[:15],
                 new=new[:20], lost=lost[:20], pages_up=[p for p in pages if p["change"] > 0][:10],
                 pages_down=sorted([p for p in pages if p["change"] < 0], key=lambda p: p["change"])[:10],
-                low_ctr=low_ctr[:20], near=near[:30], cannibal=cannibal[:20], kmap=kmap, tracked_kw=tracked_kw, unmapped=unmapped[:30],
+                low_ctr=low_ctr[:20], near=near[:30], cannibal=cannibal[:20], kmap=kmap, tracked_kw=tracked_kw,
+                markets=markets, target_ctr=TARGET_CTR, unmapped=unmapped[:30],
                 countries=countries, devices=devices,
                 daily=daily_rows)
 
@@ -279,6 +281,24 @@ def _chart(rows, w=720, h=220):
             f'<text x="0" y="{h - 6}" font-size="20" fill="currentColor">{rows[0]["date"]}</text>'
             f'<text x="{w}" y="{h - 6}" font-size="20" text-anchor="end" fill="currentColor">{rows[-1]["date"]}</text>'
             f'<text x="0" y="22" font-size="20" fill="currentColor">Highest day: {int(mx)} impressions</text></svg>')
+
+
+TARGET_CTR = 10.0          # owner's goal: search click-through rate above 10%
+TARGET_MARKETS = [("usa", "United States"), ("gbr", "United Kingdom"), ("can", "Canada"), ("aus", "Australia")]
+
+
+def target_markets(w, p):
+    """Clicks, impressions, CTR and position in the owner's four target countries, this window against the one before."""
+    now = {r["key"]: r for r in _by(w, "country")} if w else {}
+    before = {r["key"]: r for r in _by(p, "country")} if p else {}
+    out = []
+    for code, name in TARGET_MARKETS:
+        n, b = now.get(code, {}), before.get(code, {})
+        imp, clicks = n.get("impressions", 0), n.get("clicks", 0)
+        out.append(dict(code=code, name=name, clicks=clicks, impressions=imp,
+                        ctr=round(clicks / imp * 100, 2) if imp else 0.0, position=n.get("position"),
+                        prev_position=b.get("position"), prev_impressions=b.get("impressions", 0)))
+    return out
 
 
 def _by(win, col):

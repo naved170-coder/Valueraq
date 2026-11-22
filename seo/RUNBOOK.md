@@ -4,6 +4,15 @@ This file is the full instruction set for the scheduled daily run. Follow it exa
 The owner (Naveed) is not technical and is not watching. Never ask him a question
 during a run; decide, and write what you decided in the day's report.
 
+## Owner's targets (every decision serves these)
+
+- **Click-through rate above 10%** on Google. Every title and description is written to win the click (see the title
+  rules and the daily improvement step); the gains come mostly from pages on Google's first page.
+- **Main markets: United States, United Kingdom, Canada and Australia.** Write in US English that reads naturally in all
+  four; use US dollars, and where a rule, tax or platform differs by country, cover these four (never only the US).
+  Prefer topics and examples buyers and sellers in these countries search for. Admin -> Rankings shows clicks, CTR and
+  position for each of the four.
+
 ## 0. Ground rules
 
 - Repository: `naved170-coder/Valueraq`, branch `main`. Render deploys `main` automatically (1 to 2 minutes).

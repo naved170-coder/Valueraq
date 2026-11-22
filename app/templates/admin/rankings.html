@@ -13,6 +13,11 @@
 <tr><th scope="row">{{ label }}<br><span class="muted">{{ t.start }} to {{ t.end }}</span></th><td class="r">{{ t.clicks }}</td><td class="r">{{ t.impressions }}</td><td class="r">{{ t.ctr }}%</td><td class="r">{{ pos(t.position) }}</td><td class="r">{{ t.queries }}</td><td class="r">{{ t.pages }}</td></tr>{% endif %}{% endfor %}
 </tbody></table></div>
 <p class="muted">Clicks, impressions, CTR and average position are Google's own daily totals, the same figures as Search Console (its "28 days" may include one more, still incomplete day). Google keeps the wording of rare searches private, so the search-by-search tables below add up to less{% if a.t28 and a.t28.listed_clicks is defined %}: in the last 28 days they cover {{ a.t28.listed_clicks }} of {{ a.t28.clicks }} clicks and {{ a.t28.listed_impressions }} of {{ a.t28.impressions }} impressions{% endif %}.</p>
+<h3 class="mt">Targets</h3>
+<p><strong>Click-through rate goal: above {{ a.target_ctr|int }}%.</strong> Last 28 days: {{ a.t28.ctr if a.t28 else 0 }}%{% if a.t28 and a.t28.ctr >= a.target_ctr %} <span class="tick done">✔ on target</span>{% else %} <span class="muted">(rises mainly as pages reach Google's first page; titles help most there)</span>{% endif %}.</p>
+<div class="table-wrap"><table><thead><tr><th>Target market (last 28 days)</th><th class="r">Clicks</th><th class="r">Impressions</th><th class="r">CTR</th><th class="r">Avg position</th><th class="r">28 days before</th></tr></thead><tbody>
+{% for m in a.markets %}<tr><th scope="row">{{ m.name }}</th><td class="r">{{ m.clicks }}</td><td class="r">{{ m.impressions }}</td><td class="r">{{ m.ctr }}%{% if m.ctr >= a.target_ctr and m.impressions %} ✔{% endif %}</td><td class="r">{{ pos(m.position) }}</td><td class="r">{{ pos(m.prev_position) }}</td></tr>{% endfor %}
+</tbody></table></div>
 <h3 class="mt">This week at a glance</h3>
 <div class="table-wrap"><table><tbody>
 <tr><th scope="row">Entered the top 3 / top 10 / top 20 (last 7 days)</th><td class="r">{{ a.entered.top3 }} / {{ a.entered.top10 }} / {{ a.entered.top20 }}</td></tr>
