@@ -1,0 +1,37 @@
+{
+ "page": "selling-an-online-business-in-canada",
+ "query": "sell online business canada",
+ "results": [],
+ "studied": [
+  {
+   "url": "bizbuysell.com/learning-center/article/selling-business-canada-tax-implications/",
+   "words": 1100,
+   "has": [
+    "asset vs share sale",
+    "LCGE and its tests",
+    "inclusion rate",
+    "GST/HST on assets"
+   ],
+   "missing": "nothing for online businesses (domain, website, platform payouts, digital GST/HST), no worked example, no FAQ, dated inclusion-rate wording"
+  }
+ ],
+ "gaps": [
+  "Online-business angle: what an asset sale of a website includes and how each part is taxed (describe; quote figures only from Government of Canada sources added to sources.json)",
+  "Worked example with clearly labelled assumptions; send readers to an accountant",
+  "Selling to a US buyer: escrow, currency, contracts",
+  "Checklist and FAQs; not tax advice note"
+ ],
+ "titles": [
+  "Tax Implications When Selling a Business in Canada",
+  "How to Sell Your Canadian Business",
+  "Selling a business (CRA)"
+ ],
+ "keywords": [
+  "sell online business canada",
+  "selling a business in canada tax",
+  "sell my website canada"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}

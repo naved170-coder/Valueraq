@@ -1,0 +1,39 @@
+{
+ "page": "how-much-is-my-youtube-channel-worth",
+ "query": "how much is my youtube channel worth",
+ "results": [],
+ "studied": [
+  {
+   "url": "flippa.com/blog/how-much-is-my-youtube-channel-worth-a-complete-valuation-guide/",
+   "words": 1500,
+   "has": [
+    "monthly profit x 12-36 formula (unsourced)",
+    "two worked examples",
+    "niche RPM table (unsourced)",
+    "FAQs"
+   ],
+   "missing": "no transfer mechanics (brand account, AdSense payee), no demonetisation/strike risk, no definition of profit, written by the platform itself"
+  }
+ ],
+ "gaps": [
+  "Define channel profit properly (AdSense + sponsors + affiliate minus editors, thumbnails, tools)",
+  "Worked valuation with a risk checklist that moves the multiple (face-on-camera creator, strikes, single viral video, sponsor concentration); figures only from sources.json or clearly labelled assumptions",
+  "How ownership transfers: Brand Account owner change, AdSense payee, waiting period; what cannot transfer",
+  "Audience retention risk when the creator leaves",
+  "FAQs"
+ ],
+ "titles": [
+  "How Much is My YouTube Channel Worth? A Complete Valuation Guide",
+  "YouTube Channel Worth Calculator",
+  "How to Sell a YouTube Channel"
+ ],
+ "keywords": [
+  "how much is my youtube channel worth",
+  "youtube channel valuation",
+  "youtube channel worth calculator",
+  "sell a youtube channel"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}

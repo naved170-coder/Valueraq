@@ -290,6 +290,12 @@ def keyword_overlap_problems():
 
 # ---------------------------------------------------------------- competitor research supply
 RESEARCH_MIN_DAYS = 7
+RESEARCH_PAGES_PER_DAY = 2   # since 23 Nov 2026: valuable topics first, fewer pages a day (about one article and one more page)
+
+
+def written(pg):
+    folder = "glossary" if pg.get("kind") == "glossary" else "guides"
+    return os.path.exists(os.path.join(content.CONTENT_DIR, folder, f"{pg.get('slug')}.md"))
 
 
 def research_supply():
@@ -298,10 +304,10 @@ def research_supply():
     ready, waiting = [], []
     for day in calendar().get("days", []):
         for pg in day.get("pages", []):
-            if pg.get("written") or pg.get("hold"):
+            if pg.get("written") or written(pg):
                 continue
             (ready if f"new-{pg.get('slug')}.json" in have else waiting).append(pg.get("slug"))
-    per_day = MAX_PER_DAY
+    per_day = RESEARCH_PAGES_PER_DAY
     return dict(ready=ready, waiting=waiting, days=len(ready) // per_day,
                 runs_out=(local_now().date() + datetime.timedelta(days=len(ready) // per_day)).isoformat())
 

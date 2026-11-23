@@ -1,6 +1,6 @@
 {
-  "status": "needs_owner",
-  "summary": "Research for new pages runs out in about 2 days, and the website's database file is still reported as damaged (no new errors since 17:53 UTC yesterday); 5 existing pages improved.",
+  "status": "fixed",
+  "summary": "Both morning items resolved in the owner's session: the database was repaired on 22 Nov (backup succeeded 00:18 Pakistan time, no errors since) and competitor research now covers 17 upcoming pages (about 8 days); 5 existing pages improved.",
   "checks": [
     "Last night's run: done, 8 pages (1 article, 3 glossary, 4 improved)",
     "Queue: today's release slots filled, pages and images present",
@@ -17,12 +17,11 @@
   ],
   "fixed": [
     "Improved 5 pages from competitor research: content/guides/how-to-value-a-blog.md, how-to-value-a-business-with-ebitda.md, how-to-value-a-business-with-no-profit.md, how-to-value-a-website-with-falling-traffic.md, how-to-value-an-email-list.md (new tables, examples, checklists, new titles and descriptions)",
-    "Ranking actions done: linked 'saas arr' and 'saas valuation' to the SaaS guide and tool from the ARR glossary page, and 'saas valuation calculator' to the SaaS tool from the CAC glossary page"
+    "Ranking actions done: linked 'saas arr' and 'saas valuation' to the SaaS guide and tool from the ARR glossary page, and 'saas valuation calculator' to the SaaS tool from the CAC glossary page",
+    "Owner session 23 Nov: database repaired on 22 Nov 18:04 UTC; backup ok at 19:18 UTC; no 'malformed' errors since",
+    "Owner session 23 Nov: research saved for 5 more topics (YouTube channel worth, buying an Amazon FBA business, selling in Canada, selling in Australia, selling a newsletter); 17 researched topics ready, about 8 days"
   ],
-  "needs_owner": [
-    "Competitor research runs out in 2 days (around 25 Nov 2026): ask Claude to collect the next pages",
-    "The live website's database was reported damaged ('database disk image is malformed') with failing backups on 22 Nov; no new errors since 17:53 UTC. Check in Admin that backups succeed; if they fail again, restore the latest good backup. I cannot change app code or data."
-  ],
+  "needs_owner": [],
   "weekly": {
     "summary": "Last 7 days: 28 new pages published (7 articles, 21 glossary), no missed runs, no held pages added; Google shows 37 clicks and 17,600 impressions over 28 days.",
     "lines": [

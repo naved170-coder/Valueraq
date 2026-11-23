@@ -1,0 +1,38 @@
+{
+ "page": "selling-an-online-business-in-australia",
+ "query": "sell online business australia",
+ "results": [],
+ "studied": [
+  {
+   "url": "legalvision.com.au/tax-selling-business",
+   "words": 1100,
+   "has": [
+    "GST going concern",
+    "CGT and 50% discount",
+    "small business CGT concessions",
+    "income tax by structure",
+    "4 FAQs"
+   ],
+   "missing": "no online-business treatment (domain, website, platforms), no worked example, no price allocation, no earn-out tax"
+  }
+ ],
+ "gaps": [
+  "Online-business angle: going-concern rules for a website or store sale, domain and goodwill (figures only from ATO/business.gov.au sources added to sources.json)",
+  "Worked example with labelled assumptions",
+  "Selling to overseas buyers: escrow, currency",
+  "Checklist and FAQs; not tax advice note"
+ ],
+ "titles": [
+  "What are Potential Tax Implications When Selling a Business?",
+  "Capital gains tax for business",
+  "Small business CGT concessions"
+ ],
+ "keywords": [
+  "sell online business australia",
+  "selling a business australia tax",
+  "cgt small business concessions online business"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}

@@ -1,0 +1,39 @@
+{
+ "page": "how-to-sell-a-newsletter",
+ "query": "how to sell a newsletter",
+ "results": [],
+ "studied": [
+  {
+   "url": "flippa.com/blog/how-to-sell-your-newsletter/",
+   "words": 2000,
+   "has": [
+    "5 sale steps",
+    "monetisation methods",
+    "valuation factors (qualitative)",
+    "14 growth tactics"
+   ],
+   "missing": "no multiple or worked price, no platform transfer (beehiiv/Substack/Kit), no sponsor contract assignment, no list-consent question, no deal structure, no FAQ"
+  }
+ ],
+ "gaps": [
+  "Worked price using the newsletter tool's method (profit multiple, adjusted for open rate and sponsor concentration)",
+  "Platform transfer steps for beehiiv, Substack and Kit; what moves (list, archive, paid subscriptions)",
+  "Subscriber consent and privacy when a list changes owner (US/UK/CA/AU)",
+  "Sponsor contracts and earn-outs",
+  "FAQs"
+ ],
+ "titles": [
+  "How To Sell Your Newsletter",
+  "How to Sell Your 7-Figure Newsletter",
+  "Sell an email newsletter business"
+ ],
+ "keywords": [
+  "how to sell a newsletter",
+  "sell my newsletter",
+  "newsletter for sale",
+  "sell a substack"
+ ],
+ "collected": "2026-11-23",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}
