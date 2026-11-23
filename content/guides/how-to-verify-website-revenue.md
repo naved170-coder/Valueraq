@@ -1,7 +1,7 @@
 ---
 title: How Do You Verify a Website's Revenue Before Buying?
-meta_title: How to Verify Website Revenue Before You Buy
-meta_description: Don't take a seller's screenshots on trust. How to verify a website's revenue at the source, step by step, and the warning signs to watch for.
+meta_title: How to Verify Website Revenue: Source Table & Example
+meta_description: Verify a website's revenue at the source: a table by income type, a bank-matching method and a worked example. See the red flags before you pay.
 h1: How Do You Verify a Website's Revenue Before Buying?
 section: Quick answers
 cluster: buying
@@ -10,7 +10,7 @@ page_type: reference
 answer: Verify a website's revenue by getting at least 12 months of records straight from the systems that pay the seller, such as the payment processor, ad network or affiliate dashboard, and matching the payouts to bank deposits. A screenshot or a spreadsheet the seller typed up is a claim, not proof.
 keywords: verify website revenue, how to verify website revenue, verify revenue before buying a website, check website income
 published: 2026-10-10
-updated: 2026-10-10
+updated: 2026-11-23
 publish_at: 2026-10-09T19:00Z
 image: /static/img/articles/how-to-verify-website-revenue.png
 image_alt: Featured image for the quick answer How Do You Verify a Website's Revenue Before Buying
@@ -24,6 +24,17 @@ cta_text: Our buyer safety page lists the warning signs to look for before you p
 
 Revenue is the number every other number on a listing is built from. If it is overstated by $1,000 a month, the yearly profit a buyer pays a multiple of is overstated too. The proof has to come from the place the money first arrives, not from the seller's summary of it.
 
+## Where to check, by type of income
+
+| Income type | Ask for | Match it to |
+|---|---|---|
+| Ad network | Payment history for 12+ months, read-only access | Monthly bank deposits |
+| Affiliate programs | Earnings statements from each program | Payout deposits or the program's payment records |
+| Payment processor (card or digital payments) | Payout reports, not only sales reports | Bank deposits after the processor's fees |
+| Online store | Order and payout reports from the store platform | Processor payouts and bank deposits |
+| App stores | Monthly sales and payment reports | Bank deposits |
+| Sponsors and direct deals | Signed agreements and invoices | Bank deposits for each invoice |
+
 ## Five steps
 
 1. **Ask for the source records.** For 12 months or more, request the payment processor's payout reports, the ad network's payment history, or the affiliate programs' earnings statements. Read-only access is better than exports, because exports can be edited.
@@ -31,6 +42,8 @@ Revenue is the number every other number on a listing is built from. If it is ov
 3. **Look at the months, not the total.** A steady line is easier to trust than one huge month. Ask about the best and the worst month and why they differ. See [trailing twelve months](/glossary/trailing-twelve-months/) for how to line up the period.
 4. **Separate recurring from one-off.** Count sales that will repeat. One-off income, such as a single large sponsorship or a sale of a domain, should not be multiplied.
 5. **Check the costs too.** Revenue is not profit. Compare the seller's costs with invoices and card statements, and test every [add-back](/glossary/add-backs/).
+
+A live screen-share is a fair extra step: watch the seller log in and open a few individual payouts.
 
 ## A worked example
 
@@ -47,6 +60,7 @@ Even if every unproven dollar were profit, a buyer paying 3 times yearly profit 
 - Screenshots with no account name, dates or currency.
 - A seller who will not share read-only access or original statements.
 - Payouts that do not appear in the bank.
+- Income from "direct deals" with no invoice or contract.
 
 The U.S. Small Business Administration advises buyers to carry out a "thorough, objective investigation" and to consider hiring an attorney and an accountant. {{BRAND}} marks some listings as [revenue verified](/verification/) after its team compares the seller's evidence with the stated figures, but a buyer should still check the records before paying.
 

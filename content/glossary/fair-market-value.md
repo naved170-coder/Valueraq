@@ -2,15 +2,15 @@
 title: What Is Fair Market Value?
 term: Fair Market Value
 aliases: fair market value, FMV
-meta_title: What Is Fair Market Value (FMV)? Definition & Example
-meta_description: Fair market value is what a business would sell for on the open market between informed parties. See an example and how it differs from price.
+meta_title: Fair Market Value (FMV): Definition, Example & Table
+meta_description: Fair market value is the price an informed open market would pay. See a worked example and a table comparing it with asking, strategic and forced-sale prices.
 h1: Fair Market Value
 definition: Fair market value is the price a business or asset would sell for on the open market, between a buyer and a seller who both know the relevant facts and neither of whom is forced to deal.
 cluster: analysis
 page_type: reference
 keywords: fair market value, fmv, fair market value of a business, what is fair market value
 related: /glossary/comparable-sales/, /glossary/valuation-multiple/, /guides/business-valuation/
-updated: 2026-10-09
+updated: 2026-11-23
 publish_at: 2026-10-09T13:00Z
 image: /static/img/articles/fair-market-value.png
 image_alt: Featured image for the glossary entry What Is Fair Market Value
@@ -42,9 +42,36 @@ Neither price changes the fair market value. Both reflect circumstances that the
 - **Negotiation.** Knowing fair market value tells you whether an offer is strategic, fair or distressed.
 - **Calculator results.** {{BRAND}}'s tools give an estimate from your figures and published assumptions. That is a useful guide to fair market value, not a formal appraisal of it.
 
+## Fair market value vs other prices
+
+| Term | What it means | Typical use |
+|---|---|---|
+| Fair market value | What an informed, unpressured open market would pay | Tax, legal and lending |
+| Asking price | What the seller hopes to get | Listing |
+| Strategic or investment value | What a particular buyer would pay because of their own gains | Negotiation |
+| Forced-sale value | What a seller accepts under pressure | Distressed sales |
+
+## Why a calculator gives a range
+
+Fair market value is a single idea, but nobody can name one exact number for a private business. {{BRAND}}'s tools show a low, middle and high estimate, because small changes in profit, risk and growth move the result. Treat the range as a starting point for a conversation.
+
 ## Not the same as asking price
 
 An asking price is what a seller hopes to get. Fair market value is what an informed open market would pay. The gap between the two is usually where negotiation happens.
+
+## Frequently asked questions
+
+### Is fair market value the same as what I should ask for?
+
+Not necessarily. Many sellers ask for more than fair market value to leave room to negotiate. Be ready to explain the figures behind the asking price.
+
+### Who decides fair market value?
+
+For tax or court purposes, usually a qualified appraiser. A free tool gives an estimate, not a formal appraisal.
+
+### Can a buyer pay more than fair market value?
+
+Yes. A buyer who gains more than most, such as a competitor, may pay a strategic price.
 
 ## Related terms
 

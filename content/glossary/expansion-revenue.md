@@ -2,15 +2,15 @@
 title: What Is Expansion Revenue?
 term: Expansion Revenue
 aliases: expansion revenue, expansion MRR, upsell revenue
-meta_title: What Is Expansion Revenue? Definition, Formula & Example
-meta_description: Expansion revenue is extra recurring revenue from existing customers through upgrades, add-ons or more seats. See an example and why buyers value it.
+meta_title: Expansion Revenue: Formula, Example & Why Buyers Care
+meta_description: Expansion revenue is extra recurring revenue from existing customers. See the formula, a small-business example and how it feeds NRR and a SaaS valuation.
 h1: Expansion Revenue
 definition: Expansion revenue is the extra recurring revenue a subscription business earns from customers it already has, through upgrades, added seats or add-ons, rather than from new customers.
 cluster: saas
 page_type: reference
 keywords: expansion revenue, expansion mrr, what is expansion revenue, expansion revenue formula
 related: /glossary/net-revenue-retention/, /glossary/mrr/, /glossary/churn/, /glossary/arr/, /guides/saas-valuation/
-updated: 2026-10-17
+updated: 2026-11-23
 publish_at: 2026-10-17T13:00Z
 image: /static/img/articles/expansion-revenue.png
 image_alt: Featured image for the glossary entry What Is Expansion Revenue
@@ -27,7 +27,7 @@ Expansion revenue is the increase in [MRR](/glossary/mrr/) from customers who we
 
 Stripe defines MRR as "the total amount of money a company can expect to receive from its existing customers each month" ([Stripe](https://stripe.com/resources/more/essential-saas-metrics)). Expansion is the part of that figure that grows without signing anyone new.
 
-**Expansion MRR = MRR added by existing customers during the period**
+**Expansion MRR = new MRR from upgrades, extra seats and add-ons, from customers who were already paying at the start of the period**
 
 Revenue from customers who joined during the period is new revenue, not expansion.
 
@@ -50,6 +50,24 @@ Expansion offsets [churn](/glossary/churn/). If expansion is larger than the rev
 Buyers read that as revenue that is easier to keep and grow. VALUERAQ's [SaaS valuation tool](/tools/saas-valuation/) has no expansion input, but it adjusts the multiple for revenue growth and monthly churn, which expansion feeds into.
 
 A word of care: expansion that comes from one large customer, or from a one-off price change, is less dependable than steady upgrades across many customers.
+
+## Small online business example
+
+A small subscription tool starts the month with $8,000 of MRR. Twelve customers move from a $29 plan to a $49 plan, which adds 12 × ($49 − $29) = $240 of expansion MRR. Expansion is $240 ÷ $8,000 = 3% of starting MRR. If the tool lost $160 to cancellations, existing customers still added $240 − $160 = $80 net.
+
+## Frequently asked questions
+
+### Is expansion revenue the same as new revenue?
+
+No. New revenue comes from customers who joined in the period. Expansion comes from customers who were already paying.
+
+### Does a price rise count as expansion?
+
+It raises MRR from existing customers, but buyers treat it with care, because customers may leave after a price rise. Show it separately from upgrades that customers chose.
+
+### Do buyers ask for expansion revenue?
+
+Often. They compare it with churn to see whether existing customers grow or shrink. See [SaaS metrics buyers check](/guides/saas-metrics-buyers-check/).
 
 ## Related terms
 
