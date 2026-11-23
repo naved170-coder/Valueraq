@@ -1,7 +1,7 @@
 ---
 title: How to Value a Blog or Content Website
-meta_title: How Much Is My Blog Worth? Blog Valuation Guide
-meta_description: How blogs and content sites are valued: yearly profit times a multiple, adjusted for traffic and age. Worked example, plus a free website value tool.
+meta_title: Blog Valuation: Value Table & Worked Examples
+meta_description: Value a blog from its monthly profit: value table, page-concentration risk, exit options and what to do if it earns nothing. Free blog value tool.
 h1: How to Value a Blog or Content Website
 section: Valuation
 cluster: website
@@ -10,7 +10,7 @@ page_type: article
 answer: Value a blog by taking its average yearly profit after real costs, multiplying it by a range of multiples, and adjusting for age, trend, traffic sources, income mix and how much time the owner spends. Traffic and post count matter only through the profit they produce and the risk they carry.
 keywords: how to value a blog, site valuation, blog for sale, content website value
 published: 2026-10-18
-updated: 2026-10-18
+updated: 2026-11-23
 publish_at: 2026-10-18T13:00Z
 image: /static/img/articles/how-to-value-a-blog.png
 image_alt: Featured image for the guide How to Value a Blog or Content Website
@@ -118,6 +118,29 @@ The two blogs earn the same today, but the midpoint values differ by about $33,8
 ## What does not add much value
 
 Several things that feel important rarely move the price on their own. A high post count does not matter if the posts earn nothing. A large social following that does not lead to income is weak support. A well-known domain name helps only when it comes with profit. If the blog loses money, use the approach in [how to value a business with no profit](/guides/how-to-value-a-business-with-no-profit/).
+
+## Value table: monthly profit to blog value
+
+Using the default 2.5× to 4× range (midpoint 3.2×) before any adjustments, yearly profit is monthly profit × 12. These are illustrations of the formula, not market prices.
+
+| Monthly profit | Yearly profit | Low (2.5×) | Midpoint (3.2×) | High (4×) |
+|---|---|---|---|---|
+| $500 | $6,000 | $15,000 | $19,200 | $24,000 |
+| $1,000 | $12,000 | $30,000 | $38,400 | $48,000 |
+| $2,500 | $30,000 | $75,000 | $96,000 | $120,000 |
+| $5,000 | $60,000 | $150,000 | $192,000 | $240,000 |
+
+## Page concentration: when a few posts earn most of the money
+
+A blog can have many channels and still depend on a handful of pages. Suppose a blog earns $36,000 a year and its top three posts bring about 70% of the income, which is $25,200. If those posts lose their rankings, the profit could fall to $10,800. A buyer will ask for a page-level report and may price in that risk, so show how much of the profit comes from your top pages and what protects it, such as fresh updates and links from other posts. This is a made-up example.
+
+## Exit options
+
+A blog owner can sell the whole site, sell through a listing with a broker or marketplace, or find a buyer directly, such as a reader or a company in the same field. Each route needs the same records: twelve months of profit, proof of traffic and revenue, and a clear list of what transfers (domain, content, accounts, email list). An owner who wants to keep the blog but step back can instead hire an editor, which also makes the site easier to sell later.
+
+## A blog that earns nothing yet
+
+With no profit there is nothing to multiply. A buyer will usually look at the cost to rebuild: the writing, design and promotion needed to get a similar site to the same point, then discount it because the content has no proven income. Treat that as a rough ceiling and expect offers well below it. See [how to value a business with no profit](/guides/how-to-value-a-business-with-no-profit/).
 
 ## How to raise the value before selling
 

@@ -11,6 +11,7 @@
   "Buyer's view: distressed purchase pricing and earn-outs; FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-23",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added 30% decline example, diagnosis checklist and buyer pricing section"
 }

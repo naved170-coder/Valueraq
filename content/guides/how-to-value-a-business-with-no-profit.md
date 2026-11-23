@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Business That Makes No Profit?
-meta_title: How to Value a Business With No Profit
-meta_description: No profit yet? See how buyers value it instead: revenue, growth, assets and cost to rebuild, with a worked example for each method. Free calculator included.
+meta_title: How to Value a Business With No Profit: Methods Compared
+meta_description: No profit yet? Compare four ways buyers value it: revenue, profit after cuts, assets and cost to rebuild, with a table, worked example and FAQ.
 h1: How Do You Value a Business That Makes No Profit?
 section: Quick answers
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: reference
 answer: Without profit, an earnings multiple gives no answer, so the value comes from what the business owns and what a buyer could do with it. Start from its assets minus its debts, use a revenue multiple only if the revenue recurs, and check both against what it would cost a buyer to build the same thing from scratch.
 keywords: how to value a business with no profit, value a business with no profit, valuing a loss making business, business valuation no profit
 published: 2026-10-09
-updated: 2026-10-09
+updated: 2026-11-23
 publish_at: 2026-10-08T19:00Z
 image: /static/img/articles/how-to-value-a-business-with-no-profit.png
 image_alt: Featured image for the quick answer How Do You Value a Business That Makes No Profit
@@ -43,6 +43,17 @@ A newsletter has 20,000 subscribers and earns $3,000 a month in sponsorships, bu
 - **Profit after fixes:** $1,200 of the spending is paid subscriber growth a buyer could stop. Profit would then be $800 a month, or $9,600 a year.
 - **At 2.5 times** that adjusted profit, the low end of {{BRAND}}'s default range for newsletters, the figure is $24,000. Treat it as a ceiling, since it assumes growth spending can stop without losing sponsors.
 - **Assets:** the list, the archive and the brand. Their value depends on what a particular buyer would do with them.
+
+## The methods compared
+
+| Method | What it uses | Works best when | Main weakness |
+|---|---|---|---|
+| Revenue multiple | Yearly revenue | Revenue is steady and costs could be cut | Ignores that costs exceed income |
+| Profit after fixes | Profit once owner-only or optional costs are removed | A clear list of costs a buyer could stop | Assumes sales hold up without them |
+| Assets | Domain, content, list, software, accounts | The assets could earn money for a new owner | Assets are worth what a buyer can do with them |
+| Cost to rebuild | What it would cost to build the same thing | There is little revenue yet | A ceiling, not a price; buyers discount it |
+
+For an online business, check these first: how revenue and traffic have trended, which costs only the current owner would choose to pay, what a buyer would own after the sale, and how long it would take to rebuild. Start with the profit-after-fixes row, since it is the closest to the normal method.
 
 ## What a buyer will ask
 

@@ -1,7 +1,7 @@
 ---
 title: How Do You Value an Email List?
-meta_title: How Much Is an Email List Worth? Valuation Guide
-meta_description: How email lists are valued: profit first, then list quality, open rate and engagement, with a worked example. Value it free in about a minute.
+meta_title: Email List Valuation: Profit-First Example & Checklist
+meta_description: Value an email list by profit, not size: worked example, per-subscriber sense-check, why open rates mislead, consent rules and FAQ. Value it free in a minute.
 h1: How Do You Value an Email List?
 section: Quick answers
 cluster: newsletter
@@ -10,7 +10,7 @@ page_type: reference
 answer: Value an email list by what it earns each year, not by how many addresses it holds. Take the yearly profit the list produces, apply a multiple that reflects how engaged and dependable the readers are, and check the result against what it would cost a buyer to build a similar list.
 keywords: how to value an email list, email list value, value a newsletter, what is an email list worth
 published: 2026-10-17
-updated: 2026-10-17
+updated: 2026-11-23
 publish_at: 2026-10-17T07:00Z
 image: /static/img/articles/how-to-value-an-email-list.png
 image_alt: Featured image for the quick answer How Do You Value an Email List
@@ -50,6 +50,14 @@ Divided by a list of 10,000 subscribers, the midpoint is $5.76 per subscriber. T
 - **Trend.** Growing profit raises the multiple. Falling profit lowers it.
 - **Owner dependence.** If readers subscribe for you personally, a buyer will pay less.
 - **List health.** Dead addresses, purchased lists and addresses collected without consent are a problem. Rules on consent differ by country, so ask a lawyer about yours.
+
+## Why open rates mislead
+
+Open rates are often inflated, because mail apps can load images automatically and count an open when nobody read the message. Clicks and revenue per send are firmer evidence. A buyer will ask how many people clicked and how much money each send earned, so report those.
+
+## Consent: a list without permission is not an asset
+
+A list is only worth something if the people on it agreed to receive the messages and the seller can transfer that permission. The rules differ by country, so ask a lawyer before selling or buying one.
 
 ## A sense check: cost to rebuild
 

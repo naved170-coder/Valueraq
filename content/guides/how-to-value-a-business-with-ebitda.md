@@ -1,7 +1,7 @@
 ---
 title: How to Value a Business Using EBITDA
-meta_title: How to Value a Business Using EBITDA (Worked Example)
-meta_description: Value a business with EBITDA in three steps: work out EBITDA, choose a multiple, adjust for debt and cash. Worked example and free calculator included.
+meta_title: How to Value a Business Using EBITDA: Worked Example
+meta_description: Value a business with EBITDA: adjusted EBITDA, multiple, debt and cash bridge, limits of the method, a checklist and a free multiple calculator.
 h1: How to Value a Business Using EBITDA
 section: Valuation
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: To value a business with EBITDA, start from net profit and add back taxes, interest, depreciation and amortization. Then adjust for owner pay set at a market salary and for one-off or personal costs, to reach adjusted EBITDA. Multiply that figure by a multiple that suits the business's size, risk and trend. For small owner-run businesses, EBITDA is often the wrong base, and seller's discretionary earnings (SDE) is used instead.
 keywords: how to value a business with ebitda, ebitda valuation, adjusted ebitda, ebitda multiple, business valuation ebitda
 published: 2026-10-29
-updated: 2026-10-29
+updated: 2026-11-23
 publish_at: 2026-10-29T01:00Z
 image: /static/img/articles/how-to-value-a-business-with-ebitda.png
 image_alt: How to Value a Business Using EBITDA (VALUERAQ guide)
@@ -170,6 +170,18 @@ EBITDA is useful, but it can mislead. Four situations call for something else.
 **It is a subscription software business.** SaaS and AI products are usually valued on annual recurring revenue with profit as a cross-check. See [SaaS valuation methods](/guides/saas-valuation-methods/).
 
 CFI also lists the limits of multiples in general: they oversimplify, and they depend on how comparable the other businesses are. It notes that the method "only considers the company's position for a certain time period" ([CFI](https://corporatefinanceinstitute.com/resources/valuation/multiples-analysis)). A single year of EBITDA misses a trend, so look at the last 12 months and the months before them.
+
+## Limits of an EBITDA valuation
+
+EBITDA is a useful shortcut, but it leaves out several things a buyer still pays for. Read the result with these in mind:
+
+- It ignores the money needed to replace equipment and software, so a business with heavy spending on assets can look better than it is.
+- It ignores tax and interest, which affect what the owner actually keeps.
+- It depends on adjustments, and each add-back needs proof a buyer will accept.
+- A multiple from another business or another year may not fit this one.
+- It says nothing about whether the profit will last, so trend, customer concentration and owner dependence still matter.
+
+To compare an asking price against a profit figure, use the [business multiple calculator](/calculators/business-multiple-calculator/).
 
 ## A short checklist
 

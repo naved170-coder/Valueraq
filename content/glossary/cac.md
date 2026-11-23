@@ -8,7 +8,7 @@ h1: CAC (Customer Acquisition Cost)
 definition: Customer acquisition cost (CAC) is the average amount a business spends on sales and marketing to win one new paying customer.
 cluster: analysis
 related: /glossary/ltv/, /glossary/conversion-rate/, /glossary/churn/
-updated: 2026-11-10
+updated: 2026-11-23
 ---
 
 ## Formula
@@ -63,6 +63,8 @@ Ask the seller how CAC was calculated, which costs were included, and for monthl
 ## CAC payback
 
 **CAC payback (months) = CAC ÷ monthly gross profit per customer.** It shows how long it takes to recover the cost of acquiring a customer. Shorter is better, especially if churn is high.
+
+Buyers weigh CAC against recurring revenue, so a SaaS business is read with ARR as well: see [how to value a SaaS company](/guides/saas-valuation/) and try the [SaaS valuation calculator](/tools/saas-valuation/).
 
 ## Frequently asked questions
 

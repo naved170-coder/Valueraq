@@ -118,5 +118,20 @@
     "id": "b2fa79a005f9",
     "date": "2026-11-19",
     "note": "Added a sentence linking \"website net worth\" to /tools/website-valuation/ from a related guide"
+  },
+  {
+    "id": "d56425f90eea",
+    "date": "2026-11-23",
+    "note": "Linked \"SaaS ARR\" to /guides/saas-valuation/ from the ARR glossary page"
+  },
+  {
+    "id": "5f7a3a916c12",
+    "date": "2026-11-23",
+    "note": "Linked \"SaaS valuation calculator\" to /tools/saas-valuation/ from the CAC glossary page"
+  },
+  {
+    "id": "75b8a6c6010e",
+    "date": "2026-11-23",
+    "note": "Linked \"SaaS valuation\" to /tools/saas-valuation/ from the ARR glossary page"
   }
 ]

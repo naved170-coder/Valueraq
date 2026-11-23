@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Website Whose Traffic Is Falling?
-meta_title: How to Value a Website With Falling Traffic
-meta_description: Traffic dropping? See how buyers value a declining website, how much the multiple falls and what to do first, with an example. Free calculator included.
+meta_title: Valuing a Website With Falling Traffic: Example & Checklist
+meta_description: Traffic falling? See how a decline cuts the multiple (−12% or −25%), a worked value, a checklist to diagnose the drop and how buyers price it. Free tool.
 h1: How Do You Value a Website Whose Traffic Is Falling?
 section: Quick answers
 cluster: website
@@ -10,7 +10,7 @@ page_type: reference
 answer: Value a website with falling traffic on its recent profit rather than its best year, and apply a lower multiple to reflect the decline. A site whose revenue fell 15% over 12 months, with most visits from one channel, can be worth about 17% less than a steady site with the same profit.
 keywords: value website declining traffic, website losing traffic value, how to value a website with falling traffic, declining website valuation
 published: 2026-10-22
-updated: 2026-10-22
+updated: 2026-11-23
 publish_at: 2026-10-22T07:00Z
 image: /static/img/articles/how-to-value-a-website-with-falling-traffic.png
 image_alt: Featured image for the quick answer How Do You Value a Website Whose Traffic Is Falling
@@ -41,6 +41,20 @@ A site earns $3,000 a month, or $36,000 a year. Revenue is down 15% over 12 mont
 - Value = $36,000 × those multiples = **$74,000 to $119,000, midpoint $95,000**.
 
 A steady site with the same profit and a 3.2 midpoint is worth about $115,000. The decline costs about $20,000 at the midpoint (17%). If the last 3 months averaged $2,400 a month, a buyer using that figure would value the site nearer $76,000 at the midpoint. These are illustrations, not market prices.
+
+## How a bigger fall changes the value
+
+A fall of more than 20% takes 25% off the multiple, and a fall of 5% to 20% takes 12% off. For the same site with a 30% fall, the factor is 0.75 × 0.94 = 0.705: multiples of 1.76 to 2.82 and a value of $63,400 to $101,500, midpoint $81,200. Illustration only.
+
+## Diagnose the decline first
+
+A buyer will ask:
+
+- Did it start with a search-engine update?
+- Did top pages lose rankings?
+- Were links lost?
+- Is it seasonal?
+- Did the site change?
 
 ## What can help the price
 
