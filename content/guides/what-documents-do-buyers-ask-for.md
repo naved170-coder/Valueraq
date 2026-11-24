@@ -1,7 +1,7 @@
 ---
 title: What Documents Do Buyers Ask For When You Sell an Online Business?
-meta_title: What Documents Do Buyers Ask For? Seller Checklist
-meta_description: The documents buyers request when you sell an online business: P&L, traffic, accounts, contracts and more. A checklist so you're ready.
+meta_title: Documents Buyers Ask For: Where to Get Each (Checklist)
+meta_description: Buyers ask for P&L, payout reports, traffic data and proof you own the accounts. See where to get each and when to share it. Free checklist.
 h1: What Documents Do Buyers Ask For When You Sell an Online Business?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: Expect a buyer to ask for 12 to 24 months of financial statements, tax returns, payment processor and bank records, traffic or customer reports, contracts, proof that you own the accounts and assets, and a list of what the business owes. Having them ready before you list shortens due diligence.
 keywords: documents for due diligence, what documents do buyers ask for, documents to sell a business, due diligence documents online business
 published: 2026-10-14
-updated: 2026-10-14
+updated: 2026-11-24
 publish_at: 2026-10-14T07:00Z
 image: /static/img/articles/what-documents-do-buyers-ask-for.png
 image_alt: Featured image for the quick answer on documents buyers ask for when you sell an online business
@@ -22,32 +22,39 @@ cta_text: See the full buyer checklist so you can answer each question before it
 
 ## The short answer
 
-A buyer wants to confirm three things: that the profit is real, that you own what you are selling, and that nothing hidden will land on them after closing. Each document on the list below answers one of those.
+A buyer wants to confirm three things: that the profit is real, that you own what you are selling, and that nothing hidden will land on them after closing. Each document below answers one of those.
 
-The U.S. Small Business Administration says to carry out a "thorough, objective investigation" before buying a business, and lists financial statements, tax returns, contracts, leases, cash flow and inventory among the things to look at. That is the same list a buyer of an online business works from, with the platform records added.
+The U.S. Small Business Administration says to carry out a "thorough, objective investigation" before buying a business, and lists financial statements, tax returns, contracts, leases, cash flow and inventory among the things to look at. A buyer of an online business works from the same list, with the platform records added.
 
-## The documents, grouped by what they prove
+## The documents, and where to get each
 
-| Buyer's question | Documents they usually ask for |
+| Buyer's question | Documents they usually ask for | Where it comes from |
+|---|---|---|
+| Is the profit real? | Monthly profit and loss and balance sheets, 12 to 24 months; tax returns | Bookkeeping software or a spreadsheet; your accountant |
+| Is the revenue real? | Payout reports matched to bank deposits | Payment processor, store or marketplace export; bank portal |
+| Is the audience real? | Traffic or sales by source | Read-only analytics access; a read-only Search Console user |
+| Do you own it? | Registrar, hosting, app store and code accounts | Your own accounts; confirm the login email is yours |
+| What comes with it? | Customer and supplier contracts, subscriptions, contractor list | Your files and email |
+| What does it owe? | Unpaid bills, loans, refunds, disputes | Your books and platform dashboards |
+
+## When to share what
+
+| Stage | Share |
 |---|---|
-| Is the profit real? | Profit and loss statements and balance sheets for the last 12 to 24 months, tax returns, bank statements |
-| Is the revenue real? | Payout reports from the payment processor, store or marketplace, matched to deposits in the bank |
-| Is the audience real? | Read-only access to analytics or search reports, and a breakdown of traffic or sales by source |
-| Do you own it? | Registrar and hosting account details, app store or platform seller accounts, code repository access, trademarks and licences |
-| What comes with it? | Customer contracts, supplier agreements, lease or software subscriptions, a list of contractors and what they do |
-| What does it owe? | Unpaid bills, loans, refunds owed, open disputes or chargebacks |
+| First conversation | A one-page summary of revenue, profit and traffic |
+| After a confidentiality agreement | Monthly profit and loss, payout reports, traffic breakdowns |
+| After a letter of intent | Bank statements, tax returns, contracts, account lists |
 
 ## How to prepare them
 
-1. **Build a trailing twelve months view.** Put the last 12 months of revenue and costs side by side, month by month. This is the [trailing twelve months](/glossary/trailing-twelve-months/) figure most offers are based on.
-2. **Match the numbers to a second source.** Revenue in your books should agree with what the payment processor paid out and what reached the bank. Where it does not, write a one-line reason.
-3. **Document every add-back.** If you add a cost back to profit as a one-off, keep the invoice or note that shows why.
-4. **List every account and who holds the login.** Include the domain, hosting, email service, payment processor, advertising accounts and any tool the business cannot run without.
-5. **Keep contracts in one folder.** Include supplier terms and anything with a renewal date.
+1. **Build a [trailing twelve months](/glossary/trailing-twelve-months/) view**, month by month.
+2. **Match every figure to a second source.** Where books and payouts differ, write one line why.
+3. **Document each add-back** with the invoice or a note.
+4. **List every account and who holds the login.**
 
-## What a worked example looks like
+## A worked example
 
-A seller reports $48,000 of profit for the year. The buyer asks for the monthly profit and loss statement, the payout reports and the bank statements. If monthly profit in the statement adds to $48,000 and the payouts agree with the deposits, the conversation moves on. If the statement says $48,000 but the deposits suggest $41,000, the gap is $7,000. At a multiple of 3.0 that is a $21,000 difference in price, so the buyer will either ask for an explanation or lower the offer.
+A seller reports $48,000 of annual profit. If the monthly statement adds to $48,000 and payouts agree with deposits, the talk moves on. If deposits suggest $41,000, the gap is $7,000. At a multiple of 3.0 that is $21,000 off the price, so the buyer will ask why or lower the offer.
 
 ## Share carefully
 
@@ -57,15 +64,11 @@ Do not send passwords, full bank access or customer personal data before the buy
 
 ### Do I need audited accounts?
 
-No. Most small online businesses are sold on management accounts and platform records, not audited statements. What matters is that each figure can be traced to a source the buyer can check.
+No. Most small online businesses are sold on management accounts and platform records. What matters is that each figure traces to a source the buyer can check.
 
-### Will a buyer want my personal tax returns?
+### What if I have no formal bookkeeping?
 
-Often the business's returns, or your personal returns where the business is reported on them. Ask your accountant what to show.
-
-### When should I share documents?
-
-In stages. Start with summary reports, then give more detail as the buyer moves from interest to a letter of intent. The [due diligence checklist](/guides/digital-business-due-diligence/) shows how the buyer's requests are normally ordered.
+Build a monthly spreadsheet from payout reports and deposits, and have an accountant review it. See the [due diligence checklist](/guides/digital-business-due-diligence/).
 
 ## Sources
 

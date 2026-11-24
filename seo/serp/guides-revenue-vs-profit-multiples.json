@@ -26,6 +26,7 @@
   "Add FAQ"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-24",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added one-price-four-multiples table, decision list, sold-listing benchmark with caveat, 3 FAQs, Sources; new title and description."
 }

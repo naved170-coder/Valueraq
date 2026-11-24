@@ -1,14 +1,14 @@
 ---
 title: Revenue vs Profit Multiples
-meta_title: Revenue vs Profit Multiples: Which to Use?
-meta_description: When to value a business on revenue and when on profit, why the multiples differ so much, and worked examples of both. Free calculator included.
+meta_title: Revenue vs Profit Multiples: Which to Use? (Table)
+meta_description: Revenue multiples suit SaaS, profit multiples suit most small sites and stores. See one price converted four ways, plus when to use which. Free calculator included.
 h1: Revenue Multiples vs Profit Multiples
 section: Comparisons
 cluster: analysis
 order: 30
 answer: A revenue multiple divides a business's price by its annual revenue; a profit multiple divides it by annual profit. Profit multiples are used for most small, owner-run online businesses because they reflect what the owner keeps. Revenue multiples are used mainly for SaaS and other recurring-revenue businesses, especially when profit is being reinvested in growth.
 published: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-24
 related: /glossary/revenue-multiple/, /glossary/profit-multiple/, /calculators/business-multiple-calculator/, /calculators/, /guides/business-valuation/
 cta: /calculators/business-multiple-calculator/
 cta_text: Turn any asking price into its revenue and profit multiples with the free Business Multiple Calculator.
@@ -58,6 +58,31 @@ Two businesses are both listed at $400,000:
 
 On revenue, the store looks five times cheaper. On profit, which is what a buyer keeps, the prices are identical. The store also needs inventory and carries more operational risk, so a buyer might argue for a lower profit multiple.
 
+## One price, four multiples
+
+The same sale can be described four ways. Take a business sold for $400,000 with annual revenue of $160,000, seller's discretionary earnings (SDE) of $120,000, and EBITDA of $105,000 (SDE less $15,000 for a manager to replace the owner).
+
+| Multiple | Calculation | Result |
+|---|---|---|
+| Revenue multiple | 400,000 ÷ 160,000 | 2.5× |
+| SDE multiple | 400,000 ÷ 120,000 | 3.3× |
+| EBITDA multiple | 400,000 ÷ 105,000 | 3.8× |
+| Months of SDE | 3.33 × 12 | about 40 months |
+
+All four describe the same $400,000. When someone quotes "a 3× multiple", ask which line of this table they mean.
+
+## Which multiple should you use? A decision list
+
+1. **Is the business mostly subscriptions?** Start with a revenue (ARR) multiple, then check the profit multiple it implies.
+2. **Does the owner work in the business and draw the profit?** Use an SDE multiple.
+3. **Does a manager run it and does it have a payroll?** Use an EBITDA multiple.
+4. **Is it a store, site, app or newsletter with steady profit?** Use a profit multiple.
+5. **Is profit negative or tiny?** A profit multiple will not work; read [valuing a business on revenue](/guides/valuing-a-business-on-revenue/).
+
+## What sold listings show
+
+BizBuySell publishes benchmarks for website and ecommerce sales from 2021 to 2025, covering 1,661 sold listings. It reports a "median sold earnings multiple: 3.28" and a "median revenue multiple: 0.90" ([BizBuySell](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/)). These listings skew toward larger, broker-sold businesses, so use them as an illustration, not as a promise for your own sale. The gap between 0.90 and 3.28 shows why revenue and profit multiples must never be compared directly: they measure different things.
+
 ## Common mistakes
 
 - **Comparing revenue multiples across different business models.** Margins differ too much.
@@ -78,3 +103,21 @@ It depends on the business's age, growth and risk. {{BRAND}}'s default starting 
 ### Is EBITDA a profit multiple?
 
 Yes. An EBITDA multiple is a profit multiple based on EBITDA instead of SDE. It's more common for larger businesses with management teams. See [EBITDA](/glossary/ebitda/) and [SDE](/glossary/sde/).
+
+### Why is a revenue multiple always lower than a profit multiple?
+
+Revenue is larger than profit, so dividing the same price by revenue gives a smaller number. The two only line up when you know the margin: a 25% margin turns 2× revenue into 8× profit.
+
+### How do I convert a revenue multiple to a profit multiple?
+
+Divide the revenue multiple by the profit margin as a decimal. A 1.5× revenue multiple at a 30% margin is 1.5 ÷ 0.30 = 5× profit.
+
+### Which multiple do buyers of small online businesses look at first?
+
+Most look at profit first, because it is what they will keep. Revenue is used to check the figures and to compare similar businesses.
+
+## Sources
+
+- BizBuySell, [Valuation benchmarks: Websites and ecommerce businesses](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/): median sold earnings and revenue multiples for 2021 to 2025.
+- Corporate Finance Institute, [Enterprise value to revenue multiple](https://corporatefinanceinstitute.com/resources/valuation/ev-to-revenue-multiple): a revenue multiple "ignores profitability and cash flow generation".
+- VALUERAQ, [Valuation methodology](/methodology/): the default ranges referred to above.

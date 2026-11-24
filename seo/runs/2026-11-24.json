@@ -1,15 +1,67 @@
 {
-  "summary": "Wrote 1 article (how much is my startup worth), live 25 Nov 12 am Pakistan and not held. No reference pages were written because no reference-page topic has saved competitor research (the article topics left all do).",
+  "summary": "Wrote 1 article (how much is my startup worth), live 25 Nov 12 am Pakistan and not held. No reference pages were written because no reference-page topic has saved competitor research (the article topics left all do). Also improved 4 existing pages (documents buyers ask for, revenue vs profit multiples, goodwill, fulfillment by Amazon).",
   "model": "claude-sonnet-5-5",
   "items": [
-    {"path": "/guides/how-much-is-my-startup-worth/", "action": "new", "type": "Article", "score": 8.7,
-     "duplicate": "pass (closest: /guides/micro-saas-valuation/, /guides/saas-valuation/)",
-     "images": "1 featured, 2 charts",
-     "keywords": ["how much is my startup worth", "startup valuation calculator", "value my startup"],
-     "serp": "used",
-     "note": "Not held. Release 25 Nov 12 am Pakistan. Secondary keyword 'startup valuation' left out: already used by /guides/micro-saas-valuation/. Worked figures come from app/valuation.py; sources from seo/sources.json."}
+    {
+      "path": "/guides/how-much-is-my-startup-worth/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.7,
+      "duplicate": "pass (closest: /guides/micro-saas-valuation/, /guides/saas-valuation/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "how much is my startup worth",
+        "startup valuation calculator",
+        "value my startup"
+      ],
+      "serp": "used",
+      "note": "Not held. Release 25 Nov 12 am Pakistan. Secondary keyword 'startup valuation' left out: already used by /guides/micro-saas-valuation/. Worked figures come from app/valuation.py; sources from seo/sources.json."
+    },
+    {
+      "path": "/guides/what-documents-do-buyers-ask-for/",
+      "action": "improve",
+      "note": "Added where-to-get-each column and when-to-share table; new title and description."
+    },
+    {
+      "path": "/guides/revenue-vs-profit-multiples/",
+      "action": "improve",
+      "note": "Added one-price-four-multiples table, decision list, sold-listing benchmark, FAQs, Sources; new title and description."
+    },
+    {
+      "path": "/glossary/goodwill/",
+      "action": "improve",
+      "note": "Added website-sale worked example and FAQs; new title and description."
+    },
+    {
+      "path": "/glossary/fulfillment-by-amazon/",
+      "action": "improve",
+      "note": "Added buyer checklist table and FAQs; new title and description."
+    }
   ],
-  "tasks": ["duplicate_check", "research", "article", "images", "editorial_review", "gates", "scheduled", "link_check", "serp_compare", "report"],
-  "checks": ["Tests: 134 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: checked by seo-check", "External links: taken from verified seo/sources.json, not re-opened (web fetch unavailable)"],
-  "notes": ["No glossary or question-page topic has saved research, so no reference pages were written (runbook: research before volume). Next research session should collect some glossary/question topics.", "Ranking data read from Render logs (rankings-snapshot): 7-day CTR 14%, but only 6 clicks; many 'cannibal' actions point at the website-valuation and SaaS tools/guides/calculators competing for the same searches.", "Improvement step done for 4 pages as the scheduled task asks (runbook text says ten)."]
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "serp_compare",
+    "improve",
+    "report"
+  ],
+  "checks": [
+    "Tests: 134 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check",
+    "External links: taken from verified seo/sources.json, not re-opened (web fetch unavailable)"
+  ],
+  "notes": [
+    "No glossary or question-page topic has saved research, so no reference pages were written (runbook: research before volume). Next research session should collect some glossary/question topics.",
+    "Ranking data read from Render logs (rankings-snapshot): 7-day CTR 14%, but only 6 clicks; many 'cannibal' actions point at the website-valuation and SaaS tools/guides/calculators competing for the same searches.",
+    "Improvement step done for 4 pages as the scheduled task asks (runbook text says ten)."
+  ],
+  "improved": 4
 }
