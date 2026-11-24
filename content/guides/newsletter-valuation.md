@@ -1,14 +1,14 @@
 ---
 title: How to Value a Newsletter
-meta_title: How to Value a Newsletter: Multiples & Open Rate
-meta_description: How newsletters are valued: profit times a multiple, adjusted for open rate, sponsor mix and growth. Worked example and a free newsletter tool.
+meta_title: How to Value a Newsletter: Profit, Open Rate & Examples
+meta_description: How newsletters are valued: profit multiple, engagement versus list size, income model and sponsor mix, with a worked example and a free newsletter tool.
 h1: How to Value a Newsletter
 section: Valuation
 cluster: newsletter
 order: 5
 answer: Most small newsletters are valued as a multiple of annual net profit. The multiple moves up or down with how engaged the readers are, whether revenue comes from paid subscriptions or sponsors, how much depends on one sponsor, the revenue trend, the newsletter's age and the hours the owner puts in. Subscriber count alone does not set the price.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-24
 methodology_version: 1.0
 related: /tools/newsletter-valuation/, /businesses-for-sale/newsletters/, /glossary/open-rate/, /glossary/sde/, /glossary/customer-concentration/, /guides/business-valuation/
 cta: /tools/newsletter-valuation/
@@ -87,6 +87,21 @@ A hypothetical sponsor-funded newsletter:
 Steady growth adds 8% to the multiple. One sponsor providing 20% of revenue takes off 6%. Open rate, revenue model, age and owner time all sit in their baseline bands. Multiplied together (1.08 × 0.94), the combined adjustment is about +1.5%, giving an adjusted multiple of roughly 2.5× to 4.1× annual profit: around $183,000 to $292,000, with a midpoint near $234,000. The [Newsletter Valuation Tool](/tools/newsletter-valuation/) opens with these figures.
 
 These numbers are illustrative, not market data.
+
+## Why list size alone misleads
+
+A per-subscriber price is a quick sense check, never the method. Two newsletters with the same subscriber count can differ a lot in profit, and profit sets the price. Compare the profit-based value with the subscriber count afterwards: if the value per subscriber looks very high or very low next to similar lists, find out why.
+
+Engagement tells you more than size. Open rates can be inflated because some email apps pre-load messages, so clicks, replies and sponsor results are a firmer sign of a real audience. Be ready to show them.
+
+## How each income model affects value
+
+| Income model | Strength | Risk a buyer weighs |
+|---|---|---|
+| Paid subscriptions | Recurring, predictable income | Cancellations, price sensitivity |
+| Sponsorships | Scales with audience | Depends on a few sponsors renewing |
+| Affiliate links | Little extra work | Changes in partner terms |
+| Mixed | Spreads the risk | More to document |
 
 ## Common mistakes
 

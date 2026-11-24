@@ -1,7 +1,7 @@
 ---
 title: How Do You Write a Good Business-for-Sale Listing?
-meta_title: How to Write a Business-for-Sale Listing That Sells
-meta_description: Write a listing that gets serious buyers: the facts to include, how to present the numbers honestly and an example structure. List free, no commission.
+meta_title: Business-for-Sale Listing: Template and Example
+meta_description: A listing template for online businesses, a weak-versus-strong example, what to keep private and how to stay honest. List free, no commission.
 h1: How Do You Write a Good Business-for-Sale Listing?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: A good business-for-sale listing leads with 12 months of real figures, says plainly what the business does and how it earns, explains why you are selling and how much time it takes to run, lists what is included, and states the known risks. Specific, checkable facts earn more trust than adjectives.
 keywords: business for sale listing, how to write a business listing, business for sale description, sell my business listing
 published: 2026-10-16
-updated: 2026-10-16
+updated: 2026-11-24
 publish_at: 2026-10-15T19:00Z
 image: /static/img/articles/how-to-write-a-business-for-sale-listing.png
 image_alt: Featured image for the quick answer on how to write a business-for-sale listing
@@ -46,6 +46,26 @@ Do not guess. If you do not know a figure, leave it out or say it is an estimate
 ## Keep private details private
 
 Leave out the website address, customer names and anything that identifies the business until a buyer has contacted you and you are comfortable sharing it. On VALUERAQ the website address stays private on a listing, and every listing is checked against the [marketplace rules](/marketplace-rules/) before it goes live.
+
+## Listing template for an online business
+
+Online buyers filter and compare on the same few fields, so put them at the top in this order and fill every one:
+
+| Field | Example of how to write it |
+|---|---|
+| Business type | Content website, small online store, SaaS, newsletter |
+| Age | Years since launch |
+| Revenue | Average monthly revenue, last 12 months |
+| Profit | Average monthly net profit, last 12 months, after all costs |
+| Traffic sources | Share from search, direct, email, social, paid |
+| Monetization | How the income splits (ads, affiliate, product sales, subscriptions) |
+| Owner hours | Hours per week and what they go on |
+| Included in the sale | Domain, accounts, content, code, customer or email lists |
+| Reason for selling | One honest sentence |
+
+## A weak listing and a strong one
+
+Weak: "Amazing website, huge potential, passive income!" Strong: "Four-year-old content site, steady monthly profit, 12 months of records, about 6 hours a week to run," followed by the filled-in field table and the main risk. Facts beat adjectives.
 
 ## Be ready for the follow-up
 

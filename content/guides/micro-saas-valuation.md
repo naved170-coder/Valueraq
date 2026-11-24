@@ -1,7 +1,7 @@
 ---
 title: Micro-SaaS Valuation: Pricing a Small Software Business
-meta_title: Micro-SaaS Valuation: What Is a Small SaaS Worth?
-meta_description: How micro-SaaS businesses are priced: ARR or profit multiple, churn, owner time and customer mix, with a worked example and a free calculator.
+meta_title: Micro-SaaS Valuation: ARR vs Profit, Churn & Checklist
+meta_description: How micro-SaaS products are priced: ARR or profit multiple, churn, owner time, metric formulas and a checklist to raise your multiple. Free calculator.
 h1: Micro-SaaS Valuation: Pricing a Small Software Business
 section: Valuation
 cluster: saas
@@ -10,7 +10,7 @@ page_type: article
 answer: A micro-SaaS is usually priced as a multiple of annual recurring revenue (ARR), then checked against annual profit, because buyers of very small software businesses often pay for the income they can take home. Churn, founder hours and one large customer move the price more at this size than they do for a bigger company.
 keywords: micro saas valuation, saas startup valuation, saas for sale, small saas valuation
 published: 2026-11-01
-updated: 2026-11-05
+updated: 2026-11-24
 publish_at: 2026-11-02T01:00Z
 image: /static/img/articles/micro-saas-valuation.png
 image_alt: Featured image for the guide to micro-SaaS valuation, covering ARR, profit, churn and founder hours
@@ -179,6 +179,26 @@ Any one of these costs the seller $14,000 to $17,000 at the midpoint. Each is so
 4. Check what happens to the product if the largest customer leaves.
 
 The U.S. Small Business Administration advises "thorough, objective investigation" before buying an existing business, and says: "Consider hiring an attorney and an accountant." That applies to a $50,000 software product as much as to a larger one. For the sale process, see [how to sell a SaaS business](/guides/how-to-sell-a-saas-business/). For the single-page version of the price question, see [what is a fair price for a small SaaS](/guides/what-is-a-fair-price-for-a-small-saas/).
+
+## Formulas for the metrics buyers check
+
+| Metric | Formula | What it tells a buyer |
+|---|---|---|
+| Monthly churn | Customers lost in the month ÷ customers at the start of the month | How fast revenue leaks |
+| Customer lifetime (months) | 1 ÷ monthly churn | How long an average customer stays |
+| Customer lifetime value (LTV) | Average monthly revenue per customer × customer lifetime | What one customer is worth over time |
+| Customer acquisition cost (CAC) | Sales and marketing spend ÷ new customers won | What it costs to win one |
+| LTV to CAC | LTV ÷ CAC | Whether growth pays for itself |
+
+Work these out from your own records before you list, because a buyer will.
+
+## Checklist: how to raise your multiple
+
+- Keep monthly churn steady and write down why cancellations happen.
+- Get the largest customer below a third of revenue where you can.
+- Document the product so a new owner can run it in fewer hours.
+- Show twelve months of revenue and cost records that match your bank and payment data.
+- Remove one-off costs and one-off income from the profit figure and say so.
 
 ## Limits of these numbers
 

@@ -1,7 +1,7 @@
 ---
 title: How to Increase the Value of a Website Before You Sell
-meta_title: 5 Ways to Increase Your Website's Value Before Selling
-meta_description: Five changes that can raise your website's sale price: cleaner records, less owner time, more traffic sources and more. Check your value free.
+meta_title: Increase Website Value Before Selling: 12-Month Plan
+meta_description: A 12-month plan and a worked example showing what lifts a website's sale price: traffic mix, owner hours, growth and records. Free valuation tool.
 h1: How to Increase the Value of a Website Before You Sell
 section: Selling
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: To increase a website's value before you sell, work on what buyers weigh beyond profit: spread traffic across more than one source, cut the hours you personally work, show steady revenue growth, mix your income sources, and keep clean records. In VALUERAQ's worked example these changes lift the midpoint value from about $114,000 to $165,000.
 keywords: increase website value, sell website, how to sell a website, website value before selling, raise website sale price
 published: 2026-10-23
-updated: 2026-10-22
+updated: 2026-11-24
 publish_at: 2026-10-23T01:00Z
 image: /static/img/articles/increase-website-value-before-selling.png
 image_alt: Featured image for the guide How to Increase the Value of a Website Before You Sell
@@ -113,6 +113,19 @@ Check the first and last rows: $42,000 × 2.72 = $114,240, shown as $114,000, an
 ![Midpoint multiple after each change: Start 2.72x, Channels 3.1x, Owner time 3.42x, Growth 3.7x, Revenue mix 3.92x](/static/img/articles/increase-website-value-before-selling-multiple-by-step.svg){: width="720" height="318" loading="lazy" }
 
 This is an illustration under {{BRAND}}'s default assumptions. It shows why risk matters, not what any buyer will pay. Combined adjustments are also capped, so the gains cannot grow without limit.
+
+## A 12-month plan before you sell
+
+Some changes show up in the numbers faster than others, so order the work by how long each takes to appear in the records a buyer will see:
+
+| Months | Focus | What to have at the end |
+|---|---|---|
+| 1 to 2 | Records and owner hours | Twelve months of clean statements, written task notes, hours cut where you can |
+| 3 to 6 | Traffic and income sources | A second traffic channel growing, a second income stream tested |
+| 7 to 10 | Steady growth | A visible, explainable trend in revenue, with no sharp one-month jump |
+| 11 to 12 | Pack the sale | Asset list, account ownership list, a fresh free valuation to set the asking price |
+
+Buyers look at the last twelve months, so changes made in the final weeks help the story less than changes that have had time to show in the figures.
 
 ## Mistakes that cost sellers value
 

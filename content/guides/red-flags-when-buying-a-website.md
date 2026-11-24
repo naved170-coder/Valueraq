@@ -1,7 +1,7 @@
 ---
 title: Red Flags When Buying a Website: What to Check Before You Pay
-meta_title: Red Flags When Buying a Website: Check Before You Pay
-meta_description: The warning signs buyers miss: odd traffic, unverifiable income, rushed sellers and more. Check each one before you pay for a website.
+meta_title: Red Flags When Buying a Website: 14 Checks + SEO Traps
+meta_description: Spot the warning signs before you pay: a flag-by-flag check table, backlink and SEO traps, scam patterns and a worked example. Free buyer checklist.
 h1: Red Flags When Buying a Website: What to Check Before You Pay
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: The main red flags when buying a website are figures you cannot check at the source, a best month presented as an average, no proof the seller owns the site, traffic that does not match revenue, and pressure to pay outside escrow. Each can be tested before you pay.
 keywords: buying a website red flags, website for sale scam
 published: 2026-10-31
-updated: 2026-10-31
+updated: 2026-11-24
 publish_at: 2026-10-31T01:00Z
 image: /static/img/articles/red-flags-when-buying-a-website.png
 image_alt: Featured image for the guide to red flags when buying a website and what to check before paying
@@ -114,6 +114,26 @@ Never pay a seller directly by bank transfer, cryptocurrency, gift cards or a pa
 ### 14. A request to leave the platform at once
 
 Moving to private email or a chat app on the first day removes the record of what was promised. Keep messages on the platform until you are confident about the other person. {{BRAND}} shows your email address to a seller only when you send them a message.
+
+## Red flags in search and backlinks
+
+A site that ranks on search can lose that traffic overnight if the rankings were built unsafely. Check these before you pay:
+
+| Warning sign | How to check | What it can mean |
+|---|---|---|
+| A sudden spike or cliff in search clicks | Ask for the search console history and read the dates | A ranking change that may not last |
+| Many links with the same anchor text | Review a backlink report for repeated phrases | Links bought or placed to manipulate rankings |
+| An older domain redirected into a new site | Ask the site's history and any past domains | Borrowed authority that can disappear |
+| A sharp jump in new links in a short period | Look at when links appeared | A paid push rather than steady growth |
+
+## Scam patterns to know
+
+- Screenshots that look edited or cannot be matched to a live dashboard.
+- A seller who proposes closing quickly or paying outside an independent escrow service.
+- A story that changes when you ask for source access.
+- A request to move the conversation off the platform before you have verified anything.
+
+Any one of these is a reason to pause and verify, not to walk away automatically, but a seller who refuses every check has told you something.
 
 ## Worked example: one month changes the price
 

@@ -1,0 +1,20 @@
+{
+  "status": "fixed",
+  "summary": "All checks passed (last night's run done, deploy live, no errors, 134 tests pass); 5 existing pages improved from competitor research.",
+  "checks": [
+    "Last night's run: done, 7 items (3 new held pages, 4 improved)",
+    "Queue: today's slots filled; pages and images present (new pages scheduled 24 Nov 12 am, 6 am and 12 pm Pakistan time; tonight's slots are written by the evening run)",
+    "Tests: 134 passed; seo-check 0 problems; audit 278 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy live (23 Nov 14:56 UTC); no error-level log lines since 23 Nov 03:00 UTC",
+    "Search figures: snapshot readable (last data 2026-11-22): 28 days 39 clicks, 18,018 impressions, average position 47.7 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 74 days listed; unwritten days not recounted in detail this morning",
+    "Held pages: 4 files with hold: yes",
+    "Article written: yes (selling an online business from the UK)",
+    "Ranking review: not a Monday or Thursday, skipped"
+  ],
+  "fixed": [
+    "Improved 5 pages from competitor research: content/guides/how-to-write-a-business-for-sale-listing.md, increase-website-value-before-selling.md, micro-saas-valuation.md, newsletter-valuation.md, red-flags-when-buying-a-website.md (new tables, checklists, formulas, new titles and descriptions)"
+  ],
+  "needs_owner": []
+}
