@@ -2,15 +2,15 @@
 title: What Is Net Profit?
 term: Net Profit
 aliases: net profit, net income, bottom line, net earnings
-meta_title: What Is Net Profit? Definition, Formula & Example
-meta_description: Net profit is what a business keeps after all its costs are paid. See the formula, a worked example and why buyers adjust it before applying a multiple.
+meta_title: Net Profit vs SDE: Formula and Add-Back Example
+meta_description: Net profit is revenue minus all costs. See the formula and how buyers turn it into SDE with add-backs before applying a multiple.
 h1: Net Profit
 definition: Net profit is the money a business has left after subtracting all of its costs from its revenue, including the cost of goods, running costs, interest and taxes.
 cluster: analysis
 page_type: reference
 keywords: net profit, net profit formula, what is net profit
 related: /glossary/sde/, /glossary/ebitda/, /glossary/add-backs/, /glossary/gross-margin/, /glossary/profit-multiple/
-updated: 2026-10-10
+updated: 2026-11-25
 publish_at: 2026-10-10T07:00Z
 image: /static/img/articles/net-profit.png
 image_alt: Featured image for the glossary entry What Is Net Profit
@@ -48,9 +48,37 @@ Most small digital businesses are priced as yearly profit multiplied by a [multi
 
 Because tax rules differ by country, check with an accountant how your profit is calculated for tax before comparing it with a listing.
 
+## From net profit to SDE: an add-back example
+
+Take the website above, with $66,000 of net profit. Suppose the owner paid themselves $24,000 over the year, spent $3,000 on a one-off redesign and put $1,200 of personal software on the business card. A buyer would rework the figure like this (hypothetical numbers):
+
+| Item | Amount |
+|---|---|
+| Net profit | $66,000 |
+| + Owner's pay | $24,000 |
+| + One-off redesign | $3,000 |
+| + Personal software | $1,200 |
+| **SDE** | **$94,200** |
+
+At {{BRAND}}'s default website range of 2.5× to 4.0×, that is $94,200 × 2.5 = $235,500 to $94,200 × 4.0 = $376,800. The same range on net profit alone gives $165,000 to $264,000. Each add-back needs a receipt or record, or the buyer will remove it. See [how to calculate SDE](/guides/how-to-calculate-sde/).
+
 ## Net profit vs revenue
 
 Revenue is the money coming in. Net profit is what stays. Two businesses with the same $120,000 of revenue can have very different net profit: one might keep $66,000 and the other $20,000, because their costs differ. That is why buyers of small digital businesses ask for profit records and not only sales figures, and why a listing should show both.
+
+## Frequently asked questions
+
+### Is net profit the same as net income?
+
+Yes. Net profit, net income, net earnings and the bottom line all mean revenue minus all costs.
+
+### Is net profit before or after tax?
+
+It is normally after tax. Small-business listings often quote profit before tax and before the owner's pay, so always ask which one a figure is.
+
+### Which profit figure do buyers use to price a website?
+
+Usually SDE, which starts from net profit and adds back the owner's pay and one-off or personal costs. Use the [website worth calculator](/calculators/website-worth-calculator/) to see the effect.
 
 ## Related terms
 

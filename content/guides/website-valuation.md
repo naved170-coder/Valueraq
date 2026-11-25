@@ -1,7 +1,7 @@
 ---
 title: How to Value a Website
-meta_title: How to Value a Website: Formula, Multiples & Example
-meta_description: Established websites often sell for 2.5 to 4 times yearly profit. See the formula, what moves the multiple and a worked example. Free calculator included.
+meta_title: How to Value a Website: 5 Methods + Worked Example
+meta_description: Most sites are priced at 2.5 to 4 times yearly profit. Compare 5 valuation methods and see one site valued 3 ways. Free calculator included.
 h1: How to Value a Website
 section: Valuation
 cluster: website
@@ -9,7 +9,7 @@ keywords: how to value a website, website valuation, website valuation formula, 
 order: 1
 answer: Most small websites are valued by multiplying their annual net profit by a multiple, typically a few times annual profit, and then moving that multiple up or down for the site's age, growth, traffic sources, monetization and the owner's workload. Traffic and revenue matter because they drive profit and signal risk, but profit is the number buyers pay for.
 published: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-25
 methodology_version: 1.0
 related: /tools/website-valuation/, /calculators/website-worth-calculator/, /businesses-for-sale/websites/, /guides/digital-business-due-diligence/, /guides/revenue-vs-profit-multiples/
 cta: /tools/website-valuation/
@@ -68,6 +68,32 @@ A hypothetical affiliate site:
 
 Annual profit is $4,500 × 12 = $54,000. Starting from the default midpoint of 3.2×, the site's age (+5%) and growth (+8%) push the multiple up, while traffic concentration (−6%) and affiliate dependence (−3%) pull it down. The combined effect is a small increase, and the estimate comes out at roughly $140,000 to $223,000. The [Website Valuation Tool](/tools/website-valuation/) opens with this example so you can see each step.
 
+## Five ways to value a website, compared
+
+Buyers and brokers use several methods. They rarely agree, and the gap between them is useful information.
+
+| Method | How it works | When it works | Weakness |
+|---|---|---|---|
+| Earnings multiple | Annual profit × a multiple | Any site with 12+ months of verified profit | The multiple is a judgement |
+| Revenue multiple | Annual revenue × a multiple | Quick cross-check, or when profit is hard to separate | Ignores costs, so it misprices very high or very low margins |
+| Traffic value | Visitors × what each visit earns | Sites with traffic but little revenue so far | Speculative; only as good as the earnings per visit |
+| Cost to build | What it would cost to recreate the content and setup | Floor price for a young site | Buyers pay for earnings, not effort |
+| Asset value | Domain, content, accounts and tools valued separately | Sites that earn almost nothing | Usually the lowest figure |
+
+For an established, profitable site, start with the earnings multiple and use the others as checks.
+
+### The same site, valued three ways
+
+Take the affiliate site from the example above: $6,000 average monthly revenue ($72,000 a year) and $4,500 average monthly profit ($54,000 a year). Assume, for the cost method only, that rebuilding it would cost $30,000.
+
+| Method | Calculation | Result |
+|---|---|---|
+| Earnings multiple, {{BRAND}} default range | $54,000 × 2.5 to $54,000 × 4 | $135,000 to $216,000 |
+| Revenue multiple, sold-listing median | $72,000 × 0.90 | $64,800 |
+| Cost to build (assumed $30,000) | rebuild cost | $30,000 |
+
+The revenue figure uses the median revenue multiple of 0.90 from BizBuySell's published data on 1,661 sold website and ecommerce listings from 2021 to 2025. Those listings skew to larger, broker-sold businesses, so treat it as a rough cross-check, not a rule. It comes out far below the earnings figure because this site keeps 75% of its revenue as profit ($54,000 ÷ $72,000), which is a very high margin; a median multiple reflects a typical margin. That is why profit, not revenue, is the starting point. Only the earnings method sees that this site is unusually efficient.
+
 ## Factors that don't usually add much value
 
 - **Domain authority scores and similar third-party metrics.** They are estimates made by SEO tools, not measures a search engine uses, and buyers look at actual traffic and revenue instead.
@@ -105,6 +131,20 @@ Buyers generally want at least 12 months of earnings history, and many prefer tw
 
 Usually yes. A website sale normally transfers the domain, content, design, accounts and documentation, and the purchase agreement should list every asset.
 
+### Which website valuation method is the most accurate?
+
+None is exact. For a site with verified profit, the earnings multiple is the standard starting point because it prices what the buyer will actually receive. Use revenue, traffic and cost methods as cross-checks, and be suspicious when they disagree widely.
+
+### Should I use monthly or yearly profit?
+
+Use the average of the last 12 months, annualized. A single strong month overstates value, and a recent decline is easier to explain if you show both the 12-month average and the latest three months.
+
 ### How do I increase my website's value before selling?
 
 Diversify traffic and revenue, reduce the hours you spend on it, document your processes, and keep clean monthly records. See [how to sell a digital business](/guides/selling-digital-businesses/).
+
+## Sources
+
+- [BizBuySell, Valuation benchmarks: Websites and ecommerce businesses](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/): sold-listing median revenue multiple of 0.90, 2021 to 2025.
+- [U.S. Small Business Administration, Close or sell your business](https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business): income, market and assets approaches to valuation.
+- {{BRAND}} [methodology](/methodology/) for the default multiples and adjustments.

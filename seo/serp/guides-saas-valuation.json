@@ -48,6 +48,7 @@
   "Add FAQ (6+)"
  ],
  "collected": "2026-11-04",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-25",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added metrics table, ARR vs profit multiple comparison with arithmetic, Rule of 40 check, pre-sale improvements, 4 FAQs, Sources; new title and description."
 }
