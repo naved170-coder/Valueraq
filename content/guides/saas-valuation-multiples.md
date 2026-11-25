@@ -1,7 +1,7 @@
 ---
 title: SaaS Valuation Multiples: What They Are and How to Use Them
-meta_title: SaaS Valuation Multiples: What ARR Multiple Is Fair?
-meta_description: What ARR multiple should a SaaS sell for? See the typical ranges, what pushes a multiple up or down, and worked examples. Free calculator included.
+meta_title: SaaS Valuation Multiples: ARR Table & Examples
+meta_description: See the ARR multiple range with a value table at four revenue levels, worked examples and the asking-versus-closing price gap. Free calculator.
 h1: SaaS Valuation Multiples: What They Are and How to Use Them
 section: Valuation
 cluster: saas
@@ -10,7 +10,7 @@ page_type: article
 answer: A SaaS valuation multiple is the number you multiply annual recurring revenue (ARR) by to estimate what a subscription software business is worth. VALUERAQ's default range for a small SaaS business is 2.0 to 5.0 times ARR, and growth, churn, gross margin, customer concentration, age and owner workload move a business up or down from there.
 keywords: saas valuation multiples, saas revenue multiples, saas company valuation multiples, saas ebitda multiples, saas valuation
 published: 2026-10-07
-updated: 2026-11-05
+updated: 2026-11-25
 publish_at: 2026-10-07T01:00Z
 image: /static/img/articles/saas-valuation-multiples.png
 image_alt: Featured image for the guide SaaS Valuation Multiples, What They Are and How to Use Them
@@ -111,6 +111,21 @@ Two practical rules follow:
 - **For a very small SaaS business, think in profit.** A buyer who plans to live on the income will price on what the business pays its owner. The [SaaS valuation methods guide](/guides/saas-valuation-methods/) compares the two approaches.
 - **If profit is negative, say why.** Losses from deliberate growth spending can be defended. Losses because the product costs more to run than it earns cannot.
 
+## Quick value table at the default range
+
+Multiplying ARR by the default 2.0 to 5.0 range gives the values below before any adjustment. Real results move up or down with the six factors above.
+
+| ARR | At 2.0× | At 3.5× (midpoint) | At 5.0× |
+|---|---|---|---|
+| $60,000 | $120,000 | $210,000 | $300,000 |
+| $120,000 | $240,000 | $420,000 | $600,000 |
+| $240,000 | $480,000 | $840,000 | $1,200,000 |
+| $480,000 | $960,000 | $1,680,000 | $2,400,000 |
+
+## Asking price versus closing price
+
+A listing's asking price is a starting point, not a result. Sellers often ask for more than they expect to get, and buyers adjust after checking churn, billing records and customer concentration. For websites and ecommerce businesses, BizBuySell's sold-listing benchmark for 2021 to 2025 shows a median sale price of $825,000 against a median asking price of $850,000. That data is not for SaaS and skews to larger, broker-sold businesses, so treat it only as a sign that asking and closing prices differ, not as a discount to apply. When comparing a multiple from a listing, ask whether it is based on the asking price or a completed sale.
+
 ## Why public-company multiples don't apply
 
 Headlines quote revenue multiples for large listed software companies. Those figures describe businesses with hundreds of staff, audited accounts, many thousands of customers and shares that can be sold any day. A small SaaS business has none of those protections. It usually depends on one founder, one acquisition channel and a few hundred customers, and its owner cannot sell on any given day the way a shareholder can.
@@ -133,6 +148,10 @@ Once you have a multiple, the [how to value a SaaS company guide](/guides/saas-v
 
 There is no single good number. On {{BRAND}}'s assumptions a small SaaS business falls between 1.0 and 7.0 times ARR depending on six factors, with 3.5 as the default midpoint. A business with low churn and steady growth sits above the midpoint and one that is shrinking or leaking customers sits well below it.
 
+### Is a multiple based on an asking price reliable?
+
+Less than one based on a completed sale. Asking prices are a seller's hope. Check whether a quoted multiple comes from a closed deal.
+
 ### Is the multiple applied to ARR or to MRR?
 
 Either, but the numbers differ by 12. A multiple of 3.5 times ARR equals 42 times MRR. Check which one is meant before comparing two figures.
@@ -153,4 +172,5 @@ Not directly. If yearly billing reduces cancellations in your business, that sho
 
 - Stripe, [Essential SaaS metrics](https://stripe.com/resources/more/essential-saas-metrics): definitions of MRR, ARR, churn and net revenue retention.
 - Corporate Finance Institute, [Enterprise Value to Revenue Multiple](https://corporatefinanceinstitute.com/resources/valuation/ev-to-revenue-multiple): when revenue multiples are used and their limits.
+- BizBuySell, [Valuation benchmarks: Websites and ecommerce businesses](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/): median sold and asking prices, 2021 to 2025 (not SaaS-specific).
 - {{BRAND}}, [Valuation methodology](/methodology/): the default ranges and every adjustment rule used in the examples.

@@ -1,7 +1,7 @@
 ---
 title: How to Value a Shopify Store
-meta_title: How Much Is My Shopify Store Worth? Valuation Guide
-meta_description: How Shopify stores are valued: profit, multiple, stock and ad dependence, with a worked example. Check your store's value free in about a minute.
+meta_title: How Much Is My Shopify Store Worth? Free Checklist
+meta_description: Shopify store valuation with a factors table, a Shopify vs FBA comparison, a sale-prep timeline and a worked example. Free value check in a minute.
 h1: How to Value a Shopify Store
 section: Valuation
 cluster: ecommerce
@@ -10,7 +10,7 @@ page_type: article
 answer: A Shopify store is usually valued as a multiple of its yearly net profit, with sellable stock added on top at cost. VALUERAQ's default range for an ecommerce business is 2.0 to 3.5 times yearly profit, and factors such as fulfillment method, reliance on one sales channel, store age and owner hours move it up or down.
 keywords: shopify store valuation, ecommerce business valuation, shopify stores for sale, ecommerce valuation multiples, how much is my shopify store worth
 published: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-25
 publish_at: 2026-10-13T07:00Z
 image: /static/img/articles/shopify-store-valuation.png
 image_alt: How to Value a Shopify Store - profit, stock and multiples (VALUERAQ guide)
@@ -95,6 +95,28 @@ A customer who orders again costs nothing to win a second time. Buyers look at t
 
 Steady growth, several years of trading history and a short list of weekly owner tasks all support a higher multiple. A falling line, a store that is a few months old or a business that needs 40 hours of the owner's week all point down. Compare each month with the same month a year earlier, because many stores are seasonal.
 
+### Shopify-specific factors at a glance
+
+| Factor | Why a buyer cares | How {{BRAND}}'s tool treats it |
+|---|---|---|
+| App subscriptions | Monthly fees cut profit and some are tied to the seller's account | Counted through profit, so use net profit after all app costs |
+| Theme and customization | A heavily custom theme may need a developer to maintain | Not adjusted; a reason to argue for the lower end |
+| Returning-customer rate | Repeat orders cost little to win | Not adjusted directly; a reason to argue higher |
+| Email list size | A list the buyer inherits lowers future ad spend | Not adjusted directly; confirm it transfers |
+| Ad dependence | Profit may vanish if ad costs rise or an account is closed | Over 80% of sales from one channel: −12% |
+| Fulfillment method | Decides how clean the handover is | Dropshipping −8%; own warehouse is the baseline |
+
+### Shopify store or marketplace-fulfilled store
+
+| | Own Shopify store | Store selling through a marketplace |
+|---|---|---|
+| Customer data | Seller owns the email list | Usually limited by the marketplace |
+| Main risk | Paid ads and one search term | The marketplace's rules and fees |
+| Handover | Store, domain, apps, accounts | The seller account and listings, which may have transfer limits |
+| Default rule | Channel reliance: over 80% from one channel is −12% | The same rule applies if one marketplace is over 80% of sales |
+
+Confirm account transfer terms with the platform before you agree a price.
+
 ## Step 4: Add the stock
 
 Inventory is not part of the multiple. A buyer normally pays for sellable stock separately, at cost, after a count at closing. That keeps the price fair if stock levels move between the offer and the handover.
@@ -128,6 +150,13 @@ Before you rely on a valuation, whether you are buying or selling, test the fact
 - **Taxes and compliance.** Sales tax and customs rules depend on where you sell and ship. Ask an accountant; this guide does not give tax advice.
 
 The U.S. Small Business Administration lists financial statements, tax returns, contracts, leases, cash flow and inventory among the things to look at when buying a business, and advises a "thorough, objective investigation." The [digital business due diligence checklist](/guides/digital-business-due-diligence/) turns that into questions you can use.
+
+## A preparation timeline before you sell
+
+1. **Six to twelve months out:** separate personal and business costs, keep monthly profit records, and reduce reliance on one ad channel.
+2. **Three to six months out:** document supplier terms and processes, tidy the app list, and run a valuation.
+3. **One to three months out:** count sellable stock, gather the documents in [the due diligence checklist](/guides/digital-business-due-diligence/), and decide your lowest acceptable price.
+4. **Listing:** answer buyer questions with records, agree terms, and plan the handover.
 
 ## Mistakes that lead to a wrong valuation
 

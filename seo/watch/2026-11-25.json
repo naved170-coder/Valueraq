@@ -1,0 +1,23 @@
+{
+  "status": "needs_owner",
+  "summary": "All checks passed and 5 more existing pages were improved, but competitor research for new pages runs out in about 6 days.",
+  "checks": [
+    "Last night's run: done (1 article, live 25 Nov 12 am Pakistan, plus 4 pages improved)",
+    "Queue: no new pages in today's 6 am, 12 pm and 6 pm Pakistan slots because no reference-page topic has saved competitor research (the runbook treats this as correct, not a gap); tonight's slots are written by the evening run",
+    "Tests: 134 passed; seo-check 0 problems; audit 279 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy live (24 Nov 14:57 UTC); no error-level log lines since 24 Nov 03:00 UTC",
+    "Search figures: snapshot readable (last data 2026-11-23): 28 days 38 clicks, 18,109 impressions, average position 47.9 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 12 days still have unwritten pages (74 listed); no new days needed",
+    "Held pages: 4 files with hold: yes",
+    "Article written: yes (how much is my startup worth)",
+    "Ranking review: Wednesday, not a Monday or Thursday, skipped",
+    "Competitor research supply: 13 unwritten calendar topics have saved research, about 6 days of writing"
+  ],
+  "fixed": [
+    "Improved 5 pages from competitor research: content/guides/what-multiple-do-websites-sell-for.md, when-to-sell-an-online-business.md, saas-valuation-methods.md, saas-valuation-multiples.md, shopify-store-valuation.md (new tables, benchmark with caveat, timelines, FAQs, new titles and descriptions; the two reference pages were kept within 650 words)"
+  ],
+  "needs_owner": [
+    "Competitor research runs out in 7 days (around 1 Dec 2026): ask Claude to collect the next pages"
+  ]
+}

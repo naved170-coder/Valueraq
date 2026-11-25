@@ -1,14 +1,14 @@
 ---
 title: SaaS Valuation Methods
-meta_title: SaaS Valuation Methods: ARR, Profit & DCF Compared
-meta_description: Four ways to value a SaaS business, when each one fits and where it misleads, with a worked example of each. Plain English, with a free calculator.
+meta_title: SaaS Valuation Methods: Which to Use by Size
+meta_description: Five SaaS valuation methods compared, plus which fits your size, how a sale differs from fundraising, and a worked two-method example. Free calculator.
 h1: SaaS Valuation Methods
 section: Valuation
 cluster: saas
 order: 9
 answer: SaaS businesses are valued in five main ways: a multiple of recurring revenue (ARR or MRR), a multiple of profit (SDE or EBITDA), discounted cash flow, growth-plus-margin screens such as the rule of 40, and comparison with similar businesses that have sold. Small SaaS businesses are usually priced on an ARR multiple and checked against a profit multiple, and the two often give different answers.
 published: 2026-10-04
-updated: 2026-11-12
+updated: 2026-11-25
 methodology_version: 1.0
 related: /tools/saas-valuation/, /calculators/saas-valuation-calculator/, /guides/saas-valuation/, /guides/sde-vs-ebitda/, /guides/revenue-vs-profit-multiples/, /businesses-for-sale/saas/, /glossary/arr/, /glossary/mrr/
 cta: /tools/saas-valuation/
@@ -111,6 +111,21 @@ The top of the profit range only just meets the bottom of the ARR range. The ARR
 Neither answer is wrong. A buyer who plans to live off the income will reason from the profit figures and offer near $240,000. A buyer who believes they can grow the product, or cut costs, will reason from ARR. With growth of only 5%, the first buyer has the stronger argument, and a seller should expect offers toward the low end of the ARR range.
 
 As a screen, this business scores 5 (growth) + 40 (profit margin of $4,000 ÷ $10,000) = 45. That says the business is healthy for its growth rate. It says nothing about which of the two prices is right.
+
+## Which method fits which stage
+
+| Stage | Lead with | Cross-check with |
+|---|---|---|
+| Early, little profit, growing | ARR multiple | Growth-plus-margin screen |
+| Small, steady, owner-run | Profit multiple (SDE) | ARR multiple |
+| Established with a team | Profit multiple (EBITDA) | ARR multiple, comparable sales |
+| Larger, several years of retention data | Discounted cash flow | ARR multiple, comparable sales |
+
+These are guides, not rules. The dividing lines between stages are a matter of judgment, and {{BRAND}} does not publish revenue thresholds for them.
+
+## Selling versus raising money
+
+A sale prices the whole business for a buyer who takes control, and the price is usually tied to what the product earns or can be shown to earn. A fundraising round prices a share of the company for an investor who is betting on future growth, so the figure is often built from forecasts and growth stories. The same product can therefore get different numbers in each setting. {{BRAND}}'s tool is built for the first case: a sale of a small business.
 
 ## How to combine the methods
 

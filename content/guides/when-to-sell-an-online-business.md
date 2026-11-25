@@ -1,7 +1,7 @@
 ---
 title: When Is the Right Time to Sell an Online Business?
-meta_title: When to Sell an Online Business: Signs & Timing
-meta_description: The best time to sell is before you need to. Signs it's time, how timing affects price and how to prepare. Check what yours is worth free.
+meta_title: When to Sell an Online Business: Signals Table
+meta_description: A signals table, a 12 to 24 month exit timeline and a growth-versus-decline example showing how timing moves your price. Free valuation.
 h1: When Is the Right Time to Sell an Online Business?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: The best time to sell an online business is when its profit is steady or rising, its records cover at least twelve months and are clean, and you are choosing to sell rather than being forced to. Waiting for a decline usually lowers the price a buyer will pay.
 keywords: when to sell my online business, right time to sell a business, when to sell a website, sell online business timing
 published: 2026-10-19
-updated: 2026-10-19
+updated: 2026-11-25
 publish_at: 2026-10-19T13:00Z
 image: /static/img/articles/when-to-sell-an-online-business.png
 image_alt: Featured image for the quick answer When Is the Right Time to Sell an Online Business
@@ -26,22 +26,34 @@ Sell when the numbers are working in your favor and you do not have to. In pract
 
 ## Signs the timing is good
 
-1. **The trend is up or steady.** VALUERAQ's default rules add 8% to the multiple for revenue growing over 5% up to 25% over the last 12 months, and take 12% off for a fall of 5% to 20% (see the [methodology](/methodology/)). These are published assumptions, not market data, but they show the direction a buyer's thinking takes.
+1. **The trend is up or steady.** See the table below and the [methodology](/methodology/).
 2. **Your records are ready.** Buyers ask for monthly figures, platform statements and bank deposits that agree. See [what documents buyers ask for](/guides/what-documents-do-buyers-ask-for/).
-3. **The business does not depend on you.** Fewer owner hours make the handover easier. The default rules add 5% under 10 hours a week and take off 5% for over 20 up to 40.
+3. **The business does not depend on you.** Fewer owner hours make the handover easier.
 4. **No single channel or customer carries it.** Fixing that first often raises the price more than waiting does.
-5. **You have time.** A sale involves valuation, listing, questions, negotiation and a handover. Allow months, not days.
+5. **You have time.** Start 12 to 24 months ahead: clean records, then a valuation, then the listing.
+
+## Timing signals and what they do to the price
+
+| Signal | Usually a good time to sell? | Effect in the default rules |
+|---|---|---|
+| Revenue growing over 5% up to 25% | Yes, sell while the trend is visible | +8% on the multiple |
+| Revenue falling 5% to 20% | Fix the cause first if you can | −12% on the multiple |
+| Under one year of history | Wait for a longer record | −20% on the multiple |
+| Owner works under 10 hours a week | Yes, handover is easier | +5% on the multiple |
+| A known risk coming (lost channel, platform change) | Sell before it lands, and disclose it | Depends on the risk |
+
+These are published assumptions, not market data. Known risks must be disclosed to buyers.
 
 ## Signs to wait, or to fix something first
 
 - Profit has fallen for several months and you expect a recovery. Selling mid-decline fixes the lower figure into the price.
 - Your history is under a year. The default rules take 20% off a business under one year old and 10% off one that is one to under two years.
 - A large part of last year's profit was a one-off.
-- You are selling only because you are tired. That is a valid reason, but cutting hours first can raise the price and make a handover easier.
+- You are only tired. Cutting hours first can raise the price.
 
 ## A worked example
 
-A site earns $60,000 profit over twelve months. At a midpoint multiple of 3.2×, before any adjustment, the figure is 60,000 × 3.2 = **$192,000**.
+A site earns $60,000 profit over twelve months. At a midpoint multiple of 3.2×, before any adjustment, the figure is 60,000 × 3.2 = **$192,000** (about $207,400 with the 8% growth uplift).
 
 Suppose it then loses a major traffic source and profit falls to $42,000. At the same 3.2×, the figure is 42,000 × 3.2 = **$134,400**. The default rules would also take 12% off the multiple for a falling trend, so 3.2 × 0.88 = 2.82 and 42,000 × 2.82 = about **$118,400**. The drop from $192,000 to $118,400 is $73,600 (about 38%), from the same business and a profit fall of 30%. This is an illustration, not a forecast.
 
