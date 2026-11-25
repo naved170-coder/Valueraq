@@ -1,0 +1,15 @@
+{
+  "summary": "Wrote 1 article (how to choose a business marketplace), live 26 Nov 12 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {"path": "/guides/how-to-choose-a-business-marketplace/", "action": "new", "type": "Article", "score": 8.7,
+     "duplicate": "pass (closest: /guides/ways-to-sell-a-digital-business/, /guides/how-to-sell-your-online-business-without-a-broker/)",
+     "images": "1 featured, 1 chart", "keywords": ["how to choose a business marketplace", "best place to sell an online business", "where to sell an online business", "online business marketplace comparison"],
+     "serp": "used", "note": "Not held: names no competitor, states no VALUERAQ price. Fee models in the worked example are labelled illustrative. Release 26 Nov 12 am Pakistan."},
+    {"path": "/guides/buying-an-online-business-from-the-gulf/", "action": "skipped", "note": "Skipped: research found no usable sources and any UAE or Saudi legal statement needs an official source. Next article taken."},
+    {"path": "/guides/flippa-alternatives/", "action": "skipped", "note": "Skipped: needs competitor fees opened on the day, which this run cannot do."}
+  ],
+  "tasks": ["duplicate_check", "research", "article", "images", "editorial_review", "gates", "scheduled", "link_check", "serp_compare", "report"],
+  "checks": ["Tests: 134 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: checked by seo-check", "External links: taken from verified seo/sources.json, not re-opened (web fetch unavailable)"],
+  "notes": ["No reference-page topic (glossary or question page) has saved competitor research, so none was written. The owner's next research session should collect some.", "Gulf and Flippa-alternatives topics skipped once; skipped again they move to the end of the calendar."]
+}
