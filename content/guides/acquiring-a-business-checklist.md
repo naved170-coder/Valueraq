@@ -10,7 +10,7 @@ page_type: article
 answer: An acquiring a business checklist runs in seven stages: set your criteria and budget, screen listings, value the business, sign a letter of intent, complete due diligence, close with a written agreement and safe payment, then run a planned first 100 days. Skipping a stage is how buyers overpay or inherit problems.
 keywords: acquiring a business checklist, company acquisition checklist, pre acquisition due diligence checklist, business acquisition checklist, buying a business checklist
 published: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-26
 publish_at: 2026-11-16T01:00Z
 image: /static/img/articles/acquiring-a-business-checklist.png
 image_alt: Featured image for the acquiring a business checklist from first look to day 100
@@ -144,7 +144,7 @@ The price is a fair midpoint if profit holds, but it takes more than five years 
 Closing is where promises become documents. A lawyer should draft or review the [purchase agreement](/glossary/purchase-agreement/). Read it for:
 
 - the list of assets and whether you are buying assets or the company itself (see [asset sale](/glossary/asset-sale/) and [stock sale](/glossary/stock-sale/));
-- the seller's [representations and warranties](/glossary/representations-and-warranties/): written statements about the business that you can rely on if they turn out to be false;
+- the seller's representations and [warranties, and what warranties mean](/glossary/representations-and-warranties/): written statements about the business that you can rely on if they turn out to be false;
 - a [non-compete agreement](/glossary/non-compete-agreement/), so the seller cannot start a copy next door;
 - how the price is allocated between assets, which can affect tax, so ask your accountant;
 - the exact order in which accounts and assets move.

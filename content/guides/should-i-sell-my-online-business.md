@@ -1,7 +1,7 @@
 ---
 title: Should You Sell Your Online Business or Keep It?
-meta_title: Should I Sell My Online Business or Keep It?
-meta_description: Sell or keep? Compare the sale price with what the business will earn you, plus the questions to ask yourself first. Check its value free.
+meta_title: Should I Sell My Online Business? Sell vs Keep
+meta_description: Sell or keep your online business? Compare a sale price with three years of profit kept, then use the decision checklist. Check its value free.
 h1: Should You Sell Your Online Business or Keep It?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: Sell if the price you would receive is worth more to you than the profit you would earn by keeping the business, after counting your hours and the risks you carry. Keep it if the business pays you well, is stable, and you still want to run it.
 keywords: should i sell my online business, sell or keep a business, sell my website or keep it, selling an online business decision
 published: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-26
 publish_at: 2026-10-30T13:00Z
 image: /static/img/articles/should-i-sell-my-online-business.png
 image_alt: Featured image for the quick answer on whether to sell your online business or keep it
@@ -40,6 +40,18 @@ A website earns **$40,000** a year in profit and takes the owner 25 hours a week
 **Value at the midpoint = $40,000 × 3.2 = $128,000.**
 
 Keeping the site, the owner earns $40,000 a year. At that rate it takes **3.2 years** of profit ($128,000 ÷ $40,000) to equal the sale price. If the owner believes the profit will hold or grow for much longer than 3.2 years, keeping may be worth more. If they think traffic is at risk, or they no longer want 25 hours a week of work, the lump sum looks better. The same arithmetic works for any business with your own numbers.
+
+## Three years of profit against a sale
+
+Using the example above, with invented profit paths (not forecasts):
+
+| Case over 3 years | Profit kept | Compared with selling at $128,000 |
+|---|---|---|
+| Profit holds at $40,000 | $120,000 | $8,000 less |
+| Profit grows 10% a year | $132,400 | $4,400 more |
+| Profit falls 20% a year | $97,600 | $30,400 less |
+
+Keeping only wins if profit grows. The sale price is paid now, with no traffic risk.
 
 ## What to weigh besides the price
 

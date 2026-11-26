@@ -133,5 +133,20 @@
     "id": "75b8a6c6010e",
     "date": "2026-11-23",
     "note": "Linked \"SaaS valuation\" to /tools/saas-valuation/ from the ARR glossary page"
+  },
+  {
+    "id": "cacc8dce5930",
+    "date": "2026-11-26",
+    "note": "Added a 'Warranties meaning' section at the top of the representations and warranties page and linked to it with 'what warranties mean' from the app-buying guide and the acquisition checklist"
+  },
+  {
+    "id": "e58f8217ab87",
+    "date": "2026-11-26",
+    "note": "Linked 'sell my ecommerce business' to /guides/how-to-sell-an-ecommerce-business/ from the ecommerce valuation guide and the Shopify selling guide"
+  },
+  {
+    "id": "a3601a166f22",
+    "date": "2026-11-26",
+    "note": "Linked 'AI business valuation for buyers' to /guides/ai-business-valuation/ from the AI valuation methods guide and the SaaS multiples guide"
   }
 ]

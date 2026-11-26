@@ -1,14 +1,14 @@
 ---
 title: SDE vs EBITDA
-meta_title: SDE vs EBITDA: Which Should You Use to Value a Business?
-meta_description: SDE suits owner-run businesses; EBITDA suits larger ones with managers. See the difference, when to use each and a worked example. Free calculator included.
+meta_title: SDE vs EBITDA: Side-by-Side Example and When to Use Each
+meta_description: See one profit and loss converted to SDE and EBITDA side by side, why the multiples differ and which one fits your business. Free multiple calculator.
 h1: SDE vs EBITDA
 section: Comparisons
 cluster: analysis
 order: 33
 answer: SDE (seller's discretionary earnings) is profit before the owner's own pay, so it shows what one working owner takes home. EBITDA is profit after paying a manager to do the owner's job, so it shows what an investor who doesn't work in the business would earn. Small owner-run digital businesses are normally valued on SDE; larger businesses with a management team are valued on EBITDA. The same business has a lower EBITDA than SDE and therefore needs a higher multiple on EBITDA to reach the same price.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-26
 related: /glossary/sde/, /glossary/ebitda/, /guides/revenue-vs-profit-multiples/, /guides/business-valuation/, /calculators/business-multiple-calculator/
 cta: /calculators/business-multiple-calculator/
 cta_text: Turn an asking price into a profit multiple.
@@ -58,6 +58,21 @@ Suppose the business sells for $330,000. That price is 3.0× SDE and about 4.7×
 
 These numbers are illustrative, not market data.
 
+## The same profit and loss, converted both ways
+
+Take a hypothetical online store (invented figures, not market data) and walk one set of numbers to each measure.
+
+| Line | SDE | EBITDA |
+|---|---|---|
+| Net profit as reported | $60,000 | $60,000 |
+| Add back owner's pay taken | +$30,000 | +$30,000 |
+| Add back interest, depreciation and amortization | +$5,000 | +$5,000 |
+| Add back one-off cost (a legal clean-up) | +$3,000 | +$3,000 |
+| Deduct market pay for a replacement manager | not deducted | −$45,000 |
+| **Result** | **$98,000** | **$53,000** |
+
+The same business is $98,000 on one basis and $53,000 on the other, and neither figure is wrong. At a price of $294,000, that is 3.0× SDE and about 5.5× EBITDA ($294,000 ÷ $53,000). Always ask which line a quoted multiple sits on.
+
 ## Which one should you use?
 
 Use **SDE** when:
@@ -94,6 +109,14 @@ Subtract what it would cost to hire someone to do the owner's work, including th
 ### Why are EBITDA multiples higher than SDE multiples?
 
 Because EBITDA is a smaller number for the same business, and because businesses valued on EBITDA tend to be larger and less dependent on one person, which buyers pay more for.
+
+### When do buyers switch from SDE to EBITDA?
+
+There is no fixed line. Buyers move to EBITDA when the business has a manager or team that keeps it running without the owner, because the owner's pay is then already a cost. Size usually goes with this, but the test is whether the owner's job can be filled by someone hired.
+
+### Do SDE and EBITDA use different multiples?
+
+Yes. Because EBITDA is the smaller figure for the same business, the multiple needed to reach a given price is higher. Never apply a multiple from one basis to the other.
 
 ### Which figure do buyers on a marketplace expect?
 

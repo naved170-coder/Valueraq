@@ -8,7 +8,7 @@ cluster: ecommerce
 order: 7
 answer: Most small ecommerce businesses are valued as a multiple of annual net profit, with sellable inventory added on top at cost. The multiple moves with the revenue trend, the store's age, how it fulfills orders, how much depends on one sales channel and how many hours the owner works. Revenue matters less than profit, because product, shipping and advertising costs take most of each sale.
 published: 2026-10-02
-updated: 2026-11-12
+updated: 2026-11-26
 methodology_version: 1.0
 related: /tools/ecommerce-valuation/, /businesses-for-sale/ecommerce/, /glossary/average-order-value/, /glossary/gross-margin/, /glossary/conversion-rate/, /guides/business-valuation/
 cta: /tools/ecommerce-valuation/
@@ -144,6 +144,8 @@ Stock is added once and is not multiplied. These figures are an illustration.
 - Return and refund rates, and customer reviews.
 
 The [due diligence guide](/guides/digital-business-due-diligence/) covers the wider checklist.
+
+If you are ready to sell, the full process is in our guide to [how to sell my ecommerce business](/guides/how-to-sell-an-ecommerce-business/).
 
 ## Frequently asked questions
 

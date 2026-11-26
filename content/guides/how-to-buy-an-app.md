@@ -10,7 +10,7 @@ page_type: article
 answer: To buy an app, ask for 12 months of store payout statements, check how much of the profit is subscriptions and how many subscribers leave, see where installs come from, price it with a profit multiple, agree terms in writing, pay through escrow and move ownership with Apple's or Google's own transfer process.
 keywords: how to buy an app, mobile apps for sale, buy an app business, buying an app checklist, app for sale
 published: 2026-11-11
-updated: 2026-11-11
+updated: 2026-11-26
 publish_at: 2026-11-11T01:00Z
 image: /static/img/articles/how-to-buy-an-app.png
 image_alt: Featured image for the guide How to Buy an App
@@ -154,7 +154,7 @@ Once you are happy with the checks, the usual order is a [letter of intent](/glo
 - **Price and payment.** All at closing, or part later through [seller financing](/glossary/seller-financing/) or an [earnout](/glossary/earnout/). An earnout tied to profit can bridge a gap if the seller believes in growth you are not sure about.
 - **What is included.** Use the list from the start of this guide.
 - **Transition period.** Ask the seller to answer questions and help with the first releases. See [transition period](/glossary/transition-period/).
-- **Seller promises.** A clause that the seller owns the code and that the figures given are true, covered by [representations and warranties](/glossary/representations-and-warranties/).
+- **Seller promises.** A clause that the seller owns the code and that the figures given are true, covered by warranties. See [what warranties mean](/glossary/representations-and-warranties/) in a sale.
 - **Non-compete.** Stop the seller from launching a copy next week. See [non-compete agreement](/glossary/non-compete-agreement/).
 
 Have a lawyer review the agreement. The SBA's guidance also says to "consider hiring an attorney and an accountant."

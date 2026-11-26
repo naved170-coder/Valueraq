@@ -1,7 +1,7 @@
 ---
 title: The SaaS Metrics Buyers Check Before Making an Offer
-meta_title: SaaS Metrics Buyers Check Before Making an Offer
-meta_description: The SaaS numbers buyers check first: MRR, churn, net revenue retention, CAC and more, with what good looks like for a small SaaS. Free calculator included.
+meta_title: SaaS Metrics Buyers Check: Table and Red Flags
+meta_description: The SaaS metrics buyers check before an offer: formulas, where each number comes from, a cohort example and red flags. Free SaaS valuation calculator.
 h1: The SaaS Metrics Buyers Check Before Making an Offer
 section: Valuation
 cluster: saas
@@ -10,7 +10,7 @@ page_type: article
 answer: Before making an offer on a small SaaS business, buyers check monthly recurring revenue (MRR), growth, churn, net revenue retention, gross margin, customer concentration and profit. Churn, margin and concentration move the price most, because they show whether today's revenue will still be there next year.
 keywords: saas metrics, saas metrics buyers check, saas churn, net revenue retention, saas gross margin, saas due diligence
 published: 2026-10-25
-updated: 2026-10-25
+updated: 2026-11-26
 publish_at: 2026-10-25T01:00Z
 image: /static/img/articles/saas-metrics-buyers-check.png
 image_alt: Featured image for the guide The SaaS Metrics Buyers Check Before Making an Offer
@@ -31,6 +31,27 @@ Of these, churn, gross margin and concentration usually move the price most. In 
 A founder often leads with features. A buyer leads with a spreadsheet. Features matter, but the numbers show whether customers actually keep paying. The U.S. Small Business Administration tells buyers of existing businesses to carry out a "thorough, objective investigation" and to consider hiring an attorney and an accountant ([SBA](https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise)). For a subscription business, that investigation begins with the metrics below.
 
 If you are selling, have these numbers ready before you list. If you are buying, ask for each of them, and ask how they were calculated. The wider process is in the [due diligence guide](/guides/digital-business-due-diligence/).
+
+## The metrics at a glance
+
+| Metric | Formula | Where the number comes from | Why buyers care |
+|---|---|---|---|
+| MRR | Monthly subscription revenue, annual plans divided by 12 | Billing system or Stripe export | Size of the recurring base |
+| Churn | Customers lost in a month ÷ customers at its start | Billing export | How fast revenue leaks |
+| Net revenue retention | (Start MRR + expansion − contraction − churn) ÷ start MRR | Billing export by cohort | Whether existing customers grow or shrink |
+| Gross margin | (Revenue − cost of serving) ÷ revenue | Accounts | What is left to pay the owner |
+| Concentration | Largest customer ÷ total revenue | Billing export | Risk of one departure |
+
+### A small cohort example
+
+Invented figures: 100 customers paying $50 a month join in January. If 3 leave each month on average, about 97 remain after month one, and about 69 after twelve. The cohort then pays about $3,450 a month instead of $5,000. A buyer reads each month's cohort like this to see whether churn is steady or getting worse.
+
+### Red flags buyers look for
+
+- Annual prepayments counted as monthly revenue in one month.
+- Discounts or free months that are not shown in the headline MRR.
+- One customer, reseller or partner behind a large share of revenue.
+- Churn that is quoted as revenue churn when customer churn is far higher, or the reverse.
 
 ## The seven metrics, one by one
 

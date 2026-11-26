@@ -1,1 +1,26 @@
-{"status":"ok","summary":"Self-check started; stop checks passed, work in progress.","checks":[],"fixed":[],"needs_owner":[]}
+{
+  "status": "needs_owner",
+  "summary": "All checks passed, 5 more pages were improved and 3 ranking actions done, but competitor research for new pages runs out in about 6 days.",
+  "checks": [
+    "Last night's run: done (1 article, live 26 Nov 12 am Pakistan, plus 4 pages improved)",
+    "Queue: no new pages in today's remaining slots because no reference-page topic has saved competitor research (the runbook treats this as correct, not a gap)",
+    "Tests: 134 passed; seo-check 0 problems; audit 280 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy live (26 Nov 03:51 UTC); no error-level log lines since 25 Nov 03:00 UTC",
+    "Search figures: snapshot readable (last data 2026-11-24): 28 days 40 clicks, 18,336 impressions, average position 48.3 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 11 days still have unwritten pages; at least 10, no new days needed",
+    "Held pages: 4 files with hold: yes",
+    "Article written: yes (how to choose a business marketplace)",
+    "Ranking review (Thursday): 3 actions carried out, see fixed; the other open actions are left for later days",
+    "Competitor research supply: 12 unwritten calendar topics have saved research, about 6 days of writing"
+  ],
+  "fixed": [
+    "Improved 5 pages from competitor research: content/guides/saas-metrics-buyers-check.md, sde-vs-ebitda.md, seasonal-business-valuation.md, selling-digital-businesses.md, should-i-sell-my-online-business.md (new tables, worked examples, checklists, FAQs, new titles and descriptions)",
+    "Ranking action cacc8dce5930 (striking): added a 'Warranties meaning' section to the representations and warranties page and linked to it from two guides",
+    "Ranking action e58f8217ab87 (cannibal): linked 'sell my ecommerce business' to the main sell-an-ecommerce-business guide from two related guides",
+    "Ranking action a3601a166f22 (cannibal): linked 'AI business valuation for buyers' to the main AI valuation guide from two related guides"
+  ],
+  "needs_owner": [
+    "Competitor research runs out in about 6 days (around 2 Dec 2026): ask Claude to collect the next pages"
+  ]
+}

@@ -8,7 +8,7 @@ cluster: ai
 order: 10
 answer: AI businesses are valued in five main ways: an ARR multiple discounted for gross margin and model-provider dependence, a profit multiple, the cost to rebuild the product, strategic or acquihire value to a specific buyer, and discounted cash flow. Small AI businesses with subscription revenue are usually priced on a discounted ARR multiple and checked against profit and rebuild cost.
 published: 2026-10-04
-updated: 2026-11-06
+updated: 2026-11-26
 methodology_version: 1.0
 related: /tools/ai-business-valuation/, /guides/ai-business-valuation/, /guides/saas-valuation-methods/, /guides/saas-valuation/, /guides/revenue-vs-profit-multiples/, /businesses-for-sale/ai-businesses/, /glossary/gross-margin/, /glossary/arr/
 cta: /tools/ai-business-valuation/
@@ -140,6 +140,8 @@ That is why {{BRAND}}'s default range for AI businesses is 1.5x to 4.5x ARR, not
 4. **Copying a headline multiple.** See the section above.
 5. **Hiding provider dependence.** Buyers find it in the first hour of review. Say it first and show the fallback.
 6. **Treating a range as a price.** A range starts a conversation; the buyer's checks finish it.
+
+If you are a buyer, start with our guide to [AI business valuation for buyers](/guides/ai-business-valuation/), then come back here for the methods behind it.
 
 ## Frequently asked questions
 

@@ -1,7 +1,7 @@
 ---
 title: How Seasonality Affects the Value of an Online Business
-meta_title: Seasonal Business Valuation: How Seasonality Affects Price
-meta_description: How buyers value seasonal online businesses: which months they use, how they treat peaks and dips, and a worked example. Free calculator included.
+meta_title: Seasonal Business Valuation: Example and Checklist
+meta_description: Value a seasonal online business on trailing 12 months, not the peak. See a month-by-month example, what each figure does to price and a listing checklist.
 h1: How Seasonality Affects the Value of an Online Business
 section: Valuation
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: Seasonality affects value because buyers price a business on profit that repeats, and a seasonal business earns very different amounts in different months. The fair figure is the full trailing twelve months, not the best quarter multiplied up or the quietest month multiplied up. Showing every month, side by side with the same month a year earlier, is what lets a buyer trust the number.
 keywords: seasonal business valuation, seasonal ecommerce business value, seasonality in business valuation, valuing a seasonal business
 published: 2026-11-04
-updated: 2026-11-04
+updated: 2026-11-26
 publish_at: 2026-11-04T01:00Z
 image: /static/img/articles/seasonal-business-valuation.png
 image_alt: How Seasonality Affects the Value of an Online Business (VALUERAQ guide)
@@ -63,6 +63,19 @@ Now compare what happens if either side picks a single slice:
 
 The honest figure, $49,500, sits well between the other two. The peak figure is $108,000 − $49,500 = $58,500 too high. The quiet figure is $49,500 − $30,000 = $19,500 too low.
 
+### The twelve months and the three averages
+
+| Period | Monthly profit | Annualised figure |
+|---|---|---|
+| Jan to Sep (nine months) | $2,500 each | n/a |
+| Oct to Dec (peak) | $9,000 each | n/a |
+| Trailing 12 months | $49,500 total | **$49,500** |
+| Latest 3 months (Oct to Dec) × 4 | $27,000 | $108,000 |
+| Latest 3 months (Jul to Sep) × 4 | $7,500 | $30,000 |
+| Best single month × 12 | $9,000 | $108,000 |
+
+Only the trailing twelve months counts every season once. Any shorter window is right only if the business has no season at all.
+
 ### What each figure does to the price
 
 {{BRAND}}'s default range for an ecommerce business is 2.0x to 3.5x annual net profit, with a midpoint of 2.7x, before adjustments. These are {{BRAND}} editorial assumptions, not market data. The [methodology](/methodology/) explains where they come from and how they are adjusted. Applied to the trailing figure:
@@ -98,6 +111,14 @@ If you are the buyer, the questions below test whether the annual figure is as s
 5. **Is advertising or return cost higher in the peak?** Costs can swing too. Check that the profit figure is after those costs, using the layout in [how to read a profit and loss statement](/guides/how-to-read-a-profit-and-loss-statement/).
 
 The U.S. Small Business Administration, in its guide to buying an existing business, describes a "thorough, objective investigation" and lists financial statements and tax returns among the documents to evaluate, along with existing cash flow and inventory. For a seasonal business, monthly statements are the most useful of those documents. The same guide suggests hiring an accountant to help with the review.
+
+## A checklist for listing a seasonal business
+
+- Show 24 months of monthly profit side by side, so a buyer can see the pattern repeat.
+- Say which months carry the profit and what drives them.
+- State the stock bought for the next peak and the cash still needed to buy the rest.
+- Explain any month that broke the pattern, such as a stock-out or an ad-account suspension.
+- Offer to hand over supplier terms and lead times, since the peak is won months earlier.
 
 ## Inventory and the timing of a sale
 

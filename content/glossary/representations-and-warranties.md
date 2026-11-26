@@ -10,12 +10,16 @@ cluster: buying
 page_type: reference
 keywords: representations and warranties, reps and warranties, representations and warranties business sale, seller warranties
 related: /glossary/purchase-agreement/, /glossary/due-diligence/, /glossary/escrow/, /glossary/holdback/, /glossary/letter-of-intent/
-updated: 2026-10-30
+updated: 2026-11-26
 publish_at: 2026-10-30T07:00Z
 image: /static/img/articles/representations-and-warranties.png
 image_alt: What Is Representations and Warranties? (VALUERAQ glossary)
 score: 8.5
 ---
+
+## Warranties meaning in a business sale
+
+A warranty is a written promise by the seller that a stated fact about the business is true, such as "the figures I gave you are accurate" or "I own the domain". If the promise turns out to be false, the buyer may be able to claim from the seller under the contract. In a sale, "warranties" and "representations" are usually written together in one clause.
 
 ## How it works
 

@@ -1,15 +1,15 @@
 ---
 title: How to Sell a Digital Business
 keywords: how to sell an online business, how to sell a business, how to sell a digital business, sell my online business
-meta_title: How to Sell an Online Business: Step-by-Step
-meta_description: Sell your website or online business for a fair price: prepare records, value it, list it, negotiate and hand over. Free value check included.
+meta_title: How to Sell an Online Business: 8-Step Plan and Seller Checklist
+meta_description: Sell your website or online business in eight steps, with time per step, a seller checklist and links to each guide. Free value check included.
 h1: How to Sell a Digital Business
 section: Selling
 cluster: selling
 order: 20
 answer: To sell a digital business, start by valuing it from 12 months of verified profit, then prepare clean records and documentation, reduce the risks buyers discount for, set a price you can justify, list it with complete figures, answer due-diligence requests quickly, agree terms in writing, and close through escrow with a planned handover.
 published: 2026-09-30
-updated: 2026-11-02
+updated: 2026-11-26
 related: /sell/, /tools/, /guides/business-valuation/, /guides/digital-business-due-diligence/
 cta: /tools/
 cta_text: Value your business before you list it, and see which factors are lowering its multiple.
@@ -18,6 +18,21 @@ cta_text: Value your business before you list it, and see which factors are lowe
 ## Key takeaway
 
 Buyers pay for earnings they can verify and believe will continue. Most of the work of selling a digital business is making that easy: clean numbers, documented operations, and fewer single points of failure. The earlier you start, the more you can improve the multiple you're offered.
+
+## The eight steps at a glance
+
+| Step | What you do | Typical time | Read next |
+|---|---|---|---|
+| 1. Value | Work out a range from 12 months of profit | A day | [Valuation guide](/guides/business-valuation/) |
+| 2. Records | Gather P&L, revenue reports, ownership proof | 1 to 3 weeks | [Due diligence](/guides/digital-business-due-diligence/) |
+| 3. Reduce risk | Fix concentration, owner dependence | Weeks to months | [Increase value before selling](/guides/increase-website-value-before-selling/) |
+| 4. Route | Marketplace, broker or direct | A few days | [Marketplace](/businesses-for-sale/) |
+| 5. Listing | Write a complete, factual listing | 1 to 2 days | [Sell page](/sell/) |
+| 6. Enquiries | Qualify buyers, open read-only access | Weeks | [Due diligence](/guides/digital-business-due-diligence/) |
+| 7. Negotiate | Agree price, structure, transition | 1 to 3 weeks | [How to sell a website](/guides/how-to-sell-a-website/) |
+| 8. Close | Escrow and asset handover | 1 to 2 weeks | [Due diligence](/guides/digital-business-due-diligence/) |
+
+The times are rough planning figures, not market data: preparation usually takes longer than the sale itself.
 
 ## Step 1: Value the business honestly
 
@@ -66,6 +81,17 @@ Consider payment structure (upfront, instalments, earn-out), your transition sup
 ## Step 8: Close and hand over
 
 Use escrow. Transfer assets in an agreed order, keep a checklist, and stay available during the transition period you agreed. A smooth handover protects any earn-out and your reputation.
+
+## Seller checklist
+
+- [ ] 12 to 24 months of monthly P&L, reconciled to deposits
+- [ ] Read-only analytics and revenue access ready
+- [ ] Every expense, tool and contractor listed
+- [ ] Domains, code and content ownership confirmed
+- [ ] Personal and business money separated
+- [ ] Routine tasks documented
+- [ ] Price range you can explain
+- [ ] Handover period and support you will offer
 
 ## Common mistakes sellers make
 
