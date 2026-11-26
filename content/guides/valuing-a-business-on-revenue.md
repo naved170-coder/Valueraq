@@ -1,7 +1,7 @@
 ---
 title: Valuing a Business on Revenue: When It Works and When It Misleads
-meta_title: Valuing a Business on Revenue: When It Works
-meta_description: Revenue multiples suit fast-growing or SaaS businesses but mislead for others. See when to use them, typical ranges and an example. Free calculator included.
+meta_title: Value a Business on Revenue: When It Works (Table)
+meta_description: Valuing a business on revenue works for recurring income, not thin margins. See 3 businesses with equal revenue priced very differently. Free calculator.
 h1: Valuing a Business on Revenue: When It Works and When It Misleads
 section: Valuation
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: Valuing a business on revenue means multiplying its yearly revenue by a multiple. It works for recurring-revenue businesses such as SaaS, where each dollar is likely to repeat. It misleads for businesses with thin margins or one-off sales, where two companies with the same revenue can be worth very different amounts.
 keywords: business value based on revenue, how to value a business, revenue multiple, valuing a business on revenue, value a business by revenue
 published: 2026-10-17
-updated: 2026-10-17
+updated: 2026-11-26
 publish_at: 2026-10-17T01:00Z
 image: /static/img/articles/valuing-a-business-on-revenue.png
 image_alt: Featured image for the guide Valuing a Business on Revenue, When It Works and When It Misleads
@@ -90,6 +90,22 @@ The gap comes from three separate things, and it helps to pull them apart.
 
 This is also why sellers who quote "we do $240,000 a year" in a listing get pushback. A buyer will ask the next question straight away: what is left after costs? Have the [SDE](/glossary/sde/) calculation ready, with the add-backs explained, before the first conversation.
 
+## A real-world reference point
+
+BizBuySell reports data on website and ecommerce business sales from 2021 to 2025, covering 1,661 sold listings, with a median revenue multiple of 0.90 and a median sold earnings multiple of 3.28 ([BizBuySell, valuation benchmarks for websites and ecommerce](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/)). Its listings lean toward larger, broker-sold businesses, so treat the figures as a reference point rather than a rule for a small site.
+
+The two numbers fit together. A median of 0.90 times revenue is well below the 3.5x SaaS midpoint, which is what you would expect when most of these businesses are valued on profit. It is also close to the 0.96x implied by the content website in the example above.
+
+## Which revenue situations suit a revenue multiple
+
+| Your situation | Revenue multiple a good fit? | What to use alongside it |
+|---|---|---|
+| Subscription software with steady renewals | Yes, on ARR | Churn, growth and gross margin |
+| Young, fast-growing business reinvesting its profit | Sometimes | Growth rate and cash runway |
+| Content website or newsletter with steady profit | Cross-check only | SDE and a profit multiple |
+| Online store with thin margins | No | SDE, margin and stock levels |
+| One-off project or launch income | No | Recurring portion only |
+
 ## Questions to ask before you quote a revenue multiple
 
 - Is the revenue contracted or repeating, or does it need to be won again each month?
@@ -140,10 +156,15 @@ Because less of each sale becomes profit, and a store's sales usually have to be
 
 Revenue can help if it recurs, since CFI says it is used when there is no positive EBITDA or net income. Otherwise see [how to value a business with no profit](/guides/how-to-value-a-business-with-no-profit/).
 
+### What does the typical sold website or store go for, as a multiple of revenue?
+
+BizBuySell's sold-listing data for websites and ecommerce businesses shows a median revenue multiple of 0.90, on listings that lean toward larger, broker-sold businesses. Your own figure depends on margin and how much of your revenue repeats, so work it out from profit first.
+
 ## Sources
 
 - [CFI, Multiples analysis](https://corporatefinanceinstitute.com/resources/valuation/multiples-analysis)
 - [CFI, Enterprise value to revenue multiple](https://corporatefinanceinstitute.com/resources/valuation/ev-to-revenue-multiple)
 - [CFI, Revenue run rate](https://corporatefinanceinstitute.com/resources/accounting/revenue-run-rate/)
+- [BizBuySell, Valuation benchmarks: Websites and ecommerce businesses](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/)
 - [SBA, Close or sell your business](https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business)
 - [VALUERAQ methodology](/methodology/)

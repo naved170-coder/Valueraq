@@ -2,15 +2,15 @@
 title: What Is Gross Profit?
 term: Gross Profit
 aliases: gross profit, gross income, gross earnings
-meta_title: What Is Gross Profit? Definition, Formula & Example
-meta_description: Gross profit is revenue minus the direct cost of what you sell. See the formula, a worked example and how it differs from gross margin and net profit.
+meta_title: Gross Profit: Formula & Example (vs Net Profit)
+meta_description: Gross profit is revenue minus direct costs. See the formula, a store example that steps down to net profit and SDE, and how gross profit differs from margin.
 h1: Gross Profit
 definition: Gross profit is the money left from revenue after subtracting only the direct costs of making or delivering the product or service, before overheads such as advertising, salaries and taxes.
 cluster: analysis
 page_type: reference
 keywords: gross profit, gross profit formula, what is gross profit, gross profit vs net profit
 related: /glossary/gross-margin/, /glossary/net-profit/, /glossary/sde/, /glossary/ebitda/, /glossary/profit-multiple/
-updated: 2026-10-10
+updated: 2026-11-26
 publish_at: 2026-10-10T19:00Z
 image: /static/img/articles/gross-profit.png
 image_alt: What Is Gross Profit? (VALUERAQ glossary)
@@ -39,6 +39,21 @@ Gross profit is $200,000 − $110,000 = $90,000. As a share of revenue, that is 
 
 Advertising, software and the owner's time are still to come. If those cost $50,000, net profit is $40,000.
 
+### From gross profit to SDE
+
+Continue the store example with an owner who paid herself $30,000 and had $50,000 of advertising, software and other running costs.
+
+| Step | Amount |
+|---|---|
+| Gross profit | $90,000 |
+| Advertising, software and other costs | −$50,000 |
+| Owner pay taken as a salary | −$30,000 |
+| **Net profit** | **$10,000** |
+| Add back owner pay | +$30,000 |
+| **SDE** | **$40,000** |
+
+Gross profit sits at the top of this ladder. A buyer who sees $90,000 of gross profit and $40,000 of SDE knows $50,000 is spent running the business. See [SDE](/glossary/sde/) for how the add-back works.
+
 ## Why it matters in a valuation
 
 Buyers of small digital businesses price mainly on profit after running costs, such as [SDE](/glossary/sde/), and then apply a [multiple](/glossary/profit-multiple/). Gross profit is where they look first to understand that figure:
@@ -59,3 +74,17 @@ Gross profit comes after the direct costs only. Net profit comes after all costs
 - [Net profit](/glossary/net-profit/)
 - [SDE](/glossary/sde/)
 - [EBITDA](/glossary/ebitda/)
+
+## Frequently asked questions
+
+### Is gross profit the same as gross margin?
+
+No. Gross profit is a dollar amount. Gross margin is gross profit as a share of revenue: $90,000 ÷ $200,000 = 45% in the example above.
+
+### Is gross profit the same as net profit?
+
+No. Gross profit subtracts only direct costs. Net profit subtracts all costs, so it is always equal to or lower than gross profit.
+
+### Do buyers value a business on gross profit?
+
+Usually not. They apply a multiple to profit after running costs, such as SDE, and use gross profit to judge how healthy the product is.

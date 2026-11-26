@@ -1,7 +1,7 @@
 ---
 title: Nine Mistakes People Make When Valuing an Online Business
-meta_title: 9 Online Business Valuation Mistakes (and Fixes)
-meta_description: Nine common mistakes that make online business valuations wrong, from unverified profit to the wrong multiple, and how to avoid each. Free tools included.
+meta_title: 9 Business Valuation Mistakes: Cost of Each + Fixes
+meta_description: Nine business valuation mistakes, what each costs in dollars and how to fix it, plus the price of overpricing or underpricing. Free tools included.
 h1: Nine Mistakes People Make When Valuing an Online Business
 section: Valuation
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: Most bad valuations come from the same few errors: using revenue instead of profit, ignoring owner time, annualizing one strong month, applying a multiple to the wrong measure, accepting inflated add-backs, overlooking dependence on one channel, treating a default multiple as market data, ignoring age and trend, and quoting a single number instead of a range. Each one can move the result by tens of thousands of dollars.
 keywords: online business valuation, how much is my business worth, business valuation mistakes
 published: 2026-10-28
-updated: 2026-10-28
+updated: 2026-11-26
 publish_at: 2026-10-28T01:00Z
 image: /static/img/articles/valuation-mistakes.png
 image_alt: Nine Mistakes People Make When Valuing an Online Business (VALUERAQ guide)
@@ -119,6 +119,20 @@ A valuation is a range, because inputs are estimates and buyers differ. A single
 
 The price is also not the whole deal. A $120,000 price paid all in cash is a different outcome from the same price with part deferred or tied to future results. See [deal structures for online business sales](/guides/deal-structures-for-online-business-sales/).
 
+## What a wrong price costs: too high and too low
+
+Take a site with $50,000 of annual profit. At the 3.2x default midpoint it comes out at $50,000 x 3.2 = $160,000.
+
+| Asking price | Compared with $160,000 | What usually follows |
+|---|---|---|
+| $120,000 | $40,000 (25%) under | Quick interest, and $40,000 left with the buyer |
+| $160,000 | At the midpoint | Buyers can check the price against profit |
+| $220,000 | $60,000 (37.5%) over | Buyers who test the profit walk away, and you either wait or cut the price |
+
+Underpricing is a loss you never see, because nobody tells you what you could have asked. Overpricing is a loss you do see: the listing sits, and a price cut later can look like a weak business. A range with reasons behind it avoids both.
+
+For a reference point from real listings, BizBuySell's sold-listing data for websites and ecommerce businesses (2021 to 2025, 1,661 listings) shows a median sale price of $825,000 against a median asking price of $850,000, and a median of 71 days on the market ([BizBuySell](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/)). Those listings lean toward larger, broker-sold businesses, so small sites differ, but the gap between asking and sold is usually modest rather than a large discount.
+
 ## The nine mistakes at a glance
 
 | # | Mistake | What goes wrong | Better habit |
@@ -165,6 +179,10 @@ When something material changes, such as a new revenue source, a traffic drop or
 
 For a sale, yes. The SBA suggests considering an accountant and an attorney when buying an existing business, and recommends an attorney review a sales agreement ([SBA](https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise)).
 
+### How do I know if my asking price is too high?
+
+Divide your asking price by your verified annual profit. If the result is well above the range for your type of business, such as 2.5x to 4.0x for a website under {{BRAND}}'s defaults, a buyer who checks the profit will push back. Fix the evidence or the price.
+
 ## Sources
 
 - [Corporate Finance Institute: Enterprise Value to Revenue Multiple](https://corporatefinanceinstitute.com/resources/valuation/ev-to-revenue-multiple)
@@ -172,5 +190,6 @@ For a sale, yes. The SBA suggests considering an accountant and an attorney when
 - [Corporate Finance Institute: Trailing Twelve Months](https://corporatefinanceinstitute.com/resources/valuation/railing-twelve-months-ttm-definition)
 - [Corporate Finance Institute: Multiples analysis](https://corporatefinanceinstitute.com/resources/valuation/multiples-analysis)
 - [BizBuySell: Add-Backs for Seller's Discretionary Earnings](https://www.bizbuysell.com/learning-center/article/add-backs-sde/)
+- [BizBuySell: Valuation benchmarks, Websites and ecommerce businesses](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/)
 - [U.S. Small Business Administration: Buy an existing business or franchise](https://www.sba.gov/business-guide/plan-your-business/buy-existing-business-or-franchise)
 - [{{BRAND}} methodology](/methodology/)

@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (how to clean up your books before selling), live 27 Nov 6 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research. Improving 4 existing pages next.",
+  "summary": "Wrote 1 article (how to clean up your books before selling), live 27 Nov 6 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research. Also improved 4 existing pages (valuing a business on revenue, valuation mistakes, gross margin, gross profit).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -27,6 +27,26 @@
       "path": "/guides/flippa-alternatives/",
       "action": "skipped",
       "note": "Skipped again: needs competitor fees opened on the day."
+    },
+    {
+      "path": "/guides/valuing-a-business-on-revenue/",
+      "action": "improve",
+      "note": "Added sold-listing reference point (0.90x revenue median, with skew caveat), situation-fit table, FAQ; new title/description."
+    },
+    {
+      "path": "/guides/valuation-mistakes/",
+      "action": "improve",
+      "note": "Added too-high vs too-low price cost table with arithmetic, sold-listing asking vs sold reference, FAQ; new title/description."
+    },
+    {
+      "path": "/glossary/gross-margin/",
+      "action": "improve",
+      "note": "Added same-revenue three-margin table (SaaS/AI/store), 3 FAQs; new title/description."
+    },
+    {
+      "path": "/glossary/gross-profit/",
+      "action": "improve",
+      "note": "Added gross profit to net profit to SDE ladder, 3 FAQs; new title/description."
     }
   ],
   "tasks": [
@@ -39,7 +59,8 @@
     "scheduled",
     "link_check",
     "serp_compare",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 134 passed",
@@ -52,6 +73,8 @@
     "No reference pages: every unwritten calendar reference topic lacks saved competitor research (new-*.json). Owner's next research session should collect some.",
     "The two Gulf and Flippa-alternatives articles have now been skipped in two runs; moved to the end of the calendar is recommended at next monthly run.",
     "Ranking data from Render logs was not read this run.",
-    "Improve step done at four pages as the schedule asked (the runbook text says ten)."
-  ]
+    "Improve step done at four pages as the schedule asked (the runbook text says ten).",
+    "BizBuySell benchmark figures (0.90 revenue multiple, $825,000 sold, $850,000 asking, 71 days) were quoted as written in seo/sources.json; that entry says to re-check them on the page, which this run could not open."
+  ],
+  "improved": 4
 }
