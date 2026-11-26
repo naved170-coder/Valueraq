@@ -1,0 +1,57 @@
+{
+  "summary": "Wrote 1 article (how to clean up your books before selling), live 27 Nov 6 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research. Improving 4 existing pages next.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/how-to-clean-up-your-books-before-selling-an-online-business/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.7,
+      "duplicate": "pass (closest: /guides/how-to-document-your-business-before-selling/, /guides/how-to-calculate-sde/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "clean up books before selling a business",
+        "prepare financials to sell a business",
+        "recast financial statements",
+        "bookkeeping before selling a business"
+      ],
+      "serp": "used",
+      "note": "Not held: names no competitor, states no VALUERAQ price, no country tax rules. Multiples are VALUERAQ default ranges; example is labelled illustrative. Release 27 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/guides/buying-an-online-business-from-the-gulf/",
+      "action": "skipped",
+      "note": "Skipped again: any UAE or Saudi legal statement needs an official source this run cannot open."
+    },
+    {
+      "path": "/guides/flippa-alternatives/",
+      "action": "skipped",
+      "note": "Skipped again: needs competitor fees opened on the day."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "serp_compare",
+    "report"
+  ],
+  "checks": [
+    "Tests: 134 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check, 0 broken",
+    "External links: not opened (web fetch unavailable); only sources listed in seo/sources.json used"
+  ],
+  "notes": [
+    "No reference pages: every unwritten calendar reference topic lacks saved competitor research (new-*.json). Owner's next research session should collect some.",
+    "The two Gulf and Flippa-alternatives articles have now been skipped in two runs; moved to the end of the calendar is recommended at next monthly run.",
+    "Ranking data from Render logs was not read this run.",
+    "Improve step done at four pages as the schedule asked (the runbook text says ten)."
+  ]
+}
