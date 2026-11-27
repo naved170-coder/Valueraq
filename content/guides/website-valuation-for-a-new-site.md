@@ -1,7 +1,7 @@
 ---
 title: How Do You Value a Website Less Than a Year Old?
-meta_title: How to Value a New Website (Under 1 Year Old)
-meta_description: Is a new website worth anything? How buyers price sites under a year old, what they discount for, and a worked example. Free value tool.
+meta_title: How to Value a New Website: Age Table + Example
+meta_description: Value a website under a year old: see the same site priced at three ages, the buyer records checklist and a worked example. Free tool, no sign-up.
 h1: How Do You Value a Website Less Than a Year Old?
 section: Quick answers
 cluster: website
@@ -10,7 +10,7 @@ page_type: reference
 answer: Value a website under a year old the same way as an older one, as a multiple of yearly profit, but expect a lower multiple. VALUERAQ's default rules cut the multiple by 20% for under one year of history and by 10% for one to two years, because a short record gives buyers little proof that earnings will last.
 keywords: value new website, how to value a new website, new website valuation, website less than a year old worth
 published: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-27
 publish_at: 2026-11-03T07:00Z
 image: /static/img/articles/website-valuation-for-a-new-site.png
 image_alt: Featured image for the quick answer How Do You Value a Website Less Than a Year Old
@@ -33,7 +33,7 @@ If the site earns nothing yet, the tool returns no estimate, because an earnings
 3. **Apply the default range** for a website: 2.5x low, 3.2x midpoint, 4.0x high.
 4. **Apply the age adjustment**: ×0.80 for under one year.
 
-Other adjustments, such as growth and traffic concentration, also apply in the tool. The example below uses age only.
+The tool also applies growth and traffic adjustments; the example uses age only.
 
 ## Example
 
@@ -54,6 +54,24 @@ Those multiples are {{BRAND}}'s own default assumptions, not market data. The me
 - **Proof of earnings.** Payment processor and ad network statements for every month. See [how to verify website revenue](/guides/how-to-verify-website-revenue/).
 - **A rising trend.** Month-by-month profit that climbs is better evidence than one strong month.
 - **Documented work.** Written processes that show the site does not depend on you alone.
+
+## How age changes the price: same site at three ages
+
+Take the same profit ($1,500 a month, $18,000 a year, invented figures) and change only the age. Default multiples are 2.5x, 3.2x and 4.0x; the age adjustment is the only difference.
+
+| Site age | Age adjustment | Low | Midpoint | High |
+|---|---|---|---|---|
+| Under 1 year | ×0.80 | $36,000 | $46,080 | $57,600 |
+| 1 to under 2 years | ×0.90 | $40,500 | $51,840 | $64,800 |
+| 2 to under 4 years | none | $45,000 | $57,600 | $72,000 |
+
+## What a buyer wants to see from a young site
+
+- [ ] 3 to 6 months of payment or ad network statements, month by month
+- [ ] Where the traffic comes from, and whether the first visitors are from one source
+- [ ] What you spent to build it and what you spend each month to run it
+- [ ] Which pages or products earn the money
+- [ ] A plain note on how much of the work only you can do
 
 ## Frequently asked questions
 

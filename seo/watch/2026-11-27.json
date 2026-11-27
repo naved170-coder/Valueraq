@@ -1,1 +1,23 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":["Started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "needs_owner",
+  "summary": "All checks passed and 5 more pages were improved, but competitor research for new pages runs out in about 5 days.",
+  "checks": [
+    "Last night's run: done (1 article live 27 Nov 6 am Pakistan, plus 4 pages improved)",
+    "Queue: nothing missing for today's slots; no reference-page topic has saved research, which the runbook treats as normal",
+    "Tests: 134 passed; seo-check 0 problems; audit 281 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy live (27 Nov 03:52 UTC); no error-level log lines since 26 Nov 03:00 UTC",
+    "Search figures: snapshot readable (last data 2026-11-25): 28 days 40 clicks, 18,327 impressions, average position 49.1 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: 10 days still have unwritten pages",
+    "Held pages: 4 files with hold: yes",
+    "Article written: yes (clean up your books before selling)",
+    "Ranking review: not run today (Mondays and Thursdays only)",
+    "Competitor research supply: 11 unwritten calendar topics have saved research, about 5 days of writing"
+  ],
+  "fixed": [
+    "Improved 5 pages from competitor research: content/guides/website-valuation-for-a-new-site.md, website-vs-saas-valuation.md, website-vs-saas-investment.md, website-valuation-methods.md, ways-to-sell-a-digital-business.md (new tables, worked examples, checklists, FAQs, new titles and descriptions)"
+  ],
+  "needs_owner": [
+    "Competitor research runs out in about 5 days (around 2 Dec 2026): ask Claude to collect the next pages"
+  ]
+}

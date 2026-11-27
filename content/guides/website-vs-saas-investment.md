@@ -1,14 +1,14 @@
 ---
 title: Website vs SaaS as an Investment
-meta_title: Website vs SaaS: Which Is the Better Investment?
-meta_description: Buying a website or a SaaS? Compare price, return, workload and risk side by side, with a worked example to help you decide which fits you.
+meta_title: Website vs SaaS Investment: $100k Example
+meta_description: Buying a website or a SaaS? See the same $100,000 spent on each, payback in years, risks side by side and a fit table to choose. Free tools included.
 h1: Website vs SaaS as an Investment
 section: Comparisons
 cluster: analysis
 order: 32
 answer: Websites cost less per dollar of profit and need marketing skill; their main risk is a search-engine update removing traffic overnight. SaaS costs more per dollar of profit and needs technical capacity; its main risk is churn and competition, which arrive gradually rather than suddenly. Choose by which risk you can manage and which work you can actually do each week.
 published: 2026-10-02
-updated: 2026-10-29
+updated: 2026-11-27
 related: /guides/website-vs-saas-valuation/, /guides/buying-digital-businesses/, /tools/website-valuation/, /tools/saas-valuation/, /businesses-for-sale/websites/
 cta: /businesses-for-sale/
 cta_text: Compare live listings in both categories.
@@ -73,6 +73,28 @@ Both need the standard work set out in [due diligence](/guides/digital-business-
 - **For a website:** traffic sources over at least 24 months, from analytics you are given access to — not a screenshot. One search update in that window tells you more than any seller's narrative.
 - **For a SaaS product:** monthly churn by revenue, not by customer count, over at least 12 months. Churn by customer count hides the loss of a single large account.
 
+## Worked example: the same $100,000
+
+Suppose you have $100,000 to invest. These figures are illustrative and use the default multiples; the 60% SaaS profit margin is an assumption, and neither business is assumed to grow.
+
+| | Content website | SaaS product |
+|---|---|---|
+| Multiple used | 3.2× annual profit (website midpoint) | 3.5× ARR (SaaS midpoint) |
+| What $100,000 buys | $100,000 ÷ 3.2 = $31,250 profit a year | $100,000 ÷ 3.5 = about $28,571 ARR |
+| Annual profit | $31,250 (about $2,604 a month) | $28,571 × 60% = about $17,143 |
+| Simple payback | 100,000 ÷ 31,250 = 3.2 years | 100,000 ÷ 17,143 = about 5.8 years |
+
+On these assumptions the website pays back faster, and the SaaS only catches up if it grows or its margin is higher. That is the trade: you pay more per dollar of profit for revenue that repeats and a risk that gives warning.
+
+## Which is the better fit for you?
+
+| If you are... | Lean towards |
+|---|---|
+| Comfortable with SEO and writing, with little technical help | Website |
+| Technical, or have a developer you trust | SaaS |
+| Unable to absorb a sudden income drop | SaaS, checked for churn |
+| Looking for the lowest entry price | Website |
+
 ## Frequently asked questions
 
 ### Which one makes more money?
@@ -90,3 +112,11 @@ Yes, and the risks are largely uncorrelated — a search update that hits a cont
 ### Do these multiples apply to AI tools too?
 
 AI businesses are valued on their own basis, with different risks around model dependency and defensibility. See [AI business valuation](/guides/ai-business-valuation/), or try the free [AI business valuation tool](/tools/ai-business-valuation/).
+
+### Which pays back faster, a website or a SaaS?
+
+At the default multiples, a website usually pays back faster for the same money, because it costs less per dollar of profit. A SaaS can close the gap through growth and higher margins.
+
+### Is a website or a SaaS easier for a first-time buyer?
+
+A website usually needs fewer technical skills, but its income can fall suddenly. Choose the one whose bad day you can handle.

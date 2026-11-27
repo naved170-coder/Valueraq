@@ -1,14 +1,14 @@
 ---
 title: Website Valuation Methods
-meta_title: Website Valuation Methods: 6 Approaches Compared
-meta_description: Six ways to value a website, from profit multiple to traffic value and cost to rebuild, with when each works and where it misleads. Free calculator included.
+meta_title: Website Valuation Methods: 6 Compared by Buyer
+meta_description: Six ways to value a website compared, which buyers use which method, why domain-only tools mislead, and a worked example. Free calculator included.
 h1: Website Valuation Methods
 section: Valuation
 cluster: website
 order: 8
 answer: There are six common ways to value a website: a multiple of annual profit, a multiple of revenue, a value per visitor, the cost to rebuild it, discounted cash flow, and comparison with similar sites that have sold. For a profitable site, the profit multiple is the method most buyers use, and the others serve as cross-checks or as fallbacks when there is little or no profit.
 published: 2026-10-04
-updated: 2026-11-19
+updated: 2026-11-27
 methodology_version: 1.0
 related: /tools/website-valuation/, /calculators/website-worth-calculator/, /guides/website-valuation/, /guides/revenue-vs-profit-multiples/, /guides/business-valuation/, /businesses-for-sale/websites/, /glossary/sde/, /glossary/profit-multiple/
 cta: /tools/website-valuation/
@@ -134,6 +134,19 @@ When two methods disagree widely, work out why before choosing one. The reason i
 
 For a quick check on the worth of web assets such as a content site or store, [run the Website Valuation Tool](/tools/website-valuation/) with your own figures and compare the result with the method that fits your business.
 
+## Which buyers use which method
+
+| Buyer | Method they lean on most | Why |
+|---|---|---|
+| Individual owner-operator | Profit (SDE) multiple | They are buying a job and income |
+| Investor or small fund | Profit multiple, cross-checked with comparable sales | They compare price per dollar of return |
+| Someone buying traffic to monetize differently | Traffic-based value | They care about the visitors, not current profit |
+| Someone building a competing site | Cost to rebuild | It is the price of doing it themselves |
+
+## Why a domain-only estimate misleads
+
+Tools that price a site from its domain name or visitor count alone never see profit, costs, traffic sources or how much work the owner does. Two sites with the same traffic can earn very different profit, so a figure that ignores earnings is a rough guess, not a valuation. Use it, if at all, as a floor to cross-check against the profit multiple.
+
 ## Frequently asked questions
 
 ### Which website valuation method is the most accurate?
@@ -147,3 +160,11 @@ Use replacement cost and a cautious traffic-based estimate, and expect a low fig
 ### Why do online website value calculators give such different numbers?
 
 They use different methods. A calculator working from estimated traffic will rarely agree with one working from profit. Check what a calculator asks for: if it never asks for profit, it can't be measuring it.
+
+### Which method should an individual buyer use?
+
+Start with the profit multiple, since an individual is buying the income. Use the other methods as cross-checks, and be cautious if they disagree widely.
+
+### Can I use more than one method?
+
+Yes, and you should. If two methods give very different values, find out why before you set a price.

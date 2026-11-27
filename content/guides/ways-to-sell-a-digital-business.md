@@ -1,14 +1,14 @@
 ---
 title: Broker vs Marketplace vs Selling Directly
-meta_title: Broker vs Marketplace vs Direct: How to Sell Online
-meta_description: Compare the three ways to sell a digital business: broker, marketplace or direct sale. Costs, speed and risk side by side. List free on VALUERAQ.
+meta_title: Broker vs Marketplace vs Direct: Which Fits Your Sale
+meta_description: Compare selling a digital business through a broker, a marketplace or directly, with a size-based fit table and a checklist. List free on VALUERAQ.
 h1: Broker vs Marketplace vs Selling Directly
 section: Comparisons
 cluster: selling
 order: 34
 answer: There are three ways to sell a digital business. A broker runs the sale for you and charges a commission on the price. A marketplace lets you list the business yourself and deal with buyers directly, for a listing fee, a smaller success fee, or nothing. A direct sale means approaching a buyer you already know, with no intermediary and no fee. Brokers suit larger businesses and owners short of time, marketplaces suit smaller businesses and owners willing to do the work, and a direct sale suits anyone with an obvious buyer in mind.
 published: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-27
 related: /guides/selling-digital-businesses/, /guides/digital-business-due-diligence/, /sell/, /marketplace-rules/, /guides/business-valuation/
 cta: /sell/
 cta_text: List your business on the marketplace.
@@ -96,6 +96,24 @@ Routes can be combined. Some owners test the price with a marketplace listing an
 - **Use an escrow service** for the payment, and a written agreement that lists exactly what is included.
 - **Plan the handover.** Agree how long you will support the buyer after the sale and what that covers.
 
+## Which route by business size
+
+| Your situation | Usually the best fit |
+|---|---|
+| Small business, you have time and want to keep costs low | Marketplace listing or direct sale |
+| Mid-size business, buyers need guidance and screening | Broker, or marketplace plus advisers |
+| Large or complex business, many parties involved | Broker, with a lawyer on the deal |
+| You already know a likely buyer | Direct sale, with a written agreement |
+
+This is a rule of thumb, not a guarantee. Fees vary by provider, so check each one's own page before you decide.
+
+## Quick decision checklist
+
+- [ ] Do I have time to answer buyer questions myself?
+- [ ] Do I need to keep the sale confidential?
+- [ ] Do I have records a buyer can check?
+- [ ] Do I know my asking price and the lowest I would accept?
+
 ## Frequently asked questions
 
 ### Which route gets the highest price?
@@ -113,3 +131,11 @@ It's sensible for anything beyond a very small sale. A lawyer checks the sale ag
 ### How long does a sale take?
 
 It varies widely with size, price and how ready your records are. Allow several weeks at least for finding a buyer, due diligence and transfer, and longer for larger businesses.
+
+### Which route is best if I want a quiet sale?
+
+A broker or a direct sale to a known buyer gives the most control over who sees your details. On a marketplace, listings are public, so share only what the platform shows before a buyer is vetted.
+
+### Can I switch routes if my listing does not sell?
+
+Yes. Many sellers start by listing themselves and bring in a broker if there is no serious interest after a few weeks.
