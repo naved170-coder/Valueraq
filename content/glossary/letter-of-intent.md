@@ -2,13 +2,13 @@
 title: What Is a Letter of Intent (LOI)?
 term: LOI
 aliases: letter of intent, letters of intent, Letter of intent
-meta_title: What Is an LOI (Letter of Intent)? Definition & Example
-meta_description: A letter of intent (LOI) sets out the main terms of a proposed business purchase before the final contract. Learn what it covers and which parts bind.
+meta_title: What Is an LOI? Definition, Sample Terms & Example
+meta_description: A letter of intent (LOI) sets out the main terms of a proposed business purchase before the final contract. See sample terms, binding clauses and an example.
 h1: LOI (Letter of Intent)
 definition: A letter of intent (LOI) is a short document in which a buyer sets out the main terms on which they propose to buy a business, before detailed checks and the final sale contract.
 cluster: buying
 related: /glossary/due-diligence/, /glossary/asset-sale/, /glossary/earnout/, /glossary/escrow/, /guides/buying-digital-businesses/
-updated: 2026-10-02
+updated: 2026-11-27
 ---
 
 ## How it works
@@ -32,6 +32,21 @@ A typical order of events:
 - **Transition**: how long the seller will help after closing, and any agreement not to compete.
 - **Target closing date** and conditions that must be met first.
 
+## Sample LOI terms for a website or SaaS purchase
+
+This is an outline of how the main points can be written. It is an example, not legal advice or a template to copy.
+
+| Term | Sample wording | Usually binding? |
+|---|---|---|
+| Price | $150,000 for the business and the assets listed | No |
+| Payment | $120,000 at closing, $30,000 over 12 months | No |
+| Structure | Asset sale, domain, code, accounts and content included | No |
+| Due diligence | 30 days, with access to records and analytics | No |
+| Exclusivity | Seller will not negotiate with others for 30 days | Often |
+| Confidentiality | Information shared is used only to evaluate the purchase | Often |
+| Transition | 60 days of help from the seller after closing | No |
+| Target closing | Within 45 days, if conditions are met | No |
+
 ## Binding and non-binding parts
 
 An LOI is usually written so that the price and deal terms are not binding. Either side can still walk away or renegotiate after due diligence. Certain clauses, most often exclusivity and confidentiality, are usually written to be binding.
@@ -47,6 +62,20 @@ A buyer offers $150,000 for a SaaS business in an LOI: $120,000 at closing and $
 - **Sellers** give up the ability to talk to other buyers during exclusivity, so the period should be no longer than the checks reasonably need.
 - **Buyers** get time to verify the numbers without being outbid.
 - Terms left vague in the LOI tend to become arguments later. It is easier to settle them before either side has spent money.
+
+## Frequently asked questions
+
+### Is a letter of intent legally binding?
+
+Parts of it can be. The price and deal terms are usually written as non-binding, and exclusivity and confidentiality as binding. How it is worded and local law decide, so have a lawyer check.
+
+### How long should exclusivity last?
+
+Long enough for the buyer to finish due diligence, and no longer. A seller should ask what checks the buyer needs and set the period to match.
+
+### Who writes the LOI?
+
+Usually the buyer, after the first talks. The seller can change it before signing.
 
 ## Take advice
 

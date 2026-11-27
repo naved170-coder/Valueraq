@@ -1,7 +1,7 @@
 ---
 title: What Happens After You Sell Your Website?
-meta_title: What Happens After You Sell Your Website?
-meta_description: After the sale: handover, support period, payment release, non-compete terms and taxes to plan for. What sellers should expect next.
+meta_title: After Selling a Website: 6-Step Timeline and Checklist
+meta_description: What happens after you sell a website: escrow release, handover, support period and later payments, laid out as a timeline with a payout example.
 h1: What Happens After You Sell Your Website?
 section: Quick answers
 cluster: selling
@@ -10,7 +10,7 @@ page_type: reference
 answer: After a website sale closes, the money is released from escrow once the buyer confirms they control the assets, you hand over the domain, hosting, content and accounts in the agreed order, and you give the support the contract promises. Then you close your own access and keep your records.
 keywords: after selling a website, what happens after you sell a website, website handover, website sale closing
 published: 2026-10-25
-updated: 2026-10-25
+updated: 2026-11-27
 publish_at: 2026-10-24T19:00Z
 image: /static/img/articles/what-happens-after-you-sell-a-website.png
 image_alt: Featured image for the quick answer What Happens After You Sell Your Website
@@ -28,16 +28,36 @@ The order and timing come from your purchase agreement, so follow it rather than
 
 ## What usually happens, step by step
 
-1. **The buyer funds escrow.** An independent escrow service holds the money. Neither side has to trust the other first. See [how escrow works for website sales](/guides/how-escrow-works-for-website-sales/) and the [escrow](/glossary/escrow/) definition.
-2. **You transfer the assets.** Typical items are the domain, hosting, the website files and database, email and analytics accounts, social accounts, and any program or marketplace accounts that can be moved. Follow the order in [how to transfer a website to a new owner](/guides/how-to-transfer-a-website-to-a-new-owner/).
-3. **The buyer checks.** The agreement usually sets a review window. The buyer confirms that they control each asset and that the site works as described.
-4. **Escrow releases the money.** After the buyer accepts, or the window ends under the agreement's terms, the service pays you.
-5. **You give support.** Many agreements include a short handover period for questions and training. Keep it to what the contract says.
-6. **You close out.** Remove your own access, change shared passwords, and tell any contractors or partners that the owner has changed.
+1. **The buyer funds escrow.** An independent service holds the money. See [how escrow works for website sales](/guides/how-escrow-works-for-website-sales/).
+2. **You transfer the assets.** Domain, hosting, files, accounts. Follow [how to transfer a website to a new owner](/guides/how-to-transfer-a-website-to-a-new-owner/).
+3. **The buyer checks** that they control each asset within the review window.
+4. **Escrow releases the money** once the buyer accepts or the window ends.
+5. **You give support** for the period the contract sets.
+6. **You close out.** Remove your access, change shared passwords and tell contractors the owner has changed.
+
+## Timeline at a glance
+
+The exact days come from your agreement. This table shows what usually follows what, and what you should have in hand at each stage.
+
+| Stage | What happens | What you should have |
+|---|---|---|
+| Signing | Agreement signed, buyer funds escrow | Signed agreement, escrow confirmation |
+| Handover | You move the domain, hosting, files and accounts | A written list of every item moved, with dates |
+| Review window | Buyer confirms they control each asset | The buyer's written acceptance |
+| Payment release | Escrow pays you | Escrow receipt and a matching bank deposit |
+| Support period | You answer questions as the contract sets | A log of your help |
+| Later payments | Installments or earnout paid when due | Payment records and any reports you owe |
+| Restrictions | Non-compete or confidentiality terms apply | A note of the dates they end |
+
+## Worked example: when you are actually paid
+
+A website sells for $90,000: $72,000 at closing and $18,000 as an earnout after 12 months if profit holds. The figures are illustrative.
+
+**At closing = $72,000 (80% of the price).** **Later, if the target is met = $90,000 − $72,000 = $18,000.** Plan around the $72,000 and treat the rest as possible, not certain. See [deal structures](/guides/deal-structures-for-online-business-sales/).
 
 ## Money that may arrive later
 
-Not every sale pays in one amount. Some include [seller financing](/glossary/seller-financing/), where you are paid in installments, or an [earnout](/glossary/earnout/), where part of the price depends on results after the sale. In those cases you stay connected to the business: you may need to share reports, and you should keep copies of the agreement and payment records.
+Some sales include [seller financing](/glossary/seller-financing/) (installments) or an [earnout](/glossary/earnout/) (part of the price tied to later results). Then you stay connected: share reports if required and keep the agreement and payment records.
 
 ## Keep your records
 
@@ -51,8 +71,12 @@ It depends on the site and the agreement. A simple site with few accounts can mo
 
 ### Can I start a similar website afterward?
 
-Only if the agreement allows it. Many agreements include a non-compete clause. Check yours before you plan your next project.
+Only if the agreement allows it. Many include a non-compete clause.
 
-### What if the buyer says something does not work?
+### Do I owe tax on the sale?
 
-Follow the review process in the agreement. Keep the messages in writing, fix what you promised to transfer, and ask your attorney if you disagree about what was promised.
+Very likely, but how much depends on where you live, how long you held the site, how the sale is structured and your other income. This page gives no rates. Ask an accountant before you spend the money. The U.S. Small Business Administration recommends that an attorney review the sales agreement ([SBA](https://www.sba.gov/business-guide/manage-your-business/close-or-sell-your-business)).
+
+### When will the money reach my bank?
+
+After escrow releases it, once the buyer accepts or the review window ends. Ask the escrow service for timing before closing.

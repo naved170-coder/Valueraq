@@ -1,17 +1,78 @@
 {
-  "summary": "Wrote 1 article (how to buy a blog), live 28 Nov 6 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research.",
+  "summary": "Wrote 1 article (how to buy a blog), live 28 Nov 6 am Pakistan and not held. No reference pages were written because no reference topic has saved competitor research. Also improved 4 existing pages (what happens after you sell a website, what is included when you buy a website, holdback, letter of intent).",
   "model": "claude-sonnet-5-5",
   "items": [
-    {"path": "/guides/how-to-buy-a-blog/", "action": "new", "type": "Article", "score": 8.7,
-     "duplicate": "pass (closest: /guides/how-to-buy-a-website/, /guides/how-to-value-a-blog/)",
-     "images": "1 featured, 2 charts",
-     "keywords": ["how to buy a blog", "blogs for sale", "buy an existing blog", "buying a blog checklist"],
-     "serp": "used",
-     "note": "Not held: names no competitor, states no VALUERAQ price, no country tax rules. Multiples are VALUERAQ default ranges; worked example labelled illustrative. Release 28 Nov 6 am Pakistan."},
-    {"path": "/guides/buying-an-online-business-from-the-gulf/", "action": "skipped", "note": "Skipped again: UAE or Saudi legal statements need an official source this run cannot open."},
-    {"path": "/guides/flippa-alternatives/", "action": "skipped", "note": "Skipped again: needs competitor fees opened on the day."}
+    {
+      "path": "/guides/how-to-buy-a-blog/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.7,
+      "duplicate": "pass (closest: /guides/how-to-buy-a-website/, /guides/how-to-value-a-blog/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "how to buy a blog",
+        "blogs for sale",
+        "buy an existing blog",
+        "buying a blog checklist"
+      ],
+      "serp": "used",
+      "note": "Not held: names no competitor, states no VALUERAQ price, no country tax rules. Multiples are VALUERAQ default ranges; worked example labelled illustrative. Release 28 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/guides/buying-an-online-business-from-the-gulf/",
+      "action": "skipped",
+      "note": "Skipped again: UAE or Saudi legal statements need an official source this run cannot open."
+    },
+    {
+      "path": "/guides/flippa-alternatives/",
+      "action": "skipped",
+      "note": "Skipped again: needs competitor fees opened on the day."
+    },
+    {
+      "path": "/guides/what-happens-after-you-sell-a-website/",
+      "action": "improve",
+      "note": "Added stage timeline table, $90,000 payout example, next-steps list, tax and payment-timing FAQs; new title/description."
+    },
+    {
+      "path": "/guides/what-is-included-when-you-buy-a-website/",
+      "action": "improve",
+      "note": "Clarified buying-existing-site intent, added 12-row default-vs-negotiate asset table, agreement wording section, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/glossary/holdback/",
+      "action": "improve",
+      "note": "Added online-business section, release rules, $200,000 SaaS example, 3 FAQs; new title/description."
+    },
+    {
+      "path": "/glossary/letter-of-intent/",
+      "action": "improve",
+      "note": "Added sample LOI terms table with binding column, 3 FAQs; new title/description."
+    }
   ],
-  "tasks": ["duplicate_check", "research", "article", "images", "editorial_review", "gates", "scheduled", "link_check", "serp_compare", "report"],
-  "checks": ["Tests: 134 passed", "SEO audit: 0 critical, 0 warnings", "seo-check: 0 problems", "Internal links: checked by seo-check", "External links: 1 (SBA, listed in sources.json), not re-opened this run"],
-  "notes": ["No reference pages: every glossary and question topic with saved research is already written. Owner: run a research session for new glossary terms.", "Only one external source (SBA) was available for this article; a Google Search Central source would strengthen it."]
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "link_check",
+    "serp_compare",
+    "report",
+    "improve"
+  ],
+  "checks": [
+    "Tests: 134 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems",
+    "Internal links: checked by seo-check",
+    "External links: 1 (SBA, listed in sources.json), not re-opened this run"
+  ],
+  "notes": [
+    "No reference pages: every glossary and question topic with saved research is already written. Owner: run a research session for new glossary terms.",
+    "Only one external source (SBA) was available for this article; a Google Search Central source would strengthen it.",
+    "Improvement step done for 4 pages as the daily prompt asked (the runbook says 10); the morning self-check can continue the other unapplied files."
+  ],
+  "improved": 4
 }
