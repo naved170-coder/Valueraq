@@ -1,5 +1,5 @@
 {
-  "status": "needs_owner",
+  "status": "fixed",
   "summary": "All checks passed and 5 more pages were improved, but competitor research for new pages runs out in about 5 days.",
   "checks": [
     "Last night's run: done (1 article, how to buy a blog, live 28 Nov 6 am Pakistan, plus 4 pages improved)",
@@ -16,9 +16,8 @@
   ],
   "fixed": [
     "Improved 5 pages from competitor research: content/glossary/inventory-turnover.md, key-person-risk.md, ltv.md, marketplace.md, micro-saas.md (new tables, worked examples, checklists, FAQs, new titles and descriptions). Only glossary files are left unapplied; all guides are done.",
-    "Calendar had fewer than 10 unwritten days: added days 77 to 79 (sell a domain name, what to look for in an online business to buy, choose an online business broker [held]) and queued them for research."
+    "Calendar had fewer than 10 unwritten days: added days 77 to 79 (sell a domain name, what to look for in an online business to buy, choose an online business broker [held]) and queued them for research.",
+    "Owner session 28 Nov: research saved for the 3 new topics and 4 quick-answer pages; 17 researched topics ready (about 8 days, to 6 Dec)"
   ],
-  "needs_owner": [
-    "Competitor research runs out in about 5 days (around 3 Dec 2026): ask Claude to collect the next pages, including the 3 newly added topics"
-  ]
+  "needs_owner": []
 }
