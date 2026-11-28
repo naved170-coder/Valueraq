@@ -1,0 +1,98 @@
+{
+  "summary": "Wrote 1 article (business valuation checklist) and 3 quick answers (cost to buy a website, due diligence timeline, sale vs asking price); the asking-price page is held for you to approve. Existing-page improvements follow.",
+  "model": "claude-sonnet-5-5",
+  "items": [
+    {
+      "path": "/guides/business-valuation-checklist/",
+      "action": "new",
+      "type": "Article",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/what-documents-do-buyers-ask-for/, /guides/data-room-checklist/)",
+      "images": "1 featured, 2 charts",
+      "keywords": [
+        "business valuation checklist",
+        "documents needed for business valuation",
+        "valuation preparation checklist"
+      ],
+      "serp": "used",
+      "note": "Not held. Illustrative example uses VALUERAQ default 2.5-4.0x range. Release 29 Nov 12 am Pakistan."
+    },
+    {
+      "path": "/guides/how-much-does-it-cost-to-buy-an-existing-website/",
+      "action": "new",
+      "type": "Quick answer",
+      "score": 8.6,
+      "duplicate": "pass (closest: /guides/how-to-buy-a-website/)",
+      "images": "1 featured",
+      "keywords": [
+        "how much does it cost to buy an existing website",
+        "cost of buying a website",
+        "price of an existing website"
+      ],
+      "serp": "used",
+      "note": "Not held. Release 29 Nov 6 am Pakistan."
+    },
+    {
+      "path": "/guides/how-long-does-due-diligence-take/",
+      "action": "new",
+      "type": "Quick answer",
+      "score": 8.5,
+      "duplicate": "pass (closest: /guides/how-long-to-sell-an-online-business/, /guides/financial-due-diligence-checklist/)",
+      "images": "1 featured",
+      "keywords": [
+        "how long does due diligence take",
+        "due diligence period",
+        "due diligence timeline for buying a website"
+      ],
+      "serp": "used",
+      "note": "Not held. No average quoted; timeline labelled illustrative. Release 29 Nov 12 pm Pakistan."
+    },
+    {
+      "path": "/guides/what-percentage-of-asking-price-do-online-businesses-sell-for/",
+      "action": "new",
+      "type": "Quick answer",
+      "score": 8.5,
+      "duplicate": "pass (closest: /glossary/asking-price/)",
+      "images": "1 featured",
+      "keywords": [
+        "what percentage of asking price do businesses sell for",
+        "sale price vs asking price",
+        "how much below asking price to offer for a business"
+      ],
+      "serp": "used",
+      "note": "HELD: quotes BizBuySell benchmark figures from sources.json (read from page summary, marked re-check) and names the site. Release 29 Nov 6 pm Pakistan once approved."
+    },
+    {
+      "path": "/guides/buying-an-online-business-from-the-gulf/",
+      "action": "skipped",
+      "note": "Skipped again: needs an official source for UAE/Saudi rules."
+    },
+    {
+      "path": "/guides/flippa-alternatives/",
+      "action": "skipped",
+      "note": "Skipped again: needs competitor fees opened on the day."
+    }
+  ],
+  "tasks": [
+    "duplicate_check",
+    "research",
+    "article",
+    "reference_pages",
+    "images",
+    "editorial_review",
+    "gates",
+    "scheduled",
+    "serp_compare",
+    "report"
+  ],
+  "checks": [
+    "Tests: 134 passed",
+    "SEO audit: 0 critical, 0 warnings",
+    "seo-check: 0 problems"
+  ],
+  "notes": [
+    "Web research unavailable; used saved seo/serp research and seo/sources.json only.",
+    "Released one slot later than usual: 29 Nov 12 am, 6 am, 12 pm, 6 pm Pakistan."
+  ],
+  "improved": 0
+}
