@@ -1,0 +1,39 @@
+{
+ "page": "how-to-sell-a-domain-name",
+ "query": "how to sell a domain name",
+ "results": [],
+ "studied": [
+  {
+   "url": "hostinger.com/tutorials/how-to-sell-a-domain-name/",
+   "words": 2000,
+   "has": [
+    "7 steps",
+    "comparable sales and appraisal tools",
+    "escrow steps",
+    "registrar transfer steps (EPP code, locks)"
+   ],
+   "missing": "no fee or price figures, no worked example, no tax note, no website-plus-domain bundling, hosting company bias"
+  }
+ ],
+ "gaps": [
+  "Worked pricing example from comparable sales (describe how to read NameBio-style comps; no invented prices)",
+  "Where to sell: marketplaces, brokers, direct; fee models compared (figures only from sources.json)",
+  "Domain alone vs domain with a working website: why the second is valued on profit (link the website valuation tool)",
+  "Transfer checklist with escrow order, and scam warnings",
+  "FAQs; tax note for US/UK/CA/AU sellers to ask an accountant"
+ ],
+ "titles": [
+  "How to sell a domain name in 7 steps",
+  "How to sell a domain name",
+  "Step-by-Step Guide: How to Sell a Domain Name"
+ ],
+ "keywords": [
+  "how to sell a domain name",
+  "sell my domain name",
+  "sell a domain",
+  "domain name for sale"
+ ],
+ "collected": "2026-11-28",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}

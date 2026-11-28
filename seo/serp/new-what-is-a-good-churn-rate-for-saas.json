@@ -1,0 +1,24 @@
+{
+ "page": "what-is-a-good-churn-rate-for-saas",
+ "query": "what is a good churn rate for saas",
+ "results": [],
+ "studied": [],
+ "gaps": [
+  "Ranking pages (Paddle, Close, ChartMogul, Vena, Gong) give benchmarks from their own data; quote only figures added to sources.json with attribution",
+  "Show how churn changes a small SaaS's price (worked example with the SaaS valuation tool); monthly vs annual churn conversion",
+  "FAQs; link churn and revenue churn glossary pages (no keyword overlap)"
+ ],
+ "titles": [
+  "SaaS churn rate",
+  "SaaS Churn Rate: No-BS Guide",
+  "Is 5% a good monthly SaaS churn rate?"
+ ],
+ "keywords": [
+  "what is a good churn rate for saas",
+  "good saas churn rate",
+  "monthly churn benchmark"
+ ],
+ "collected": "2026-11-28",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; one search checked, pages not opened."
+}

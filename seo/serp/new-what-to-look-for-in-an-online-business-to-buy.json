@@ -1,0 +1,36 @@
+{
+ "page": "what-to-look-for-in-an-online-business-to-buy",
+ "query": "what to look for when buying an online business",
+ "results": [],
+ "studied": [
+  {
+   "url": "empireflippers.com/factors-to-consider-when-buying-an-online-business/",
+   "words": 2400,
+   "has": [
+    "10 factors with questions"
+   ],
+   "missing": "no worked valuation, no benchmarks, no checklist table, no FAQ; formula only as an image"
+  }
+ ],
+ "gaps": [
+  "Scorecard table: each factor, what good looks like, what to ask for as proof",
+  "Benchmarks only from sources.json (otherwise describe direction)",
+  "Worked comparison of two listings at the same price showing which is better value",
+  "Red flags list linking our red-flags guide (no keyword overlap)",
+  "FAQs"
+ ],
+ "titles": [
+  "The Top 10 Factors to Consider When Buying an Online Business",
+  "Buying an Internet Business",
+  "6 Common Mistakes to Avoid When Buying an Online Business"
+ ],
+ "keywords": [
+  "what to look for when buying an online business",
+  "good online business to buy",
+  "signs of a good online business",
+  "online business buying criteria"
+ ],
+ "collected": "2026-11-28",
+ "applied": null,
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant page was studied, junk sites skipped."
+}
