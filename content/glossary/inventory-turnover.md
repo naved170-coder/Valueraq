@@ -2,15 +2,15 @@
 title: What Is Inventory Turnover?
 term: Inventory Turnover
 aliases: inventory turnover, stock turnover, inventory turns, inventory turnover ratio
-meta_title: What Is Inventory Turnover? Definition, Formula & Example
-meta_description: Inventory turnover shows how often a business sells and replaces its stock in a year. See the formula, a worked example and why buyers check it.
+meta_title: Inventory Turnover Formula, Example & Days to Sell Stock
+meta_description: Inventory turnover is cost of goods sold divided by average stock. See a worked example, a slow vs fast stock table, a buyer checklist and 3 FAQs.
 h1: Inventory Turnover
 definition: Inventory turnover is the number of times a business sells and replaces its stock during a period, found by dividing cost of goods sold by the average value of inventory held.
 cluster: ecommerce
 page_type: reference
 keywords: inventory turnover, what is inventory turnover, inventory turnover formula, inventory turnover ecommerce
 related: /guides/ecommerce-valuation/, /guides/shopify-store-valuation/, /glossary/cost-of-goods-sold/, /glossary/gross-margin/, /glossary/working-capital/, /tools/ecommerce-valuation/
-updated: 2026-10-24
+updated: 2026-11-28
 publish_at: 2026-10-24T13:00Z
 image: /static/img/articles/inventory-turnover.png
 image_alt: Featured image for the glossary entry What Is Inventory Turnover
@@ -40,6 +40,39 @@ If the same store held $20,000 on average, the turnover would be $120,000 ÷ $20
 {{BRAND}}'s ecommerce tool values a store on profit and shows inventory at cost separately, because stock is normally paid for on top of the price after a count at closing. Turnover helps a buyer judge that stock. Slow turnover can mean old or unsellable items, which the buyer should not pay full cost for. Fast turnover can mean the store needs more [working capital](/glossary/working-capital/) to keep shelves filled.
 
 Buyers often ask for a stock list with the age of each item during [due diligence](/guides/digital-business-due-diligence/). See the [ecommerce valuation guide](/guides/ecommerce-valuation/) for how inventory is treated.
+
+## Slow stock vs fast stock: what a buyer sees
+
+Same store, same $120,000 of cost of goods sold. Only the stock held differs. The figures are illustrations, not benchmarks.
+
+| Average stock at cost | Turnover | Days to sell stock | What a buyer may think |
+|---|---|---|---|
+| $20,000 | 6.0 times | about 61 days | Stock moves; little cash tied up |
+| $35,000 | 3.4 times | about 106 days | Normal for many stores; check item ages |
+| $60,000 | 2.0 times | about 183 days | Possible dead stock; ask for an age list |
+
+Check: 120,000 ÷ 20,000 = 6; 120,000 ÷ 35,000 = 3.43; 120,000 ÷ 60,000 = 2.
+
+## Buyer checklist for stock
+
+- Ask for a stock list with the cost, quantity and purchase date of every item.
+- Compare turnover for the whole store with turnover for the top products, because one fast seller can hide a shelf of slow ones.
+- Agree before closing how stock will be counted and valued, since it is usually paid for on top of the price.
+- Ask whether any stock is on consignment, damaged or past its sell-by date.
+
+## Frequently asked questions
+
+### Is a higher inventory turnover always better?
+
+No. Very high turnover can mean the store runs out of stock and loses sales. A buyer wants stock that sells steadily without gaps.
+
+### Does dropshipping have inventory turnover?
+
+Not in the usual sense, because the store holds no stock. Buyers look at supplier terms and order margins instead.
+
+### How does stock affect what I pay?
+
+Stock is normally counted at cost at closing and paid for on top of the price of the business. Slow or old items are often valued lower or left out.
 
 ## Related terms
 

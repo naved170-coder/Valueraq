@@ -1,1 +1,24 @@
-{"status":"ok","summary":"Self-check started; stop checks passed.","checks":["Started"],"fixed":[],"needs_owner":[]}
+{
+  "status": "needs_owner",
+  "summary": "All checks passed and 5 more pages were improved, but competitor research for new pages runs out in about 5 days.",
+  "checks": [
+    "Last night's run: done (1 article, how to buy a blog, live 28 Nov 6 am Pakistan, plus 4 pages improved)",
+    "Queue: nothing missing for today's slots",
+    "Tests: 134 passed; seo-check 0 problems; audit 282 URLs, 0 critical, 0 warnings",
+    "Deploy: newest deploy live; no error-level log lines since 27 Nov 03:00 UTC",
+    "Search figures: snapshot readable (last data 2026-11-26): 28 days 41 clicks, 18,418 impressions, average position 49.4 (Search Console averages, not live ranks)",
+    "Task data honesty: last night's tasks match the repository",
+    "Calendar supply: was 9 unwritten days, 3 added (now 12)",
+    "Held pages: 4 files with hold: yes, plus 1 newly scheduled broker topic marked held",
+    "Article written: yes",
+    "Ranking review: not run today (Mondays and Thursdays only)",
+    "Competitor research supply: 10 unwritten calendar topics have saved research, about 5 days of writing (the 3 new topics have none yet)"
+  ],
+  "fixed": [
+    "Improved 5 pages from competitor research: content/glossary/inventory-turnover.md, key-person-risk.md, ltv.md, marketplace.md, micro-saas.md (new tables, worked examples, checklists, FAQs, new titles and descriptions). Only glossary files are left unapplied; all guides are done.",
+    "Calendar had fewer than 10 unwritten days: added days 77 to 79 (sell a domain name, what to look for in an online business to buy, choose an online business broker [held]) and queued them for research."
+  ],
+  "needs_owner": [
+    "Competitor research runs out in about 5 days (around 3 Dec 2026): ask Claude to collect the next pages, including the 3 newly added topics"
+  ]
+}

@@ -2,15 +2,15 @@
 title: What Is Micro-SaaS?
 term: Micro-SaaS
 aliases: micro-saas, micro saas, microsaas, micro-saas business
-meta_title: What Is Micro-SaaS? Definition, Example & How It Is Valued
-meta_description: A micro-SaaS is a small software-as-a-service business run by one person or a tiny team. See how it works, an example and why buyers price it differently.
+meta_title: Micro SaaS Meaning: Valuation Example & Buyer Checklist
+meta_description: A micro SaaS is a small software product run by one person or a tiny team. See a profit-based value example, a buyer checklist and 3 FAQs.
 h1: Micro-SaaS
 definition: A micro-SaaS is a small subscription software business, usually built for a narrow group of customers and run by one person or a very small team.
 cluster: saas
 page_type: reference
 keywords: micro-saas, what is micro saas, micro saas meaning, micro saas business
 related: /glossary/saas/, /glossary/mrr/, /glossary/arr/, /glossary/churn/, /glossary/key-person-risk/, /guides/micro-saas-valuation/
-updated: 2026-11-03
+updated: 2026-11-28
 publish_at: 2026-11-03T19:00Z
 image: /static/img/articles/micro-saas.png
 image_alt: What Is Micro-SaaS? (VALUERAQ glossary)
@@ -48,6 +48,32 @@ Small size changes how a buyer reads the numbers.
 - **One customer can matter.** If a single account pays a large share of MRR, losing it changes the whole picture.
 
 A buyer will often compare the ARR figure with annual profit, since a very small software business may be bought for the income it produces. The full approach is in [micro-SaaS valuation](/guides/micro-saas-valuation/).
+
+## Worked example: valuing a micro SaaS on profit
+
+An illustrative product earns $4,000 a month and spends $1,000 a month on hosting, tools and support. Monthly profit is $3,000, or $36,000 a year. If a buyer applies a 3× multiple to yearly profit, the price is 3 × 36,000 = $108,000. The multiple here is an example; see [micro SaaS valuation](/guides/micro-saas-valuation/) for how multiples vary with churn, growth and owner hours.
+
+## Buyer checklist
+
+- Monthly revenue and churn for at least a year
+- Hosting, tool and support costs, and who pays them after the sale
+- Code ownership, repository access and third-party licences
+- Hours the founder works each week, and what the handover covers
+- Whether a few customers produce most of the revenue
+
+## Frequently asked questions
+
+### What counts as a micro SaaS?
+
+A small software-as-a-service product with a narrow purpose, usually built and run by one person or a very small team.
+
+### Can a micro SaaS be sold?
+
+Yes. Buyers look at recurring revenue, churn and how much work the owner does. Documentation and a handover raise buyer confidence.
+
+### Is a micro SaaS valued like a bigger SaaS?
+
+The methods are similar, but small products usually get lower multiples because they depend more on the owner and have less diversified customers.
 
 ## Related terms
 
