@@ -1,7 +1,7 @@
 ---
 title: How to Explain a Revenue Drop to a Buyer
-meta_title: Explain a Revenue Drop to a Buyer: 5-Step Script
-meta_description: A revenue dip need not kill a sale. Get a 5-step script, a proof table and a worked example of what it does to the price. Free calculator included.
+meta_title: Explain a Revenue Drop to a Buyer: Causes + Script
+meta_description: How to explain a revenue drop to a buyer: what to show for each cause, a worked price example, an earn-out bridge and a short script. Free tool included.
 h1: How to Explain a Revenue Drop to a Buyer
 section: Guides
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: To explain a revenue drop to a buyer, tell them first, name the cause in one sentence, show month-by-month numbers that prove it, separate one-off causes from lasting ones, and show what you have done since. A buyer will usually price the lower recent profit, so the goal is to prove the dip was temporary, not to hide it.
 keywords: how to explain a revenue drop to a buyer, revenue decline when selling a business, selling a business with declining revenue, explain declining sales to a buyer, falling profit before sale
 published: 2026-11-15
-updated: 2026-11-15
+updated: 2026-11-28
 publish_at: 2026-11-15T01:00Z
 image: /static/img/articles/how-to-explain-a-revenue-drop-to-a-buyer.png
 image_alt: Featured image for the guide on how to explain a revenue drop to a buyer
@@ -143,6 +143,30 @@ The gap is $134,400 − $115,200 = **$19,200**, which is about 14% of the higher
 
 A buyer may still pay somewhere between the lower and higher figures. Real offers depend on the cause, how much of the business is exposed to it, and how much proof you show. The example shows only how much the explanation is worth: here, up to $19,200 on a $134,400 business.
 
+## Cause by cause: what to show and how buyers think about it
+
+| Cause | Evidence to show | How a buyer tends to read it |
+|---|---|---|
+| Search ranking change | Search Console traffic by month, which pages lost visits | Worry if it hit the main pages; less if recovery has started |
+| Higher ad costs | Ad spend and cost per sale by month | Fixable if margins still work at the new cost |
+| Stock-out or supplier problem | Dates, orders lost, restock records | One-off if resolved and not repeating |
+| Lost large customer or sponsor | Contract end date and share of revenue | Lasting unless replaced |
+| Seasonality | Same months in the year before | Not a drop if the pattern repeats |
+| Owner time reduced | Hours before and after | Recovers if the owner returns, which a buyer may not do |
+
+## Bridging the gap with an earn-out
+
+In the worked example, a buyer who prices on the last six months offers $115,200 while you ask $134,400. The $19,200 gap can be bridged. An [earnout](/glossary/earnout/) pays part of the price later if results recover.
+
+Illustrative offer: $115,200 at closing, plus up to $19,200 more if profit over the 12 months after the sale reaches $42,000. If recovery happens, you receive the full $134,400. If not, the buyer has not overpaid. Agree the measure in writing, and see [deal structures](/guides/deal-structures-for-online-business-sales/).
+
+## Mistakes that cost trust
+
+- Telling the buyer only after they find the drop.
+- Giving two different reasons in two conversations.
+- Showing recovery with a single good month.
+- Blaming a cause you cannot document.
+
 ## What not to do
 
 - **Do not blame the buyer's tools.** "Your numbers are wrong" ends the conversation.
@@ -178,6 +202,14 @@ No. Buyers check statements against your sheet, and a gap in the dates is a warn
 ### Does a revenue drop mean my business is unsellable?
 
 No. Businesses are bought with dips in their history. A dip changes the price and the questions, not whether a sale is possible. Clear causes, clean records and early honesty are what keep a deal alive.
+
+### Do I have to disclose a drop?
+
+Yes, tell the buyer. They will see it in the records, and an explanation you give first is more believable than one you give after being asked.
+
+### Will an earn-out always work?
+
+No. It needs a clear measure, a period and trust in the buyer's handling of the business. Get an attorney to draft it.
 
 ## Sources
 

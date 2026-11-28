@@ -1,7 +1,7 @@
 ---
 title: How to Prove Your Revenue to a Buyer
-meta_title: Proof of Revenue for a Website: 6-Step Seller Pack
-meta_description: Proof of revenue is 12 months of source records that match your bank deposits. Get a 6-step proof pack and a worked example. Free calculator included.
+meta_title: Proof of Revenue for a Buyer: Reconciliation Example
+meta_description: Show buyers your revenue: a worked reconciliation of dashboard, bank and profit and loss, exports by income source and safe-sharing steps.
 h1: How to Prove Your Revenue to a Buyer
 section: Guides
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: To prove your revenue to a buyer, collect 12 months or more of records from the systems that first receive the money, such as the payment processor, ad network and affiliate dashboards, match every payout to a bank deposit, show the totals month by month on one reconciliation sheet, and offer read-only access so the buyer can check the records without relying on your summary.
 keywords: proof of revenue website, how to prove website revenue, prove revenue to a buyer, revenue proof when selling a website, sell a website revenue records
 published: 2026-11-13
-updated: 2026-11-13
+updated: 2026-11-28
 publish_at: 2026-11-13T01:00Z
 image: /static/img/articles/how-to-prove-your-revenue-to-a-buyer.png
 image_alt: Featured image for the guide on how to prove your revenue to a buyer
@@ -137,6 +137,37 @@ Records do not always agree, and that is fixable if you handle it openly.
 
 Never alter a record to make the totals agree. A visible, explained difference costs you little. A discovered edit can cost you the sale.
 
+## Worked reconciliation: dashboard, bank and profit and loss
+
+Buyers compare three records for the same month. They should agree once refunds and fees are counted. Illustrative month:
+
+| Record | Figure |
+|---|---|
+| Gross sales in the store dashboard | $10,000 |
+| Refunds | -$400 |
+| Processor fees | -$320 |
+| **Payout to the bank (expected)** | **$9,280** |
+| Bank deposit seen on the statement | $9,280 |
+| Profit and loss: revenue $10,000, minus refunds $400 and fees $320 | $9,280 |
+
+If the bank shows $9,000 instead, a buyer will ask where $280 went. Common causes are a payout timing difference at month end, a chargeback or a fee not in the report. Write the cause beside the line before they ask.
+
+## More places to export proof from
+
+| Where the money comes from | What to export |
+|---|---|
+| Online store platform | Sales, refunds and payout reports by month |
+| Marketplace seller account | Settlement or payment reports by month |
+| App store | Monthly financial or sales reports |
+| Ad networks and affiliate programs | Monthly earnings and payment history |
+| Payment processor | Payout list matched to deposits |
+
+Names of reports differ by platform. Look for the report that shows money paid out, not only sales made.
+
+## Why screenshots are not enough
+
+A screenshot can be edited and shows one moment. Exports with dates, plus bank lines, are harder to fake and easier to check. Offer a live screen share, where you open the dashboard while the buyer watches. For access, send a view-only invitation where the platform allows it, and never share a password.
+
 ## Sharing your proof safely
 
 Send the reconciliation sheet first, and give access to the underlying records only when the buyer is serious and has signed an NDA. The [data room checklist](/guides/data-room-checklist/) explains how to share in stages, and [what documents buyers ask for](/guides/what-documents-do-buyers-ask-for/) lists the rest of the pack. Remove customer personal details unless they are needed, and give read-only access wherever you can, so nothing can be changed by mistake. On {{BRAND}}, sellers can ask for a [revenue verified](/verification/) status on a listing, which means our team has compared the evidence they provide with the stated revenue. It is a check on the evidence supplied, not a guarantee of future results, and a buyer should still check the records before paying.
@@ -174,6 +205,14 @@ List it separately and label it unverified. Most buyers will price it at zero. I
 ### Should I show my tax returns?
 
 Buyers often ask for them later in the process, once they are serious. They are private, so share them only after an NDA, and ask an accountant what applies in your situation.
+
+### Can I share a password so a buyer can look?
+
+No. Use view-only access or a screen share. Keep credentials private until accounts are transferred at closing.
+
+### What if my income is paid in cash or to a personal account?
+
+Move it into business records first, and explain the history. Income a buyer cannot trace is income they will not pay a multiple on.
 
 ## Sources
 

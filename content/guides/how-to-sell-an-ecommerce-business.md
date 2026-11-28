@@ -1,7 +1,7 @@
 ---
 title: How to Sell an Ecommerce Business
-meta_title: How to Sell an Ecommerce Business: 9 Steps & Stock Math
-meta_description: Selling an ecommerce business: price it as yearly profit times a multiple plus stock. Get 9 steps, a worked example and a handover list. Free calculator.
+meta_title: Sell an Ecommerce Business: 9 Steps + Net Proceeds
+meta_description: How to sell an ecommerce business: 9 steps, a worked price with stock math, what you keep after fees, supplier handover and a timeline table.
 h1: How to Sell an Ecommerce Business
 section: Selling
 cluster: ecommerce
@@ -10,7 +10,7 @@ page_type: article
 answer: To sell an ecommerce business, prove 12 months of profit across every sales channel, count and value the stock, price the business as yearly profit times a multiple plus sellable stock at cost, list it with factual figures, answer buyer checks with records, agree terms in writing and close through escrow before handing over each account, supplier and domain in a set order.
 keywords: sell ecommerce business, ecommerce sites for sale, ecommerce website for sale, how to sell an online store
 published: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-28
 publish_at: 2026-11-12T01:00Z
 image: /static/img/articles/how-to-sell-an-ecommerce-business.png
 image_alt: Featured image for the guide on how to sell an ecommerce business
@@ -156,6 +156,39 @@ Hand over in a planned order:
 7. Release escrow once the buyer confirms everything arrived.
 8. Provide the agreed support period, then step back.
 
+## What you keep: net proceeds under two fee assumptions
+
+Using the worked example above (midpoint business price $226,800, sellable stock $28,000), the table shows what the seller keeps if a sales service or broker takes a fee. The 8% and 12% rates are assumptions for the arithmetic, not market rates and not a {{BRAND}} fee. Your own terms will differ.
+
+| Line | 8% fee on the business price | 12% fee on the business price |
+|---|---|---|
+| Business price | $226,800 | $226,800 |
+| Fee | $226,800 x 0.08 = $18,144 | $226,800 x 0.12 = $27,216 |
+| Stock paid at cost | $28,000 | $28,000 |
+| **Seller keeps** | **$226,800 - $18,144 + $28,000 = $236,656** | **$226,800 - $27,216 + $28,000 = $227,584** |
+
+Check how the fee is calculated: on the business price only, or on stock too. The answer changes the result.
+
+## Moving stock and suppliers
+
+1. Freeze the count date and agree who counts, in writing.
+2. List every purchase order in transit, with dates, costs and who pays on arrival.
+3. Introduce the buyer to each supplier and get written permission to pass on terms.
+4. Agree who takes on any minimum order or deposit already paid.
+5. Move any warehouse or fulfillment account to the buyer's name.
+
+## Timeline: preparation to handover (illustrative)
+
+| Phase | What happens | Typical drivers of delay |
+|---|---|---|
+| Preparation | 12 months of records, stock count, listing | Messy books, unclear stock |
+| Finding a buyer | Enquiries, calls, offers | Price above the range |
+| Checks | Buyer reviews records and stock | Missing reports |
+| Contract and escrow | Sign, fund escrow | Legal edits, buyer funding |
+| Handover | Accounts, suppliers, stock | Accounts not in your name |
+
+No average is quoted here. Plan from the stages, not from a number.
+
 ## Common mistakes to avoid
 
 - **Listing without records.** Unverified profit is the fastest way to lose a buyer.
@@ -185,6 +218,14 @@ An accountant helps you present profit credibly and understand tax on the sale, 
 ### Should I tell my suppliers and customers?
 
 Tell suppliers once there is a signed agreement, ideally with the buyer present. For customers, follow your privacy policy on how their data is shared and announce the change after closing if the brand stays the same.
+
+### What is an earn-out in an ecommerce sale?
+
+Part of the price is paid later if results reach an agreed level. It can bridge a gap on price. See [earnout](/glossary/earnout/).
+
+### Can I offer seller financing?
+
+You can accept part of the price over time. The risk is that you are paid late if the buyer struggles, so see [seller financing](/glossary/seller-financing/) and ask an attorney to draft the terms.
 
 ## Sources
 

@@ -1,7 +1,7 @@
 ---
 title: How to Sell an Online Business Without a Broker
-meta_title: Sell an Online Business Without a Broker (Checklist)
-meta_description: Sell your online business without a broker in 8 steps. See what a broker does, a worked cost example and a checklist. List free, no commission.
+meta_title: Sell Without a Broker: Checklist + Scam Safety Steps
+meta_description: Selling without a broker? Use this checklist with a commission example, scam and payment-fraud checks, NDA steps and a broker decision table.
 h1: How to Sell an Online Business Without a Broker
 section: Selling
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: You can sell an online business without a broker by doing the broker's jobs yourself: value it, gather 12 months of records, write the listing, screen buyers, agree terms in writing, close through escrow and hand over the assets. It saves the commission but costs you time, so it works best when your records are clean.
 keywords: sell my company online, i want to sell my online business, best place to sell a small business, sell a business without a broker
 published: 2026-11-19
-updated: 2026-11-18
+updated: 2026-11-28
 publish_at: 2026-11-19T01:00Z
 image: /static/img/articles/how-to-sell-your-online-business-without-a-broker.png
 image_alt: Featured image for the guide How to Sell an Online Business Without a Broker
@@ -130,6 +130,39 @@ Check the numbers:
 
 In this example, selling alone comes out ahead unless the lack of a broker costs you more than 8% of the price, through a weaker price or a sale that falls through. Add your own time to the other side of the sum, and remember a broker may reach buyers you cannot.
 
+## Scam and payment-fraud checklist
+
+Most scams target sellers who work alone. Check every line before you hand anything over.
+
+- The buyer will pay through escrow, and you can open the escrow service's own site yourself.
+- You never receive a cheque, overpayment or "refund me the difference" request.
+- No transfer of the domain or account happens before the money is confirmed as held.
+- The buyer has shown proof of funds, and the name matches the contract.
+- The buyer will not ask for passwords, only for view-only access during checks.
+- You are not rushed by a deadline or a "final offer" that expires in hours.
+
+If any line fails, stop and ask for the step to be fixed or walk away. See [how escrow works](/guides/how-escrow-works-for-website-sales/).
+
+## Confidentiality: NDA steps
+
+1. Share only a short summary, with no name, domain or exact figures, until a buyer shows proof of funds.
+2. Ask the buyer to sign a [non-disclosure agreement](/glossary/non-disclosure-agreement/) before you share the name and records.
+3. Share records in stages: summary figures first, then reports, then account access.
+4. Keep a list of who has seen what.
+5. Have an attorney check the agreement, since enforcement differs by country.
+
+## When a broker is worth it
+
+| Your situation | Selling alone fits | A broker may help |
+|---|---|---|
+| Time | You can answer buyers within a day | You cannot spare the hours |
+| Deal size | Small and simple | Large, or several moving parts |
+| Records | Tidy and complete | Complex, with several entities |
+| Buyer reach | You have a network or audience | You have no route to buyers |
+| Negotiation | You are comfortable negotiating | You prefer someone else to do it |
+
+Fees and services differ, so compare in writing before choosing.
+
 ## Common mistakes when selling alone
 
 Sellers who skip the broker tend to trip over the same few things:
@@ -171,6 +204,14 @@ It varies with price, records and buyer interest. Our guide on [how long it take
 ### Do I still need a lawyer?
 
 Yes, for the sales agreement at least. The SBA recommends an attorney review it.
+
+### Is it safe to sell without a broker?
+
+Yes, if you use escrow, check proof of funds and never hand over accounts before payment is confirmed.
+
+### Do I need an NDA?
+
+Use one before you share the business name, the domain or exact figures, and have it reviewed by an attorney.
 
 ## Sources
 

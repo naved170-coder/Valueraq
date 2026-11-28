@@ -96,6 +96,31 @@
       "path": "/guides/how-to-calculate-customer-lifetime-value/",
       "action": "improve",
       "note": "Added formulas-by-business-type table, mistake-impact example, what to show a buyer, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-document-your-business-before-selling/",
+      "action": "improve",
+      "note": "Added online process list, one-page procedure example, accounts register, owner-hours multiple example, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-explain-a-revenue-drop-to-a-buyer/",
+      "action": "improve",
+      "note": "Added cause-by-cause evidence table, earn-out bridge, trust mistakes, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-prove-your-revenue-to-a-buyer/",
+      "action": "improve",
+      "note": "Added worked dashboard/bank/P&L reconciliation, exports by income source, screenshots and safe-access FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-sell-an-ecommerce-business/",
+      "action": "improve",
+      "note": "Added net-proceeds table under two assumed fee rates, stock and supplier transfer steps, timeline table, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-sell-your-online-business-without-a-broker/",
+      "action": "improve",
+      "note": "Added scam and payment-fraud checklist, NDA steps, broker decision table, 2 FAQs; new title/description."
     }
   ],
   "tasks": [
@@ -120,5 +145,5 @@
     "Web research unavailable; used saved seo/serp research and seo/sources.json only.",
     "Released one slot later than usual: 29 Nov 12 am, 6 am, 12 pm, 6 pm Pakistan."
   ],
-  "improved": 5
+  "improved": 10
 }

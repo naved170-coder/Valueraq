@@ -36,6 +36,7 @@
   "Direct sale guide"
  ],
  "collected": "2026-11-23",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-28",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added scam and payment-fraud checklist, NDA steps, broker decision table, 2 FAQs; new title/description."
 }

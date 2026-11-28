@@ -35,6 +35,7 @@
   "Due Diligence Checklist"
  ],
  "collected": "2026-11-23",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-28",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added worked reconciliation, exports by income source, why screenshots fail, safe-access FAQs; new title/description."
 }

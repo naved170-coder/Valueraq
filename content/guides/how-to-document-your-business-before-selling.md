@@ -1,7 +1,7 @@
 ---
 title: How to Document Your Business Before Selling
-meta_title: Document Your Business Before Selling: 7-Part Playbook
-meta_description: Buyers pay more for a business that runs without you. Get a 7-part documentation playbook, a handover table and a worked example. Free calculator included.
+meta_title: Document Your Business Before Selling: Process Template
+meta_description: Document your online business before selling: a process list, a one-page template, an accounts register and how hours change your multiple.
 h1: How to Document Your Business Before Selling
 section: Guides
 cluster: selling
@@ -10,7 +10,7 @@ page_type: article
 answer: To document your business before selling, write down the six things a buyer needs to run it without you: how money comes in, the repeatable tasks and who does them, every account and login the business depends on, the suppliers and contractors involved, the traffic or customer sources, and a first-90-days handover plan, then store it in one organized folder you can share after an NDA.
 keywords: document business processes before sale, how to document a business before selling, business handover documentation, standard operating procedures for selling a business, prepare business for sale
 published: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-28
 publish_at: 2026-11-14T01:00Z
 image: /static/img/articles/how-to-document-your-business-before-selling.png
 image_alt: Featured image for the guide on how to document your business before selling
@@ -127,6 +127,53 @@ What is that worth? No one can say for sure. But the arithmetic shows how little
 
 The seller's other gain is speed. A buyer who can read the procedures does not have to ask for them one by one, so due diligence is shorter. BizBuySell's benchmark of 1,661 sold website and ecommerce listings reports a [median of 71 days on market](https://www.bizbuysell.com/learning-center/valuation-benchmarks/websites-ecommerce/), so anything that removes weeks of back-and-forth is worth having.
 
+## Process list for an online business
+
+Write one short procedure for each task a buyer would have to take over. Most online businesses need some of these.
+
+| Task | What the procedure covers |
+|---|---|
+| Publishing or product launch | Steps from idea to live page, tools used, who approves |
+| Customer support | Common questions, standard replies, refund rules |
+| Order fulfillment | How an order reaches the customer, supplier contacts |
+| Advertising and email | Where campaigns run, budgets, how results are checked |
+| Refunds and disputes | Who decides, time limits, how the processor is told |
+| Monthly bookkeeping | Which reports to pull, where to file them |
+
+### A one-page procedure example
+
+**Task:** Handle a refund request. **Owner of task:** support. **Time:** 10 minutes.
+
+1. Open the order in the store dashboard and confirm the purchase date.
+2. If it is within the refund window in the shop policy, issue the refund in the payment tool.
+3. Reply using the saved refund message and add the order number.
+4. Log the refund in the monthly sheet (date, amount, reason).
+5. If the request is outside the window, forward it to the owner.
+
+One page like this per task is enough. The test is whether a stranger could follow it without calling you.
+
+## Accounts and tools register
+
+Keep one table that lists every account the business depends on. Do not put passwords in it: a buyer needs to know what exists and how it will move, not your logins.
+
+| Account or tool | Held by | Plan and cost | How it transfers |
+|---|---|---|---|
+| Domain registrar | Owner's email | Yearly | Transfer code or account change |
+| Hosting or store platform | Owner's email | Monthly | Account ownership change |
+| Payment processor | Business entity | Fees per sale | New account, with a handover date |
+| Email service | Owner's email | Monthly | Export list, or move account |
+
+## How documentation affects the multiple
+
+{{BRAND}}'s default rules adjust the multiple for owner involvement: over 40 hours a week lowers it by 10%, over 20 to 40 hours lowers it by 5%, 10 to 20 hours is the baseline and under 10 hours raises it by 5%. See the [methodology](/methodology/).
+
+Example, using the default website midpoint of 3.2 and $60,000 yearly profit:
+
+- Owner works 45 hours a week: 3.2 x 0.90 = 2.88, so $60,000 x 2.88 = **$172,800**.
+- Owner works 8 hours a week: 3.2 x 1.05 = 3.36, so $60,000 x 3.36 = **$201,600**.
+
+The difference is $28,800. Written procedures do not cut your hours by themselves, but they let you hand work to others before listing, and they let a buyer believe the hours are real.
+
 ## How to write documentation people will actually use
 
 Good documentation is short and plain. A few habits keep it that way.
@@ -186,6 +233,14 @@ No. List where credentials are stored and hand them over at closing, through a p
 ### Can an AI tool or a freelancer write the procedures for me?
 
 You can use either for the first draft, but you must check every step against how the work is really done. A procedure that is wrong is worse than none, so test each one before sharing it.
+
+### How long does documentation take?
+
+For a small business, a few days of writing if you do one task at a time. Record yourself doing the task and write the steps from the recording.
+
+### Should I give a buyer my passwords?
+
+No. Share view-only access during checks, and move accounts through each platform's own transfer process at closing.
 
 ## Sources
 
