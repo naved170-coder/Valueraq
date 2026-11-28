@@ -32,6 +32,7 @@
   "Discounted Cash Flow Valuation"
  ],
  "collected": "2026-11-23",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-28",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added discount-rate x growth sensitivity grid, risk-based rate guide, why buyers use multiples, 3 FAQs; new title/description."
 }

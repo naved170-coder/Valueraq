@@ -1,7 +1,7 @@
 ---
 title: Asset Acquisition Checklist for Buying an Online Business
-meta_title: Asset Acquisition Checklist: 9 Steps + Example
-meta_description: Buying a business's assets, not the company? Use this 9-step asset acquisition checklist with a worked example and transfer table. Free calculator included.
+meta_title: Asset Acquisition Checklist: Full Tick List + Example
+meta_description: Buying a business's assets? Use this asset acquisition checklist: a tick list by asset type, what stays with the seller and a worked example.
 h1: Asset Acquisition Checklist for Buying an Online Business
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: An asset acquisition checklist lists each asset you are buying, proves the seller owns it, states what is left behind, sets the price for each part, and orders the transfer so money moves only when the assets do. Nine steps cover it, from the asset list to the first week of ownership.
 keywords: asset acquisition checklist, asset purchase checklist, asset purchase agreement checklist, buying business assets checklist
 published: 2026-11-21
-updated: 2026-11-21
+updated: 2026-11-28
 publish_at: 2026-11-21T01:00Z
 image: /static/img/articles/asset-acquisition-checklist.png
 image_alt: Asset Acquisition Checklist for Buying an Online Business (VALUERAQ guide)
@@ -123,6 +123,38 @@ The split is an example, not a rule. How a price is divided between assets can c
 
 One check to run: the inventory line should match a count you or someone you trust made at the date of transfer. If the real count is $11,000 at cost, the price should fall by $3,000, to $108,200.
 
+## Full checklist by asset type
+
+Tick each line before you pay. A line you cannot tick is a question for the seller.
+
+**Core digital assets**
+- [ ] Domain names, with registrar account access or a transfer code
+- [ ] Website files, theme or code, and the repository
+- [ ] Content, images and downloads, with proof the seller can sell them
+- [ ] Hosting, store platform or app store account
+
+**Audience and marketing assets**
+- [ ] Email list, with how and when people agreed to receive messages (consent rules differ by country, so ask an attorney)
+- [ ] Social media accounts and handles
+- [ ] Advertising accounts and their history
+- [ ] Analytics and Search Console access
+
+**Supplier and operating assets**
+- [ ] Supplier accounts and agreed terms
+- [ ] Inventory, with a count and location
+- [ ] Software and tool licenses that transfer
+- [ ] Contracts with writers, developers or support staff
+
+**Brand assets**
+- [ ] Business name and logo
+- [ ] Trademarks or applications, if any
+
+## What stays with the seller
+
+In an asset sale, these normally remain with the seller unless the contract says otherwise: their company, its bank accounts, debts, past tax bills and claims that began before the sale. Confirm each in writing, and ask the seller to say which customer prepayments or open orders you take on.
+
+This checklist is a planning aid, not legal advice. Have an attorney review the asset purchase agreement.
+
 ## Step 5: Build the contract around the list
 
 A lawyer should draft or review the [purchase agreement](/glossary/purchase-agreement/). Check that it contains:
@@ -198,6 +230,10 @@ Often not. Many payment and ad accounts are tied to the seller's identity and ca
 ### How do I know the price is fair?
 
 Value the business on its adjusted yearly profit with a defensible range, then use asset values as a second view. The free [website valuation tool](/tools/website-valuation/) gives a default range in about a minute.
+
+### How do I order the transfers?
+
+Domain and DNS first, then hosting and code, then store or app accounts, then ad and email accounts. Release payment only as each is confirmed.
 
 ## Sources
 

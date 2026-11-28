@@ -1,7 +1,7 @@
 ---
 title: Discounted Cash Flow for a Small Online Business: Worked Example
-meta_title: DCF for a Small Online Business: Worked Example
-meta_description: Value a small online business with discounted cash flow in 5 steps. See a full worked example, a discount-rate table and how DCF compares with a multiple.
+meta_title: DCF for a Small Online Business: Example + Rate Table
+meta_description: Value a small online business with DCF in 5 steps. See a worked example with the terminal value discounted and a rate-by-growth table. Free tool included.
 h1: Discounted Cash Flow for a Small Online Business: Worked Example
 section: Valuation
 cluster: valuation
@@ -10,7 +10,7 @@ page_type: article
 answer: To value a small online business with discounted cash flow, forecast its cash flow for three to five years, pick a yearly return the buyer needs (the discount rate), divide each year's cash flow by (1 + rate) for each year it is away, and add the results. Most small deals leave out or shrink the value after the forecast, because the forecast is a guess.
 keywords: business valuation discounted cash flow calculator, dcf valuation small business, dcf for a small business, discounted cash flow example, how to do a dcf
 published: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-28
 publish_at: 2026-11-18T01:00Z
 image: /static/img/articles/discounted-cash-flow-for-small-online-businesses.png
 image_alt: Featured image for the guide Discounted Cash Flow for a Small Online Business
@@ -145,6 +145,34 @@ The five-year DCF ($174,537) lands inside the multiple range. The DCF with a ter
 
 A multiple is a shortcut for the same idea. Paying 3.2 times yearly profit means the buyer expects to earn the price back in about 3.2 years if profit holds. [Valuation multiples](/glossary/valuation-multiple/) explains the link.
 
+## Sensitivity: discount rate and long-run growth together
+
+The earlier table changes only the discount rate. This grid also changes the long-run growth used in the terminal value, using the same forecast ($60,000 growing to $72,930 in year 5). Each cell is the five forecast years plus the discounted terminal value.
+
+| Discount rate | 0% growth after year 5 | 2% growth | 4% growth |
+|---|---|---|---|
+| 20% | $341,381 | $360,920 | $385,345 |
+| 25% | $270,127 | $280,518 | $292,887 |
+| 30% | $222,976 | $229,056 | $236,071 |
+
+Read it across and down. Moving the discount rate from 20% to 30% changes the answer far more than moving long-run growth from 0% to 4%. In this example, a buyer arguing about risk is arguing about the number that matters most.
+
+## Choosing a discount rate by risk (illustrative)
+
+These are what-if starting points for the arithmetic, not market data and not {{BRAND}} defaults. Pick the row that matches what you find in the records, then test the rate above and below it.
+
+| What you find | Direction for the rate |
+|---|---|
+| Steady profit, several traffic sources, little owner time | Lower end of your tested range |
+| Most traffic from one search engine or one program | Raise the rate |
+| One customer or one product is most of the income | Raise the rate |
+| Under two years of records | Raise the rate |
+| Falling traffic or profit | Raise the rate and shorten the forecast |
+
+## Why most buyers of small sites still use a multiple
+
+DCF needs a forecast and a rate, and both are guesses for a small business. A profit multiple needs only a profit figure and a range. Many buyers use the multiple to set the price and DCF to test whether the price is safe under pessimistic assumptions. If the DCF with a high rate and no terminal value comes out near the multiple price, the price is easier to defend.
+
 ## A cautious way to use DCF in a real deal
 
 Small buyers who use DCF usually do the following:
@@ -182,6 +210,18 @@ Not by itself. A multiple of profit is quicker and is how most small online busi
 ### Do I need a terminal value?
 
 If you forecast only three to five years of a business that will continue, you leave out some value. Many small buyers accept that on purpose because the later years are uncertain. If you include one, show the result with and without it.
+
+### Is DCF better than a multiple for a small website?
+
+Not usually. It is a cross-check. A multiple is simpler and rests on fewer guesses.
+
+### How do I discount the terminal value?
+
+Divide it by (1 + discount rate) raised to the final forecast year, as in Step 5. Leaving this out overstates value.
+
+### Is there a DCF calculator for this?
+
+The free [Website Valuation Tool](/tools/website-valuation/) gives a multiple-based range from your inputs, which you can compare with your own DCF.
 
 ## Sources
 

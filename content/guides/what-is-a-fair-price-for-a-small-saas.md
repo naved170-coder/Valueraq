@@ -1,7 +1,7 @@
 ---
 title: What Is a Fair Price for a Small SaaS Business?
-meta_title: What Is a Fair Price for a Small SaaS? ARR Multiples
-meta_description: What a small SaaS is really worth: typical ARR multiples, what raises or lowers them, and a worked example to judge a price. Free calculator included.
+meta_title: Fair Price for a Small SaaS: Worked Example + Checklist
+meta_description: A fair SaaS price is ARR times a multiple. See a worked example with churn and customer risk applied, plus an overpriced checklist. Free calculator included.
 h1: What Is a Fair Price for a Small SaaS Business?
 section: Quick answers
 cluster: saas
@@ -10,7 +10,7 @@ page_type: reference
 answer: A fair price for a small SaaS business is a multiple of its annual recurring revenue (ARR), adjusted for churn, gross margin, growth and how much depends on the owner or one customer. VALUERAQ's default range is 2.0x to 5.0x ARR, with 3.5x as the midpoint, before adjustments.
 keywords: saas business valuation, saas company valuation, saas worth, fair price for a saas business
 published: 2026-10-31
-updated: 2026-11-12
+updated: 2026-11-28
 publish_at: 2026-10-30T19:00Z
 image: /static/img/articles/what-is-a-fair-price-for-a-small-saas.png
 image_alt: Featured image for the quick answer on what a fair price is for a small SaaS business
@@ -22,49 +22,44 @@ cta_text: Enter your MRR, churn and margin in the free SaaS Valuation Tool to se
 
 ## The short answer
 
-A fair price for a small SaaS business starts with its [annual recurring revenue (ARR)](/glossary/arr/): current monthly recurring revenue multiplied by 12. A multiple is then applied to that figure. VALUERAQ's default range for SaaS is **2.0x to 5.0x ARR, with a midpoint of 3.5x**. These are the website's own assumptions, set out in the [methodology](/methodology/). They are not market data, and real deals vary with the buyer, the terms and the negotiation.
+A fair price for a small SaaS business starts with its [annual recurring revenue (ARR)](/glossary/arr/): monthly recurring revenue times 12, multiplied by a figure from a range. VALUERAQ's default range is **2.0x to 5.0x ARR, midpoint 3.5x**, set out in the [methodology](/methodology/). These are the site's own assumptions, not market data.
 
-## The calculation
-
-**ARR = monthly recurring revenue × 12**
-
-**Value range = ARR × multiple**
-
-A SaaS business with **$4,000** in monthly recurring revenue has an ARR of $4,000 × 12 = **$48,000**. At the default range:
-
-| Case | Multiple | Value |
-|---|---|---|
-| Low | 2.0x | $48,000 × 2.0 = $96,000 |
-| Midpoint | 3.5x | $48,000 × 3.5 = $168,000 |
-| High | 5.0x | $48,000 × 5.0 = $240,000 |
+With **$4,000** MRR, ARR is $4,000 x 12 = **$48,000**: low 2.0x = $96,000, midpoint 3.5x = $168,000, high 5.0x = $240,000.
 
 ## What moves the price within the range
 
-The default multiple is then adjusted by published rules. A few of the larger ones for SaaS:
+Adjustments multiply. Suppose a buyer finds four things in the records:
 
-- **Monthly churn.** Over 8% a month lowers the multiple by 20%, over 5% to 8% lowers it by 10%, and under 2% raises it by 10%.
-- **Gross margin.** Under 50% lowers it by 15%; above 80% raises it by 5%.
-- **Revenue trend.** A fall of more than 20% over 12 months lowers it by 25%; growth above 25% to 75% raises it by 15%.
-- **Customer concentration.** One customer paying over 30% of revenue lowers it by 12%.
+| Finding | Default rule | Effect |
+|---|---|---|
+| Monthly churn 6% | Over 5% to 8% | -10% |
+| One customer pays 35% | Over 30% from one customer | -12% |
+| Gross margin 85% | Above 80% | +5% |
+| Revenue up 10% in 12 months | Above +5% to +25% | +8% |
 
-Suppose the business above has monthly churn of 6%. That falls in the "over 5% to 8%" band, so the multiple is cut by 10%: 3.5 × 0.90 = 3.15. The midpoint becomes **$48,000 × 3.15 = $151,200**, which is $16,800 less than before.
+Factor: 0.90 x 0.88 x 1.05 x 1.08 = **0.898**. The midpoint falls from 3.5x to 3.14x, so the value is about **$150,900** instead of $168,000. The low and high ends become about $86,200 and $215,600.
 
-## Which price is fair?
+## Fair-price checklist
 
-A price is fair when both sides can explain it from the same records. For a buyer, that means checking MRR, churn and margin against billing data, not a dashboard screenshot. For a seller, it means knowing which of the factors above pull the price down, and fixing the ones that can be fixed before listing. The [SaaS metrics buyers check](/guides/saas-metrics-buyers-check/) guide lists them, and [how SaaS is valued](/guides/saas-valuation/) explains the method in more depth.
+1. MRR matches payment processor reports, not a dashboard.
+2. Churn is counted the same way by both sides.
+3. No customer above 15% of revenue, or the risk is priced.
+4. Gross margin includes hosting, support and payment fees.
+5. Growth compares the latest three months with the same months a year earlier.
+6. The owner is replaceable, and code and accounts transfer.
+
+Churn above 5% a month, one customer above 30%, a founder doing all support and code, a margin under 50% or falling revenue all point to the low end of the range. See [SaaS metrics buyers check](/guides/saas-metrics-buyers-check/) and [how SaaS is valued](/guides/saas-valuation/).
 
 ## Frequently asked questions
 
-### Is ARR or profit the better basis for a small SaaS price?
+### Is ARR or profit the better basis?
 
-Many buyers look at both. ARR shows the size and durability of the subscription base; profit shows what the owner takes home. VALUERAQ's tool prices on ARR and shows the profit multiple it implies as a cross-check when you enter profit.
+Many buyers look at both. ARR shows the size and durability of subscriptions; profit shows what the owner takes home. VALUERAQ's tool prices on ARR and shows the implied profit multiple when you enter profit.
 
-### Does a high ARR multiple mean a business is worth more?
+### How do I find the multiple behind an asking price?
 
-Not on its own. A high multiple on a business with rising churn or one dominant customer can be worth less than a lower multiple on a steadier one. Compare what sits behind the number.
+Divide the asking price by ARR. A $168,000 ask on $48,000 ARR is 3.5x, the default midpoint before adjustments. No public figure in this guide covers small SaaS sales, so none is quoted.
 
 ### Can I rely on this range as an appraisal?
 
-No. It is an estimate from default assumptions, not an appraisal or advice. Treat it as a starting point for a conversation.
-
-Once you know the range and want to sell my SaaS company, [how to sell a SaaS business](/guides/how-to-sell-a-saas-business/) covers preparing the figures and finding buyers.
+No. It is an estimate from default assumptions, a starting point for a conversation. To sell, see [how to sell a SaaS business](/guides/how-to-sell-a-saas-business/).

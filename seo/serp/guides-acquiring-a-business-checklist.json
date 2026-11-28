@@ -31,6 +31,7 @@
   "What are the steps to buying a business?"
  ],
  "collected": "2026-11-23",
- "applied": null,
- "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped."
+ "applied": "2026-11-28",
+ "note": "Search results come from Claude's web search, which is not Google; the strongest relevant pages were studied, junk sites skipped.",
+ "applied_note": "Added phase table, online-specific checks table, red flags with what to ask, who-does-what table, 2 FAQs; new title/description."
 }

@@ -1,5 +1,5 @@
 {
-  "summary": "Wrote 1 article (business valuation checklist) and 3 quick answers (cost to buy a website, due diligence timeline, sale vs asking price); the asking-price page is held for you to approve. Existing-page improvements follow.",
+  "summary": "Wrote 1 article (business valuation checklist) and 3 quick answers (cost to buy a website, due diligence timeline, sale vs asking price); the asking-price page is held for you to approve. Also improved existing pages from saved research (see items).",
   "model": "claude-sonnet-5-5",
   "items": [
     {
@@ -71,6 +71,31 @@
       "path": "/guides/flippa-alternatives/",
       "action": "skipped",
       "note": "Skipped again: needs competitor fees opened on the day."
+    },
+    {
+      "path": "/guides/what-is-a-fair-price-for-a-small-saas/",
+      "action": "improve",
+      "note": "Added stacked-adjustment worked example, fair-price checklist, warning signs, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/acquiring-a-business-checklist/",
+      "action": "improve",
+      "note": "Added phase table, online-specific checks, red flags with what to ask, who-does-what table, 2 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/asset-acquisition-checklist/",
+      "action": "improve",
+      "note": "Added tick list by asset type incl. digital assets, what stays with the seller, legal-advice note; new title/description."
+    },
+    {
+      "path": "/guides/discounted-cash-flow-for-small-online-businesses/",
+      "action": "improve",
+      "note": "Added discount-rate x growth sensitivity grid, risk-based rate guide, why multiples are used, 3 FAQs; new title/description."
+    },
+    {
+      "path": "/guides/how-to-calculate-customer-lifetime-value/",
+      "action": "improve",
+      "note": "Added formulas-by-business-type table, mistake-impact example, what to show a buyer, 2 FAQs; new title/description."
     }
   ],
   "tasks": [
@@ -83,7 +108,8 @@
     "gates",
     "scheduled",
     "serp_compare",
-    "report"
+    "report",
+    "improve"
   ],
   "checks": [
     "Tests: 134 passed",
@@ -94,5 +120,5 @@
     "Web research unavailable; used saved seo/serp research and seo/sources.json only.",
     "Released one slot later than usual: 29 Nov 12 am, 6 am, 12 pm, 6 pm Pakistan."
   ],
-  "improved": 0
+  "improved": 5
 }

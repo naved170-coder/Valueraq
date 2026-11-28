@@ -1,7 +1,7 @@
 ---
 title: Acquiring a Business Checklist: From First Look to Day 100
-meta_title: Acquiring a Business Checklist: 7 Stages to Day 100
-meta_description: A stage-by-stage acquiring a business checklist, from first look to day 100, with a stress-test example and a due diligence list. Free calculator included.
+meta_title: Acquiring a Business Checklist: Phases, Red Flags, Roles
+meta_description: Acquiring a business? Use a phase-by-phase checklist, online-specific checks, a red-flag table and a who-does-what list. Free calculator included.
 h1: Acquiring a Business Checklist: From First Look to Day 100
 section: Buying
 cluster: buying
@@ -10,7 +10,7 @@ page_type: article
 answer: An acquiring a business checklist runs in seven stages: set your criteria and budget, screen listings, value the business, sign a letter of intent, complete due diligence, close with a written agreement and safe payment, then run a planned first 100 days. Skipping a stage is how buyers overpay or inherit problems.
 keywords: acquiring a business checklist, company acquisition checklist, pre acquisition due diligence checklist, business acquisition checklist, buying a business checklist
 published: 2026-11-16
-updated: 2026-11-26
+updated: 2026-11-28
 publish_at: 2026-11-16T01:00Z
 image: /static/img/articles/acquiring-a-business-checklist.png
 image_alt: Featured image for the acquiring a business checklist from first look to day 100
@@ -166,6 +166,47 @@ Many acquisitions are won or lost after the closing date. Plan the first 100 day
 
 Track the same monthly numbers the seller gave you, so you can see whether the business performs as described. If it does not, your written representations and warranties are the place to start, and a lawyer is the person to call. See also [what happens after you sell a website](/guides/what-happens-after-you-sell-a-website/) for the seller's side of the handover.
 
+## Checklist by phase: what to do and when
+
+| Phase | Do this | Done when |
+|---|---|---|
+| Before you make an offer | Set your budget and walk-away price; value the business; read the listing's numbers against a range | You can say why the price is fair or not |
+| After the letter of intent | Request the records; check profit, traffic and ownership of accounts; ask about contracts and costs | Every claim in the listing has a record behind it |
+| Before closing | Settle price changes; agree the contract and the list of what transfers; fund escrow | Both sides have signed and the money is held safely |
+| After closing | Move accounts and the domain; change passwords; confirm income still arrives; follow your first-100-days plan | The business runs in your name and you have checked it |
+
+## Online-specific checks that physical-business lists miss
+
+A list written for shops and factories skips the assets an online business depends on. Add these.
+
+| Check | What to ask for |
+|---|---|
+| Traffic sources | Analytics and Search Console access for the last 12 months, split by source |
+| Payment processor | Payout reports that match bank deposits |
+| Platform accounts | Marketplace, store, app store or ad network accounts held in the seller's own name |
+| Domain and code | Registrar login, repository access and any licenses |
+| Subscriptions and tools | A list of monthly costs and which tools must be re-created |
+| Reviews and email list | Where they live and whether they transfer with the account |
+
+## Red flags and what to ask
+
+| Red flag | What to ask |
+|---|---|
+| Profit shown only as screenshots | Statements and payout reports for the same months |
+| Most traffic from one source | The monthly traffic split and what happened in past dips |
+| Owner does most of the work | Weekly hours and a written process for each task |
+| Accounts in a third party's name | A plan and date to move each account |
+| Sudden jump in the last two months | What changed, with records |
+
+## Who does what
+
+| Task | Buyer | Seller | Escrow service |
+|---|---|---|---|
+| Provide records | Reviews | Supplies | - |
+| Agree the contract | Reviews with an attorney | Reviews with an attorney | - |
+| Hold the funds | Pays in | Waits | Holds until transfer is confirmed |
+| Transfer accounts and domain | Accepts and confirms | Initiates | Releases funds on confirmation |
+
 ## Common mistakes to avoid
 
 - **Falling for the listing.** Decide your price limit before you read the pitch.
@@ -197,6 +238,14 @@ For anything more than a very small purchase, yes. The U.S. Small Business Admin
 ### How do I know what price to offer?
 
 Calculate a range from yearly profit and a defensible multiple, adjust for risk found in due diligence, and set a walk-away number in advance. The free [business multiple calculator](/calculators/business-multiple-calculator/) gives a default range in about a minute.
+
+### Is this checklist legal advice?
+
+No. It is a planning aid. The U.S. Small Business Administration suggests buyers consider an attorney and an accountant, and both should review your contract.
+
+### What is the first thing to check?
+
+Whether the seller's profit is backed by statements and payout reports for the same months. Everything else rests on that.
 
 ## Sources
 

@@ -1,7 +1,7 @@
 ---
 title: How to Calculate Customer Lifetime Value
-meta_title: How to Calculate Customer Lifetime Value (4 Methods)
-meta_description: Customer lifetime value is gross profit per customer over their time with you. Formula, 4 worked examples, checklist. Free calculator included.
+meta_title: Customer Lifetime Value Formula: 3 Business Types
+meta_description: Customer lifetime value is gross profit per customer over their time with you. See formulas for subscriptions, stores and content, with worked examples.
 h1: How to Calculate Customer Lifetime Value
 section: Analysis
 cluster: analysis
@@ -10,7 +10,7 @@ page_type: article
 answer: Customer lifetime value (LTV) is the gross profit an average customer brings in before they leave. For a subscription, divide monthly revenue per customer times gross margin by monthly churn. For a store, multiply profit per order by the number of orders a customer places.
 keywords: how to calculate customer lifetime value, customer lifetime value formula, ltv calculation, how to calculate ltv, clv formula
 published: 2026-11-22
-updated: 2026-11-22
+updated: 2026-11-28
 publish_at: 2026-11-22T01:00Z
 image: /static/img/articles/how-to-calculate-customer-lifetime-value.png
 image_alt: How to Calculate Customer Lifetime Value (VALUERAQ guide)
@@ -118,6 +118,33 @@ Suppose 100 customers join in January and pay $40 a month at an 80% gross margin
 
 Six months of gross profit from the cohort adds up to $16,192, or **$161.92 per original customer** so far. That is real, observed LTV for six months. To estimate the full lifetime, extend the pattern with a sensible churn rate for the later months and label the extension as an estimate.
 
+## Subscription vs store vs content: formulas side by side
+
+| Business type | Formula | What to measure |
+|---|---|---|
+| Subscription or SaaS | (monthly revenue per customer x gross margin) / monthly churn | ARPU, margin, churn |
+| Online store | average order value x gross margin x orders per customer | Order value, margin, repeat rate |
+| Content or newsletter | revenue per subscriber per month x margin x months subscribed | Revenue per subscriber, retention |
+
+## How one mistake changes the answer
+
+A subscription business has $40 monthly revenue per customer, an 80% gross margin and 4% monthly churn.
+
+- Correct: $40 x 0.80 / 0.04 = **$800**.
+- Using revenue instead of gross profit: $40 / 0.04 = $1,000, which overstates LTV by $200 (25%).
+- Churn rising from 4% to 5%: $32 / 0.05 = $640, a drop of 20% from $800.
+
+Two small slips, a wrong base and a slightly higher churn, move the figure by a fifth or a quarter. That is why buyers ask how each input was measured.
+
+## What to show a buyer
+
+| Show | Why a buyer asks |
+|---|---|
+| Churn by month for 12 months | One good month proves nothing |
+| Gross margin with the costs listed | Confirms the margin is not overstated |
+| LTV and CAC by channel | Shows which marketing pays back |
+| How you count cancelled-then-returned customers | Changes churn |
+
 ## Step-by-step checklist
 
 1. **Pick the right period.** Use at least 12 months of data, so one unusual month does not distort the average.
@@ -170,6 +197,14 @@ It varies by business. A ratio near or below 1 to 1 is a warning sign, because e
 ### How often should I recalculate LTV?
 
 Quarterly is a sensible rhythm for most small businesses, and again before you share numbers with a buyer. Recalculate sooner after a price change or a big change in marketing.
+
+### Can I use LTV in a valuation?
+
+Not directly. Buyers use profit or recurring revenue to price a business and LTV as evidence that the revenue will last.
+
+### How do I calculate LTV with no churn data yet?
+
+Use a short window and say so. Early churn is unreliable, so show the months you have rather than a forecast.
 
 ## Sources
 
